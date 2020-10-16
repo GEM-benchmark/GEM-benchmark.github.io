@@ -1,15 +1,28 @@
 {
-  "name": "learn-starter",
+  "name": "gem",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://gem-benchmark.github.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "next build && next export && git add out/ -f && git commit -m \"Deploy gh-pages\" && cd .. && git subtree push --prefix web/out origin gh-pages"
   },
   "dependencies": {
-    "next": "9.5.3",
+    "next": "^9.5.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
-  }
+  },
+  "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.0",
+    "gh-pages": "^3.1.0"
+  },
+  "presets": [
+    "next/babel"
+  ],
+  "plugins": [
+    ["transform-define", "./env-config.js"]
+  ]
 }

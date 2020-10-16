@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
         ) : (
             <>
               <h2 className={utilStyles.headingLg}>
-                <Link href="/">
+                <Link href="/" as={process.env.BACKEND_URL + '/'}>
                   <a className={utilStyles.colorInherit}>{name}</a>
                 </Link>
               </h2>
@@ -44,7 +44,7 @@ export default function Layout({ children, home }) {
 
         {!home && (
           <span className={styles.backToHome}>
-            <Link href="/">
+            <Link href="/" as={process.env.BACKEND_URL + '/'}>
               <a>← Back to home</a>
             </Link>
           </span>
