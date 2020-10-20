@@ -11,10 +11,14 @@
     "deploy": "next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy gh-pages\" && cd .. && git subtree push --prefix web/out origin gh-pages"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
+    "gray-matter": "^4.0.2",
     "next": "^9.5.5",
     "node-fetch": "^2.6.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
     "babel-plugin-transform-define": "^2.0.0",

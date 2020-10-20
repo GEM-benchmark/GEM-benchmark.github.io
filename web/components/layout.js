@@ -41,6 +41,7 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       <footer>
+        <hr></hr>
 
         {!home && (
           <span className={styles.backToHome}>

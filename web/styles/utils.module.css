@@ -50,3 +50,7 @@
 .lightText {
   color: #999;
 }
+
+.smallSpace {
+  margin-right: 0.25rem;
+}
