@@ -8,6 +8,7 @@ export const siteTitle = 'GEM'
 
 export default function Layout({ children, home }) {
   return (
+    <>
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -40,20 +41,22 @@ export default function Layout({ children, home }) {
           )}
       </header>
       <main>{children}</main>
-      <footer>
-        <hr></hr>
-
-        {!home && (
-          <span className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </span>
-        )}
-        <span>
-          For any questions, contact XXX.
-        </span>
-      </footer>
+      <div className={styles.push}></div>
     </div>
+    <footer className={styles.footer}>
+    <hr></hr>
+
+    {!home && (
+      <span className={styles.backToHome}>
+        <Link href="/">
+          <a>← Back to home</a>
+        </Link>
+      </span>
+    )}
+    <span>
+      For any questions, contact XXX.
+    </span>
+  </footer>
+  </>
   )
 }

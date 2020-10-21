@@ -1,7 +1,9 @@
 .container {
   max-width: 72rem;
   padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  margin: 3rem auto;
+  margin-bottom: -3rem;
+  min-height: calc(100vh - 54px);
 }
 
 .header {
@@ -12,4 +14,9 @@
 
 .backToHome {
   margin: 3rem 3rem 0 0;
+}
+
+.footer,
+.push {
+  height: 3rem;
 }
