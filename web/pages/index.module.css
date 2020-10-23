@@ -1,35 +1,26 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .title, .description {
   text-align: left;
 }
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 1.1;
+  font-size: 1rem;
 }
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 100%;
   margin-top: 3rem;
 }
 
 .card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
+  margin: 0.5rem;
+  flex-basis: 10%;
+  padding: 0.5rem;
+  text-align: center;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
@@ -37,20 +28,14 @@
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.card:hover, .card:focus, .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-  text-decoration: none;
-}
-
 .card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  margin: 0 0 0 0;
+  font-size: 1.1rem;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.rem;
   line-height: 1.5;
 }
 
@@ -59,4 +44,70 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.green {
+  background-color: #a2f6de;
+  color: #074634;
+}
+
+.green:hover, .green:focus, .green:active {
+  color: #021711;
+  border-color: #021711;
+  text-decoration: none;
+}
+
+.teal {
+  background-color: #a6f2f2;
+  color: #0a4343;
+}
+
+.teal:hover, .teal:focus, .teal:active {
+  color: #031616;
+  border-color: #031616;
+  text-decoration: none;
+}
+
+.blue {
+  background-color: #99ccff;
+  color: #003366;
+}
+
+.blue:hover, .blue:focus, .blue:active {
+  color: #000d1a;
+  border-color: #000d1a;
+  text-decoration: none;
+}
+
+.purple {
+  background-color: #d0cdfe;
+  color: #080165;
+}
+
+.purple:hover, .purple:focus, .purple:active {
+  color: #020019;
+  border-color: #020019;
+  text-decoration: none;
+}
+
+.gray {
+  background-color: #dfe6e9;
+  color: #29373d;
+}
+
+.gray:hover, .gray:focus, .gray:active {
+  color: #0a0e0f;
+  border-color: #0a0e0f;
+  text-decoration: none;
+}
+
+.peach {
+  background-color: #fab1a0;
+  color: #611605;
+}
+
+.peach:hover, .peach:focus, .peach:active {
+  color: #180501;
+  border-color: #180501;
+  text-decoration: none;
 }

@@ -54,3 +54,24 @@
 .smallSpace {
   margin-right: 0.25rem;
 }
+
+
+.green {
+  background-color: #a2f6de;
+  color: #074634;
+}
+
+.teal {
+  background-color: #a6f2f2;
+  color: #0a4343;
+}
+
+.blue {
+  background-color: #99ccff;
+  color: #003366;
+}
+
+.purple {
+  background-color: #d0cdfe;
+  color: #080165;
+}

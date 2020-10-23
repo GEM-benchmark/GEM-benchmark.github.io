@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import { Dropdown, Icon, Nav, Navbar } from 'rsuite';
 
 const name = 'GEM Benchmark'
 export const siteTitle = 'GEM'
@@ -9,7 +10,6 @@ export const siteTitle = 'GEM'
 export default function Layout({ children, home }) {
   return (
     <>
-    <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,38 +25,51 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className={styles.header + ' ' + utilStyles.purple}>
         {home ? (
           <>
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <h1 className={utilStyles.headingLg}>{name}</h1>
           </>
         ) : (
-            <>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}>{name}</a>
-                </Link>
-              </h2>
-            </>
+            <Navbar appearance="subtle">
+              <Navbar.Header>
+                <a href="#" className="navbar-brand logo">RSUITE</a>
+              </Navbar.Header>
+              <Navbar.Body>
+                <Nav>
+                  <Nav.Item icon={<Icon icon="home" />} >Home</Nav.Item>
+                  <Nav.Item>News</Nav.Item>
+                  <Nav.Item>Products</Nav.Item>
+                  <Dropdown title="About">
+                    <Dropdown.Item>Company</Dropdown.Item>
+                    <Dropdown.Item>Team</Dropdown.Item>
+                    <Dropdown.Item>Contact</Dropdown.Item>
+                  </Dropdown>
+                </Nav>
+                <Nav pullRight>
+                  <Nav.Item icon={<Icon icon="cog" />} >Settings</Nav.Item>
+                </Nav>
+              </Navbar.Body>
+            </Navbar>
           )}
       </header>
-      <main>{children}</main>
-      <div className={styles.push}></div>
-    </div>
-    <footer className={styles.footer}>
-    <hr></hr>
+      <div className={styles.container}>
 
-    {!home && (
-      <span className={styles.backToHome}>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
-      </span>
-    )}
-    <span>
-      For any questions, contact XXX.
+        <main>{children}</main>
+        <div className={styles.push}></div>
+      </div>
+      <footer className={styles.footer + ' ' + utilStyles.purple}>
+        {!home && (
+          <span className={styles.backToHome}>
+            <Link href="/">
+              <a>← Home</a>
+            </Link>
+          </span>
+        )}
+        <span>
+          For any questions, contact XXX.
     </span>
-  </footer>
-  </>
+      </footer>
+    </>
   )
 }
