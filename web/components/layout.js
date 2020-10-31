@@ -9,7 +9,6 @@ export const siteTitle = 'GEM'
 export default function Layout({ children, home }) {
   return (
     <>
-    <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,10 +24,10 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
+      <header className={styles.header + ' ' + utilStyles.purple}>
         {home ? (
           <>
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <h1 className={utilStyles.headingLg}>{name}</h1>
           </>
         ) : (
             <>
@@ -40,23 +39,23 @@ export default function Layout({ children, home }) {
             </>
           )}
       </header>
-      <main>{children}</main>
-      <div className={styles.push}></div>
-    </div>
-    <footer className={styles.footer}>
-    <hr></hr>
+      <div className={styles.container}>
 
-    {!home && (
-      <span className={styles.backToHome}>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
-      </span>
-    )}
-    <span>
-      For any questions, contact XXX.
+        <main>{children}</main>
+        <div className={styles.push}></div>
+      </div>
+      <footer className={styles.footer + ' ' + utilStyles.purple}>
+        {!home && (
+          <span className={styles.backToHome}>
+            <Link href="/">
+              <a>← Home</a>
+            </Link>
+          </span>
+        )}
+        <span>
+          For any questions, contact XXX.
     </span>
-  </footer>
-  </>
+      </footer>
+    </>
   )
 }
