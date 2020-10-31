@@ -11,8 +11,8 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <p className={styles.description}>
-        The benchmark for Natural Language Generation with a focus on its
-        Evaluation, both through human annotations and automated Metrics (GEM).
+        GEM is a benchmark for Natural Language Generation with a focus on its
+        Evaluation, both through human annotations and automated Metrics.
       </p>
       <p className={styles.description}>GEM aims to:</p>
       <ul className={styles.description}>
