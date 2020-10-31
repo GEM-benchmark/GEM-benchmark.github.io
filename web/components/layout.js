@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-const name = 'GEM Benchmark'
-export const siteTitle = 'GEM'
+const name = "GEM Benchmark";
+export const siteTitle = "GEM";
 
 export default function Layout({ children, home }) {
   return (
@@ -24,27 +24,28 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header + ' ' + utilStyles.purple}>
+      <header className={styles.header + " " + utilStyles.eggshell}>
         {home ? (
           <>
-            <h1 className={utilStyles.headingLg}>{name}</h1>
+            <h1 className={utilStyles.headingLg + " " + utilStyles.accent}>
+              {name}
+            </h1>
           </>
         ) : (
-            <>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/">
-                  <a className={utilStyles.colorInherit}>{name}</a>
-                </Link>
-              </h2>
-            </>
-          )}
+          <>
+            <h2 className={utilStyles.headingLg + " " + utilStyles.accent}>
+              <Link href="/">
+                <a className={utilStyles.colorInherit}>{name}</a>
+              </Link>
+            </h2>
+          </>
+        )}
       </header>
       <div className={styles.container}>
-
         <main>{children}</main>
         <div className={styles.push}></div>
       </div>
-      <footer className={styles.footer + ' ' + utilStyles.purple}>
+      <footer className={styles.footer + " " + utilStyles.eggshell}>
         {!home && (
           <span className={styles.backToHome}>
             <Link href="/">
@@ -52,10 +53,8 @@ export default function Layout({ children, home }) {
             </Link>
           </span>
         )}
-        <span>
-          For any questions, contact XXX.
-    </span>
+        <span>For any questions, contact XXX.</span>
       </footer>
     </>
-  )
+  );
 }

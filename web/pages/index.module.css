@@ -1,10 +1,18 @@
-.title, .description {
+.title,
+.description {
   text-align: left;
 }
 
 .description {
   line-height: 1.1;
   font-size: 1rem;
+  font-weight: lighter;
+}
+
+.description {
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 .grid {
@@ -23,20 +31,25 @@
   text-align: center;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e98074;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: 0.3s ease;
+  font-variant: small-caps;
 }
 
 .card h3 {
   margin: 0 0 0 0;
-  font-size: 1.1rem;
+  font-size: 12pt;
+  font-weight: lighter;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.rem;
-  line-height: 1.5;
+.card:hover,
+.card:focus,
+.card:active {
+  color: white;
+  border-color: #e85a4f;
+  text-decoration: none;
+  background-color: #e85a4f;
 }
 
 @media (max-width: 600px) {
@@ -44,70 +57,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
-
-.green {
-  background-color: #a2f6de;
-  color: #074634;
-}
-
-.green:hover, .green:focus, .green:active {
-  color: #021711;
-  border-color: #021711;
-  text-decoration: none;
-}
-
-.teal {
-  background-color: #a6f2f2;
-  color: #0a4343;
-}
-
-.teal:hover, .teal:focus, .teal:active {
-  color: #031616;
-  border-color: #031616;
-  text-decoration: none;
-}
-
-.blue {
-  background-color: #99ccff;
-  color: #003366;
-}
-
-.blue:hover, .blue:focus, .blue:active {
-  color: #000d1a;
-  border-color: #000d1a;
-  text-decoration: none;
-}
-
-.purple {
-  background-color: #d0cdfe;
-  color: #080165;
-}
-
-.purple:hover, .purple:focus, .purple:active {
-  color: #020019;
-  border-color: #020019;
-  text-decoration: none;
-}
-
-.gray {
-  background-color: #dfe6e9;
-  color: #29373d;
-}
-
-.gray:hover, .gray:focus, .gray:active {
-  color: #0a0e0f;
-  border-color: #0a0e0f;
-  text-decoration: none;
-}
-
-.peach {
-  background-color: #fab1a0;
-  color: #611605;
-}
-
-.peach:hover, .peach:focus, .peach:active {
-  color: #180501;
-  border-color: #180501;
-  text-decoration: none;
 }

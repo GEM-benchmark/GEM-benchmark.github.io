@@ -4,6 +4,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  font-variant: small-caps;
 }
 
 .headingXl {
@@ -12,17 +13,20 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  font-variant: small-caps;
 }
 
 .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
+  font-variant: small-caps;
 }
 
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
+  font-variant: small-caps;
 }
 
 .borderCircle {
@@ -55,7 +59,6 @@
   margin-right: 0.25rem;
 }
 
-
 .green {
   background-color: #a2f6de;
   color: #074634;
@@ -74,4 +77,22 @@
 .purple {
   background-color: #d0cdfe;
   color: #080165;
+}
+
+.eggshell {
+  background-color: #eae7dc;
+  color: black;
+}
+
+.eggshell .light {
+  color: #8e8d8a;
+}
+
+.eggshell .accent {
+  color: #e85a4f;
+}
+
+.eggshell .lightaccent {
+  font-weight: lighter;
+  color: #e98074;
 }

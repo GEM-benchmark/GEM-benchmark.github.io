@@ -1,7 +1,7 @@
-import { getAllTaskIds, getTaskData } from "../../lib/tasks";
-import Layout from "../../components/layout";
+import { getTutorialData } from "../lib/tutorial";
+import Layout from "../components/layout";
 import Head from "next/head";
-import utilStyles from "../../styles/utils.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 export default function Post({ tutorialData }) {
   return (
@@ -21,7 +21,7 @@ export default function Post({ tutorialData }) {
 }
 
 export async function getStaticProps() {
-  const taskData = await getTutorialData();
+  const tutorialData = await getTutorialData();
   return {
     props: {
       tutorialData,
