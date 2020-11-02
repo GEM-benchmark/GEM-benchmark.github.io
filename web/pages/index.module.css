@@ -35,6 +35,7 @@
   border-radius: 10px;
   transition: 0.3s ease;
   font-variant: small-caps;
+  background-color: #eae7dc;
 }
 
 .card h3 {
