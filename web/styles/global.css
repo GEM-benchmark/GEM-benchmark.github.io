@@ -15,8 +15,8 @@ body {
 #__next {
   min-height: 100%;
   /* Add the GEM as background */
-  background: url(../public/gem2_lighter.svg) no-repeat top left;
-  background-size: 100%;
+  background: url(../public/gem3.svg) no-repeat top left;
+  background-size: auto 100%;
   background-attachment: fixed;
 }
 
@@ -25,7 +25,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: #2a555e;
   text-decoration: none;
 }
 
@@ -36,6 +36,11 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+main {
+  background-color: #eff6ff;
+  opacity: 70%;
 }
 
 code {

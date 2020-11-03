@@ -64,34 +64,15 @@
   color: #2a555e;
 }
 
-.eggshell .light {
+.light {
   color: #70abaf;
 }
 
-.eggshell .accent {
-  color: #700001;
+.accent {
+  color: #2a555e;
 }
 
-.eggshell .lightaccent {
+.lightaccent {
   font-weight: lighter;
   color: #c10001;
 }
-
-
-/* .eggshell {
-  background-color: #eae7dc;
-  color: black;
-}
-
-.eggshell .light {
-  color: #8e8d8a;
-}
-
-.eggshell .accent {
-  color: #e85a4f;
-}
-
-.eggshell .lightaccent {
-  font-weight: lighter;
-  color: #e98074;
-} */
