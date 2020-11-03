@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import Nav from './navbar'
 
 const name = "GEM Benchmark";
 export const siteTitle = "GEM";
@@ -25,21 +26,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <h1 className={utilStyles.headingLg + " " + utilStyles.accent}>
-              {name}
-            </h1>
-          </>
-        ) : (
-          <>
-            <h2 className={utilStyles.headingLg + " " + utilStyles.accent}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
+        <Nav></Nav>
       </header>
       <div className={styles.container}>
         <main>{children}</main>

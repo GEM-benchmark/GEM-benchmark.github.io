@@ -21,7 +21,7 @@ export default function Home({ allTasksData }) {
         <title>GEM Tasks</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>List of Tasks</h2>
+        <h2 className={utilStyles.headingLg + " " + utilStyles.accentUnderline}>List of Tasks</h2>
         <ul className={utilStyles.list}>
           {allTasksData.map(({ id, title, type }) => (
             <li className={utilStyles.listItem} key={id}>
@@ -36,6 +36,6 @@ export default function Home({ allTasksData }) {
           ))}
         </ul>
       </section>
-    </Layout>
+    </Layout >
   )
 }

@@ -64,13 +64,13 @@ export default function Home() {
 
         <Link href="#">
           <a className={styles.card}>
-            <h3>Workshop</h3>
+            <h3>Team</h3>
           </a>
         </Link>
 
         <Link href="#">
           <a className={styles.card}>
-            <h3>Team</h3>
+            <h3>Workshop</h3>
           </a>
         </Link>
       </div>

@@ -69,7 +69,17 @@
 }
 
 .accent {
-  color: #2a555e;
+  color: #700001;
+}
+
+.accentUnderline {
+  text-decoration: underline;
+  text-decoration-color: #c10001;
+}
+
+.accentBorder {
+  border-bottom: 1px solid #c10001;
+  padding-bottom: 3px
 }
 
 .lightaccent {
