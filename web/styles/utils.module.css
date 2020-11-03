@@ -52,34 +52,33 @@
 }
 
 .lightText {
-  color: #999;
+  color: #70abaf;
 }
 
 .smallSpace {
   margin-right: 0.25rem;
 }
 
-.green {
-  background-color: #a2f6de;
-  color: #074634;
-}
-
-.teal {
-  background-color: #a6f2f2;
-  color: #0a4343;
-}
-
-.blue {
-  background-color: #99ccff;
-  color: #003366;
-}
-
-.purple {
-  background-color: #d0cdfe;
-  color: #080165;
-}
-
 .eggshell {
+  background-color: #eff6ff;
+  color: #2a555e;
+}
+
+.eggshell .light {
+  color: #70abaf;
+}
+
+.eggshell .accent {
+  color: #700001;
+}
+
+.eggshell .lightaccent {
+  font-weight: lighter;
+  color: #c10001;
+}
+
+
+/* .eggshell {
   background-color: #eae7dc;
   color: black;
 }
@@ -95,4 +94,4 @@
 .eggshell .lightaccent {
   font-weight: lighter;
   color: #e98074;
-}
+} */

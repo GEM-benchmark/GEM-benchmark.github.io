@@ -6,10 +6,6 @@
   min-height: calc(100vh - 108px);
 }
 
-.container path {
-  fill: red;
-}
-
 .header {
   display: flex;
   flex-direction: column;

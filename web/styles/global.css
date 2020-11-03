@@ -9,14 +9,15 @@ body {
   height: 100%;
   min-height: 100%;
   /* background-color: #f7f7f7; */
-  background-color: #eae7dc;
+  background-color: #eff6ff;
 }
 
 #__next {
   min-height: 100%;
   /* Add the GEM as background */
-  background: url(../public/gem.svg) no-repeat top left;
-  background-size: contain;
+  background: url(../public/gem2_lighter.svg) no-repeat top left;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 * {
