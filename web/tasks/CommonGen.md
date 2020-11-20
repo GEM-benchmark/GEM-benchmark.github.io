@@ -1,4 +1,3 @@
-
 ---
 title: 'CommonGen'
 type: data-to-text
