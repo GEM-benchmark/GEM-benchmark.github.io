@@ -7,7 +7,7 @@ type: simplification
 
 ## Dataset Description
 
-ASSET is multi-reference dataset for the evaluation of sentence simplification in English. The dataset uses the same 2,359 sentences from [TurkCorpus]( https://github.com/cocoxu/simplification/) [(Xu et al., 2016)](https://www.aclweb.org/anthology/Q16-1029.pdf) and each sentence is associated with 10 crowdsourced simplifications. Unlike previous simplification datasets, which contain a single transformation (e.g., lexical paraphrasing in TurkCorpus or sentence
+[ASSET](https://github.com/facebookresearch/asset) [(Alva-Manchego et al., 2020)](https://www.aclweb.org/anthology/2020.acl-main.424.pdf) is multi-reference dataset for the evaluation of sentence simplification in English. The dataset uses the same 2,359 sentences from [TurkCorpus]( https://github.com/cocoxu/simplification/) [(Xu et al., 2016)](https://www.aclweb.org/anthology/Q16-1029.pdf) and each sentence is associated with 10 crowdsourced simplifications. Unlike previous simplification datasets, which contain a single transformation (e.g., lexical paraphrasing in TurkCorpus or sentence
 splitting in [HSplit](https://www.aclweb.org/anthology/D18-1081.pdf)), the simplifications in ASSET encompass a variety of rewriting transformations.
 
 **Data set developer(s):**
