@@ -1,7 +1,14 @@
 ---
 title: 'WikiLingua'
 type: summarization
+motivation: A multilingual and clean dataset for summarizing instructions.
 ---
+
+## Table of Contents
+
+[Leave this blank, we autogenerate this section and overwrite content]
+
+## Dataset Description
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 

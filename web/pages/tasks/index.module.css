@@ -1,0 +1,14 @@
+.description {
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 300;
+  font-variant: normal;
+}
+
+.italicsdescription {
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 300;
+  font-variant: normal;
+  font-style: italic;
+}
