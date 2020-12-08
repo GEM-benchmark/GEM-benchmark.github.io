@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy gh-pages\" && cd .. && git subtree push --prefix web/out origin gh-pages"
+    "deploy": "git checkout main && next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy gh-pages\" && cd .. && git subtree split --prefix web/out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "dependencies": {
     "fs": "0.0.1-security",
