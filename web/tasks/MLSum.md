@@ -1,7 +1,14 @@
 ---
 title: 'MLSum'
 type: summarization
+motivation: A multilingual news summarization dataset.
 ---
+
+## Table of Contents
+
+[Leave this blank, we autogenerate this section and overwrite content]
+
+## Dataset Description
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
 
