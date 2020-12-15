@@ -194,8 +194,7 @@ The use of GPT-2 to validate development ant test sentences [might be cause for 
 
 ## Getting started with in-depth research on the task
 
-[TODO]
-
+- Two variants of [BART](https://arxiv.org/abs/1910.13461), [Knowledge Graph augemnted-BART](https://arxiv.org/abs/2009.12677) and [Enhanced Knowledge Injection Model for Commonsense Generation](https://arxiv.org/abs/2012.00366), hold the top two spots on the leaderboard, followed by a fine-tuned [T5 model](https://arxiv.org/abs/1910.10683).
 - The following script shows how to download and load the data, fine-tune, and evaluate a model using the ROUGE, BLEU, and METEOR metrics: [GEM sample script](https://github.com/GEM-benchmark/GEM-baseline-models/blob/main/examples/GEM-common_gen.ipynb).
 
 ## Credits
