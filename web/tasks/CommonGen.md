@@ -127,9 +127,9 @@ The dataset re-uses data from the following pre-existing resources:
   - [MSCOCO](https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48)
   - [Conceptual Captions](https://www.aclweb.org/anthology/P18-1238/)
 - Video captioning datasets:
-  -[LSMDC](https://link.springer.com/article/10.1007/s11263-016-0987-1)
-  -[ActivityNet](https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html)
-  -[VaTeX](https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html)
+  - [LSMDC](https://link.springer.com/article/10.1007/s11263-016-0987-1)
+  - [ActivityNet](https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html)
+  - [VaTeX](https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html)
 
 We refer the reader to the papers describing these sources for further information.
 
