@@ -123,13 +123,13 @@ The speaker is required to produce a *coherent* sentence which mentions all of t
 The dataset re-uses data from the following pre-existing resources:
 
 - Image captioning datasets:
--- [Flickr30k](https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00166)
--- [MSCOCO](https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48)
--- [Conceptual Captions](https://www.aclweb.org/anthology/P18-1238/)
+  - [Flickr30k](https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00166)
+  - [MSCOCO](https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48)
+  - [Conceptual Captions](https://www.aclweb.org/anthology/P18-1238/)
 - Video captioning datasets:
---[LSMDC](https://link.springer.com/article/10.1007/s11263-016-0987-1)
---[ActivityNet](https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html)
---[VaTeX](https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html)
+  -[LSMDC](https://link.springer.com/article/10.1007/s11263-016-0987-1)
+  -[ActivityNet](https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html)
+  -[VaTeX](https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html)
 
 We refer the reader to the papers describing these sources for further information.
 
@@ -175,22 +175,23 @@ If the originally published dataset was modified in any way for GEM, please reco
 
 ### Social Impact of the Dataset
 
-[TODO]
+The task is presented as a stepping stone towards building models that achieve more human-like text generation. Progress in this research direction opens the way for strong quality of life improvements through applications such as virtual assistants or automatic image captioning, while also raising concern of misuse especially by agents who want to hide that a text is machine generated.
 
 ### Impact on Underserved Communities
 
-[TODO]
+The dataset is in English, a language with an abundance of existing resources.
 
 ### Discussion of Biases
 
+The dataset is created using data from image captioning systems and might inherit some of the social biases represented therein (see e.g. [Tang et al. 2020](https://arxiv.org/abs/2006.08315)).
 
-The dataset is created using data from image captioning systems and might inherit some of the social biases represented therein (see e.g. [Tang et al. 2020](https://arxiv.org/abs/2006.08315)).  
+Another related concern is the exposure bias introduced by the initial selection of pictures and video, which are likely to over-represent situations that are common in the US at the expense of other parts of the world (Flickr, for example, is a US-based company founded in Canada). For more discussion of the potential impacts of exposure bias, see e.g. [The Social Impact of Natural Language Processing](https://www.aclweb.org/anthology/P16-2096.pdf).
 
 The use of GPT-2 to validate development ant test sentences [might be cause for similar concern](https://www.aclweb.org/anthology/D19-1339.pdf), but we do note that the authors only use the model to discount very high perplexity sequences which is less likely to surface those biases.
 
 ### Other Known Limitations
 
-[TODO]
+The language in the development and test set is crowdsourced, which means that it was written by workers whose main goal was speed. This is likely to impact the quality and variety of the targets.
 
 ## Getting started with in-depth research on the task
 
