@@ -61,7 +61,7 @@ The dataset can be obtained via filing a form with the maintainers, without expl
 
 ### Leaderboard
 
-If the dataset supports an active leaderboard, add a link here and describe how models are evaluated.
+The dataset supports an active leaderboard, the best resukts are tracked [here](https://inklab.usc.edu/CommonGen/leaderboard.html). The model outputs are evaluated against the crowdsourced references, and ranked by SPICE score. The leaderboard also reports BLEU-4 and CIDEr scores.
 
 ## Dataset Structure
 
@@ -92,7 +92,7 @@ A data instance has the following fields
 
 ### Data Statistics
 
-Each example in the dataset consists in a set of 3 to 5 concepts denoted by a single noun, verb, or adjective (the input), and a sentence using these concepts (the output). The dataset provides several such sentences for each such concept.
+Each example in the dataset consists of a set of 3 to 5 concepts denoted by a single noun, verb, or adjective (the input), and a sentence using these concepts (the output). The dataset provides several such sentences for each such concept.
 
 |                           | Train  | Dev   | Test  |
 |---------------------------|--------|-------|-------|
@@ -111,8 +111,6 @@ The authors also ensured that the training, dev and test set have different comb
 ### Curation Rationale
 
 The dataset creators selected sets of concepts that appeared in image and video captions (as identified by a POS tagger) to ensure that a likely real-world scenario including the set could be imagined and constructed. Section 3.1 of the [paper](https://arxiv.org/pdf/1911.03705v3.pdf) describes a sampling scheme which encourages diversity of sets while selecting common concepts.
-
-
 
 ### Communicative Goal
 
@@ -149,11 +147,11 @@ The original language of this dataset was created by Amazon Mechanical Turk work
 
 During the data collection, workers who provided rationales that were too short, failed to have good coverage of the input in their sentences, or workers whose output had a high perplexity under a GPT-2 model were disqualified from the pool and replaced with newcomers.
 
-No demographic information is provided
+No demographic information is provided.
 
 ### Annotations
 
-The dataset does not contain any additional annotations,
+The dataset does not contain any additional annotations.
 
 #### Annotation process
 
@@ -191,7 +189,7 @@ The use of GPT-2 to validate development ant test sentences [might be cause for 
 
 ### Other Known Limitations
 
-The language in the development and test set is crowdsourced, which means that it was written by workers whose main goal was speed. This is likely to impact the quality and variety of the targets.
+The language in the development and test set is crowdsourced, which means that it was written by workers whose main goal was speed. This is likely to impact the quality and variety of the targets. The population of crowdsource workers is also not identically distributed as the the base population of the locations the workers come from, which may lead to different representation of situations or underlying expectations of what these situations are.
 
 ## Getting started with in-depth research on the task
 
