@@ -34,12 +34,15 @@ export default function Nav() {
               <a >Tasks</a>
             </Link></li>
             <li className={styles.navitem}>
-            <Link href="/get_started/">
+            <Link href="/get_started">
               <a >How To</a>
             </Link></li>
           <li className={styles.navitem}><a href="#">Results</a></li>
           <li className={styles.navitem}><a href="#">Paper</a></li>
-          <li className={styles.navitem}><a href="#">Team</a></li>
+          <li className={styles.navitem}>
+            <Link href="/team">
+              <a >Team</a>
+            </Link></li>
           <li className={styles.navitem}><a href="#">Workshop</a></li>
         </ul>
       </nav>

@@ -62,7 +62,7 @@ export default function Home() {
           </a>
         </Link>
 
-        <Link href="#">
+        <Link href="/team">
           <a className={styles.card}>
             <h3>Team</h3>
           </a>

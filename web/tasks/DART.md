@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'DART'
+type: Structure-to-Text
 motivation: TODO.
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'Wiki-Auto'
+type: Simplification
 motivation: TODO.
 ---
 

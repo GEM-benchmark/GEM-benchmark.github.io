@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'MultiWOZ 2.2'
+type: Dialog
 motivation: TODO.
 ---
 

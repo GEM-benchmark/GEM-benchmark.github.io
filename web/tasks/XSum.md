@@ -1,5 +1,5 @@
 ---
-title: 'WikiLingua'
+title: 'XSum'
 type: summarization
 motivation: TODO.
 ---

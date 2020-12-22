@@ -1,7 +1,7 @@
 ---
 title: 'MLSum'
 type: summarization
-motivation: A multilingual news summarization dataset.
+motivation: TODO.
 ---
 
 ## Table of Contents
@@ -10,9 +10,110 @@ motivation: A multilingual news summarization dataset.
 
 ## Dataset Description
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+- **Homepage:**
+- **Repository:**
+- **Paper:**
+- **Point of Contact:**
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+### Dataset and Task Summary
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+[More Information Needed]
+
+### Why is this dataset part of GEM?
+
+[More Information Needed]
+
+### Languages
+
+[More Information Needed]
+
+## Meta Information
+
+### Dataset Curators
+
+[More Information Needed]
+
+### Licensing Information
+
+[More Information Needed]
+
+### Citation Information
+
+[More Information Needed]
+
+### Leaderboard
+
+## Dataset Structure
+
+### Data Instances
+
+[More Information Needed]
+
+### Data Fields
+
+[More Information Needed]
+
+### Data Statistics
+
+[More Information Needed]
+
+## Dataset Creation
+
+### Curation Rationale
+
+[More Information Needed]
+
+### Communicative Goal
+
+[More Information Needed]
+
+
+### Source Data
+
+#### Initial Data Collection and Normalization
+
+[More Information Needed]
+
+#### Who are the source language producers?
+
+[More Information Needed]
+
+### Annotations
+
+#### Annotation process
+
+[More Information Needed]
+
+#### Who are the annotators?
+
+[More Information Needed]
+
+### Personal and Sensitive Information
+
+[More Information Needed]
+
+## Changes to the Original Dataset for GEM
+
+[More Information Needed]
+
+## Considerations for Using the Data
+
+### Social Impact of the Dataset
+
+[More Information Needed]
+
+### Impact on Underserved Communities
+
+[More Information Needed]
+
+### Discussion of Biases
+
+[More Information Needed]
+
+### Other Known Limitations
+
+[More Information Needed]
+
+## Getting started with in-depth research on the task
+
+[More Information Needed]

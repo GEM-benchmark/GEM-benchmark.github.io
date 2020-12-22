@@ -31,8 +31,7 @@ export default function Home({ allTasksData }) {
             <a target="_blank">
               1
               </a>
-          </Link>,
-              <Link href="https://arxiv.org/abs/1803.09010" >
+          </Link>, <Link href="https://arxiv.org/abs/1803.09010" >
             <a target="_blank">
               2
               </a>

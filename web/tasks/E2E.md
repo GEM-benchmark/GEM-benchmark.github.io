@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'E2E'
+type: Structure-to-Text
 motivation: TODO.
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'Wizards of Wikipedia'
+type: Dialog
 motivation: TODO.
 ---
 

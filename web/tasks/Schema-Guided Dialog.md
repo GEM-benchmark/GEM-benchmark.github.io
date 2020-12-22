@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'Schema-Guided Dialog'
+type: Dialog
 motivation: TODO.
 ---
 

@@ -2,9 +2,21 @@
 title: "Getting Started with GEM"
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+In this tutorial, we will walk you through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
+Throughout this tutorial, we will focus on the CommonGen task, but we will note
+what changes to make to use another of the GEM datasets.
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+## Table of Contents
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+
+## Loading the Data
+
+## Finetuning a pretrained model
+
+## Generating Predictions
+
+## Evaluating Predictions
+
+## Generating and Submitting Test Predictions
+
+Coming soon :)

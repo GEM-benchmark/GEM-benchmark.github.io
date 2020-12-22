@@ -1,6 +1,6 @@
 ---
-title: 'WikiLingua'
-type: summarization
+title: 'Czech Restaurant'
+type: Structure-to-Text
 motivation: TODO.
 ---
 
