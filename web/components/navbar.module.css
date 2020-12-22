@@ -40,9 +40,16 @@
 
 .navbar ul {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  justify-self: end;
+  display: flex;
+  margin: 0 -10px;
+}
+
+.navbar li {
+  margin: 0 25px;
+}
+
+.navbar .pushright {
+  margin-left: auto;
 }
 
 .navitem a {

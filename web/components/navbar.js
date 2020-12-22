@@ -1,3 +1,4 @@
+// Module that contains the navigation bar.
 import utilStyles from "../styles/utils.module.css";
 import styles from "./navbar.module.css";
 import Link from "next/link";
@@ -29,7 +30,7 @@ export default function Nav() {
           <span className={styles.bar}></span>
         </div>
         <ul className={styles.nav}>
-          <li className={styles.navitem}>
+          <li className={styles.navitem + " " + styles.pushright}>
             <Link href="/tasks/">
               <a >Tasks</a>
             </Link></li>
