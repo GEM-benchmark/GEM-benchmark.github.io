@@ -1,1 +1,0 @@
-{"pageProps":{"allTasksData":[{"id":"WikiLingua","title":"WikiLingua","type":"summarization","motivation":"A multilingual and clean dataset for summarizing instructions."},{"id":"MLSum","title":"MLSum","type":"summarization","motivation":"A multilingual news summarization dataset."},{"id":"CommonGen","title":"CommonGen","type":"data-to-text"}]},"__N_SSG":true}
