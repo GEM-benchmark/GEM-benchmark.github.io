@@ -4,59 +4,29 @@ import Layout from "../components/layout";
 import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
 import styles from "./team.module.css";
+import { getTeamData } from "../lib/team";
 import { faDribbble, faTwitter } from '@fortawesome/free-brands-svg-icons'
 // import { faDribble } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const contacts = [
-  {
-    id: 1, name: "Leanne Graham",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com",
-    twitter: "@test"
-  },
-  {
-    id: 2, name: "Ervin Howell",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
-  },
-  {
-    id: 3, name: "Clementine Bauch",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
-  },
-  {
-    id: 4, name: "Clementine Bauch",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
-  },
-  {
-    id: 5, name: "Clementine Bauch",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
-  },
-  {
-    id: 6, name: "Clementine Bauch",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
-  },
-  {
-    id: 7, name: "Patricia Lebsack",
-    position: "Assistant Professor",
-    organization: "UBC",
-    website: "https://test.com"
+function shuffleArray(array) {
+  let i = array.length - 1;
+  for (; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
   }
-];
+  return array;
+}
 
 function ContactList(props) {
+  // First shuffle order in which members are shown.
+  const shuffled_contacts = shuffleArray(props.contacts)
+  // Then render a card for each.
   return (
-    <section className={styles.cards}>{props.contacts.map(c => <Contact key={c.id}
+    <section className={styles.cards}>{shuffled_contacts.map((c, idx) => <Contact
+      key={idx}
       name={c.name} position={c.position}
       organization={c.organization} website={c.website}
       twitter={c.twitter}/>)}</section>
@@ -64,10 +34,9 @@ function ContactList(props) {
 }
 
 function Contact(props) {
-  // Optional Website.
+  // Optional Website link.
   var website_tag = "";
   if (props.website != undefined) {
-    console.log("yay");
     website_tag = (
       <Link href={props.website}>
         <a target="_blank"><FontAwesomeIcon icon={faDribbble} /></a>
@@ -78,7 +47,6 @@ function Contact(props) {
   // Optional Twitter tag.
   var twitter_tag = "";
   if (props.twitter != undefined) {
-    console.log("yay");
     var twitter_href = "https://twitter.com/" + props.twitter
     twitter_tag = (
       <Link href={twitter_href}>
@@ -97,7 +65,8 @@ function Contact(props) {
   );
 }
 
-export default function Home() {
+export default function Home({ teamData }) {
+  console.log(teamData)
   return (
     <Layout home>
       <Head>
@@ -114,9 +83,18 @@ export default function Home() {
           acts as a directory of our amazing contributors:
       </p>
         <div className={styles.centered}>
-          <ContactList contacts={contacts} />
+          <ContactList contacts={teamData.teamMembers} />
         </div>
       </article>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const teamData = await getTeamData();
+  return {
+    props: {
+      teamData,
+    },
+  };
 }
