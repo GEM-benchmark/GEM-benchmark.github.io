@@ -90,7 +90,8 @@ function Contact(props) {
   return (
     <article className={styles.card}>
       <h3 className={styles.name}>{props.name}</h3>
-      <p className={styles.title}>{props.position} | {props.organization}</p>
+      <p className={styles.title}>{props.position}</p>
+      <p className={styles.title}>{props.organization}</p>
       {website_tag} {twitter_tag}
     </article>
   );
