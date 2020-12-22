@@ -11,6 +11,10 @@
     "deploy": "git checkout main && next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy gh-pages\" && cd .. && git subtree split --prefix web/out -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.13",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
     "less": "^3.12.2",

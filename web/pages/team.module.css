@@ -36,6 +36,15 @@
   text-align: center;
 }
 
+.card a {
+  transition: color 0.2s ease-out;
+
+}
+
+.card a:hover {
+  color: #70abaf;
+}
+
 @media screen and (min-width: 40em) {
   .card {
      max-width: calc(50% -  1em);
