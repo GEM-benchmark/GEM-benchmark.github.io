@@ -9,17 +9,6 @@
   box-sizing: border-box;
 }
 
-.gradbar {
-  width: 100%;
-  height: 5px;
-  /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
-  background: linear-gradient(-45deg, #eff6ff, #c10001, #2a555e, #70abaf);
-  background-size: 400% 400%;
-  -webkit-animation: gradbar 15s ease infinite;
-  -moz-animation: gradbar 15s ease infinite;
-  animation: gradbar 15s ease infinite;
-}
-
 /* NAVIGATION */
 
 .navbar {
@@ -68,81 +57,21 @@
 
 .menutoggle .bar {
   width: 25px;
-  height: 3px;
+  height: 25px;
   background-color: #3f3f3f;
   margin: 5px auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
 }
 
 .menutoggle {
   justify-self: end;
   margin-right: 25px;
   display: none;
+  margin-top: -40px;
 }
 
 .menutoggle:hover {
   cursor: pointer;
 }
-
-#mobile-menu.is-active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-#mobile-menu.is-active .bar:nth-child(1) {
-  -webkit-transform: translateY(8px) rotate(45deg);
-  -ms-transform: translateY(8px) rotate(45deg);
-  -o-transform: translateY(8px) rotate(45deg);
-  transform: translateY(8px) rotate(45deg);
-}
-
-#mobile-menu.is-active .bar:nth-child(3) {
-  -webkit-transform: translateY(-8px) rotate(-45deg);
-  -ms-transform: translateY(-8px) rotate(-45deg);
-  -o-transform: translateY(-8px) rotate(-45deg);
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* KEYFRAME ANIMATIONS */
-
-@-webkit-keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@-moz-keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-@keyframes gradbar {
-  0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
-  }
-  100% {
-    background-position: 0% 50%
-  }
-}
-
-/* Media Queries */
 
 /* Mobile Devices - Phones/Tablets */
 
@@ -177,7 +106,56 @@
     display: block;
     cursor: pointer;
   }
-  .mobile-nav {
+  .mobilenav {
     transform: translate(0%)!important;
+    background-color: rgba(239, 246, 255, 0.99);
+  }
+}
+
+/* KEYFRAME ANIMATIONS */
+.gradbar {
+  width: 100%;
+  height: 5px;
+  /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
+  background: linear-gradient(-45deg, #eff6ff, #c10001, #2a555e, #70abaf);
+  background-size: 400% 400%;
+  -webkit-animation: gradbar 15s ease infinite;
+  -moz-animation: gradbar 15s ease infinite;
+  animation: gradbar 15s ease infinite;
+}
+
+@-webkit-keyframes gradbar {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes gradbar {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes gradbar {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
   }
 }
