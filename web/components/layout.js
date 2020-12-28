@@ -4,7 +4,7 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import Nav from './navbar'
+import Navbar from './navbar'
 
 const name = "GEM Benchmark";
 export const siteTitle = "GEM";
@@ -28,7 +28,7 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        <Nav></Nav>
+        <Navbar></Navbar>
       </header>
       <div className={styles.container}>
         <main>{children}</main>

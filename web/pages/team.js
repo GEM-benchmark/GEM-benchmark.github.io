@@ -6,7 +6,6 @@ import utilStyles from "../styles/utils.module.css";
 import styles from "./team.module.css";
 import { getTeamData } from "../lib/team";
 import { faDribbble, faTwitter } from '@fortawesome/free-brands-svg-icons'
-// import { faDribble } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function shuffleArray(array) {
