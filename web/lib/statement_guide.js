@@ -8,7 +8,7 @@ import toc from "remark-toc";
 import gfm from "remark-gfm";
 import highlight from "remark-highlight.js";
 
-const GuidePath = path.join(process.cwd(), "tutorial", "statement_guide.md");
+const GuidePath = path.join(process.cwd(), "data", "statement_guide.md");
 
 export async function getGuideData() {
   const fileContents = fs.readFileSync(GuidePath, "utf8");

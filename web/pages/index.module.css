@@ -52,9 +52,17 @@
   background-color: #c10001;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
 }
+
+@media (min-width: 720px) {
+  .centerpage {
+    margin-top: 20vh;
+  }
+
+}
+

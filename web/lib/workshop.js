@@ -8,10 +8,10 @@ import toc from "remark-toc";
 import gfm from "remark-gfm";
 import highlight from "remark-highlight.js";
 
-const tutorialPath = path.join(process.cwd(), "data", "getting_started.md");
+const workshopPath = path.join(process.cwd(), "data", "workshop.md");
 
-export async function getTutorialData() {
-  const fileContents = fs.readFileSync(tutorialPath, "utf8");
+export async function getWorkshopData() {
+  const fileContents = fs.readFileSync(workshopPath, "utf8");
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
