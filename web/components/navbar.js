@@ -41,8 +41,8 @@ class Navbar extends React.Component {
             onClick={this.handleMobileClick}>
             <FontAwesomeIcon className={styles.bar} icon={faBars} />
           </div>
-          <ul className={this.state.active? styles.nav + " " + styles.mobilenav : styles.nav}>
-            <li className={this.state.active? styles.navitem : styles.navitem + " " + styles.pushright}>
+          <ul className={this.state.active ? styles.nav + " " + styles.mobilenav : styles.nav}>
+            <li className={this.state.active ? styles.navitem : styles.navitem + " " + styles.pushright}>
               <Link href="/tasks/">
                 <a >Tasks</a>
               </Link></li>
@@ -56,7 +56,11 @@ class Navbar extends React.Component {
               <Link href="/team">
                 <a >Team</a>
               </Link></li>
-            <li className={styles.navitem}><a href="#">Workshop</a></li>
+            <li className={styles.navitem}>
+              <Link href="/workshop">
+                <a >Workshop</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

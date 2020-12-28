@@ -65,7 +65,6 @@ function Contact(props) {
 }
 
 export default function Home({ teamData }) {
-  console.log(teamData)
   return (
     <Layout home>
       <Head>
