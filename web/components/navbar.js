@@ -31,18 +31,30 @@ export default function Nav() {
         <ul className={styles.nav}>
           <li className={styles.navitem}>
             <Link href="/tasks/">
-              <a >Tasks</a>
-            </Link></li>
-            <li className={styles.navitem}>
+              <a>Tasks</a>
+            </Link>
+          </li>
+          <li className={styles.navitem}>
             <Link href="/get_started/">
-              <a >How To</a>
-            </Link></li>
-          <li className={styles.navitem}><a href="#">Results</a></li>
-          <li className={styles.navitem}><a href="#">Paper</a></li>
-          <li className={styles.navitem}><a href="#">Team</a></li>
-          <li className={styles.navitem}><a href="#">Workshop</a></li>
+              <a>How To</a>
+            </Link>
+          </li>
+          <li className={styles.navitem}>
+          <Link href="/leaderboard/">
+            <a>Results</a>
+            </Link>
+          </li>
+          <li className={styles.navitem}>
+            <a href="#">Paper</a>
+          </li>
+          <li className={styles.navitem}>
+            <a href="#">Team</a>
+          </li>
+          <li className={styles.navitem}>
+            <a href="#">Workshop</a>
+          </li>
         </ul>
       </nav>
     </div>
-  )
+  );
 }
