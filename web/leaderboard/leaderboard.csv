@@ -1,0 +1,4 @@
+task,model,param_size,score
+Task 1, Model A, 398M, 78.1
+Task 1, Model B, 768M, 68.3
+Task 1, Model C, 398M, 95.0

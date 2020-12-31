@@ -13,6 +13,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "csv-parse": "^4.14.2",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
     "less": "^3.12.2",

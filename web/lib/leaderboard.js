@@ -1,45 +1,38 @@
+/*
+Reads the leaderboard data from a server-side csv file 
+located in 'leaderboard/leaderboard.csv'.
+The file should have the following fields:
+task,model,param_size,score
+*/
+import path from "path";
+import fs from "fs";
+const parse = require("csv-parse/lib/sync");
+
 export function getLeaderboardData() {
-  const schema = [
-    {
-      name: "task",
-      label: "Task",
-      options: {
-        filter: true,
-        sort: true,
-      },
-    },
-    {
-      name: "model",
-      label: "Model",
-      options: {
-        filter: true,
-        sort: false,
-      },
-    },
-    {
-      name: "param_size",
-      label: "Number of Parameters",
-      options: {
-        filter: true,
-        sort: false,
-      },
-    },
-    {
-      name: "score",
-      label: "Score",
-      options: {
-        filter: true,
-        sort: false,
-      },
-    },
-  ];
+  
+  // read the leaderboard schema
+  const leaderboardSchemaFilePath = path.join(
+    process.cwd(),
+    "leaderboard/leaderboard.json"
+  );
+  const schema = JSON.parse(fs.readFileSync(leaderboardSchemaFilePath, 'utf8')).columns
+  
+
+  // read the leaderboard data from a csv
+  const leaderboardDataFilePath = path.join(
+    process.cwd(),
+    "leaderboard/leaderboard.csv"
+  );
+  
+  const leaderboardData = fs.readFileSync(leaderboardDataFilePath, "utf8");
+  const records = parse(leaderboardData, {
+    columns: true,
+    skip_empty_lines: true,
+    trim: true
+  });
 
   return {
-    data: [
-      { task: "Task 1", model: "Model A", param_size: "398M", score: 78.1 },
-      { task: "Task 1", model: "Model B", param_size: "768M", score: 68.3 },
-      { task: "Task 1", model: "Model C", param_size: "398M", score: 95.0 },
-    ],
+    data: records,
     schema: schema,
   };
 }

@@ -1,0 +1,36 @@
+{
+  "columns": [
+    {
+      "name": "task",
+      "label": "Task",
+      "options": {
+        "filter": true,
+        "sort": true
+      }
+    },
+    {
+      "name": "model",
+      "label": "Model",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    },
+    {
+      "name": "param_size",
+      "label": "Number of Parameters",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    },
+    {
+      "name": "score",
+      "label": "Score",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    }
+  ]
+}
