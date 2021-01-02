@@ -84,7 +84,7 @@ The DART dataset is available in the data/ directory. The dataset consists of JS
 
 Creators provided delexicalization dictionaries in data/**/delex/ that map string entities to entity categories.
 
-### Data Fields  !!!INCOMPLETE
+### Data Fields  
 
 tripleset: a list of tuples, each tuple has 3 items
 subtree_was_extended: a boolean variable (true or false)
