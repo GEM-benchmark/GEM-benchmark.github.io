@@ -14,7 +14,8 @@ motivation: Knowledge conditioned open domain dialog.
 - **Repository:** [Wizard of Wikipedia task in PARLAI repo](https://github.com/facebookresearch/ParlAI/tree/master/parlai/tasks/wizard_of_wikipedia)
 - **Paper:** [Wizard of Wikipedia: Knowledge-Powered Conversational agents
 ](https://arxiv.org/abs/1811.01241)
-- **Point of Contact:** Option 1: Contacting via creating an issue on PARLAI [github repo](https://github.com/facebookresearch/ParlAI). Option 2: Contact authors on the above paper.
+- **Point of Contact:** Option 1: Contacting via creating an issue on PARLAI [github repo](https://github.com/facebookresearch/ParlAI). Option 2: 
+[Contact authors on the above paper]({edinan,roller,kshuster,angelafan,michaelauli,jase}@fb.com)
 
 
 ### Dataset and Task Summary
@@ -57,7 +58,7 @@ The [project page](https://parl.ai/projects/wizard_of_wikipedia/) does not menti
 
 ### Leaderboard
 
-Project page has a [leaderboard](https://parl.ai/projects/wizard_of_wikipedia/), though it is probably not maintained actively.
+Project page has a [leaderboard](https://parl.ai/projects/wizard_of_wikipedia/).
 
 ## Dataset Structure
 
@@ -114,8 +115,8 @@ At each step of the dialogue the wizard has access to a set of passages of knowl
 
 #### Initial Data Collection and Normalization
 
-The final dialogue dataset we collect consists of 22,311 dialogues with
-201,999 turns, which we divide into 166,787 for train, 17,715 for validation, and 17,497 for test. The test set is split into two subsets, Test Seen and Test Unseen. Test Seen contains 533 overlapping topics with the training set with new dialogues about those topics. Test Unseen consists of 58 topics never seen before in train or validation. 
+The final dialogue dataset consists of 22,311 dialogues with
+201,999 turns, which is divided into 166,787 for train, 17,715 for validation, and 17,497 for test. The test set is split into two subsets, Test Seen and Test Unseen. Test Seen contains 533 overlapping topics with the training set with new dialogues about those topics. Test Unseen consists of 58 topics never seen before in train or validation. 
 
 
 
@@ -134,7 +135,7 @@ chooses the no sentence used option.
 
 #### Who are the annotators?
 
-Crowdworkers
+Crowdworkers were recruited for data collection. More details about crowdworkers are not provided in the paper. 
 
 ### Personal and Sensitive Information
 
@@ -148,7 +149,7 @@ None at present
 
 ### Social Impact of the Dataset
 
-The dataset would probably have similar societal impacts as most other open domain dialog datasets. There are several resources available for social impact of open domain dialog agents (such as SIG: chatbots for social good. Følstad et al 2018.)
+The dataset would probably have similar societal impacts as most other open domain dialog datasets. There are several resources available for social impact of open domain dialog agents (such as [SIG: chatbots for social good. Følstad et al 2018](https://dl.acm.org/doi/10.1145/3170427.3185372)).
 
 ### Impact on Underserved Communities
 
