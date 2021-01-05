@@ -161,6 +161,7 @@ Wiki-Auto provides a new version of the Wikipedia corpus that is larger, contain
 
 ### Communicative Goal
 
+The goal is to communicate the same information as the source sentence using simpler words and grammar.
 
 ### Source Data
 
@@ -180,7 +181,7 @@ Sentence alignment labels were crowdsourced for 500 randomly sampled document pa
 
 #### Who are the annotators?
 
-No demographic annotation is provided for the crowd workers.
+No demographic annotation is provided for the crowd workers. The [Figure Eight](https://www.figure-eight.com/) platform was used for the annotation process.
 
 ### Personal and Sensitive Information
 
@@ -210,4 +211,11 @@ Since the data is created using an automatic alignment model (which is not perfe
 
 ## Getting started with in-depth research on the task
 
-The dataset can be downloaded from the original repository [(here)](https://github.com/chaojiang06/wiki-auto) by the authors (it also contains instructions to load a trained model on the dataset) or can also be used via HuggingFace and TFDS.
+The dataset can be downloaded from the original repository [(here)](https://github.com/chaojiang06/wiki-auto) by the authors or can also be used via [HuggingFace](https://huggingface.co/datasets/wiki_auto) and [TFDS](https://www.tensorflow.org/datasets/overview).
+
+The dataset repository provided by the authors also contains instructions to load a trained transformer-based model on the dataset. There are also other recent supervised ([Martin et al., 2019](https://arxiv.org/abs/1910.02677), [Kriz et al., 2019](https://www.aclweb.org/anthology/N19-1317/), [Dong et al., 2019](https://www.aclweb.org/anthology/P19-1331/), [Zhang and Lapata, 2017](https://www.aclweb.org/anthology/D17-1062/)) and unsupervised ([Martin et al., 2020](https://arxiv.org/abs/2005.00352v1), [Kumar et al., 2020](https://www.aclweb.org/anthology/2020.acl-main.707/), [Surya et al., 2019](https://www.aclweb.org/anthology/P19-1198/)) text simplification models that can be used as baselines.
+
+The common metric used for automatic evaluation is SARI [(Xu et al., 2016)](https://www.aclweb.org/anthology/Q16-1029/).
+
+ 
+
