@@ -8,7 +8,7 @@ import toc from "remark-toc";
 import gfm from "remark-gfm";
 import highlight from "remark-highlight.js";
 
-const GuidePath = path.join(process.cwd(), "tutorial", "statement_guide.md");
+const GuidePath = path.join(process.cwd(), "data", "statement_guide.md");
 
 export async function getGuideData() {
   const fileContents = fs.readFileSync(GuidePath, "utf8");
@@ -19,7 +19,7 @@ export async function getGuideData() {
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(gfm)
-    .use(toc, {tight: true})
+    .use(toc, { tight: true })
     .use(slug)
     .use(highlight)
     .use(html)

@@ -1,6 +1,7 @@
 ---
 title: 'CommonGen'
 type: data-to-text
+motivation: A medium sized corpus with a unique reasoning challenge and interesting evaluation possibilities.
 ---
 
 
@@ -55,7 +56,7 @@ The dataset can be obtained via filing a form with the maintainers, without expl
     address = "Online",
     publisher = "Association for Computational Linguistics",
     url = "https://www.aclweb.org/anthology/2020.findings-emnlp.165",
-    pages = "1823--1840", 
+    pages = "1823--1840",
 }
 ```
 

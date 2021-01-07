@@ -39,8 +39,7 @@ img {
 }
 
 main {
-  background-color: #eff6ff;
-  opacity: 70%;
+  background-color: rgba(239, 246, 255, 0.7);
 }
 
 code {

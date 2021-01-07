@@ -21,8 +21,8 @@ export default function Home({ allTasksData }) {
       <Head>
         <title>GEM Tasks</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg + " " + utilStyles.accentUnderline}>
+      <section>
+        <h2 className={utilStyles.headingXl}>
           List of Tasks
         </h2>
         <p className={styles.description}>
@@ -31,8 +31,7 @@ export default function Home({ allTasksData }) {
             <a target="_blank">
               1
               </a>
-          </Link>,
-              <Link href="https://arxiv.org/abs/1803.09010" >
+          </Link>, <Link href="https://arxiv.org/abs/1803.09010" >
             <a target="_blank">
               2
               </a>

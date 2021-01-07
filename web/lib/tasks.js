@@ -29,7 +29,7 @@ export function getSortedTasksData() {
       ...matterResult.data
     }
   })
-  // Sort posts by date
+  // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
     if (a.type < b.type) {
       return 1

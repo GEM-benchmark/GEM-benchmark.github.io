@@ -1,0 +1,70 @@
+.description {
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.name {
+  display: block;
+  color: #2a555e;
+  text-transform: capitalize;
+}
+
+.title {
+  color: #70abaf;
+}
+
+.centered {
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 0 500px;
+  box-sizing: border-box;
+  margin: 0.5rem .25em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.card h3 {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
+}
+
+.card p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+
+}
+
+.card a {
+  transition: color 0.2s ease-out;
+
+}
+
+.card a:hover {
+  color: #70abaf;
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+     max-width: calc(50% -  1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .card {
+      max-width: calc(33% - 1em);
+  }
+}

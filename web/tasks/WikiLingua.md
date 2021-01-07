@@ -1,7 +1,7 @@
 ---
 title: 'WikiLingua'
 type: summarization
-motivation: A multilingual and clean dataset for summarizing instructions.
+motivation: TODO.
 ---
 
 ## Table of Contents
@@ -10,32 +10,110 @@ motivation: A multilingual and clean dataset for summarizing instructions.
 
 ## Dataset Description
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+- **Homepage:**
+- **Repository:**
+- **Paper:**
+- **Point of Contact:**
 
-You can use Static Generation for many types of pages, including:
+### Dataset and Task Summary
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
+[More Information Needed]
 
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+### Why is this dataset part of GEM?
 
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+[More Information Needed]
 
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+### Languages
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+[More Information Needed]
 
-You can use Static Generation for many types of pages, including:
+## Meta Information
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
+### Dataset Curators
 
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+[More Information Needed]
 
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+### Licensing Information
 
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+[More Information Needed]
+
+### Citation Information
+
+[More Information Needed]
+
+### Leaderboard
+
+## Dataset Structure
+
+### Data Instances
+
+[More Information Needed]
+
+### Data Fields
+
+[More Information Needed]
+
+### Data Statistics
+
+[More Information Needed]
+
+## Dataset Creation
+
+### Curation Rationale
+
+[More Information Needed]
+
+### Communicative Goal
+
+[More Information Needed]
+
+
+### Source Data
+
+#### Initial Data Collection and Normalization
+
+[More Information Needed]
+
+#### Who are the source language producers?
+
+[More Information Needed]
+
+### Annotations
+
+#### Annotation process
+
+[More Information Needed]
+
+#### Who are the annotators?
+
+[More Information Needed]
+
+### Personal and Sensitive Information
+
+[More Information Needed]
+
+## Changes to the Original Dataset for GEM
+
+[More Information Needed]
+
+## Considerations for Using the Data
+
+### Social Impact of the Dataset
+
+[More Information Needed]
+
+### Impact on Underserved Communities
+
+[More Information Needed]
+
+### Discussion of Biases
+
+[More Information Needed]
+
+### Other Known Limitations
+
+[More Information Needed]
+
+## Getting started with in-depth research on the task
+
+[More Information Needed]
