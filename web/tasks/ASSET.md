@@ -1,7 +1,7 @@
 ---
 title: 'ASSET'
 type: Simplification
-motivation: ASSET is a high quality simplification dataset where each source (not simple) sentence is associated with 10 high quality human-written simplifications.
+motivation: ASSET is a high quality simplification dataset where each source (not simple) sentence is associated with 10 human-written simplifications.
 ---
 
 ## Table of Contents
@@ -12,7 +12,7 @@ motivation: ASSET is a high quality simplification dataset where each source (no
 - **Homepage:** None (See **Repository**)
 - **Repository:** [ASSET repository](https://github.com/facebookresearch/asset)
 - **Paper:** [ASSET: A Dataset for Tuning and Evaluation of Sentence Simplification Models with Multiple Rewriting Transformations](https://www.aclweb.org/anthology/2020.acl-main.424.pdf)
-- **Point of Contact:** [Fernando Alva-Manchego](f.alva@sheffield.ac.uk), [Louis Martin](louismartincs@gmail.com)
+- **Point of Contact:** [Fernando Alva-Manchego](mailto:f.alva@sheffield.ac.uk), [Louis Martin](mailto:louismartincs@gmail.com)
 
 ### Dataset and Task Summary
 
@@ -21,7 +21,7 @@ splitting in [HSplit](https://www.aclweb.org/anthology/D18-1081.pdf)), the simpl
 
 ### Why is this dataset part of GEM?
 
-ASSET is a high quality simplification dataset where each source (not simple) sentence is associated with 10 high quality human-written simplifications. It is one of the two datasets for the text simplification task in GEM. It acts as the validation and test set.
+ASSET is a high quality simplification dataset where each source (not simple) sentence is associated with 10 human-written simplifications. It is one of the two datasets for the text simplification task in GEM. It acts as the validation and test set.
 
 ### Languages
 
@@ -113,7 +113,7 @@ An example illustrating the differences between TurkCorpus, HSplit and ASSET is 
 
 ### Communicative Goal
 
-The goal is to communicate the main ideas of source sentence so that it is easier to understand by non-native speakers of English. This could be done by replacing complex words with simpler synonyms (i.e. paraphrasing), deleting unimportant information (i.e. compression), and/or splitting a long complex sentence into several simpler ones.
+The goal is to communicate the main ideas of source sentence in a way that is easier to understand by non-native speakers of English. This could be done by replacing complex words with simpler synonyms (i.e. paraphrasing), deleting unimportant information (i.e. compression), and/or splitting a long complex sentence into several simpler ones.
 
 ### Source Data
 
@@ -123,7 +123,7 @@ Not applicable since ASSET uses the same 2,359 sentences from [TurkCorpus]( http
 
 #### Who are the source language producers?
 
-The input sentences are from English Wikipedia (August 22, 2009 version). No demographic information is available for the writers of these sentences. However, most Wikipedia editors are male (Lam, 2011; Graells-Garrido, 2015), which has an impact on the topics covered (see also [the Wikipedia page on Wikipedia gender bias](https://en.wikipedia.org/wiki/Gender_bias_on_Wikipedia)). In addition, Wikipedia editors are mostly white, young, and from the Northern Hemisphere [(Wikipedia: Systemic bias)](https://en.wikipedia.org/wiki/Wikipedia:Systemic_bias).
+The dataset uses language from English Wikipedia (August 22, 2009 version): some demographic information is provided [here](https://en.wikipedia.org/wiki/Wikipedia:Who_writes_Wikipedia%3F).
 
 ### Annotations
 
@@ -142,7 +142,7 @@ No other demographic or compensation information is provided in the ASSET paper.
 
 ### Personal and Sensitive Information
 
-Since the dataset is created from Wikipedia/Simple Wikipedia, all the information contained in the dataset is already in the public domain.
+Since the dataset is created from English Wikipedia (August 22, 2009 version), all the information contained in the dataset is already in the public domain.
 
 ## Changes to the Original Dataset for GEM
 
