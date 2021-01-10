@@ -19,7 +19,7 @@ motivation: TODO.
 
 ### Dataset and Task Summary
 
-[More Information Needed]
+The E2E dataset is designed for a limited-domain data-to-text task -- generation of restaurant descriptions/recommendations based on up to 8 different attributes (name, area, price range etc.).
 
 ### Why is this dataset part of GEM?
 
@@ -104,6 +104,7 @@ The same MR is often repeated multiple times with different synonymous reference
 | Test        | 1,847|        1,358 |     4,693  |
 | Total       |15,899|       10,852 |    42,517  |
 
+The data are divided so that MRs in different data sections do not overlap.
 
 “Distinct MRs” are MRs that remain distinct even if restaurant/place names (attributes `name`, `near`) 
 are delexicalized, i.e., replaced with a placeholder.
