@@ -1,7 +1,7 @@
 
 ---
 title: DART
-type: Table-to-Text
+type: Structure-to-Text
 motivation: Hierarchical, structured format with its open-domain nature 
 ---
 
@@ -14,7 +14,7 @@ motivation: Hierarchical, structured format with its open-domain nature
 - **Homepage:** None (See **Repository**)
 - **Repository:** [DART repository](https://github.com/Yale-LILY/dart)
 - **Paper:** [DART: Open-Domain Structured Data Record to Text Generation](https://arxiv.org/abs/2007.02871)
-- **Point of Contact:** {dragomir.radev, r.zhang}@yale.edu, {nazneen.rajani}@salesforce.com !!!NOT SURE
+- **Point of Contact:** {dragomir.radev, r.zhang}@yale.edu, {nazneen.rajani}@salesforce.com
 
 ### Dataset and Task Summary
 
@@ -84,7 +84,7 @@ The DART dataset is available in the data/ directory. The dataset consists of JS
 
 Creators provided delexicalization dictionaries in data/**/delex/ that map string entities to entity categories.
 
-### Data Fields  
+### Data Fields 
 
 tripleset: a list of tuples, each tuple has 3 items
 subtree_was_extended: a boolean variable (true or false)
@@ -137,20 +137,19 @@ The training data consists of concept sets and captions for the source datasets 
 For conversion of a meaning representation (MR) to a triple set, where the NAME slot was represented as the subject.
 
 #### Who are the source language producers?
+The language producers are Wikipedia authors and/or editors for Wikipedia tables (WikiTableQuestions, WikiSQL, WebNLG), crowdworkers (E2E) and annotators (DART, E2E).
 
-Human annotations and an automatic conversion procedure.
+No demographic information is provided.
 
 ### Annotations
 
 #### Annotation process
 
-We propose a two-stage annotation process for constructing triple set sentence pairs based on a tree-structured ontology
-of each table. First, internal skilled annotators denote the parent column for each column header.
-Then, a larger number of annotators provide a sentential description of an automatically-chosen subset of table cells in a row. To form a triple set sentence pair, the highlighted cells can be converted to a connected triple set automatically according to the column ontology for the given table.
+Creators proposed a two-stage annotation process for constructing triple set sentence pairs based on a tree-structured ontology of each table. First, internal skilled annotators denote the parent column for each column header. Then, a larger number of annotators provide a sentential description of an automatically-chosen subset of table cells in a row. To form a triple set sentence pair, the highlighted cells can be converted to a connected triple set automatically according to the column ontology for the given table.
 
 #### Who are the annotators?
 
-Internal annotators from the research group ([Figure 7](https://arxiv.org/pdf/2007.02871.pdf)) and Amazon Mechanical Turk (MTurk) workers ([Figure 9](https://arxiv.org/pdf/2007.02871.pdf)).
+No further information about the MTurk workers has been provided.
 
 ### Personal and Sensitive Information
 
@@ -173,7 +172,7 @@ The dataset is in English, a language with an abundance of existing resources.
 
 ### Discussion of Biases
 
-The dataset may contain some social biases, as the input sentences are based on Wikipedia. Studies have shown that the English Wikipedia contains gender biases([Dinan et al., 2020](https://www.aclweb.org/anthology/2020.emnlp-main.23.pdf)), racial  biases([Papakyriakopoulos et al., 2020](https://dl.acm.org/doi/pdf/10.1145/3351095.3372843)) and geographical bias([Livingstone et al., 2010](https://doi.org/10.5204/mcj.315)). [More info](https://en.wikipedia.org/wiki/Racial_bias_on_Wikipedia#cite_note-23).
+The dataset may contain some social biases, as the input sentences are based on Wikipedia (WikiTableQuestions, WikiSQL, WebNLG). Studies have shown that the English Wikipedia contains gender biases([Dinan et al., 2020](https://www.aclweb.org/anthology/2020.emnlp-main.23.pdf)), racial biases([Papakyriakopoulos et al., 2020 (https://dl.acm.org/doi/pdf/10.1145/3351095.3372843)) and geographical bias([Livingstone et al., 2010](https://doi.org/10.5204/mcj.315)). [More info](https://en.wikipedia.org/wiki/Racial_bias_on_Wikipedia#cite_note-23).
 
 
 ### Other Known Limitations
