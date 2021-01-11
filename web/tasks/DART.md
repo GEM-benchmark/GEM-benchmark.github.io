@@ -1,8 +1,7 @@
-
 ---
 title: DART
 type: Structure-to-Text
-motivation: Hierarchical, structured format with its open-domain nature 
+motivation: Hierarchical, structured format with its open-domain nature
 ---
 
 ## Table of Contents
@@ -52,7 +51,7 @@ The repository code is under an [MIT license](https://github.com/Yale-LILY/dart/
 
 ### Leaderboard
 
-The dataset supports an active leaderboard, the best results are tracked [here](https://github.com/Yale-LILY/dart#leaderboard). Several state-of-the-art table-to-text models were evaluated on DART, such as BART ([Lewis et al., 2020](https://arxiv.org/pdf/1910.13461.pdf)), Seq2Seq-Att ([MELBOURNE](https://webnlg-challenge.loria.fr/files/melbourne_report.pdf)) and End-to-End Transformer ([Castro Ferreira et al., 2019](https://arxiv.org/pdf/1908.09022.pdf)). 
+The dataset supports an active leaderboard, the best results are tracked [here](https://github.com/Yale-LILY/dart#leaderboard). Several state-of-the-art table-to-text models were evaluated on DART, such as BART ([Lewis et al., 2020](https://arxiv.org/pdf/1910.13461.pdf)), Seq2Seq-Att ([MELBOURNE](https://webnlg-challenge.loria.fr/files/melbourne_report.pdf)) and End-to-End Transformer ([Castro Ferreira et al., 2019](https://arxiv.org/pdf/1908.09022.pdf)).
 The leaderboard reports BLEU, METEOR, TER, MoverScore, BERTScore and BLEURT scores.
 
 ## Dataset Structure
@@ -84,7 +83,7 @@ The DART dataset is available in the data/ directory. The dataset consists of JS
 
 Creators provided delexicalization dictionaries in data/**/delex/ that map string entities to entity categories.
 
-### Data Fields 
+### Data Fields
 
 tripleset: a list of tuples, each tuple has 3 items
 subtree_was_extended: a boolean variable (true or false)
@@ -107,14 +106,14 @@ Statistics of DART decomposed by different collection methods. DART exhibits a g
 ([details in Table 1 and 2](https://arxiv.org/pdf/2007.02871.pdf)).
 
 
-## Dataset Creation 
+## Dataset Creation
 
 ### Curation Rationale
 
 The dataset creators encourage through DART further research in natural language generation from semantic data.
-DART provides high-quality sentence annotations with each input being a set of entity-relation triples in a tree structure. 
+DART provides high-quality sentence annotations with each input being a set of entity-relation triples in a tree structure.
 
-### Communicative Goal 
+### Communicative Goal
 
 The speaker is required to produce coherent sentences and construct a trees structured ontology of the column headers.
 
@@ -157,14 +156,14 @@ No further information about the MTurk workers has been provided.
 
 ## Changes to the Original Dataset for GEM
 
-No changes were made to the original dataset for GEM at the moment of writing this. 
+No changes were made to the original dataset for GEM at the moment of writing this.
 We may, at some future point, introduce additional test set annotation (related to difficulty/challenging-ness) or introduce challenge sets - these are at the moment only tentatively planned.
 
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
 
-The task is presented as a stepping stone towards building models that achieve more human-like text generation. 
+The task is presented as a stepping stone towards building models that achieve more human-like text generation.
 
 ### Impact on Underserved Communities
 

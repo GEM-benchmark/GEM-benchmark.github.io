@@ -1,5 +1,4 @@
-﻿
----
+﻿---
 title: 'WebNLG'
 type: 'data-to-text'
 motivation: 'The WebNLG dataset is a large bi-lingual dataset with crowdsourced reference texts and a rather large variety of knowledge in the inputs. A web-based evaluation platform is already existing.'
@@ -18,7 +17,7 @@ motivation: 'The WebNLG dataset is a large bi-lingual dataset with crowdsourced 
 
 ### Dataset and Task Summary
 
-WebNLG is a bi-lingual dataset (English, Russian) of parallel DBpedia triple sets and short texts that cover about 450 different DBpedia properties. The WebNLG data was originally created to promote the development of RDF verbalisers able to generate short text and to handle micro-planning (i.e., sentence segmentation and ordering, referring expression generation, aggregation); the goal of the task is to generate texts starting from 1 to 7 input triples which have entities in common (so the input is actually a connected Knowledge Graph). The dataset contains about 17,000 triple sets and 45,000 crowdsourced texts in English, and 7,000 triples sets and 19,000 crowdsourced texts in Russian. A challenging test set section with entities and/or properties that have not been seen at training time is available. 
+WebNLG is a bi-lingual dataset (English, Russian) of parallel DBpedia triple sets and short texts that cover about 450 different DBpedia properties. The WebNLG data was originally created to promote the development of RDF verbalisers able to generate short text and to handle micro-planning (i.e., sentence segmentation and ordering, referring expression generation, aggregation); the goal of the task is to generate texts starting from 1 to 7 input triples which have entities in common (so the input is actually a connected Knowledge Graph). The dataset contains about 17,000 triple sets and 45,000 crowdsourced texts in English, and 7,000 triples sets and 19,000 crowdsourced texts in Russian. A challenging test set section with entities and/or properties that have not been seen at training time is available.
 
 ### Why is this dataset part of GEM?
 
@@ -61,15 +60,15 @@ CC Attribution-Noncommercial-Share Alike 4.0 International.
 		  Ilinykh, Nikolai and
 		  van der Lee, Chris and
 		  Mille, Simon and
-		  Moussallem, Diego and 
+		  Moussallem, Diego and
 		  Shimorina, Anastasia},
   booktitle = {Proceedings of the 3rd WebNLG Workshop on Natural Language Generation from the Semantic Web (WebNLG+ 2020)},
     pages = "55--76",
   year = 	 2020,
   address = 	 {Dublin, Ireland (Virtual)},
   publisher = {Association for Computational Linguistics}}
-  
-  
+
+
 ### Leaderboard
 
 The dataset supports an active leaderboard, the best results are tracked here: https://beng.dice-research.org/gerbil/. The model outputs are evaluated against the crowdsourced references; the leaderboard reports BLEU-4, METEOR, CHRF++, TER, BERT and BLEURT scores.
@@ -78,7 +77,7 @@ The dataset supports an active leaderboard, the best results are tracked here: h
 
 ### Data Instances
 
-Input: 
+Input:
 
 <entry category="Company" eid="Id21" shape="(X (X) (X) (X) (X))" shape_type="sibling" size="4">
     <modifiedtripleset>
@@ -141,7 +140,7 @@ The English WebNLG 2020 dataset for training comprises data-text pairs for 16 di
 The sytems are required to produce one text (one or more sentences) that verbalises all and only the input triples in a grammatical and natural way.
 
 ### Source Data
- 
+
  The data was compiled from raw DBpedia properties.
 
 #### Initial Data Collection and Normalization
