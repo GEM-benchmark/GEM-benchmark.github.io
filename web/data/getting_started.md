@@ -14,7 +14,7 @@ You can follow along with the code in this tutorial in [this notebook](https://g
 
 This tutorial uses PyTorch and the HuggingFace infrastructure to finetune models. You need to install the following dependencies:
 
-```
+```bash
 pip install datasets
 pip install rouge_score
 pip install sentencepiece
