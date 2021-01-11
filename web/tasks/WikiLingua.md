@@ -1,6 +1,6 @@
 ---
 title: 'WikiLingua'
-type: summarization
+type: Summarization
 motivation: TODO.
 ---
 
