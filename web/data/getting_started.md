@@ -6,6 +6,8 @@ In this tutorial, we will walk you through how to get started with GEM, how to l
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
 what changes to make to use another of the GEM datasets.
 
+You can follow along with the code in this tutorial in [this notebook](https://github.com/GEM-benchmark/GEM-baseline-models/blob/main/examples/GEM_baseline_starter_code.ipynb) and upload it to colab for a free GPU.
+
 ## Table of Contents
 
 ## Preliminaries
