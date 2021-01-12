@@ -118,7 +118,7 @@ Please refer to the Languages section for details on the number of article-summa
 
 ## Dataset Creation
 
-The authors extracted gold-standard article-summary alignments across languages by aligning the images that are used to describe each how-to step in an article.
+The authors extracted gold-standard article-summary alignments across languages by aligning the images that are used to describe each how-to step in a WikiHow article.
 
 ### Curation Rationale
 
@@ -133,6 +133,7 @@ The speaker is required to produce high quality summaries of articles.
 WikiHow, which is an online resource of how-to guides (written and reviewed by human authors) is used as the data source. The articles cover 19 broad categories including health, arts and entertainment, personal care and style, travel, education and communications, etc. The categories cover a broad set of genres and topics.
 
 #### Initial Data Collection and Normalization
+
 Each WikiHow page includes multiple methods for completing a multi-step procedural task. Each step consists of a unique illustrative image, a one sentence summary and a paragraph providing more details. The authors combine the paragraphs and summaries from all the steps of each method to create article-summary pairs.
 
 #### Who are the source language producers?
