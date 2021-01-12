@@ -85,6 +85,7 @@ This dataset has no corresponding public leaderboard.
 
 Each language is provided a dictionary, where the key is the url of the corresponding WikiHow article and the value itself is a dictionary. This inner dictionary has section names as the keys and dictionary (with keys 'document' and 'summary') as values. For languages other than English, the inner-most dictionary has additional keys 'english_section_name' and 'english_url' which are the corresponding section name and the url for the corresponding parallel English article.
 
+```
 ( 'https://www.wikihow.com/Avoid-Drinking-and-Driving',
 
    {'Designating a Driver': 
@@ -95,6 +96,7 @@ Each language is provided a dictionary, where the key is the url of the correspo
          }
    }
 )
+```
    
 The inner dictionary is named 'article' in the [Huggingface API](https://huggingface.co/datasets/wiki_lingua).
 
