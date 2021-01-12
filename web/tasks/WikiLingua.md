@@ -21,7 +21,7 @@ Wikilingua is a large-scale (~770k article-summary pairs), multilingual dataset 
 
 ### Why is this dataset part of GEM?
 
-This dataset is part of the benchmark for the task of summarization, alongside MLSum and Xsum.
+This dataset is part of the GEM benchmark for the task of summarization, alongside [MLSum](https://huggingface.co/datasets/mlsum) and [Xsum](https://huggingface.co/datasets/xsum), and acts as a large-scale, high-quality resource for cross-lingual summarization.
 
 ### Languages
 
