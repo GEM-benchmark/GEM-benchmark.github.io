@@ -107,7 +107,7 @@ The article-summary pairs are organized in `document` and `summary` fields in th
 
 ### Data Statistics
 
-Please refer to the Languages section for details on the number of article-summary pairs per language. Below table provides the number of examples in Train/Validation/Test splits per language.
+Please refer to the Languages section for details on the number of article-summary pairs per language. Below table provides the number of examples in `Train/Validation/Test` splits per language.
 
 |             | Train | Validation     | Test     |
 | :---        |    :----:   |         :---: |          ---: |
@@ -130,10 +130,10 @@ The speaker is required to produce high quality summaries of articles.
 
 ### Source Data
 
-WikiHow is used as the data source. The articles cover 19 broad categories including health, arts and entertainment, personal care and style, travel, education and communications, etc. The categories covered a broad set of genres and topics.
+WikiHow, which is an online resource of how-to guides (written and reviewed by human authors) is used as the data source. The articles cover 19 broad categories including health, arts and entertainment, personal care and style, travel, education and communications, etc. The categories cover a broad set of genres and topics.
 
 #### Initial Data Collection and Normalization
-
+Each WikiHow page includes multiple methods for completing a multi-step procedural task. Each step consists of a unique illustrative image, a one sentence summary and a paragraph providing more details. The authors combine the paragraphs and summaries from all the steps of each method to create article-summary pairs.
 
 #### Who are the source language producers?
 
