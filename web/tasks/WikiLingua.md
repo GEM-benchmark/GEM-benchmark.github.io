@@ -161,19 +161,11 @@ None
 
 ### Social Impact of the Dataset
 
-[More Information Needed]
-
 ### Impact on Underserved Communities
-
-[More Information Needed]
 
 ### Discussion of Biases
 
-[More Information Needed]
-
 ### Other Known Limitations
-
-[More Information Needed]
 
 ## Getting started with in-depth research on the task
 
