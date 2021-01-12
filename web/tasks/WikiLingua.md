@@ -172,4 +172,4 @@ None
 
 Download the dataset using [this link](https://drive.google.com/drive/folders/1PFvXUOsW_KSEzFm5ixB8J8BDB8zRRfHW?usp=sharing) or the [Huggingface API](https://huggingface.co/datasets/wiki_lingua). Please refer to this [Collab notebook](https://colab.research.google.com/drive/1HxonmcM7EOQVal2I6oTi9QWEP257BgDP?usp=sharing) to see how to align articles in other languages with the parallel English articles. 
 
-The authors also propose a method for direct cross-lingual summarization by leveraging synthetic data and Neural Machine Translation as a pre-training step. Table 4 and Table 6 in the dataset paper presents the results for this method for automated and human evaluation metrics.
+The authors also propose a method for direct cross-lingual summarization by leveraging synthetic data and Neural Machine Translation as a pre-training step. Table 4 and Table 6 in the dataset paper present the results for this method for automated (ROUGE) and human evaluation (Fluency, Content) metrics.
