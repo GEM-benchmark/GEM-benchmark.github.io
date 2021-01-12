@@ -17,7 +17,7 @@ motivation: Large-scale multilingual dataset for evaluating cross-lingual abstra
 
 ### Dataset and Task Summary
 
-Wikilingua is a large-scale (~770k article-summary pairs), multilingual dataset for the evaluation of cross-lingual abstractive systems. It consists of parallel articles and summaries (article-summary pairs) from WikiHow across 18 languages (i.e. all the languages available on WikiHow). It contains 141,457 unique English articles and each of the other 17 languages has on average, 42, 783 articles that align with an article in English.
+Wikilingua is a large-scale (~770k article-summary pairs), multilingual dataset for the evaluation of cross-lingual abstractive systems. It consists of parallel articles and summaries (article-summary pairs) from WikiHow across 18 languages (i.e. all the languages available on WikiHow). It contains 141,457 unique English articles and each of the other 17 languages has on average, 42,783 articles that align with an article in English.
 
 ### Why is this dataset part of GEM?
 
