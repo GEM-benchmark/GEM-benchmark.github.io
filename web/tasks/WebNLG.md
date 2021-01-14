@@ -253,15 +253,15 @@ See [official documentation](https://webnlg-challenge.loria.fr/docs/).
 
 `entry`: a data instance of the benchmark. Each entry has five attributes: a DBpedia category (`category`), entry ID (`eid`), shape, shape type, and triple set size (`size`).
 	
-	- `shape`: a string representation of the RDF tree with nested parentheses where `X` is a node (see [Newick tree format](https://en.wikipedia.org/wiki/Newick_format)).
+- `shape`: a string representation of the RDF tree with nested parentheses where `X` is a node (see [Newick tree format](https://en.wikipedia.org/wiki/Newick_format)).
 
-	- `shape_type`: a type of the tree shape. We [identify](https://www.aclweb.org/anthology/C16-1141.pdf) three types of tree shapes:
-		    * `chain` (the object of one triple is the subject of the other);
-		    * `sibling` (triples with a shared subject);
-		    * `mixed` (both `chain` and `sibling` types present).
-	- `eid`: an entry ID. It is unique only within a category and a size.
-	- `category`: a DBpedia category (Astronaut, City, MusicalWork, Politician, etc.).
-	- `size`: the number of RDF triples in a set. Ranges from 1 to 7.
+- `shape_type`: a type of the tree shape. We [identify](https://www.aclweb.org/anthology/C16-1141.pdf) three types of tree shapes:
+    * `chain` (the object of one triple is the subject of the other);
+    * `sibling` (triples with a shared subject);
+    * `mixed` (both `chain` and `sibling` types present).
+- `eid`: an entry ID. It is unique only within a category and a size.
+- `category`: a DBpedia category (Astronaut, City, MusicalWork, Politician, etc.).
+- `size`: the number of RDF triples in a set. Ranges from 1 to 7.
 
 Each `entry` has three fields: `originaltripleset`, `modifiedtripleset`, and `lexs`.
 
@@ -278,8 +278,10 @@ Russian data has additional optional fields comparing to English:
 `<dbpedialinks>`: RDF triples extracted from DBpedia between English and Russian entities by means of the property `sameAs`.
 
 `<links>`: RDF triples created manually for some entities to serve as pointers to translators. There are two types of them:
-    * with `sameAs` (`Spaniards | sameAs | испанцы`)
-    * with `includes` (`Tomatoes, guanciale, cheese, olive oil | includes | гуанчиале`). Those were mostly created for string literals to translate some parts of them.
+
+   * with `sameAs` (`Spaniards | sameAs | испанцы`)
+    
+   * with `includes` (`Tomatoes, guanciale, cheese, olive oil | includes | гуанчиале`). Those were mostly created for string literals to translate some parts of them.
 
 Lexicalisations in the Russian WebNLG have a new parameter `lang` (values: `en`, `ru`) because original English texts were kept in the Russian version (see the example above).
 
