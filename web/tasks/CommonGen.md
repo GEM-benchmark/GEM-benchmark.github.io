@@ -1,6 +1,6 @@
 ---
 title: 'CommonGen'
-type: data-to-text
+type: Structure-to-text
 motivation: A medium sized corpus with a unique reasoning challenge and interesting evaluation possibilities.
 ---
 

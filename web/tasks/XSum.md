@@ -1,6 +1,6 @@
 ---
 title: 'XSum'
-type: summarization
+type: Summarization
 motivation: TODO.
 ---
 

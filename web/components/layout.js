@@ -42,7 +42,10 @@ export default function Layout({ children, home }) {
             </Link>
           </span>
         )}
-        <span>For any questions, contact XXX.</span>
+        <span>For any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank">
+            google group
+          </a>.
+        </span>
       </footer>
     </>
   );
