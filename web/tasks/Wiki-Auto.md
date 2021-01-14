@@ -24,7 +24,7 @@ The trained alignment prediction model was then applied to the other articles in
 
 ### Why is this dataset part of GEM?
 
-Wiki-Auto is the largest open text simplification dataset currently available. It is one of the two datasets for the text simplification task in GEM. It acts as the training set.
+Wiki-Auto is the largest open text simplification dataset currently available. It is the training dataset for the text simplification task in GEM.
 
 ### Languages
 
@@ -122,7 +122,8 @@ The `auto` config shows a pair of an English and corresponding Simple English Wi
   'simple_article_url': 'https://simple.wikipedia.org/wiki?curid=702227'}}
 ```
 
-Finally, the `auto_acl` config was obtained by selecting the aligned pairs of sentences from `auto` to provide a ready-to-go aligned dataset to train a sequence-to-sequence system, so an instance is a single pair of sentences:
+ Finally, the `auto_acl`, the `auto_full_no_split`, and the `auto_full_with_split` configs were obtained by selecting the aligned pairs of sentences from `auto` to provide a ready-to-go aligned dataset to train a sequence-to-sequence system. While `auto_acl` corresponds to the filtered version of the data used to train the systems in the paper, `auto_full_no_split` and `auto_full_with_split` correspond to the unfiltered versions with and without sentence splits respectively. In the `auto_full_with_split` config, we join the sentences in the simple article mapped to the same sentence in the complex article to capture sentence splitting. Split sentences are seperated by a `<SEP>` token. In the `auto_full_no_split config`, we do not join the splits and treat them as seperate pairs. An instance is a single pair of sentences:
+ 
 ```
 {'normal_sentence': 'In early work, Rutherford discovered the concept of radioactive half-life , the radioactive element radon, and differentiated and named alpha and beta radiation .\n',
  'simple_sentence': 'Rutherford discovered the radioactive half-life, and the three parts of radiation which he named Alpha, Beta, and Gamma.\n'}
