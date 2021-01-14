@@ -1,0 +1,20 @@
+{
+  "columns": [
+    {
+      "name": "model",
+      "label": "Model",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    },
+    {
+      "name": "param_size",
+      "label": "#Parameters",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    }
+  ]
+}

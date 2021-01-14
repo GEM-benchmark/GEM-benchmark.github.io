@@ -1,0 +1,2 @@
+{"model": "Summarizer S1", "param_size": "398M", "bleu": 10.1, "rouge": 10}
+{"model": "Summarizer S2", "param_size": "398M", "bleu": 12.1, "rouge": 20}

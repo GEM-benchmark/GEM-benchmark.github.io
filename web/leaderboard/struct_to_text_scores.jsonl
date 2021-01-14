@@ -1,0 +1,3 @@
+{"model": "Model A", "param_size": "398M", "bleu": 20.1}
+{"model": "Model B", "param_size": "398M", "bleu": 30.1}
+{"model": "Model C", "param_size": "398M", "bleu": 40.1}

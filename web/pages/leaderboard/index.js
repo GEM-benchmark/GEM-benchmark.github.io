@@ -14,13 +14,27 @@ export async function getStaticProps() {
 }
 
 export default function Leaderboard({ leaderboardData }) {
+  const options = {
+    filterType: "dropdown",
+    filter: true,
+    download: false,
+    print: false
+  };
+  var tables = []
+  for (var key in leaderboardData.taskschema) {
+    tables.push(<MUIDataTable
+      key={key}
+      title={`Leaderboard ${key}`}
+      data={leaderboardData.data[key]}
+      columns={leaderboardData.taskschema[key]}
+      options={options}
+    />);
+    tables.push(<br key={`br${key}`}/>);
+  }
+
   return (
     <Layout>
-    <MUIDataTable
-      title={"Leaderboard"}
-      data={leaderboardData.data}
-      columns={leaderboardData.schema}
-    />
+    {tables}
     </Layout>
   );
 }
