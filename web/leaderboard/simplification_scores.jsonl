@@ -1,4 +1,4 @@
-{"model": "Simplifier", "param_size": "398M", "bleu": 10, "sari": 14}
-{"model": "Simpler Simplifier", "param_size": "298M", "bleu": 20, "sari": 15}
-{"model": "Simplest Simplifier", "param_size": "198M", "bleu": 30, "sari": 16}
-{"model": "Complex Simplifier", "param_size": "1T", "bleu": 30.001, "sari": 16.001}
+{"dataset": "ASSET", "model": "Simplifier", "param_size": "398M", "bleu": 10, "sari": 14}
+{"dataset": "Wiki-Auto", "model": "Simpler Simplifier", "param_size": "298M", "bleu": 20, "sari": 15}
+{"dataset": "Wiki-Auto", "model": "Simplest Simplifier", "param_size": "198M", "bleu": 30, "sari": 16}
+{"dataset": "ASSET", "model": "Complex Simplifier", "param_size": "1T", "bleu": 30.001, "sari": 16.001}

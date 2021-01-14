@@ -1,3 +1,3 @@
-{"model": "T2T Model 1", "param_size": "50B", "bleu": 32.1}
-{"model": "T2T Model 2", "param_size": "10M", "bleu": 44.1}
-{ "model": "T2T Model 3", "param_size": "1T", "bleu": 20.1}
+{"dataset": "WebNLG", "model": "T2T Model 1", "param_size": "50B", "bleu": 32.1}
+{"dataset": "WebNLG", "model": "T2T Model 2", "param_size": "10M", "bleu": 44.1}
+{"dataset": "WebNLG", "model": "T2T Model 3", "param_size": "1T", "bleu": 20.1}
