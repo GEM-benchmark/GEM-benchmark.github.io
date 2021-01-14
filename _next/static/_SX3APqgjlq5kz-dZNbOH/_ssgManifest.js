@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fteam","\u002Ftasks","\u002Fget_started","\u002Fworkshop","\u002Ftasks\u002Fguide","\u002Ftasks\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
