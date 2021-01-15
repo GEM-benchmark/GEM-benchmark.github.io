@@ -1,19 +1,19 @@
-import { getLeaderboardData } from "../../lib/leaderboard";
+import { getResultsData as getResultsData } from "../../lib/results";
 import React from "react";
 
 import MUIDataTable from "mui-datatables";
 import Layout from "../../components/layout";
 
 export async function getStaticProps() {
-  const leaderboardData = getLeaderboardData();
+  const resultsData = getResultsData();
   return {
     props: {
-      leaderboardData,
+      resultsData: resultsData,
     },
   };
 }
 
-export default function Leaderboard({ leaderboardData }) {
+export default function Leaderboard({ resultsData }) {
   const options = {
     filterType: "dropdown",
     filter: true,
@@ -21,12 +21,12 @@ export default function Leaderboard({ leaderboardData }) {
     print: false
   };
   var tables = []
-  for (var key in leaderboardData.taskschema) {
+  for (var key in resultsData.taskschema) {
     tables.push(<MUIDataTable
       key={key}
-      title={`Leaderboard ${key}`}
-      data={leaderboardData.data[key]}
-      columns={leaderboardData.taskschema[key]}
+      title={`Results ${key}`}
+      data={resultsData.data[key]}
+      columns={resultsData.taskschema[key]}
       options={options}
     />);
     tables.push(<br key={`br${key}`}/>);

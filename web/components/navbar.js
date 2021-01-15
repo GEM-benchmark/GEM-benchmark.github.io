@@ -66,7 +66,7 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/leaderboard/">
+              <Link href="/results/">
                 <a>Results</a>
               </Link>
             </li>

@@ -1,11 +1,19 @@
 {
   "columns": [
     {
+      "name": "submission_name",
+      "label": "Submission Name",
+      "options": {
+        "filter": true,
+        "sort": false
+      }
+    },
+    {
       "name": "dataset",
       "label": "Dataset",
       "options": {
         "filter": true,
-        "sort": false
+        "sort": true
       }
     },
     {
@@ -13,7 +21,7 @@
       "label": "Model",
       "options": {
         "filter": true,
-        "sort": false
+        "sort": true
       }
     },
     {
@@ -21,7 +29,7 @@
       "label": "#Parameters",
       "options": {
         "filter": true,
-        "sort": false
+        "sort": true
       }
     }
   ]

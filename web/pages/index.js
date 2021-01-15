@@ -51,7 +51,7 @@ export default function Home() {
             </a>
           </Link>
 
-        <Link href="/leaderboard/">
+        <Link href="/results/">
           <a className={styles.card}>
             <h3>Results</h3>
           </a>
