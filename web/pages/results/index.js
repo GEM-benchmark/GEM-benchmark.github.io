@@ -21,17 +21,17 @@ export default function Leaderboard({ resultsData }) {
     print: false,
   };
   var tables = [];
-  for (var key in resultsData.taskschema) {
+  for (var taskName in resultsData.taskschema) {
     tables.push(
       <MUIDataTable
-        key={key}
-        title={`Results ${key}`}
-        data={resultsData.data[key]}
-        columns={resultsData.taskschema[key]}
+        key={taskName}
+        title={`Results ${taskName}`}
+        data={resultsData.data[taskName]}
+        columns={resultsData.taskschema[taskName]}
         options={options}
       />
     );
-    tables.push(<br key={`br${key}`} />);
+    tables.push(<br key={`br${taskName}`} />);
   }
 
   return <Layout>{tables}</Layout>;

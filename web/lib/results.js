@@ -9,7 +9,7 @@ export function getResultsData() {
   );
   const schema = JSON.parse(fs.readFileSync(resultsSchemaFilePath, "utf8"))
     .columns;
-  let task_schema2 = {};
+  let task_schema = {};
   const schemaFilesDir = path.join(
     process.cwd(),
     "results/schemas/task_specific"
@@ -17,7 +17,7 @@ export function getResultsData() {
   fs.readdirSync(schemaFilesDir).forEach((file) => {
     // task_schema.json
     let taskName = file.slice(0, file.lastIndexOf("_"));
-    task_schema2[taskName] = schema.concat(
+    task_schema[taskName] = schema.concat(
       JSON.parse(fs.readFileSync(path.join(schemaFilesDir, file))).columns
     );
   });
@@ -42,7 +42,7 @@ export function getResultsData() {
 
   return {
     data: scores,
-    taskschema: task_schema2,
+    taskschema: task_schema,
   };
 }
 
