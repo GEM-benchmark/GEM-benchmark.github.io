@@ -1,12 +1,6 @@
 {
   "columns": [
     {
-      "name": "predictions_file",
-      "label": "PREDICTIONS_FILE",
-      "options": { "filter": true, "sort": true }
-    },
-    { "name": "N", "label": "N", "options": { "filter": true, "sort": true } },
-    {
       "name": "msttr-100",
       "label": "MSTTR-100",
       "options": { "filter": true, "sort": true }
@@ -174,11 +168,6 @@
     {
       "name": "cond_entropy-3-nopunct",
       "label": "COND_ENTROPY-3-NOPUNCT",
-      "options": { "filter": true, "sort": true }
-    },
-    {
-      "name": "references_file",
-      "label": "REFERENCES_FILE",
       "options": { "filter": true, "sort": true }
     },
     {

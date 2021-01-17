@@ -21,24 +21,18 @@ export function getResultsData() {
   const submissionsFilesDir = path.join(process.cwd(), "results/submissions/");
   fs.readdirSync(submissionsFilesDir).forEach(submissionFile => {
     // each submission file has scores from multiple tasks
-    var taskMetricsDict = parseSubmission(path.join(submissionsFilesDir, submissionFile));
-    for (var taskName in taskMetricsDict) {
+    var taskMetricsList = parseSubmission(path.join(submissionsFilesDir, submissionFile));
+    taskMetricsList.forEach((taskMetrics, i) =>  {
+      var taskName = taskMetrics["task_name"];
       if (taskName in scores) {
-        scores[taskName].push(taskMetricsDict[taskName]);
+        scores[taskName].push(taskMetrics);
       } else {
-        scores[taskName] = [taskMetricsDict[taskName]];
+        scores[taskName] = [taskMetrics];
       }
-    }
+    })
   });
   // scores maps each task to a list of submissions available for the task.
-  
-  for (var key in scores) {
-    console.log(key);
-  }
 
-  for (var key in task_schema2) {
-    console.log(key);
-  }
   //
   let task_schema = {};
 
@@ -77,17 +71,32 @@ function parseSubmission(path) {
   */
   var submissionData = JSON.parse(fs.readFileSync(path));
   var submissionName = submissionData["submission_name"];
-  var taskMetricsDict = {};
+  var taskMetricsList = [];
   for (var key in submissionData) {
     if (key == "submission_name") {
       continue;
     }
     var taskMetrics = submissionData[key];
     var taskName = key.slice(0, key.lastIndexOf("_"));
+    var split = key.slice(key.lastIndexOf("_") + 1);
+    taskMetrics["split"] = split;
     taskMetrics["task_name"] = taskName;
-    console.log(taskName);
     taskMetrics["submission_name"] = submissionName;
-    taskMetricsDict[taskName] = taskMetrics;
+    taskMetricsList.push(roundMetrics(taskMetrics, 2));
+    //taskMetricsList.push(taskMetrics);
   }
-  return taskMetricsDict;
+  return taskMetricsList;
 }
+
+function roundMetrics(obj, places) {
+  // round off all the numbers in the metrics to `places` decimal places.
+  var adj = 10 ** places;
+  Object.entries(obj).forEach(([key, value]) => {
+    if(typeof value === 'number') {
+      obj[key] = Math.round((value + Number.EPSILON) * adj) / adj;
+    }
+  })
+  return obj;
+}
+
+

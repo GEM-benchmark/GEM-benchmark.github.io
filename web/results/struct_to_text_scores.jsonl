@@ -1,3 +1,0 @@
-{"dataset": "DART", "model": "Model A", "param_size": "398M", "bleu": 20.1}
-{"dataset": "E2E", "model": "Model B", "param_size": "398M", "bleu": 30.1}
-{"dataset": "ToTTo", "model": "Model C", "param_size": "398M", "bleu": 40.1}

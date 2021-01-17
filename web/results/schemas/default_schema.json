@@ -5,12 +5,12 @@
       "label": "Submission Name",
       "options": {
         "filter": true,
-        "sort": false
+        "sort": true
       }
     },
     {
-      "name": "dataset",
-      "label": "Dataset",
+      "name": "split",
+      "label": "Split",
       "options": {
         "filter": true,
         "sort": true

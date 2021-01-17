@@ -1,1 +1,187 @@
-{"columns": [{"name": "predictions_file", "label": "PREDICTIONS_FILE", "options": {"filter": true, "sort": true}}, {"name": "N", "label": "N", "options": {"filter": true, "sort": true}}, {"name": "msttr-100", "label": "MSTTR-100", "options": {"filter": true, "sort": true}}, {"name": "msttr-100_nopunct", "label": "MSTTR-100_NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "total_length", "label": "TOTAL_LENGTH", "options": {"filter": true, "sort": true}}, {"name": "mean_pred_length", "label": "MEAN_PRED_LENGTH", "options": {"filter": true, "sort": true}}, {"name": "distinct-1", "label": "DISTINCT-1", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-1", "label": "VOCAB_SIZE-1", "options": {"filter": true, "sort": true}}, {"name": "unique-1", "label": "UNIQUE-1", "options": {"filter": true, "sort": true}}, {"name": "entropy-1", "label": "ENTROPY-1", "options": {"filter": true, "sort": true}}, {"name": "distinct-2", "label": "DISTINCT-2", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-2", "label": "VOCAB_SIZE-2", "options": {"filter": true, "sort": true}}, {"name": "unique-2", "label": "UNIQUE-2", "options": {"filter": true, "sort": true}}, {"name": "entropy-2", "label": "ENTROPY-2", "options": {"filter": true, "sort": true}}, {"name": "cond_entropy-2", "label": "COND_ENTROPY-2", "options": {"filter": true, "sort": true}}, {"name": "distinct-3", "label": "DISTINCT-3", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-3", "label": "VOCAB_SIZE-3", "options": {"filter": true, "sort": true}}, {"name": "unique-3", "label": "UNIQUE-3", "options": {"filter": true, "sort": true}}, {"name": "entropy-3", "label": "ENTROPY-3", "options": {"filter": true, "sort": true}}, {"name": "cond_entropy-3", "label": "COND_ENTROPY-3", "options": {"filter": true, "sort": true}}, {"name": "total_length-nopunct", "label": "TOTAL_LENGTH-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "mean_pred_length-nopunct", "label": "MEAN_PRED_LENGTH-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "distinct-1-nopunct", "label": "DISTINCT-1-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-1-nopunct", "label": "VOCAB_SIZE-1-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "unique-1-nopunct", "label": "UNIQUE-1-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "entropy-1-nopunct", "label": "ENTROPY-1-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "distinct-2-nopunct", "label": "DISTINCT-2-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-2-nopunct", "label": "VOCAB_SIZE-2-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "unique-2-nopunct", "label": "UNIQUE-2-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "entropy-2-nopunct", "label": "ENTROPY-2-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "cond_entropy-2-nopunct", "label": "COND_ENTROPY-2-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "distinct-3-nopunct", "label": "DISTINCT-3-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "vocab_size-3-nopunct", "label": "VOCAB_SIZE-3-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "unique-3-nopunct", "label": "UNIQUE-3-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "entropy-3-nopunct", "label": "ENTROPY-3-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "cond_entropy-3-nopunct", "label": "COND_ENTROPY-3-NOPUNCT", "options": {"filter": true, "sort": true}}, {"name": "references_file", "label": "REFERENCES_FILE", "options": {"filter": true, "sort": true}}, {"name": "bleu", "label": "BLEU", "options": {"filter": true, "sort": true}}, {"name": "meteor", "label": "METEOR", "options": {"filter": true, "sort": true}}]}
+{
+  "columns": [
+    {
+      "name": "msttr-100",
+      "label": "MSTTR-100",
+      "options": {
+        "filter": true,
+        "sort": true
+      }
+    },
+    {
+      "name": "msttr-100_nopunct",
+      "label": "MSTTR-100_NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "total_length",
+      "label": "TOTAL_LENGTH",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "mean_pred_length",
+      "label": "MEAN_PRED_LENGTH",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-1",
+      "label": "DISTINCT-1",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-1",
+      "label": "VOCAB_SIZE-1",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-1",
+      "label": "UNIQUE-1",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-1",
+      "label": "ENTROPY-1",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-2",
+      "label": "DISTINCT-2",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-2",
+      "label": "VOCAB_SIZE-2",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-2",
+      "label": "UNIQUE-2",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-2",
+      "label": "ENTROPY-2",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "cond_entropy-2",
+      "label": "COND_ENTROPY-2",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-3",
+      "label": "DISTINCT-3",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-3",
+      "label": "VOCAB_SIZE-3",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-3",
+      "label": "UNIQUE-3",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-3",
+      "label": "ENTROPY-3",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "cond_entropy-3",
+      "label": "COND_ENTROPY-3",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "total_length-nopunct",
+      "label": "TOTAL_LENGTH-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "mean_pred_length-nopunct",
+      "label": "MEAN_PRED_LENGTH-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-1-nopunct",
+      "label": "DISTINCT-1-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-1-nopunct",
+      "label": "VOCAB_SIZE-1-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-1-nopunct",
+      "label": "UNIQUE-1-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-1-nopunct",
+      "label": "ENTROPY-1-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-2-nopunct",
+      "label": "DISTINCT-2-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-2-nopunct",
+      "label": "VOCAB_SIZE-2-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-2-nopunct",
+      "label": "UNIQUE-2-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-2-nopunct",
+      "label": "ENTROPY-2-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "cond_entropy-2-nopunct",
+      "label": "COND_ENTROPY-2-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "distinct-3-nopunct",
+      "label": "DISTINCT-3-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "vocab_size-3-nopunct",
+      "label": "VOCAB_SIZE-3-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "unique-3-nopunct",
+      "label": "UNIQUE-3-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "entropy-3-nopunct",
+      "label": "ENTROPY-3-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "cond_entropy-3-nopunct",
+      "label": "COND_ENTROPY-3-NOPUNCT",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "bleu",
+      "label": "BLEU",
+      "options": { "filter": true, "sort": true }
+    },
+    {
+      "name": "meteor",
+      "label": "METEOR",
+      "options": { "filter": true, "sort": true }
+    }
+  ]
+}
