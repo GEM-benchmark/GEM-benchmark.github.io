@@ -18,23 +18,21 @@ export default function Leaderboard({ resultsData }) {
     filterType: "dropdown",
     filter: true,
     download: false,
-    print: false
+    print: false,
   };
-  var tables = []
+  var tables = [];
   for (var key in resultsData.taskschema) {
-    tables.push(<MUIDataTable
-      key={key}
-      title={`Results ${key}`}
-      data={resultsData.data[key]}
-      columns={resultsData.taskschema[key]}
-      options={options}
-    />);
-    tables.push(<br key={`br${key}`}/>);
+    tables.push(
+      <MUIDataTable
+        key={key}
+        title={`Results ${key}`}
+        data={resultsData.data[key]}
+        columns={resultsData.taskschema[key]}
+        options={options}
+      />
+    );
+    tables.push(<br key={`br${key}`} />);
   }
 
-  return (
-    <Layout>
-    {tables}
-    </Layout>
-  );
+  return <Layout>{tables}</Layout>;
 }
