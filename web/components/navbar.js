@@ -1,11 +1,10 @@
 // Module that contains the navigation bar.
-import React from 'react'
+import React from "react";
 import utilStyles from "../styles/utils.module.css";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -18,7 +17,7 @@ class Navbar extends React.Component {
   handleMobileClick() {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
-  };
+  }
 
   // export function handleNavbar() {
   //   //    $(".nav").handleMobileClick("mobilenav");
@@ -36,36 +35,59 @@ class Navbar extends React.Component {
             </Link>
           </span>
 
-          <div className={styles.menutoggle}
+          <div
+            className={styles.menutoggle}
             id="mobile-menu"
-            onClick={this.handleMobileClick}>
+            onClick={this.handleMobileClick}
+          >
             <FontAwesomeIcon className={styles.bar} icon={faBars} />
           </div>
-          <ul className={this.state.active ? styles.nav + " " + styles.mobilenav : styles.nav}>
-            <li className={this.state.active ? styles.navitem : styles.navitem + " " + styles.pushright}>
+          <ul
+            className={
+              this.state.active
+                ? styles.nav + " " + styles.mobilenav
+                : styles.nav
+            }
+          >
+            <li
+              className={
+                this.state.active
+                  ? styles.navitem
+                  : styles.navitem + " " + styles.pushright
+              }
+            >
               <Link href="/tasks/">
-                <a >Tasks</a>
-              </Link></li>
+                <a>Tasks</a>
+              </Link>
+            </li>
             <li className={styles.navitem}>
               <Link href="/get_started">
-                <a >How To</a>
-              </Link></li>
-            <li className={styles.navitem}><a href="#">Results</a></li>
-            <li className={styles.navitem}><a href="#">Paper</a></li>
+                <a>How To</a>
+              </Link>
+            </li>
+            <li className={styles.navitem}>
+              <Link href="/results/">
+                <a>Results</a>
+              </Link>
+            </li>
+            <li className={styles.navitem}>
+              <a href="#">Paper</a>
+            </li>
             <li className={styles.navitem}>
               <Link href="/team">
-                <a >Team</a>
-              </Link></li>
+                <a>Team</a>
+              </Link>
+            </li>
             <li className={styles.navitem}>
               <Link href="/workshop">
-                <a >Workshop</a>
+                <a>Workshop</a>
               </Link>
             </li>
           </ul>
         </nav>
       </div>
-    )
+    );
   }
-};
+}
 
 export default Navbar;

@@ -51,11 +51,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="#">
-            <a className={styles.card}>
-              <h3>Results</h3>
-            </a>
-          </Link>
+        <Link href="/results/">
+          <a className={styles.card}>
+            <h3>Results</h3>
+          </a>
+        </Link>
 
           <Link href="#">
             <a className={styles.card}>
