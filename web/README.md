@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# GEM-benchmark.github.io
+
+This is the code for the GEM website.

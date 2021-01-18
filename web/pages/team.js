@@ -28,7 +28,8 @@ function ContactList(props) {
       key={idx}
       name={c.name} position={c.position}
       organization={c.organization} website={c.website}
-      twitter={c.twitter}/>)}</section>
+      twitter={c.twitter}
+      note={c.note}/>)}</section>
   );
 }
 
@@ -60,6 +61,7 @@ function Contact(props) {
       <p className={styles.title}>{props.position}</p>
       <p className={styles.title}>{props.organization}</p>
       {website_tag} {twitter_tag}
+      <p className={styles.note}>{props.note}</p>
     </article>
   );
 }
