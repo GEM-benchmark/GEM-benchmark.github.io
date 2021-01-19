@@ -300,8 +300,8 @@ members:
   - name: Hendrik Strobelt
     position: Researcher
     organization: IBM Research
-    website:
-    twitter:
+    website: http://hendrik.strobelt.com
+    twitter: '@hen_str'
     note:
   - name: Nishant Subramani
     position: Researcher
