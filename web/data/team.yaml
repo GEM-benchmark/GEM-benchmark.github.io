@@ -78,7 +78,7 @@ members:
   - name: Dipanjan Das
     position: Research Scientist
     organization: Google Research
-    website: http://www.dipanjandas.com/
+    website: https://www.dipanjandas.com
     twitter: '@dipanjand'
     note:
   - name: Kaustubh Dhole
@@ -120,8 +120,8 @@ members:
   - name: Cristina Garbacea
     position: Graduate Student
     organization: University of Michigan, Ann Arbor
-    website:
-    twitter:
+    website: https://cristinagarbacea.com/
+    twitter: '@ggarbacea'
     note:
   - name: Tatsunori Hashimoto
     position: Assistant Professor
@@ -132,12 +132,6 @@ members:
   - name: Yufang Hou
     position: Researcher
     organization: IBM Research
-    website:
-    twitter:
-    note:
-  - name: Dave Howcroft
-    position: Postdoc
-    organization: Heriot-Watt University
     website:
     twitter:
     note:
@@ -197,9 +191,9 @@ members:
     note:
   - name: Bodhisattwa Prasad Majumder
     position: Graduate Student
-    organization: UCSD
-    website:
-    twitter:
+    organization: University of California, San Diego
+    website: http://www.majumderb.com/
+    twitter: '@mbodhisattwa'
     note:
   - name: Pedro Henrique Martins
     position: Graduate Student
@@ -228,7 +222,7 @@ members:
   - name: Shashi Narayan
     position: Research Scientist
     organization: Google Research
-    website:
+    website: https://sites.google.com/corp/view/shashinarayan/home
     twitter:
     note:
   - name: Vitaly Nikolaev
@@ -268,8 +262,8 @@ members:
     twitter: '@vyraun'
     note:
   - name: Juan Diego Rodriguez
-    position: Graduate Student
-    organization: The University of Texas at Austin
+    position: Engineering Scientist
+    organization: Applied Research Laboratories, The University of Texas at Austin
     website:
     twitter:
     note:
@@ -312,8 +306,8 @@ members:
   - name: Emiel van Miltenburg
     position: Assistant Professor
     organization: Tilburg University
-    website:
-    twitter:
+    website: https://emielvanmiltenburg.nl
+    twitter: '@evanmiltenburg'
     note:
   - name: Diyi Yang
     position: Assistant Professor
