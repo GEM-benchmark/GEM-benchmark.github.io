@@ -102,8 +102,8 @@ members:
   - name: Ondřej Dušek
     position: Assistant Professor
     organization: Charles University, Prague
-    website:
-    twitter:
+    website: https://tuetschek.github.io
+    twitter: '@tuetschek'
     note:
   - name: Chris Emezue
     position: Graduate Student
