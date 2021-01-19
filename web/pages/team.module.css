@@ -18,6 +18,10 @@
   color: #c10001;
 }
 
+.spacer {
+  margin-right: 10px;
+}
+
 .centered {
   margin: 0 auto;
   padding: 0 1em;

@@ -24,43 +24,53 @@ function ContactList(props) {
   const shuffled_contacts = shuffleArray(props.contacts)
   // Then render a card for each.
   return (
-    <section className={styles.cards}>{shuffled_contacts.map((c, idx) => <Contact
-      key={idx}
-      name={c.name} position={c.position}
-      organization={c.organization} website={c.website}
-      twitter={c.twitter}
-      note={c.note}/>)}</section>
+    <section className={styles.cards}>
+      {shuffled_contacts.map((c, idx) => <Contact
+        key={idx}
+        name={c.name} position={c.position}
+        organization={c.organization} website={c.website}
+        twitter={c.twitter}
+        note={c.note} />)
+      }
+    </section>
   );
 }
 
 function Contact(props) {
+  console.log(props);
+
   // Optional Website link.
   var website_tag = "";
-  if (props.website != undefined) {
+  if (props.website != '') {
     website_tag = (
       <Link href={props.website}>
-        <a target="_blank"><FontAwesomeIcon icon={faDribbble} /></a>
+        <a target="_blank"><FontAwesomeIcon icon={faDribbble} /> Web</a>
+      </Link>
+    );
+  }
+  console.log(website_tag);
+
+  // Optional Twitter tag.
+  var twitter_tag = "";
+  if (props.twitter != '') {
+    var twitter_href = "https://twitter.com/" + props.twitter
+    twitter_tag = (
+      <Link href={twitter_href}>
+        <a target="_blank"><FontAwesomeIcon icon={faTwitter} /> Twitter</a>
       </Link>
     );
   }
 
-  // Optional Twitter tag.
-  var twitter_tag = "";
-  if (props.twitter != undefined) {
-    var twitter_href = "https://twitter.com/" + props.twitter
-    twitter_tag = (
-      <Link href={twitter_href}>
-        <a target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
-      </Link>
-    );
-  }
+  console.log(twitter_tag);
 
   return (
     <article className={styles.card}>
       <h3 className={styles.name}>{props.name}</h3>
       <p className={styles.title}>{props.position}</p>
       <p className={styles.title}>{props.organization}</p>
-      {website_tag} {twitter_tag}
+      <p>
+      {website_tag} <span className={styles.spacer}></span> {twitter_tag}
+      </p>
       <p className={styles.note}>{props.note}</p>
     </article>
   );
