@@ -322,10 +322,10 @@ members:
     twitter:
     note:
   - name: Yacine Yernite
-    position: Researcher
+    position: Research Scientist
     organization: Huggingface
-    website:
-    twitter:
+    website: https://yjernite.github.io/
+    twitter: '@YJernite'
     note:
   - name: Akhila Yerukola
     position: Researcher
