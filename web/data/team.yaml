@@ -262,10 +262,10 @@ members:
     twitter:
     note:
   - name: Vikas Raunak
-    position: Researcher
+    position: Research Scientist
     organization: Microsoft
-    website:
-    twitter:
+    website: https://vyraun.github.io/
+    twitter: '@vyraun'
     note:
   - name: Juan Diego Rodriguez
     position: Graduate Student
