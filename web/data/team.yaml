@@ -191,9 +191,9 @@ members:
     note:
   - name: Saad Mahamood
     position: Researcher
-    organization: Trivago
-    website:
-    twitter:
+    organization: trivago
+    website: https://saad.me.uk
+    twitter: @Saad_M
     note:
   - name: Bodhisattwa Prasad Majumder
     position: Graduate Student
