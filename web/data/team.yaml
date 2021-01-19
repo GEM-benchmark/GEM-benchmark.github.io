@@ -3,43 +3,43 @@ members:
   - name: Sebastian Gehrmann
     position: Research Scientist
     organization: Google Research
-    website: https://sebastiangehrmann.com
+    website: 'https://sebastiangehrmann.com'
     twitter: '@SebGehr'
     note: ''
   - name: Antoine Bosselut
     position: Postdoc
     organization: Stanford University
-    website: https://atcbosselut.github.io/
+    website: 'https://atcbosselut.github.io/'
     twitter: '@ABosselut'
     note: ''
   - name: Laura Perez-Beltrachini
     position: Research Assistant
     organization: University of Edinburgh
-    website: http://homepages.inf.ed.ac.uk/lperez/
+    website: 'http://homepages.inf.ed.ac.uk/lperez/'
     twitter: ''
     note: ''
   - name: Samira Shaikh
     position: Assistant Professor
     organization: UNC Charlotte
-    website: https://webpages.uncc.edu/sshaikh2/
+    website: 'https://webpages.uncc.edu/sshaikh2/'
     twitter: ''
     note: ''
   - name: Wei Xu
     position: Assistant Professor
     organization: Georgia Tech
-    website: https://cocoxu.github.io/
+    website: 'https://cocoxu.github.io/'
     twitter: '@cocoweixu'
     note: ''
   - name: Esin Durmus
     position: Graduate Student
     organization: Cornell University
-    website: http://www.cs.cornell.edu/~esindurmus/
+    website: 'http://www.cs.cornell.edu/~esindurmus/'
     twitter: '@esindurmusnlp'
     note: ''
   - name: Varun Prashant Gangal
     position: Graduate Student
     organization: Carnegie Mellon University
-    website: https://vgtomahawk.github.io/
+    website: 'https://vgtomahawk.github.io/'
     twitter: '@varungangal'
     note: ''
   - name: Tosin Adewumi
@@ -51,13 +51,13 @@ members:
   - name: Karmanya Aggarwal
     position: Graduate Student
     organization: IIIT Delhi
-    website: https://calmdownkarm.com/
+    website: 'https://calmdownkarm.com/'
     twitter: '@karmanya'
     note: ''
   - name: Pawan Sasanka Ammanamanchi
     position: Graduate Student
     organization: IIIT Hyderabad
-    website: https://www.pawansasanka.me/
+    website: 'https://www.pawansasanka.me/'
     twitter: '@paws_ed'
     note: ''
   - name: Aremu Anuoluwapo
@@ -69,19 +69,19 @@ members:
   - name: Khyathi Chandu
     position: Graduate Student
     organization: Carnegie Mellon University
-    website: http://www.cs.cmu.edu/~kchandu/
+    website: 'http://www.cs.cmu.edu/~kchandu/'
     twitter: '@khyathi_chandu'
     note: ''
   - name: Miruna Clinciu
     position: Graduate Student
     organization: Edinburgh Centre for Robotics
-    website: https://www.mirunaclinciu.com/p/about-me.html
+    website: 'https://www.mirunaclinciu.com/p/about-me.html'
     twitter: ''
     note: ''
   - name: Dipanjan Das
     position: Research Scientist
     organization: Google Research
-    website: https://www.dipanjandas.com
+    website: 'https://www.dipanjandas.com'
     twitter: '@dipanjand'
     note: ''
   - name: Kaustubh Dhole
@@ -105,7 +105,7 @@ members:
   - name: Ondřej Dušek
     position: Assistant Professor
     organization: Charles University, Prague
-    website: https://tuetschek.github.io
+    website: 'https://tuetschek.github.io'
     twitter: '@tuetschek'
     note: ''
   - name: Chris Emezue
@@ -123,7 +123,7 @@ members:
   - name: Cristina Garbacea
     position: Graduate Student
     organization: University of Michigan, Ann Arbor
-    website: https://cristinagarbacea.com/
+    website: 'https://cristinagarbacea.com/'
     twitter: '@ggarbacea'
     note: ''
   - name: Tatsunori Hashimoto
@@ -171,13 +171,13 @@ members:
   - name: Aman Madaan
     position: Graduate Student
     organization: Carnegie Mellon University
-    website: https://madaan.github.io
+    website: 'https://madaan.github.io'
     twitter: '@aman_madaan'
     note: ''
   - name: Mounica Maddela
     position: Graduate Student
     organization: Georgia Tech
-    website: https://mounicam.github.io/
+    website: 'https://mounicam.github.io/'
     twitter: '@mmaddela1005'
     note: ''
   - name: Khyati Mahajan
@@ -195,7 +195,7 @@ members:
   - name: Bodhisattwa Prasad Majumder
     position: Graduate Student
     organization: University of California, San Diego
-    website: http://www.majumderb.com/
+    website: 'http://www.majumderb.com/'
     twitter: '@mbodhisattwa'
     note: ''
   - name: Pedro Henrique Martins
@@ -225,7 +225,7 @@ members:
   - name: Shashi Narayan
     position: Research Scientist
     organization: Google Research
-    website: https://sites.google.com/corp/view/shashinarayan/home
+    website: 'https://sites.google.com/corp/view/shashinarayan/home'
     twitter: ''
     note: ''
   - name: Vitaly Nikolaev
@@ -243,8 +243,8 @@ members:
   - name: Salomey Osei
     position: Graduate Student
     organization: Kwame Nkrumah University of Science and Technology
-    website: https://www.linkedin.com/in/salomey-osei-4b08a5b8
-    twitter: https://twitter.com/NanaYaaSally
+    website: 'https://www.linkedin.com/in/salomey-osei-4b08a5b8'
+    twitter: '@NanaYaaSally'
     note: Looking for a PhD position
   - name: Ankur Parikh
     position: Research Scientist
@@ -261,7 +261,7 @@ members:
   - name: Vikas Raunak
     position: Research Scientist
     organization: Microsoft
-    website: https://vyraun.github.io/
+    website: 'https://vyraun.github.io/'
     twitter: '@vyraun'
     note: ''
   - name: Juan Diego Rodriguez
@@ -297,7 +297,7 @@ members:
   - name: Hendrik Strobelt
     position: Researcher
     organization: IBM Research
-    website: http://hendrik.strobelt.com
+    website: 'http://hendrik.strobelt.com'
     twitter: '@hen_str'
     note: ''
   - name: Nishant Subramani
@@ -309,7 +309,7 @@ members:
   - name: Emiel van Miltenburg
     position: Assistant Professor
     organization: Tilburg University
-    website: https://emielvanmiltenburg.nl
+    website: 'https://emielvanmiltenburg.nl'
     twitter: '@evanmiltenburg'
     note: ''
   - name: Diyi Yang
@@ -321,7 +321,7 @@ members:
   - name: Yacine Yernite
     position: Research Scientist
     organization: Huggingface
-    website: https://yjernite.github.io/
+    website: 'https://yjernite.github.io/'
     twitter: '@YJernite'
     note: ''
   - name: Akhila Yerukola
