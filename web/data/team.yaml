@@ -9,7 +9,7 @@ members:
   - name: Antoine Bosselut
     position: Postdoc
     organization: Stanford University
-    website: atcbosselut.github.io/
+    website: https://atcbosselut.github.io/
     twitter: '@ABosselut'
     note:
   - name: Laura Perez-Beltrachini
@@ -102,8 +102,8 @@ members:
   - name: Ondřej Dušek
     position: Assistant Professor
     organization: Charles University, Prague
-    website:
-    twitter:
+    website: https://tuetschek.github.io
+    twitter: '@tuetschek'
     note:
   - name: Chris Emezue
     position: Graduate Student
@@ -174,14 +174,14 @@ members:
   - name: Aman Madaan
     position: Graduate Student
     organization: Carnegie Mellon University
-    website:
-    twitter:
+    website: https://madaan.github.io
+    twitter: '@aman_madaan'
     note:
   - name: Mounica Maddela
     position: Graduate Student
     organization: Georgia Tech
-    website:
-    twitter:
+    website: https://mounicam.github.io/
+    twitter: '@mmaddela1005'
     note:
   - name: Khyati Mahajan
     position: Graduate Student
@@ -245,10 +245,10 @@ members:
     note:
   - name: Salomey Osei
     position: Graduate Student
-    organization: AIMS Ghana
-    website:
-    twitter:
-    note:
+    organization: Kwame Nkrumah University of Science and Technology
+    website: https://www.linkedin.com/in/salomey-osei-4b08a5b8
+    twitter: https://twitter.com/NanaYaaSally
+    note: Looking for a PhD position
   - name: Ankur Parikh
     position: Research Scientist
     organization: Google Research
@@ -262,10 +262,10 @@ members:
     twitter:
     note:
   - name: Vikas Raunak
-    position: Researcher
+    position: Research Scientist
     organization: Microsoft
-    website:
-    twitter:
+    website: https://vyraun.github.io/
+    twitter: '@vyraun'
     note:
   - name: Juan Diego Rodriguez
     position: Graduate Student
@@ -300,8 +300,8 @@ members:
   - name: Hendrik Strobelt
     position: Researcher
     organization: IBM Research
-    website:
-    twitter:
+    website: http://hendrik.strobelt.com
+    twitter: '@hen_str'
     note:
   - name: Nishant Subramani
     position: Researcher
@@ -322,10 +322,10 @@ members:
     twitter:
     note:
   - name: Yacine Yernite
-    position: Researcher
+    position: Research Scientist
     organization: Huggingface
-    website:
-    twitter:
+    website: https://yjernite.github.io/
+    twitter: '@YJernite'
     note:
   - name: Akhila Yerukola
     position: Researcher
@@ -333,7 +333,7 @@ members:
     website:
     twitter:
     note:
-  - name: Joe Zhou
+  - name: Jiawei Zhou
     position: Graduate Student
     organization: Harvard University
     website:
