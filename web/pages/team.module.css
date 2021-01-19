@@ -7,7 +7,6 @@
 .name {
   display: block;
   color: #2a555e;
-  text-transform: capitalize;
 }
 
 .title {
@@ -17,6 +16,10 @@
 .note {
   font-weight: lighter;
   color: #c10001;
+}
+
+.spacer {
+  margin-right: 10px;
 }
 
 .centered {

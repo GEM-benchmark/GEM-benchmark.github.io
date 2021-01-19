@@ -1,7 +1,7 @@
 ---
 title: 'E2E'
 type: Structure-to-Text
-motivation: TODO.
+motivation: One of the largest limited-domain NLG datasets and is frequently used as a data-to-text generation benchmark.
 ---
 
 ## Table of Contents
@@ -12,8 +12,8 @@ motivation: TODO.
 
 - **Homepage:** http://www.macs.hw.ac.uk/InteractionLab/E2E/
 - **Repository:** https://github.com/tuetschek/e2e-cleaning (cleaned version)
-- **Paper:** [First data release](https://www.aclweb.org/anthology/W17-5525/), 
-  [Detailed E2E Challenge writeup](https://doi.org/10.1016/j.csl.2019.06.009), 
+- **Paper:** [First data release](https://www.aclweb.org/anthology/W17-5525/),
+  [Detailed E2E Challenge writeup](https://doi.org/10.1016/j.csl.2019.06.009),
   [Cleaned E2E version](https://www.aclweb.org/anthology/W19-8652/)
 - **Point of Contact:** [Ondrej Dusek](https://tuetschek.github.io/)
 
@@ -79,10 +79,10 @@ The data is in a CSV format, with the following fields:
 * `mr` -- the meaning representation (MR, input)
 * `ref` -- reference, i.e. the corresponding natural-language description (output)
 
-There are additional fields (`fixed`, `orig_mr`) indicating whether the data was modified in the 
+There are additional fields (`fixed`, `orig_mr`) indicating whether the data was modified in the
 cleaning process and what was the original MR before cleaning, but these aren't used for NLG.
 
-The MR has a flat structure -- attribute-value pairs are comma separated, with values 
+The MR has a flat structure -- attribute-value pairs are comma separated, with values
 enclosed in brackets (see example above). There are 8 attributes:
 * `name` -- restaurant name
 * `near` -- a landmark close to the restaurant
@@ -106,7 +106,7 @@ The same MR is often repeated multiple times with different synonymous reference
 
 The data are divided so that MRs in different data sections do not overlap.
 
-“Distinct MRs” are MRs that remain distinct even if restaurant/place names (attributes `name`, `near`) 
+“Distinct MRs” are MRs that remain distinct even if restaurant/place names (attributes `name`, `near`)
 are delexicalized, i.e., replaced with a placeholder.
 
 ## Dataset Creation
@@ -135,7 +135,7 @@ N/A (dataset authors).
 
 #### Annotation process
 
-Human references describing the MRs were collected by crowdsourcing on the CrowdFlower (now Appen) platform, 
+Human references describing the MRs were collected by crowdsourcing on the CrowdFlower (now Appen) platform,
 with either textual or pictorial MRs as a baseline. There were basic checks (length, valid characters, repetition).
 
 The pictorial MRs were used in 20% of cases -- these yield higher lexical variation but introduce noise.
@@ -168,8 +168,8 @@ N/A
 
 ### Discussion of Biases
 
-The source data is generated randomly, so it should not contain biases. The human references may be biased by the workers' 
-demographic, but that was not investigated upon data collection. 
+The source data is generated randomly, so it should not contain biases. The human references may be biased by the workers'
+demographic, but that was not investigated upon data collection.
 
 ### Other Known Limitations
 

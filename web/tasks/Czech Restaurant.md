@@ -1,7 +1,7 @@
 ---
 title: 'Czech Restaurant'
 type: Structure-to-Text
-motivation: TODO.
+motivation: One of a few non-English data-to-text datasets in a well-known domain, covering a morphologically rich language.
 ---
 
 ## Table of Contents
@@ -17,7 +17,7 @@ motivation: TODO.
 
 ### Dataset and Task Summary
 
-The task is generating responses in the context of a (hypothetical) dialogue system that provides information about restaurants. 
+The task is generating responses in the context of a (hypothetical) dialogue system that provides information about restaurants.
 The input is a basic intent/dialogue act type and a list of slots (attributes) and their values.
 The output is a natural language sentence.
 
@@ -26,7 +26,7 @@ The data originated as a translation and localization of [Wen et al.'s SF restau
 ### Why is this dataset part of GEM?
 
 This is one of a few non-English data-to-text datasets, in a well-known domain, but covering a morphologically rich language that
-is harder to generate since named entities need to be inflected. This makes it harder to apply common techniques such as delexicalization 
+is harder to generate since named entities need to be inflected. This makes it harder to apply common techniques such as delexicalization
 or copy mechanisms.
 
 ### Languages
@@ -91,7 +91,7 @@ The data is stored in a JSON or CSV format, with identical contents. The data ha
 * `delex_text`: the target text, delexicalized (delexicalization is applied regardless of inflection)
 
 In addition, the data contains a JSON file with all possible inflected forms for all slot values in the dataset (`surface_forms.json`).
-Each slot -> value entry contains a list of inflected forms for the given value, with the base form (lemma), the inflected form, and 
+Each slot -> value entry contains a list of inflected forms for the given value, with the base form (lemma), the inflected form, and
 a [morphological tag](https://ufal.mff.cuni.cz/pdt/Morphology_and_Tagging/Doc/hmptagqr.html).
 
 The same MR is often repeated multiple times with different synonymous reference texts.
@@ -105,7 +105,7 @@ The same MR is often repeated multiple times with different synonymous reference
 | Unique delexicalized instances | 2,752 |
 | Unique delexicalized MRs       |   248 |
 
-The data is split in a roughly 3:1:1 proportion into training, development and test sections, making sure no delexicalized MR 
+The data is split in a roughly 3:1:1 proportion into training, development and test sections, making sure no delexicalized MR
 appears in two different parts. On the other hand, most DA types/intents are represented in all data parts.
 
 
@@ -138,7 +138,7 @@ N/A (dataset authors).
 
 The reference texts were created by translating the SF restaurant texts with replaced slot values.
 
-The translated texts were then checked for consistency semi-automatically (searching the texts for slot values, 
+The translated texts were then checked for consistency semi-automatically (searching the texts for slot values,
 manually checking for alternative realizations if a value was not found).
 
 #### Who are the annotators?
