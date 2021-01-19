@@ -29,9 +29,9 @@ class Navbar extends React.Component {
       <div className={styles.navwrapper}>
         <div className={styles.gradbar}></div>
         <nav className={styles.navbar}>
-          <span className={utilStyles.headingLg + " " + utilStyles.accent}>
+          <span className={utilStyles.headingLg + " " + styles.navbarlogo}>
             <Link href="/">
-              <a>GEM</a>
+              <a>GEM BENCHMARK</a>
             </Link>
           </span>
 

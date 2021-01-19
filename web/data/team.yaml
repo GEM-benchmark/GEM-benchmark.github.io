@@ -114,12 +114,6 @@ members:
     website: ''
     twitter: ''
     note: ''
-  - name: Varun Prashant Gangal
-    position: Graduate Student
-    organization: CMU LTI
-    website: ''
-    twitter: ''
-    note: ''
   - name: Cristina Garbacea
     position: Graduate Student
     organization: University of Michigan, Ann Arbor
@@ -211,9 +205,9 @@ members:
     twitter: ''
     note: ''
   - name: Simon Mille
-    position: Postdoc
+    position: Researcher
     organization: Pompeu Fabra University
-    website: ''
+    website: 'https://scholar.google.es/citations?user=F8kFik0AAAAJ&hl=en'
     twitter: ''
     note: ''
   - name: Moin Nadeem

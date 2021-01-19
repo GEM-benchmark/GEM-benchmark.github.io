@@ -9,11 +9,6 @@
   font-weight: 300;
 }
 
-.description {
-  line-height: 1.1;
-  font-size: 1rem;
-}
-
 .grid {
   display: flex;
   align-items: left;
@@ -34,7 +29,7 @@
   border-radius: 10px;
   transition: 0.3s ease;
   font-variant: small-caps;
-  background-color: #eff6ff;
+  background-color: white;
 }
 
 .card h3 {
@@ -62,6 +57,7 @@
 @media (min-width: 720px) {
   .centerpage {
     margin-top: 20vh;
+    padding-top: 1rem;
   }
 
 }
