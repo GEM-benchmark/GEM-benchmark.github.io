@@ -85,11 +85,11 @@ members:
     twitter: '@dipanjand'
     note: ''
   - name: Kaustubh Dhole
-    position: Researcher
-    organization: IPsoft RnD
-    website: ''
-    twitter: ''
-    note: ''
+    position: Research Lead
+    organization: Amelia R&D, New York
+    website: 'https://in.linkedin.com/in/kaustubh-dhol%C3%A9-3929b32a'
+    twitter: '@KaustubhDhole'
+    note: 'Looking for Collaborators'
   - name: Wanyu Du
     position: Graduate Student
     organization: University of Virginia
@@ -319,10 +319,10 @@ members:
     twitter: '@YJernite'
     note: ''
   - name: Akhila Yerukola
-    position: Researcher
+    position: AI Researcher
     organization: Samsung Research
-    website: ''
-    twitter: ''
+    website: 'http://akhila-yerukola.github.io/'
+    twitter: '@akhila-yerukola'
     note: ''
   - name: Jiawei Zhou
     position: Graduate Student
