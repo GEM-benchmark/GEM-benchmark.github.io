@@ -39,9 +39,9 @@ export default function Home() {
           existing data or developing datasets for additional languages.
       </p>
         <div className={styles.grid}>
-          <Link href="/tasks/">
+          <Link href="/data_cards/">
             <a className={styles.card}>
-              <h3>Tasks</h3>
+              <h3>Data Cards</h3>
             </a>
           </Link>
 

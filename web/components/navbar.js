@@ -56,8 +56,8 @@ class Navbar extends React.Component {
                   : styles.navitem + " " + styles.pushright
               }
             >
-              <Link href="/tasks/">
-                <a>Tasks</a>
+              <Link href="/data_cards/">
+                <a>Data Cards</a>
               </Link>
             </li>
             <li className={styles.navitem}>
