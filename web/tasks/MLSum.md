@@ -98,10 +98,17 @@ The data fields are:
 
 ### Data Statistics
 
-|	               | Dataset  | Train   | Validation  |  Test  | Mean article length | Mean summary length |  
-| :---        	   | :----:   | :---:   |   ---:      |  ---:  |       ---:          |      ---:           |
-| German      	   | 242,982  | 220,887 |  11,394     | 10,701 |      570.6 (words)  |      30.36 (words)  |
-| Spanish          | 290,645  | 266,367 |  10,358     | 13,920 |      800.5 (words)  |      20.71 (words)  |
+The statistics of the original dataset are:
+|	               |  Dataset  | Train   | Validation  |  Test  | Mean article length | Mean summary length |  
+| :---        	   | :----:   | :---:   |   :---:      |  :---:  |       :---:          |      :---:           |
+| German      	   | 242,982  | 220,887 |11,394     |10,701 |570.6 (words)  | 30.36 (words)  |
+| Spanish          | 290,645  | 266,367 |10,358     |13,920 |800.5 (words)  |20.71 (words)  |
+
+The statistics of the cleaned version of the dataset are:
+|	               |  Dataset  | Train   | Validation  |  Test  |
+| :---        	   | :----:   | :---:   |   :---:      |  :---:  |
+| German      	   | 242,835  | 220,887 |11,392     |10,695 |
+| Spanish          | 283,228  |259,886  |9,977     |13,365 |
 
 ## Dataset Creation
 
@@ -146,7 +153,11 @@ Any additional annotations are not collected for this dataset.
 
 ## Changes to the Original Dataset for GEM
 
-Selection of 2 languages (Spanish and German) out of the dataset 5 languages.
+The modifications done to the original dataset are the following:
+- Selection of 2 languages (Spanish and German) out of the dataset 5 languages.
+- Removal of duplicate items.
+- Manually removal of article-summary pairs for which the summary is not related to the article.
+- Removal of article-summary pairs written in a different language (detected using the [langdetect](https://pypi.org/project/langdetect/) library).
 
 ## Considerations for Using the Data
 
