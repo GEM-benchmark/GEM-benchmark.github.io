@@ -20,9 +20,7 @@ export default function Layout({ children, home }) {
         />
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px`}
+          content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -43,7 +41,7 @@ export default function Layout({ children, home }) {
           </span>
         )}
         <span>If you have any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank" className={utilStyles.accentUnderline}>
-            google group
+          google group
           </a> for support.
         </span>
       </footer>
