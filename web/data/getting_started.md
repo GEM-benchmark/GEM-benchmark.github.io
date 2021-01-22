@@ -2,7 +2,8 @@
 title: "Getting Started with GEM"
 ---
 
-In this tutorial, we will walk you through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
+This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions. If you are
+only interested in an overview how to load the datasets, you can look [here](/shared_task).
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
 what changes to make to use another of the GEM datasets.
 

@@ -35,9 +35,9 @@ export default function Home({ allTasksData }) {
             <a target="_blank">
               2
               </a>
-          </Link>] for each of the GEM tasks.
-          We are also sharing the template used to produce the statements
-          and a guide on how to write them: [
+          </Link>] for each of the datasets that are part of GEM tasks.
+          The template used to produce the statements
+          and a guide on how to write them can be found here: [
             <Link href={`/statement_template.md`}>
             <a download target="_blank">
               download template

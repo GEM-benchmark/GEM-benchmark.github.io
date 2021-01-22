@@ -66,7 +66,13 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="#">
+          <Link href="/shared_task">
+            <a className={styles.card}>
+              <h3>Shared Task</h3>
+            </a>
+          </Link>
+
+          <Link href="/workshop">
             <a className={styles.card}>
               <h3>Workshop</h3>
             </a>

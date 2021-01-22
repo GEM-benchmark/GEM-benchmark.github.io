@@ -79,6 +79,11 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className={styles.navitem}>
+              <Link href="/shared_task">
+                <a>Shared Task</a>
+              </Link>
+            </li>
+            <li className={styles.navitem}>
               <Link href="/workshop">
                 <a>Workshop</a>
               </Link>

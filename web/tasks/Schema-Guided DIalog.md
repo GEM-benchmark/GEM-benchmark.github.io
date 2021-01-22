@@ -1,4 +1,3 @@
-
 ---
 title: 'Schema-Guided Dialog'
 type: Dialog
@@ -19,7 +18,7 @@ motivation: Modeling task-oriented dialog.
 ### Dataset and Task Summary
 
 The Schema-Guided Dialogue (SGD) dataset contains 18K multi-domain task-oriented dialogues between a human and a virtual assistant, which covers 17 domains ranging from banks and events to media, calendar, travel, and weather.
-The language presents in the datset is only English.  
+The language presents in the datset is only English.
 The SGD dataset provides a challenging testbed for a number of tasks in task-oriented dialogue, including language understanding, slot filling, dialogue state tracking and response generation.
 For the creation of the SGD dataset, they developed a multi-domain dialogue simulator that generates dialogue outlines over an arbitrary combination of APIs, dialogue states and system actions. Then, they used a crowd-sourcing procedure to paraphrase these outlines to natural language utterances.
 This novel crowd-sourcing procedure preserves all annotations obtained from the simulator and does not require any extra annotations after dialogue collection.
@@ -41,7 +40,7 @@ The dataset was curated by a team of researchers from Google: Abhinav Rastogi, X
 
 ### Licensing Information
 
-The dataset is released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. For the full license, see [LICENSE.txt](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue/blob/master/LICENSE.txt). 
+The dataset is released under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. For the full license, see [LICENSE.txt](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue/blob/master/LICENSE.txt).
 
 ### Citation Information
 Please cite the following paper if you use this dataset in your work:
@@ -68,8 +67,8 @@ Here is a JSON-formatted example in the dataset:
 ```
 {'dialogue_id': '1_00000',
  'services': ['Restaurants_1'],
- 'turns': 
- {'frames': 
+ 'turns':
+ {'frames':
  	[{'actions': [{'act': [6],
       'canonical_values': [['FindRestaurants']],
       'slot': ['intent'],
@@ -123,7 +122,7 @@ Here is a JSON-formatted example in the dataset:
    'The restaurant is located at 420 Ramona Street. Unfortunately they do not serve alcohol at the restaurant.',
    'I appreciate it very much. That would be all.',
    'Have a good time!'
- ]}   
+ ]}
 ```
 
 ### Data Fields
@@ -160,10 +159,10 @@ Each dialog instance has the following fields:
 The dataset is split into a train, validation, and test set with the following sizes:
 
 | | Train | Validation | Test |
-| --- | --- | --- | --- | 
+| --- | --- | --- | --- |
 | \# of dialogues | 16142 | 2482 | 4201 |
 | \# of turns | 48426 | 7446 | 12603 |
-   
+
 
 ## Dataset Creation
 
@@ -171,7 +170,7 @@ The dataset is split into a train, validation, and test set with the following s
 
 Previous multi-domain task-oriented dialogue datsets do not sufficiently capture the real-world challenges in virtual assistants, since they cover few domains and assume a single static ontology per domain.
 The SGD datset is created to cover 17 domains with over 16K dialogues, and contain multiple different APIs in most domains, many of which have overlapping functionalities but different interfaces, which reflects common real-world scenarios.
-The wide range of available annotations can be used for intent prediction, slot filling, dialogue state tracking, policy imitation learning, language generation, user simulation learning, among other tasks in large-scale virtual assistants. 
+The wide range of available annotations can be used for intent prediction, slot filling, dialogue state tracking, policy imitation learning, language generation, user simulation learning, among other tasks in large-scale virtual assistants.
 
 ### Communicative Goal
 
@@ -191,7 +190,7 @@ Finally, the dialogue transformed by these steps is sent to the crowd workers to
 
 #### Who are the source language producers?
 
-The language structure is machine-generated, and the language realizations are produced by crowd workers. 
+The language structure is machine-generated, and the language realizations are produced by crowd workers.
 The dataset paper does not provide demographic information for the crowd workers.
 
 ### Annotations
@@ -229,7 +228,7 @@ The virtual assistants can help people search information from the internet, pro
 ### Discussion of Biases
 
 The dialogues under each domain distributed unevenly, where the flights domain has 3644 dialogues while the payment domain only contains 222 dialogues.
-Besides, all dialogues are paraphrased by crowd-workers, and it is possible that crow-workers with different culture backgrounds will exhibit biased opinions. 
+Besides, all dialogues are paraphrased by crowd-workers, and it is possible that crow-workers with different culture backgrounds will exhibit biased opinions.
 
 <!--### Other Known Limitations
 

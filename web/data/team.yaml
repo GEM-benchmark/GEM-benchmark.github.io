@@ -110,10 +110,10 @@ members:
     note: ''
   - name: Chris Emezue
     position: Graduate Student
-    organization: TU Munich
-    website: ''
-    twitter: ''
-    note: ''
+    organization: Technical University, Munich
+    website: 'https://github.com/chrisemezue'
+    twitter: '@ChrisEmezue'
+    note: 'Looking for PhD positions'
   - name: Cristina Garbacea
     position: Graduate Student
     organization: University of Michigan, Ann Arbor
