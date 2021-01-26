@@ -13,7 +13,7 @@ To avoid hill-climbing on automated metrics, a second part of the shared task fo
 
 ## Shared Tasks
 
-The shared tasks are described in-depth on [this page](/shared_task). It includes two parts:
+The shared task is described in-depth on [this page](/shared_task). It includes two parts:
 
 1) In the first part, participants are encouraged to apply their model to as many of the included tasks as possible and submit their formatted outputs. We provide GEM-specific test sets that will be used to evaluate specific generation aspects.
 2) In the second part, all submitted and baseline outputs will be released for an evaluation shared task. Participants can submit analyses and evaluations of the model outputs.
@@ -90,4 +90,14 @@ All submissions should conform to [ACL 2021 style guidelines](https://2021.aclwe
 
 ## Organization
 
-You can find the entire organizing team on [this page](/team).
+The workshop is organized by
+
+- [Antoine Bosselut](https://atcbosselut.github.io/) (Stanford University)
+- [Esin Durmus](http://www.cs.cornell.edu/~esindurmus/) (Cornell University)
+- [Varun Prashant Gangal](https://vgtomahawk.github.io/) (Carnegie Mellon University)
+- [Sebastian Gehrmann](https://sebastiangehrmann.com) (Google Research)
+- [Laura Perez-Beltrachini](http://homepages.inf.ed.ac.uk/lperez/) (University of Edinburgh)
+- [Samira Shaikh](https://webpages.uncc.edu/sshaikh2/) (UNC Charlotte)
+- [Wei Xu](https://cocoxu.github.io/) (Georgia Tech)
+
+The shared task and the GEM environment is organized by a larger team which is listed on [this page](/team).
