@@ -273,8 +273,8 @@ members:
   - name: João Sedoc
     position: Assistant Professor
     organization: New York University Stern School of Business
-    website: ''
-    twitter: ''
+    website: 'https://www.joaosedoc.com'
+    twitter: '@joaosedoc'
     note: ''
   - name: Anastasia Shimorina
     position: Graduate Student
