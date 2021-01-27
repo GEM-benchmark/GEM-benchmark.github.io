@@ -12,22 +12,26 @@ const tasksDirectory = path.join(process.cwd(), 'tasks')
 export function getSortedTasksData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(tasksDirectory)
-  const allPostsData = fileNames.map(fileName => {
-    // Remove ".md" from file name to get id
+  const allPostsData = fileNames.filter(
+    function (fileName) {
+      return path.extname(fileName) == ".md";
+    }
+  ).map(fileName => {
+    // Remove ".md" from file name to get id.
     const id = fileName.replace(/\.md$/, '')
-
-    // Read markdown file as string
+    // Read markdown file as string.
     const fullPath = path.join(tasksDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // Use gray-matter to parse the post metadata section
+    // Use gray-matter to parse the post metadata section.
     const matterResult = matter(fileContents)
-
     // Combine the data with the id
     return {
       id,
       ...matterResult.data
+
     }
+
+
   })
   // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
@@ -77,7 +81,7 @@ export async function getTaskData(id) {
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
     .use(gfm)
-    .use(toc, {tight: true})
+    .use(toc, { tight: true })
     .use(slug)
     .use(html)
     .process(matterResult.content)
