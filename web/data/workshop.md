@@ -28,10 +28,14 @@ All papers are allowed unlimited space for references and appendices. For papers
 Participants of the modeling shared task are invited to submit a system description of 4-8 pages.
 
 ### System Evaluation Descriptions
-Participants of the evaluation shared task are invited to submit a paper describing their analysis approach and findings of 4+ pages.
+Participants of the evaluation shared task are invited to submit a paper describing their analysis approach and findings of 4-8 pages.
 
-### (Non-)Archival Research Papers
-We additionally welcome papers discussing any of the following topics:
+### Organization Description (for GEM contributors)
+
+Every group that contributed to the creation and organization of GEM may submit a 4-8 page description of their considerations and contributions.
+
+### Research Papers
+We welcome papers discussing any of the following topics:
 
 - Automatic evaluation of NLG systems
 - Creating challenge sets for NLG corpora
@@ -65,7 +69,7 @@ All submissions should conform to [ACL 2021 style guidelines](https://2021.aclwe
 
 **Modeling**
 
-`February 2` Release of the raining Data
+`February 2` Release of the training Data
 
 `March 29` Release of the test sets
 
