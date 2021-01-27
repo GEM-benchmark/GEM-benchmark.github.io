@@ -30,8 +30,6 @@ export function getSortedTasksData() {
       ...matterResult.data
 
     }
-
-
   })
   // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
@@ -62,13 +60,17 @@ export function getAllTaskIds() {
   //     }
   //   }
   // ]
-  return fileNames.map(fileName => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, '')
+  return fileNames.filter(
+      function (fileName) {
+        return path.extname(fileName) == ".md";
       }
-    }
-  })
+    ).map(fileName => {
+      return {
+        params: {
+          id: fileName.replace(/\.md$/, '')
+        }
+      }
+    })
 }
 
 export async function getTaskData(id) {
