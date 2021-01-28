@@ -30,10 +30,6 @@ Participants of the modeling shared task are invited to submit a system descript
 ### System Evaluation Descriptions
 Participants of the evaluation shared task are invited to submit a paper describing their analysis approach and findings of 4-8 pages.
 
-### Organization Description (for GEM contributors)
-
-Every group that contributed to the creation and organization of GEM may submit a 4-8 page description of their considerations and contributions.
-
 ### Research Papers
 We welcome papers discussing any of the following topics:
 
@@ -42,7 +38,12 @@ We welcome papers discussing any of the following topics:
 - Critiques of benchmarking efforts (including ours)
 - Crowdsourcing strategies to improve the inclusiveness of NLG research
 - Measuring progress in NLG / What should a GEM 2.0 look like
+- Modeling and data-augmentation strategies for training effective and/or efficient NLG systems that can be applied to a wide range of tasks
 - Standardizing human evaluation and making it more robust
+
+We additionally invite every group that contributed to the creation and organization of GEM to submit a description of their considerations and contributions.
+
+Please note that we are not looking at submissions that focus on specific modeling challenges or introduce new model architectures, etc., which would fit better into conferences like ACL or INLG.
 
 These submissions can take either of the following forms:
 - **Archival Papers** Papers describing original and unpublished work can be submitted in either a short (4-page) or a long (8-page) format.

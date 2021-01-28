@@ -38,7 +38,7 @@ Please format submissions in the following format
   "tasks":
     {
       "dataset_identifier": {
-        "language": "en/vi/tu", # a two-letter denominator of the sets language.
+        "language": "en/vi/tu...", # a two-letter denominator of the sets language.
         "values": ["output1", "output2", "..."] # A list of system outputs
         }
     }
