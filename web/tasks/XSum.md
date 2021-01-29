@@ -1,7 +1,7 @@
 ---
 title: 'XSum'
 type: Summarization
-motivation: [TODO]
+motivation: Large scale monolingual dataset for evaluating extreme summarization.
 ---
 
 ## Table of Contents
@@ -10,9 +10,9 @@ motivation: [TODO]
 
 ## Dataset Description
 
-- **Homepage:** 
+- **Homepage:**: NA (See Repository)
 - **Repository:** https://github.com/EdinburghNLP/XSum
-- **Paper:** [Original Paper](https://arxiv.org/abs/1808.08745)
+- **Paper:** [Original Paper](https://www.aclweb.org/anthology/D18-1206)
 - **Point of Contact:** [Shashi Narayan](shashi.narayan@gmail.com)
 
 ### Dataset and Task Summary
@@ -21,7 +21,7 @@ The dataset is for the task of abstractive summarization in its extreme form, it
 
 ### Why is this dataset part of GEM?
 
-[More Information Needed]
+This dataset is part of the GEM benchmark for the task of summarization, alongside MLSum and WikiLingua, and acts as a large-scale, high-quality resource for extreme summarization.
 
 ### Languages
 
@@ -49,6 +49,8 @@ CC 4.0 BY-SA ([Creative Commons 4.0 Attribution – Share-Alike](https://creativ
 ```
 
 ### Leaderboard
+
+This dataset has no corresponding public leaderboard.
 
 ## Dataset Structure
 
@@ -99,44 +101,38 @@ The dataset consists of BBC articles and accompanying single sentence summaries.
 
 #### Who are the source language producers?
 
-N/A (dataset authors)
+Professional journalists.
 
 ### Annotations
 
-#### Annotation process
+Any additional annotations are not collected for this dataset.
 
-[More Information Needed]
+#### Annotation process
 
 #### Who are the annotators?
 
-[More Information Needed]
-
 ### Personal and Sensitive Information
-
-[More Information Needed]
 
 ## Changes to the Original Dataset for GEM
 
-[More Information Needed]
+In addition to the original dataset, a modified version of the dataset will be part of the GEM framework.
+
+XSum gold summaries often have divergence issues between the source and target texts due to the dataset artifact that gold summaries are introductory sentences prefacing each article. 
+
+Models agnostic to such noises are vulnerable to hallucinations (Wiseman et al., 2017; Dhingra et al., 2019, Maynez et al., 2020).  For GEM, we have finetuned a BERT-based classifier on 500 document and gold summary pairs, manually annotated for faithfulness (Maynez et al., 2020) and excluded all document-summary pairs from the original XSum dataset where the classifier was not confident (p(faithfull) > 0.8) whether the summary is faithful to the document or not. As a result, we ended up with 23206 training, 1117 validation and 1166 test instances. 
 
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
 
-[More Information Needed]
-
 ### Impact on Underserved Communities
 
-[More Information Needed]
 
 ### Discussion of Biases
 
-[More Information Needed]
 
 ### Other Known Limitations
 
-[More Information Needed]
 
 ## Getting started with in-depth research on the task
 
-[More Information Needed]
