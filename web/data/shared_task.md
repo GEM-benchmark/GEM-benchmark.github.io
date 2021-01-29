@@ -10,7 +10,7 @@ Neither of the shared tasks will have a winner or loser and there will be no lea
 
 To participate in the task, simply train a system on one or more of the included tasks (the more, the better!) and submit your validation and test outputs.
 
-We additionally ask every participant of this task to sign up for two hours of labeling time to produce gold-data for our human evaluation. More information on this is coming soon.
+Similar to [WMT](http://www.statmt.org/wmt20/translation-task.html), we additionally ask every participant of this task to sign up for approximately five hours of labeling time to produce gold-data for our human evaluation. More information on this is coming soon.
 
 ### Data
 
