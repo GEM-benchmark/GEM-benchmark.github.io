@@ -1,8 +1,6 @@
-.box{
-  padding: 2pt;
+.metaBox{
+  padding: 4pt 4pt;
   margin: 1pt;
-
-
 }
 
 .inverse{
@@ -12,7 +10,15 @@
 
 .measureBox{
   display: inline-block;
-  padding: 2pt;
+  padding: 3pt;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  margin: 0 1pt;
+}
+.measureBox:hover{
+  padding: 1pt;
+  border: solid 2pt;
 }
 
 .matrix{

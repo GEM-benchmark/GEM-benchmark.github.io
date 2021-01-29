@@ -2,6 +2,8 @@ import Layout from "../../components/layout";
 import React from "react";
 import {getEvalConfiguration, getSubmissionScores,} from "../../lib/results";
 import {MeasureMatrix} from "../../components/vis_measure_matrix";
+import {ColorManager} from "../../lib/vis_color_manager";
+import {PCP} from "../../components/vis_pc_plot";
 
 
 export async function getStaticProps() {
@@ -38,12 +40,15 @@ class SimpleVis extends React.Component {
 
 
 export default function vis2(props) {
-  const x = props.scores;
+  const cm = ColorManager
+    .generateForEvalConfig(props.evalConfig);
 
-  return <Layout home={false}>x
+  return <Layout home={false}>
+    <h4> Measures </h4>
     {/*<SimpleVis></SimpleVis>*/}
     {/*<pre style={{fontSize:"6pt"}}>{JSON.stringify(x, null,2)}</pre>*/}
-    <MeasureMatrix config={props.evalConfig}/>
+    <MeasureMatrix config={props.evalConfig} cm={cm}/>
+    <PCP cm={cm} config={props.evalConfig} scores={props.scores}></PCP>
   </Layout>;
 
 }

@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.13",
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@tippyjs/react": "^4.2.0",
     "csv-parse": "^4.14.2",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
