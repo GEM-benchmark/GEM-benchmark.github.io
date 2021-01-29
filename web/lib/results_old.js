@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 
-export function getResultsData() {
+export function getResultsDataOld() {
   // step 1: read the default and task-specific schemas.
   const resultsSchemaFilePath = path.join(
     process.cwd(),
@@ -48,7 +48,7 @@ export function getResultsData() {
 
 function parseSubmission(path) {
   /*
-  Parses a submission located at `path`. 
+  Parses a submission located at `path`.
   Returns a dictionary from taskName -> scores
   */
   var submissionData = JSON.parse(fs.readFileSync(path));

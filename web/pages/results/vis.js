@@ -1,4 +1,4 @@
-import { getResultsData as getResultsData } from "../../lib/results";
+import { getResultsData as getResultsData } from "../../lib/results_old";
 import React from "react";
 
 import MUIDataTable from "mui-datatables";
@@ -34,5 +34,5 @@ export default function Leaderboard({ resultsData }) {
     tables.push(<br key={`br${taskName}`} />);
   }
 
-  return <Layout>{tables}</Layout>;
+  return <Layout><pre>{JSON.stringify(resultsData.taskschema, null, 2)}</pre></Layout>;
 }
