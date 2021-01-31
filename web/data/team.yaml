@@ -151,11 +151,11 @@ members:
     twitter: ''
     note: ''
   - name: Dhruv Kumar
-    position: Graduate Student
+    position: ''
     organization: University of Waterloo
-    website: ''
-    twitter: ''
-    note: ''
+    website: 'https://ddhruvkr.github.io/'
+    twitter: '@ddhruvkr'
+    note: 'Looking for PhD positions'
   - name: Faisal Ladhak
     position: Graduate Student
     organization: Columbia University
