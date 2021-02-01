@@ -14,9 +14,7 @@ Similar to [WMT](http://www.statmt.org/wmt20/translation-task.html), we addition
 
 ### Data
 
-The training and validation sets are available using the process described on [this page]().
-
-All datasets are available through [Huggingface Datasets](https://huggingface.co/docs/datasets/) and [Tensorflow Datasets](https://www.tensorflow.org/datasets). Using Huggingface, you can load a dataset as follows:
+The training and validation sets are available through [Huggingface Datasets](https://huggingface.co/docs/datasets/) and [Tensorflow Datasets](https://www.tensorflow.org/datasets). Using Huggingface, you can load a dataset as follows:
 
 ```python
 from datasets import load_dataset

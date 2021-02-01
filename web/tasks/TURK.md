@@ -1,4 +1,3 @@
-
 ---
 title: 'TURKCorpus'
 type: 'Simplification'
@@ -33,7 +32,7 @@ TURKCorpus contains English text only (BCP-47: `en`).
 
 ### Dataset Curators
 
-TURKCorpus was developed by researchers at the University of Pennsylvania. The work was  supported by the NSF under grant IIS-1430651 and the NSF GRFP under grant 1232825. 
+TURKCorpus was developed by researchers at the University of Pennsylvania. The work was  supported by the NSF under grant IIS-1430651 and the NSF GRFP under grant 1232825.
 
 ### Licensing Information
 
@@ -70,7 +69,7 @@ There is no official leaderboard.
 
 ### Data Statistics
 
-TURKCorpus does not contain a training set; many models use [WikiLarge](https://github.com/XingxingZhang/dress) (Zhang and Lapata, 2017) or [Wiki-Auto](https://github.com/chaojiang06/wiki-auto) (Jiang et. al 2020) for training. 
+TURKCorpus does not contain a training set; many models use [WikiLarge](https://github.com/XingxingZhang/dress) (Zhang and Lapata, 2017) or [Wiki-Auto](https://github.com/chaojiang06/wiki-auto) (Jiang et. al 2020) for training.
 
 Each input sentence has 8 associated reference simplified sentences. 2,359 input sentences are randomly split into 2,000 validation and 359 test sentences.
 
@@ -86,20 +85,20 @@ There are 21.29 tokens per reference on average.
 
 ### Curation Rationale
 
-The TurkCorpus dataset was constructed to evaluate the task of text simplification.  It contains multiple human-written references that focus on only lexical simplification. 
+The TurkCorpus dataset was constructed to evaluate the task of text simplification.  It contains multiple human-written references that focus on only lexical simplification.
 
 
 ### Communicative Goal
 
-The goal is to communicate the main ideas of source sentence in a way that is easier to understand by non-native speakers of English.  
+The goal is to communicate the main ideas of source sentence in a way that is easier to understand by non-native speakers of English.
 
 
 ### Source Data
 
 #### Initial Data Collection and Normalization
 
- The input sentences in the dataset are extracted from the [Parallel Wikipedia Simplification (PWKP) corpus](https://www.aclweb.org/anthology/C10-1152/). 
- 
+ The input sentences in the dataset are extracted from the [Parallel Wikipedia Simplification (PWKP) corpus](https://www.aclweb.org/anthology/C10-1152/).
+
 #### Who are the source language producers?
 
 The references are crowdsourced from Amazon Mechanical Turk. The annotators were asked to provide simplifications without losing any information or splitting the input sentence. No other demographic or compensation information is provided in the TURKCorpus paper.
