@@ -28,9 +28,15 @@
 }
 
 .metaBox {
-    padding: 4pt 4pt;
+    padding: 2pt 3pt;
     margin: 1pt;
     background-color: #eeeeee;
+}
+
+.metaMetaBox {
+    padding: 2pt 5pt;
+    margin: 1pt;
+    background-color: #ccc;
 }
 
 .matrix {

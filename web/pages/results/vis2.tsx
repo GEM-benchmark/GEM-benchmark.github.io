@@ -8,6 +8,7 @@ import {
 import {MeasureMatrix} from "../../components/vis_measure_matrix";
 import {ColorManager} from "../../lib/vis_color_manager";
 import {PCP} from "../../components/vis_pc_plot";
+import {SubmissionMatrixInv} from "../../components/vis_submission_matrix_inv";
 import {SubmissionMatrix} from "../../components/vis_submission_matrix";
 
 
@@ -28,34 +29,7 @@ interface MainVisProps {
   cm: ColorManager
 }
 
-class Matrices extends React.Component<{ config: EvalConfiguration, scores: Scores[], submissionFilter: string[], cm: ColorManager }> {
-  render() {
-    return <div style={{
-      display: "flex", alignItems: "stretch", flexWrap: "wrap"
-    }}>
-      <div style={{flex: 1}}>
-        <h4 style={{marginBottom: "5px"}}> Submissions & Scores </h4>
-        <div style={{maxHeight: "200px", overflowY: "auto"}}>
-          <SubmissionMatrix
-            config={this.props.config}
-            scores={this.props.scores}
-            subset={"val"}
-            submissionFilter={this.props.submissionFilter}
-          />
-        </div>
-      </div>
-      <div style={{flex: 1}}>
-        < h4 style={{marginBottom: "5px"}}> Measures </h4>
-        <div style={{maxHeight: "200px", overflowY: "auto"}}>
-          <MeasureMatrix
-            config={this.props.config}
-            cm={this.props.cm}/>
-        </div>
 
-      </div>
-    </div>;
-  }
-}
 
 class MainVis extends React.PureComponent<MainVisProps, any> {
   state = {
@@ -78,7 +52,7 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
               subset={"val"}
               submissionFilter={this.state.submissionFilter}
               onHover={(ds,hover)=>{
-                 this.setState({highlighted: hover ? [ds] : []})
+                 this.setState({highlighted: hover ? ds : []})
                }}
               highlighted={this.state.highlighted}
             />
