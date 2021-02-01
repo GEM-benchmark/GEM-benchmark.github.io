@@ -37,7 +37,7 @@ export function getSubmissionScores(): Scores[] {
   const scores = []
   fs.readdirSync(baselinePath).forEach((fileName) => {
     if (fileName === "eval_config.json") return;
-    if (!fileName.endsWith("scores.json")) return;
+    if (!fileName.endsWith("score.json")) return;
 
     // const scores = fileName.endsWith("scores.json");
     const submissionName = fileName.slice(0, fileName.lastIndexOf("_"));

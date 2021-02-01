@@ -1,0 +1,74 @@
+.line {
+    fill: none;
+    stroke: #3f3f3f;
+    stroke-opacity: .2;
+    stroke-width: 1;
+
+}
+
+/*.line:hover {*/
+/*    stroke: #aba5a5;*/
+
+/*    !*stroke: #8e8d8a;*!*/
+/*    stroke-width: 3;*/
+/*    stroke-opacity: 1;*/
+/*    transition-duration: 200ms;*/
+/*}*/
+
+.lineVisible {
+    stroke-opacity: .6;
+    stroke-width: 1.5;
+}
+.lineInvisible {
+    stroke-opacity: .1;
+}
+
+
+
+.selected {
+    stroke-width: 3;
+    stroke: #c10001;
+    stroke-opacity: .8;
+    transition-duration: 200ms;
+}
+
+.label {
+    font-size: 9pt;
+    cursor: default;
+}
+
+.label:hover {
+    font-weight: bold;
+}
+
+.yAxis {
+    fill: none;
+    stroke: #8e8d8a;
+    stroke-width: 1;
+    stroke-opacity: .5;
+}
+
+.extremaLabelTop {
+    font-size: 6pt;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.extremaLabelBtm {
+    font-size: 6pt;
+    text-anchor: middle;
+    alignment-baseline: text-top;
+    pointer-events: none;
+}
+
+.textNon {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+

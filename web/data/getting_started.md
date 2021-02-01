@@ -2,7 +2,8 @@
 title: "Getting Started with GEM"
 ---
 
-In this tutorial, we will walk you through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
+This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions. If you are
+only interested in an overview how to load the datasets, you can look [here](/shared_task).
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
 what changes to make to use another of the GEM datasets.
 
@@ -378,49 +379,30 @@ test_output = data['test'].map(
 )
 ```
 
-Since CommonGen is multi-reference and we are using a deterministic search algorithm, the test data currently holds many duplicates. We need to merge predictions on the concept set ID. To do so, let's define a formatter:
+The code is adding a `generated` field into the dataset which makes analysis much easier.
+However, in our submission file we only want the actual values. Thus, we filter:
 
 ```python
-def postprocess_inference_list(
-    output_list: list,
-    merge_identifier: str = None,
-    target_field: str = None):
-  """Merges duplicate outputs with multiple references."""
-  postprocessed_list = []
-  added_identifiers = set()
-  for item in output_list:
-    del item[target_field]
-    if merge_identifier is not None:
-      if item[merge_identifier] not in added_identifiers:
-        added_identifiers.add(item[merge_identifier])
-      else:
-        # Was already added, skip example.
-        continue
-    postprocessed_list.append(item)
-  return postprocessed_list
-
-valid_formatted = postprocess_inference_list(
-  list(valid_output),
-  merge_identifier='concept_set_idx',
-  target_field='target')
-test_formatted = postprocess_inference_list(
-  list(test_output),
-  merge_identifier='concept_set_idx',
-  target_field='target')
+valid_formatted = [o['generated'] for o in valid_output]
+test_formatted = [o['generated'] for o in test_output]
 ```
 
-In our final step, we only have to add the formatted outputs to our larger submission construct.
+In our final step, we only have to add the outputs to our larger submission construct.
 
 ```python
 submission_dict = {
-    "submission_name": 'BART-base',
+    "submission_name": "BART-base",
     "param_count": sum(p.numel() for p in model.parameters()),
-    "common_gen_val": valid_formatted,
-    "common_gen_test": test_formatted,
+    "description": "Baseline for the task based on BART-base."
+    "tasks": {
+      "common_gen_val": {"language": "en", "values": valid_formatted},
+      "common_gen_test": {"language": "en", "values": test_formatted},
+    }
 }
 ```
 
-With this, the last step is to write our submission dictionary to a file.
+This format is scalable to more tasks, you simply need to add more outputs to the `tasks` subfield.
+The last step is to write our submission dictionary to a file.
 
 ```python
 import json

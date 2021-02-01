@@ -29,9 +29,9 @@ class Navbar extends React.Component {
       <div className={styles.navwrapper}>
         <div className={styles.gradbar}></div>
         <nav className={styles.navbar}>
-          <span className={utilStyles.headingLg + " " + utilStyles.accent}>
+          <span className={utilStyles.headingLg + " " + styles.navbarlogo}>
             <Link href="/">
-              <a>GEM</a>
+              <a>GEM BENCHMARK</a>
             </Link>
           </span>
 
@@ -56,8 +56,8 @@ class Navbar extends React.Component {
                   : styles.navitem + " " + styles.pushright
               }
             >
-              <Link href="/tasks/">
-                <a>Tasks</a>
+              <Link href="/data_cards/">
+                <a>Data Cards</a>
               </Link>
             </li>
             <li className={styles.navitem}>
@@ -76,6 +76,11 @@ class Navbar extends React.Component {
             <li className={styles.navitem}>
               <Link href="/team">
                 <a>Team</a>
+              </Link>
+            </li>
+            <li className={styles.navitem}>
+              <Link href="/shared_task">
+                <a>Shared Task</a>
               </Link>
             </li>
             <li className={styles.navitem}>

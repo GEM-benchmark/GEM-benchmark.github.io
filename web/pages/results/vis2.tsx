@@ -1,9 +1,14 @@
 import Layout from "../../components/layout";
 import React from "react";
-import {getEvalConfiguration, getSubmissionScores,} from "../../lib/results";
+import {
+  EvalConfiguration,
+  getEvalConfiguration,
+  getSubmissionScores, Scores,
+} from "../../lib/results";
 import {MeasureMatrix} from "../../components/vis_measure_matrix";
 import {ColorManager} from "../../lib/vis_color_manager";
 import {PCP} from "../../components/vis_pc_plot";
+import {SubmissionMatrix} from "../../components/vis_submission_matrix";
 
 
 export async function getStaticProps() {
@@ -17,24 +22,97 @@ export async function getStaticProps() {
   };
 }
 
-class SimpleVis extends React.Component {
-  state = {myName: "Hendrik", showMe: false}
+interface MainVisProps {
+  evalConfig: EvalConfiguration,
+  scores: Scores[],
+  cm: ColorManager
+}
 
-
+class Matrices extends React.Component<{ config: EvalConfiguration, scores: Scores[], submissionFilter: string[], cm: ColorManager }> {
   render() {
-    return <div>
-      <h1>Hello World {this.state.myName}</h1>
-      {this.state.showMe && <h3>Subtitle</h3>}
-      <button onClick={this.setName}> Hen</button>
-      <button onClick={this.setName}> None</button>
-    </div>
+    return <div style={{
+      display: "flex", alignItems: "stretch", flexWrap: "wrap"
+    }}>
+      <div style={{flex: 1}}>
+        <h4 style={{marginBottom: "5px"}}> Submissions & Scores </h4>
+        <div style={{maxHeight: "200px", overflowY: "auto"}}>
+          <SubmissionMatrix
+            config={this.props.config}
+            scores={this.props.scores}
+            subset={"val"}
+            submissionFilter={this.props.submissionFilter}
+          />
+        </div>
+      </div>
+      <div style={{flex: 1}}>
+        < h4 style={{marginBottom: "5px"}}> Measures </h4>
+        <div style={{maxHeight: "200px", overflowY: "auto"}}>
+          <MeasureMatrix
+            config={this.props.config}
+            cm={this.props.cm}/>
+        </div>
 
+      </div>
+    </div>;
+  }
+}
+
+class MainVis extends React.PureComponent<MainVisProps, any> {
+  state = {
+    submissionFilter: null as string[] | null,
+    highlighted: [] as string[]
   }
 
-  setName = (event) => {
-    console.log(this.props, "--- this.props");
-    this.setState({myName: event.target.textContent})
-    this.setState({showMe: !this.state.showMe})
+  render() {
+    return <>
+      {/*<pre>{JSON.stringify(this.props.scores,null,2)}</pre>*/}
+      <div style={{
+        display: "flex", alignItems: "stretch", flexWrap: "wrap"
+      }}>
+        <div style={{flex: 1}}>
+          <h4 style={{marginBottom: "5px"}}> Submissions & Scores </h4>
+          <div style={{maxHeight: "200px", overflowY: "auto"}}>
+            <SubmissionMatrix
+              config={this.props.evalConfig}
+              scores={this.props.scores}
+              subset={"val"}
+              submissionFilter={this.state.submissionFilter}
+              onHover={(ds,hover)=>{
+                 this.setState({highlighted: hover ? [ds] : []})
+               }}
+              highlighted={this.state.highlighted}
+            />
+          </div>
+        </div>
+        <div style={{flex: 1}}>
+          < h4 style={{marginBottom: "5px"}}> Measures </h4>
+          <div style={{maxHeight: "200px", overflowY: "auto"}}>
+            <MeasureMatrix
+              config={this.props.evalConfig}
+              cm={this.props.cm}/>
+          </div>
+
+        </div>
+      </div>
+      <div>
+        < h4 style={{marginBottom: "5px"}}> Visualization </h4>
+        <div style={{textAlign: "center"}}>
+          <PCP cm={this.props.cm}
+               config={this.props.evalConfig}
+               scores={this.props.scores}
+               subset={"val"}
+               onFilterChange={(list) => {
+                 this.setState({submissionFilter: list})
+               }}
+               highlighted={this.state.highlighted}
+               onDatasetHover={(ds, hover) => {
+                 this.setState({highlighted: hover ? [ds] : []})
+               }}
+          />
+
+        </div>
+      </div>
+    </>
   }
 }
 
@@ -44,11 +122,8 @@ export default function vis2(props) {
     .generateForEvalConfig(props.evalConfig);
 
   return <Layout home={false}>
-    <h4> Measures </h4>
-    {/*<SimpleVis></SimpleVis>*/}
-    {/*<pre style={{fontSize:"6pt"}}>{JSON.stringify(x, null,2)}</pre>*/}
-    <MeasureMatrix config={props.evalConfig} cm={cm}/>
-    <PCP cm={cm} config={props.evalConfig} scores={props.scores}></PCP>
+    <MainVis evalConfig={props.evalConfig}
+             scores={props.scores} cm={cm}/>
   </Layout>;
 
 }

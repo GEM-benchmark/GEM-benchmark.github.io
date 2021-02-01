@@ -12,14 +12,14 @@ export default function Home() {
       </Head>
       <div className={styles.centerpage}>
         <p className={styles.description}>
-          GEM is a benchmark for Natural Language Generation with a focus on its
+          GEM is a benchmark environment for Natural Language Generation with a focus on its
           Evaluation, both through human annotations and automated Metrics.
       </p>
         <p className={styles.description}>GEM aims to:</p>
         <ul className={styles.description}>
           <li>
-            measure NLG progress across 12 datasets spanning multiple NLG tasks
-            and 10+ languages.
+            measure NLG progress across 13 datasets spanning many NLG tasks
+            and languages.
         </li>
           <li>
             provide an in-depth analysis of data and models presented via data
@@ -27,21 +27,18 @@ export default function Home() {
         </li>
           <li>
             develop standards for evaluation of generated text using both
-            automated and human metrics
+            automated and human metrics.
         </li>
         </ul>
         <p className={styles.description}>
-          All model submissions may be used as part of shared evaluation tasks.
-      </p>
-        <p className={styles.description}>
-          It is our goal to update GEM yearly and use the committee to drive
+          It is our goal to regularly update GEM and to encourage
           toward more inclusive practices in dataset development by extending
           existing data or developing datasets for additional languages.
       </p>
         <div className={styles.grid}>
-          <Link href="/tasks/">
+          <Link href="/data_cards/">
             <a className={styles.card}>
-              <h3>Tasks</h3>
+              <h3>Data Cards</h3>
             </a>
           </Link>
 
@@ -69,7 +66,13 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="#">
+          <Link href="/shared_task">
+            <a className={styles.card}>
+              <h3>Shared Task</h3>
+            </a>
+          </Link>
+
+          <Link href="/workshop">
             <a className={styles.card}>
               <h3>Workshop</h3>
             </a>
