@@ -91,8 +91,8 @@ export class SubmissionMatrix
         return <div key={dd.ds} style={{display: "flex"}}>
           <div
             className={style.metaBox}
-            onMouseEnter={() => this.props.onHover(dd.submissions.map(sn=>`${sn}.${ds}`), true)}
-            onMouseLeave={() => this.props.onHover(dd.submissions.map(sn=>`${sn}.${ds}`), false)}
+            onMouseEnter={() => this.props.onHover(dd.submissions.map(sn => `${sn}.${ds}`), true)}
+            onMouseLeave={() => this.props.onHover(dd.submissions.map(sn => `${sn}.${ds}`), false)}
           >{dd.ds}</div>
           <div>{submissions}</div>
         </div>
@@ -104,32 +104,6 @@ export class SubmissionMatrix
     })
 
     return <div className={style.matrix}>{tasklist}</div>
-
-    // const submissions = this.props.scores.map(submission => {
-    //
-    //
-    //   const sn = submission.submission_name;
-    //   const datasets = Object.keys(submission)
-    //     .filter(ds => ds.endsWith("_" + this.props.subset))
-    //     //   && !(typeof ds == "string"))
-    //     .map(ds =>
-    //       <div key={ds}
-    //            className={submissionClasses(sn, ds)}
-    //            onMouseEnter={() => this.props.onHover(`${sn}.${ds}`, true)}
-    //            onMouseLeave={() => this.props.onHover(`${sn}.${ds}`, false)}
-    //       >{ds}</div>)
-    //
-    //
-    //   return <div key={sn}
-    //               style={{display: "flex", flexDirection: "row"}}>
-    //     <div className={[style.metaBox].join(" ")}
-    //     >{sn}</div>
-    //     <div>{datasets}</div>
-    //   </div>
-    // })
-    //
-    //
-    // return <div className={style.matrix}>{submissions}</div>;
   }
 
 }
