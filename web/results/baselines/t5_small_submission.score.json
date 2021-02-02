@@ -1,0 +1,1477 @@
+{
+    "submission_name": "t5-small",
+    "e2e_nlg_cleaned_val": {
+        "predictions_file": "t5-small/e2e_nlg_cleaned_val",
+        "N": 1484,
+        "msttr-100": 0.31038123167155435,
+        "msttr-100_nopunct": 0.3049842271293377,
+        "total_length": 34181,
+        "mean_pred_length": 23.03301886792453,
+        "distinct-1": 0.0036570024282496123,
+        "vocab_size-1": 125,
+        "unique-1": 7,
+        "entropy-1": 5.594233511627437,
+        "distinct-2": 0.011468942104780255,
+        "vocab_size-2": 375,
+        "unique-2": 60,
+        "entropy-2": 6.90526016765855,
+        "cond_entropy-2": 1.280489538732093,
+        "distinct-3": 0.023227501361612148,
+        "vocab_size-3": 725,
+        "unique-3": 172,
+        "entropy-3": 7.749728513488912,
+        "cond_entropy-3": 0.894761626323421,
+        "total_length-nopunct": 31799,
+        "mean_pred_length-nopunct": 21.42789757412399,
+        "distinct-1-nopunct": 0.0038680461649737412,
+        "vocab_size-1-nopunct": 123,
+        "unique-1-nopunct": 7,
+        "entropy-1-nopunct": 5.611440589616747,
+        "distinct-2-nopunct": 0.012238165924459839,
+        "vocab_size-2-nopunct": 371,
+        "unique-2-nopunct": 62,
+        "entropy-2-nopunct": 6.8814749258295205,
+        "cond_entropy-2-nopunct": 1.3127216591143176,
+        "distinct-3-nopunct": 0.02531996808990323,
+        "vocab_size-3-nopunct": 730,
+        "unique-3-nopunct": 177,
+        "entropy-3-nopunct": 7.779014998464191,
+        "cond_entropy-3-nopunct": 0.9183570714103584,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_val.json",
+        "bertscore": {
+            "precision": 0.9270524239202715,
+            "recall": 0.9105415076740347,
+            "f1": 0.9178731066759706,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 43.00905709844771,
+        "bleurt": 0.18962493927177426,
+        "meteor": 0.36969220803925884,
+        "rouge1": {
+            "low": {
+                "precision": 0.754098431294558,
+                "recall": 0.7048665019564003,
+                "fmeasure": 0.7201976902445139
+            },
+            "mid": {
+                "precision": 0.7615087189618508,
+                "recall": 0.7123559441026153,
+                "fmeasure": 0.7266239450562212
+            },
+            "high": {
+                "precision": 0.768937884367228,
+                "recall": 0.7202605349713094,
+                "fmeasure": 0.7335061878371985
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.4905523980010454,
+                "recall": 0.4551440017602982,
+                "fmeasure": 0.46599649363999185
+            },
+            "mid": {
+                "precision": 0.5000389802599938,
+                "recall": 0.4646700475218566,
+                "fmeasure": 0.4753330268463982
+            },
+            "high": {
+                "precision": 0.510184278779874,
+                "recall": 0.4738483094742157,
+                "fmeasure": 0.48433507893729094
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.5814264258399298,
+                "recall": 0.5459063757340831,
+                "fmeasure": 0.5559101154504159
+            },
+            "mid": {
+                "precision": 0.5901457767121439,
+                "recall": 0.555225256524954,
+                "fmeasure": 0.5645191287811152
+            },
+            "high": {
+                "precision": 0.5990429708594969,
+                "recall": 0.5637607868991046,
+                "fmeasure": 0.5728102700444522
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.5809132638315009,
+                "recall": 0.545682515460352,
+                "fmeasure": 0.5555098434703386
+            },
+            "mid": {
+                "precision": 0.5901374381194843,
+                "recall": 0.5551791268613174,
+                "fmeasure": 0.5644988491367078
+            },
+            "high": {
+                "precision": 0.5988411384323241,
+                "recall": 0.5645212484915797,
+                "fmeasure": 0.5731470183440046
+            }
+        }
+    },
+    "e2e_nlg_cleaned_test": {
+        "predictions_file": "t5-small/e2e_nlg_cleaned_test",
+        "N": 1847,
+        "msttr-100": 0.3084878048780487,
+        "msttr-100_nopunct": 0.30410389610389604,
+        "total_length": 41060,
+        "mean_pred_length": 22.23064428803465,
+        "distinct-1": 0.0030443253774963468,
+        "vocab_size-1": 125,
+        "unique-1": 4,
+        "entropy-1": 5.6949638061549095,
+        "distinct-2": 0.010098691760385586,
+        "vocab_size-2": 396,
+        "unique-2": 49,
+        "entropy-2": 7.107936276846343,
+        "cond_entropy-2": 1.3859479575159215,
+        "distinct-3": 0.022373280522400042,
+        "vocab_size-3": 836,
+        "unique-3": 161,
+        "entropy-3": 8.010508895932999,
+        "cond_entropy-3": 0.9399555490616757,
+        "total_length-nopunct": 38508,
+        "mean_pred_length-nopunct": 20.848944233892798,
+        "distinct-1-nopunct": 0.0031941414770956683,
+        "vocab_size-1-nopunct": 123,
+        "unique-1-nopunct": 4,
+        "entropy-1-nopunct": 5.707743459593234,
+        "distinct-2-nopunct": 0.010692561577698372,
+        "vocab_size-2-nopunct": 392,
+        "unique-2-nopunct": 55,
+        "entropy-2-nopunct": 7.091311344576028,
+        "cond_entropy-2-nopunct": 1.4343031504803945,
+        "distinct-3-nopunct": 0.024128224277589476,
+        "vocab_size-3-nopunct": 840,
+        "unique-3-nopunct": 169,
+        "entropy-3-nopunct": 8.044240885068612,
+        "cond_entropy-3-nopunct": 0.9648083768560723,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_test.json",
+        "bertscore": {
+            "precision": 0.9289253008126825,
+            "recall": 0.9016814041150604,
+            "f1": 0.9141579059310132,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 37.54186079310738,
+        "bleurt": 0.14200100973786325,
+        "meteor": 0.3508359516473979,
+        "rouge1": {
+            "low": {
+                "precision": 0.7853899975826425,
+                "recall": 0.6704578818679359,
+                "fmeasure": 0.7144976746713293
+            },
+            "mid": {
+                "precision": 0.7912512759887533,
+                "recall": 0.6771800979179738,
+                "fmeasure": 0.7201392122730754
+            },
+            "high": {
+                "precision": 0.797006963621498,
+                "recall": 0.683091710546263,
+                "fmeasure": 0.7251912554602561
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.494739357963967,
+                "recall": 0.41924121546266374,
+                "fmeasure": 0.44765068716468953
+            },
+            "mid": {
+                "precision": 0.5019462775181538,
+                "recall": 0.4262823131903084,
+                "fmeasure": 0.45448593418023386
+            },
+            "high": {
+                "precision": 0.509789213727494,
+                "recall": 0.43296196691387484,
+                "fmeasure": 0.46107136517788994
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.5852142418263824,
+                "recall": 0.5019440880016524,
+                "fmeasure": 0.5330391378943621
+            },
+            "mid": {
+                "precision": 0.5926159583014968,
+                "recall": 0.5091561123094157,
+                "fmeasure": 0.5400508880896289
+            },
+            "high": {
+                "precision": 0.6004163396871404,
+                "recall": 0.5167704574975994,
+                "fmeasure": 0.5471211121680685
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.5854584065060905,
+                "recall": 0.5020392311465826,
+                "fmeasure": 0.5331567610380528
+            },
+            "mid": {
+                "precision": 0.5925546221034262,
+                "recall": 0.5092046304159252,
+                "fmeasure": 0.5399633705273718
+            },
+            "high": {
+                "precision": 0.600748298618633,
+                "recall": 0.5168440496338651,
+                "fmeasure": 0.5477200704454575
+            }
+        }
+    },
+    "common_gen_val": {
+        "predictions_file": "t5-small/common_gen_val",
+        "N": 993,
+        "msttr-100": 0.5087368421052634,
+        "msttr-100_nopunct": 0.5410465116279072,
+        "total_length": 9558,
+        "mean_pred_length": 9.625377643504532,
+        "distinct-1": 0.1065076375810839,
+        "vocab_size-1": 1018,
+        "unique-1": 465,
+        "entropy-1": 6.497782383825858,
+        "distinct-2": 0.36018680677174547,
+        "vocab_size-2": 3085,
+        "unique-2": 2051,
+        "entropy-2": 10.09363761302916,
+        "cond_entropy-2": 3.2872476558286583,
+        "distinct-3": 0.6171421024828315,
+        "vocab_size-3": 4673,
+        "unique-3": 3712,
+        "entropy-3": 11.584694886866375,
+        "cond_entropy-3": 1.613818773204544,
+        "total_length-nopunct": 8629,
+        "mean_pred_length-nopunct": 8.689828801611279,
+        "distinct-1-nopunct": 0.11774249623363078,
+        "vocab_size-1-nopunct": 1016,
+        "unique-1-nopunct": 464,
+        "entropy-1-nopunct": 6.6864531281388535,
+        "distinct-2-nopunct": 0.356338397066527,
+        "vocab_size-2-nopunct": 2721,
+        "unique-2-nopunct": 1845,
+        "entropy-2-nopunct": 9.813683639158473,
+        "cond_entropy-2-nopunct": 3.5794837347705077,
+        "distinct-3-nopunct": 0.6337498118320036,
+        "vocab_size-3-nopunct": 4210,
+        "unique-3-nopunct": 3413,
+        "entropy-3-nopunct": 11.42813128972079,
+        "cond_entropy-3-nopunct": 1.7455178636374244,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/common_gen_val.json",
+        "bertscore": {
+            "precision": 0.8935747134601482,
+            "recall": 0.8820779004846094,
+            "f1": 0.8865412346425974,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 26.41420867721791,
+        "bleurt": -0.4121864698831286,
+        "meteor": 0.2908480781770407,
+        "rouge1": {
+            "low": {
+                "precision": 0.6920408363479245,
+                "recall": 0.5985082749334648,
+                "fmeasure": 0.6329469716091479
+            },
+            "mid": {
+                "precision": 0.7003602601940977,
+                "recall": 0.6063455256376806,
+                "fmeasure": 0.6403904769041657
+            },
+            "high": {
+                "precision": 0.7088248310320001,
+                "recall": 0.6140242457324674,
+                "fmeasure": 0.647371023350625
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.337251015372491,
+                "recall": 0.2826070792224786,
+                "fmeasure": 0.30136695054363444
+            },
+            "mid": {
+                "precision": 0.34848166452081375,
+                "recall": 0.29302645654645615,
+                "fmeasure": 0.311869098580563
+            },
+            "high": {
+                "precision": 0.3606928350639329,
+                "recall": 0.3042861861018094,
+                "fmeasure": 0.3231555321850438
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.5881266171971424,
+                "recall": 0.5068901529177872,
+                "fmeasure": 0.5370319599371882
+            },
+            "mid": {
+                "precision": 0.5980199531968164,
+                "recall": 0.5164586816901027,
+                "fmeasure": 0.5455714128963778
+            },
+            "high": {
+                "precision": 0.6074475273837998,
+                "recall": 0.525744426590656,
+                "fmeasure": 0.5544899592336733
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.5882847289920557,
+                "recall": 0.507252885791151,
+                "fmeasure": 0.5369113592994385
+            },
+            "mid": {
+                "precision": 0.5975445970379254,
+                "recall": 0.5162233002791394,
+                "fmeasure": 0.545420306696307
+            },
+            "high": {
+                "precision": 0.6069803736170499,
+                "recall": 0.5260095252378316,
+                "fmeasure": 0.5545815126701834
+            }
+        }
+    },
+    "common_gen_test": {
+        "predictions_file": "t5-small/common_gen_test",
+        "N": 1497,
+        "msttr-100": 0.5308805031446544,
+        "msttr-100_nopunct": 0.559724137931034,
+        "total_length": 15947,
+        "mean_pred_length": 10.652638610554442,
+        "distinct-1": 0.10127296670220104,
+        "vocab_size-1": 1615,
+        "unique-1": 739,
+        "entropy-1": 6.8432103794225245,
+        "distinct-2": 0.36089965397923873,
+        "vocab_size-2": 5215,
+        "unique-2": 3457,
+        "entropy-2": 10.778801030606285,
+        "cond_entropy-2": 3.6257314812243404,
+        "distinct-3": 0.6326719678838879,
+        "vocab_size-3": 8195,
+        "unique-3": 6581,
+        "entropy-3": 12.411141057111791,
+        "cond_entropy-3": 1.7415569937246624,
+        "total_length-nopunct": 14503,
+        "mean_pred_length-nopunct": 9.68804275217101,
+        "distinct-1-nopunct": 0.11121836861339034,
+        "vocab_size-1-nopunct": 1613,
+        "unique-1-nopunct": 739,
+        "entropy-1-nopunct": 7.0317045800229065,
+        "distinct-2-nopunct": 0.35798862063662923,
+        "vocab_size-2-nopunct": 4656,
+        "unique-2-nopunct": 3140,
+        "entropy-2-nopunct": 10.521970035110158,
+        "cond_entropy-2-nopunct": 3.913382561925773,
+        "distinct-3-nopunct": 0.6459292727430707,
+        "vocab_size-3-nopunct": 7434,
+        "unique-3-nopunct": 6047,
+        "entropy-3-nopunct": 12.269211842300123,
+        "cond_entropy-3-nopunct": 1.862638656904225
+    },
+    "totto_val": {
+        "predictions_file": "t5-small/totto_val",
+        "N": 7700,
+        "msttr-100": 0.7253140916808166,
+        "msttr-100_nopunct": 0.7769679300291515,
+        "total_length": 117820,
+        "mean_pred_length": 15.301298701298702,
+        "distinct-1": 0.17896791716177218,
+        "vocab_size-1": 21086,
+        "unique-1": 14547,
+        "entropy-1": 10.061241430491894,
+        "distinct-2": 0.5422084998183799,
+        "vocab_size-2": 59708,
+        "unique-2": 50217,
+        "entropy-2": 14.391692214457041,
+        "cond_entropy-2": 3.99806782858201,
+        "distinct-3": 0.7600566295645381,
+        "vocab_size-3": 77845,
+        "unique-3": 70948,
+        "entropy-3": 15.638351215561016,
+        "cond_entropy-3": 1.2606792948902663,
+        "total_length-nopunct": 102931,
+        "mean_pred_length-nopunct": 13.367662337662338,
+        "distinct-1-nopunct": 0.20466137509593804,
+        "vocab_size-1-nopunct": 21066,
+        "unique-1-nopunct": 14545,
+        "entropy-1-nopunct": 10.601698637997186,
+        "distinct-2-nopunct": 0.5831084415788976,
+        "vocab_size-2-nopunct": 55530,
+        "unique-2-nopunct": 47834,
+        "entropy-2-nopunct": 14.353378269802533,
+        "cond_entropy-2-nopunct": 3.938697278908525,
+        "distinct-3-nopunct": 0.7825798859832517,
+        "vocab_size-3-nopunct": 68500,
+        "unique-3-nopunct": 63193,
+        "entropy-3-nopunct": 15.499793274599654,
+        "cond_entropy-3-nopunct": 1.2451384742515805,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/totto_val.json",
+        "bertscore": {
+            "precision": 0.9195911938958354,
+            "recall": 0.9120107084822345,
+            "f1": 0.9141519073387245,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 42.22714231108755,
+        "bleurt": 0.17905558324398801,
+        "meteor": 0.3632067432872529,
+        "rouge1": {
+            "low": {
+                "precision": 0.7347907282931365,
+                "recall": 0.6863937226487481,
+                "fmeasure": 0.6972642623793339
+            },
+            "mid": {
+                "precision": 0.7389222782541636,
+                "recall": 0.6904529703725065,
+                "fmeasure": 0.70119396397524
+            },
+            "high": {
+                "precision": 0.7432663218954768,
+                "recall": 0.6946356254161408,
+                "fmeasure": 0.7052420556708069
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.5045695930578742,
+                "recall": 0.4701947373860181,
+                "fmeasure": 0.47789053733515785
+            },
+            "mid": {
+                "precision": 0.5101199460742845,
+                "recall": 0.4758889193281567,
+                "fmeasure": 0.48330831380777256
+            },
+            "high": {
+                "precision": 0.5159153642624965,
+                "recall": 0.48179795830456235,
+                "fmeasure": 0.4888478974899103
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.6357583704281816,
+                "recall": 0.5976684469912195,
+                "fmeasure": 0.6050289562313219
+            },
+            "mid": {
+                "precision": 0.6410004754320611,
+                "recall": 0.602584270269078,
+                "fmeasure": 0.6099252871854262
+            },
+            "high": {
+                "precision": 0.6462855570554695,
+                "recall": 0.6078768486353747,
+                "fmeasure": 0.6147704450510514
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.6357634495306574,
+                "recall": 0.5976384243457591,
+                "fmeasure": 0.6049818480939279
+            },
+            "mid": {
+                "precision": 0.6406929534346639,
+                "recall": 0.6024491767062925,
+                "fmeasure": 0.6097912729337411
+            },
+            "high": {
+                "precision": 0.6455735170731368,
+                "recall": 0.6074205418593258,
+                "fmeasure": 0.6146823250087361
+            }
+        }
+    },
+    "totto_test": {
+        "predictions_file": "t5-small/totto_test",
+        "N": 7700,
+        "msttr-100": 0.7266864910790165,
+        "msttr-100_nopunct": 0.7764007782101143,
+        "total_length": 117725,
+        "mean_pred_length": 15.28896103896104,
+        "distinct-1": 0.17806753026120195,
+        "vocab_size-1": 20963,
+        "unique-1": 14572,
+        "entropy-1": 10.045497286069484,
+        "distinct-2": 0.5406044080890706,
+        "vocab_size-2": 59480,
+        "unique-2": 49978,
+        "entropy-2": 14.390495093644317,
+        "cond_entropy-2": 4.00806448775346,
+        "distinct-3": 0.758592719276814,
+        "vocab_size-3": 77623,
+        "unique-3": 70524,
+        "entropy-3": 15.65042371441471,
+        "cond_entropy-3": 1.2659620549748458,
+        "total_length-nopunct": 102874,
+        "mean_pred_length-nopunct": 13.36025974025974,
+        "distinct-1-nopunct": 0.20358885627077786,
+        "vocab_size-1-nopunct": 20944,
+        "unique-1-nopunct": 14571,
+        "entropy-1-nopunct": 10.582483571370412,
+        "distinct-2-nopunct": 0.5817870426797235,
+        "vocab_size-2-nopunct": 55371,
+        "unique-2-nopunct": 47579,
+        "entropy-2-nopunct": 14.36001477062111,
+        "cond_entropy-2-nopunct": 3.956784066579314,
+        "distinct-3-nopunct": 0.7821867069071953,
+        "vocab_size-3-nopunct": 68421,
+        "unique-3-nopunct": 62916,
+        "entropy-3-nopunct": 15.517374304839352,
+        "cond_entropy-3-nopunct": 1.254074809617605
+    },
+    "asset_val": {
+        "predictions_file": "t5-small/asset_val",
+        "N": 2000,
+        "msttr-100": 0.7274588235294113,
+        "msttr-100_nopunct": 0.7708222811671087,
+        "total_length": 42561,
+        "mean_pred_length": 21.2805,
+        "distinct-1": 0.22161133432015226,
+        "vocab_size-1": 9432,
+        "unique-1": 5947,
+        "entropy-1": 9.87832622945464,
+        "distinct-2": 0.7208155617465053,
+        "vocab_size-2": 29237,
+        "unique-2": 25613,
+        "entropy-2": 14.190530665725012,
+        "cond_entropy-2": 4.039270673679118,
+        "distinct-3": 0.9324446980109437,
+        "vocab_size-3": 35956,
+        "unique-3": 34514,
+        "entropy-3": 15.051780831825342,
+        "cond_entropy-3": 0.8742846534853317,
+        "total_length-nopunct": 37732,
+        "mean_pred_length-nopunct": 18.866,
+        "distinct-1-nopunct": 0.24954945404431253,
+        "vocab_size-1-nopunct": 9416,
+        "unique-1-nopunct": 5946,
+        "entropy-1-nopunct": 10.323147892241145,
+        "distinct-2-nopunct": 0.748320832866898,
+        "vocab_size-2-nopunct": 26739,
+        "unique-2-nopunct": 23757,
+        "entropy-2-nopunct": 14.126947539799094,
+        "cond_entropy-2-nopunct": 3.967180194546727,
+        "distinct-3-nopunct": 0.9424878453693822,
+        "vocab_size-3-nopunct": 31792,
+        "unique-3-nopunct": 30679,
+        "entropy-3-nopunct": 14.891064549093324,
+        "cond_entropy-3-nopunct": 0.8027198623809925,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_val.json",
+        "bertscore": {
+            "precision": 0.981709821999073,
+            "recall": 0.9836415066123009,
+            "f1": 0.9806777290701866,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 93.44953568523948,
+        "bleurt": 0.4364237192552537,
+        "meteor": 0.5817327808469981,
+        "rouge1": {
+            "low": {
+                "precision": 0.9204562712614415,
+                "recall": 0.9267956243494001,
+                "fmeasure": 0.9214766789787032
+            },
+            "mid": {
+                "precision": 0.9232290060628945,
+                "recall": 0.9297544054607754,
+                "fmeasure": 0.9239461279420198
+            },
+            "high": {
+                "precision": 0.9259291444237042,
+                "recall": 0.9326529548656093,
+                "fmeasure": 0.926236403423833
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.8338007387078397,
+                "recall": 0.84931268539204,
+                "fmeasure": 0.8381488160858842
+            },
+            "mid": {
+                "precision": 0.8382762785355968,
+                "recall": 0.8543091739960574,
+                "fmeasure": 0.8426019908344522
+            },
+            "high": {
+                "precision": 0.8430684410791496,
+                "recall": 0.8592463600363311,
+                "fmeasure": 0.8471582852623887
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.9054557130989004,
+                "recall": 0.9179513394545818,
+                "fmeasure": 0.9091763793147667
+            },
+            "mid": {
+                "precision": 0.9089467353223408,
+                "recall": 0.9215706557256378,
+                "fmeasure": 0.9121443783690952
+            },
+            "high": {
+                "precision": 0.9121658670906382,
+                "recall": 0.925089685744707,
+                "fmeasure": 0.9151540022778122
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.9056727078931803,
+                "recall": 0.9183382349417356,
+                "fmeasure": 0.9095560157028725
+            },
+            "mid": {
+                "precision": 0.9089464244817591,
+                "recall": 0.9214038688311629,
+                "fmeasure": 0.9122558714622975
+            },
+            "high": {
+                "precision": 0.9119685741578729,
+                "recall": 0.9247994237188993,
+                "fmeasure": 0.9150099882318319
+            }
+        }
+    },
+    "asset_test": {
+        "predictions_file": "t5-small/asset_test",
+        "N": 359,
+        "msttr-100": 0.7255696202531646,
+        "msttr-100_nopunct": 0.7701428571428571,
+        "total_length": 7908,
+        "mean_pred_length": 22.027855153203344,
+        "distinct-1": 0.3727870510875063,
+        "vocab_size-1": 2948,
+        "unique-1": 2165,
+        "entropy-1": 9.267613072593328,
+        "distinct-2": 0.8460723274605908,
+        "vocab_size-2": 6387,
+        "unique-2": 5919,
+        "entropy-2": 12.356298301298754,
+        "cond_entropy-2": 2.8542561498352046,
+        "distinct-3": 0.9783031988873435,
+        "vocab_size-3": 7034,
+        "unique-3": 6921,
+        "entropy-3": 12.761920875848766,
+        "cond_entropy-3": 0.4164883183838953,
+        "total_length-nopunct": 7031,
+        "mean_pred_length-nopunct": 19.584958217270195,
+        "distinct-1-nopunct": 0.41786374626653394,
+        "vocab_size-1-nopunct": 2938,
+        "unique-1-nopunct": 2164,
+        "entropy-1-nopunct": 9.63222029991525,
+        "distinct-2-nopunct": 0.8645083932853717,
+        "vocab_size-2-nopunct": 5768,
+        "unique-2-nopunct": 5397,
+        "entropy-2-nopunct": 12.24085468289175,
+        "cond_entropy-2-nopunct": 2.7339668896335265,
+        "distinct-3-nopunct": 0.9846348804055124,
+        "vocab_size-3-nopunct": 6216,
+        "unique-3-nopunct": 6138,
+        "entropy-3-nopunct": 12.59034502459716,
+        "cond_entropy-3-nopunct": 0.37048746695522455,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_test.json",
+        "bertscore": {
+            "precision": 0.9800925457377951,
+            "recall": 0.984020077916573,
+            "f1": 0.9802917914470258,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 92.40347992051103,
+        "bleurt": 0.3684800928235469,
+        "meteor": 0.5796075519083013,
+        "rouge1": {
+            "low": {
+                "precision": 0.9075432411604997,
+                "recall": 0.9231189520384782,
+                "fmeasure": 0.9133780770804382
+            },
+            "mid": {
+                "precision": 0.9155766566882735,
+                "recall": 0.9312495679326986,
+                "fmeasure": 0.9198903715068738
+            },
+            "high": {
+                "precision": 0.9229927872939567,
+                "recall": 0.9389324065651647,
+                "fmeasure": 0.9262677261128123
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.8218086221632392,
+                "recall": 0.8434221622409047,
+                "fmeasure": 0.8295013303763307
+            },
+            "mid": {
+                "precision": 0.8331691838064766,
+                "recall": 0.8550805859961278,
+                "fmeasure": 0.8395596360317923
+            },
+            "high": {
+                "precision": 0.8445774541092561,
+                "recall": 0.866813020636781,
+                "fmeasure": 0.8500498717291797
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.8928127621313864,
+                "recall": 0.9134326640657976,
+                "fmeasure": 0.9012445190478462
+            },
+            "mid": {
+                "precision": 0.9027385994395378,
+                "recall": 0.9221978764524141,
+                "fmeasure": 0.9086239400039793
+            },
+            "high": {
+                "precision": 0.9111698226581563,
+                "recall": 0.9301589522342784,
+                "fmeasure": 0.9155948020363626
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.8936153873447144,
+                "recall": 0.9133339550485376,
+                "fmeasure": 0.901568296807023
+            },
+            "mid": {
+                "precision": 0.9029197789122541,
+                "recall": 0.9220011581294918,
+                "fmeasure": 0.9086781315158952
+            },
+            "high": {
+                "precision": 0.9110542646169273,
+                "recall": 0.9299336673847404,
+                "fmeasure": 0.9157597312145064
+            }
+        }
+    },
+    "turk_val": {
+        "predictions_file": "t5-small/turk_val",
+        "N": 2000,
+        "msttr-100": 0.7260526315789475,
+        "msttr-100_nopunct": 0.7713563829787238,
+        "total_length": 41854,
+        "mean_pred_length": 20.927,
+        "distinct-1": 0.22389735748076647,
+        "vocab_size-1": 9371,
+        "unique-1": 5927,
+        "entropy-1": 9.860616391161626,
+        "distinct-2": 0.724695137250966,
+        "vocab_size-2": 28882,
+        "unique-2": 25368,
+        "entropy-2": 14.180289958032281,
+        "cond_entropy-2": 4.046087995030651,
+        "distinct-3": 0.9370476039520262,
+        "vocab_size-3": 35471,
+        "unique-3": 34094,
+        "entropy-3": 15.041931133878533,
+        "cond_entropy-3": 0.8770980267020021,
+        "total_length-nopunct": 37602,
+        "mean_pred_length-nopunct": 18.801,
+        "distinct-1-nopunct": 0.2488431466411361,
+        "vocab_size-1-nopunct": 9357,
+        "unique-1-nopunct": 5926,
+        "entropy-1-nopunct": 10.296723071603358,
+        "distinct-2-nopunct": 0.7508847817538341,
+        "vocab_size-2-nopunct": 26733,
+        "unique-2-nopunct": 23786,
+        "entropy-2-nopunct": 14.138971929674371,
+        "cond_entropy-2-nopunct": 3.9962223413480715,
+        "distinct-3-nopunct": 0.9444675912148086,
+        "vocab_size-3-nopunct": 31736,
+        "unique-3-nopunct": 30650,
+        "entropy-3-nopunct": 14.889809983537113,
+        "cond_entropy-3-nopunct": 0.7895268000584662,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_val.json",
+        "bertscore": {
+            "precision": 0.9935366182327271,
+            "recall": 0.9873766767084599,
+            "f1": 0.9896699192225933,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 95.0803621034917,
+        "bleurt": 0.4820856257012347,
+        "meteor": 0.649046828635671,
+        "rouge1": {
+            "low": {
+                "precision": 0.971911739682217,
+                "recall": 0.9443197009975407,
+                "fmeasure": 0.9540657336118491
+            },
+            "mid": {
+                "precision": 0.974054208640819,
+                "recall": 0.9489647596040306,
+                "fmeasure": 0.9576660326671473
+            },
+            "high": {
+                "precision": 0.9759938030382856,
+                "recall": 0.953855407606291,
+                "fmeasure": 0.9611719017799618
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.9436295838245831,
+                "recall": 0.9146275478680502,
+                "fmeasure": 0.9245244893528229
+            },
+            "mid": {
+                "precision": 0.9476145628201675,
+                "recall": 0.9209536769212667,
+                "fmeasure": 0.9296844225790153
+            },
+            "high": {
+                "precision": 0.9512748828405475,
+                "recall": 0.9263356691011647,
+                "fmeasure": 0.9340721358493136
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.969457099710429,
+                "recall": 0.941380130613681,
+                "fmeasure": 0.9514278771705456
+            },
+            "mid": {
+                "precision": 0.9716867502225648,
+                "recall": 0.9462040753279228,
+                "fmeasure": 0.9549867469152671
+            },
+            "high": {
+                "precision": 0.973781924109078,
+                "recall": 0.9510373188562624,
+                "fmeasure": 0.9585239694604525
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.9695134842262537,
+                "recall": 0.9411212666252465,
+                "fmeasure": 0.9512910935728229
+            },
+            "mid": {
+                "precision": 0.9716258519789858,
+                "recall": 0.9460932025670878,
+                "fmeasure": 0.9548935902224633
+            },
+            "high": {
+                "precision": 0.9739860474986441,
+                "recall": 0.9508811992799778,
+                "fmeasure": 0.9585468264827846
+            }
+        }
+    },
+    "turk_test": {
+        "predictions_file": "t5-small/turk_test",
+        "N": 359,
+        "msttr-100": 0.7257142857142855,
+        "msttr-100_nopunct": 0.768840579710145,
+        "total_length": 7720,
+        "mean_pred_length": 21.5041782729805,
+        "distinct-1": 0.37176165803108807,
+        "vocab_size-1": 2870,
+        "unique-1": 2100,
+        "entropy-1": 9.235158439326643,
+        "distinct-2": 0.847167504415161,
+        "vocab_size-2": 6236,
+        "unique-2": 5774,
+        "entropy-2": 12.327123665919075,
+        "cond_entropy-2": 2.8572508020756424,
+        "distinct-3": 0.9802913453299057,
+        "vocab_size-3": 6864,
+        "unique-3": 6757,
+        "entropy-3": 12.729865603577442,
+        "cond_entropy-3": 0.41443290245541875,
+        "total_length-nopunct": 6952,
+        "mean_pred_length-nopunct": 19.364902506963787,
+        "distinct-1-nopunct": 0.411536248561565,
+        "vocab_size-1-nopunct": 2861,
+        "unique-1-nopunct": 2098,
+        "entropy-1-nopunct": 9.594839877948008,
+        "distinct-2-nopunct": 0.8651600182011224,
+        "vocab_size-2-nopunct": 5704,
+        "unique-2-nopunct": 5328,
+        "entropy-2-nopunct": 12.234578669854612,
+        "cond_entropy-2-nopunct": 2.760495991752104,
+        "distinct-3-nopunct": 0.9847609881296118,
+        "vocab_size-3-nopunct": 6139,
+        "unique-3-nopunct": 6062,
+        "entropy-3-nopunct": 12.572833099233705,
+        "cond_entropy-3-nopunct": 0.35825618548419247,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_test.json",
+        "bertscore": {
+            "precision": 0.9910024283324111,
+            "recall": 0.9841579095898897,
+            "f1": 0.9865229036814656,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 94.9899831037122,
+        "bleurt": 0.4516086331743768,
+        "meteor": 0.6377807246488758,
+        "rouge1": {
+            "low": {
+                "precision": 0.9601851933520005,
+                "recall": 0.9243442985607923,
+                "fmeasure": 0.9366439881781997
+            },
+            "mid": {
+                "precision": 0.9667688708532064,
+                "recall": 0.9380917733695189,
+                "fmeasure": 0.9471908798303812
+            },
+            "high": {
+                "precision": 0.9730863878155842,
+                "recall": 0.9515299598276269,
+                "fmeasure": 0.9577230263675827
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.9215314912227703,
+                "recall": 0.8857110800441785,
+                "fmeasure": 0.8971488919271333
+            },
+            "mid": {
+                "precision": 0.9334608807485828,
+                "recall": 0.9020094954548372,
+                "fmeasure": 0.9114699478823509
+            },
+            "high": {
+                "precision": 0.9443894684768389,
+                "recall": 0.9170828811966629,
+                "fmeasure": 0.9247879400382345
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.9542743446864748,
+                "recall": 0.919977205052845,
+                "fmeasure": 0.9320318924732749
+            },
+            "mid": {
+                "precision": 0.9621352724507048,
+                "recall": 0.9349598037157012,
+                "fmeasure": 0.9434571372275942
+            },
+            "high": {
+                "precision": 0.9693837498317187,
+                "recall": 0.9475009253198009,
+                "fmeasure": 0.9529488201646132
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.9547626371791996,
+                "recall": 0.9217770794392308,
+                "fmeasure": 0.9327501061142334
+            },
+            "mid": {
+                "precision": 0.9620656948839637,
+                "recall": 0.9342402189640842,
+                "fmeasure": 0.9428975298154318
+            },
+            "high": {
+                "precision": 0.9692523202141962,
+                "recall": 0.9463121910586202,
+                "fmeasure": 0.9524117632273558
+            }
+        }
+    },
+    "dart_val": {
+        "predictions_file": "t5-small/dart_val",
+        "N": 1041,
+        "msttr-100": 0.5082142857142856,
+        "msttr-100_nopunct": 0.5396907216494846,
+        "total_length": 11272,
+        "mean_pred_length": 10.82804995196926,
+        "distinct-1": 0.1860361958836054,
+        "vocab_size-1": 2097,
+        "unique-1": 1236,
+        "entropy-1": 7.981675455092173,
+        "distinct-2": 0.42087772456260386,
+        "vocab_size-2": 4306,
+        "unique-2": 3091,
+        "entropy-2": 10.71049361906492,
+        "cond_entropy-2": 2.2686674704369523,
+        "distinct-3": 0.5495103373231773,
+        "vocab_size-3": 5050,
+        "unique-3": 4010,
+        "entropy-3": 11.323088094999802,
+        "cond_entropy-3": 0.727698893213348,
+        "total_length-nopunct": 9743,
+        "mean_pred_length-nopunct": 9.359269932756964,
+        "distinct-1-nopunct": 0.21399979472441752,
+        "vocab_size-1-nopunct": 2085,
+        "unique-1-nopunct": 1234,
+        "entropy-1-nopunct": 8.353692196337864,
+        "distinct-2-nopunct": 0.4123190071247989,
+        "vocab_size-2-nopunct": 3588,
+        "unique-2-nopunct": 2594,
+        "entropy-2-nopunct": 10.38021211955176,
+        "cond_entropy-2-nopunct": 2.3513005302034897,
+        "distinct-3-nopunct": 0.5355697689596658,
+        "vocab_size-3-nopunct": 4103,
+        "unique-3-nopunct": 3263,
+        "entropy-3-nopunct": 10.985212215845204,
+        "cond_entropy-3-nopunct": 0.7929266213427997,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_val.json",
+        "bertscore": {
+            "precision": 0.8747930281100424,
+            "recall": 0.8226581620666181,
+            "f1": 0.8466392883191763,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 0.02295286842758417,
+        "bleurt": -0.2614547804760229,
+        "meteor": 0.11468420824835922,
+        "rouge1": {
+            "low": {
+                "precision": 0.04320082508326085,
+                "recall": 0.41129550618587934,
+                "fmeasure": 0.07732111955812235
+            },
+            "mid": {
+                "precision": 0.04679239851799409,
+                "recall": 0.44201180014350094,
+                "fmeasure": 0.08365381308341178
+            },
+            "high": {
+                "precision": 0.05036078063276664,
+                "recall": 0.4735115781130949,
+                "fmeasure": 0.0899091633117862
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            },
+            "mid": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            },
+            "high": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.0432936571189726,
+                "recall": 0.413045987022403,
+                "fmeasure": 0.0775250558383758
+            },
+            "mid": {
+                "precision": 0.04702841553912471,
+                "recall": 0.4428708810190068,
+                "fmeasure": 0.08397898530055073
+            },
+            "high": {
+                "precision": 0.05055540209315519,
+                "recall": 0.47370047149725625,
+                "fmeasure": 0.09008255363261335
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.0433410445015959,
+                "recall": 0.4140456868373613,
+                "fmeasure": 0.07754333957967313
+            },
+            "mid": {
+                "precision": 0.04694605781568245,
+                "recall": 0.4429353130454634,
+                "fmeasure": 0.08387677711119373
+            },
+            "high": {
+                "precision": 0.050681393352352694,
+                "recall": 0.47640689614520354,
+                "fmeasure": 0.09030826309944232
+            }
+        }
+    },
+    "dart_test": {
+        "predictions_file": "t5-small/dart_test",
+        "N": 1667,
+        "msttr-100": 0.539597701149425,
+        "msttr-100_nopunct": 0.5737333333333332,
+        "total_length": 17479,
+        "mean_pred_length": 10.485302939412117,
+        "distinct-1": 0.18479318038789405,
+        "vocab_size-1": 3230,
+        "unique-1": 1868,
+        "entropy-1": 8.435251504435502,
+        "distinct-2": 0.4370731090311156,
+        "vocab_size-2": 6911,
+        "unique-2": 4972,
+        "entropy-2": 11.393848738706973,
+        "cond_entropy-2": 2.4307167741521627,
+        "distinct-3": 0.5895369388476493,
+        "vocab_size-3": 8339,
+        "unique-3": 6681,
+        "entropy-3": 12.152240031422947,
+        "cond_entropy-3": 0.8667857931611623,
+        "total_length-nopunct": 15022,
+        "mean_pred_length-nopunct": 9.011397720455909,
+        "distinct-1-nopunct": 0.21408600718945547,
+        "vocab_size-1-nopunct": 3216,
+        "unique-1-nopunct": 1865,
+        "entropy-1-nopunct": 8.902478958540406,
+        "distinct-2-nopunct": 0.43362036690378136,
+        "vocab_size-2-nopunct": 5791,
+        "unique-2-nopunct": 4208,
+        "entropy-2-nopunct": 11.069391346561625,
+        "cond_entropy-2-nopunct": 2.5082393314678035,
+        "distinct-3-nopunct": 0.579397672826831,
+        "vocab_size-3-nopunct": 6772,
+        "unique-3-nopunct": 5411,
+        "entropy-3-nopunct": 11.810245097761443,
+        "cond_entropy-3-nopunct": 0.951063844847779,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_test.json",
+        "bertscore": {
+            "precision": 0.761350805861691,
+            "recall": 0.7506668518672249,
+            "f1": 0.7543199492308932,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 0.014992949514688683,
+        "bleurt": -0.8188752920881369,
+        "meteor": 0.0703496363919081,
+        "rouge1": {
+            "low": {
+                "precision": 0.03011810403296386,
+                "recall": 0.28105728347208087,
+                "fmeasure": 0.05380906525143704
+            },
+            "mid": {
+                "precision": 0.032726710816094365,
+                "recall": 0.30487262008942384,
+                "fmeasure": 0.058439041452840505
+            },
+            "high": {
+                "precision": 0.035483865909144166,
+                "recall": 0.3278067871294291,
+                "fmeasure": 0.06333899482846497
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            },
+            "mid": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            },
+            "high": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "fmeasure": 0.0
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.03021275062148263,
+                "recall": 0.28206788967159185,
+                "fmeasure": 0.054013112856883136
+            },
+            "mid": {
+                "precision": 0.032738723548068366,
+                "recall": 0.30476190639848955,
+                "fmeasure": 0.05847606278936121
+            },
+            "high": {
+                "precision": 0.03545628132125516,
+                "recall": 0.3261947843911081,
+                "fmeasure": 0.06318060421873631
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.030085079396284794,
+                "recall": 0.28242571537434275,
+                "fmeasure": 0.05373952980584082
+            },
+            "mid": {
+                "precision": 0.03269976520268294,
+                "recall": 0.30392062772605444,
+                "fmeasure": 0.058378673163729744
+            },
+            "high": {
+                "precision": 0.03523997811323632,
+                "recall": 0.3261862354343345,
+                "fmeasure": 0.06283454925306317
+            }
+        }
+    },
+    "schema_guided_dstc8_val": {
+        "predictions_file": "t5-small/schema_guided_dstc8_val",
+        "N": 10000,
+        "msttr-100": 0.6741326530612249,
+        "msttr-100_nopunct": 0.6993834296724476,
+        "total_length": 117691,
+        "mean_pred_length": 11.7691,
+        "distinct-1": 0.03219447536345175,
+        "vocab_size-1": 3789,
+        "unique-1": 1639,
+        "entropy-1": 7.860261867661994,
+        "distinct-2": 0.10462341328430416,
+        "vocab_size-2": 11267,
+        "unique-2": 5798,
+        "entropy-2": 10.573980688857318,
+        "cond_entropy-2": 2.4377109317686196,
+        "distinct-3": 0.19087540433198213,
+        "vocab_size-3": 18647,
+        "unique-3": 11105,
+        "entropy-3": 11.694924906199487,
+        "cond_entropy-3": 1.154266097685372,
+        "total_length-nopunct": 103863,
+        "mean_pred_length-nopunct": 10.3863,
+        "distinct-1-nopunct": 0.036336327662401434,
+        "vocab_size-1-nopunct": 3774,
+        "unique-1-nopunct": 1636,
+        "entropy-1-nopunct": 8.06218659291225,
+        "distinct-2-nopunct": 0.1106932444094052,
+        "vocab_size-2-nopunct": 10390,
+        "unique-2-nopunct": 5435,
+        "entropy-2-nopunct": 10.42175254816465,
+        "cond_entropy-2-nopunct": 2.5017007941300666,
+        "distinct-3-nopunct": 0.20325523162225004,
+        "vocab_size-3-nopunct": 17046,
+        "unique-3-nopunct": 10419,
+        "entropy-3-nopunct": 11.576385303055657,
+        "cond_entropy-3-nopunct": 1.1891715804863643,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_val.json",
+        "meteor": 0.3313413426004983,
+        "local_recall": {
+            "1": 0.5884738447801175
+        },
+        "bleu": 33.39019341290901,
+        "bertscore": {
+            "precision": 0.8783701077103615,
+            "recall": 0.8719650418400764,
+            "f1": 0.8744710874557495,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleurt": 0.009023801907431335,
+        "rouge1": {
+            "low": {
+                "precision": 0.6037414945237838,
+                "recall": 0.581743536447187,
+                "fmeasure": 0.5771267820561848
+            },
+            "mid": {
+                "precision": 0.6091386148353253,
+                "recall": 0.5866980048936319,
+                "fmeasure": 0.5820514068161662
+            },
+            "high": {
+                "precision": 0.6146458194109378,
+                "recall": 0.5923441410308619,
+                "fmeasure": 0.5871641057512983
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.3821194710127246,
+                "recall": 0.36518435263128524,
+                "fmeasure": 0.3625768148609629
+            },
+            "mid": {
+                "precision": 0.38776000689788787,
+                "recall": 0.3704607331512744,
+                "fmeasure": 0.3679288557502335
+            },
+            "high": {
+                "precision": 0.3929093135220311,
+                "recall": 0.3755350152194337,
+                "fmeasure": 0.3727645829215127
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.5447659894303654,
+                "recall": 0.5257435256768508,
+                "fmeasure": 0.5210488068787014
+            },
+            "mid": {
+                "precision": 0.5499197351083681,
+                "recall": 0.5307802527577863,
+                "fmeasure": 0.5260064504874256
+            },
+            "high": {
+                "precision": 0.555186395212457,
+                "recall": 0.5356025726472132,
+                "fmeasure": 0.530485770378485
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.5446463348787738,
+                "recall": 0.5259018003553502,
+                "fmeasure": 0.5213215825668451
+            },
+            "mid": {
+                "precision": 0.5500383753517395,
+                "recall": 0.5308578388953946,
+                "fmeasure": 0.5260900213723508
+            },
+            "high": {
+                "precision": 0.5551843899374698,
+                "recall": 0.5358250053832537,
+                "fmeasure": 0.5308000578114701
+            }
+        }
+    },
+    "schema_guided_dstc8_test": {
+        "predictions_file": "t5-small/schema_guided_dstc8_test",
+        "N": 10000,
+        "msttr-100": 0.6639949537426421,
+        "msttr-100_nopunct": 0.6880057251908412,
+        "total_length": 118907,
+        "mean_pred_length": 11.8907,
+        "distinct-1": 0.03215117697023724,
+        "vocab_size-1": 3823,
+        "unique-1": 1676,
+        "entropy-1": 7.821199490221512,
+        "distinct-2": 0.11038776203549817,
+        "vocab_size-2": 12022,
+        "unique-2": 6226,
+        "entropy-2": 10.617804342620028,
+        "cond_entropy-2": 2.5185747029376016,
+        "distinct-3": 0.20258219759776763,
+        "vocab_size-3": 20037,
+        "unique-3": 11942,
+        "entropy-3": 11.79817583294323,
+        "cond_entropy-3": 1.210358871745615,
+        "total_length-nopunct": 104849,
+        "mean_pred_length-nopunct": 10.4849,
+        "distinct-1-nopunct": 0.03632843422445612,
+        "vocab_size-1-nopunct": 3809,
+        "unique-1-nopunct": 1674,
+        "entropy-1-nopunct": 8.017580659419904,
+        "distinct-2-nopunct": 0.11760798743265612,
+        "vocab_size-2-nopunct": 11155,
+        "unique-2-nopunct": 5919,
+        "entropy-2-nopunct": 10.470185136551688,
+        "cond_entropy-2-nopunct": 2.5965459699097098,
+        "distinct-3-nopunct": 0.2163347083087802,
+        "vocab_size-3-nopunct": 18356,
+        "unique-3-nopunct": 11261,
+        "entropy-3-nopunct": 11.679623035336986,
+        "cond_entropy-3-nopunct": 1.2559041637010504,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_test.json",
+        "meteor": 0.31029393100528085,
+        "local_recall": {
+            "1": 0.5497063031520203
+        },
+        "bleu": 30.539037283368064,
+        "bertscore": {
+            "precision": 0.8763690122246742,
+            "recall": 0.8644446166813373,
+            "f1": 0.8698466413259506,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleurt": -0.03511862223688513,
+        "rouge1": {
+            "low": {
+                "precision": 0.5895701650508829,
+                "recall": 0.5408959233069845,
+                "fmeasure": 0.5518842416278613
+            },
+            "mid": {
+                "precision": 0.5945181290527175,
+                "recall": 0.545764212326276,
+                "fmeasure": 0.5566230268613395
+            },
+            "high": {
+                "precision": 0.5995819668478876,
+                "recall": 0.5506416831858255,
+                "fmeasure": 0.5615637938284801
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.36291084595510104,
+                "recall": 0.3286380069101757,
+                "fmeasure": 0.3368556276835334
+            },
+            "mid": {
+                "precision": 0.36796949083951996,
+                "recall": 0.3334350139883341,
+                "fmeasure": 0.34164471770671984
+            },
+            "high": {
+                "precision": 0.3734615518748712,
+                "recall": 0.3385506089250204,
+                "fmeasure": 0.34672921548697455
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.530127170426724,
+                "recall": 0.4865729541551699,
+                "fmeasure": 0.49646888532042316
+            },
+            "mid": {
+                "precision": 0.535751112469457,
+                "recall": 0.4916946426834766,
+                "fmeasure": 0.501749359348574
+            },
+            "high": {
+                "precision": 0.5407281962045201,
+                "recall": 0.4965983141187844,
+                "fmeasure": 0.5065393628913478
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.5303818209164277,
+                "recall": 0.48640509918686375,
+                "fmeasure": 0.49654528274714654
+            },
+            "mid": {
+                "precision": 0.5355436095154247,
+                "recall": 0.49154034482171055,
+                "fmeasure": 0.5015134543822806
+            },
+            "high": {
+                "precision": 0.5404471318645037,
+                "recall": 0.4963974782779354,
+                "fmeasure": 0.5061692208262552
+            }
+        }
+    }
+}
