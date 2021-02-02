@@ -1,7 +1,7 @@
 {
-    "submission_name": "google/mt5-small",
+    "submission_name": "mt5-small",
     "webnlg_en_val": {
-        "predictions_file": "google/mt5-small/webnlg_en_val",
+        "predictions_file": "mt5-small/webnlg_en_val",
         "N": 1667,
         "msttr-100": 0.4856273764258556,
         "msttr-100_nopunct": 0.5055555555555561,
@@ -117,7 +117,7 @@
         }
     },
     "webnlg_ru_val": {
-        "predictions_file": "google/mt5-small_web_nlg/checkpoint-2443/webnlg_ru_val",
+        "predictions_file": "mt5-small_web_nlg/checkpoint-2443/webnlg_ru_val",
         "N": 790,
         "msttr-100": 0.3515384615384616,
         "msttr-100_nopunct": 0.35711111111111093,

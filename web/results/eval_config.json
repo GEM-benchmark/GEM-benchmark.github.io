@@ -132,7 +132,8 @@
     "summarization": {
       "datasets": [
         "mlsum_de",
-        "mlsum_es"
+        "mlsum_es",
+        "xsum"
       ],
       "metrics": []
     },
