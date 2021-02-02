@@ -27,13 +27,13 @@ export interface Scores {
 }
 
 export function getEvalConfiguration(): EvalConfiguration {
-  const schemaFile = path.join(process.cwd(), "results/baselines/eval_config.json");
+  const schemaFile = path.join(process.cwd(), "results/eval_config.json");
   const res =  JSON.parse(fs.readFileSync(schemaFile).toString("utf-8"))
   return res;
 }
 
 export function getSubmissionScores(): Scores[] {
-  const baselinePath = path.join(process.cwd(), "results/baselines");
+  const baselinePath = path.join(process.cwd(), "results/");
   const scores = []
   fs.readdirSync(baselinePath).forEach((fileName) => {
     if (fileName === "eval_config.json") return;

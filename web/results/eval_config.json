@@ -156,9 +156,6 @@
       "distinct-1",
       "distinct-2",
       "distinct-3",
-      "vocab_size-1",
-      "vocab_size-2",
-      "vocab_size-3",
       "unique-1",
       "unique-2",
       "unique-3",
@@ -179,9 +176,12 @@
       "bertscore",
       "bleurt"
     ],
-    "factual": [],
+    "faithful": [],
     "descriptive": [
-      "mean_pred_length"
+      "mean_pred_length",
+      "vocab_size-1",
+      "vocab_size-2",
+      "vocab_size-3"
     ]
   }
 }
