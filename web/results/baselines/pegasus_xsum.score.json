@@ -1,0 +1,235 @@
+{
+    "submission_name": "PEGASUS",
+    "xsum_test": {
+        "predictions_file": "PEGASUS/xsum_test",
+        "N": 1160,
+        "msttr-100": 0.7350673101346202,
+        "msttr-100_nopunct": 0.7574152542372881,
+        "total_length": 25474,
+        "mean_pred_length": 21.96034482758621,
+        "distinct-1": 0.1974169741697417,
+        "vocab_size-1": 5029,
+        "unique-1": 2956,
+        "entropy-1": 9.299268486760825,
+        "distinct-2": 0.6369581311178745,
+        "vocab_size-2": 15487,
+        "unique-2": 12834,
+        "entropy-2": 13.151518374576835,
+        "cond_entropy-2": 3.6216600577018276,
+        "distinct-3": 0.8622268290576143,
+        "vocab_size-3": 19964,
+        "unique-3": 18503,
+        "entropy-3": 14.076807102314639,
+        "cond_entropy-3": 0.9311292921393255,
+        "total_length-nopunct": 23668,
+        "mean_pred_length-nopunct": 20.40344827586207,
+        "distinct-1-nopunct": 0.21188947101571742,
+        "vocab_size-1-nopunct": 5015,
+        "unique-1-nopunct": 2952,
+        "entropy-1-nopunct": 9.497641301426041,
+        "distinct-2-nopunct": 0.6474586813577394,
+        "vocab_size-2-nopunct": 14573,
+        "unique-2-nopunct": 12155,
+        "entropy-2-nopunct": 13.083471488803614,
+        "cond_entropy-2-nopunct": 3.7046635295286596,
+        "distinct-3-nopunct": 0.8717912685029042,
+        "vocab_size-3-nopunct": 18611,
+        "unique-3-nopunct": 17318,
+        "entropy-3-nopunct": 14.000864397351322,
+        "cond_entropy-3-nopunct": 0.9346779125054999,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/xsum_test.json",
+        "bertscore": {
+            "precision": 0.8573890291925135,
+            "recall": 0.8456708729780954,
+            "f1": 0.8509965190085872,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 16.59031323356965,
+        "bleurt": -0.18611699203992713,
+        "meteor": 0.2128219860369804,
+        "rouge1": {
+            "low": {
+                "precision": 0.4872663367341711,
+                "recall": 0.44442395937259194,
+                "fmeasure": 0.4540737434731176
+            },
+            "mid": {
+                "precision": 0.49737797408858103,
+                "recall": 0.4535592807081357,
+                "fmeasure": 0.4632511003993038
+            },
+            "high": {
+                "precision": 0.507439804514431,
+                "recall": 0.4632179900009728,
+                "fmeasure": 0.4722434536669978
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.23721022319528762,
+                "recall": 0.21501804908014346,
+                "fmeasure": 0.22003547176232738
+            },
+            "mid": {
+                "precision": 0.24746833982285787,
+                "recall": 0.2240293968926781,
+                "fmeasure": 0.22954217360407086
+            },
+            "high": {
+                "precision": 0.2580705417474652,
+                "recall": 0.23378215676288613,
+                "fmeasure": 0.23924372797702623
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.39487246256551095,
+                "recall": 0.35906305503990243,
+                "fmeasure": 0.36758820970775
+            },
+            "mid": {
+                "precision": 0.4053147471966552,
+                "recall": 0.36873318301666813,
+                "fmeasure": 0.37716487828114464
+            },
+            "high": {
+                "precision": 0.4162447888372563,
+                "recall": 0.37867462860989687,
+                "fmeasure": 0.38701515107049483
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.39519719788057245,
+                "recall": 0.35944344009015544,
+                "fmeasure": 0.3681041312130128
+            },
+            "mid": {
+                "precision": 0.4049417854845358,
+                "recall": 0.3684073829830615,
+                "fmeasure": 0.3768749055648904
+            },
+            "high": {
+                "precision": 0.4156248134176266,
+                "recall": 0.3784134228060237,
+                "fmeasure": 0.38645771152441044
+            }
+        }
+    },
+    "xsum_val": {
+        "predictions_file": "PEGASUS/xsum_val",
+        "N": 1112,
+        "msttr-100": 0.7266195090998234,
+        "msttr-100_nopunct": 0.7493728813559324,
+        "total_length": 25443,
+        "mean_pred_length": 22.880395683453237,
+        "distinct-1": 0.19655700978658178,
+        "vocab_size-1": 5001,
+        "unique-1": 2953,
+        "entropy-1": 9.277246750163947,
+        "distinct-2": 0.635156795857137,
+        "vocab_size-2": 15454,
+        "unique-2": 12844,
+        "entropy-2": 13.144348663570067,
+        "cond_entropy-2": 3.6491952520611672,
+        "distinct-3": 0.8623169681309216,
+        "vocab_size-3": 20023,
+        "unique-3": 18587,
+        "entropy-3": 14.0760230880404,
+        "cond_entropy-3": 0.9288286226360443,
+        "total_length-nopunct": 23625,
+        "mean_pred_length-nopunct": 21.2455035971223,
+        "distinct-1-nopunct": 0.21121693121693122,
+        "vocab_size-1-nopunct": 4990,
+        "unique-1-nopunct": 2953,
+        "entropy-1-nopunct": 9.473019021917167,
+        "distinct-2-nopunct": 0.647952385182553,
+        "vocab_size-2-nopunct": 14588,
+        "unique-2-nopunct": 12229,
+        "entropy-2-nopunct": 13.08858199703816,
+        "cond_entropy-2-nopunct": 3.7255445730178742,
+        "distinct-3-nopunct": 0.8736625706676634,
+        "vocab_size-3-nopunct": 18699,
+        "unique-3-nopunct": 17444,
+        "entropy-3-nopunct": 14.004037747336511,
+        "cond_entropy-3-nopunct": 0.9253293243716723,
+        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/xsum_val.json",
+        "bertscore": {
+            "precision": 0.8563463983239887,
+            "recall": 0.8474870242660851,
+            "f1": 0.8513897304161847,
+            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+        },
+        "bleu": 16.96720898030827,
+        "bleurt": -0.18457755578929733,
+        "meteor": 0.2163114386571566,
+        "rouge1": {
+            "low": {
+                "precision": 0.4835578490617356,
+                "recall": 0.4513602764258723,
+                "fmeasure": 0.4553443873840382
+            },
+            "mid": {
+                "precision": 0.4941034245983362,
+                "recall": 0.4610387778429544,
+                "fmeasure": 0.46462687202118713
+            },
+            "high": {
+                "precision": 0.5044656410671343,
+                "recall": 0.4707447205981732,
+                "fmeasure": 0.47419836164488477
+            }
+        },
+        "rouge2": {
+            "low": {
+                "precision": 0.2366798860444307,
+                "recall": 0.2193550217348899,
+                "fmeasure": 0.22199472279637175
+            },
+            "mid": {
+                "precision": 0.24758232207538222,
+                "recall": 0.22892592927583572,
+                "fmeasure": 0.2322357080771293
+            },
+            "high": {
+                "precision": 0.2587370342861477,
+                "recall": 0.23888568986716074,
+                "fmeasure": 0.24275840835200893
+            }
+        },
+        "rougeL": {
+            "low": {
+                "precision": 0.39491009579975617,
+                "recall": 0.3673181557902239,
+                "fmeasure": 0.37149378430602176
+            },
+            "mid": {
+                "precision": 0.4057870978894713,
+                "recall": 0.37716339094971896,
+                "fmeasure": 0.38154591840674756
+            },
+            "high": {
+                "precision": 0.41594339778095496,
+                "recall": 0.38599946926245365,
+                "fmeasure": 0.39038892544258486
+            }
+        },
+        "rougeLsum": {
+            "low": {
+                "precision": 0.39412975998022465,
+                "recall": 0.36588044726021896,
+                "fmeasure": 0.3705576528073963
+            },
+            "mid": {
+                "precision": 0.4056843462431686,
+                "recall": 0.3769126258526493,
+                "fmeasure": 0.3813471971687014
+            },
+            "high": {
+                "precision": 0.4164846732491142,
+                "recall": 0.3876912596374608,
+                "fmeasure": 0.39155503816803605
+            }
+        }
+    }
+}
