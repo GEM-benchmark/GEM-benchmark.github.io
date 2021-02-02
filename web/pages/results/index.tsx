@@ -91,7 +91,7 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
 }
 
 
-export default function vis2(props) {
+export default function index(props) {
   const cm = ColorManager
     .generateForEvalConfig(props.evalConfig);
 
