@@ -89,11 +89,11 @@ def construct_input_for_batch(batch):
   target = batch["target"]
   return source, target
 
-def batch_tokenize(dataset_batch, tokenizer, dataset_name, decoder_max_length=32):
+def batch_tokenize(dataset_batch, tokenizer, decoder_max_length=32):
   """
   Construct the batch (source, target) and run them through a tokenizer.
   """
-  source, target = construct_input_for_batch(dataset_batch, dataset_name)
+  source, target = construct_input_for_batch(dataset_batch)
   res = {
       "input_ids": tokenizer(source)["input_ids"],
       "labels": tokenizer(
