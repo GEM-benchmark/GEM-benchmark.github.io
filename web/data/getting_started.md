@@ -127,7 +127,7 @@ valid_data_tokenized = data['validation'].map(
 We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#trainingarguments) which handles gradient updates, model selection, and evaluation for us.
 
 ```python
-from transformers import Seq2SeqTrainer, TrainingArguments
+from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, TrainingArguments
 ```
 
 To improve model selection, let's pick the model that has the best test performance on ROUGE-2, a metric that is typically associated with higher fluency. We can do this by constructing a function that returns a function that computes the score and we only have to pass it to our trainer.
