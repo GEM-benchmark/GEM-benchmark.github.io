@@ -101,6 +101,7 @@ The workshop is organized by
 - [Esin Durmus](http://www.cs.cornell.edu/~esindurmus/) (Cornell University)
 - [Varun Prashant Gangal](https://vgtomahawk.github.io/) (Carnegie Mellon University)
 - [Sebastian Gehrmann](https://sebastiangehrmann.com) (Google Research)
+- [Yacine Jernite](https://yjernite.github.io/) (Hugging Face)
 - [Laura Perez-Beltrachini](http://homepages.inf.ed.ac.uk/lperez/) (University of Edinburgh)
 - [Samira Shaikh](https://webpages.uncc.edu/sshaikh2/) (UNC Charlotte)
 - [Wei Xu](https://cocoxu.github.io/) (Georgia Tech)

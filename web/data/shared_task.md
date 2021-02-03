@@ -6,6 +6,8 @@ The GEM workshop features a two-part shared task: **Modeling** and **Evaluation*
 
 Neither of the shared tasks will have a winner or loser and there will be no leaderboard that ranks the results. Instead, we see this as a shared quest toward understanding the limitations and opportunities of current NLG systems. We thus encourage widespread participation for systems of all shapes and sizes.
 
+To stay up-to-date on announcements, please join our [Google Group](https://groups.google.com/g/gem-benchmark). The same group may be used for questions and discussions.
+
 ## Modeling Shared Task
 
 To participate in the task, simply train a system on one or more of the included tasks (the more, the better!) and submit your validation and test outputs.
