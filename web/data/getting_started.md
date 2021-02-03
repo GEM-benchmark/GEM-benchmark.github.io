@@ -124,10 +124,10 @@ valid_data_tokenized = data['validation'].map(
 
 ## Finetuning a pretrained model
 
-We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#trainingarguments) which handles gradient updates, model selection, and evaluation for us.
+We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#seq2seqtrainingarguments) which handles gradient updates, model selection, and evaluation for us.
 
 ```python
-from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, TrainingArguments
+from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, Seq2SeqTrainingArguments
 ```
 
 To improve model selection, let's pick the model that has the best test performance on ROUGE-2, a metric that is typically associated with higher fluency. We can do this by constructing a function that returns a function that computes the score and we only have to pass it to our trainer.
@@ -169,7 +169,7 @@ Fantastic, now all we have to do is set up our trainer class with everything we 
 model = AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-base')
 model = model.to('cuda:0')
 
-train_args = TrainingArguments(
+train_args = Seq2SeqTrainingArguments(
     output_dir="BART-commongen",
     do_train=True,
     do_eval=True,
@@ -188,11 +188,11 @@ train_args = TrainingArguments(
     disable_tqdm=False,
     load_best_model_at_end=True,
     metric_for_best_model="rouge2",
+    # generation
+    predict_with_generate=True,
 )
 
 trainer = Seq2SeqTrainer(
-    num_beams=4,
-    max_length=32,
     model=model,
     args=train_args,
     train_dataset=train_data_tokenized,
@@ -200,6 +200,9 @@ trainer = Seq2SeqTrainer(
     tokenizer=tokenizer,
     compute_metrics=rouge_metric_fn,
 )
+
+trainer._max_length = DECODER_MAX_LENGTH
+trainer._num_beams = BEAM_SIZE
 ```
 
 And finally:
@@ -207,25 +210,25 @@ And finally:
 ```python
 >> trainer.train()
 
-Epoch	Training Loss	Validation Loss	Rouge2	Rougel
-1	0.981596	1.074378	0.143700	0.344500
-2	0.819494	1.053480	0.154700	0.353600
-3	0.729006	1.067981	0.156200	0.355500
+Epoch	Training Loss   Validation Loss Rouge2	    Rougel
+1	    1.081300	    1.063452	    0.121900	0.319900
+2	    0.948100	    1.086376	    0.134000	0.329800
+3	    0.820100	    1.077763	    0.133900	0.328000
 ```
 
-We now have a model that achieves 15.6 ROUGE-2 which can obviously still be tuned, but it is a great starting point.
+We now have a model that achieves 13.4 ROUGE-2 which can obviously still be tuned, but it is a great starting point.
 
 ## Generating and evaluating Predictions
 
 Given that we now have a model, we also want to generate model outputs now. For this, let's build another two utility functions that generate a batch with only model inputs and which generate and detokenize text with a model.
 
 ```python
-def make_batch_inputs(batch, tokenizer, dataset_name, device='cuda:0'):
+def make_batch_inputs(batch, tokenizer, device='cuda:0'):
   """
   Function that takes a batch from a dataset and formats it as input to model.
   """
   # Concatenate the concept names for each example in the batch.
-  input_lists, _ = construct_input_for_batch(batch, dataset_name)
+  input_lists, _ = construct_input_for_batch(batch)
   # Use the model's tokenizer to create the batch input_ids.
   batch_features = tokenizer(input_lists, padding=True, return_tensors='pt')
   # Move all inputs to the device.
@@ -235,7 +238,6 @@ def make_batch_inputs(batch, tokenizer, dataset_name, device='cuda:0'):
 def beam_generate_sentences(batch,
                             model,
                             tokenizer,
-                            dataset_name,
                             num_beams=4,
                             max_length=32,
                             device='cuda:0'):
@@ -246,7 +248,6 @@ def beam_generate_sentences(batch,
   features = make_batch_inputs(
       batch=batch,
       tokenizer=tokenizer,
-      dataset_name=dataset_name,
       device=device)
   # Generate with beam search.
   generated_ids = model.generate(
@@ -271,7 +272,6 @@ valid_output = data['validation'].map(
         batch,
         model,
         tokenizer,
-        DATASET_NAME,
         num_beams=BEAM_SIZE,
         max_length=MAX_GENERATION_LENGTH)
     },
@@ -294,7 +294,7 @@ f"R-2: {rouge_results['rouge2'].mid.fmeasure:.3f} R-L: {rouge_results['rougeL'].
 As expected, this yields the following output:
 
 ```python
-'R-2: 0.156 R-L: 0.356'
+'R-2: 0.134 R-L: 0.329'
 ```
 
 ## Generating and Submitting Test Predictions
@@ -307,7 +307,6 @@ test_output = data['test'].map(
         batch,
         model,
         tokenizer,
-        DATASET_NAME,
         num_beams=BEAM_SIZE,
         max_length=MAX_GENERATION_LENGTH)
     },
@@ -330,7 +329,7 @@ In our final step, we only have to add the outputs to our larger submission cons
 submission_dict = {
     "submission_name": "BART-base",
     "param_count": sum(p.numel() for p in model.parameters()),
-    "description": "Baseline for the task based on BART-base."
+    "description": "Baseline for the task based on BART-base.",
     "tasks": {
       "common_gen_val": {"language": "en", "values": valid_formatted},
       "common_gen_test": {"language": "en", "values": test_formatted},
