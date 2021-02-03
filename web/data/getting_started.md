@@ -211,9 +211,9 @@ And finally:
 >> trainer.train()
 
 Epoch	Training Loss   Validation Loss Rouge2	    Rougel
-1	    1.081300	    1.063452	    0.121900	0.319900
-2	    0.948100	    1.086376	    0.134000	0.329800
-3	    0.820100	    1.077763	    0.133900	0.328000
+1   1.081300	    1.063452	    0.121900	0.319900
+2	0.948100	    1.086376	    0.134000	0.329800
+3	0.820100	    1.077763	    0.133900	0.328000
 ```
 
 We now have a model that achieves 13.4 ROUGE-2 which can obviously still be tuned, but it is a great starting point.
