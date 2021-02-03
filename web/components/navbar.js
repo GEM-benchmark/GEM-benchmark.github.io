@@ -71,7 +71,9 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className={styles.navitem}>
-              <a href="#">Paper</a>
+              <a href="https://arxiv.org/abs/2102.01672" target="_blank">
+                Paper
+                </a>
             </li>
             <li className={styles.navitem}>
               <Link href="/team">

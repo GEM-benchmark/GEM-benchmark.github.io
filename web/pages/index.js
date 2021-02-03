@@ -48,17 +48,15 @@ export default function Home() {
             </a>
           </Link>
 
-        <Link href="/results/">
-          <a className={styles.card}>
-            <h3>Results</h3>
-          </a>
-        </Link>
-
-          <Link href="#">
+          <Link href="/results/">
             <a className={styles.card}>
-              <h3>Paper</h3>
+              <h3>Results</h3>
             </a>
           </Link>
+
+          <a className={styles.card} href="https://arxiv.org/abs/2102.01672" target="_blank">
+            <h3>Paper</h3>
+          </a>
 
           <Link href="/team">
             <a className={styles.card}>
