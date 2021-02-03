@@ -10,7 +10,7 @@ To stay up-to-date on announcements, please join our [Google Group](https://grou
 
 ## Modeling Shared Task
 
-To participate in the task, simply train a system on one or more of the included tasks (the more, the better!) and submit your validation and test outputs.
+To participate in the task, simply train a system on one or more of the included tasks (the more, the better, but even outputs on one task help!) and submit your validation and test outputs.
 
 Similar to [WMT](http://www.statmt.org/wmt20/translation-task.html), we additionally ask every participant of this task to sign up for approximately five hours of labeling time to produce gold-data for our human evaluation. More information on this is coming soon.
 
@@ -23,7 +23,7 @@ from datasets import load_dataset
 data = load_dataset('GEM', 'dataset_identifier')
 ```
 
-For more information on how to train models, see our [tutorial](/get_started).
+For detailed information on the fields in each of our datasets, have a look at the [documentation](https://huggingface.co/datasets/gem#dataset-description). For more information on how to get started training models, see our [tutorial](/get_started).
 
 ### Submitting Outputs
 
