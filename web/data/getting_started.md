@@ -7,8 +7,6 @@ only interested in an overview how to load the datasets, you can look [here](/sh
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
 what changes to make to use another of the GEM datasets.
 
-You can follow along with the code in this tutorial in [this notebook](https://github.com/GEM-benchmark/GEM-baseline-models/blob/main/examples/GEM_baseline_starter_code.ipynb) and upload it to colab for a free GPU.
-
 ## Table of Contents
 
 ## Preliminaries
@@ -16,7 +14,7 @@ You can follow along with the code in this tutorial in [this notebook](https://g
 This tutorial uses PyTorch and the HuggingFace infrastructure to finetune models. You need to install the following dependencies:
 
 ```bash
-pip install datasets
+pip install git+https://github.com/huggingface/datasets.git
 pip install rouge_score
 pip install sentencepiece
 pip install transformers
@@ -40,26 +38,26 @@ else:
 
 ## Loading the Data
 
-We will be using [HuggingFace datasets](https://huggingface.co/docs/datasets/) for this tutorial, but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
+We will be using [HuggingFace datasets](https://huggingface.co/docs/datasets/gem) for this tutorial, but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
 
 You can load and inspect datasets like this:
 
 ```python
 >> from datasets import load_dataset
->> data = load_dataset("common_gen")
+>> data = load_dataset("gem", "common_gen")
 >> data
 
 DatasetDict({
     train: Dataset({
-        features: ['concept_set_idx', 'concepts', 'target'],
+        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
         num_rows: 67389
     })
     validation: Dataset({
-        features: ['concept_set_idx', 'concepts', 'target'],
-        num_rows: 4018
+        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        num_rows: 993
     })
     test: Dataset({
-        features: ['concept_set_idx', 'concepts', 'target'],
+        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
         num_rows: 1497
     })
 })
@@ -70,8 +68,10 @@ Now let's look at a single example:
 ```python
 >> data['train'][0]
 
-{'concept_set_idx': 0,
- 'concepts': ['ski', 'mountain', 'skier'],
+{'concept_set_id': 0,
+ 'concepts': ['mountain', 'ski', 'skier'],
+ 'gem_id': 'common_gen-train-0',
+ 'references': [],
  'target': 'Skier skis down the mountain'}
 ```
 
@@ -124,73 +124,10 @@ valid_data_tokenized = data['validation'].map(
 
 ## Finetuning a pretrained model
 
-We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#trainingarguments) by defining a `Seq2SeqTrainer` class that handles gradient updates, model selection, and evaluation for us.
+We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#trainingarguments) which handles gradient updates, model selection, and evaluation for us.
 
 ```python
-from transformers import Trainer, TrainingArguments
-
-class Seq2SeqTrainer(Trainer):
-  """Class to finetune a Seq2Seq model."""
-  def __init__(
-    self,
-    num_beams=4,
-    max_length=32,
-    *args, **kwargs
-  ):
-    super().__init__(*args, **kwargs)
-    self.num_beams = num_beams
-    self.max_length = max_length
-
-  def prediction_step(self, model, inputs, prediction_loss_only, ignore_keys=None):
-    """
-    Runs the model to either generate a sequence and/or compute the loss.
-    """
-    has_labels = all(inputs.get(k) is not None for k in self.label_names)
-    inputs = self._prepare_inputs(inputs)
-    # Compute loss with labels first.
-    with torch.no_grad():
-      if self.args.fp16 and _use_native_amp:
-        with autocast():
-          outputs = model(**inputs)
-      else:
-        outputs = model(**inputs)
-      if has_labels:
-        loss = outputs[0].mean().detach()
-      else:
-        loss = None
-    # If we're only computing the conditional log-likelihood, return.
-    if prediction_loss_only:
-      return (loss, None, None)
-    # Otherwise run model.generate() to get predictions.
-    if isinstance(model, torch.nn.DataParallel):
-      preds = model.module.generate(
-        input_ids=inputs['input_ids'],
-        attention_mask=inputs['attention_mask'],
-        num_beams=self.num_beams,
-        max_length=self.max_length,
-      )
-    else:
-      preds = model.generate(
-        input_ids=inputs['input_ids'],
-        attention_mask=inputs['attention_mask'],
-        num_beams=self.num_beams,
-        max_length=self.max_length,
-      )
-    if len(preds) == 1:
-      preds = preds[0]
-    # Pad predictions if necessary so they can be concatenated across batches.
-    if preds.shape[-1] < self.max_length:
-      preds = torch.nn.functional.pad(
-        preds, (0, self.max_length-preds.shape[-1]),
-        mode='constant',
-        value=self.tokenizer.pad_token_id
-      )
-    # Post-process labels.
-    if has_labels:
-      labels = inputs.get('labels')
-    else:
-      labels = None
-    return (loss, preds, labels)
+from transformers import Seq2SeqTrainer, TrainingArguments
 ```
 
 To improve model selection, let's pick the model that has the best test performance on ROUGE-2, a metric that is typically associated with higher fluency. We can do this by constructing a function that returns a function that computes the score and we only have to pass it to our trainer.
