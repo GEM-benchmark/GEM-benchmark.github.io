@@ -207,12 +207,12 @@ The annotations are automatically obtained during the initial sampling process a
 
 ### Personal and Sensitive Information
 
-The SGD dataset does not use identity categories.
-The SGD dataset does not contain sensitive data.
+The SGD dataset does not use identity categories and does not contain sensitive data.
 
 ## Changes to the Original Dataset for GEM
 
-No changes have been made to the original dataset.
+We are focusing on the response-generation part of the dataset and thus reformatted the dataset to treat the service agent utterances as the targets to be generated and the previous customer utterance and the agent's dialog act as the input. We additionally reformat the dialog acts to directly conform to the format described in this [paper](https://arxiv.org/abs/2004.15006). 
+
 
 ## Considerations for Using the Data
 
