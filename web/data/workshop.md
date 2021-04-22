@@ -60,7 +60,7 @@ All submissions should conform to [ACL 2021 style guidelines](https://2021.aclwe
 
 `February 2` First Call for Shared Task Submissions and Papers, Release of the Training Data
 
-`April 26` Workshop Paper Due Date (excl. shared tasks)
+`May 3` Workshop Paper Due Date (excl. shared tasks) **UPDATED**
 
 `May 28`  Notification of Acceptance (excl. shared tasks)
 
