@@ -120,8 +120,7 @@ Since the dataset is created from English Wikipedia (August 22, 2009 version), a
 
 ## Changes to the Original Dataset for GEM
 
-No change is made to the original dataset.
-
+The publicly available dataset is processed with the [Penn Treebank tokenizer](https://www.nltk.org/_modules/nltk/tokenize/treebank.html). We reverse this process to make the format consistent with WikiAuto and ASSET. 
 
 
 ## Considerations for Using the Data

@@ -60,7 +60,7 @@ All submissions should conform to [ACL 2021 style guidelines](https://2021.aclwe
 
 `February 2` First Call for Shared Task Submissions and Papers, Release of the Training Data
 
-`April 26` Workshop Paper Due Date (excl. shared tasks)
+`May 3` Workshop Paper Due Date (excl. shared tasks) **UPDATED**
 
 `May 28`  Notification of Acceptance (excl. shared tasks)
 
@@ -101,6 +101,7 @@ The workshop is organized by
 - [Esin Durmus](http://www.cs.cornell.edu/~esindurmus/) (Cornell University)
 - [Varun Prashant Gangal](https://vgtomahawk.github.io/) (Carnegie Mellon University)
 - [Sebastian Gehrmann](https://sebastiangehrmann.com) (Google Research)
+- [Yacine Jernite](https://yjernite.github.io/) (Hugging Face)
 - [Laura Perez-Beltrachini](http://homepages.inf.ed.ac.uk/lperez/) (University of Edinburgh)
 - [Samira Shaikh](https://webpages.uncc.edu/sshaikh2/) (UNC Charlotte)
 - [Wei Xu](https://cocoxu.github.io/) (Georgia Tech)

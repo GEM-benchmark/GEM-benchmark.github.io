@@ -1,0 +1,188 @@
+{
+  "common_metrics": {
+    "rouge1": {
+      "citation": "",
+      "description": "ROUGE score focusing on unigrams.",
+      "show_as": "ROUGE-1"
+    },
+    "rouge2": {
+      "citation": "",
+      "description": "ROUGE score focusing on bigrams.",
+      "show_as": "ROUGE-2"
+    },
+    "rougeL": {
+      "citation": "",
+      "description": "ROUGE score focusing on longest common subsequence.",
+      "show_as": "ROUGE-L"
+    },
+    "msttr-100": {
+      "citation": "",
+      "description": "Mean Segmental Type-Token Ratio, a measure of lexical diversity.",
+      "show_as": "MSTTR"
+    },
+    "mean_pred_length": {
+      "citation": "",
+      "description": "Average length of a system output.",
+      "show_as": "Output Length"
+    },
+    "distinct-1": {
+      "citation": "",
+      "description": "Ratio of distinct unigrams / total number of unigrams.",
+      "show_as": "Distinct-1"
+    },
+    "vocab_size-1": {
+      "citation": "",
+      "description": "Number of distinct words used by the system.",
+      "show_as": "Vocabulary Size"
+    },
+    "unique-1": {
+      "citation": "",
+      "description": "number of unigrams that only occur once in the whole data.",
+      "show_as": "Unique-1"
+    },
+    "entropy-1": {
+      "citation": "",
+      "description": "Shannon entropy over unigrams",
+      "show_as": "Entropy-1"
+    },
+    "distinct-2": {
+      "citation": "",
+      "description": "Ratio of distinct bigrams / total number of bigrams.",
+      "show_as": "Distinct-2"
+    },
+    "vocab_size-2": {
+      "citation": "",
+      "description": "Number of distinct bigrams used by the system.",
+      "show_as": "Bigram Vocabulary Size"
+    },
+    "unique-2": {
+      "citation": "",
+      "description": "Number of bigrams that only occur once in the whole data",
+      "show_as": "Unique-2"
+    },
+    "entropy-2": {
+      "citation": "",
+      "description": "Shannon entropy over bigrams.",
+      "show_as": "Entropy-2"
+    },
+    "cond_entropy-2": {
+      "citation": "",
+      "description": "Language model style conditional entropy -- N-grams conditioned on N-1-grams.",
+      "show_as": "Bigram Conditional Entropy"
+    },
+    "distinct-3": {
+      "citation": "",
+      "description": "Ratio of distinct trigrams / total number of trigrams.",
+      "show_as": "Distinct-3"
+    },
+    "vocab_size-3": {
+      "citation": "",
+      "description": "Number of distinct trigrams used by the system.",
+      "show_as": "Trigram Vocabulary Size"
+    },
+    "unique-3": {
+      "citation": "",
+      "description": "Number of trigrams that only occur once in the whole data.",
+      "show_as": "Unique-3"
+    },
+    "entropy-3": {
+      "citation": "",
+      "description": "Shannon entropy over trigrams.",
+      "show_as": "Entropy-2"
+    },
+    "cond_entropy-3": {
+      "citation": "",
+      "description": "Language model style conditional entropy -- N-grams conditioned on N-1-grams",
+      "show_as": "Trigram Conditional Entropy"
+    },
+    "bertscore": {
+      "citation": "",
+      "description": "A BERT-based similarity measure between reference and generation.",
+      "show_as": "BERTScore"
+    },
+    "bleu": {
+      "citation": "",
+      "description": "A measure of lexical similarity.",
+      "show_as": "BLEU"
+    },
+    "bleurt": {
+      "citation": "",
+      "description": "A learned metric to measure semantic equivalence between reference and generation.",
+      "show_as": "BLEURT"
+    },
+    "meteor": {
+      "citation": "",
+      "description": "An advanced lexical similarity metric also including stemming and synonymy matching.",
+      "show_as": "Meteor"
+    }
+  },
+  "challenges": {
+    "data2text": {
+      "datasets": [
+        "common_gen",
+        "dart",
+        "e2e_nlg_cleaned",
+        "totto",
+        "cs_restaurants",
+        "webnlg_en",
+        "webnlg_ru"
+      ],
+      "metrics": []
+    },
+    "summarization": {
+      "datasets": [
+        "mlsum_de",
+        "mlsum_es",
+        "xsum"
+      ],
+      "metrics": []
+    },
+    "dialog": {
+      "datasets": [
+        "schema_guided_dstc8"
+      ],
+      "metrics": []
+    },
+    "simplification": {
+      "datasets": [
+        "asset",
+        "turk"
+      ],
+      "metrics": []
+    }
+  },
+  "measures": {
+    "diversity": [
+      "msttr-100",
+      "distinct-1",
+      "distinct-2",
+      "distinct-3",
+      "unique-1",
+      "unique-2",
+      "unique-3",
+      "entropy-1",
+      "entropy-2",
+      "entropy-3",
+      "cond_entropy-2",
+      "cond_entropy-3"
+    ],
+    "lexical": [
+      "rouge1",
+      "rouge2",
+      "rougeL",
+      "bleu",
+      "meteor"
+    ],
+    "semantic": [
+      "bertscore",
+      "bleurt"
+    ],
+    "faithful": [],
+    "descriptive": [
+      "mean_pred_length",
+      "vocab_size-1",
+      "vocab_size-2",
+      "vocab_size-3"
+    ]
+  }
+}

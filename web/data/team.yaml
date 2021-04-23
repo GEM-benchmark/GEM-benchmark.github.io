@@ -124,7 +124,7 @@ members:
     position: Assistant Professor
     organization: Stanford University
     website: ''
-    twitter: ''
+    twitter: '@tatsu_hashimoto'
     note: ''
   - name: Yufang Hou
     position: Researcher
@@ -196,7 +196,7 @@ members:
     position: Graduate Student
     organization: Instituto de Telecomunicações
     website: 'https://pedrohenriqueamartins.github.io/'
-    twitter: 'pedrohenmartins'
+    twitter: '@pedrohenmartins'
     note: ''
   - name: Angie McMillan-Major
     position: Graduate Student
@@ -244,7 +244,7 @@ members:
     position: Research Scientist
     organization: Google Research
     website: ''
-    twitter: ''
+    twitter: '@ank_parikh'
     note: ''
   - name: Niranjan Ramesh Rao
     position: Graduate Student
@@ -295,8 +295,8 @@ members:
     twitter: '@hen_str'
     note: ''
   - name: Nishant Subramani
-    position: Researcher
-    organization: ScaleAI
+    position: Predoctoral Resident
+    organization: Intelligent Systems Lab, Intel
     website: ''
     twitter: ''
     note: ''
@@ -310,7 +310,7 @@ members:
     position: Assistant Professor
     organization: Georgia Tech
     website: ''
-    twitter: ''
+    twitter: '@diyi_yang'
     note: ''
   - name: Yacine Yernite
     position: Research Scientist
