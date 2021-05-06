@@ -52,7 +52,8 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
       [key: string]:
         { [key: string]: { value: number, sn: string }[] }
     },
-    challengeNames: [] as ChallengeName[]
+    challengeNames: [] as ChallengeName[],
+    columnFilter:''
     // axis: [],
     // xScale: null,
     // yScales: [] as d3.ScaleLinear<number, number>[],
@@ -60,7 +61,12 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
   }
 
   static getDerivedStateFromProps(nextProps: Table_Props, prev) {
-    // console.log("props updated--- ", nextProps, prev);
+    // console.log("props updated--- ", nextProps, Object.keys(prev.challengeResults).length);
+    if ((Object.keys(prev.challengeResults).length>0)
+      && (prev.columnFilter === nextProps.columnFilter)) return {}
+
+    const columnFilter = nextProps.columnFilter
+    console.log(" STATE--- ");
 
     const possibleMetaMeasures = Object.entries(nextProps.config.measures).sort();
     let measureNames = []
@@ -135,7 +141,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
     //
     // console.log(nextProps.config, "--- nextProps.config");
     // console.log(nextProps.scores, "--- nextProps.scores");
-    return {measureNames, challengeResults, challengeNames}
+    return {measureNames, challengeResults, challengeNames, columnFilter}
   }
 
   componentDidMount() {

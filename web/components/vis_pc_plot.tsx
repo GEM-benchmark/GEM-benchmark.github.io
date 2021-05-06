@@ -52,6 +52,9 @@ export class PCP
     .y((d, i) => PCP.height - this.state.yScales[i](d))
 
   static getDerivedStateFromProps(nextProps: PCP_Props, prevState) {
+
+    if (prevState.datasetMatrix.length>0) return {}
+
     const possibleMetaMeasures = Object.entries(nextProps.config.measures).sort();
     let measureNames = []
     const entryCount: { [key: string]: number } = {}
@@ -137,7 +140,7 @@ export class PCP
     };
 
     const brush = d3.brushY()
-      .extent([[-5, 0], [5, PCP.height]])
+      .extent([[-3, 0], [3, PCP.height]])
       .on("end brush", brushing)
 
 
