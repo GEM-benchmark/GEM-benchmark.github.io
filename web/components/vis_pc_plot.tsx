@@ -14,7 +14,7 @@ interface PCP_Props {
   cm: ColorManager,
   config: EvalConfiguration,
   scores: Scores[],
-  highlighted:string[],
+  highlighted: string[],
   subset: string,
   onDatasetSelect: (datasets: string[]) => void,
   onDatasetHover: (dataset: string, hover: boolean) => void,
@@ -32,7 +32,7 @@ export class PCP
     },
     onDatasetSelect: () => {
     },
-    highlighted:[]
+    highlighted: []
   }
   private static height = 150;
   private static slotWidth = 30;
@@ -56,7 +56,7 @@ export class PCP
     let measureNames = []
     const entryCount: { [key: string]: number } = {}
     possibleMetaMeasures.forEach(([k, v]) => {
-      measureNames = [...measureNames, ...v]
+      measureNames = [...measureNames, ...v.sort()]
       v.forEach(vv => entryCount[vv] = 0)
     })
 
@@ -157,7 +157,10 @@ export class PCP
 
     const st = this.state;
     const props = this.props;
-    const format = d3.format(".3s");
+
+    // avoid milli, micro,...
+    const format = (d) => Math.abs(d) < 1 ? d3.format('.3f')(d) : d3.format(".3s")(d);
+
 
     function lineClasses(d: number[], i) {
       const filterlist = Object.entries(st.filters)
@@ -178,7 +181,7 @@ export class PCP
       ].join(' ');
     }
 
-    return <svg height={500}
+    return <svg height={270}
                 width={this.state.measureNames.length * PCP.slotWidth + 50}>
       <g transform={"translate(30,20)"}>
         <g className={"bg"}></g>
