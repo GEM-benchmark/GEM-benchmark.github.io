@@ -119,34 +119,34 @@
   "challenges": {
     "data2text": {
       "datasets": [
-        "common_gen",
-        "dart",
-        "e2e_nlg_cleaned",
-        "totto",
-        "cs_restaurants",
-        "webnlg_en",
-        "webnlg_ru"
+        "common_gen_val",
+        "dart_val",
+        "e2e_nlg_val",
+        "totto_val",
+        "cs_restaurants_val",
+        "web_nlg_en_val",
+        "web_nlg_ru_val"
       ],
       "metrics": []
     },
     "summarization": {
       "datasets": [
-        "mlsum_de",
-        "mlsum_es",
-        "xsum"
+        "mlsum_de_val",
+        "mlsum_es_val",
+        "xsum_val"
       ],
       "metrics": []
     },
     "dialog": {
       "datasets": [
-        "schema_guided_dstc8"
+        "schema_guided_dialog_val"
       ],
       "metrics": []
     },
     "simplification": {
       "datasets": [
-        "asset",
-        "turk"
+        "wiki_auto_asset_turk_test_asset",
+        "wiki_auto_asset_turk_test_turk"
       ],
       "metrics": []
     }

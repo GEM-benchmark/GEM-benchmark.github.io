@@ -15,7 +15,6 @@ interface PCP_Props {
   config: EvalConfiguration,
   scores: Scores[],
   highlighted: string[],
-  subset: string,
   onDatasetSelect: (datasets: string[]) => void,
   onDatasetHover: (dataset: string, hover: boolean) => void,
   onFilterChange: (datasets: string[]) => void
@@ -25,7 +24,6 @@ export class PCP
   extends React.PureComponent<PCP_Props, any> {
 
   static defaultProps = {
-    subset: "val",
     onDatasetHover: () => {
     },
     onFilterChange: () => {
@@ -66,7 +64,7 @@ export class PCP
 
     // TODO: can be simplified/removed with new data format
     const extractValue = (dim: string, v: any): number => {
-      if (dim.startsWith("rouge")) return v.mid.fmeasure;
+      if (dim.startsWith("rouge")) return v.fmeasure;
       if (dim === "bertscore") return v.f1;
       return v;
     }
@@ -78,7 +76,7 @@ export class PCP
       const sn = submission.submission_name
       Object.entries(submission).forEach(([datasubset, scoreData]) => {
         if (datasubset == "submission" || typeof scoreData == "string") return;
-        if (datasubset.endsWith("_" + nextProps.subset)) {
+        if (datasubset) {
           datasetNames.push(sn + "." + datasubset);
           datasetMatrix.push(
             measureNames.map(dim => {

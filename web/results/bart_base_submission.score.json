@@ -1,1323 +1,795 @@
 {
-    "submission_name": "BART-base",
-    "dart_val": {
-        "predictions_file": "BART-base/dart_val",
-        "N": 1041,
-        "msttr-100": 0.54592,
-        "msttr-100_nopunct": 0.5741284403669724,
-        "total_length": 12518,
-        "mean_pred_length": 12.024975984630164,
-        "distinct-1": 0.1893273685892315,
-        "vocab_size-1": 2370,
-        "unique-1": 1330,
-        "entropy-1": 8.382602305821798,
-        "distinct-2": 0.4462838720920101,
-        "vocab_size-2": 5122,
-        "unique-2": 3567,
-        "entropy-2": 11.274212135499658,
-        "cond_entropy-2": 2.4834527588839963,
-        "distinct-3": 0.5879647374472978,
-        "vocab_size-3": 6136,
-        "unique-3": 4781,
-        "entropy-3": 11.906662909253752,
-        "cond_entropy-3": 0.7087844452652963,
-        "total_length-nopunct": 10975,
-        "mean_pred_length-nopunct": 10.542747358309319,
-        "distinct-1-nopunct": 0.21466970387243736,
-        "vocab_size-1-nopunct": 2356,
-        "unique-1-nopunct": 1327,
-        "entropy-1-nopunct": 8.746331755965583,
-        "distinct-2-nopunct": 0.4425206361989128,
-        "vocab_size-2-nopunct": 4396,
-        "unique-2-nopunct": 3086,
-        "entropy-2-nopunct": 11.016071947948038,
-        "cond_entropy-2-nopunct": 2.523481321782664,
-        "distinct-3-nopunct": 0.5797818508939615,
-        "vocab_size-3-nopunct": 5156,
-        "unique-3-nopunct": 4013,
-        "entropy-3-nopunct": 11.642213949297172,
-        "cond_entropy-3-nopunct": 0.7413733341157032,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_val.json",
-        "bertscore": {
-            "precision": 0.8835523278523133,
-            "recall": 0.8430876848104478,
-            "f1": 0.8616227307191385,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 0.02036591157940584,
-        "bleurt": -0.14664970713915387,
-        "meteor": 0.1071304178807864,
-        "rouge1": {
-            "low": {
-                "precision": 0.03626448123952476,
-                "recall": 0.3967900914281917,
-                "fmeasure": 0.06561967640236317
-            },
-            "mid": {
-                "precision": 0.03938763574912204,
-                "recall": 0.4285045880256755,
-                "fmeasure": 0.07117705599891913
-            },
-            "high": {
-                "precision": 0.04272334415359958,
-                "recall": 0.4573002891280277,
-                "fmeasure": 0.07700949163424857
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            },
-            "mid": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            },
-            "high": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.03614794592245318,
-                "recall": 0.39872251201018266,
-                "fmeasure": 0.06537648312642627
-            },
-            "mid": {
-                "precision": 0.039446544723619456,
-                "recall": 0.4284736036070025,
-                "fmeasure": 0.07123747304346364
-            },
-            "high": {
-                "precision": 0.042604100481554594,
-                "recall": 0.4564168271169171,
-                "fmeasure": 0.0768320693419605
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.03632011604999259,
-                "recall": 0.3977075177481306,
-                "fmeasure": 0.06571817151869613
-            },
-            "mid": {
-                "precision": 0.039482346050371674,
-                "recall": 0.4283942343143735,
-                "fmeasure": 0.07128841380981625
-            },
-            "high": {
-                "precision": 0.042844406712421255,
-                "recall": 0.46199481888926086,
-                "fmeasure": 0.07713045814399938
-            }
-        }
+  "submission_name": "BART-base",
+  "dart_val": {
+    "predictions_file": "BART-base/dart_val",
+    "N": 1041,
+    "msttr-100": 0.54592,
+    "msttr-100_nopunct": 0.5741284403669724,
+    "total_length": 12518,
+    "mean_pred_length": 12.024975984630164,
+    "distinct-1": 0.1893273685892315,
+    "vocab_size-1": 2370,
+    "unique-1": 1330,
+    "entropy-1": 8.382602305821798,
+    "distinct-2": 0.4462838720920101,
+    "vocab_size-2": 5122,
+    "unique-2": 3567,
+    "entropy-2": 11.274212135499658,
+    "cond_entropy-2": 2.4834527588839963,
+    "distinct-3": 0.5879647374472978,
+    "vocab_size-3": 6136,
+    "unique-3": 4781,
+    "entropy-3": 11.906662909253752,
+    "cond_entropy-3": 0.7087844452652963,
+    "total_length-nopunct": 10975,
+    "mean_pred_length-nopunct": 10.542747358309319,
+    "distinct-1-nopunct": 0.21466970387243736,
+    "vocab_size-1-nopunct": 2356,
+    "unique-1-nopunct": 1327,
+    "entropy-1-nopunct": 8.746331755965583,
+    "distinct-2-nopunct": 0.4425206361989128,
+    "vocab_size-2-nopunct": 4396,
+    "unique-2-nopunct": 3086,
+    "entropy-2-nopunct": 11.016071947948038,
+    "cond_entropy-2-nopunct": 2.523481321782664,
+    "distinct-3-nopunct": 0.5797818508939615,
+    "vocab_size-3-nopunct": 5156,
+    "unique-3-nopunct": 4013,
+    "entropy-3-nopunct": 11.642213949297172,
+    "cond_entropy-3-nopunct": 0.7413733341157032,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_val.json",
+    "bertscore": {
+      "precision": 0.8835523278523133,
+      "recall": 0.8430876848104478,
+      "f1": 0.8616227307191385,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
     },
-    "dart_test": {
-        "predictions_file": "BART-base/dart_test",
-        "N": 1667,
-        "msttr-100": 0.5683684210526315,
-        "msttr-100_nopunct": 0.6064457831325298,
-        "total_length": 19010,
-        "mean_pred_length": 11.40371925614877,
-        "distinct-1": 0.1863229879011047,
-        "vocab_size-1": 3542,
-        "unique-1": 1979,
-        "entropy-1": 8.817621220685282,
-        "distinct-2": 0.4559764746583636,
-        "vocab_size-2": 7908,
-        "unique-2": 5562,
-        "entropy-2": 11.905561381966091,
-        "cond_entropy-2": 2.598899302336619,
-        "distinct-3": 0.6211405970910947,
-        "vocab_size-3": 9737,
-        "unique-3": 7721,
-        "entropy-3": 12.652182630654961,
-        "cond_entropy-3": 0.7903381652844214,
-        "total_length-nopunct": 16601,
-        "mean_pred_length-nopunct": 9.95860827834433,
-        "distinct-1-nopunct": 0.21263779290404192,
-        "vocab_size-1-nopunct": 3530,
-        "unique-1-nopunct": 1978,
-        "entropy-1-nopunct": 9.265023154116028,
-        "distinct-2-nopunct": 0.45788134458283114,
-        "vocab_size-2-nopunct": 6838,
-        "unique-2-nopunct": 4842,
-        "entropy-2-nopunct": 11.671452927184863,
-        "cond_entropy-2-nopunct": 2.6519943195290376,
-        "distinct-3-nopunct": 0.6159644230044471,
-        "vocab_size-3-nopunct": 8172,
-        "unique-3-nopunct": 6472,
-        "entropy-3-nopunct": 12.381655248796601,
-        "cond_entropy-3-nopunct": 0.8384610158810094,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_test.json",
-        "bertscore": {
-            "precision": 0.7662479000028622,
-            "recall": 0.7619863926255924,
-            "f1": 0.7623021840226815,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 0.013652474251188533,
-        "bleurt": -0.7563462481651305,
-        "meteor": 0.06748677307062144,
-        "rouge1": {
-            "low": {
-                "precision": 0.028107554859467983,
-                "recall": 0.2782132757804402,
-                "fmeasure": 0.050586846403483425
-            },
-            "mid": {
-                "precision": 0.03039794660650265,
-                "recall": 0.3003505555286692,
-                "fmeasure": 0.05458793229108963
-            },
-            "high": {
-                "precision": 0.032887609742933525,
-                "recall": 0.32204434505434126,
-                "fmeasure": 0.059074926832709145
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            },
-            "mid": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            },
-            "high": {
-                "precision": 0.0,
-                "recall": 0.0,
-                "fmeasure": 0.0
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.028010779336471763,
-                "recall": 0.2781108276167695,
-                "fmeasure": 0.05031122545713096
-            },
-            "mid": {
-                "precision": 0.03034062664354286,
-                "recall": 0.29934301175332995,
-                "fmeasure": 0.054495003923120046
-            },
-            "high": {
-                "precision": 0.0328714525290295,
-                "recall": 0.3216359453045273,
-                "fmeasure": 0.05899181877061824
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.0278365462186967,
-                "recall": 0.2764650969272613,
-                "fmeasure": 0.05004384493118118
-            },
-            "mid": {
-                "precision": 0.030275409515809783,
-                "recall": 0.29930136687037967,
-                "fmeasure": 0.05439679027720577
-            },
-            "high": {
-                "precision": 0.032851441426090484,
-                "recall": 0.3216805986225133,
-                "fmeasure": 0.05880539784518975
-            }
-        }
+    "bleu": 0.02036591157940584,
+    "bleurt": -0.14664970713915387,
+    "meteor": 0.1071304178807864,
+    "rouge1": {
+      "precision": 0.03938763574912204,
+      "recall": 0.4285045880256755,
+      "fmeasure": 0.07117705599891913
     },
-    "e2e_nlg_cleaned_val": {
-        "predictions_file": "BART-base/e2e_nlg_cleaned_val",
-        "N": 1484,
-        "msttr-100": 0.3168807339449539,
-        "msttr-100_nopunct": 0.3091749174917492,
-        "total_length": 32719,
-        "mean_pred_length": 22.047843665768195,
-        "distinct-1": 0.0045539289098077565,
-        "vocab_size-1": 149,
-        "unique-1": 16,
-        "entropy-1": 5.696884798849018,
-        "distinct-2": 0.015335360973267168,
-        "vocab_size-2": 479,
-        "unique-2": 104,
-        "entropy-2": 7.200386426815249,
-        "cond_entropy-2": 1.4593695925518755,
-        "distinct-3": 0.031057779570434606,
-        "vocab_size-3": 924,
-        "unique-3": 239,
-        "entropy-3": 8.18178330000959,
-        "cond_entropy-3": 1.0207752515921562,
-        "total_length-nopunct": 30308,
-        "mean_pred_length-nopunct": 20.423180592991915,
-        "distinct-1-nopunct": 0.004850204566451102,
-        "vocab_size-1-nopunct": 147,
-        "unique-1-nopunct": 16,
-        "entropy-1-nopunct": 5.7039933572963655,
-        "distinct-2-nopunct": 0.016132389675270607,
-        "vocab_size-2-nopunct": 465,
-        "unique-2-nopunct": 103,
-        "entropy-2-nopunct": 7.145255139368888,
-        "cond_entropy-2-nopunct": 1.4817836127567336,
-        "distinct-3-nopunct": 0.03328456474030724,
-        "vocab_size-3-nopunct": 910,
-        "unique-3-nopunct": 234,
-        "entropy-3-nopunct": 8.18171217471279,
-        "cond_entropy-3-nopunct": 1.039002883293187,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_val.json",
-        "bertscore": {
-            "precision": 0.9315784072699251,
-            "recall": 0.9129194901236948,
-            "f1": 0.9213050235956506,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 43.5361716055409,
-        "bleurt": 0.19769242321460398,
-        "meteor": 0.3733094447268074,
-        "rouge1": {
-            "low": {
-                "precision": 0.7808419171781963,
-                "recall": 0.7002056127041444,
-                "fmeasure": 0.7294826581360546
-            },
-            "mid": {
-                "precision": 0.7882322116788911,
-                "recall": 0.7082734792077523,
-                "fmeasure": 0.7363788343538655
-            },
-            "high": {
-                "precision": 0.7958028873468054,
-                "recall": 0.7158312095624338,
-                "fmeasure": 0.7433209255988352
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.5105741093294431,
-                "recall": 0.4557173544204492,
-                "fmeasure": 0.4750418627585599
-            },
-            "mid": {
-                "precision": 0.5202871731433427,
-                "recall": 0.46576656070699657,
-                "fmeasure": 0.4849296307014282
-            },
-            "high": {
-                "precision": 0.5303381217382522,
-                "recall": 0.47523536069583416,
-                "fmeasure": 0.49408464056824414
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.6078728437466209,
-                "recall": 0.5485299952027392,
-                "fmeasure": 0.569011433425603
-            },
-            "mid": {
-                "precision": 0.6166071473785666,
-                "recall": 0.5573462239417295,
-                "fmeasure": 0.5775606203475045
-            },
-            "high": {
-                "precision": 0.6252629412864368,
-                "recall": 0.5666563919189475,
-                "fmeasure": 0.5864892863327382
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.6078279292809704,
-                "recall": 0.5486990643108492,
-                "fmeasure": 0.5695176367246305
-            },
-            "mid": {
-                "precision": 0.6166319311563824,
-                "recall": 0.5571531043940221,
-                "fmeasure": 0.5775212966354315
-            },
-            "high": {
-                "precision": 0.6256096891916428,
-                "recall": 0.566676572658002,
-                "fmeasure": 0.5857665878012412
-            }
-        }
+    "rouge2": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "fmeasure": 0.0
     },
-    "e2e_nlg_cleaned_test": {
-        "predictions_file": "BART-base/e2e_nlg_cleaned_test",
-        "N": 1847,
-        "msttr-100": 0.3142928039702233,
-        "msttr-100_nopunct": 0.30627968337730893,
-        "total_length": 40333,
-        "mean_pred_length": 21.837033026529507,
-        "distinct-1": 0.0035950710336449063,
-        "vocab_size-1": 145,
-        "unique-1": 14,
-        "entropy-1": 5.748522945848384,
-        "distinct-2": 0.012991737255105752,
-        "vocab_size-2": 500,
-        "unique-2": 84,
-        "entropy-2": 7.258085256172367,
-        "cond_entropy-2": 1.4812629279295741,
-        "distinct-3": 0.029722426922132155,
-        "vocab_size-3": 1089,
-        "unique-3": 248,
-        "entropy-3": 8.22379320677389,
-        "cond_entropy-3": 1.0034920740401831,
-        "total_length-nopunct": 37947,
-        "mean_pred_length-nopunct": 20.545208446128857,
-        "distinct-1-nopunct": 0.0037684138403562863,
-        "vocab_size-1-nopunct": 143,
-        "unique-1-nopunct": 14,
-        "entropy-1-nopunct": 5.749961794264996,
-        "distinct-2-nopunct": 0.013407202216066482,
-        "vocab_size-2-nopunct": 484,
-        "unique-2-nopunct": 87,
-        "entropy-2-nopunct": 7.216445078741522,
-        "cond_entropy-2-nopunct": 1.515178844285775,
-        "distinct-3-nopunct": 0.03103377806323534,
-        "vocab_size-3-nopunct": 1063,
-        "unique-3-nopunct": 242,
-        "entropy-3-nopunct": 8.231612572518655,
-        "cond_entropy-3-nopunct": 1.0186559027913107,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_test.json",
-        "bertscore": {
-            "precision": 0.9306912531901774,
-            "recall": 0.9039688628302049,
-            "f1": 0.9162631358207078,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 38.087305425391996,
-        "bleurt": 0.14754907978212053,
-        "meteor": 0.35441527638379605,
-        "rouge1": {
-            "low": {
-                "precision": 0.7976730098162481,
-                "recall": 0.6741380426047405,
-                "fmeasure": 0.7223265190804026
-            },
-            "mid": {
-                "precision": 0.8037529241692565,
-                "recall": 0.6803590370256907,
-                "fmeasure": 0.7275474211209463
-            },
-            "high": {
-                "precision": 0.8094467250514975,
-                "recall": 0.6869986465902614,
-                "fmeasure": 0.7329700177575792
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.505248337092987,
-                "recall": 0.42370801009015396,
-                "fmeasure": 0.45499169999359435
-            },
-            "mid": {
-                "precision": 0.5126275180662675,
-                "recall": 0.43070174087498725,
-                "fmeasure": 0.4618769445684562
-            },
-            "high": {
-                "precision": 0.5202102904776047,
-                "recall": 0.4376724773167665,
-                "fmeasure": 0.4688031827782472
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.5976803491878372,
-                "recall": 0.5058560032733345,
-                "fmeasure": 0.5409449146053912
-            },
-            "mid": {
-                "precision": 0.6056642659257092,
-                "recall": 0.5132926736201205,
-                "fmeasure": 0.5482357496698025
-            },
-            "high": {
-                "precision": 0.613417015733717,
-                "recall": 0.5207099303032763,
-                "fmeasure": 0.5550520808602994
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.5983350866051207,
-                "recall": 0.5059107416275456,
-                "fmeasure": 0.5413112528403737
-            },
-            "mid": {
-                "precision": 0.6055960701828264,
-                "recall": 0.51346826563723,
-                "fmeasure": 0.5482881144831555
-            },
-            "high": {
-                "precision": 0.6133737742868682,
-                "recall": 0.5203459155679977,
-                "fmeasure": 0.5550900423399749
-            }
-        }
+    "rougeL": {
+      "precision": 0.039446544723619456,
+      "recall": 0.4284736036070025,
+      "fmeasure": 0.07123747304346364
     },
-    "common_gen_val": {
-        "predictions_file": "BART-base/common_gen_val",
-        "N": 993,
-        "msttr-100": 0.5734615384615384,
-        "msttr-100_nopunct": 0.5998947368421053,
-        "total_length": 10453,
-        "mean_pred_length": 10.526686807653576,
-        "distinct-1": 0.11757390222902515,
-        "vocab_size-1": 1229,
-        "unique-1": 583,
-        "entropy-1": 7.120317340520041,
-        "distinct-2": 0.40993657505285414,
-        "vocab_size-2": 3878,
-        "unique-2": 2675,
-        "entropy-2": 10.660509963607119,
-        "cond_entropy-2": 3.2699832604186554,
-        "distinct-3": 0.668831935750561,
-        "vocab_size-3": 5663,
-        "unique-3": 4617,
-        "entropy-3": 11.973558314216708,
-        "cond_entropy-3": 1.3987390716645012,
-        "total_length-nopunct": 9557,
-        "mean_pred_length-nopunct": 9.624370594159114,
-        "distinct-1-nopunct": 0.1283875693209166,
-        "vocab_size-1-nopunct": 1227,
-        "unique-1-nopunct": 583,
-        "entropy-1-nopunct": 7.302553819568953,
-        "distinct-2-nopunct": 0.40728631480616534,
-        "vocab_size-2-nopunct": 3488,
-        "unique-2-nopunct": 2446,
-        "entropy-2-nopunct": 10.438228705681178,
-        "cond_entropy-2-nopunct": 3.482874340073613,
-        "distinct-3-nopunct": 0.6781138555012548,
-        "vocab_size-3-nopunct": 5134,
-        "unique-3-nopunct": 4234,
-        "entropy-3-nopunct": 11.828741183967551,
-        "cond_entropy-3-nopunct": 1.4837254969769638,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/common_gen_val.json",
-        "bertscore": {
-            "precision": 0.8898786380211753,
-            "recall": 0.8867729039710814,
-            "f1": 0.8870824460176543,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 27.536596881496543,
-        "bleurt": -0.4000667599035645,
-        "meteor": 0.3006561470958473,
-        "rouge1": {
-            "low": {
-                "precision": 0.6592300592623369,
-                "recall": 0.6164874902597433,
-                "fmeasure": 0.6273153919560783
-            },
-            "mid": {
-                "precision": 0.668547285135483,
-                "recall": 0.624921554566907,
-                "fmeasure": 0.6352768915902834
-            },
-            "high": {
-                "precision": 0.6790283194675284,
-                "recall": 0.6335267236151603,
-                "fmeasure": 0.6433582902446268
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.33430578848533365,
-                "recall": 0.30431423560259596,
-                "fmeasure": 0.3124707077910532
-            },
-            "mid": {
-                "precision": 0.34768052556699924,
-                "recall": 0.316060673604796,
-                "fmeasure": 0.32461682864020724
-            },
-            "high": {
-                "precision": 0.3611403472498215,
-                "recall": 0.3284170595960837,
-                "fmeasure": 0.33695387014198325
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.5717031065939145,
-                "recall": 0.5285948280943709,
-                "fmeasure": 0.5411682446444874
-            },
-            "mid": {
-                "precision": 0.5828887033965404,
-                "recall": 0.5394608554052243,
-                "fmeasure": 0.5513156067933876
-            },
-            "high": {
-                "precision": 0.5937220444371867,
-                "recall": 0.5490611384189112,
-                "fmeasure": 0.5610390657185198
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.5717355795825401,
-                "recall": 0.5297658222711055,
-                "fmeasure": 0.5414532999490482
-            },
-            "mid": {
-                "precision": 0.5827295278458372,
-                "recall": 0.5391980264146027,
-                "fmeasure": 0.5509461613714848
-            },
-            "high": {
-                "precision": 0.5935414072891743,
-                "recall": 0.5492659201350253,
-                "fmeasure": 0.5609977026617601
-            }
-        }
-    },
-    "common_gen_test": {
-        "predictions_file": "BART-base/common_gen_test",
-        "N": 1497,
-        "msttr-100": 0.595934065934066,
-        "msttr-100_nopunct": 0.6185798816568047,
-        "total_length": 18273,
-        "mean_pred_length": 12.206412825651302,
-        "distinct-1": 0.10786406173042193,
-        "vocab_size-1": 1971,
-        "unique-1": 902,
-        "entropy-1": 7.52406931752512,
-        "distinct-2": 0.40438721983786363,
-        "vocab_size-2": 6784,
-        "unique-2": 4717,
-        "entropy-2": 11.344075539526678,
-        "cond_entropy-2": 3.596508114637927,
-        "distinct-3": 0.6789711368545062,
-        "vocab_size-3": 10374,
-        "unique-3": 8698,
-        "entropy-3": 12.79493899603635,
-        "cond_entropy-3": 1.5281412696719778,
-        "total_length-nopunct": 16903,
-        "mean_pred_length-nopunct": 11.29124916499666,
-        "distinct-1-nopunct": 0.11648819736141514,
-        "vocab_size-1-nopunct": 1969,
-        "unique-1-nopunct": 902,
-        "entropy-1-nopunct": 7.6873397083769905,
-        "distinct-2-nopunct": 0.4036738932883292,
-        "vocab_size-2-nopunct": 6219,
-        "unique-2-nopunct": 4378,
-        "entropy-2-nopunct": 11.161306371995122,
-        "cond_entropy-2-nopunct": 3.783970866079448,
-        "distinct-3-nopunct": 0.6853116687037171,
-        "vocab_size-3-nopunct": 9532,
-        "unique-3-nopunct": 8049,
-        "entropy-3-nopunct": 12.666137058009072,
-        "cond_entropy-3-nopunct": 1.6025092873953128
-    },
-   "asset_val": {
-        "predictions_file": "BART-base/asset_val",
-        "N": 2000,
-        "msttr-100": 0.7299501246882796,
-        "msttr-100_nopunct": 0.7762816901408457,
-        "total_length": 40193,
-        "mean_pred_length": 20.0965,
-        "distinct-1": 0.2269051824944642,
-        "vocab_size-1": 9120,
-        "unique-1": 5826,
-        "entropy-1": 9.845799703028232,
-        "distinct-2": 0.7277249757809022,
-        "vocab_size-2": 27794,
-        "unique-2": 24479,
-        "entropy-2": 14.13771286498008,
-        "cond_entropy-2": 4.001820367164006,
-        "distinct-3": 0.9380543198961125,
-        "vocab_size-3": 33951,
-        "unique-3": 32690,
-        "entropy-3": 14.977210008053811,
-        "cond_entropy-3": 0.8561333657589959,
-        "total_length-nopunct": 35598,
-        "mean_pred_length-nopunct": 17.799,
-        "distinct-1-nopunct": 0.25571661329288164,
-        "vocab_size-1-nopunct": 9103,
-        "unique-1-nopunct": 5823,
-        "entropy-1-nopunct": 10.30465221327057,
-        "distinct-2-nopunct": 0.754658015358057,
-        "vocab_size-2-nopunct": 25355,
-        "unique-2-nopunct": 22643,
-        "entropy-2-nopunct": 14.065686145528982,
-        "cond_entropy-2-nopunct": 3.9312125053475153,
-        "distinct-3-nopunct": 0.9467054876890942,
-        "vocab_size-3-nopunct": 29914,
-        "unique-3-nopunct": 28936,
-        "entropy-3-nopunct": 14.807567508967413,
-        "cond_entropy-3-nopunct": 0.7828746994232902,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_val.json",
-        "bertscore": {
-            "precision": 0.9803671125471592,
-            "recall": 0.9781079290807247,
-            "f1": 0.9767519643008709,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 92.3573350364525,
-        "bleurt": 0.407479532747902,
-        "meteor": 0.5598081392749571,
-        "rouge1": {
-            "low": {
-                "precision": 0.9186076657539523,
-                "recall": 0.9007441818751665,
-                "fmeasure": 0.9054112672626903
-            },
-            "mid": {
-                "precision": 0.921373201863288,
-                "recall": 0.9053819887554924,
-                "fmeasure": 0.9087033216777848
-            },
-            "high": {
-                "precision": 0.924303594697932,
-                "recall": 0.9100358611022793,
-                "fmeasure": 0.9121230616860221
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.8299142827470243,
-                "recall": 0.8160040420838535,
-                "fmeasure": 0.8173873354999229
-            },
-            "mid": {
-                "precision": 0.8354071287809826,
-                "recall": 0.822330096652863,
-                "fmeasure": 0.8226022422067096
-            },
-            "high": {
-                "precision": 0.8403901280090676,
-                "recall": 0.8283566193211517,
-                "fmeasure": 0.827817300189139
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.9041723017206181,
-                "recall": 0.8901300478259339,
-                "fmeasure": 0.8924724943685503
-            },
-            "mid": {
-                "precision": 0.9078270546838941,
-                "recall": 0.8953891091304256,
-                "fmeasure": 0.8962682198416931
-            },
-            "high": {
-                "precision": 0.9110552952991138,
-                "recall": 0.9000264472143171,
-                "fmeasure": 0.8998900004754691
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.904285148476159,
-                "recall": 0.8903587018169336,
-                "fmeasure": 0.8923439792283446
-            },
-            "mid": {
-                "precision": 0.9077907819219242,
-                "recall": 0.895207310955638,
-                "fmeasure": 0.8961491909999247
-            },
-            "high": {
-                "precision": 0.9113420146991049,
-                "recall": 0.9001073877185888,
-                "fmeasure": 0.9000008653287621
-            }
-        }
-    },
-    "asset_test": {
-        "predictions_file": "BART-base/asset_test",
-        "N": 359,
-        "msttr-100": 0.7308108108108106,
-        "msttr-100_nopunct": 0.7753030303030303,
-        "total_length": 7443,
-        "mean_pred_length": 20.73259052924791,
-        "distinct-1": 0.37726723095526,
-        "vocab_size-1": 2808,
-        "unique-1": 2073,
-        "entropy-1": 9.253106260925094,
-        "distinct-2": 0.8557312252964426,
-        "vocab_size-2": 6062,
-        "unique-2": 5642,
-        "entropy-2": 12.304829213228372,
-        "cond_entropy-2": 2.801485280436033,
-        "distinct-3": 0.9828996282527881,
-        "vocab_size-3": 6610,
-        "unique-3": 6522,
-        "entropy-3": 12.676795466475253,
-        "cond_entropy-3": 0.3832990364167245,
-        "total_length-nopunct": 6617,
-        "mean_pred_length-nopunct": 18.431754874651812,
-        "distinct-1-nopunct": 0.4226991083572616,
-        "vocab_size-1-nopunct": 2797,
-        "unique-1-nopunct": 2070,
-        "entropy-1-nopunct": 9.621239976864995,
-        "distinct-2-nopunct": 0.8718440396292745,
-        "vocab_size-2-nopunct": 5456,
-        "unique-2-nopunct": 5121,
-        "entropy-2-nopunct": 12.181211866650797,
-        "cond_entropy-2-nopunct": 2.691725280885019,
-        "distinct-3-nopunct": 0.9872859806746906,
-        "vocab_size-3-nopunct": 5824,
-        "unique-3-nopunct": 5762,
-        "entropy-3-nopunct": 12.498540853609581,
-        "cond_entropy-3-nopunct": 0.3369287103832405,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_test.json",
-        "bertscore": {
-            "precision": 0.979149084071263,
-            "recall": 0.9794091950884104,
-            "f1": 0.976999477091606,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 90.7617955707346,
-        "bleurt": 0.3452159263956306,
-        "meteor": 0.5561949137978291,
-        "rouge1": {
-            "low": {
-                "precision": 0.9043759833551044,
-                "recall": 0.8956483074577066,
-                "fmeasure": 0.8954068778725629
-            },
-            "mid": {
-                "precision": 0.9128153452799848,
-                "recall": 0.9069134535008617,
-                "fmeasure": 0.9047208652064955
-            },
-            "high": {
-                "precision": 0.9214380323314115,
-                "recall": 0.9174366229849907,
-                "fmeasure": 0.9134971536660015
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.8156978963141551,
-                "recall": 0.8078208676420343,
-                "fmeasure": 0.805831896880644
-            },
-            "mid": {
-                "precision": 0.8285804313067517,
-                "recall": 0.821086286190732,
-                "fmeasure": 0.8178601487270404
-            },
-            "high": {
-                "precision": 0.8413626735271684,
-                "recall": 0.8356182435986097,
-                "fmeasure": 0.8303946979141228
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.8891813815417271,
-                "recall": 0.8831343584676075,
-                "fmeasure": 0.8820504073772982
-            },
-            "mid": {
-                "precision": 0.8994079123621808,
-                "recall": 0.8950333001070481,
-                "fmeasure": 0.8918573601420212
-            },
-            "high": {
-                "precision": 0.9084374081620571,
-                "recall": 0.9068270490428195,
-                "fmeasure": 0.9013219839135993
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.8901732409837919,
-                "recall": 0.8839104271581094,
-                "fmeasure": 0.8824794640279453
-            },
-            "mid": {
-                "precision": 0.8995005598979429,
-                "recall": 0.8957399598101901,
-                "fmeasure": 0.8920165855587785
-            },
-            "high": {
-                "precision": 0.9088236466459676,
-                "recall": 0.9066080629732312,
-                "fmeasure": 0.9013702232968654
-            }
-        }
-    },
-    "turk_val": {
-        "predictions_file": "BART-base/turk_val",
-        "N": 2000,
-        "msttr-100": 0.7325815217391299,
-        "msttr-100_nopunct": 0.7801212121212124,
-        "total_length": 36834,
-        "mean_pred_length": 18.417,
-        "distinct-1": 0.23337134169517293,
-        "vocab_size-1": 8596,
-        "unique-1": 5541,
-        "entropy-1": 9.809537289848265,
-        "distinct-2": 0.7387035654820003,
-        "vocab_size-2": 25732,
-        "unique-2": 22730,
-        "entropy-2": 14.062530324297404,
-        "cond_entropy-2": 3.9317419551730244,
-        "distinct-3": 0.9420722421879759,
-        "vocab_size-3": 30932,
-        "unique-3": 29824,
-        "entropy-3": 14.852071005909332,
-        "cond_entropy-3": 0.8057181671300075,
-        "total_length-nopunct": 33069,
-        "mean_pred_length-nopunct": 16.5345,
-        "distinct-1-nopunct": 0.2594877377604403,
-        "vocab_size-1-nopunct": 8581,
-        "unique-1-nopunct": 5537,
-        "entropy-1-nopunct": 10.246194918434982,
-        "distinct-2-nopunct": 0.759503041617046,
-        "vocab_size-2-nopunct": 23597,
-        "unique-2-nopunct": 21097,
-        "entropy-2-nopunct": 13.98214911283232,
-        "cond_entropy-2-nopunct": 3.9137133605909167,
-        "distinct-3-nopunct": 0.9462313805084455,
-        "vocab_size-3-nopunct": 27506,
-        "unique-3-nopunct": 26600,
-        "entropy-3-nopunct": 14.686405120301064,
-        "cond_entropy-3-nopunct": 0.7482587661115594,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_val.json",
-        "bertscore": {
-            "precision": 0.9874709931313992,
-            "recall": 0.9654550230801106,
-            "f1": 0.9745724543631077,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 88.82679310202569,
-        "bleurt": 0.35826578067510856,
-        "meteor": 0.5585691171230007,
-        "rouge1": {
-            "low": {
-                "precision": 0.958162602474124,
-                "recall": 0.8634000125143165,
-                "fmeasure": 0.8973499667885632
-            },
-            "mid": {
-                "precision": 0.9610696608959914,
-                "recall": 0.8711474294716401,
-                "fmeasure": 0.9028914136773581
-            },
-            "high": {
-                "precision": 0.9639194887638465,
-                "recall": 0.8786566118453789,
-                "fmeasure": 0.9082527055799346
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.9214211810081705,
-                "recall": 0.8186603853308674,
-                "fmeasure": 0.8538369379033828
-            },
-            "mid": {
-                "precision": 0.9256534830533614,
-                "recall": 0.8272197474362175,
-                "fmeasure": 0.8606509045372804
-            },
-            "high": {
-                "precision": 0.9298910421529064,
-                "recall": 0.8355239972655994,
-                "fmeasure": 0.8672333621263633
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.9554109826683951,
-                "recall": 0.8580835583240856,
-                "fmeasure": 0.8928761161510188
-            },
-            "mid": {
-                "precision": 0.9583970103940755,
-                "recall": 0.8662396090831566,
-                "fmeasure": 0.8986185183435216
-            },
-            "high": {
-                "precision": 0.9611685314797246,
-                "recall": 0.8745310016023661,
-                "fmeasure": 0.9046085418991309
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.9552850744154616,
-                "recall": 0.8579160127226121,
-                "fmeasure": 0.8925476988560376
-            },
-            "mid": {
-                "precision": 0.9583451219667976,
-                "recall": 0.8662226844341729,
-                "fmeasure": 0.8985841819246296
-            },
-            "high": {
-                "precision": 0.961359300870262,
-                "recall": 0.8745364307543156,
-                "fmeasure": 0.9046675469386369
-            }
-        }
-    },
-    "turk_test": {
-        "predictions_file": "BART-base/turk_test",
-        "N": 359,
-        "msttr-100": 0.7327272727272728,
-        "msttr-100_nopunct": 0.7833333333333337,
-        "total_length": 6664,
-        "mean_pred_length": 18.56267409470752,
-        "distinct-1": 0.3903061224489796,
-        "vocab_size-1": 2601,
-        "unique-1": 1966,
-        "entropy-1": 9.17617264921701,
-        "distinct-2": 0.8609040444091991,
-        "vocab_size-2": 5428,
-        "unique-2": 5067,
-        "entropy-2": 12.158387207938352,
-        "cond_entropy-2": 2.699692661947137,
-        "distinct-3": 0.9833501513622603,
-        "vocab_size-3": 5847,
-        "unique-3": 5769,
-        "entropy-3": 12.500784298955898,
-        "cond_entropy-3": 0.353866827165852,
-        "total_length-nopunct": 6011,
-        "mean_pred_length-nopunct": 16.74373259052925,
-        "distinct-1-nopunct": 0.4313758110131426,
-        "vocab_size-1-nopunct": 2593,
-        "unique-1-nopunct": 1962,
-        "entropy-1-nopunct": 9.532619920328617,
-        "distinct-2-nopunct": 0.8724345364472753,
-        "vocab_size-2-nopunct": 4931,
-        "unique-2-nopunct": 4633,
-        "entropy-2-nopunct": 12.039050987624881,
-        "cond_entropy-2-nopunct": 2.646625064241331,
-        "distinct-3-nopunct": 0.9856414131872284,
-        "vocab_size-3-nopunct": 5217,
-        "unique-3-nopunct": 5156,
-        "entropy-3-nopunct": 12.338196267655402,
-        "cond_entropy-3-nopunct": 0.3213421357467891,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_test.json",
-        "bertscore": {
-            "precision": 0.9855757651222782,
-            "recall": 0.9621133774435952,
-            "f1": 0.9711748432980274,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "bleu": 88.44289438038847,
-        "bleurt": 0.32779397273534766,
-        "meteor": 0.5450223977781106,
-        "rouge1": {
-            "low": {
-                "precision": 0.9488370564231738,
-                "recall": 0.835852628385461,
-                "fmeasure": 0.874550914326192
-            },
-            "mid": {
-                "precision": 0.9558449094527192,
-                "recall": 0.857005934588962,
-                "fmeasure": 0.8904629857305019
-            },
-            "high": {
-                "precision": 0.9626350506323141,
-                "recall": 0.8760490515875825,
-                "fmeasure": 0.9040583257474332
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.907999325221607,
-                "recall": 0.7835743600910509,
-                "fmeasure": 0.8243782128140369
-            },
-            "mid": {
-                "precision": 0.9194953582957132,
-                "recall": 0.8063061492008368,
-                "fmeasure": 0.8429297054825571
-            },
-            "high": {
-                "precision": 0.9298340047964726,
-                "recall": 0.8277877560024721,
-                "fmeasure": 0.8580505699040869
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.9450617029379907,
-                "recall": 0.8302060108567223,
-                "fmeasure": 0.8700612047835993
-            },
-            "mid": {
-                "precision": 0.9531081691259384,
-                "recall": 0.8510537295121634,
-                "fmeasure": 0.8848005306632201
-            },
-            "high": {
-                "precision": 0.9605143608087022,
-                "recall": 0.870426795991003,
-                "fmeasure": 0.8990153023787278
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.9454197100824978,
-                "recall": 0.8303157062903801,
-                "fmeasure": 0.8700778166487562
-            },
-            "mid": {
-                "precision": 0.953413353639192,
-                "recall": 0.850913597551702,
-                "fmeasure": 0.8850277813200041
-            },
-            "high": {
-                "precision": 0.9605809819500061,
-                "recall": 0.8712661384837609,
-                "fmeasure": 0.9003859317888141
-            }
-        }
-    },
-    "schema_guided_dstc8_val": {
-        "predictions_file": "facebook/bart-base/schema_guided_dstc8_val",
-        "N": 10000,
-        "msttr-100": 0.560908248378125,
-        "msttr-100_nopunct": 0.5661514028586528,
-        "total_length": 215875,
-        "mean_pred_length": 21.5875,
-        "distinct-1": 0.018047481181239142,
-        "vocab_size-1": 3896,
-        "unique-1": 1776,
-        "entropy-1": 6.9649286688445,
-        "distinct-2": 0.056539162112932605,
-        "vocab_size-2": 11640,
-        "unique-2": 6244,
-        "entropy-2": 9.190988174667936,
-        "cond_entropy-2": 2.260227616576242,
-        "distinct-3": 0.10830376515634971,
-        "vocab_size-3": 21214,
-        "unique-3": 12979,
-        "entropy-3": 10.290204986689124,
-        "cond_entropy-3": 1.170395352519591,
-        "total_length-nopunct": 188905,
-        "mean_pred_length-nopunct": 18.8905,
-        "distinct-1-nopunct": 0.020523543580106402,
-        "vocab_size-1-nopunct": 3877,
-        "unique-1-nopunct": 1774,
-        "entropy-1-nopunct": 7.035470641524298,
-        "distinct-2-nopunct": 0.06828204913222101,
-        "vocab_size-2-nopunct": 12216,
-        "unique-2-nopunct": 6799,
-        "entropy-2-nopunct": 9.194616260891506,
-        "cond_entropy-2-nopunct": 2.1985675545577084,
-        "distinct-3-nopunct": 0.12921464728693643,
-        "vocab_size-3-nopunct": 21825,
-        "unique-3-nopunct": 14027,
-        "entropy-3-nopunct": 10.322241454440165,
-        "cond_entropy-3-nopunct": 1.232914252057372,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_val.json",
-        "rouge1": {
-            "low": {
-                "precision": 0.11957314647068827,
-                "recall": 0.17335805432959941,
-                "fmeasure": 0.13331919154409475
-            },
-            "mid": {
-                "precision": 0.1220301739300525,
-                "recall": 0.17684535166940918,
-                "fmeasure": 0.1359491250064292
-            },
-            "high": {
-                "precision": 0.12446784175283512,
-                "recall": 0.1802406378239884,
-                "fmeasure": 0.1386146200184436
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.039216557238278195,
-                "recall": 0.054265856345668564,
-                "fmeasure": 0.04303388685521221
-            },
-            "mid": {
-                "precision": 0.04056330738880154,
-                "recall": 0.056287232955873,
-                "fmeasure": 0.04459805407777111
-            },
-            "high": {
-                "precision": 0.04201171767349541,
-                "recall": 0.0586398067788426,
-                "fmeasure": 0.04620064125026923
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.09890073120291458,
-                "recall": 0.146425254646569,
-                "fmeasure": 0.11091294557976825
-            },
-            "mid": {
-                "precision": 0.10103324042736794,
-                "recall": 0.1496696214010717,
-                "fmeasure": 0.11329130341397087
-            },
-            "high": {
-                "precision": 0.10316497600595827,
-                "recall": 0.15285360894018915,
-                "fmeasure": 0.1156164563340487
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.09888493865902491,
-                "recall": 0.1462984726387089,
-                "fmeasure": 0.11090345175245579
-            },
-            "mid": {
-                "precision": 0.10101995248198006,
-                "recall": 0.14960698421744986,
-                "fmeasure": 0.1132859586224923
-            },
-            "high": {
-                "precision": 0.1031434991312363,
-                "recall": 0.15301324456783374,
-                "fmeasure": 0.11567879764629314
-            }
-        },
-        "local_recall": {
-            "1": 0.1734504055361262
-        },
-        "bertscore": {
-            "precision": 0.6793586553573608,
-            "recall": 0.7029805033326149,
-            "f1": 0.6905143902301788,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "meteor": 0.08953122013005822,
-        "bleu": 2.7060522327601486,
-        "bleurt": -1.355084460696578
-    },
-    "schema_guided_dstc8_test": {
-        "predictions_file": "facebook/bart-base/schema_guided_dstc8_test",
-        "N": 10000,
-        "msttr-100": 0.5647942672214465,
-        "msttr-100_nopunct": 0.5694717379820391,
-        "total_length": 216348,
-        "mean_pred_length": 21.6348,
-        "distinct-1": 0.019084992696951207,
-        "vocab_size-1": 4129,
-        "unique-1": 1869,
-        "entropy-1": 7.017718741110831,
-        "distinct-2": 0.06178397658324772,
-        "vocab_size-2": 12749,
-        "unique-2": 7109,
-        "entropy-2": 9.309375612963958,
-        "cond_entropy-2": 2.322656603795227,
-        "distinct-3": 0.11728665430765783,
-        "vocab_size-3": 23029,
-        "unique-3": 14615,
-        "entropy-3": 10.419406515478544,
-        "cond_entropy-3": 1.1776354906687159,
-        "total_length-nopunct": 189360,
-        "mean_pred_length-nopunct": 18.936,
-        "distinct-1-nopunct": 0.021709970426700465,
-        "vocab_size-1-nopunct": 4111,
-        "unique-1-nopunct": 1867,
-        "entropy-1-nopunct": 7.092722422567902,
-        "distinct-2-nopunct": 0.07382917038358608,
-        "vocab_size-2-nopunct": 13242,
-        "unique-2-nopunct": 7643,
-        "entropy-2-nopunct": 9.314524253948209,
-        "cond_entropy-2-nopunct": 2.260092135031312,
-        "distinct-3-nopunct": 0.13856872933396316,
-        "vocab_size-3-nopunct": 23468,
-        "unique-3-nopunct": 15491,
-        "entropy-3-nopunct": 10.45860509113981,
-        "cond_entropy-3-nopunct": 1.2437123135564756,
-        "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_test.json",
-        "rouge1": {
-            "low": {
-                "precision": 0.12735289517456222,
-                "recall": 0.17540154399143365,
-                "fmeasure": 0.14016781486561616
-            },
-            "mid": {
-                "precision": 0.12999126906349712,
-                "recall": 0.17906563416741583,
-                "fmeasure": 0.1430421667979162
-            },
-            "high": {
-                "precision": 0.13261536583650707,
-                "recall": 0.1826679358748901,
-                "fmeasure": 0.1458766430164784
-            }
-        },
-        "rouge2": {
-            "low": {
-                "precision": 0.04335271329203665,
-                "recall": 0.05577662450392429,
-                "fmeasure": 0.046778190350336576
-            },
-            "mid": {
-                "precision": 0.04491017080965319,
-                "recall": 0.05793933104408107,
-                "fmeasure": 0.04845732222489414
-            },
-            "high": {
-                "precision": 0.04631502257775007,
-                "recall": 0.060047873229283434,
-                "fmeasure": 0.04997730304883769
-            }
-        },
-        "rougeL": {
-            "low": {
-                "precision": 0.10494520977521515,
-                "recall": 0.14710475718598487,
-                "fmeasure": 0.1162326756005578
-            },
-            "mid": {
-                "precision": 0.10704287992496847,
-                "recall": 0.14994620454992996,
-                "fmeasure": 0.11845215206366305
-            },
-            "high": {
-                "precision": 0.10920199405424548,
-                "recall": 0.15268299899396187,
-                "fmeasure": 0.12054231985031222
-            }
-        },
-        "rougeLsum": {
-            "low": {
-                "precision": 0.10493569189727986,
-                "recall": 0.14709922420707586,
-                "fmeasure": 0.11618925859662875
-            },
-            "mid": {
-                "precision": 0.10703311965961632,
-                "recall": 0.14990034277713063,
-                "fmeasure": 0.11839910088812969
-            },
-            "high": {
-                "precision": 0.10914687813209092,
-                "recall": 0.15280855573866484,
-                "fmeasure": 0.12065619448664992
-            }
-        },
-        "local_recall": {
-            "1": 0.17904399676533578
-        },
-        "bertscore": {
-            "precision": 0.6831498369932175,
-            "recall": 0.7048932949721813,
-            "f1": 0.693436753231287,
-            "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
-        },
-        "meteor": 0.09287759452815893,
-        "bleu": 3.1879908870305074,
-        "bleurt": -1.3505873433589934
+    "rougeLsum": {
+      "precision": 0.039482346050371674,
+      "recall": 0.4283942343143735,
+      "fmeasure": 0.07128841380981625
     }
+  },
+  "dart_test": {
+    "predictions_file": "BART-base/dart_test",
+    "N": 1667,
+    "msttr-100": 0.5683684210526315,
+    "msttr-100_nopunct": 0.6064457831325298,
+    "total_length": 19010,
+    "mean_pred_length": 11.40371925614877,
+    "distinct-1": 0.1863229879011047,
+    "vocab_size-1": 3542,
+    "unique-1": 1979,
+    "entropy-1": 8.817621220685282,
+    "distinct-2": 0.4559764746583636,
+    "vocab_size-2": 7908,
+    "unique-2": 5562,
+    "entropy-2": 11.905561381966091,
+    "cond_entropy-2": 2.598899302336619,
+    "distinct-3": 0.6211405970910947,
+    "vocab_size-3": 9737,
+    "unique-3": 7721,
+    "entropy-3": 12.652182630654961,
+    "cond_entropy-3": 0.7903381652844214,
+    "total_length-nopunct": 16601,
+    "mean_pred_length-nopunct": 9.95860827834433,
+    "distinct-1-nopunct": 0.21263779290404192,
+    "vocab_size-1-nopunct": 3530,
+    "unique-1-nopunct": 1978,
+    "entropy-1-nopunct": 9.265023154116028,
+    "distinct-2-nopunct": 0.45788134458283114,
+    "vocab_size-2-nopunct": 6838,
+    "unique-2-nopunct": 4842,
+    "entropy-2-nopunct": 11.671452927184863,
+    "cond_entropy-2-nopunct": 2.6519943195290376,
+    "distinct-3-nopunct": 0.6159644230044471,
+    "vocab_size-3-nopunct": 8172,
+    "unique-3-nopunct": 6472,
+    "entropy-3-nopunct": 12.381655248796601,
+    "cond_entropy-3-nopunct": 0.8384610158810094,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/dart_test.json",
+    "bertscore": {
+      "precision": 0.7662479000028622,
+      "recall": 0.7619863926255924,
+      "f1": 0.7623021840226815,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 0.013652474251188533,
+    "bleurt": -0.7563462481651305,
+    "meteor": 0.06748677307062144,
+    "rouge1": {
+      "precision": 0.03039794660650265,
+      "recall": 0.3003505555286692,
+      "fmeasure": 0.05458793229108963
+    },
+    "rouge2": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "fmeasure": 0.0
+    },
+    "rougeL": {
+      "precision": 0.03034062664354286,
+      "recall": 0.29934301175332995,
+      "fmeasure": 0.054495003923120046
+    },
+    "rougeLsum": {
+      "precision": 0.030275409515809783,
+      "recall": 0.29930136687037967,
+      "fmeasure": 0.05439679027720577
+    }
+  },
+  "e2e_nlg_cleaned_val": {
+    "predictions_file": "BART-base/e2e_nlg_cleaned_val",
+    "N": 1484,
+    "msttr-100": 0.3168807339449539,
+    "msttr-100_nopunct": 0.3091749174917492,
+    "total_length": 32719,
+    "mean_pred_length": 22.047843665768195,
+    "distinct-1": 0.0045539289098077565,
+    "vocab_size-1": 149,
+    "unique-1": 16,
+    "entropy-1": 5.696884798849018,
+    "distinct-2": 0.015335360973267168,
+    "vocab_size-2": 479,
+    "unique-2": 104,
+    "entropy-2": 7.200386426815249,
+    "cond_entropy-2": 1.4593695925518755,
+    "distinct-3": 0.031057779570434606,
+    "vocab_size-3": 924,
+    "unique-3": 239,
+    "entropy-3": 8.18178330000959,
+    "cond_entropy-3": 1.0207752515921562,
+    "total_length-nopunct": 30308,
+    "mean_pred_length-nopunct": 20.423180592991915,
+    "distinct-1-nopunct": 0.004850204566451102,
+    "vocab_size-1-nopunct": 147,
+    "unique-1-nopunct": 16,
+    "entropy-1-nopunct": 5.7039933572963655,
+    "distinct-2-nopunct": 0.016132389675270607,
+    "vocab_size-2-nopunct": 465,
+    "unique-2-nopunct": 103,
+    "entropy-2-nopunct": 7.145255139368888,
+    "cond_entropy-2-nopunct": 1.4817836127567336,
+    "distinct-3-nopunct": 0.03328456474030724,
+    "vocab_size-3-nopunct": 910,
+    "unique-3-nopunct": 234,
+    "entropy-3-nopunct": 8.18171217471279,
+    "cond_entropy-3-nopunct": 1.039002883293187,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_val.json",
+    "bertscore": {
+      "precision": 0.9315784072699251,
+      "recall": 0.9129194901236948,
+      "f1": 0.9213050235956506,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 43.5361716055409,
+    "bleurt": 0.19769242321460398,
+    "meteor": 0.3733094447268074,
+    "rouge1": {
+      "precision": 0.7882322116788911,
+      "recall": 0.7082734792077523,
+      "fmeasure": 0.7363788343538655
+    },
+    "rouge2": {
+      "precision": 0.5202871731433427,
+      "recall": 0.46576656070699657,
+      "fmeasure": 0.4849296307014282
+    },
+    "rougeL": {
+      "precision": 0.6166071473785666,
+      "recall": 0.5573462239417295,
+      "fmeasure": 0.5775606203475045
+    },
+    "rougeLsum": {
+      "precision": 0.6166319311563824,
+      "recall": 0.5571531043940221,
+      "fmeasure": 0.5775212966354315
+    }
+  },
+  "e2e_nlg_cleaned_test": {
+    "predictions_file": "BART-base/e2e_nlg_cleaned_test",
+    "N": 1847,
+    "msttr-100": 0.3142928039702233,
+    "msttr-100_nopunct": 0.30627968337730893,
+    "total_length": 40333,
+    "mean_pred_length": 21.837033026529507,
+    "distinct-1": 0.0035950710336449063,
+    "vocab_size-1": 145,
+    "unique-1": 14,
+    "entropy-1": 5.748522945848384,
+    "distinct-2": 0.012991737255105752,
+    "vocab_size-2": 500,
+    "unique-2": 84,
+    "entropy-2": 7.258085256172367,
+    "cond_entropy-2": 1.4812629279295741,
+    "distinct-3": 0.029722426922132155,
+    "vocab_size-3": 1089,
+    "unique-3": 248,
+    "entropy-3": 8.22379320677389,
+    "cond_entropy-3": 1.0034920740401831,
+    "total_length-nopunct": 37947,
+    "mean_pred_length-nopunct": 20.545208446128857,
+    "distinct-1-nopunct": 0.0037684138403562863,
+    "vocab_size-1-nopunct": 143,
+    "unique-1-nopunct": 14,
+    "entropy-1-nopunct": 5.749961794264996,
+    "distinct-2-nopunct": 0.013407202216066482,
+    "vocab_size-2-nopunct": 484,
+    "unique-2-nopunct": 87,
+    "entropy-2-nopunct": 7.216445078741522,
+    "cond_entropy-2-nopunct": 1.515178844285775,
+    "distinct-3-nopunct": 0.03103377806323534,
+    "vocab_size-3-nopunct": 1063,
+    "unique-3-nopunct": 242,
+    "entropy-3-nopunct": 8.231612572518655,
+    "cond_entropy-3-nopunct": 1.0186559027913107,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/e2e_nlg_cleaned_test.json",
+    "bertscore": {
+      "precision": 0.9306912531901774,
+      "recall": 0.9039688628302049,
+      "f1": 0.9162631358207078,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 38.087305425391996,
+    "bleurt": 0.14754907978212053,
+    "meteor": 0.35441527638379605,
+    "rouge1": {
+      "precision": 0.8037529241692565,
+      "recall": 0.6803590370256907,
+      "fmeasure": 0.7275474211209463
+    },
+    "rouge2": {
+      "precision": 0.5126275180662675,
+      "recall": 0.43070174087498725,
+      "fmeasure": 0.4618769445684562
+    },
+    "rougeL": {
+      "precision": 0.6056642659257092,
+      "recall": 0.5132926736201205,
+      "fmeasure": 0.5482357496698025
+    },
+    "rougeLsum": {
+      "precision": 0.6055960701828264,
+      "recall": 0.51346826563723,
+      "fmeasure": 0.5482881144831555
+    }
+  },
+  "common_gen_val": {
+    "predictions_file": "BART-base/common_gen_val",
+    "N": 993,
+    "msttr-100": 0.5734615384615384,
+    "msttr-100_nopunct": 0.5998947368421053,
+    "total_length": 10453,
+    "mean_pred_length": 10.526686807653576,
+    "distinct-1": 0.11757390222902515,
+    "vocab_size-1": 1229,
+    "unique-1": 583,
+    "entropy-1": 7.120317340520041,
+    "distinct-2": 0.40993657505285414,
+    "vocab_size-2": 3878,
+    "unique-2": 2675,
+    "entropy-2": 10.660509963607119,
+    "cond_entropy-2": 3.2699832604186554,
+    "distinct-3": 0.668831935750561,
+    "vocab_size-3": 5663,
+    "unique-3": 4617,
+    "entropy-3": 11.973558314216708,
+    "cond_entropy-3": 1.3987390716645012,
+    "total_length-nopunct": 9557,
+    "mean_pred_length-nopunct": 9.624370594159114,
+    "distinct-1-nopunct": 0.1283875693209166,
+    "vocab_size-1-nopunct": 1227,
+    "unique-1-nopunct": 583,
+    "entropy-1-nopunct": 7.302553819568953,
+    "distinct-2-nopunct": 0.40728631480616534,
+    "vocab_size-2-nopunct": 3488,
+    "unique-2-nopunct": 2446,
+    "entropy-2-nopunct": 10.438228705681178,
+    "cond_entropy-2-nopunct": 3.482874340073613,
+    "distinct-3-nopunct": 0.6781138555012548,
+    "vocab_size-3-nopunct": 5134,
+    "unique-3-nopunct": 4234,
+    "entropy-3-nopunct": 11.828741183967551,
+    "cond_entropy-3-nopunct": 1.4837254969769638,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/common_gen_val.json",
+    "bertscore": {
+      "precision": 0.8898786380211753,
+      "recall": 0.8867729039710814,
+      "f1": 0.8870824460176543,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 27.536596881496543,
+    "bleurt": -0.4000667599035645,
+    "meteor": 0.3006561470958473,
+    "rouge1": {
+      "precision": 0.668547285135483,
+      "recall": 0.624921554566907,
+      "fmeasure": 0.6352768915902834
+    },
+    "rouge2": {
+      "precision": 0.34768052556699924,
+      "recall": 0.316060673604796,
+      "fmeasure": 0.32461682864020724
+    },
+    "rougeL": {
+      "precision": 0.5828887033965404,
+      "recall": 0.5394608554052243,
+      "fmeasure": 0.5513156067933876
+    },
+    "rougeLsum": {
+      "precision": 0.5827295278458372,
+      "recall": 0.5391980264146027,
+      "fmeasure": 0.5509461613714848
+    }
+  },
+  "common_gen_test": {
+    "predictions_file": "BART-base/common_gen_test",
+    "N": 1497,
+    "msttr-100": 0.595934065934066,
+    "msttr-100_nopunct": 0.6185798816568047,
+    "total_length": 18273,
+    "mean_pred_length": 12.206412825651302,
+    "distinct-1": 0.10786406173042193,
+    "vocab_size-1": 1971,
+    "unique-1": 902,
+    "entropy-1": 7.52406931752512,
+    "distinct-2": 0.40438721983786363,
+    "vocab_size-2": 6784,
+    "unique-2": 4717,
+    "entropy-2": 11.344075539526678,
+    "cond_entropy-2": 3.596508114637927,
+    "distinct-3": 0.6789711368545062,
+    "vocab_size-3": 10374,
+    "unique-3": 8698,
+    "entropy-3": 12.79493899603635,
+    "cond_entropy-3": 1.5281412696719778,
+    "total_length-nopunct": 16903,
+    "mean_pred_length-nopunct": 11.29124916499666,
+    "distinct-1-nopunct": 0.11648819736141514,
+    "vocab_size-1-nopunct": 1969,
+    "unique-1-nopunct": 902,
+    "entropy-1-nopunct": 7.6873397083769905,
+    "distinct-2-nopunct": 0.4036738932883292,
+    "vocab_size-2-nopunct": 6219,
+    "unique-2-nopunct": 4378,
+    "entropy-2-nopunct": 11.161306371995122,
+    "cond_entropy-2-nopunct": 3.783970866079448,
+    "distinct-3-nopunct": 0.6853116687037171,
+    "vocab_size-3-nopunct": 9532,
+    "unique-3-nopunct": 8049,
+    "entropy-3-nopunct": 12.666137058009072,
+    "cond_entropy-3-nopunct": 1.6025092873953128
+  },
+  "asset_val": {
+    "predictions_file": "BART-base/asset_val",
+    "N": 2000,
+    "msttr-100": 0.7299501246882796,
+    "msttr-100_nopunct": 0.7762816901408457,
+    "total_length": 40193,
+    "mean_pred_length": 20.0965,
+    "distinct-1": 0.2269051824944642,
+    "vocab_size-1": 9120,
+    "unique-1": 5826,
+    "entropy-1": 9.845799703028232,
+    "distinct-2": 0.7277249757809022,
+    "vocab_size-2": 27794,
+    "unique-2": 24479,
+    "entropy-2": 14.13771286498008,
+    "cond_entropy-2": 4.001820367164006,
+    "distinct-3": 0.9380543198961125,
+    "vocab_size-3": 33951,
+    "unique-3": 32690,
+    "entropy-3": 14.977210008053811,
+    "cond_entropy-3": 0.8561333657589959,
+    "total_length-nopunct": 35598,
+    "mean_pred_length-nopunct": 17.799,
+    "distinct-1-nopunct": 0.25571661329288164,
+    "vocab_size-1-nopunct": 9103,
+    "unique-1-nopunct": 5823,
+    "entropy-1-nopunct": 10.30465221327057,
+    "distinct-2-nopunct": 0.754658015358057,
+    "vocab_size-2-nopunct": 25355,
+    "unique-2-nopunct": 22643,
+    "entropy-2-nopunct": 14.065686145528982,
+    "cond_entropy-2-nopunct": 3.9312125053475153,
+    "distinct-3-nopunct": 0.9467054876890942,
+    "vocab_size-3-nopunct": 29914,
+    "unique-3-nopunct": 28936,
+    "entropy-3-nopunct": 14.807567508967413,
+    "cond_entropy-3-nopunct": 0.7828746994232902,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_val.json",
+    "bertscore": {
+      "precision": 0.9803671125471592,
+      "recall": 0.9781079290807247,
+      "f1": 0.9767519643008709,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 92.3573350364525,
+    "bleurt": 0.407479532747902,
+    "meteor": 0.5598081392749571,
+    "rouge1": {
+      "precision": 0.921373201863288,
+      "recall": 0.9053819887554924,
+      "fmeasure": 0.9087033216777848
+    },
+    "rouge2": {
+      "precision": 0.8354071287809826,
+      "recall": 0.822330096652863,
+      "fmeasure": 0.8226022422067096
+    },
+    "rougeL": {
+      "precision": 0.9078270546838941,
+      "recall": 0.8953891091304256,
+      "fmeasure": 0.8962682198416931
+    },
+    "rougeLsum": {
+      "precision": 0.9077907819219242,
+      "recall": 0.895207310955638,
+      "fmeasure": 0.8961491909999247
+    }
+  },
+  "asset_test": {
+    "predictions_file": "BART-base/asset_test",
+    "N": 359,
+    "msttr-100": 0.7308108108108106,
+    "msttr-100_nopunct": 0.7753030303030303,
+    "total_length": 7443,
+    "mean_pred_length": 20.73259052924791,
+    "distinct-1": 0.37726723095526,
+    "vocab_size-1": 2808,
+    "unique-1": 2073,
+    "entropy-1": 9.253106260925094,
+    "distinct-2": 0.8557312252964426,
+    "vocab_size-2": 6062,
+    "unique-2": 5642,
+    "entropy-2": 12.304829213228372,
+    "cond_entropy-2": 2.801485280436033,
+    "distinct-3": 0.9828996282527881,
+    "vocab_size-3": 6610,
+    "unique-3": 6522,
+    "entropy-3": 12.676795466475253,
+    "cond_entropy-3": 0.3832990364167245,
+    "total_length-nopunct": 6617,
+    "mean_pred_length-nopunct": 18.431754874651812,
+    "distinct-1-nopunct": 0.4226991083572616,
+    "vocab_size-1-nopunct": 2797,
+    "unique-1-nopunct": 2070,
+    "entropy-1-nopunct": 9.621239976864995,
+    "distinct-2-nopunct": 0.8718440396292745,
+    "vocab_size-2-nopunct": 5456,
+    "unique-2-nopunct": 5121,
+    "entropy-2-nopunct": 12.181211866650797,
+    "cond_entropy-2-nopunct": 2.691725280885019,
+    "distinct-3-nopunct": 0.9872859806746906,
+    "vocab_size-3-nopunct": 5824,
+    "unique-3-nopunct": 5762,
+    "entropy-3-nopunct": 12.498540853609581,
+    "cond_entropy-3-nopunct": 0.3369287103832405,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/asset_test.json",
+    "bertscore": {
+      "precision": 0.979149084071263,
+      "recall": 0.9794091950884104,
+      "f1": 0.976999477091606,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 90.7617955707346,
+    "bleurt": 0.3452159263956306,
+    "meteor": 0.5561949137978291,
+    "rouge1": {
+      "precision": 0.9128153452799848,
+      "recall": 0.9069134535008617,
+      "fmeasure": 0.9047208652064955
+    },
+    "rouge2": {
+      "precision": 0.8285804313067517,
+      "recall": 0.821086286190732,
+      "fmeasure": 0.8178601487270404
+    },
+    "rougeL": {
+      "precision": 0.8994079123621808,
+      "recall": 0.8950333001070481,
+      "fmeasure": 0.8918573601420212
+    },
+    "rougeLsum": {
+      "precision": 0.8995005598979429,
+      "recall": 0.8957399598101901,
+      "fmeasure": 0.8920165855587785
+    }
+  },
+  "turk_val": {
+    "predictions_file": "BART-base/turk_val",
+    "N": 2000,
+    "msttr-100": 0.7325815217391299,
+    "msttr-100_nopunct": 0.7801212121212124,
+    "total_length": 36834,
+    "mean_pred_length": 18.417,
+    "distinct-1": 0.23337134169517293,
+    "vocab_size-1": 8596,
+    "unique-1": 5541,
+    "entropy-1": 9.809537289848265,
+    "distinct-2": 0.7387035654820003,
+    "vocab_size-2": 25732,
+    "unique-2": 22730,
+    "entropy-2": 14.062530324297404,
+    "cond_entropy-2": 3.9317419551730244,
+    "distinct-3": 0.9420722421879759,
+    "vocab_size-3": 30932,
+    "unique-3": 29824,
+    "entropy-3": 14.852071005909332,
+    "cond_entropy-3": 0.8057181671300075,
+    "total_length-nopunct": 33069,
+    "mean_pred_length-nopunct": 16.5345,
+    "distinct-1-nopunct": 0.2594877377604403,
+    "vocab_size-1-nopunct": 8581,
+    "unique-1-nopunct": 5537,
+    "entropy-1-nopunct": 10.246194918434982,
+    "distinct-2-nopunct": 0.759503041617046,
+    "vocab_size-2-nopunct": 23597,
+    "unique-2-nopunct": 21097,
+    "entropy-2-nopunct": 13.98214911283232,
+    "cond_entropy-2-nopunct": 3.9137133605909167,
+    "distinct-3-nopunct": 0.9462313805084455,
+    "vocab_size-3-nopunct": 27506,
+    "unique-3-nopunct": 26600,
+    "entropy-3-nopunct": 14.686405120301064,
+    "cond_entropy-3-nopunct": 0.7482587661115594,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_val.json",
+    "bertscore": {
+      "precision": 0.9874709931313992,
+      "recall": 0.9654550230801106,
+      "f1": 0.9745724543631077,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 88.82679310202569,
+    "bleurt": 0.35826578067510856,
+    "meteor": 0.5585691171230007,
+    "rouge1": {
+      "precision": 0.9610696608959914,
+      "recall": 0.8711474294716401,
+      "fmeasure": 0.9028914136773581
+    },
+    "rouge2": {
+      "precision": 0.9256534830533614,
+      "recall": 0.8272197474362175,
+      "fmeasure": 0.8606509045372804
+    },
+    "rougeL": {
+      "precision": 0.9583970103940755,
+      "recall": 0.8662396090831566,
+      "fmeasure": 0.8986185183435216
+    },
+    "rougeLsum": {
+      "precision": 0.9583451219667976,
+      "recall": 0.8662226844341729,
+      "fmeasure": 0.8985841819246296
+    }
+  },
+  "turk_test": {
+    "predictions_file": "BART-base/turk_test",
+    "N": 359,
+    "msttr-100": 0.7327272727272728,
+    "msttr-100_nopunct": 0.7833333333333337,
+    "total_length": 6664,
+    "mean_pred_length": 18.56267409470752,
+    "distinct-1": 0.3903061224489796,
+    "vocab_size-1": 2601,
+    "unique-1": 1966,
+    "entropy-1": 9.17617264921701,
+    "distinct-2": 0.8609040444091991,
+    "vocab_size-2": 5428,
+    "unique-2": 5067,
+    "entropy-2": 12.158387207938352,
+    "cond_entropy-2": 2.699692661947137,
+    "distinct-3": 0.9833501513622603,
+    "vocab_size-3": 5847,
+    "unique-3": 5769,
+    "entropy-3": 12.500784298955898,
+    "cond_entropy-3": 0.353866827165852,
+    "total_length-nopunct": 6011,
+    "mean_pred_length-nopunct": 16.74373259052925,
+    "distinct-1-nopunct": 0.4313758110131426,
+    "vocab_size-1-nopunct": 2593,
+    "unique-1-nopunct": 1962,
+    "entropy-1-nopunct": 9.532619920328617,
+    "distinct-2-nopunct": 0.8724345364472753,
+    "vocab_size-2-nopunct": 4931,
+    "unique-2-nopunct": 4633,
+    "entropy-2-nopunct": 12.039050987624881,
+    "cond_entropy-2-nopunct": 2.646625064241331,
+    "distinct-3-nopunct": 0.9856414131872284,
+    "vocab_size-3-nopunct": 5217,
+    "unique-3-nopunct": 5156,
+    "entropy-3-nopunct": 12.338196267655402,
+    "cond_entropy-3-nopunct": 0.3213421357467891,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/turk_test.json",
+    "bertscore": {
+      "precision": 0.9855757651222782,
+      "recall": 0.9621133774435952,
+      "f1": 0.9711748432980274,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "bleu": 88.44289438038847,
+    "bleurt": 0.32779397273534766,
+    "meteor": 0.5450223977781106,
+    "rouge1": {
+      "precision": 0.9558449094527192,
+      "recall": 0.857005934588962,
+      "fmeasure": 0.8904629857305019
+    },
+    "rouge2": {
+      "precision": 0.9194953582957132,
+      "recall": 0.8063061492008368,
+      "fmeasure": 0.8429297054825571
+    },
+    "rougeL": {
+      "precision": 0.9531081691259384,
+      "recall": 0.8510537295121634,
+      "fmeasure": 0.8848005306632201
+    },
+    "rougeLsum": {
+      "precision": 0.953413353639192,
+      "recall": 0.850913597551702,
+      "fmeasure": 0.8850277813200041
+    }
+  },
+  "schema_guided_dstc8_val": {
+    "predictions_file": "facebook/bart-base/schema_guided_dstc8_val",
+    "N": 10000,
+    "msttr-100": 0.560908248378125,
+    "msttr-100_nopunct": 0.5661514028586528,
+    "total_length": 215875,
+    "mean_pred_length": 21.5875,
+    "distinct-1": 0.018047481181239142,
+    "vocab_size-1": 3896,
+    "unique-1": 1776,
+    "entropy-1": 6.9649286688445,
+    "distinct-2": 0.056539162112932605,
+    "vocab_size-2": 11640,
+    "unique-2": 6244,
+    "entropy-2": 9.190988174667936,
+    "cond_entropy-2": 2.260227616576242,
+    "distinct-3": 0.10830376515634971,
+    "vocab_size-3": 21214,
+    "unique-3": 12979,
+    "entropy-3": 10.290204986689124,
+    "cond_entropy-3": 1.170395352519591,
+    "total_length-nopunct": 188905,
+    "mean_pred_length-nopunct": 18.8905,
+    "distinct-1-nopunct": 0.020523543580106402,
+    "vocab_size-1-nopunct": 3877,
+    "unique-1-nopunct": 1774,
+    "entropy-1-nopunct": 7.035470641524298,
+    "distinct-2-nopunct": 0.06828204913222101,
+    "vocab_size-2-nopunct": 12216,
+    "unique-2-nopunct": 6799,
+    "entropy-2-nopunct": 9.194616260891506,
+    "cond_entropy-2-nopunct": 2.1985675545577084,
+    "distinct-3-nopunct": 0.12921464728693643,
+    "vocab_size-3-nopunct": 21825,
+    "unique-3-nopunct": 14027,
+    "entropy-3-nopunct": 10.322241454440165,
+    "cond_entropy-3-nopunct": 1.232914252057372,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_val.json",
+    "rouge1": {
+      "precision": 0.1220301739300525,
+      "recall": 0.17684535166940918,
+      "fmeasure": 0.1359491250064292
+    },
+    "rouge2": {
+      "precision": 0.04056330738880154,
+      "recall": 0.056287232955873,
+      "fmeasure": 0.04459805407777111
+    },
+    "rougeL": {
+      "precision": 0.10103324042736794,
+      "recall": 0.1496696214010717,
+      "fmeasure": 0.11329130341397087
+    },
+    "rougeLsum": {
+      "precision": 0.10101995248198006,
+      "recall": 0.14960698421744986,
+      "fmeasure": 0.1132859586224923
+    },
+    "local_recall": {
+      "1": 0.1734504055361262
+    },
+    "bertscore": {
+      "precision": 0.6793586553573608,
+      "recall": 0.7029805033326149,
+      "f1": 0.6905143902301788,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "meteor": 0.08953122013005822,
+    "bleu": 2.7060522327601486,
+    "bleurt": -1.355084460696578
+  },
+  "schema_guided_dstc8_test": {
+    "predictions_file": "facebook/bart-base/schema_guided_dstc8_test",
+    "N": 10000,
+    "msttr-100": 0.5647942672214465,
+    "msttr-100_nopunct": 0.5694717379820391,
+    "total_length": 216348,
+    "mean_pred_length": 21.6348,
+    "distinct-1": 0.019084992696951207,
+    "vocab_size-1": 4129,
+    "unique-1": 1869,
+    "entropy-1": 7.017718741110831,
+    "distinct-2": 0.06178397658324772,
+    "vocab_size-2": 12749,
+    "unique-2": 7109,
+    "entropy-2": 9.309375612963958,
+    "cond_entropy-2": 2.322656603795227,
+    "distinct-3": 0.11728665430765783,
+    "vocab_size-3": 23029,
+    "unique-3": 14615,
+    "entropy-3": 10.419406515478544,
+    "cond_entropy-3": 1.1776354906687159,
+    "total_length-nopunct": 189360,
+    "mean_pred_length-nopunct": 18.936,
+    "distinct-1-nopunct": 0.021709970426700465,
+    "vocab_size-1-nopunct": 4111,
+    "unique-1-nopunct": 1867,
+    "entropy-1-nopunct": 7.092722422567902,
+    "distinct-2-nopunct": 0.07382917038358608,
+    "vocab_size-2-nopunct": 13242,
+    "unique-2-nopunct": 7643,
+    "entropy-2-nopunct": 9.314524253948209,
+    "cond_entropy-2-nopunct": 2.260092135031312,
+    "distinct-3-nopunct": 0.13856872933396316,
+    "vocab_size-3-nopunct": 23468,
+    "unique-3-nopunct": 15491,
+    "entropy-3-nopunct": 10.45860509113981,
+    "cond_entropy-3-nopunct": 1.2437123135564756,
+    "references_file": "/lnet/spec/work/people/odusek/gem-metrics/data/references/schema_guided_dstc8_test.json",
+    "rouge1": {
+      "precision": 0.12999126906349712,
+      "recall": 0.17906563416741583,
+      "fmeasure": 0.1430421667979162
+    },
+    "rouge2": {
+      "precision": 0.04491017080965319,
+      "recall": 0.05793933104408107,
+      "fmeasure": 0.04845732222489414
+    },
+    "rougeL": {
+      "precision": 0.10704287992496847,
+      "recall": 0.14994620454992996,
+      "fmeasure": 0.11845215206366305
+    },
+    "rougeLsum": {
+      "precision": 0.10703311965961632,
+      "recall": 0.14990034277713063,
+      "fmeasure": 0.11839910088812969
+    },
+    "local_recall": {
+      "1": 0.17904399676533578
+    },
+    "bertscore": {
+      "precision": 0.6831498369932175,
+      "recall": 0.7048932949721813,
+      "f1": 0.693436753231287,
+      "hashcode": "distilbert-base-uncased_L5_no-idf_version=0.3.7(hug_trans=4.2.2)"
+    },
+    "meteor": 0.09287759452815893,
+    "bleu": 3.1879908870305074,
+    "bleurt": -1.3505873433589934
+  }
 }

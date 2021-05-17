@@ -18,7 +18,6 @@ interface Table_Props {
   tableMode: number,
   columnFilter: string,
   // highlighted: string[],
-  subset: string,
   // onDatasetSelect: (datasets: string[]) => void,
   // onDatasetHover: (dataset: string, hover: boolean) => void,
   // onFilterChange: (datasets: string[]) => void
@@ -33,7 +32,6 @@ interface ChallengeName {
 export class TableTask extends React.PureComponent<Table_Props, any> {
 
   static defaultProps = {
-    subset: "val",
     onDatasetHover: () => {
     },
     onFilterChange: () => {
@@ -101,7 +99,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
 
     // TODO: can be simplified/removed with new data format
     const extractValue = (dim: string, v: any): number => {
-      if (dim.startsWith("rouge")) return v.mid.fmeasure;
+      if (dim.startsWith("rouge")) return v.fmeasure;
       if (dim === "bertscore") return v.f1;
       return v;
     }
@@ -115,8 +113,8 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
         // ignore non-submissions:
         if (datasubset == "submission" || typeof scoreData == "string") return;
         // only accept either val or test set:
-        if (datasubset.endsWith("_" + nextProps.subset)) {
-          const dataset = datasubset.slice(0, datasubset.length - nextProps.subset.length - 1)
+        if (datasubset) {
+          const dataset = datasubset.slice(0, datasubset.length - 1)
           if (challengeResults[dataset]) {
             measureNames.map(dim => {
               const value = dim in scoreData ? extractValue(dim, scoreData[dim]) : null;
