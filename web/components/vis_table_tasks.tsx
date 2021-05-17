@@ -114,7 +114,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
         if (datasubset == "submission" || typeof scoreData == "string") return;
         // only accept either val or test set:
         if (datasubset) {
-          const dataset = datasubset.slice(0, datasubset.length - 1)
+          const dataset = datasubset;
           if (challengeResults[dataset]) {
             measureNames.map(dim => {
               const value = dim in scoreData ? extractValue(dim, scoreData[dim]) : null;
