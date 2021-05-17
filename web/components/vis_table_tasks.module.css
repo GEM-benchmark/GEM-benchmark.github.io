@@ -1,0 +1,46 @@
+.header {
+    text-align: start;
+    max-width: 35px;
+    /*height: 50px;*/
+}
+
+.td_measure {
+    text-align: start;
+    padding: 2px;
+    border-bottom: #cccccc 1px solid;
+    /*border-collapse: collapse;*/
+}
+
+.measureBar{
+    fill: lightgray;
+}
+
+
+
+.measure:hover {
+    color: red;
+
+}
+
+.measure:hover .measureBar {
+    fill: red!important;
+}
+
+
+.challenge {
+    background-color: #cccccc;
+    text-align: center;
+}
+
+.tr_measure {
+    /*border: #eeeeee solid 3px;*/
+    /*padding: 5px;*/
+}
+
+.rot {
+    white-space: nowrap;
+    transform: translate(0, 120%) rotate(-30deg);
+    transform-origin: 0 0;
+}
+
+
