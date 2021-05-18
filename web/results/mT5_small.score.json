@@ -2413,7 +2413,6 @@
         },
         "sari": 67.47525,
         "bleurt": -0.59484,
-        "meteor": -99,
         "bertscore": {
             "precision": 0.82766,
             "recall": 0.81974,
@@ -2683,7 +2682,6 @@
         },
         "sari": 66.58505,
         "bleurt": -0.57233,
-        "meteor": -99,
         "bertscore": {
             "precision": 0.82726,
             "recall": 0.8206,
@@ -3057,7 +3055,6 @@
         },
         "sari": 64.91793,
         "bleurt": -0.63129,
-        "meteor": -99,
         "bertscore": {
             "precision": 0.81909,
             "recall": 0.76992,
@@ -3963,7 +3960,6 @@
         },
         "sari": 64.69102,
         "bleurt": -0.63666,
-        "meteor": -99,
         "bertscore": {
             "precision": 0.82011,
             "recall": 0.77163,
