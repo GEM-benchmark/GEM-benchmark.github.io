@@ -51,7 +51,16 @@ export class PCP
 
   static getDerivedStateFromProps(nextProps: PCP_Props, prevState) {
 
-    if (prevState.datasetMatrix.length>0) return {}
+    if (prevState.datasetMatrix.length > 0) return {}
+
+    // console.log(nextProps.config, "--- nextProps.config");
+
+    const all_ds = new Set(Object.entries(nextProps.config.challenges)
+      .reduce((acc, curr) => {
+        return [...curr[1].datasets, ...acc]
+      }, [] as string[]))
+
+    // console.log(all_ds,"--- all_ds");
 
     const possibleMetaMeasures = Object.entries(nextProps.config.measures).sort();
     let measureNames = []
@@ -76,7 +85,7 @@ export class PCP
       const sn = submission.submission_name
       Object.entries(submission).forEach(([datasubset, scoreData]) => {
         if (datasubset == "submission" || typeof scoreData == "string") return;
-        if (datasubset) {
+        if (all_ds.has(datasubset)) {
           datasetNames.push(sn + "." + datasubset);
           datasetMatrix.push(
             measureNames.map(dim => {

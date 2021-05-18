@@ -39,7 +39,7 @@
 
 .rot {
     white-space: nowrap;
-    transform: translate(0, 120%) rotate(-30deg);
+    transform: translate(0, 120%) rotate(-20deg);
     transform-origin: 0 0;
 }
 

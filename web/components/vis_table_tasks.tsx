@@ -79,6 +79,8 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
     const challenges = nextProps.config.challenges;
     const challengeNames = [] as ChallengeName[];
 
+    const all_ds = new Set();
+
     const challengeResults = {};
     Object.entries(challenges)
       .forEach(([challenge, ch_data]) => {
@@ -89,6 +91,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
             ds,
             rs: i === 0 ? ch_data.datasets.length : -1
           })
+          all_ds.add(ds);
           const measures = {}
           measureNames.forEach(mn => measures[mn] = [])
           challengeResults[ds] = measures
@@ -113,7 +116,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
         // ignore non-submissions:
         if (datasubset == "submission" || typeof scoreData == "string") return;
         // only accept either val or test set:
-        if (datasubset) {
+        if (all_ds.has(datasubset)) {
           const dataset = datasubset;
           if (challengeResults[dataset]) {
             measureNames.map(dim => {
@@ -168,7 +171,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
               key={mn}
               style={{color: this.props.cm.getColorForMeasure(mn)}}>
             <div className={style.rot}>
-              {mn}
+              {this.props.config.common_metrics[mn].show_as}
             </div>
           </th>)}
 
