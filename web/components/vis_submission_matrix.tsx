@@ -8,7 +8,6 @@ import * as d3 from "d3";
 interface SubMatProps {
   config: EvalConfiguration,
   scores: Scores[],
-  subset: string,
   submissionFilter: string[] | null,
   onHover: (s: string[], hovered: boolean) => void,
   highlighted: string[],
@@ -35,13 +34,13 @@ export class SubmissionMatrix
 
   static defaultProps = {
     submissionFilter: null,
-    onHover: (sn, hov) => console.log(sn, hov, "--- sn,hov"),
+    // onHover: (sn, hov) => console.log(sn, hov, "--- sn,hov"),
     highlighted: []
   }
 
   static getDerivedStateFromProps(props: SubMatProps, oldStates) {
 
-    const dsFullName = (ds) => `${ds}_${props.subset}`
+    const dsFullName = (ds) => `${ds}`
     const datasetHierarchy = Object.keys(props.config.challenges)
       .sort()
       .map(task => {
@@ -64,7 +63,7 @@ export class SubmissionMatrix
 
 
   render() {
-    console.log(this.state.datasetHierarchy, "--- this.state.datasetHierarchy");
+    // console.log(this.state.datasetHierarchy, "--- this.state.datasetHierarchy");
     const filters = this.props.submissionFilter;
     const highligted = this.props.highlighted
     const submissionClasses = (s, ds) => {

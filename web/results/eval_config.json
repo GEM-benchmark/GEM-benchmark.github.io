@@ -114,39 +114,58 @@
       "citation": "",
       "description": "An advanced lexical similarity metric also including stemming and synonymy matching.",
       "show_as": "Meteor"
+    },
+    "nubia": {
+      "citation": "",
+      "description": "A metric combining multiple aspects like entailment and similarity.",
+      "show_as": "NUBIA"
+    },
+    "sari": {
+      "citation": "",
+      "description": "A simplification metric.",
+      "show_as": "SARI"
+    },
+    "nist": {
+      "citation": "http://dl.acm.org/citation.cfm?id=1289189.1289273",
+      "description": "NIST is an alternative to BLEU with slightly different calculation.",
+      "show_as": "NIST"
     }
   },
   "challenges": {
     "data2text": {
       "datasets": [
-        "common_gen",
-        "dart",
-        "e2e_nlg_cleaned",
-        "totto",
-        "cs_restaurants",
-        "webnlg_en",
-        "webnlg_ru"
+        "common_gen_val",
+        "dart_val",
+        "e2e_nlg_val",
+        "totto_val",
+        "cs_restaurants_val",
+        "web_nlg_en_val",
+        "web_nlg_ru_val"
       ],
       "metrics": []
     },
     "summarization": {
       "datasets": [
-        "mlsum_de",
-        "mlsum_es",
-        "xsum"
+        "mlsum_de_val",
+        "mlsum_es_val",
+        "xsum_val",
+        "wiki_lingua_turkish_tr_val",
+        "wiki_lingua_vietnamese_vi_val",
+        "wiki_lingua_spanish_es_val",
+        "wiki_lingua_russian_ru_val"
       ],
       "metrics": []
     },
     "dialog": {
       "datasets": [
-        "schema_guided_dstc8"
+        "schema_guided_dialog_val"
       ],
       "metrics": []
     },
     "simplification": {
       "datasets": [
-        "asset",
-        "turk"
+        "wiki_auto_asset_turk_test_asset",
+        "wiki_auto_asset_turk_test_turk"
       ],
       "metrics": []
     }
@@ -156,33 +175,32 @@
       "msttr-100",
       "distinct-1",
       "distinct-2",
-      "distinct-3",
       "unique-1",
       "unique-2",
-      "unique-3",
       "entropy-1",
       "entropy-2",
-      "entropy-3",
-      "cond_entropy-2",
-      "cond_entropy-3"
+      "cond_entropy-2"
     ],
     "lexical": [
       "rouge1",
       "rouge2",
       "rougeL",
       "bleu",
-      "meteor"
+      "meteor",
+      "sari",
+      "nist"
     ],
     "semantic": [
       "bertscore",
       "bleurt"
     ],
-    "faithful": [],
+    "faithful": [
+      "nubia"
+    ],
     "descriptive": [
       "mean_pred_length",
       "vocab_size-1",
-      "vocab_size-2",
-      "vocab_size-3"
+      "vocab_size-2"
     ]
   }
 }

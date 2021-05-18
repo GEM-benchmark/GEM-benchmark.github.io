@@ -52,7 +52,6 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
             <SubmissionMatrix
               config={this.props.evalConfig}
               scores={this.props.scores}
-              subset={"val"}
               submissionFilter={this.state.submissionFilter}
               onHover={(ds, hover) => {
                 this.setState({highlighted: hover ? ds : []})
@@ -77,7 +76,6 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
           <PCP cm={this.props.cm}
                config={this.props.evalConfig}
                scores={this.props.scores}
-               subset={"val"}
                onFilterChange={(list) => {
                  this.setState({submissionFilter: list})
                }}
@@ -121,7 +119,6 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
           <TableTask cm={this.props.cm}
                      config={this.props.evalConfig}
                      scores={this.props.scores}
-                     subset={"val"}
                      tableMode={this.state.tableMode}
                      columnFilter={this.state.columnFilter}
             // onFilterChange={(list) => {
