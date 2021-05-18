@@ -1,16 +1,16 @@
 {
   "common_metrics": {
-    "rouge1": {
+    "rouge1.fmeasure": {
       "citation": "",
       "description": "ROUGE score focusing on unigrams.",
       "show_as": "ROUGE-1"
     },
-    "rouge2": {
+    "rouge2.fmeasure": {
       "citation": "",
       "description": "ROUGE score focusing on bigrams.",
       "show_as": "ROUGE-2"
     },
-    "rougeL": {
+    "rougeL.fmeasure": {
       "citation": "",
       "description": "ROUGE score focusing on longest common subsequence.",
       "show_as": "ROUGE-L"
@@ -95,7 +95,7 @@
       "description": "Language model style conditional entropy -- N-grams conditioned on N-1-grams",
       "show_as": "Trigram Conditional Entropy"
     },
-    "bertscore": {
+    "bertscore.f1": {
       "citation": "",
       "description": "A BERT-based similarity measure between reference and generation.",
       "show_as": "BERTScore"
@@ -115,10 +115,25 @@
       "description": "An advanced lexical similarity metric also including stemming and synonymy matching.",
       "show_as": "Meteor"
     },
-    "nubia": {
+    "nubia.semantic_relation": {
       "citation": "",
-      "description": "A metric combining multiple aspects like entailment and similarity.",
-      "show_as": "NUBIA"
+      "description": "A sentence similarity score on a scale of 5 describing how close in meaning 2 sentences are.",
+      "show_as": "NUBIA (Similarity)"
+    },
+    "nubia.logical_agreement": {
+      "citation": "",
+      "description": "Likelihood (out of 100) of 2 sentences being in logical agreement.",
+      "show_as": "NUBIA (Entailment)"
+    },
+    "nubia.grammar_hyp": {
+      "citation": "",
+      "description": "Language Model Perplexity on Hypothesis sentence.",
+      "show_as": "NUBIA (Grammaticality)"
+    },
+    "nubia.nubia_score": {
+      "citation": "",
+      "description": "A metric combining all other aspects, normalized to [0,1].",
+      "show_as": "NUBIA (Overall)"
     },
     "sari": {
       "citation": "",
@@ -129,6 +144,16 @@
       "citation": "http://dl.acm.org/citation.cfm?id=1289189.1289273",
       "description": "NIST is an alternative to BLEU with slightly different calculation.",
       "show_as": "NIST"
+    },
+    "local_recall.1": {
+      "citation": "https://www.aclweb.org/anthology/C18-1147/",
+      "description": "LocalRecall checks the extent to which a model produces the same tokens as the reference data.",
+      "show_as": "Local Unigram Recall"
+    },
+    "local_recall.2": {
+      "citation": "https://www.aclweb.org/anthology/C18-1147/",
+      "description": "LocalRecall checks the extent to which a model produces the same tokens as the reference data.",
+      "show_as": "Local Bigram Recall"
     }
   },
   "challenges": {
@@ -182,20 +207,25 @@
       "cond_entropy-2"
     ],
     "lexical": [
-      "rouge1",
-      "rouge2",
-      "rougeL",
+      "rouge1.fmeasure",
+      "rouge2.fmeasure",
+      "rougeL.fmeasure",
       "bleu",
       "meteor",
       "sari",
-      "nist"
+      "nist",
+      "local_recall.1",
+      "local_recall.2"
     ],
     "semantic": [
-      "bertscore",
+      "bertscore.f1",
       "bleurt"
     ],
     "faithful": [
-      "nubia"
+      "nubia.semantic_relation",
+      "nubia.logical_agreement",
+      "nubia.grammar_hyp",
+      "nubia.nubia_score"
     ],
     "descriptive": [
       "mean_pred_length",
