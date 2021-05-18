@@ -34,7 +34,7 @@ export class SubmissionMatrix
 
   static defaultProps = {
     submissionFilter: null,
-    onHover: (sn, hov) => console.log(sn, hov, "--- sn,hov"),
+    // onHover: (sn, hov) => console.log(sn, hov, "--- sn,hov"),
     highlighted: []
   }
 

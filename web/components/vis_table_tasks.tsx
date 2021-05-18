@@ -64,7 +64,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
       && (prev.columnFilter === nextProps.columnFilter)) return {}
 
     const columnFilter = nextProps.columnFilter
-    console.log(" STATE--- ");
+    // console.log(" STATE--- ");
 
     const possibleMetaMeasures = Object.entries(nextProps.config.measures).sort();
     let measureNames = []
@@ -104,6 +104,7 @@ export class TableTask extends React.PureComponent<Table_Props, any> {
     const extractValue = (dim: string, v: any): number => {
       if (dim.startsWith("rouge")) return v.fmeasure;
       if (dim === "bertscore") return v.f1;
+      if (dim === "nubia") return v.nubia_score;
       return v;
     }
 
