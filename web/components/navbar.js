@@ -61,6 +61,11 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className={styles.navitem}>
+              <Link href="/model_cards">
+                <a>Model Cards</a>
+              </Link>
+            </li>
+            <li className={styles.navitem}>
               <Link href="/get_started">
                 <a>How To</a>
               </Link>
