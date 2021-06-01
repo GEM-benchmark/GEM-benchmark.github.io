@@ -351,7 +351,47 @@ Neither the dataset as published or the annotation process involves the collecti
 
 ## Changes to the Original Dataset for GEM
 
-No changes. The [version 3.0](https://gitlab.com/shimorina/webnlg-dataset/-/tree/master/release_v3.0) of the dataset is used.
+No changes to the main content of the dataset. The [version 3.0](https://gitlab.com/shimorina/webnlg-dataset/-/tree/master/release_v3.0) of the dataset is used.
+
+We did identify different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently 4 selections that we have made:
+
+Selection 1: input length. This selection corresponds to the number of predicates in the input. By comparing inputs of different lengths, we can see to what extent NLG systems are able to handle different input sizes.  The table below provides the relevant frequencies. Please be aware that comparing selections with fewer than 100 items may result in unreliable comparisons.
+
+| Input length   | Frequency English | Frequency Russian |
+|----------------|-------------------|-------------------|
+|              1 |               369 |               254 |
+|              2 |               349 |               200 |
+|              3 |               350 |               214 |
+|              4 |               305 |               214 |
+|              5 |               213 |               159 |
+|              6 |               114 |                32 |
+|              7 |                79 |                29 |
+
+
+Selection 2: seen/unseen single predicates. This selection corresponds to the inputs with only one predicate. We compare which predicates are seen/unseen in the training data. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there is only one example of unseen single predicates.
+
+| _ in training | Frequency English | Frequency Russian |
+|---------------|-------------------|-------------------|
+| Seen          |               297 |               253 |
+| Unseen        |                72 |                 1 |
+
+
+Selection 3: seen/unseen combinations of predicates. This selection checks for all combinations of predicates whether that combination has been seen in the training data. For example: if the combination of predicates A and B is seen, that means that there is an input in the training data consisting of two triples, where one triple uses predicate A and the other uses predicate B. If the combination is unseen, then the converse is true. The table below provides the relevant frequencies.
+
+| _ in training | Frequency English | Frequency Russian |
+|---------------|-------------------|-------------------|
+| unseen        |              1295 |               354 |
+| seen          |               115 |               494 |
+
+
+Selection 4: seen/unseen arguments. This selection checks for all input whether or not all arg1s and arg2s in the input have been seen during the training phase. For this selection, *Seen* is the default. Only if all arg1 instances for a particular input are unseen, do we count the arg1s of the input as unseen. The same holds for arg2. So "seen" here really means that at least some of the arg1s or arg2s are seen in the input. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there are very few examples of unseen combinations of predicates.
+
+| Arguments seen in training? | Frequency English | Frequency Russian |
+|-----------------------------|-------------------|-------------------|
+| both_seen                   |               518 |              1075 |
+| both_unseen                 |              1177 |                 4 |
+| arg1_unseen                 |                56 |                19 |
+| arg2_unseen                 |                28 |                 4 |
 
 ## Considerations for Using the Data
 
