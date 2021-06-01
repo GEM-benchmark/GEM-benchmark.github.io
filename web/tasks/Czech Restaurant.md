@@ -167,7 +167,7 @@ Particularly for input size 4 and 5, there may not be enough data to draw reliab
 | 5            |                9 |
 
 The second comparison is based on the type of act. Again we caution against comparing the different groups that have relatively few items.
-It is probably OK to compare `inform' and `?request', but the other acts are all low-frequent.
+It is probably OK to compare `inform` and `?request`, but the other acts are all low-frequent.
 
 | Act               | Frequency |
 |-------------------|-----------|
