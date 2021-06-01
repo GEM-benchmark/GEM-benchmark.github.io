@@ -151,7 +151,32 @@ None present.
 
 ## Changes to the Original Dataset for GEM
 
-No changes.
+For this dataset, we identified different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently two selections that we have made:
+
+The first comparison is based on input size: the number of predicates differs between different inputs, ranging from 1 to 5.
+The table below provides an indication of the distribution of inputs with a particular length.
+It is clear from the table that this distribution is not balanced, and comparisions between items should be done with caution. 
+Particularly for input size 4 and 5, there may not be enough data to draw reliable conclusions.
+
+| Input length | Number of inputs |
+|--------------|------------------|
+| 1            |              183 |
+| 2            |              267 |
+| 3            |              297 |
+| 4            |               86 |
+| 5            |                9 |
+
+The second comparison is based on the type of act. Again we caution against comparing the different groups that have relatively few items.
+It is probably OK to compare `inform` and `?request`, but the other acts are all low-frequent.
+
+| Act               | Frequency |
+|-------------------|-----------|
+| ?request          |       149 |
+| inform            |       609 |
+| ?confirm          |        22 |
+| inform_only_match |        16 |
+| inform_no_match   |        34 |
+| ?select           |        12 |
 
 ## Considerations for Using the Data
 
@@ -169,7 +194,7 @@ To ensure consistency of translation, the data always uses formal/polite address
 
 ### Other Known Limitations
 
-N/A
+The test set may lead users to over-estimate the performance of their NLG systems with respect to their generalisability, because there are no unseen restaurants or addresses in the test set. This is something we will look into for future editions of the GEM shared task.
 
 ## Getting started with in-depth research on the task
 
