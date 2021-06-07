@@ -353,9 +353,23 @@ Neither the dataset as published or the annotation process involves the collecti
 
 No changes to the main content of the dataset. The [version 3.0](https://gitlab.com/shimorina/webnlg-dataset/-/tree/master/release_v3.0) of the dataset is used.
 
-We did identify different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently 4 selections that we have made:
+### Special test sets
 
-Selection 1: input length. This selection corresponds to the number of predicates in the input. By comparing inputs of different lengths, we can see to what extent NLG systems are able to handle different input sizes.  The table below provides the relevant frequencies. Please be aware that comparing selections with fewer than 100 items may result in unreliable comparisons.
+23 special test sets for WebNLG were added to the GEM evaluation suite, 12 for English and 11 for Russian.
+
+#### Data shift
+
+For both languages, we created subsets of the training and development sets of ~500 randomly selected inputs each. The inputs were sampled proportionnally from each category.
+
+#### Transformations
+
+Two types of transformations have been applied to WebNLG: (i) input scrambling (English and Russian) and (ii) numerical value replacements (English); in both cases, a subset of about 500 inputs was randomly selected. For (i), the order of the triples was randomly reassigned (each triple kept the same Subject-Property-Object internal order). For (ii), the change was performed respecting the format of the current cardinal value (e.g., alpha, integer, or floating-point) and replacing it with a new random value. The new number is lower-bounded between zero and upper bounded to be within to the highest power of 10 unit for the given value (e.g., replacing 54 would result in a random value between 0-100). Floating values maintain the degree of precision.
+
+#### Subpopulations
+
+For both languages, we did identify different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently 8 selections that we have made:
+
+Selection 1 (size): input length. This selection corresponds to the number of predicates in the input. By comparing inputs of different lengths, we can see to what extent NLG systems are able to handle different input sizes.  The table below provides the relevant frequencies. Please be aware that comparing selections with fewer than 100 items may result in unreliable comparisons.
 
 | Input length   | Frequency English | Frequency Russian |
 |----------------|-------------------|-------------------|
@@ -368,7 +382,7 @@ Selection 1: input length. This selection corresponds to the number of predicate
 |              7 |                79 |                29 |
 
 
-Selection 2: seen/unseen single predicates. This selection corresponds to the inputs with only one predicate. We compare which predicates are seen/unseen in the training data. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there is only one example of unseen single predicates.
+Selection 2 (frequency): seen/unseen single predicates. This selection corresponds to the inputs with only one predicate. We compare which predicates are seen/unseen in the training data. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there is only one example of unseen single predicates.
 
 | _ in training | Frequency English | Frequency Russian |
 |---------------|-------------------|-------------------|
@@ -376,7 +390,7 @@ Selection 2: seen/unseen single predicates. This selection corresponds to the in
 | Unseen        |                72 |                 1 |
 
 
-Selection 3: seen/unseen combinations of predicates. This selection checks for all combinations of predicates whether that combination has been seen in the training data. For example: if the combination of predicates A and B is seen, that means that there is an input in the training data consisting of two triples, where one triple uses predicate A and the other uses predicate B. If the combination is unseen, then the converse is true. The table below provides the relevant frequencies.
+Selection 3 (frequency): seen/unseen combinations of predicates. This selection checks for all combinations of predicates whether that combination has been seen in the training data. For example: if the combination of predicates A and B is seen, that means that there is an input in the training data consisting of two triples, where one triple uses predicate A and the other uses predicate B. If the combination is unseen, then the converse is true. The table below provides the relevant frequencies.
 
 | _ in training | Frequency English | Frequency Russian |
 |---------------|-------------------|-------------------|
@@ -384,7 +398,7 @@ Selection 3: seen/unseen combinations of predicates. This selection checks for a
 | seen          |               115 |               494 |
 
 
-Selection 4: seen/unseen arguments. This selection checks for all input whether or not all arg1s and arg2s in the input have been seen during the training phase. For this selection, *Seen* is the default. Only if all arg1 instances for a particular input are unseen, do we count the arg1s of the input as unseen. The same holds for arg2. So "seen" here really means that at least some of the arg1s or arg2s are seen in the input. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there are very few examples of unseen combinations of predicates.
+Selection 4 (frequency): seen/unseen arguments. This selection checks for all input whether or not all arg1s and arg2s in the input have been seen during the training phase. For this selection, *Seen* is the default. Only if all arg1 instances for a particular input are unseen, do we count the arg1s of the input as unseen. The same holds for arg2. So "seen" here really means that at least some of the arg1s or arg2s are seen in the input. The table below provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian, since there are very few examples of unseen combinations of predicates.
 
 | Arguments seen in training? | Frequency English | Frequency Russian |
 |-----------------------------|-------------------|-------------------|
@@ -392,6 +406,39 @@ Selection 4: seen/unseen arguments. This selection checks for all input whether 
 | both_unseen                 |              1177 |                 4 |
 | arg1_unseen                 |                56 |                19 |
 | arg2_unseen                 |                28 |                 4 |
+
+Selection 5 (shape): repeated subjects. For this selection, the subsets are based on the times a subject is repeated in the input; it only takes into account the maximum number of times a subject is repeated, that is, if in one input a subject appears 3 times and a different subject 2 times, this input will be in the "3_subjects_same' split. Unique_subjects means all subjects are different. 
+
+| Max num. of repeated subjects | Frequency English | Frequency Russian |
+|-------------------------------|-------------------|-------------------|
+| unique_subjects               |               453 |               339 |
+| 2_subjects_same               |               414 |               316 |
+| 3_subjects_same               |               382 |               217 |
+| 4_subjects_same               |               251 |               143 |
+| 5_subjects_same               |               158 |                56 |
+| 6_subjects_same               |                80 |                19 |
+| 7_subjects_same               |                41 |                12 |
+
+Selection 6 (shape): repeated objects. Same as for subjects above, but for objects. There are much less cases of repeated objects, so there are only two categories for this selection, unique_objects and some_objects_repeated; for the latter, we have up to 3 coreferring objects in English, and XXX in Russian.
+
+| Max num. of repeated objects | Frequency English | Frequency Russian |
+|------------------------------|-------------------|-------------------|
+| unique_objects               |              1654 |              1099 |
+| some_objects_same            |               125 |                 3 |
+
+Selection 7 (shape): repeated properties. Same as for objects above, but for properties; up to two properties can be the same in English, up to XXX in Russian.
+
+| Max num. of repeated properties | Frequency English | Frequency Russian |
+|---------------------------------|-------------------|-------------------|
+| unique_properties               |              1510 |               986 |
+| some_properties_same            |               269 |               116 |
+
+Selection 8 (shape): entities that appear both as subject and object. For this selection, we grouped together the inputs in which no entity is found as both subject and object, and on the other side inputs in which one or more entity/ies appear both as subject and as object. We found up to two such entities per input in English, and up to XXX in Russian.
+
+| Max num. of objects and subjects in common | Frequency English | Frequency Russian |
+|--------------------------------------------|-------------------|-------------------|
+| unique_properties                          |              1322 |               642 |
+| some_properties_same                       |               457 |               460 |
 
 ## Considerations for Using the Data
 
