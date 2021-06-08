@@ -170,6 +170,23 @@ The concepts are restricted to verbs, adjectives, and common nouns, and no perso
 
 If the originally published dataset was modified in any way for GEM, please record the changes here. These could include data cleaning, exclusion of certain languages, changes to the data splits, additional challenge examples, among others.
 
+### Special test sets
+4 challenge sets for CommenGen were added to the GEM evaluation suite.
+
+#### Data shift
+We created subsets of the training and development sets of ~500 randomly selected inputs each.
+
+#### Transformations
+We applied input scrambling on a subset of 500 randomly selected test instances; the order of the concepts was randomly reassigned.
+
+#### Subpopulations
+We created a subpopulation based on input length, taking into account the number of concepts the input test structures. By comparing inputs of different lengths, we can see to what extent systems are able to handle different input sizes
+
+| Concept number | Frequency English |
+|----------------|-------------------|
+| 4              |               747 |
+| 5              |               750 |
+
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
