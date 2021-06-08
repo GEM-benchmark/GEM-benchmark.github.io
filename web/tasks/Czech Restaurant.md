@@ -151,7 +151,20 @@ None present.
 
 ## Changes to the Original Dataset for GEM
 
-For this dataset, we identified different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently two selections that we have made:
+### Special test sets
+
+5 challenge sets for the Czech Restaurants dataset were added to the GEM evaluation suite.
+
+#### Data shift
+
+We created subsets of the training and development sets of 500 randomly selected inputs each.
+
+#### Transformations
+We applied input scrambling on a subset of 500 randomly selected test instances; the order of the input dialogue acts was randomly reassigned.
+
+#### Subpopulations
+
+We identified different subsets of the test set that we could compare to each other so that we would have a better understanding of the results. There are currently two selections that we have made:
 
 The first comparison is based on input size: the number of predicates differs between different inputs, ranging from 1 to 5.
 The table below provides an indication of the distribution of inputs with a particular length.
