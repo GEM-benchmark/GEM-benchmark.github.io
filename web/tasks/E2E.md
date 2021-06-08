@@ -156,6 +156,32 @@ None present.
 
 Using the cleaned version of E2E, otherwise none.
 
+### Special test sets
+
+4 special test sets for E2E were added to the GEM evaluation suite.
+
+#### Data shift
+
+We created subsets of the training and development sets of ~500 randomly selected inputs each.
+
+#### Transformations
+We applied input scrambling on a subset of 500 randomly selected test instances; the order of the input properties was randomly reassigned.
+
+#### Subpopulations
+For the input size, we created subpopulations based on the number of restaurant properties in the input.
+
+| Input length  | Frequency English |
+|---------------|-------------------|
+| 2             |                 5 |
+| 3             |               120 |
+| 4             |               389 |
+| 5             |               737 |
+| 6             |              1187 |
+| 7             |              1406 |
+| 8             |               774 |
+| 9             |                73 |
+| 10            |                 2 |
+
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
