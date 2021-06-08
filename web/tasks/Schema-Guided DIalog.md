@@ -213,6 +213,46 @@ The SGD dataset does not use identity categories and does not contain sensitive 
 
 We are focusing on the response-generation part of the dataset and thus reformatted the dataset to treat the service agent utterances as the targets to be generated and the previous customer utterance and the agent's dialog act as the input. We additionally reformat the dialog acts to directly conform to the format described in this [paper](https://arxiv.org/abs/2004.15006). 
 
+### Special test sets
+
+9 challenge sets for Schema-Guided Dialog were added to the GEM evaluation suite.
+
+#### Data shift
+
+We created subsets of the training and development sets of 500 randomly selected inputs each.
+
+#### Transformations
+
+We applied 5 transformations to respectively 5 sets of 500 randomly selected inputs: (i) back-translation, (ii)-(iii) introduction of typographical errors, using Butterfingers with two thresholds (0.02 and 0.05), resulting in two sets with different amounts of typos introduced (there are more typos with the 0.05 threshold than with the 0.02 one), (iv) removal of final punctuations (when any), and (v) input scrambling, for which the order of the dialogue acts was randomly reassigned.
+
+#### Subpopulations
+For the input size, we created subpopulations based on the number of dialogue acts in the input.
+
+| DA number     | Frequency English |
+|---------------|-------------------|
+| 1             |              5049 |
+| 2             |              2517 |
+| 3             |              1328 |
+| 4             |               469 |
+| 5             |               335 |
+| 6             |               256 |
+| 7             |                46 |
+
+We also split the test data according to the type of dialogue act, represented by cardinal numbers in the dataset.
+
+| DA type      | Frequency English |
+|--------------|-------------------|
+| 2            |              1397 |
+| 3            |               983 |
+| 4            |              1027 |
+| 5            |               958 |
+| 9            |                72 |
+| 10           |              1024 |
+| 11           |              1246 |
+| 12           |               500 |
+| 13           |              2078 |
+| 15           |               715 |
+
 
 ## Considerations for Using the Data
 
