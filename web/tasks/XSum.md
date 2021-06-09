@@ -127,7 +127,7 @@ Models agnostic to such noises are vulnerable to hallucinations (Wiseman et al.,
 
 #### Data shift
 
-We compiled time-shifted test data in the form of new articles for the second semester of 2020 with Covid19-related keywords. We collect new articles from the Wayback archived BBC articles and used the scripts provided for the re-creation of the [XSum dataset](https://github.com/EdinburghNLP/XSum). The new challenge test set contains 401 instances.
+We compiled time-shifted test data in the form of new articles for the second semester of 2020 with Covid19-related keywords. We collected new articles from the Wayback archived BBC articles and used the scripts provided for the re-creation of the [XSum dataset](https://github.com/EdinburghNLP/XSum). The new challenge test set contains 401 instances.
 
 
 
