@@ -164,7 +164,8 @@ The modifications done to the original dataset are the following:
 
 #### Data shift
 
-For both selected languages (German and Spanish), we compiled time-shifted test data in the form of new articles from the second semester of 2020 with Covid19-related keywords. We collected new articles URLs from the same German and Spanish outlets as the original MLSUL datasets (El Pais and Süddeutsche Zeitung). We used the scripts provided for the re-creation of the [MLSUM datasets](https://github.com/recitalAI/MLSUM). 
+For both selected languages (German and Spanish), we compiled time-shifted test data in the form of new articles from the second semester of 2020 with Covid19-related keywords. We collected articles from the same German and Spanish outlets as the original MLSUM datasets (El Pais and Süddeutsche Zeitung). We used the scripts provided for the re-creation of the [MLSUM datasets](https://github.com/recitalAI/MLSUM). The new challenge test set for German contains 5058 instances and the Spanish one 1938.
+
 
 
 ## Considerations for Using the Data
