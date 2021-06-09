@@ -159,6 +159,14 @@ The modifications done to the original dataset are the following:
 - Manually removal of article-summary pairs for which the summary is not related to the article.
 - Removal of article-summary pairs written in a different language (detected using the [langdetect](https://pypi.org/project/langdetect/) library).
 
+
+### Special test sets
+
+#### Data shift
+
+For both selected languages (German and Spanish), we compiled time-shifted test data in the form of new articles from the second semester of 2020 with Covid19-related keywords. We collected new articles URLs from the same German and Spanish outlets as the original MLSUL datasets (El Pais and Süddeutsche Zeitung). We used the scripts provided for the re-creation of the [MLSUM datasets](https://github.com/recitalAI/MLSUM). 
+
+
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
