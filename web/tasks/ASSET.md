@@ -148,6 +148,21 @@ Since the dataset is created from English Wikipedia (August 22, 2009 version), a
 
 No change is made to the original dataset.
 
+
+
+### Special test sets
+
+#### Subpopulations
+
+The goal was to assess performance when simplifying source sentences with different syntactic structure and complexity. To this end, we split the original test set according to syntactic complexity of the source sentences. To characterize sentence syntactic complexity, we use the 8-level developmental level (d-level) scale proposed by [Covington et al. (2006)](https://www.researchgate.net/publication/254033869_How_complex_is_that_sentence_A_proposed_revision_of_the_Rosenberg_and_Abbeduto_D-Level_Scale) and the implementation of [Lu, Xiaofei (2010)](https://www.jbe-platform.com/content/journals/10.1075/ijcl.15.4.02lu).
+We thus split the original test set into 8 subsets corresponding to the 8 d-levels assigned to source sentences. We obtain the following number of instances per level and average d-level of the dataset: 
+
+| Total nb. sentences | Level0 | Level1 | Level2 | Level3 | Level4 | Level5 | Level6  | Level7  | Mean Level  |
+|---------------|-------------------|-------------------|
+|359    | 166    | 0   | 58  | 32  | 5  | 28  | 7  | 63  | 2.38 |
+
+
+
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset

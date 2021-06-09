@@ -121,6 +121,18 @@ XSum gold summaries often have divergence issues between the source and target t
 
 Models agnostic to such noises are vulnerable to hallucinations (Wiseman et al., 2017; Dhingra et al., 2019, Maynez et al., 2020).  For GEM, we have finetuned a BERT-based classifier on 500 document and gold summary pairs, manually annotated for faithfulness (Maynez et al., 2020) and excluded all document-summary pairs from the original XSum dataset where the classifier was not confident (p(faithfull) > 0.8) whether the summary is faithful to the document or not. As a result, we ended up with 23206 training, 1117 validation and 1166 test instances. 
 
+
+
+### Special test sets
+
+#### Data shift
+
+We compiled time-shifted test data in the form of new articles for the second semester of 2020 with Covid19-related keywords. We collect new articles from the Wayback archived BBC articles and used the scripts provided for the re-creation of the [XSum dataset](https://github.com/EdinburghNLP/XSum). The new challenge test set contains 401 instances.
+
+
+
+
+
 ## Considerations for Using the Data
 
 ### Social Impact of the Dataset
