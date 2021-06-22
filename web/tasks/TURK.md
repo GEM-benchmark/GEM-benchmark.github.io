@@ -123,6 +123,22 @@ Since the dataset is created from English Wikipedia (August 22, 2009 version), a
 The publicly available dataset is processed with the [Penn Treebank tokenizer](https://www.nltk.org/_modules/nltk/tokenize/treebank.html). We reverse this process to make the format consistent with WikiAuto and ASSET. 
 
 
+
+
+### Special test sets
+
+#### Subpopulations
+
+The goal was to assess performance when simplifying source sentences with different syntactic structure and complexity. To this end, we split the original test set according to syntactic complexity of the source sentences. To characterize sentence syntactic complexity, we use the 8-level developmental level (d-level) scale proposed by [Covington et al. (2006)](https://www.researchgate.net/publication/254033869_How_complex_is_that_sentence_A_proposed_revision_of_the_Rosenberg_and_Abbeduto_D-Level_Scale) and the implementation of [Lu, Xiaofei (2010)](https://www.jbe-platform.com/content/journals/10.1075/ijcl.15.4.02lu).
+We thus split the test set into 8 subsets corresponding to the 8 d-levels assigned to source sentences. We obtain the following number of instances per level and average d-level of the dataset:
+
+
+| Total nb. sentences | L0 | L1 | L2 | L3 | L4 | L5 | L6 | L7 | Mean Level |
+|-------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ---------- | 
+|                 359 |    174 |      0 |     58 |     22 |      3 |     30 |      9 |     63 |       2.34 | 
+
+
+
 ## Considerations for Using the Data
 
 ### Social Impact of Dataset
