@@ -16,7 +16,7 @@ body {
   min-height: 100%;
   /* Add the GEM as background */
   /* background: url(../public/gem3.svg) no-repeat top left; */
-  background: url(../public/background.svg) no-repeat center center fixed;
+  background: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

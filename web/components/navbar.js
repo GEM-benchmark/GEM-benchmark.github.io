@@ -95,6 +95,11 @@ class Navbar extends React.Component {
                 <a>Workshop</a>
               </Link>
             </li>
+            <li className={styles.navitem}>
+              <Link href="/nl_augmenter">
+                <a>NL-Augmenter</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
