@@ -2,6 +2,7 @@
 
 import Head from "next/head";
 import styles from "./layout.module.css";
+import nlAugmenterStyles from "../pages/nl_augmenter.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import Navbar from './navbar'
@@ -9,7 +10,7 @@ import Navbar from './navbar'
 const name = "GEM Benchmark";
 export const siteTitle = "GEM";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, nlAugmenter }) {
   return (
     <>
       <Head>
@@ -25,26 +26,28 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        <Navbar></Navbar>
-      </header>
-      <div className={styles.container}>
-        <main>{children}</main>
-        <div className={styles.push}></div>
-      </div>
-      <footer className={styles.footer + " " + utilStyles.eggshell}>
-        {!home && (
-          <span className={styles.backToHome}>
-            <Link href="/">
-              <a>← Home</a>
-            </Link>
-          </span>
-        )}
-        <span>If you have any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank" className={utilStyles.accentUnderline}>
-          google group
-          </a> for support.
-        </span>
-      </footer>
+        <div className={`${styles.background} ${nlAugmenter && nlAugmenterStyles.background}`}>
+          <header className={styles.header}>
+            <Navbar></Navbar>
+          </header>
+          <div className={styles.container}>
+            <main>{children}</main>
+            <div className={styles.push}></div>
+          </div>
+          <footer className={styles.footer + " " + utilStyles.eggshell}>
+            {!home && (
+              <span className={styles.backToHome}>
+                <Link href="/">
+                  <a>← Home</a>
+                </Link>
+              </span>
+            )}
+            <span>If you have any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank" className={utilStyles.accentUnderline}>
+              google group
+              </a> for support.
+            </span>
+          </footer>
+        </div>
     </>
   );
 }

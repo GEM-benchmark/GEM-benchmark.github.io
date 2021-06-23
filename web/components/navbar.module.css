@@ -55,6 +55,7 @@
   display: flex;
   margin: 0 -10px;
   height: 75%;
+  padding-inline-start: 0;
 }
 
 .navbar li {
