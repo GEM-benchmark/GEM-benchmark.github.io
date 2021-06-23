@@ -4,7 +4,6 @@
   margin: 3rem auto;
   margin-bottom: -3rem;
   min-height: calc(100vh - 108px);
-
 }
 
 .header {
@@ -24,4 +23,14 @@
   display: flex;
   font-size: 10pt;
   color: #8e8d8a;
+}
+
+.background {
+  /* Add the GEM as background */
+  /* background: url(../public/gem3.svg) no-repeat top left; */
+  background: url(../public/background.svg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

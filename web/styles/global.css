@@ -14,13 +14,6 @@ body {
 
 #__next {
   min-height: 100%;
-  /* Add the GEM as background */
-  /* background: url(../public/gem3.svg) no-repeat top left; */
-  background: #ffffff;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 * {

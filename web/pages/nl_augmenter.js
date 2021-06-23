@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 
 export default function Post({nlAugmenterData}) {
     return (
-        <Layout>
+        <Layout nlAugmenter>
             <Head>
                 <title>NL-Augmenter</title>
             </Head>

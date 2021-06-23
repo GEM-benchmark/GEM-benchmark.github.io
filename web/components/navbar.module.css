@@ -17,7 +17,7 @@
   align-items: center;
   height: 50px;
   overflow: hidden;
-  background-color: #3688b7;
+  background-color: #2a555e;
 }
 
 /* for the logo */
@@ -39,7 +39,7 @@
 }
 
 .navbar a:hover {
-  color: #96eaf3;
+  color: #70abaf;
 }
 
 .navbar span {
@@ -76,7 +76,7 @@
 }
 
 .navitem a:hover {
-  color: #96eaf3;
+  color: #70abaf;
 }
 
 /* MOBILE MENU & ANIMATION */
@@ -142,7 +142,7 @@
   width: 100%;
   height: 5px;
   /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
-  background: linear-gradient(-45deg, #14a0e3, #96eaf3);
+  background: linear-gradient(-45deg, #eff6ff, #c10001, #2a555e, #70abaf);
   background-size: 400% 400%;
   -webkit-animation: gradbar 15s ease infinite;
   -moz-animation: gradbar 15s ease infinite;
