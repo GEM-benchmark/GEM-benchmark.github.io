@@ -141,7 +141,7 @@ export default function index(props) {
   const cm = ColorManager
     .generateForEvalConfig(props.evalConfig);
 
-  return <Layout home={false}>
+  return <Layout home={false} nlAugmenter={false}>
     <MainVis evalConfig={props.evalConfig}
              scores={props.scores} cm={cm}/>
   </Layout>;
