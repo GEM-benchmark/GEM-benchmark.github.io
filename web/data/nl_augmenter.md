@@ -1,6 +1,6 @@
-The NL-Augmenter is a collaborative effort intended to add transformations of datasets dealing with natural language. Transformations augment text datasets in diverse ways, including: introducing spelling errors, translating to a different language, randomizing names and numbers, paraphrasing ... and whatever creative augmentation you contribute. We invite submissions of transformations to this framework by way of GitHub pull request, through September 1, 2021. **All submitters of accepted transformations (and filters) will be included as co-authors on a paper announcing this framework**.
+The NL-Augmenter is a collaborative effort intended to add transformations of datasets dealing with natural language. Transformations augment text datasets in diverse ways, including: introducing spelling errors, translating to a different language, randomizing names and numbers, paraphrasing, changing the style ... and whatever creative augmentation you contribute. We invite submissions of transformations to this framework by way of a [GitHub](https://github.com/GEM-benchmark/NL-Augmenter) pull request, through September 1, 2021. **All submitters of accepted transformations (and filters) will be included as co-authors on a paper announcing this framework**.
 
-The framework organizers can be contacted at nl-augmenter@googlegroups.com.
+The framework is hosted as a [GitHub repository](https://github.com/GEM-benchmark/NL-Augmenter). The organizers can be contacted at nl-augmenter@googlegroups.com.
 
 **Submission timeline**
 
@@ -35,13 +35,13 @@ Check the review criteria on our [GitHub page](https://github.com/GEM-benchmark/
 - Kaustubh Dhole (Amelia R&D)
 - Sebastian Gehrmann (Google Research)
 - Jascha Sohl-Dickstein (Google Brain)
-- Varun Prashant Gangal (Carnegie Mellon University)
-- Tonghuang Wu (University of Washington)
+- Varun Prashant Gangal (LTI, Carnegie Mellon University)
+- Tongshuang Wu (University of Washington)
 - Simon Mille (Universitat Pompeu Fabra) 
 - Zhenhao Li (Imperial College, London)
 - Aadesh Gupta (Amelia R&D)
-- Samson Tan (Salesforce Research)
+- Samson Tan (National University of Singapore & Salesforce Research)
 - Saad Mahmood (Trivago R&D)
 - Ashish Shrivastava (Amelia R&D)
 - Ondrej Dusek (Charles University)
-- Jinho Choi (Emory University)
+- Jinho D. Choi (Emory University)
