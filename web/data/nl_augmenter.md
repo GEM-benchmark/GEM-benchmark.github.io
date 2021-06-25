@@ -33,7 +33,7 @@ Check the review criteria on our [GitHub page](https://github.com/GEM-benchmark/
 ## Organization
 
 - Kaustubh Dhole (Amelia R&D)
-- Sebastian Gehrmann (Google AI Language)
+- Sebastian Gehrmann (Google Research)
 - Jascha Sohl-Dickstein (Google Brain)
 - Varun Prashant Gangal (LTI, Carnegie Mellon University)
 - Tongshuang Wu (University of Washington)
