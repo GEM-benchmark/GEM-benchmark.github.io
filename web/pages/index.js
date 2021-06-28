@@ -70,6 +70,12 @@ export default function Home() {
             </a>
           </Link>
 
+          <Link href="/nl_augmenter">
+            <a className={styles.card}>
+              <h3>NL-Augmenter</h3>
+            </a>
+          </Link>
+
           <Link href="/workshop">
             <a className={styles.card}>
               <h3>Workshop</h3>
