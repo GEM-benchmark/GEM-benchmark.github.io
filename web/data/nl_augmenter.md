@@ -4,6 +4,8 @@ The framework is hosted as a [GitHub repository](https://github.com/GEM-benchmar
 
 **Submission timeline**
 
+`August 5, 2021` Early Should-Out Date - Should your PR be accepted and merged before this date, we will give you an additional shoutout at our talk at the [ACL GEM workshop](https://gem-benchmark.com/workshop)."
+
 `September  1, 2021` Pull request must be opened to be eligible for inclusion in the framework and associated paper
 
 `September 22, 2021` Review process for pull request above must be complete

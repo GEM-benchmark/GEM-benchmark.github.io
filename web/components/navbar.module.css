@@ -98,9 +98,26 @@
   cursor: pointer;
 }
 
+/* Smaller font size for smaller screens */
+
+@media (min-width: 1050px) and (max-width: 1420px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navitem a {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.1s ease-out;
+  }
+
+}
+
 /* Mobile Devices - Phones/Tablets */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1050px) {
   .features {
     flex-direction: column;
     padding: 50px;
