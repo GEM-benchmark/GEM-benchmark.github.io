@@ -55,7 +55,7 @@ Please format submissions in the following format
 
 ```
 
-In this case, `dataset_identifier` is the identifier of the dataset followed by an identifier of the set the outputs were created from, for example `_val` or `_test`. That means, the CommonGEN validation set would have the identifier `commongen_val`.
+In this case, `dataset_identifier` is the identifier of the dataset followed by an identifier of the set the outputs were created from, for example `_validation` or `_test`. That means, the CommonGEN validation set would have the identifier `commongen_validation`.
 
 #### Model Card
 
