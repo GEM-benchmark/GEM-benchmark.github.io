@@ -64,11 +64,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/shared_task">
+          {/* <Link href="/shared_task">
             <a className={styles.card}>
               <h3>Shared Task</h3>
             </a>
-          </Link>
+          </Link> */}
 
           <Link href="/nl_augmenter">
             <a className={styles.card}>

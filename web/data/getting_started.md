@@ -2,10 +2,11 @@
 title: "Getting Started with GEM"
 ---
 
-This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions. If you are
-only interested in an overview how to load the datasets, you can look [here](/shared_task).
+This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
 what changes to make to use another of the GEM datasets.
+
+**SUBMITTING** Our [submission form](https://forms.gle/vbTZDMCuqzok8tTA9) is permanently open! Please account for some extra time to write your model card.
 
 ## Table of Contents
 
@@ -20,25 +21,11 @@ pip install sentencepiece
 pip install transformers
 ```
 
-The device management can be done via the following imports:
-
-```py
-# Device and fp16 management.
-import torch
-from packaging import version
-if version.parse(torch.__version__) < version.parse("1.6"):
-    from .file_utils import is_apex_available
-    if is_apex_available():
-        from apex import amp
-    _use_apex = True
-else:
-    _use_native_amp = True
-    from torch.cuda.amp import autocast
-```
+We further assume access to a GPU in this tutorial. You should be able to run all the code inside of a [colab notebook for free GPU access](https://colab.research.google.com/). 
 
 ## Loading the Data
 
-We will be using [HuggingFace datasets](https://huggingface.co/docs/datasets/gem) for this tutorial, but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
+We will be using [HuggingFace datasets](https://huggingface.co/docs/datasets/gem), but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
 
 You can load and inspect datasets like this:
 
@@ -49,19 +36,51 @@ You can load and inspect datasets like this:
 
 DatasetDict({
     train: Dataset({
-        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
         num_rows: 67389
     })
     validation: Dataset({
-        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
         num_rows: 993
     })
     test: Dataset({
-        features: ['gem_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
         num_rows: 1497
+    })
+    challenge_train_sample: Dataset({
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        num_rows: 500
+    })
+    challenge_validation_sample: Dataset({
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        num_rows: 500
+    })
+    challenge_test_scramble: Dataset({
+        features: ['gem_id', 'gem_parent_id', 'concept_set_id', 'concepts', 'target', 'references'],
+        num_rows: 500
     })
 })
 ```
+
+You can notice that challenge sets created as part of GEM act just like any other data split, which means that you can use them with exactly the same code!
+
+GEM supports many other datasets, simply pick one from this list and check out the corresponding [data cards](/data_cards).
+
+```py
+['common_gen', 'cs_restaurants', 'dart', 'mlsum_de', 'mlsum_es', 'xsum',  
+ 'e2e_nlg', 'schema_guided_dialog', 'totto', 'web_nlg_en', 'web_nlg_ru', 
+  'wiki_auto_asset_turk', 'wiki_lingua_arabic_ar', 'wiki_lingua_chinese_zh', 
+  'wiki_lingua_czech_cs', 'wiki_lingua_dutch_nl', 'wiki_lingua_english_en', 
+  'wiki_lingua_french_fr', 'wiki_lingua_german_de', 'wiki_lingua_hindi_hi', 
+  'wiki_lingua_indonesian_id', 'wiki_lingua_italian_it', 
+  'wiki_lingua_japanese_ja', 'wiki_lingua_korean_ko', 
+  'wiki_lingua_portuguese_pt', 'wiki_lingua_russian_ru', 
+  'wiki_lingua_spanish_es', 'wiki_lingua_thai_th', 
+  'wiki_lingua_turkish_tr', 'wiki_lingua_vietnamese_vi']
+```
+
+### Loading a single example
+
 
 Now let's look at a single example:
 
@@ -299,28 +318,45 @@ As expected, this yields the following output:
 
 ## Generating and Submitting Test Predictions
 
-To format your model outputs for GEM, let's first assume that we have the test outputs similar to our validation outputs above:
+### Format Description
 
-```python
-test_output = data['test'].map(
-    lambda batch: {'generated': beam_generate_sentences(
-        batch,
-        model,
-        tokenizer,
-        num_beams=BEAM_SIZE,
-        max_length=MAX_GENERATION_LENGTH)
-    },
-    batched=True,
-    batch_size=128,
-)
+Please format submissions in the following format
+
+```json
+{
+  "submission_name": "An identifying name of your system",
+  "param_count": 123, # the number of parameters your system has.
+  "description": "An optional brief description of the system that will be shown on the website",
+  "tasks":
+    {
+      "dataset_identifier": {
+        "values": ["output1", "output2", "..."], # A list of system outputs
+        # Optionally, you can add the keys which are part of an example to ensure that there is no shuffling mistakes.
+        "keys": ["schema_guided_dialog-test-9585", "schema_guided_dialog-test-9585", ...] 
+        }
+    }
+}
+
 ```
 
-The code is adding a `generated` field into the dataset which makes analysis much easier.
-However, in our submission file we only want the actual values. Thus, we filter:
+In this case, `dataset_identifier` is the identifier of the dataset followed by an identifier of the set the outputs were created from, for example `_validation` or `_test`. That means, the common_gen validation set would have the identifier `common_gen_validation`.
+
+The `keys` field can be set to avoid accidental shuffling to impact your metrics. Simply add a list of the `gem_id` for each output example in the same order as your values. 
+
+### Formatting your predictions
+
+To format your model outputs for GEM, let's first assume that we have the test and challenge set outputs similar to our validation outputs above. The code is adding a `generated` field into the dataset which makes analysis much easier.
+However, in our submission file we only want the actual values and corresponding IDs. Thus, we filter:
 
 ```python
 valid_formatted = [o['generated'] for o in valid_output]
+valid_keys = [o['gem_id'] for o in data['validation']]
+
 test_formatted = [o['generated'] for o in test_output]
+test_keys = [o['gem_id'] for o in data['test']]
+
+challenge_train_sample_formatted = [o['generated'] for o in challenge_train_sample_output]
+challenge_train_sample_keys = [o['gem_id'] for o in data['challenge_train_sample']]
 ```
 
 In our final step, we only have to add the outputs to our larger submission construct.
@@ -331,8 +367,10 @@ submission_dict = {
     "param_count": sum(p.numel() for p in model.parameters()),
     "description": "Baseline for the task based on BART-base.",
     "tasks": {
-      "common_gen_val": {"language": "en", "values": valid_formatted},
-      "common_gen_test": {"language": "en", "values": test_formatted},
+      "common_gen_validation": {"values": valid_formatted, "keys": valid_keys},
+      "common_gen_test": {"values": test_formatted, "keys": test_keys},
+      "common_gen_challenge_train_sample": {"values": challenge_train_sample_formatted, 
+                                            "keys": challenge_train_sample_keys}
     }
 }
 ```
@@ -348,6 +386,16 @@ with open('gem_submission.json', 'w') as f:
 
 ## Evaluating your submission file with the GEM evaluation framework.
 
-Obviously, we do not want to rely only on ROUGE scores. For this, we developed the GEM evaluation framework.
+Obviously, we do not want to rely only on ROUGE scores. For this, we developed the GEM evaluation framework. You can download it by running
 
-Coming soon :)
+```bash
+git clone git@github.com:GEM-benchmark/GEM-metrics.git
+```
+
+Assuming that you formatted your outputs correctly, you can now run 
+
+```bash
+python run_metrics.py [-r references.json] [-o outputs.scores.json] outputs.json 
+```
+
+which will create a json file with your scores per task and challenge set. Please follow the [README](https://github.com/GEM-benchmark/GEM-metrics) for more detailed usage information. 

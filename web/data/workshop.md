@@ -2,57 +2,68 @@
 title: "GEM Workshop at ACL 2021"
 ---
 
-The workshop will be held as part of [ACL-IJCNLP 2021](https://2021.aclweb.org/), August 1-6, 2021. It will take place on August 5 or 6.
+The workshop will be held as part of [ACL-IJCNLP 2021](https://2021.aclweb.org/), August 1-6, 2021. It will take place on August 6. It is endorsed by the ACL Special Interest Group on Natural Language Generation ([SIGGEN](https://aclweb.org/aclwiki/SIGGEN)).
 
-It is endorsed by the ACL Special Interest Group on Natural Language Generation ([SIGGEN](https://aclweb.org/aclwiki/SIGGEN)).
+
+**Note: Our system output submission form is perpetually open, please continue participating in our benchmark.**
+
 
 ## Workshop Overview
 
-Natural language generation is one of the most active research fields in NLP, with generation, summarization, and dialog among the [most submitted-to tracks](https://acl2020.org/blog/general-conference-statistics/). As such, the number of available datasets, metrics, models, and evaluation strategies are increasing rapidly. This is leading to the situation where new models are often evaluated on different anglo-centric tasks with incompatible evaluation setups. With GEM, we are aiming to solve this problem by standardizing and improving the corpora on which to evaluate NLG models, and by supporting the development of better evaluation approaches. In our shared tasks, models will be applied to a wide set of NLG tasks. It covers challenges that measure specific generation aspects, such as content selection and planning, surface realization, paraphrasing, simplification, and others.
-To avoid hill-climbing on automated metrics, a second part of the shared task focuses on an in-depth analysis of submitted model outputs across both human and automatic evaluation with the aim to uncover shortcomings and opportunities for progress.
+Natural language generation is one of the most active research fields in NLP, with generation, summarization, and dialog among the [most submitted-to tracks](https://acl2020.org/blog/general-conference-statistics/). As such, the number of available datasets, metrics, models, and evaluation strategies are increasing rapidly. This is leading to the situation where new models are often evaluated on different anglo-centric tasks with incompatible evaluation setups. With GEM, we are aiming to solve this problem by standardizing and improving the corpora on which to evaluate NLG models, and by supporting the development of better evaluation approaches. Submitted papers analyze the state of NLG evaluation and propose better alternatives. Moreover, we are organizing the living GEM benchmark which incorporates new advances in data and human and automatic evaluation to make it easier to evaluate models on challenging tasks with the correct tools. In our shared task, models were applied to up to 11 tasks in 18 languages, 80 challenge sets, and their outputs characterized using a combination of human evaluation and over 50 automatic metrics. 
+Through the presented papers and the shared task, we aim to uncover shortcomings and opportunities for progress.
 
-## Shared Tasks
+## Schedule
 
-The shared task is described in-depth on [this page](/shared_task). It includes two parts:
+All times in UTC, please use a converter like [this one](https://www.timeanddate.com/worldclock/converter.html?iso=20210713T140000&p1=1440) to convert to your local time. 
 
-1) In the first part, participants are encouraged to apply their model to as many of the included tasks as possible and submit their formatted outputs. We provide GEM-specific test sets that will be used to evaluate specific generation aspects.
-2) In the second part, all submitted and baseline outputs will be released for an evaluation shared task. Participants can submit analyses and evaluations of the model outputs.
-
-During the GEM workshop, shared task participants will come together to discuss their findings which will inform future iterations of GEM.
-
-## Call for Papers
-
-All papers are allowed unlimited space for references and appendices. For papers associated with the shared task, we additionally highly encourage publishing the code used to generate the results. We ask for papers in the following categories:
-
-### System Descriptions
-Participants of the modeling shared task are invited to submit a system description of 4-8 pages.
-
-### System Evaluation Descriptions
-Participants of the evaluation shared task are invited to submit a paper describing their analysis approach and findings of 4-8 pages.
-
-### Research Papers
-We welcome papers discussing any of the following topics:
-
-- Automatic evaluation of NLG systems
-- Creating challenge sets for NLG corpora
-- Critiques of benchmarking efforts (including ours)
-- Crowdsourcing strategies to improve the inclusiveness of NLG research
-- Measuring progress in NLG / What should a GEM 2.0 look like
-- Modeling and data-augmentation strategies for training effective and/or efficient NLG systems that can be applied to a wide range of tasks
-- Standardizing human evaluation and making it more robust
-
-We additionally invite every group that contributed to the creation and organization of GEM to submit a description of their considerations and contributions.
-
-Please note that we are not looking at submissions that focus on specific modeling challenges or introduce new model architectures, etc., which would fit better into conferences like ACL or INLG.
-
-These submissions can take either of the following forms:
-- **Archival Papers** Papers describing original and unpublished work can be submitted in either a short (4-page) or a long (8-page) format.
-- **Non-Archival Abstracts** To discuss work already presented or under review at a peer-reviewed venue, we allow the submission of 2-page abstracts
+We do not distinguish between workshop papers and Findings of the ACL papers that are being presented - they are all great! Links to all papers are coming soon!
 
 
-## Submissions
-
-All submissions should conform to [ACL 2021 style guidelines](https://2021.aclweb.org/calls/papers/). Archival long and short paper submissions must be anonymized. Abstracts and shared task submission descriptions should include author information. Please submit your papers at the [SoftConf link](https://www.softconf.com/acl2021/w10_GEM21/).
+| Time (UTC)    | Session                                                                                                                                                                                                                                                                                                                                    |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 11:30 - 12:00 | **Welcome and Explanation of Logistics**                                                                                                                                                                                                                                                                                                   |
+| 12:00 - 13:00 | **Poster Session**                                                                                                                                                                                                                                                                                                                         |
+|               | Evaluating the Efficacy of Summarization Evaluation across Languages  <br /> *Fajri Koto, Jey Han Lau, and Timothy Baldwin*                                                                                                                                                                                                                |
+|               | Automatic Text Simplification for Social Good: Progress and Challenges   <br />  *Sanja Stajner*                                                                                                                                                                                                                                           |
+|               | Flesch-Kincaid is Not a Text Simplification Evaluation Metric <br />  *Teerapaun Tanprasert and David Kauchak*                                                                                                                                                                                                                             |
+|               | Human Perception in Natural Language Generation <br />       *Lorenzo De Mattei, Huiyuan Lai, Felice Dell'Orletta, and Malvina Nissim*                                                                                                                                                                                                     |
+|               | Semantic Similarity Based Evaluation for Abstractive News Summarization <br /> *Figen Beken Fikri, Kemal Oflazer, and Berrin Yanikoglu*                                                                                                                                                                                                    |
+|               | Shades of BLEU, Flavours of Success: The Case of MultiWOZ <br /> *Tomáš Nekvinda and Ondřej Dušek*                                                                                                                                                                                                                                         |
+| 13:00 - 13:45 | **Panel Discussion with Hady Elsahar, Seraphina Goldfarb-Tarrant, He He, and Ehud Reiter**                                                                                                                                                                                                                                                 |
+| 13:45 - 14:00 | *Break*                                                                                                                                                                                                                                                                                                                                    |
+| 14:00 - 15:00 | **Talk Session**                                                                                                                                                                                                                                                                                                                           |
+|               | Personalized Response Generation with Tensor Factorization   <br />  *Zhenghui Wang, Lingxiao Luo, and Diyi Yang*                                                                                                                                                                                                                          |
+|               | A Review of Human Evaluation for Style Transfer   <br />  *Eleftheria Briakou, Sweta Agrawal, Ke Zhang, Joel Tetreault, and Marine Carpuat*                                                                                                                                                                                                |
+|               | GOT: Testing for Originality in Natural Language Generation   <br />  *Jennifer Brooks and Abdou Youssef*                                                                                                                                                                                                                                  |
+|               | Evaluating Text Generation from Discourse Representation Structures   <br />  *Chunliu Wang, Rik van Noord, Arianna Bisazza, and Johan Bos*                                                                                                                                                                                                |
+| 15:00 - 16:00 | **Poster Session**                                                                                                                                                                                                                                                                                                                         |
+|               | Detecting Hallucinated Content in Conditional Neural Sequence Generation <br />  *Chunting Zhou, Graham Neubig, Jiatao Gu, Mona Diab, Paco Guzman,  <br />  Luke Zettlemoyer, and Marjan Ghazvininejad*                                                                                                                                    |
+|               | Synthesizing Adversarial Negative Responses for Robust Response Ranking and Evaluation   <br />  *Prakhar Gupta, Yulia Tsvetkov, and Jeffrey Bigham*                                                                                                                                                                                       |
+|               | Perceptual Models of Machine-Edited Text   <br />  *Elizabeth Merkhofer, Monica-Ann Mendoza, Rebecca Marvin, and John Henderson*                                                                                                                                                                                                           |
+|               | Improving Automated Evaluation of Open Domain Dialog via Diverse Reference Augmentation   <br />  *Varun Gangal, Harsh Jhamtani, Eduard Hovy, and Taylor Berg-Kirkpatrick*                                                                                                                                                                 |
+|               | XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages   <br />  *Tahmid Hasan, Abhik Bhattacharjee, Md. Saiful Islam, Kazi Mubasshir, Yuan-Fang Li,  <br />  Yong-Bin Kang, M. Sohel Rahman, and Rifat Shahriyar*                                                                                                    |
+|               | Human Evaluation of Creative NLG Systems: An Interdisciplinary Survey on Recent Papers   <br />  *Mika Hämäläinen and Khalid Alnajjar*                                                                                                                                                                                                     |
+| 16:00 - 17:00 | **Keynote by Asli Celikyilmaz**                                                                                                                                                                                                                                                                                                            |
+| 17:00 - 17:45 | **Panel Discussion with Anya Belz, Asli Celikyilmaz, Mike Lewis, Lisa Li, and Wang Lu**                                                                                                                                                                                                                                                    |
+| 17:45 - 18:00 | *Break*                                                                                                                                                                                                                                                                                                                                    |
+| 18:00 - 19:00 | **GEM Overview Session**                                                                                                                                                                                                                                                                                                                   |
+|               | The GEM Benchmark: Natural Language Generation, its Evaluation and Metrics   <br />  *Everyone listed on the [GEM team page](/team)*                                                                                                                                                                                                       |
+|               | Reusable Templates and Guides For Documenting Datasets and Models for Natural Language  <br /> Processing and Generation: A Case Study of the HuggingFace and GEM Data and Model Cards   <br />  *Angelina McMillan-Major, Salomey Osei, Juan Diego Rodriguez, Pawan Sasanka Ammanamanchi,  <br /> Sebastian Gehrmann, and Yacine Jernite* |
+|               | Preliminary Results of the GEM Thared Task   <br />  *GEM Organizers*                                                                                                                                                                                                                                                                      |
+|               | NL-Augmenter: A Collaborative Effort to Transform and Filter Text Datasets   <br />  *Kaustubh Dhole, Sebastian Gehrmann, Jascha Sohl-Dickstein, Varun Prashant Gangal,  <br /> Tongshuang Wu, Simon Mille, Zhenhao Li, Aadesh Gupta, Samson Tan, Saad Mahmood,  <br /> Ashish Shrivastava, Ondrej Dusek, and Jinho D. Choi*               |
+| 19:00 - 20:00 | **GEM System Session**                                                                                                                                                                                                                                                                                                                     |
+|               | Structure-to-Text Generation with Self-Training, Acceptability Classifiers and Context-Conditioning <br />  for the GEM Shared Task   <br />  *Shreyan Bakshi, Soumya Batra, Peyman Heidari, Ankit Arun, Shashank Jain, and Michael White*                                                                                                 |
+|               | NUIG-DSI’s submission to The GEM Benchmark 2021   <br />  *Nivranshu Pasricha, Mihael Arcan, and Paul Buitelaar*                                                                                                                                                                                                                           |
+|               | System Description for the CommonGen task with the POINTER model   <br />  *Anna Shvets*                                                                                                                                                                                                                                                   |
+|               | SimpleNER Sentence Simplification System for GEM 2021   <br />  *K V Aditya Srivatsa, Monil Gokani, and Manish Shrivastava*                                                                                                                                                                                                                |
+| 20:00 - 21:00 | **Poster Session**                                                                                                                                                                                                                                                                                                                         |
+|               | GO FIGURE: A Meta Evaluation of Factuality in Summarization   <br />  *Saadia Gabriel, Asli Celikyilmaz, Rahul Jha, Yejin Choi, and Jianfeng Gao*                                                                                                                                                                                          |
+|               | TellMeWhy: A Dataset for Answering Why-Questions in Narratives   <br />  *Yash Kumar Lal, Nathanael Chambers, Raymond Mooney and Niranjan Balasubramanian*                                                                                                                                                                                 |
+|               | Is Human Scoring the Best Criteria for Summary Evaluation?   <br />  *Oleg Vasilyev and John Bohannon*                                                                                                                                                                                                                                     |
+|               | Are Larger Pretrained Language Models Uniformly Better? Comparing Performance at the Instance Level   <br />  *Ruiqi Zhong, Dhruba Ghosh, Dan Klein, and Jacob Steinhardt*                                                                                                                                                                 |
+|               | Elaborative Simplification: Content Addition and Explanation Generation in Text Simplification   <br />  *Neha Srikanth and Junyi Jessy Li*                                                                                                                                                                                                |
+|               | Decoding Methods for Neural Narrative Generation   <br />  *Alexandra DeLucia, Aaron Mueller, Xiang Lisa Li, and João Sedoc*                                                                                                                                                                                                               |
 
 ## Important Dates
 
@@ -75,14 +86,6 @@ All submissions should conform to [ACL 2021 style guidelines](https://2021.aclwe
 `March 29` Release of the test sets
 
 `May 14` Modeling submissions due
-
-**Evaluation**
-
-`March 29` Release of the baseline outputs
-
-`May 17` Release of the submission outputs
-
-**System Descriptions and Analyses**
 
 `June 11` System Descriptions and Analyses due
 
