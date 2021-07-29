@@ -1,12 +1,10 @@
-The NL-Augmenter is a collaborative effort intended to add transformations of datasets dealing with natural language. Transformations augment text datasets in diverse ways, including: introducing spelling errors, translating to a different language, randomizing names and numbers, paraphrasing, changing the style ... and whatever creative augmentation you contribute. We invite submissions of transformations to this framework by way of a [GitHub](https://github.com/GEM-benchmark/NL-Augmenter) pull request, through September 1, 2021. **All submitters of accepted transformations (and filters) will be included as co-authors on a paper announcing this framework**.
+The NL-Augmenter is a collaborative effort intended to add transformations of datasets dealing with natural language. Transformations augment text datasets in diverse ways, including: introducing spelling errors, translating to a different language, randomizing names and numbers, paraphrasing, changing the style ... and whatever creative augmentation you contribute. We invite submissions of transformations to this framework by way of a [GitHub](https://github.com/GEM-benchmark/NL-Augmenter) pull request, through August 31, 2021. **All submitters of accepted transformations (and filters) will be included as co-authors on a paper announcing this framework**.
 
 The framework is hosted as a [GitHub repository](https://github.com/GEM-benchmark/NL-Augmenter). The organizers can be contacted at nl-augmenter@googlegroups.com.
 
 **Submission timeline**
 
-`August 5, 2021` Early Should-Out Date - Should your PR be accepted and merged before this date, we will give you an additional shoutout at our talk at the [ACL GEM workshop](https://gem-benchmark.com/workshop)."
-
-`September  1, 2021` Pull request must be opened to be eligible for inclusion in the framework and associated paper
+`August 31, 2021` Pull request must be opened to be eligible for inclusion in the framework and associated paper
 
 `September 22, 2021` Review process for pull request above must be complete
 
