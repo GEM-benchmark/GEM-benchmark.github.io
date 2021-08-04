@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 // import Contact from "../components/contact";
 import Link from "next/link";
 import React from "react";
-import utilStyles from "../styles/utils.module.css";
-import styles from "./team.module.css";
-import { getTeamData } from "../lib/team";
+import utilStyles from "../../styles/utils.module.css";
+import styles from "./index.module.css";
+import { getTeamData } from "../../lib/team";
 import { faDribbble, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -90,9 +90,15 @@ export default function Home({ teamData }) {
         <p className={styles.description}>
           GEM is a community-driven effort with the goal to improve how progress in
           natural language generation is measured. It would not be possible without
-          a large group of collaborators to take on challenging tasks. This page
-          acts as a directory of our amazing contributors:
-      </p>
+          a large group of collaborators to take on challenging tasks.
+
+          <p>
+            This page acts as a directory of our amazing contributors. If you want to
+            join the organization,  <Link href="/team/join">
+              <a>click here to fill out the sign-up form.</a></Link>
+          </p>
+
+        </p>
         <div className={styles.centered}>
           <ContactList contacts={teamData.teamMembers} />
         </div>

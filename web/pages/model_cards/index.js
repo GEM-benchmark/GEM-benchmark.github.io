@@ -7,7 +7,7 @@ export default function Post({ sharedData }) {
   return (
     <Layout>
       <Head>
-        <title>GEM Workshop 2021</title>
+        <title>GEM Model Cards</title>
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
