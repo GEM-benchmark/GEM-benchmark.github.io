@@ -5,7 +5,7 @@ import utilStyles from "../../styles/utils.module.css";
 import styles from "./join.module.css";
 
 
-export default function Post({ guideData }) {
+export default function Post({}) {
   return (
     <Layout>
       <Head>
