@@ -1,0 +1,57 @@
+{
+    "submission_name": "NUIG-DSI (baseline) - Masked Concepts",
+    "param_count": 222903552,
+    "common_gen_validation": {
+        "predictions_file": "NUIG-DSI (baseline) - Masked Concepts/common_gen_validation",
+        "N": 993,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/common_gen_validation.json",
+        "nist": 6.541598603461091,
+        "bleu": 27.81216,
+        "local_recall": {
+            "1": 0.09973753280839895,
+            "2": 0.29627659574468085,
+            "3": 0.4925775978407557,
+            "4": 0.7705396208070004,
+            "5": 0.776824034334764,
+            "6": 0.8095238095238095,
+            "7": 0.8333333333333334,
+            "8": 0.8
+        },
+        "rouge1": {
+            "precision": 0.66953,
+            "recall": 0.6112,
+            "fmeasure": 0.6278
+        },
+        "rouge2": {
+            "precision": 0.33986,
+            "recall": 0.30534,
+            "fmeasure": 0.31445
+        },
+        "rougeL": {
+            "precision": 0.58535,
+            "recall": 0.53441,
+            "fmeasure": 0.54873
+        },
+        "rougeLsum": {
+            "precision": 0.58535,
+            "recall": 0.53441,
+            "fmeasure": 0.54873
+        },
+        "bleurt": -0.37931,
+        "bertscore": {
+            "precision": 0.89397,
+            "recall": 0.88597,
+            "f1": 0.88863
+        },
+        "meteor": 0.26249220639363224,
+        "nubia": {
+            "semantic_relation": 3.19302,
+            "contradiction": 31.10316,
+            "irrelevancy": 16.37565,
+            "logical_agreement": 52.52119,
+            "grammar_ref": 4.64808,
+            "grammar_hyp": 4.5221,
+            "nubia_score": 0.46825
+        }
+    }
+}

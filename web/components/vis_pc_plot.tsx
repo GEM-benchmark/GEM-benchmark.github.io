@@ -76,7 +76,8 @@ export class PCP
     nextProps.scores.forEach(submission => {
       const sn = submission.submission_name
       Object.entries(submission).forEach(([datasubset, scoreData]) => {
-        if (datasubset == "submission" || typeof scoreData == "string") return;
+        if (datasubset == "submission" || typeof scoreData == "string" || typeof scoreData == "number") return;
+        if (!datasubset.endsWith("_test") && !datasubset.endsWith("test_turk") && !datasubset.endsWith("test_asset")) return;
         if (datasubset) {
           datasetNames.push(sn + "." + datasubset);
           datasetMatrix.push(
@@ -89,7 +90,6 @@ export class PCP
         }
       })
     })
-
     const yScales: d3.ScaleLinear<number, number, never>[] =
       datasetMatrix[0].map(() => d3.scaleLinear().range([0, PCP.height]))
 

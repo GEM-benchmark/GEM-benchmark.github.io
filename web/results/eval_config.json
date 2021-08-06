@@ -134,31 +134,31 @@
   "challenges": {
     "data2text": {
       "datasets": [
-        "common_gen_val",
-        "dart_val",
-        "e2e_nlg_val",
-        "totto_val",
-        "cs_restaurants_val",
-        "web_nlg_en_val",
-        "web_nlg_ru_val"
+        "common_gen_test",
+        "dart_test",
+        "e2e_nlg_test",
+        "totto_test",
+        "cs_restaurants_test",
+        "web_nlg_en_test",
+        "web_nlg_ru_test"
       ],
       "metrics": []
     },
     "summarization": {
       "datasets": [
-        "mlsum_de_val",
-        "mlsum_es_val",
-        "xsum_val",
-        "wiki_lingua_turkish_tr_val",
-        "wiki_lingua_vietnamese_vi_val",
-        "wiki_lingua_spanish_es_val",
-        "wiki_lingua_russian_ru_val"
+        "mlsum_de_test",
+        "mlsum_es_test",
+        "xsum_test",
+        "wiki_lingua_turkish_tr_test",
+        "wiki_lingua_vietnamese_vi_test",
+        "wiki_lingua_spanish_es_test",
+        "wiki_lingua_russian_ru_test"
       ],
       "metrics": []
     },
     "dialog": {
       "datasets": [
-        "schema_guided_dialog_val"
+        "schema_guided_dialog_test"
       ],
       "metrics": []
     },

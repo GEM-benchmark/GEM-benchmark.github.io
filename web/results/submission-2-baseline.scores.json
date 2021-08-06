@@ -1,0 +1,220 @@
+{
+    "submission_name": "NUIG-DSI (baseline) - Baseline",
+    "param_count": 222903552,
+    "common_gen_validation": {
+        "predictions_file": "NUIG-DSI (baseline) - Baseline/common_gen_validation",
+        "N": 993,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/common_gen_validation.json",
+        "local_recall": {
+            "1": 0.1101737282839645,
+            "2": 0.32127659574468087,
+            "3": 0.5317139001349528,
+            "4": 0.8065143412736996,
+            "5": 0.8283261802575107,
+            "6": 0.9047619047619048,
+            "7": 0.8333333333333334,
+            "8": 0.8
+        },
+        "rouge1": {
+            "precision": 0.6586,
+            "recall": 0.64624,
+            "fmeasure": 0.64262
+        },
+        "rouge2": {
+            "precision": 0.34045,
+            "recall": 0.32765,
+            "fmeasure": 0.32768
+        },
+        "rougeL": {
+            "precision": 0.57192,
+            "recall": 0.56,
+            "fmeasure": 0.55758
+        },
+        "rougeLsum": {
+            "precision": 0.57192,
+            "recall": 0.56,
+            "fmeasure": 0.55758
+        },
+        "bleu": 28.94248,
+        "nist": 7.216578861403421,
+        "nubia": {
+            "semantic_relation": 3.27611,
+            "contradiction": 29.80952,
+            "irrelevancy": 18.84939,
+            "logical_agreement": 51.34109,
+            "grammar_ref": 4.64808,
+            "grammar_hyp": 4.34559,
+            "nubia_score": 0.50344
+        },
+        "meteor": 0.2765798498628902,
+        "bleurt": -0.30848,
+        "bertscore": {
+            "precision": 0.89487,
+            "recall": 0.89354,
+            "f1": 0.89281
+        }
+    },
+    "e2e_nlg_validation": {
+        "predictions_file": "NUIG-DSI (baseline) - Baseline/e2e_nlg_validation",
+        "N": 4299,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/e2e_nlg_validation.json",
+        "local_recall": {
+            "1": 0.6944358097606466
+        },
+        "rouge1": {
+            "precision": 0.73555,
+            "recall": 0.72069,
+            "fmeasure": 0.71885
+        },
+        "rouge2": {
+            "precision": 0.46715,
+            "recall": 0.45422,
+            "fmeasure": 0.45481
+        },
+        "rougeL": {
+            "precision": 0.54985,
+            "recall": 0.53808,
+            "fmeasure": 0.53708
+        },
+        "rougeLsum": {
+            "precision": 0.54985,
+            "recall": 0.53808,
+            "fmeasure": 0.53708
+        },
+        "bleu": 33.73192,
+        "nist": 5.304279340670821,
+        "nubia": {
+            "semantic_relation": 4.22584,
+            "contradiction": 2.153,
+            "irrelevancy": 9.7984,
+            "logical_agreement": 88.0486,
+            "grammar_ref": 4.85661,
+            "grammar_hyp": 4.36711,
+            "nubia_score": 0.77805
+        },
+        "meteor": 0.365209333628192,
+        "bleurt": 0.23284,
+        "bertscore": {
+            "precision": 0.9171,
+            "recall": 0.90251,
+            "f1": 0.90945
+        }
+    },
+    "dart_validation": {
+        "predictions_file": "NUIG-DSI (baseline) - Baseline/dart_validation",
+        "N": 2768,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/dart_validation.json",
+        "local_recall": {
+            "1": 0.03488443381766906,
+            "2": 0.018331162977061003,
+            "3": 0.014285714285714285,
+            "4": 0.02766506824050166,
+            "5": 0.045265689919090316,
+            "6": 0.06177924217462932,
+            "7": 0.0802013422818792,
+            "8": 0.09233870967741936,
+            "9": 0.09864712514092447,
+            "10": 0.11086637298091043,
+            "11": 0.10537870472008781,
+            "12": 0.11388455538221529,
+            "13": 0.08533916849015317,
+            "14": 0.06956521739130435,
+            "15": 0.07547169811320754,
+            "16": 0.1111111111111111,
+            "17": 0.05128205128205128,
+            "18": 0.05333333333333334,
+            "19": 0.041666666666666664,
+            "20": 0.08823529411764706,
+            "21": 0.08695652173913043,
+            "22": 0.0625,
+            "23": 0.06666666666666667,
+            "24": 0.1,
+            "25": 0.3333333333333333,
+            "26": 0.25,
+            "27": 0,
+            "28": 0.0,
+            "29": 0.0,
+            "30": 0.0,
+            "31": 0.0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0.0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0
+        },
+        "rouge1": {
+            "precision": 0.03903,
+            "recall": 0.73881,
+            "fmeasure": 0.07344
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.03903,
+            "recall": 0.73881,
+            "fmeasure": 0.07344
+        },
+        "rougeLsum": {
+            "precision": 0.03903,
+            "recall": 0.73881,
+            "fmeasure": 0.07344
+        },
+        "bleu": 0.00552,
+        "nist": 0.6084542890077114,
+        "nubia": {
+            "semantic_relation": 4.32104,
+            "contradiction": 5.31527,
+            "irrelevancy": 14.01494,
+            "logical_agreement": 80.63366,
+            "grammar_ref": 4.89051,
+            "grammar_hyp": 4.54351,
+            "nubia_score": 0.79064
+        },
+        "meteor": 0.08129170212717701,
+        "bleurt": 0.26323,
+        "bertscore": {
+            "precision": 0.91638,
+            "recall": 0.90731,
+            "f1": 0.91141
+        }
+    }
+}

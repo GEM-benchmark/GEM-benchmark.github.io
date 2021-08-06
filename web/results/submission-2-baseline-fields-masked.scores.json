@@ -1,0 +1,50 @@
+{
+    "submission_name": "NUIG-DSI (baseline) - Masked Fields",
+    "param_count": 222903552,
+    "e2e_nlg_validation": {
+        "predictions_file": "NUIG-DSI (baseline) - Masked Fields/e2e_nlg_validation",
+        "N": 4299,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/e2e_nlg_validation.json",
+        "bleu": 34.09113,
+        "nist": 5.357443297129621,
+        "local_recall": {
+            "1": 0.6984423030428626
+        },
+        "rouge1": {
+            "precision": 0.74179,
+            "recall": 0.72045,
+            "fmeasure": 0.72065
+        },
+        "rouge2": {
+            "precision": 0.47085,
+            "recall": 0.45339,
+            "fmeasure": 0.45551
+        },
+        "rougeL": {
+            "precision": 0.55224,
+            "recall": 0.53585,
+            "fmeasure": 0.53634
+        },
+        "rougeLsum": {
+            "precision": 0.55224,
+            "recall": 0.53585,
+            "fmeasure": 0.53634
+        },
+        "bertscore": {
+            "precision": 0.91663,
+            "recall": 0.90325,
+            "f1": 0.90954
+        },
+        "bleurt": 0.22213,
+        "meteor": 0.36504890072891627,
+        "nubia": {
+            "semantic_relation": 4.20787,
+            "contradiction": 2.17509,
+            "irrelevancy": 11.82654,
+            "logical_agreement": 85.99837,
+            "grammar_ref": 4.85661,
+            "grammar_hyp": 4.37191,
+            "nubia_score": 0.77105
+        }
+    }
+}

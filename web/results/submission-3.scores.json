@@ -1,0 +1,61 @@
+{
+    "submission_name": "POINTER",
+    "param_count": 110104890,
+    "common_gen_test": {
+        "predictions_file": "POINTER/common_gen_test",
+        "N": 1497
+    },
+    "common_gen_validation": {
+        "predictions_file": "POINTER/common_gen_validation",
+        "N": 993,
+        "references_file": "/usr/local/google/home/gehrmann/Documents/GEM-metrics/data/references/common_gen_validation.json",
+        "rouge1": {
+            "precision": 0.13521,
+            "recall": 0.40318,
+            "fmeasure": 0.18617
+        },
+        "rouge2": {
+            "precision": 0.01075,
+            "recall": 0.03662,
+            "fmeasure": 0.01526
+        },
+        "rougeL": {
+            "precision": 0.10436,
+            "recall": 0.31203,
+            "fmeasure": 0.14253
+        },
+        "rougeLsum": {
+            "precision": 0.10436,
+            "recall": 0.31203,
+            "fmeasure": 0.14253
+        },
+        "bleu": 0.34895,
+        "nist": 1.1783921932842838,
+        "local_recall": {
+            "1": 0.1356705411823522,
+            "2": 0.28164893617021275,
+            "3": 0.4511920827710301,
+            "4": 0.4944093339815265,
+            "5": 0.4892703862660944,
+            "6": 0.5238095238095238,
+            "7": 0.5,
+            "8": 1.0
+        },
+        "nubia": {
+            "semantic_relation": 0.77032,
+            "contradiction": 35.07053,
+            "irrelevancy": 57.0874,
+            "logical_agreement": 7.84206,
+            "grammar_ref": 4.64808,
+            "grammar_hyp": 6.24829,
+            "nubia_score": 0.02611
+        },
+        "bleurt": -1.41937,
+        "bertscore": {
+            "precision": 0.71726,
+            "recall": 0.76683,
+            "f1": 0.73893
+        },
+        "meteor": 0.12120682292552844
+    }
+}
