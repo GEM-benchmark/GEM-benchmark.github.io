@@ -86,7 +86,7 @@ export async function getTaskData(id) {
     .use(toc, { tight: true })
     .use(slug)
     .use(html)
-    .process(matterResult.content)
+    .process(matterResult.content);
   const contentHtml = processedContent.toString()
 
   // Combine the data with the id and contentHtml

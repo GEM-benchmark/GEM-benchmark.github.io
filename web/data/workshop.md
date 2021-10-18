@@ -5,17 +5,17 @@ title: "GEM Workshop at ACL 2021"
 The workshop will be held as part of [ACL-IJCNLP 2021](https://2021.aclweb.org/), August 1-6, 2021. It will take place on August 6. It is endorsed by the ACL Special Interest Group on Natural Language Generation ([SIGGEN](https://aclweb.org/aclwiki/SIGGEN)).
 
 
-**Note: Our system output submission form is perpetually open, please continue contributing to our benchmark. If you want to help improve GEM in the future, [join our team](/team/join).**
+**Note: Our system [output submission form](https://forms.gle/pds6cbBf2Gf2VGMv7) is perpetually open, please continue contributing to our benchmark. If you want to help improve GEM in the future, [join our team](/team/join).**
 
 
 ## Workshop Overview
 
-Natural language generation is one of the most active research fields in NLP, with generation, summarization, and dialog among the [most submitted-to tracks](https://acl2020.org/blog/general-conference-statistics/). As such, the number of available datasets, metrics, models, and evaluation strategies are increasing rapidly. This is leading to the situation where new models are often evaluated on different anglo-centric tasks with incompatible evaluation setups. With GEM, we are aiming to solve this problem by standardizing and improving the corpora on which to evaluate NLG models, and by supporting the development of better evaluation approaches. Submitted papers analyze the state of NLG evaluation and propose better alternatives. Moreover, we are organizing the living GEM benchmark which incorporates new advances in data and human and automatic evaluation to make it easier to evaluate models on challenging tasks with the correct tools. In our shared task, models were applied to up to 11 tasks in 18 languages, 80 challenge sets, and their outputs characterized using a combination of human evaluation and over 50 automatic metrics. 
+Natural language generation is one of the most active research fields in NLP, with generation, summarization, and dialog among the [most submitted-to tracks](https://acl2020.org/blog/general-conference-statistics/). As such, the number of available datasets, metrics, models, and evaluation strategies are increasing rapidly. This is leading to the situation where new models are often evaluated on different anglo-centric tasks with incompatible evaluation setups. With GEM, we are aiming to solve this problem by standardizing and improving the corpora on which to evaluate NLG models, and by supporting the development of better evaluation approaches. Submitted papers analyze the state of NLG evaluation and propose better alternatives. Moreover, we are organizing the living GEM benchmark which incorporates new advances in data and human and automatic evaluation to make it easier to evaluate models on challenging tasks with the correct tools. In our shared task, models were applied to up to 11 tasks in 18 languages, 80 challenge sets, and their outputs characterized using a combination of human evaluation and over 50 automatic metrics.
 Through the presented papers and the shared task, we aim to uncover shortcomings and opportunities for progress.
 
 ## Schedule
 
-All times in UTC, please use a converter like [this one](https://www.timeanddate.com/worldclock/converter.html?iso=20210713T140000&p1=1440) to convert to your local time. 
+All times in UTC, please use a converter like [this one](https://www.timeanddate.com/worldclock/converter.html?iso=20210713T140000&p1=1440) to convert to your local time.
 
 We do not distinguish between workshop papers and Findings of the ACL papers that are being presented - they are all great!
 
