@@ -246,11 +246,11 @@ members:
     note: ''
     tags: ['GEMv1']
   - name: Nishant Subramani
-    position:
+    position: Predoctoral Investigator
     organization: Allen institute for AI
-    website: ''
-    twitter: ''
-    note: ''
+    website: 'https://hatat5.github.io'
+    twitter: '@nsubramani23'
+    note: 'Looking for PhD positions to start Fall 2023'
     tags: ['GEMv1']
   - name: Emiel van Miltenburg
     position: Assistant Professor
@@ -383,9 +383,9 @@ members:
   - name: 'Steven Feng'
     position: ''
     organization: 'Carnegie Mellon University'
-    website: ''
-    twitter: ''
-    note: ''
+    website: 'https://styfeng.github.io/'
+    twitter: '@stevenyfeng'
+    note: 'Currently applying to PhD programs!'
   - name: 'Michael White'
     position: ''
     organization: 'The Ohio State University / Facebook'
