@@ -5,11 +5,15 @@
   font-variant: normal;
 }
 
-.italicsdescription {
+.larger{
+  font-size: 1.3rem;
+}
+
+.dataset {
   line-height: 1.1;
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 0.9rem;
+  font-weight: lighter;
   font-variant: normal;
-  font-style: italic;
+  margin-bottom: 10px;
 }
 

@@ -30,14 +30,14 @@ export default function Post({ allData }) {
           {allData.map(({ id, title, type, background }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/model_cards/${id}`}>
-                <a>{title}</a>
+              <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>
               <small className={utilStyles.lightText}>
                 {type}
               </small>
               <span className={utilStyles.smallSpace}></span>
-              <dd className={styles.italicsdescription}>{background}</dd>
+              <div className={styles.model}>{background}</div>
             </li>
           ))}
         </ul>

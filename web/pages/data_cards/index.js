@@ -53,14 +53,14 @@ export default function Home({ allTasksData }) {
           {allTasksData.map(({ id, title, type, motivation }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/data_cards/${id}`}>
-                <a>{title}</a>
+                <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>
               <small className={utilStyles.lightText}>
                 {type}
               </small>
               <span className={utilStyles.smallSpace}></span>
-              <dd className={styles.italicsdescription}>{motivation}</dd>
+              <div className={styles.dataset}>{motivation}</div>
             </li>
           ))}
         </ul>
