@@ -1,20 +1,35 @@
 .resources {
-    display: flex; /* or inline-flex */
-    flex-flow: row wrap;
-    justify-content: space-between;
 }
 
 .resourceName {
+    font-size: 1.3rem;
     min-width: 200px;
-    flex-basis:  20%;
-    flex-grow: 1;
     font-weight: 750;
 }
 
 
 .resourceDetail {
-    flex-basis:  80%;
-    flex-grow: 4;
-    margin-bottom: 20px;
-    text-align: justify;
+    line-height: 1.1;
+    font-size: 0.9rem;
+    font-variant: normal;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.venue {
+    line-height: 1.1;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    font-variant: normal;
+    margin-bottom: 10px;
+
+}
+
+.authors {
+    line-height: 1.1;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    font-variant: normal;
+    margin-bottom: 10px;
+
 }

@@ -18,39 +18,42 @@ export default function Post({ }) {
         <span className={utilStyles.smallSpace}></span>
         <div>
           <p>
-            We are regularly publishing papers on aspects of GEM that describe findings 
+            We are regularly publishing papers on aspects of GEM that describe findings
             or resources we find worthwhile to share. Please have a look below:
           </p>
         </div>
         <hr></hr>
         <div className={styles.resources}>
-          <div className={styles.resourceName}>
-            <Link href="https://aclanthology.org/2021.gem-1.10/">GEMv1 Overview</Link>
+          <div>
+            <Link href="https://aclanthology.org/2021.gem-1.10/"><a className={styles.resourceName}>GEMv1 Overview</a></Link>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>GEM Workshop 2021</small>
           </div>
           <div className={styles.resourceDetail}>
-            In ""
-          <span className="authors">Authors: Angelina McMillan-Major, Salomey Osei, Juan Diego Rodriguez, Pawan Sasanka Ammanamanchi, Sebastian Gehrmann, Yacine Jernite</span> 
-          <span className="venue">GEM Workshop 2021</span> 
+            This is our first overview paper, introducing GEM and the initial set of tasks and baselines.
           </div>
-          <div className={styles.resourceName}>
-            <a href="https://aclanthology.org/2021.gem-1.11/" target="_blank">Data Cards</a>
-          </div>
-          <div className={styles.resourceDetail}>
-            In "Reusable Templates and Guides For Documenting Datasets and Models for Natural Language Processing and Generation: A Case Study of the HuggingFace and GEM Data and Model Cards", 
-            XXX
-            <span className="authors">Authors: Angelina McMillan-Major, Salomey Osei, Juan Diego Rodriguez, Pawan Sasanka Ammanamanchi, Sebastian Gehrmann, Yacine Jernite</span> 
-            <span className="venue">GEM Workshop 2021</span> 
-          </div>
-          <div className={styles.resourceName}>
-            <a href="https://openreview.net/forum?id=CSi1eu_2q96" target="_blank">Evaluation Suites</a>
+          <div className={styles.authors}> Authors: All GEMv1 participants (see <Link href="team/2021">team list</Link>)</div>
+
+          <div>
+            <a href="https://aclanthology.org/2021.gem-1.11/" target="_blank" className={styles.resourceName}>Data Cards</a>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>GEM Workshop 2021</small>
           </div>
           <div className={styles.resourceDetail}>
-            In the paper "Automatic Construction of Evaluation Suites for Natural Language Generation Datasets", 
+            In "Reusable Templates and Guides For Documenting Datasets and Models for Natural Language Processing and Generation: A Case Study of the HuggingFace and GEM Data and Model Cards",
+            we describe the approach for data documentation in GEMv1 and the similar approach used by HuggingFace datasets.</div>
+            <div className={styles.authors}>Authors: Angelina McMillan-Major, Salomey Osei, Juan Diego Rodriguez, Pawan Sasanka Ammanamanchi, Sebastian Gehrmann, Yacine Jernite</div>
+          <div>
+            <a href="https://openreview.net/forum?id=CSi1eu_2q96" target="_blank" className={styles.resourceName}>Evaluation Suites</a>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>NeurIPS 2021</small>
+          </div>
+          <div className={styles.resourceDetail}>
+            In the paper "Automatic Construction of Evaluation Suites for Natural Language Generation Datasets",
             we discuss how to build data collections that test robustness of models and show that they
-            are much more expressive than typical test splits. 
-            <span className="authors">Authors: Simon Mille, Kaustubh Dhole, Saad Mahamood, Laura Perez-Beltrachini, Varun Gangal, Mihir Kale, Emiel van Miltenburg, Sebastian Gehrmann</span>,
-            <span className="venue">NeurIPS 2021</span> 
-          </div>
+            are much more expressive than typical test splits.
+            </div>
+            <div className={styles.authors}>Authors: Simon Mille, Kaustubh Dhole, Saad Mahamood, Laura Perez-Beltrachini, Varun Gangal, Mihir Kale, Emiel van Miltenburg, Sebastian Gehrmann</div>
 
         </div>
       </article>
