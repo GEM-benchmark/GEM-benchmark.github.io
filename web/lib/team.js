@@ -2,10 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const teamPath = path.join(process.cwd(), 'data', 'team.yaml')
+var basePath = path.join(process.cwd(), 'data')
 
 
-export async function getTeamData() {
+export async function getTeamData(year) {
+  const teamPath = path.join(basePath, year, 'team.yaml')
   const fileContents = fs.readFileSync(teamPath, "utf8");
 
   // Use gray-matter to parse the team data.
