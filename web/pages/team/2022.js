@@ -52,7 +52,8 @@ class ContactList extends React.Component {
 
 function Contact(props) {
 
-  // Optional Website link.
+  // Optional Website links.
+
   var website_tag = "";
   if (props.website != '') {
     website_tag = (
@@ -67,6 +68,16 @@ function Contact(props) {
     twitter_tag = (
       <a href={twitter_href} target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
     );
+  }
+
+  // Combine the socials through spacers.
+  var socials = "";
+  if (twitter_tag != "" || website_tag != "") {
+    socials = (
+      <div>
+        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
+      </div>
+    )
   }
 
   var tags_bar = "";
@@ -85,9 +96,7 @@ function Contact(props) {
       <h3 className={styles.name}>{props.name}</h3>
       <p className={styles.title}>{props.organization}</p>
       <div className={styles.note}>{props.note}</div>
-      <div>
-        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
-      </div>
+      {socials}
       {tags_bar}
     </div>
   );
