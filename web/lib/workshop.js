@@ -8,9 +8,10 @@ import toc from "remark-toc";
 import gfm from "remark-gfm";
 import highlight from "remark-highlight.js";
 
-const workshopPath = path.join(process.cwd(), "data", "workshop.md");
+var basePath = path.join(process.cwd(), "data");
 
-export async function getWorkshopData() {
+export async function getWorkshopData(year) {
+  const workshopPath = path.join(basePath, "workshop"+year+".md");
   const fileContents = fs.readFileSync(workshopPath, "utf8");
 
   // Use gray-matter to parse the post metadata section

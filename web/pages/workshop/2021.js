@@ -21,7 +21,7 @@ export default function Post({ workshopData }) {
 }
 
 export async function getStaticProps() {
-  const workshopData = await getWorkshopData();
+  const workshopData = await getWorkshopData("2021");
   return {
     props: {
       workshopData,
