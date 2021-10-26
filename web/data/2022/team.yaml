@@ -246,11 +246,11 @@ members:
     note: ''
     tags: ['GEMv1']
   - name: Nishant Subramani
-    position:
+    position: Predoctoral Investigator
     organization: Allen institute for AI
-    website: ''
-    twitter: ''
-    note: ''
+    website: 'https://hatat5.github.io'
+    twitter: '@nsubramani23'
+    note: 'Looking for PhD positions to start Fall 2023'
     tags: ['GEMv1']
   - name: Emiel van Miltenburg
     position: Assistant Professor
