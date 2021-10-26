@@ -1,4 +1,4 @@
-import { getTutorialData } from "../lib/tutorial";
+import { getData } from "../lib/render_md";
 import Layout from "../components/layout";
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
@@ -21,7 +21,7 @@ export default function Post({ tutorialData }) {
 }
 
 export async function getStaticProps() {
-  const tutorialData = await getTutorialData();
+  const tutorialData = await getData("getting_started.md");
   return {
     props: {
       tutorialData,

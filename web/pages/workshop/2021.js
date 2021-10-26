@@ -1,4 +1,4 @@
-import { getWorkshopData } from "../../lib/workshop";
+import { getData } from "../../lib/render_md";
 import Layout from "../../components/layout";
 import Head from "next/head";
 import utilStyles from "../../styles/utils.module.css";
@@ -21,7 +21,7 @@ export default function Post({ workshopData }) {
 }
 
 export async function getStaticProps() {
-  const workshopData = await getWorkshopData("2021");
+  const workshopData = await getData("2021/workshop.md");
   return {
     props: {
       workshopData,

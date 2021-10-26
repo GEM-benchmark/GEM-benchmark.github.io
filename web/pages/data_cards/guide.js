@@ -1,4 +1,4 @@
-import { getGuideData } from "../../lib/statement_guide";
+import { getData } from "../../lib/render_md";
 import Layout from "../../components/layout";
 import Head from "next/head";
 import utilStyles from "../../styles/utils.module.css";
@@ -21,7 +21,7 @@ export default function Post({ guideData }) {
 }
 
 export async function getStaticProps() {
-  const guideData = await getGuideData();
+  const guideData = await getData("statement_guide.md");
   return {
     props: {
       guideData,

@@ -1,4 +1,4 @@
-import { getNlAugmenterData } from "../lib/nl_augmenter";
+import { getData } from "../lib/render_md";
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
 import styles from "./nl_augmenter.module.css";
@@ -22,7 +22,7 @@ export default function Post({nlAugmenterData}) {
 }
 
 export async function getStaticProps() {
-    const nlAugmenterData = await getNlAugmenterData();
+    const nlAugmenterData = await getData("nl_augmenter.md");
     return {
         props: {
             nlAugmenterData,

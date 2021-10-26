@@ -1,4 +1,4 @@
-import { getFAQData } from "../lib/turker_faq";
+import { getData } from "../lib/render_md";
 import Layout from "../components/layout";
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
@@ -21,7 +21,7 @@ export default function Post({ Data }) {
 }
 
 export async function getStaticProps() {
-  const Data = await getFAQData();
+  const Data = await getData("turker_faq.md");
   return {
     props: {
       Data,

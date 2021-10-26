@@ -1,4 +1,4 @@
-import { getSharedTaskData } from "../lib/shared_task";
+import { getData } from "../lib/render_md";
 import Layout from "../components/layout";
 import Head from "next/head";
 import utilStyles from "../styles/utils.module.css";
@@ -21,7 +21,7 @@ export default function Post({ sharedTaskData }) {
 }
 
 export async function getStaticProps() {
-  const sharedTaskData = await getSharedTaskData();
+  const sharedTaskData = await getData("2021/shared_task.md");
   return {
     props: {
       sharedTaskData,
