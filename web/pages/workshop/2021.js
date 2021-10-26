@@ -1,7 +1,7 @@
-import { getWorkshopData } from "../lib/workshop";
-import Layout from "../components/layout";
+import { getWorkshopData } from "../../lib/workshop";
+import Layout from "../../components/layout";
 import Head from "next/head";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../../styles/utils.module.css";
 
 export default function Post({ workshopData }) {
   return (
