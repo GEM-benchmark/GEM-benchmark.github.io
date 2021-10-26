@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fteam\u002F2022","\u002Fteam\u002F2021","\u002Fresults","\u002Fdata_cards","\u002Fmodel_cards","\u002Fturker_faq","\u002Fget_started","\u002Fshared_task","\u002Fnl_augmenter","\u002Fdata_cards\u002Fguide","\u002Fworkshop\u002F2021","\u002Fdata_cards\u002F[id]","\u002Fmodel_cards\u002F[id]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
