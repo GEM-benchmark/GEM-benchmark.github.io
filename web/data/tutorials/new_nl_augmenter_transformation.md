@@ -130,6 +130,7 @@ Now, it’s time to test your solution on some sample data to make sure it works
         "sentence": "Andrew finally kp_test returned the kp_test French book kp_test to Chris kp_test that I kp_test bought last kp_test week kp_test"
       }]
     }
+  ]
 }
 ```
 
