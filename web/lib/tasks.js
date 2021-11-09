@@ -7,7 +7,7 @@ import slug from "remark-slug";
 import toc from "remark-toc";
 import gfm from "remark-gfm";
 
-const tasksDirectory = path.join(process.cwd(), 'tasks')
+const tasksDirectory = path.join(process.cwd(), 'data', 'tasks')
 
 export function getSortedTasksData() {
   // Get file names under /posts

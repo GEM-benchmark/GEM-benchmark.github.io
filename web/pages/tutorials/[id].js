@@ -25,7 +25,7 @@ export default function Post({ taskData }) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllIds('models')
+  const paths = getAllIds('tutorials')
   return {
     paths,
     fallback: false
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const taskData = await getData(`models/${params.id}.md`)
+  const taskData = await getData(`tutorials/${params.id}.md`)
   return {
     props: {
       taskData

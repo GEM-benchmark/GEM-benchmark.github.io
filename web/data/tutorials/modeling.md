@@ -1,5 +1,7 @@
 ---
-title: "Getting Started with GEM"
+title: 'From pretrained model to submission'
+type: Modeling
+background: This tutorial shows the entire pipeline from loading the data, creating a model, to formatting the submission file from predictions.
 ---
 
 This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
@@ -21,7 +23,7 @@ pip install sentencepiece
 pip install transformers
 ```
 
-We further assume access to a GPU in this tutorial. You should be able to run all the code inside of a [colab notebook for free GPU access](https://colab.research.google.com/). 
+We further assume access to a GPU in this tutorial. You should be able to run all the code inside of a [colab notebook for free GPU access](https://colab.research.google.com/).
 
 ## Loading the Data
 
@@ -67,15 +69,15 @@ You can notice that challenge sets created as part of GEM act just like any othe
 GEM supports many other datasets, simply pick one from this list and check out the corresponding [data cards](/data_cards).
 
 ```py
-['common_gen', 'cs_restaurants', 'dart', 'mlsum_de', 'mlsum_es', 'xsum',  
- 'e2e_nlg', 'schema_guided_dialog', 'totto', 'web_nlg_en', 'web_nlg_ru', 
-  'wiki_auto_asset_turk', 'wiki_lingua_arabic_ar', 'wiki_lingua_chinese_zh', 
-  'wiki_lingua_czech_cs', 'wiki_lingua_dutch_nl', 'wiki_lingua_english_en', 
-  'wiki_lingua_french_fr', 'wiki_lingua_german_de', 'wiki_lingua_hindi_hi', 
-  'wiki_lingua_indonesian_id', 'wiki_lingua_italian_it', 
-  'wiki_lingua_japanese_ja', 'wiki_lingua_korean_ko', 
-  'wiki_lingua_portuguese_pt', 'wiki_lingua_russian_ru', 
-  'wiki_lingua_spanish_es', 'wiki_lingua_thai_th', 
+['common_gen', 'cs_restaurants', 'dart', 'mlsum_de', 'mlsum_es', 'xsum',
+ 'e2e_nlg', 'schema_guided_dialog', 'totto', 'web_nlg_en', 'web_nlg_ru',
+  'wiki_auto_asset_turk', 'wiki_lingua_arabic_ar', 'wiki_lingua_chinese_zh',
+  'wiki_lingua_czech_cs', 'wiki_lingua_dutch_nl', 'wiki_lingua_english_en',
+  'wiki_lingua_french_fr', 'wiki_lingua_german_de', 'wiki_lingua_hindi_hi',
+  'wiki_lingua_indonesian_id', 'wiki_lingua_italian_it',
+  'wiki_lingua_japanese_ja', 'wiki_lingua_korean_ko',
+  'wiki_lingua_portuguese_pt', 'wiki_lingua_russian_ru',
+  'wiki_lingua_spanish_es', 'wiki_lingua_thai_th',
   'wiki_lingua_turkish_tr', 'wiki_lingua_vietnamese_vi']
 ```
 
@@ -332,7 +334,7 @@ Please format submissions in the following format
       "dataset_identifier": {
         "values": ["output1", "output2", "..."], # A list of system outputs
         # Optionally, you can add the keys which are part of an example to ensure that there is no shuffling mistakes.
-        "keys": ["schema_guided_dialog-test-9585", "schema_guided_dialog-test-9585", ...] 
+        "keys": ["schema_guided_dialog-test-9585", "schema_guided_dialog-test-9585", ...]
         }
     }
 }
@@ -341,7 +343,7 @@ Please format submissions in the following format
 
 In this case, `dataset_identifier` is the identifier of the dataset followed by an identifier of the set the outputs were created from, for example `_validation` or `_test`. That means, the common_gen validation set would have the identifier `common_gen_validation`.
 
-The `keys` field can be set to avoid accidental shuffling to impact your metrics. Simply add a list of the `gem_id` for each output example in the same order as your values. 
+The `keys` field can be set to avoid accidental shuffling to impact your metrics. Simply add a list of the `gem_id` for each output example in the same order as your values.
 
 ### Formatting your predictions
 
@@ -369,7 +371,7 @@ submission_dict = {
     "tasks": {
       "common_gen_validation": {"values": valid_formatted, "keys": valid_keys},
       "common_gen_test": {"values": test_formatted, "keys": test_keys},
-      "common_gen_challenge_train_sample": {"values": challenge_train_sample_formatted, 
+      "common_gen_challenge_train_sample": {"values": challenge_train_sample_formatted,
                                             "keys": challenge_train_sample_keys}
     }
 }
@@ -392,10 +394,10 @@ Obviously, we do not want to rely only on ROUGE scores. For this, we developed t
 git clone git@github.com:GEM-benchmark/GEM-metrics.git
 ```
 
-Assuming that you formatted your outputs correctly, you can now run 
+Assuming that you formatted your outputs correctly, you can now run
 
 ```bash
-python run_metrics.py [-r references.json] [-o outputs.scores.json] outputs.json 
+python run_metrics.py [-r references.json] [-o outputs.scores.json] outputs.json
 ```
 
-which will create a json file with your scores per task and challenge set. Please follow the [README](https://github.com/GEM-benchmark/GEM-metrics) for more detailed usage information. 
+which will create a json file with your scores per task and challenge set. Please follow the [README](https://github.com/GEM-benchmark/GEM-metrics) for more detailed usage information.

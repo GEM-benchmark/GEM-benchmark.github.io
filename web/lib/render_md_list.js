@@ -8,9 +8,13 @@ import toc from "remark-toc";
 import gfm from "remark-gfm";
 import highlight from "remark-highlight.js";
 
-const tasksDirectory = path.join(process.cwd(), 'models')
 
-export function getSortedTasksData() {
+var basePath = path.join(process.cwd(), "data");
+
+
+export function getSortedData(folderName) {
+  const tasksDirectory = path.join(basePath, folderName);
+
   // Get file names under /posts
   const fileNames = fs.readdirSync(tasksDirectory)
   const allPostsData = fileNames.filter(
@@ -45,7 +49,8 @@ export function getSortedTasksData() {
   })
 }
 
-export function getAllTaskIds() {
+export function getAllIds(folderName) {
+  const tasksDirectory = path.join(basePath, folderName);
   const fileNames = fs.readdirSync(tasksDirectory)
 
   // Returns an array that looks like this:
@@ -74,29 +79,29 @@ export function getAllTaskIds() {
     })
 }
 
-export async function getTaskData(id) {
-  const fullPath = path.join(tasksDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
+// export async function getTaskData(id) {
+//   const fullPath = path.join(tasksDirectory, `${id}.md`)
+//   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents)
+//   // Use gray-matter to parse the post metadata section
+//   const matterResult = matter(fileContents)
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(gfm)
-    .use(toc, { tight: true })
-    .use(slug)
-    .use(highlight)
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString()
+//   // Use remark to convert markdown into HTML string
+//   const processedContent = await remark()
+//     .use(gfm)
+//     .use(toc, { tight: true })
+//     .use(slug)
+//     .use(highlight)
+//     .use(html)
+//     .process(matterResult.content);
+//   const contentHtml = processedContent.toString()
 
-  // Combine the data with the id and contentHtml
-  return {
-    id,
-    contentHtml,
-    ...matterResult.data
-  }
+//   // Combine the data with the id and contentHtml
+//   return {
+//     id,
+//     contentHtml,
+//     ...matterResult.data
+//   }
 
-}
+// }
 

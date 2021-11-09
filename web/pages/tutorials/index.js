@@ -13,23 +13,17 @@ export default function Post({ allData }) {
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          GEM Model Cards
+          GEM Tutorials
         </span>
         <p className={styles.description}>
-          The list below links to the work-in-progress data cards for models submitted to GEM. As part of our submission process, we ask participants a series of questions about their models. The current version of our model cards lists the provided answers verbatim.
-          The submission form can be found <a href="https://forms.gle/pds6cbBf2Gf2VGMv7" target="_blank">here</a>. The template used to produce the statements
-          and can be found here: [
-            <Link href={`/model_card_template.md`}>
-            <a download target="_blank">
-              download template
-              </a>
-          </Link>].
+          Here you can find all information to get started using
+          GEM datasets, models, and resources, and how to add new datasets.
         </p>
         <span className={utilStyles.smallSpace}></span>
         <ul className={utilStyles.list}>
           {allData.map(({ id, title, type, background }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/model_cards/${id}`}>
+              <Link href={`/tutorials/${id}`}>
               <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>
@@ -48,7 +42,7 @@ export default function Post({ allData }) {
 
 // Load all md files for tasks
 export async function getStaticProps() {
-  const allData = getSortedData('models')
+  const allData = getSortedData('tutorials');
   return {
     props: {
       allData
