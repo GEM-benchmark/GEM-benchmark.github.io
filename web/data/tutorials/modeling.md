@@ -346,23 +346,9 @@ The `keys` field can be set to avoid accidental shuffling to impact your metrics
 
 ### Formatting Your Predictions
 
-For our tutorial, let's say we want to include results for the test (`common_gen_test`) and challenge set (`common_gen_challenge_train_sample`) outputs. 
+For our tutorial, let's say we want to include results for the validation set and challenge set (`common_gen_challenge_train_sample`) outputs.
 
 ```python
-test_output = data['test'].map(
-    lambda batch: {
-        'generated': beam_generate_sentences(
-        batch,
-        model,
-        tokenizer,
-        num_beams=BEAM_SIZE,
-        max_length=MAX_LENGTH,
-        device=DEVICE)
-    },
-    batched=True,
-    batch_size=128,
-)
-
 challenge_train_sample_output = data["challenge_train_sample"].map(
     lambda batch: {
         'generated': beam_generate_sentences(
@@ -376,7 +362,6 @@ challenge_train_sample_output = data["challenge_train_sample"].map(
     batched=True,
     batch_size=128,
 )
-
 ```
 
 We add a `generated` field into the dataset which makes analysis much easier. However, in our submission file we only want the actual values and corresponding IDs. Thus, we filter:
@@ -384,9 +369,6 @@ We add a `generated` field into the dataset which makes analysis much easier. Ho
 ```python
 valid_formatted = [o['generated'] for o in valid_output]
 valid_keys = [o['gem_id'] for o in data['validation']]
-
-test_formatted = [o['generated'] for o in test_output]
-test_keys = [o['gem_id'] for o in data['test']]
 
 challenge_train_sample_formatted = [o['generated'] for o in challenge_train_sample_output]
 challenge_train_sample_keys = [o['gem_id'] for o in data['challenge_train_sample']]
@@ -406,20 +388,22 @@ submission_dict = {
       "common_gen_validation": {
           "values": valid_formatted, 
           "keys": valid_keys
-          },
-      "common_gen_test": {
-          "values": test_formatted, 
-          "keys": test_keys
-          },
-      "common_gen_challenge_train_sample": {
-          "values": challenge_train_sample_formatted, 
-          "keys": challenge_train_sample_keys
           }
     }
 }
 ```
 
 This format is scalable to more tasks: you simply need to add more outputs to the `tasks` subfield.
+
+```python
+# Submit results for challenge set.
+new_task_name = "common_gen_challenge_train_sample"
+new_task_data = {
+    "values": challenge_train_sample_formatted, 
+    "keys": challenge_train_sample_keys
+} 
+submission_dict["tasks"][new_task_name] = new_task_data
+```
 The last step is to write our submission dictionary to a file.
 
 ```python
