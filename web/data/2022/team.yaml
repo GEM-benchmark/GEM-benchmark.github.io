@@ -353,7 +353,7 @@ members:
   - name: 'Nico Daheim'
     position: ''
     organization: 'RWTH Aachen'
-    website: 'ndaheim.github.io'
+    website: 'https://ndaheim.github.io'
     twitter: ''
     note: 'Currently applying for PhD positions!'
   - name: 'Thomas Scialom'
