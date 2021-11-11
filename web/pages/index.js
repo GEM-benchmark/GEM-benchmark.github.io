@@ -42,9 +42,9 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/get_started">
+          <Link href="/tutorials">
             <a className={styles.card}>
-              <h3>How to</h3>
+              <h3>Tutorials</h3>
             </a>
           </Link>
 
