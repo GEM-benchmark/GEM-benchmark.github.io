@@ -51,7 +51,16 @@ export default function Post({ allData }) {
         <h2 className={utilStyles.headingLg}>Interactive Notebooks</h2>
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
-            <a href="https://www.youtube.com/watch?v=DpK478-ozPE" target="_blank" className={styles.larger}>Creating a filter</a>
+            <a href="https://github.com/GEM-benchmark/GEM-benchmark.github.io/blob/main/web/data/notebooks/GEM_intro.ipynb" target="_blank" className={styles.larger}>From pretrained model to submission</a>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>
+              Modeling
+            </small>
+            <span className={utilStyles.smallSpace}></span>
+            <div className={styles.model}>This is an interactive version of the introduction tutorial.</div>
+          </li>
+          <li className={utilStyles.listItem}>
+            <a href="https://github.com/GEM-benchmark/GEM-benchmark.github.io/blob/main/web/data/notebooks/GEM_Hackathon_2021_filters_tutorial.ipynb" target="_blank" className={styles.larger}>Creating a filter</a>
             <span className={utilStyles.smallSpace}></span>
             <small className={utilStyles.lightText}>
               Transformation
@@ -64,6 +73,7 @@ export default function Post({ allData }) {
     </Layout>
   );
 }
+
 
 // Load all md files for tasks
 export async function getStaticProps() {
