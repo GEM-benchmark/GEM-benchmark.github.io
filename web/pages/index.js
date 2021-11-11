@@ -18,12 +18,11 @@ export default function Home() {
         <p className={styles.description}>GEM aims to:</p>
         <ul className={styles.description}>
           <li>
-            measure NLG progress across 13 datasets spanning many NLG tasks
-            and languages.
+            measure NLG progress across many NLG tasks across languages.
         </li>
           <li>
-            provide an in-depth analysis of data and models presented via data
-            statements and challenge sets.
+            audit data and models and present results via data
+            cards and model robustness reports.
         </li>
           <li>
             develop standards for evaluation of generated text using both
@@ -31,8 +30,8 @@ export default function Home() {
         </li>
         </ul>
         <p className={styles.description}>
-          It is our goal to regularly update GEM and to encourage
-          toward more inclusive practices in dataset development by extending
+          We will regularly update GEM and to encourage
+          more inclusive practices in evaluation by extending
           existing data or developing datasets for additional languages.
       </p>
         <div className={styles.grid}>
@@ -54,9 +53,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <a className={styles.card} href="https://arxiv.org/abs/2102.01672" target="_blank">
-            <h3>Paper</h3>
-          </a>
+          <Link href="/papers">
+            <a className={styles.card}>
+              <h3>Papers</h3>
+            </a>
+          </Link>
 
           <Link href="/team">
             <a className={styles.card}>

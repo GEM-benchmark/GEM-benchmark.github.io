@@ -20,11 +20,12 @@ export default function Post({ allData }) {
           GEM datasets, models, and resources, and how to add new datasets.
         </p>
         <span className={utilStyles.smallSpace}></span>
+        <h2 className={utilStyles.headingLg}>Text Walkthroughs</h2>
         <ul className={utilStyles.list}>
           {allData.map(({ id, title, type, background }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/tutorials/${id}`}>
-              <a className={styles.larger}>{title}</a>
+                <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>
               <small className={utilStyles.lightText}>
@@ -34,6 +35,30 @@ export default function Post({ allData }) {
               <div className={styles.model}>{background}</div>
             </li>
           ))}
+        </ul>
+        <h2 className={utilStyles.headingLg}>Video Guides</h2>
+        <ul className={utilStyles.list}>
+          <li className={utilStyles.listItem}>
+            <a href="https://www.youtube.com/watch?v=DpK478-ozPE" target="_blank" className={styles.larger}>Creating a filter</a>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>
+              Transformation
+            </small>
+            <span className={utilStyles.smallSpace}></span>
+            <div className={styles.model}>This walkthrough shows you how to create a filter from scratch using NL-Augmenter.</div>
+          </li>
+        </ul>
+        <h2 className={utilStyles.headingLg}>Interactive Notebooks</h2>
+        <ul className={utilStyles.list}>
+          <li className={utilStyles.listItem}>
+            <a href="https://www.youtube.com/watch?v=DpK478-ozPE" target="_blank" className={styles.larger}>Creating a filter</a>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>
+              Transformation
+            </small>
+            <span className={utilStyles.smallSpace}></span>
+            <div className={styles.model}>This notebook shows you how to create a filter from scratch using NL-Augmenter. Please see the accompanying video for in-depth explanations.</div>
+          </li>
         </ul>
       </article>
     </Layout>

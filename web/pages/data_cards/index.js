@@ -43,7 +43,7 @@ export default function Home({ allTasksData }) {
               download template
               </a>
           </Link>] [
-            <Link href={`/data_cards/guide`}>
+            <Link href={`/tutorials/writing_a_data_card`}>
             <a>
               view guide
               </a>

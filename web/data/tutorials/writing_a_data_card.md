@@ -1,3 +1,10 @@
+---
+title: 'Writing a data card'
+type: Data
+background: This guide describes how to fill each section in the data card (GEMv1 version).
+---
+
+
 ## Table of Contents
 
 ## Dataset and Task Description
