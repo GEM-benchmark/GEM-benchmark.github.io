@@ -17,7 +17,7 @@ We are using the HuggingFace hub to host all new datasets. All you will have to 
 
 To upload the dataset, you will need a HuggingFace account. If you already have one, you can skip this step.
 
-If not, go to [huggingface.co/join](huggingface.co/join) and create an account.
+If not, go to [huggingface.co/join](https://huggingface.co/join) and create an account.
 
 ### Join the GEM Organization
 
