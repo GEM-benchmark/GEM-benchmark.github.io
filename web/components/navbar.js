@@ -101,8 +101,8 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/workshop">
-                <a>Workshop</a>
+              <Link href="/hackathon">
+                <a>Hackathon</a>
               </Link>
             </li>
           </ul>
