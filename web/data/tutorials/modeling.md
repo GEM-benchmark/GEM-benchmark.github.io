@@ -4,17 +4,21 @@ type: Modeling
 background: This tutorial shows the entire pipeline from loading the data, creating a model, to formatting the submission file from predictions.
 ---
 
-This tutorial presents a full walk-through how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
+This tutorial presents a full walk-through on how to get started with GEM, how to load and inspect data, how to finetune a baseline model, and how to generate predictions.
 Throughout this tutorial, we will focus on the CommonGen task, but we will note
-what changes to make to use another of the GEM datasets.
+what changes to make to use another of the [GEM datasets](/data_cards).
+
+You can also run this tutorial as a notebook [here](https://colab.research.google.com/drive/1iREkGABObpdluTBNAnLhvyABEtdbLokT?usp=sharing).
 
 **SUBMITTING** Our [submission form](https://forms.gle/vbTZDMCuqzok8tTA9) is permanently open! Please account for some extra time to write your model card.
+
 
 ## Table of Contents
 
 ## Preliminaries
 
-This tutorial uses PyTorch and the HuggingFace infrastructure to finetune models. You need to install the following dependencies:
+This tutorial uses PyTorch and the HuggingFace infrastructure to finetune models. 
+You need to install the following dependencies:
 
 ```bash
 pip install git+https://github.com/huggingface/datasets.git
@@ -23,17 +27,18 @@ pip install sentencepiece
 pip install transformers
 ```
 
-We further assume access to a GPU in this tutorial. You should be able to run all the code inside of a [colab notebook for free GPU access](https://colab.research.google.com/).
+We recommend you use a GPU machine. You should be able to run all the code inside of a [colab notebook for free GPU access](https://colab.research.google.com/).
 
-## Loading the Data
+## Loading the data
 
-We will be using [HuggingFace datasets](https://huggingface.co/docs/datasets/gem), but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
+We will be using [HuggingFace datasets](https://huggingface.co/datasets/gem), but the GEM datasets are available in [TFDS](https://www.tensorflow.org/datasets) as well.
 
 You can load and inspect datasets like this:
 
 ```python
 >> from datasets import load_dataset
->> data = load_dataset("gem", "common_gen")
+>> DATASET_NAME = "common_gen"
+>> data = load_dataset("gem", DATASET_NAME)
 >> data
 
 DatasetDict({
@@ -68,18 +73,6 @@ You can notice that challenge sets created as part of GEM act just like any othe
 
 GEM supports many other datasets, simply pick one from this list and check out the corresponding [data cards](/data_cards).
 
-```py
-['common_gen', 'cs_restaurants', 'dart', 'mlsum_de', 'mlsum_es', 'xsum',
- 'e2e_nlg', 'schema_guided_dialog', 'totto', 'web_nlg_en', 'web_nlg_ru',
-  'wiki_auto_asset_turk', 'wiki_lingua_arabic_ar', 'wiki_lingua_chinese_zh',
-  'wiki_lingua_czech_cs', 'wiki_lingua_dutch_nl', 'wiki_lingua_english_en',
-  'wiki_lingua_french_fr', 'wiki_lingua_german_de', 'wiki_lingua_hindi_hi',
-  'wiki_lingua_indonesian_id', 'wiki_lingua_italian_it',
-  'wiki_lingua_japanese_ja', 'wiki_lingua_korean_ko',
-  'wiki_lingua_portuguese_pt', 'wiki_lingua_russian_ru',
-  'wiki_lingua_spanish_es', 'wiki_lingua_thai_th',
-  'wiki_lingua_turkish_tr', 'wiki_lingua_vietnamese_vi']
-```
 
 ### Loading a single example
 
@@ -89,63 +82,69 @@ Now let's look at a single example:
 ```python
 >> data['train'][0]
 
-{'concept_set_id': 0,
- 'concepts': ['mountain', 'ski', 'skier'],
- 'gem_id': 'common_gen-train-0',
- 'references': [],
- 'target': 'Skier skis down the mountain'}
+{
+    'concept_set_id': 0,
+    'concepts': ['mountain', 'ski', 'skier'],
+    'gem_id': 'common_gen-train-0',
+    'references': [],
+    'target': 'Skier skis down the mountain'
+}
 ```
 
-CommonGen is a task that asks for the production of a sentence (`target`) from a set of concepts (`concepts`). Since one concept set can generate multiple meaningful sentences, the example also includes a unique identifier (`concept_set_idx`) so that multiple references can be linked to an input.
+CommonGen is a task that asks for the production of a sentence (`target`) from a set of concepts (`concepts`). Since one concept set can generate multiple meaningful sentences, the example also includes a unique identifier (`concept_set_id`) so that multiple references can be linked to an input.
 
-Next, let's define utility functions that can generate batches of (tokenized) examples which we can use during training.
+Next, let's define utility functions that can generate batches of (tokenized) examples which we can use during training. 
+
+We create a function that takes a batch from a dataset and constructs the corresponding input string. In our CommonGen example, we concatenate concepts into a single string for each instance. 
 
 ```python
 def construct_input_for_batch(batch):
-  """
-  Function that takes a batch from a dataset and constructs the corresponding
-  input string.
-  """
-  source = [' '.join(concepts) for concepts in batch ["concepts"]]
-  target = batch["target"]
-  return source, target
-
-def batch_tokenize(dataset_batch, tokenizer, decoder_max_length=32):
-  """
-  Construct the batch (source, target) and run them through a tokenizer.
-  """
-  source, target = construct_input_for_batch(dataset_batch)
-  res = {
-      "input_ids": tokenizer(source)["input_ids"],
-      "labels": tokenizer(
-          target,
-          padding='max_length',
-          truncation=True,
-          max_length=decoder_max_length
-      )["input_ids"],
-  }
-  return res
+    """Construct input strings from a batch."""
+    source = [' '.join(concepts) for concepts in batch["concepts"]]
+    target = batch["target"]
+    return source, target
 ```
 
-All we need to do now to preprocess the dataset is to call `batch_tokenize` on it. For our example, we are using BART-base as a model and we need to load the corresponding tokenizer:
+We then create a function that tokenizes the batches. Depending on your task, you might want to consider adjusting the `max_length`.
+```python
+def batch_tokenize(batch, tokenizer, max_length=32):
+    """Construct the batch (source, target) and run them through a tokenizer."""
+    source, target = construct_input_for_batch(batch)
+    res = {
+        "input_ids": tokenizer(source)["input_ids"],
+        "labels": tokenizer(
+            target,
+            padding="max_length",
+            truncation=True,
+            max_length=max_length
+        )["input_ids"],
+    }
+    return res
+```
+
+All we need to do now to preprocess the dataset is to call `batch_tokenize` on it. For our example, we are using BART-base as a model and we need to load the corresponding tokenizer. 
 
 ```python
 from transformers import AutoTokenizer
-tokenizer = AutoTokenizer.from_pretrained('facebook/bart-base')
+
+MODEL_NAME = "facebook/bart-base"
+MAX_LENGTH = 32
+
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 train_data_tokenized = data['train'].map(
-  lambda batch: batch_tokenize(batch, tokenizer, DATASET_NAME, decoder_max_length=DECODER_MAX_LENGTH),
-  batched=True
+    lambda batch: batch_tokenize(batch, tokenizer, max_length=MAX_LENGTH),
+    batched=True
 )
 valid_data_tokenized = data['validation'].map(
-  lambda batch: batch_tokenize(batch, tokenizer, DATASET_NAME, decoder_max_length=DECODER_MAX_LENGTH),
-  batched=True
+    lambda batch: batch_tokenize(batch, tokenizer, max_length=MAX_LENGTH),
+    batched=True
 )
 ```
 
 ## Finetuning a pretrained model
 
-We can now utilize the preprocessed data to finetune a model. To do so, we will utilize the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#seq2seqtrainingarguments) which handles gradient updates, model selection, and evaluation for us.
+We can now utilize the preprocessed data to finetune a model. To do so, we will use the [Trainer API](https://huggingface.co/transformers/main_classes/trainer.html#seq2seqtrainingarguments) which handles gradient updates, model selection, and evaluation for us.
 
 ```python
 from transformers import AutoModelForSeq2SeqLM, Seq2SeqTrainer, Seq2SeqTrainingArguments
@@ -159,42 +158,50 @@ from datasets import load_metric
 rouge_scorer = load_metric("rouge")
 
 def rouge_metric_builder(tokenizer):
-  def compute_rouge_metrics(pred):
-    """utility to compute ROUGE during training."""
-    labels_ids = pred.label_ids
-    pred_ids = pred.predictions
-    # All special tokens are removed.
-    pred_str = tokenizer.batch_decode(pred_ids, skip_special_tokens=True)
-    labels_ids[labels_ids == -100] = tokenizer.pad_token_id
-    label_str = tokenizer.batch_decode(labels_ids, skip_special_tokens=True)
-    # Compute the metric.
-    rouge_results = rouge_scorer.compute(
-        predictions=pred_str,
-        references=label_str,
-        rouge_types=["rouge2", "rougeL"],
-        use_agregator=True,
-        use_stemmer=False,
-    )
-    return {
-        "rouge2": round(rouge_results['rouge2'].mid.fmeasure, 4),
-        "rougeL": round(rouge_results['rougeL'].mid.fmeasure, 4),
-    }
-  return compute_rouge_metrics
+    def compute_rouge_metrics(pred):
+        """Utility to compute ROUGE during training."""
+        labels_ids = pred.label_ids
+        pred_ids = pred.predictions
+        # All special tokens are removed.
+        pred_str = tokenizer.batch_decode(pred_ids, skip_special_tokens=True)
+        labels_ids[labels_ids == -100] = tokenizer.pad_token_id
+        label_str = tokenizer.batch_decode(labels_ids, skip_special_tokens=True)
+        # Compute the metric.
+        rouge_results = rouge_scorer.compute(
+            predictions=pred_str,
+            references=label_str,
+            rouge_types=["rouge2", "rougeL"],
+            use_agregator=True,
+            use_stemmer=False,
+        )
+        return {
+            "rouge2": round(rouge_results['rouge2'].mid.fmeasure, 4),
+            "rougeL": round(rouge_results['rougeL'].mid.fmeasure, 4),
+        }
+    return compute_rouge_metrics
 
 rouge_metric_fn = rouge_metric_builder(tokenizer)
 ```
 
-Fantastic, now all we have to do is set up our trainer class with everything we defined so far and train it!
+We load our model and set some parameters for training and generating.
 
 ```python
-model = AutoModelForSeq2SeqLM.from_pretrained('facebook/bart-base')
-model = model.to('cuda:0')
+import torch
 
+DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
+RANDOM_SEED = 42
+BEAM_SIZE = 4
+
+model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
+model = model.to(DEVICE)
+```
+
+Fantastic, now all we have to do is set up our trainer class with everything we defined so far and run it! 
+```python
 train_args = Seq2SeqTrainingArguments(
     output_dir="BART-commongen",
-    do_train=True,
-    do_eval=True,
-    evaluation_strategy="epoch",
+    evaluation_strategy="epoch", 
+    save_strategy="epoch",
     logging_steps=100,
     # optimization args, the trainer uses the Adam optimizer
     # and has a linear warmup for the learning rate
@@ -205,7 +212,7 @@ train_args = Seq2SeqTrainingArguments(
     num_train_epochs=3,
     warmup_steps=1000,
     # misc args
-    seed=42,
+    seed=RANDOM_SEED,
     disable_tqdm=False,
     load_best_model_at_end=True,
     metric_for_best_model="rouge2",
@@ -222,7 +229,7 @@ trainer = Seq2SeqTrainer(
     compute_metrics=rouge_metric_fn,
 )
 
-trainer._max_length = DECODER_MAX_LENGTH
+trainer._max_length = MAX_LENGTH
 trainer._num_beams = BEAM_SIZE
 ```
 
@@ -232,57 +239,47 @@ And finally:
 >> trainer.train()
 
 Epoch	Training Loss	Validation Loss	Rouge2	    Rougel
-1	1.081300	1.063452	0.121900	0.319900
-2	0.948100	1.086376	0.134000	0.329800
-3	0.820100	1.077763	0.133900	0.328000
+1	0.953500	1.113132	0.122500	0.322200
+2	0.825300	1.132310	0.133800	0.324600
+3	0.709400	1.133418	0.129300	0.324700
 ```
 
-We now have a model that achieves 13.4 ROUGE-2 which can obviously still be tuned, but it is a great starting point.
+We now have a model that achieves 12.9 ROUGE-2 which can obviously still be tuned, but it is a great starting point.
 
-## Generating and evaluating Predictions
+## Generating and evaluating predictions
 
-Given that we now have a model, we also want to generate model outputs now. For this, let's build another two utility functions that generate a batch with only model inputs and which generate and detokenize text with a model.
+Given that we now have our fine-tuned model, we can use it to generate outputs for evaluation. For this, let's build another utility function that handles tokenizing, generating with beam search decoding, and de-tokenizing. 
 
 ```python
-def make_batch_inputs(batch, tokenizer, device='cuda:0'):
-  """
-  Function that takes a batch from a dataset and formats it as input to model.
-  """
-  # Concatenate the concept names for each example in the batch.
-  input_lists, _ = construct_input_for_batch(batch)
-  # Use the model's tokenizer to create the batch input_ids.
-  batch_features = tokenizer(input_lists, padding=True, return_tensors='pt')
-  # Move all inputs to the device.
-  batch_features = dict([(k, v.to(device)) for k, v in batch_features.items()])
-  return batch_features
+def beam_generate_sentences(
+    batch,
+    model,
+    tokenizer,
+    num_beams=4,
+    max_length=32,
+    device='cuda:0'
+):
+    """Generate outputs from a model with beam search decoding."""
+    # Create batch inputs.
+    source, _ = construct_input_for_batch(batch)
+    # Use the model's tokenizer to create the batch input_ids.
+    batch_features = tokenizer(source, padding=True, return_tensors='pt')
+    # Move all inputs to the device.
+    batch_features = dict([(k, v.to(device)) for k, v in batch_features.items()])
 
-def beam_generate_sentences(batch,
-                            model,
-                            tokenizer,
-                            num_beams=4,
-                            max_length=32,
-                            device='cuda:0'):
-  """
-  Function to generate outputs from a model with beam search decoding.
-  """
-  # Create batch inputs.
-  features = make_batch_inputs(
-      batch=batch,
-      tokenizer=tokenizer,
-      device=device)
-  # Generate with beam search.
-  generated_ids = model.generate(
-      input_ids=features['input_ids'],
-      attention_mask=features['attention_mask'],
-      num_beams=num_beams,
-      max_length=max_length,
-  )
-  # Use model tokenizer to decode to text.
-  generated_sentences = [
-      tokenizer.decode(gen_ids.tolist(), skip_special_tokens=True)
-      for gen_ids in generated_ids
-  ]
-  return generated_sentences
+    # Generate with beam search.
+    generated_ids = model.generate(
+        **batch_features,
+        num_beams=num_beams,
+        max_length=max_length,
+    )
+
+    # Use model tokenizer to decode to text.
+    generated_sentences = [
+        tokenizer.decode(gen_ids.tolist(), skip_special_tokens=True)
+        for gen_ids in generated_ids
+    ]
+    return generated_sentences
 ```
 
 We can quickly apply this function across our validation set as a sanity check.
@@ -294,13 +291,13 @@ valid_output = data['validation'].map(
         model,
         tokenizer,
         num_beams=BEAM_SIZE,
-        max_length=MAX_GENERATION_LENGTH)
+        max_length=MAX_LENGTH,
+        device=DEVICE)
     },
     batched=True,
     batch_size=128,
 )
 
-rouge_scorer = load_metric("rouge")
 # Evaluate for ROUGE-2/L
 rouge_results = rouge_scorer.compute(
     predictions=valid_output["generated"],
@@ -315,14 +312,16 @@ f"R-2: {rouge_results['rouge2'].mid.fmeasure:.3f} R-L: {rouge_results['rougeL'].
 As expected, this yields the following output:
 
 ```python
-'R-2: 0.134 R-L: 0.329'
+'R-2: 0.134 R-L: 0.325'
 ```
 
-## Generating and Submitting Test Predictions
+## Generating and submitting test predictions
 
-### Format Description
+You can submit your model along with test predictions via our [submission form](https://forms.gle/vbTZDMCuqzok8tTA9). 
 
-Please format submissions in the following format
+### Format description
+
+Please follow this format for your submission file:
 
 ```json
 {
@@ -345,10 +344,42 @@ In this case, `dataset_identifier` is the identifier of the dataset followed by 
 
 The `keys` field can be set to avoid accidental shuffling to impact your metrics. Simply add a list of the `gem_id` for each output example in the same order as your values.
 
-### Formatting your predictions
+### Formatting Your Predictions
 
-To format your model outputs for GEM, let's first assume that we have the test and challenge set outputs similar to our validation outputs above. The code is adding a `generated` field into the dataset which makes analysis much easier.
-However, in our submission file we only want the actual values and corresponding IDs. Thus, we filter:
+For our tutorial, let's say we want to include results for the test (`common_gen_test`) and challenge set (`common_gen_challenge_train_sample`) outputs. 
+
+```python
+test_output = data['test'].map(
+    lambda batch: {
+        'generated': beam_generate_sentences(
+        batch,
+        model,
+        tokenizer,
+        num_beams=BEAM_SIZE,
+        max_length=MAX_LENGTH,
+        device=DEVICE)
+    },
+    batched=True,
+    batch_size=128,
+)
+
+challenge_train_sample_output = data["challenge_train_sample"].map(
+    lambda batch: {
+        'generated': beam_generate_sentences(
+            batch,
+            model,
+            tokenizer,
+            num_beams=BEAM_SIZE,
+            max_length=MAX_LENGTH,
+            device=DEVICE)
+    },
+    batched=True,
+    batch_size=128,
+)
+
+```
+
+We add a `generated` field into the dataset which makes analysis much easier. However, in our submission file we only want the actual values and corresponding IDs. Thus, we filter:
 
 ```python
 valid_formatted = [o['generated'] for o in valid_output]
@@ -364,40 +395,59 @@ challenge_train_sample_keys = [o['gem_id'] for o in data['challenge_train_sample
 In our final step, we only have to add the outputs to our larger submission construct.
 
 ```python
+SUBMISSION_NAME = "An identifying name of your system"
+DESCRIPTION = "An optional brief description of the system that will be shown on the website"
+
 submission_dict = {
-    "submission_name": "BART-base",
+    "submission_name": SUBMISSION_NAME ,
     "param_count": sum(p.numel() for p in model.parameters()),
-    "description": "Baseline for the task based on BART-base.",
+    "description": DESCRIPTION,
     "tasks": {
-      "common_gen_validation": {"values": valid_formatted, "keys": valid_keys},
-      "common_gen_test": {"values": test_formatted, "keys": test_keys},
-      "common_gen_challenge_train_sample": {"values": challenge_train_sample_formatted,
-                                            "keys": challenge_train_sample_keys}
+      "common_gen_validation": {
+          "values": valid_formatted, 
+          "keys": valid_keys
+          },
+      "common_gen_test": {
+          "values": test_formatted, 
+          "keys": test_keys
+          },
+      "common_gen_challenge_train_sample": {
+          "values": challenge_train_sample_formatted, 
+          "keys": challenge_train_sample_keys
+          }
     }
 }
 ```
 
-This format is scalable to more tasks, you simply need to add more outputs to the `tasks` subfield.
+This format is scalable to more tasks: you simply need to add more outputs to the `tasks` subfield.
 The last step is to write our submission dictionary to a file.
 
 ```python
 import json
 with open('gem_submission.json', 'w') as f:
-  f.write(json.dumps(submission_dict, indent=2))
+    f.write(json.dumps(submission_dict))
 ```
 
-## Evaluating your submission file with the GEM evaluation framework.
+## Evaluating your submission file with the GEM evaluation framework
 
-Obviously, we do not want to rely only on ROUGE scores. For this, we developed the GEM evaluation framework. You can download it by running
+Obviously, we do not want to rely only on ROUGE scores. For this, we developed the GEM evaluation framework. 
+
+You can download it by running:
 
 ```bash
 git clone git@github.com:GEM-benchmark/GEM-metrics.git
 ```
 
-Assuming that you formatted your outputs correctly, you can now run
+Install the required packages:
+```bash
+cd GEM-metrics
+pip install -r requirements.txt
+```
+
+Assuming that you formatted and saved your outputs correctly, you can now run
 
 ```bash
-python run_metrics.py [-r references.json] [-o outputs.scores.json] outputs.json
+python run_metrics.py [-r references.json] [-o outputs.scores.json] gem_submission.json
 ```
 
 which will create a json file with your scores per task and challenge set. Please follow the [README](https://github.com/GEM-benchmark/GEM-metrics) for more detailed usage information.
