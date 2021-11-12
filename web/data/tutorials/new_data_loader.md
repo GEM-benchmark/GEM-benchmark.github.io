@@ -85,6 +85,7 @@ git commit -m "add json files"
 ```
 
 Afterwards you can also add the `README.md` and all other files and commit them. Once everything is ready, simply run `git push`. After you enter your HuggingFace username and password, everything will be uploaded to the Hub!
+You can find an example dataset with a challenge dataset (generated using an NL-Augmenter transformation) [here](https://huggingface.co/datasets/GEM/test-transform/tree/main).
 
 You can update the dataset simply by pushing updates the same way.
 
