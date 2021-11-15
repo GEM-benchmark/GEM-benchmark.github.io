@@ -70,7 +70,7 @@ You will need to add the following files to the repository.
 
 While we don't have strong restrictions on the dataset formats, please follow the guidelines:
 1) Each dataset should have splits named `train`, `validation`, and `test`. Additional challenge sets splits can be named `challenge_${name}` for consistency.
-2) Each split should have a field called `gem_id` which has the naming convention of `GEM-${DATASET_NAME}_${SPLIT-NAME}_${id}` where `id` is an incrementing number starting at 1.
+2) Each split should have a field called `gem_id` which has the naming convention of `GEM-${DATASET_NAME}-${SPLIT-NAME}-${id}` where `id` is an incrementing number starting at 1. Please look [at our existing data loader](https://github.com/huggingface/datasets/blob/master/datasets/gem/gem.py#L936) for reference.
 
 ### Uploading the dataset
 
