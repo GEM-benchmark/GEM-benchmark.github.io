@@ -7,6 +7,14 @@ background: This guide describes how to fill each section in the data card (GEMv
 
 ## Table of Contents
 
+## New Version for GEMv2
+
+While most of the tips below still hold true, we are migrating our data cards to a new format!
+
+You can now interactively create datacards using our tool at [https://huggingface.co/spaces/GEM/DatasetCardForm](https://huggingface.co/spaces/GEM/DatasetCardForm).
+
+When using the tool, you can hover over the ? symbol to get additional information on how to fill out each field.
+
 ## Dataset and Task Description
 
 * **Homepage:** [Add homepage URL here if available (unless it's a GitHub repository)](#dataset-description)
