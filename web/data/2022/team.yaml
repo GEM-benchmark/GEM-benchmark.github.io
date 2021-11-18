@@ -536,5 +536,11 @@ members:
     website: ''
     twitter: ''
     note: ''
+  - name: 'Abinaya Mahendiran'
+    position: 'Manager Data Science'
+    organization: 'NEXT Labs, Mphasis'
+    website: 'https://abinayam02.github.io/home/'
+    twitter: '@feakynut'
+    note: 'Looking for collaborations'
 ---
 
