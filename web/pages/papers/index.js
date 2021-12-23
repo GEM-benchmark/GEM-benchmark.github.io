@@ -54,6 +54,16 @@ export default function Post({ }) {
             are much more expressive than typical test splits.
             </div>
             <div className={styles.authors}>Authors: Simon Mille, Kaustubh Dhole, Saad Mahamood, Laura Perez-Beltrachini, Varun Gangal, Mihir Kale, Emiel van Miltenburg, Sebastian Gehrmann</div>
+          <div>
+            <Link href="https://arxiv.org/abs/2112.02721"><a className={styles.resourceName}>NL-Augmenter 🦎 → 🐍</a></Link>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>GEM Workshop 2021</small>
+          </div>
+          <div className={styles.resourceDetail}>
+            This was a collaborative & participatory workshop collecting >117 different ways to transform text and >23 ways to filter out subpopulations of datasets. 
+          </div>
+          <div className={styles.authors}> Participants and Authors: Listed in paper (see <Link href="https://arxiv.org/abs/2112.02721">team list</Link>)</div>
+          <div className={styles.authors}> Steering Commitee: Kaustubh Dhole, Varun Gangal, Sebastian Gehrmann, Aadesh Gupta, Zhenhao Li, Saad Mahmood, Simon Mille, Jascha SohlDickstein, Ashish Srivastava, Samson Tan, Tongshuang Wu and Abinaya Mahendiran </div>
 
         </div>
       </article>
