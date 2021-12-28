@@ -45,3 +45,4 @@ Check the review criteria on our [GitHub page](https://github.com/GEM-benchmark/
 - Ashish Shrivastava (Amelia R&D)
 - Ondrej Dusek (Charles University)
 - Jinho D. Choi (Emory University)
+- Abinaya Mahendiran (NEXT Labs, Mphasis)
