@@ -59,7 +59,7 @@ git clone https://huggingface.co/datasets/GEM/YOUR_DATASET_NAME
 You will need to add the following files to the repository.
 
 
-1) `README.md` is a Dataset card that is created following our other tutorial. If you are completing the data part first, feel free to leave it empty for now. However, only a dataset with completed data card is part of GEM, so please add it once it is ready.
+1) `your_dataset_name.json` is a Dataset card that is created following our other tutorial and using our [collection tool](https://huggingface.co/spaces/GEM/DatasetCardForm). If you are completing the data part first, feel free to leave it empty for now. However, only a dataset with completed data card is part of GEM, so please add it once it is ready.
 
 2) The raw data files of the dataset (optional, if they are hosted elsewhere you can specify the URLs in the dataset script).
 
@@ -84,7 +84,7 @@ git add *.json
 git commit -m "add json files"
 ```
 
-Afterwards you can also add the `README.md` and all other files and commit them. Once everything is ready, simply run `git push`. After you enter your HuggingFace username and password, everything will be uploaded to the Hub!
+Afterwards you can also add the data card and all other files and commit them. Once everything is ready, simply run `git push`. After you enter your HuggingFace username and password, everything will be uploaded to the Hub!
 You can find an example dataset with a challenge dataset (generated using an NL-Augmenter transformation) [here](https://huggingface.co/datasets/GEM/test-transform/tree/main).
 
 You can update the dataset simply by pushing updates the same way.
