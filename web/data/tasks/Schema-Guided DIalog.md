@@ -46,11 +46,14 @@ The dataset is released under [CC BY-SA 4.0](https://creativecommons.org/license
 Please cite the following paper if you use this dataset in your work:
 
 ```
-@article{rastogi2019towards,
-  title={Towards Scalable Multi-domain Conversational Agents: The Schema-Guided Dialogue Dataset},
+@inproceedings{rastogi2020towards,
+  title={Towards scalable multi-domain conversational agents: The schema-guided dialogue dataset},
   author={Rastogi, Abhinav and Zang, Xiaoxue and Sunkara, Srinivas and Gupta, Raghav and Khaitan, Pranav},
-  journal={arXiv preprint arXiv:1909.05855},
-  year={2019}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={05},
+  pages={8689--8696},
+  year={2020}
 }
 ```
 
@@ -211,7 +214,7 @@ The SGD dataset does not use identity categories and does not contain sensitive 
 
 ## Changes to the Original Dataset for GEM
 
-We are focusing on the response-generation part of the dataset and thus reformatted the dataset to treat the service agent utterances as the targets to be generated and the previous customer utterance and the agent's dialog act as the input. We additionally reformat the dialog acts to directly conform to the format described in this [paper](https://arxiv.org/abs/2004.15006). 
+We are focusing on the response-generation part of the dataset and thus reformatted the dataset to treat the service agent utterances as the targets to be generated and the previous customer utterance and the agent's dialog act as the input. We additionally reformat the dialog acts to directly conform to the format described in this [paper](https://arxiv.org/abs/2004.15006).
 
 ### Special test sets
 
