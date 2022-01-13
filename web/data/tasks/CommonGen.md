@@ -11,14 +11,14 @@ motivation: A medium sized corpus with a unique reasoning challenge and interest
 
 * **Homepage:** [CommonGen Homepage](https://inklab.usc.edu/CommonGen/)
 * **Repository:** [CommonGen repository](https://github.com/INK-USC/CommonGen)
-* **Paper:** [CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning](https://arxiv.org/abs/1911.03705)
+* **Paper:** [CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning](https://aclanthology.org/2020.findings-emnlp.165)
 * **Point of Contact:** [yuchen.lin@usc.edu](yuchen.lin@usc.edu)
 
 ### Dataset and Task Summary
 
 CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning. Given a set of common concepts; the task is to generate a coherent sentence describing an everyday scenario using these concepts.
 
-The dataset was introduced in the paper [CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning](https://arxiv.org/abs/1911.03705) published in the Findings of EMNLP 2020. It was built by selecting concept sets and corresponding training sentences from a set of image and video captioning datasets, and having Amazon Mechanical Turk crowd workers write additional sentences to provide references for the development and test set.
+The dataset was introduced in the paper [CommonGen: A Constrained Text Generation Challenge for Generative Commonsense Reasoning](https://aclanthology.org/2020.findings-emnlp.165) published in the Findings of EMNLP 2020. It was built by selecting concept sets and corresponding training sentences from a set of image and video captioning datasets, and having Amazon Mechanical Turk crowd workers write additional sentences to provide references for the development and test set.
 
 ### Why is this dataset part of GEM?
 
