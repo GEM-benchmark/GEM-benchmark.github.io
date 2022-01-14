@@ -46,6 +46,7 @@ The dataset is released under [CC BY-SA 4.0](https://creativecommons.org/license
 Please cite the following paper if you use this dataset in your work:
 
 ```
+{
 @inproceedings{rastogi2020towards,
   title={Towards scalable multi-domain conversational agents: The schema-guided dialogue dataset},
   author={Rastogi, Abhinav and Zang, Xiaoxue and Sunkara, Srinivas and Gupta, Raghav and Khaitan, Pranav},

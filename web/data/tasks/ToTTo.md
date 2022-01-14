@@ -12,7 +12,7 @@ motivation: 'Controlled Table2Text task with non-divergent, annotator-revised te
 
 - **Homepage:**     None (See **Repository**)
 - **Repository:**   [ToTTo Main Repo](https://github.com/google-research-datasets/totto) + [ToTTo Supplementary Repo](https://github.com/google-research/language/tree/master/language/totto)
-- **Paper:**     [ToTTo: A Controlled Table-to-Text Generation Dataset](https://arxiv.org/pdf/2004.14373.pdf)
+- **Paper:**     [ToTTo: A Controlled Table-to-Text Generation Dataset](https://aclanthology.org/2020.emnlp-main.89)
 - **Point of Contact:** [totto@google.com](totto@google.com)
 
 ### Dataset and Task Summary
@@ -50,11 +50,27 @@ As mentioned in the `README.md` on the [ToTTo Main Repo](https://github.com/goog
 
 ### Citation Information
 
-    article{parikh2020totto,
-      title={ToTTo: A Controlled Table-To-Text Generation Dataset},
-      author={Parikh, Ankur P and Wang, Xuezhi and Gehrmann, Sebastian and Faruqui, Manaal and Dhingra, Bhuwan and Yang, Diyi and Das, Dipanjan},
-      journal={arXiv preprint arXiv:2004.14373},
-      year={2020}
+```
+@inproceedings{parikh-etal-2020-totto,
+    title = "{ToTTo}: A Controlled Table-To-Text Generation Dataset",
+    author = "Parikh, Ankur  and
+      Wang, Xuezhi  and
+      Gehrmann, Sebastian  and
+      Faruqui, Manaal  and
+      Dhingra, Bhuwan  and
+      Yang, Diyi  and
+      Das, Dipanjan",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2020.emnlp-main.89",
+    doi = "10.18653/v1/2020.emnlp-main.89",
+    pages = "1173--1186",
+    abstract = "We present ToTTo, an open-domain English table-to-text dataset with over 120,000 training examples that proposes a controlled generation task: given a Wikipedia table and a set of highlighted table cells, produce a one-sentence description. To obtain generated targets that are natural but also faithful to the source table, we introduce a dataset construction process where annotators directly revise existing candidate sentences from Wikipedia. We present systematic analyses of our dataset and annotation process as well as results achieved by several state-of-the-art baselines. While usually fluent, existing methods often hallucinate phrases that are not supported by the table, suggesting that this dataset can serve as a useful research benchmark for high-precision conditional text generation.",
+}
+```
 
 ### Leaderboard
 
@@ -73,6 +89,7 @@ The main repository's `README.md` already provides a thorough walkthrough of dat
 
 Below is the instance for a table from the wiki-page for the musical artist _Weird Al' Yankovic_ , likely listing his on-television appearances.
 
+```
     {
       "table_page_title": "'Weird Al' Yankovic",
       "table_webpage_url": "https://en.wikipedia.org/wiki/%22Weird_Al%22_Yankovic",
@@ -86,9 +103,11 @@ Below is the instance for a table from the wiki-page for the musical artist _Wei
 		      "sentence_after_ambiguity": "In 2016, Al appeared in 2 episodes of BoJack Horseman as Captain Peanutbutter, and was hired for the lead role in the 2016 series Milo Murphy's 'Law.",
 		      "final_sentence": "In 2016, Al appeared in 2 episodes of BoJack Horseman as Captain Peanutbutter and was hired for the lead role in the 2016 series Milo Murphy's Law."}],
     }
+```
 
 The `table` field is expanded as below:
 
+```
     [
      [
         {
@@ -128,6 +147,7 @@ The `table` field is expanded as below:
              "value": "Episode: 'The FugEektive'"}
       ], ...
     ]
+```
 
 The [Supplementary Repo](https://github.com/google-research/language/tree/master/language/totto) also provides browsable samples under its `sample/` folder. It additionally provides HTML visualization scripts with their outputs located under the aforementioned folder. The instructions to access and visualize these samples can also be found [here](https://github.com/google-research/language/tree/master/language/totto#visualizing-sample-data).
 
@@ -246,25 +266,7 @@ For the input size, we created subpopulations based on the number of input highl
 | 23            |                 2 |
 | 24            |                 4 |
 | 25            |                 1 |
-| 27            |                 2 |
-| 28            |                 2 |
-| 32            |                 1 |
-| 33            |                 1 |
-| 34            |                 1 |
-| 35            |                 2 |
-| 38            |                 1 |
-| 40            |                 1 |
-| 41            |                 1 |
-| 42            |                 1 |
-| 52            |                 1 |
-| 60            |                 2 |
-| 75            |                 1 |
-| 100           |                 1 |
-| 123           |                 1 |
-| 125           |                 1 |
-| 127           |                 1 |
-| 133           |                 1 |
-| 496           |                 1 |
+| 26...496      |                 1 |
 
 We also divided the test set according to the size of the whole table, based on the idea that larger tables represent a bigger space to take into account when generating the highlighted cells; a larger table could be more challenging to generate accurate text than a smaller table. There are 693 different table sizes, ranging from 2 to 15834 cells.
 
@@ -368,262 +370,13 @@ We also divided the test set according to the size of the whole table, based on 
 | 106             |              2  |
 | 108             |             51  |
 | 110             |             31  |
-| 111             |              1  |
-| 112             |             47  |
-| 114             |             28  |
-| 115             |             20  |
-| 116             |             17  |
-| 117             |              8  |
-| 119             |              7  |
-| 120             |             75  |
-| 121             |              4  |
-| 123             |              4  |
-| 124             |             14  |
-| 125             |              6  |
-| 126             |             57  |
-| 127             |              1  |
-| 128             |             20  |
-| 130             |             31  |
-| 132             |             43  |
-| 133             |             11  |
-| 134             |              1  |
-| 135             |             23  |
-| 136             |             23  |
-| 138             |             19  |
-| 140             |             42  |
-| 141             |              5  |
-| 143             |             10  |
-| 144             |             46  |
-| 145             |             17  |
-| 146             |              1  |
-| 147             |             17  |
-| 148             |             10  |
-| 150             |             37  |
-| 152             |             24  |
-| 153             |             11  |
-| 154             |             17  |
-| 155             |             17  |
-| 156             |             32  |
-| 159             |              2  |
-| 160             |             29  |
-| 161             |              9  |
-| 162             |             26  |
-| 164             |             12  |
-| 165             |             19  |
-| 168             |             44  |
-| 169             |              3  |
-| 170             |             15  |
-| 171             |              6  |
-| 172             |             10  |
-| 174             |             11  |
-| 175             |             21  |
-| 176             |             23  |
-| 177             |              3  |
-| 180             |             42  |
-| 182             |             14  |
-| 183             |              1  |
-| 184             |             18  |
-| 185             |              8  |
-| 186             |             14  |
-| 187             |              1  |
-| 188             |              3  |
-| 189             |             18  |
-| 190             |             13  |
-| 192             |             31  |
-| 194             |              1  |
-| 195             |             15  |
-| 196             |             18  |
-| 198             |             18  |
-| 200             |             25  |
-| 203             |              5  |
-| 204             |             12  |
-| 205             |             12  |
-| 207             |              3  |
-| 208             |             23  |
-| 209             |              1  |
-| 210             |             31  |
-| 212             |             15  |
-| 215             |              6  |
-| 216             |             35  |
-| 217             |              3  |
-| 219             |              2  |
-| 220             |             16  |
-| 221             |              5  |
-| 222             |             11  |
-| 224             |             18  |
-| 225             |             17  |
-| 228             |             11  |
-| 230             |             10  |
-| 231             |             16  |
-| 232             |              9  |
-| 234             |             14  |
-| 235             |              7  |
-| 238             |             31  |
-| 243             |              2  |
-| 244             |              6  |
-| 245             |             20  |
-| 246             |              5  |
-| 247             |              4  |
-| 248             |              8  |
-| 250             |             16  |
-| 252             |             19  |
-| 253             |              2  |
-| 255             |              6  |
-| 256             |             10  |
-| 258             |              9  |
-| 259             |              5  |
-| 260             |             22  |
-| 261             |              2  |
-| 264             |              6  |
-| 265             |              6  |
-| 266             |              8  |
-| 268             |              5  |
-| 270             |             31  |
-| 272             |              7  |
-| 273             |             14  |
-| 275             |              8  |
-| 276             |             18  |
-| 279             |              2  |
-| 280             |             25  |
-| 282             |              1  |
-| 284             |              1  |
-| 285             |              7  |
-| 286             |              4  |
-| 287             |              4  |
-| 288             |             12  |
-| 289             |              1  |
-| 290             |             13  |
-| 291             |              1  |
-| 292             |              2  |
-| 294             |              8  |
-| 295             |             11  |
-| 296             |              7  |
-| 297             |              2  |
-| 299             |              1  |
-| 300             |             29  |
-| 301             |              2  |
-| 302             |              1  |
-| 304             |              6  |
-| 305             |              1  |
-| 306             |             12  |
-| 308             |              8  |
-| 309             |              1  |
-| 310             |             14  |
-| 312             |             14  |
-| 315             |             13  |
-| 318             |              5  |
-| 320             |             14  |
-| 322             |              2  |
-| 324             |             11  |
-| 325             |              5  |
-| 328             |              6  |
-| 329             |              6  |
-| 330             |              7  |
-| 332             |              1  |
-| 333             |              1  |
-| 335             |              4  |
-| 336             |             17  |
-| 339             |              1  |
-| 340             |              8  |
-| 342             |              5  |
-| 343             |              6  |
-| 344             |              7  |
-| 345             |              8  |
-| 348             |              3  |
-| 350             |              7  |
-| 351             |              1  |
-| 352             |              2  |
-| 354             |              1  |
-| 355             |              4  |
-| 357             |              8  |
-| 360             |             20  |
-| 364             |              4  |
-| 365             |              3  |
-| 366             |              3  |
-| 368             |              7  |
-| 369             |              4  |
-| 370             |              7  |
-| 371             |              1  |
-| 372             |              3  |
-| 375             |              8  |
-| 376             |              8  |
-| 378             |              7  |
-| 380             |              8  |
-| 382             |              1  |
-| 384             |              9  |
-| 385             |              2  |
-| 387             |              4  |
-| 390             |              8  |
-| 392             |             13  |
-| 395             |              1  |
-| 396             |              8  |
-| 399             |              1  |
-| 400             |             10  |
-| 402             |              3  |
-| 403             |              2  |
-| 404             |              2  |
-| 405             |              1  |
-| 406             |              3  |
-| 407             |              1  |
-| 408             |             15  |
-| 410             |             10  |
-| 413             |              1  |
-| 414             |              2  |
-| 416             |              3  |
-| 420             |             11  |
-| 423             |              2  |
-| 424             |              4  |
-| 425             |              1  |
-| 426             |              3  |
-| 427             |              3  |
-| 428             |              1  |
-| 429             |              3  |
-| 430             |              8  |
-| 432             |              5  |
-| 434             |              2  |
-| 435             |              4  |
-| 436             |              1  |
-| 438             |              1  |
-| 440             |              8  |
-| 441             |              3  |
-| 442             |              1  |
-| 445             |              2  |
-| 448             |              4  |
-| 450             |              4  |
-| 452             |              1  |
-| 455             |              2  |
-| 456             |              2  |
-| 459             |              2  |
-| 460             |              4  |
-| 462             |              4  |
-| 464             |              1  |
-| 465             |              2  |
-| 468             |              6  |
-| 469             |              3  |
-| 472             |              1  |
-| 473             |              1  |
-| 474             |              2  |
-| 475             |              7  |
-| 476             |              2  |
-| 477             |              2  |
-| 480             |             10  |
-| 483             |              3  |
-| 485             |              1  |
-| 486             |              4  |
-| 488             |              1  |
-| 490             |              5  |
-| 492             |              3  |
-| 495             |              4  |
-| 496             |              3  |
-| 498             |              1  |
-| 500             |              2  |
-| ...             |   (0, 1, or 2)  |
+| ...8000+        |   (up to 10)    |
 
 
-We also created three splits based on the subset of test examples in pages about people. 
+We also created three splits based on the subset of test examples in pages about people.
 We then used the structured information in WikiData to identify the following information:
 
--  gender (male, and female), 
+-  gender (male, and female),
 - nationality grouped by continent (Africa, Asia, Europe, North America, Oceania, and South America)
 - ethnicity (African American and all USA)
 

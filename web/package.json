@@ -2,7 +2,7 @@
   "name": "gem",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gem-benchmark.github.io/",
+  "homepage": "https://gem-benchmark.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

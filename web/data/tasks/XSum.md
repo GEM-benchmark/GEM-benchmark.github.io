@@ -39,7 +39,8 @@ CC 4.0 BY-SA ([Creative Commons 4.0 Attribution – Share-Alike](https://creativ
 
 ### Citation Information
 
-```@InProceedings{xsum-emnlp,
+```
+@InProceedings{xsum-emnlp,
   author =      "Shashi Narayan and Shay B. Cohen and Mirella Lapata",
   title =       "Don't Give Me the Details, Just the Summary! {T}opic-Aware Convolutional Neural Networks for Extreme Summarization",
   booktitle =   "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing ",
@@ -56,7 +57,12 @@ This dataset has no corresponding public leaderboard.
 
 ### Data Instances
 
-[More Information Needed]
+```
+{
+  'document': 'The researchers have sequenced the genome of a strain of bacterium that causes the virulent infection.\nA survey in 2007 showed that bleeding canker had spread rapidly, with almost half of the two million horse chestnuts displaying symptoms of the disease.\nThe findings have been published in the journal PLoS One.\nA visible symptom of the disease is a lesion on the bark, which oozes a resin on to the trunk or sometimes the branches.\nThe bark underneath the canker is killed, and if cankers manage to go all the way around the trunk then the horse chestnut (Aesculus hippocastanum) will die because it cuts off the food supply. [...]',
+  'target': "A team of UK scientists hopes to shed light on the mysteries of bleeding canker, a disease that is threatening the nation's horse chestnut trees.",
+}
+```
 
 ### Data Fields
 
@@ -70,11 +76,11 @@ Id: BBC ID of the article.
 
 ### Data Statistics
 
-| Section   | Number of Documents          | 
-| ------------- |:-------------:| 
-| Training     | 204,045 | 
-| Validation     | 11,332      | 
-| Testing | 11,334    |  
+| Section   | Number of Documents          |
+| ------------- |:-------------:|
+| Training     | 204,045 |
+| Validation     | 11,332      |
+| Testing | 11,334    |
 | Total | 226k |
 
 | Section       |  number of words| number of sentences |
@@ -97,7 +103,7 @@ Id: BBC ID of the article.
 
 #### Initial Data Collection and Normalization
 
-The dataset consists of BBC articles and accompanying single sentence summaries. Specifically, each article is prefaced with an introductory sentence (aka summary) which is professionally written, typically by the author of the article. They collected 226,711 Wayback archived BBC articles ranging over almost a decade (2010 to 2017) and covering a wide variety of domains (e.g., News, Politics, Sports, Weather, Business, Technology, Science, Health, Family, Education, Entertainment and Arts). Each article comes with a unique identifier in its URL, which was then used to randomly split the dataset into training (90%, 204,045), validation (5%, 11,332), and test (5%, 11,334) set. 
+The dataset consists of BBC articles and accompanying single sentence summaries. Specifically, each article is prefaced with an introductory sentence (aka summary) which is professionally written, typically by the author of the article. They collected 226,711 Wayback archived BBC articles ranging over almost a decade (2010 to 2017) and covering a wide variety of domains (e.g., News, Politics, Sports, Weather, Business, Technology, Science, Health, Family, Education, Entertainment and Arts). Each article comes with a unique identifier in its URL, which was then used to randomly split the dataset into training (90%, 204,045), validation (5%, 11,332), and test (5%, 11,334) set.
 
 #### Who are the source language producers?
 
@@ -117,9 +123,9 @@ Any additional annotations are not collected for this dataset.
 
 In addition to the original dataset, a modified version of the dataset will be part of the GEM framework.
 
-XSum gold summaries often have divergence issues between the source and target texts due to the dataset artifact that gold summaries are introductory sentences prefacing each article. 
+XSum gold summaries often have divergence issues between the source and target texts due to the dataset artifact that gold summaries are introductory sentences prefacing each article.
 
-Models agnostic to such noises are vulnerable to hallucinations (Wiseman et al., 2017; Dhingra et al., 2019, Maynez et al., 2020).  For GEM, we have finetuned a BERT-based classifier on 500 document and gold summary pairs, manually annotated for faithfulness (Maynez et al., 2020) and excluded all document-summary pairs from the original XSum dataset where the classifier was not confident (p(faithfull) > 0.8) whether the summary is faithful to the document or not. As a result, we ended up with 23206 training, 1117 validation and 1166 test instances. 
+Models agnostic to such noises are vulnerable to hallucinations (Wiseman et al., 2017; Dhingra et al., 2019, Maynez et al., 2020).  For GEM, we have finetuned a BERT-based classifier on 500 document and gold summary pairs, manually annotated for faithfulness (Maynez et al., 2020) and excluded all document-summary pairs from the original XSum dataset where the classifier was not confident (p(faithfull) > 0.8) whether the summary is faithful to the document or not. As a result, we ended up with 23206 training, 1117 validation and 1166 test instances.
 
 
 
