@@ -11,7 +11,7 @@ motivation: ASSET is a high quality simplification dataset where each source (no
 
 - **Homepage:** None (See **Repository**)
 - **Repository:** [ASSET repository](https://github.com/facebookresearch/asset)
-- **Paper:** [ASSET: A Dataset for Tuning and Evaluation of Sentence Simplification Models with Multiple Rewriting Transformations](https://www.aclweb.org/anthology/2020.acl-main.424.pdf)
+- **Paper:** [ASSET: A Dataset for Tuning and Evaluation of Sentence Simplification Models with Multiple Rewriting Transformations](https://aclanthology.org/2020.acl-main.424/)
 - **Point of Contact:** [Fernando Alva-Manchego](mailto:f.alva@sheffield.ac.uk), [Louis Martin](mailto:louismartincs@gmail.com)
 
 ### Dataset and Task Summary
@@ -31,7 +31,7 @@ ASSET contains English text only (BCP-47: `en`).
 
 ### Dataset Curators
 
-ASSET was developed by researchers at the University of Sheffield, Inria, 
+ASSET was developed by researchers at the University of Sheffield, Inria,
 Facebook AI Research, and Imperial College London. The work was partly supported by Benoît Sagot's chair in the PRAIRIE institute, funded by the French National Research Agency (ANR) as part of the "Investissements d’avenir" program (reference ANR-19-P3IA-0001).
 
 ### Licensing Information
@@ -155,10 +155,10 @@ No change is made to the original dataset.
 #### Subpopulations
 
 The goal was to assess performance when simplifying source sentences with different syntactic structure and complexity. To this end, we split the original test set according to syntactic complexity of the source sentences. To characterize sentence syntactic complexity, we use the 8-level developmental level (d-level) scale proposed by [Covington et al. (2006)](https://www.researchgate.net/publication/254033869_How_complex_is_that_sentence_A_proposed_revision_of_the_Rosenberg_and_Abbeduto_D-Level_Scale) and the implementation of [Lu, Xiaofei (2010)](https://www.jbe-platform.com/content/journals/10.1075/ijcl.15.4.02lu).
-We thus split the original test set into 8 subsets corresponding to the 8 d-levels assigned to source sentences. We obtain the following number of instances per level and average d-level of the dataset: 
+We thus split the original test set into 8 subsets corresponding to the 8 d-levels assigned to source sentences. We obtain the following number of instances per level and average d-level of the dataset:
 
 | Total nb. sentences | L0 | L1 | L2 | L3 | L4 | L5 | L6 | L7 | Mean Level |
-|-------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ---------- | 
+|-------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ---------- |
 |                 359 |    166 |      0 |     58 |     32 |      5 |     28 |      7 |     63 |       2.38 |
 
 

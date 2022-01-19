@@ -12,7 +12,7 @@ motivation: 'TURKCorpus is a high-quality simplification dataset where each sour
 
 - **Homepage:** None
 - **Repository:** [TURKCorpus](https://github.com/cocoxu/simplification)
-- **Paper:** [Optimizing Statistical Machine Translation for Text Simplification](https://www.aclweb.org/anthology/Q16-1029/)
+- **Paper:** [Optimizing Statistical Machine Translation for Text Simplification](https://aclanthology.org/Q16-1029/)
 - **Point of Contact:** [Wei Xu](mailto:wei.xu@cc.gatech.edu)
 
 ### Dataset and Task Summary
@@ -120,7 +120,7 @@ Since the dataset is created from English Wikipedia (August 22, 2009 version), a
 
 ## Changes to the Original Dataset for GEM
 
-The publicly available dataset is processed with the [Penn Treebank tokenizer](https://www.nltk.org/_modules/nltk/tokenize/treebank.html). We reverse this process to make the format consistent with WikiAuto and ASSET. 
+The publicly available dataset is processed with the [Penn Treebank tokenizer](https://www.nltk.org/_modules/nltk/tokenize/treebank.html). We reverse this process to make the format consistent with WikiAuto and ASSET.
 
 
 
@@ -134,8 +134,8 @@ We thus split the test set into 8 subsets corresponding to the 8 d-levels assign
 
 
 | Total nb. sentences | L0 | L1 | L2 | L3 | L4 | L5 | L6 | L7 | Mean Level |
-|-------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ---------- | 
-|                 359 |    174 |      0 |     58 |     22 |      3 |     30 |      9 |     63 |       2.34 | 
+|-------------------- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ---------- |
+|                 359 |    174 |      0 |     58 |     22 |      3 |     30 |      9 |     63 |       2.34 |
 
 
 

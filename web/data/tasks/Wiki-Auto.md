@@ -11,7 +11,7 @@ motivation: Wiki-Auto is the largest open text simplification dataset currently 
 
 - **Homepage:** None (See **Repository**)
 - **Repository:** [Wiki-Auto repository](https://github.com/chaojiang06/wiki-auto)
-- **Paper:** [Neural CRF Model for Sentence Alignment in Text Simplification](https://www.aclweb.org/anthology/2020.acl-main.709.pdf)
+- **Paper:** [Neural CRF Model for Sentence Alignment in Text Simplification](https://aclanthology.org/2020.acl-main.709/)
 - **Point of Contact:** [Chao Jiang](jiang.1530@osu.edu)
 
 ### Dataset and Task Summary
@@ -59,7 +59,6 @@ The dataset is not licensed by itself, but the source Wikipedia data is under a 
     doi = "10.18653/v1/2020.acl-main.709",
     pages = "7943--7960",
 }
-
 ```
 
 ### Leaderboard
@@ -123,7 +122,7 @@ The `auto` config shows a pair of an English and corresponding Simple English Wi
 ```
 
  Finally, the `auto_acl`, the `auto_full_no_split`, and the `auto_full_with_split` configs were obtained by selecting the aligned pairs of sentences from `auto` to provide a ready-to-go aligned dataset to train a sequence-to-sequence system. While `auto_acl` corresponds to the filtered version of the data used to train the systems in the paper, `auto_full_no_split` and `auto_full_with_split` correspond to the unfiltered versions with and without sentence splits respectively. In the `auto_full_with_split` config, we join the sentences in the simple article mapped to the same sentence in the complex article to capture sentence splitting. Split sentences are seperated by a `<SEP>` token. In the `auto_full_no_split config`, we do not join the splits and treat them as seperate pairs. An instance is a single pair of sentences:
- 
+
 ```
 {'normal_sentence': 'In early work, Rutherford discovered the concept of radioactive half-life , the radioactive element radon, and differentiated and named alpha and beta radiation .\n',
  'simple_sentence': 'Rutherford discovered the radioactive half-life, and the three parts of radiation which he named Alpha, Beta, and Gamma.\n'}
@@ -158,7 +157,7 @@ The `auto_acl` has 488,332 complex-sentence pairs that are to be used for traini
 
 ### Curation Rationale
 
-Wiki-Auto provides a new version of the Wikipedia corpus that is larger, contains 75% less defective pairs and has more complex rewrites than the previous WIKILARGE dataset.  
+Wiki-Auto provides a new version of the Wikipedia corpus that is larger, contains 75% less defective pairs and has more complex rewrites than the previous WIKILARGE dataset.
 
 ### Communicative Goal
 
@@ -218,5 +217,5 @@ The dataset repository provided by the authors also contains instructions to loa
 
 The common metric used for automatic evaluation is SARI [(Xu et al., 2016)](https://www.aclweb.org/anthology/Q16-1029/).
 
- 
+
 
