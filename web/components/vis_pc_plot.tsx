@@ -51,7 +51,7 @@ export class PCP
 
   static getDerivedStateFromProps(nextProps: PCP_Props, prevState) {
 
-    if (prevState.datasetMatrix.length>0) return {}
+    if (prevState.datasetMatrix.length>0 || nextProps.scores.length <1) return {}
 
     const possibleMetaMeasures = Object.entries(nextProps.config.measures).sort();
     let measureNames = []
