@@ -12,21 +12,20 @@ import {SubmissionMatrixInv} from "../../components/vis_submission_matrix_inv";
 import {SubmissionMatrix} from "../../components/vis_submission_matrix";
 import {TableTask} from "../../components/vis_table_tasks";
 
+const URL_RESULTS_HF = "https://huggingface.co/datasets/GEM-submissions/submission-scores/resolve/main/filtered_scores.json"
 
 export async function getStaticProps() {
   const evalConfig = getEvalConfiguration();
-  const scores = getSubmissionScores();
   return {
     props: {
-      evalConfig,
-      scores
+      evalConfig
     },
   };
 }
 
 interface MainVisProps {
   evalConfig: EvalConfiguration,
-  scores: Scores[],
+  // scores: Scores[], // NO PROP ANYMORE but STATE
   cm: ColorManager
 }
 
@@ -36,12 +35,23 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
     submissionFilter: null as string[] | null,
     highlighted: [] as string[],
     tableMode: 5,
-    columnFilter: ''
+    columnFilter: '',
+    loadingState: true as boolean,
+    scores:[] as Scores[]
+  }
+
+  componentDidMount() {
+    fetch(URL_RESULTS_HF).then(res => res.json()).then(res => {
+      this.setState({loadingState: false, scores: res})
+    })
+
   }
 
 
   render() {
-    return <>
+    if (this.state.loadingState) return <> loading ...</>
+    else if (this.state.scores.length<1) return <> No data available </>
+    else return <>
       {/*<pre>{JSON.stringify(this.props.scores,null,2)}</pre>*/}
       <div style={{
         display: "flex", alignItems: "stretch", flexWrap: "wrap"
@@ -51,7 +61,7 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
           <div style={{maxHeight: "200px", overflowY: "auto"}}>
             <SubmissionMatrix
               config={this.props.evalConfig}
-              scores={this.props.scores}
+              scores={this.state.scores}
               submissionFilter={this.state.submissionFilter}
               onHover={(ds, hover) => {
                 this.setState({highlighted: hover ? ds : []})
@@ -75,7 +85,7 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
         <div style={{textAlign: "center"}}>
           <PCP cm={this.props.cm}
                config={this.props.evalConfig}
-               scores={this.props.scores}
+               scores={this.state.scores}
                onFilterChange={(list) => {
                  this.setState({submissionFilter: list})
                }}
@@ -118,7 +128,7 @@ class MainVis extends React.PureComponent<MainVisProps, any> {
         <div style={{overflowX: "scroll"}}>
           <TableTask cm={this.props.cm}
                      config={this.props.evalConfig}
-                     scores={this.props.scores}
+                     scores={this.state.scores}
                      tableMode={this.state.tableMode}
                      columnFilter={this.state.columnFilter}
             // onFilterChange={(list) => {
@@ -141,9 +151,10 @@ export default function index(props) {
   const cm = ColorManager
     .generateForEvalConfig(props.evalConfig);
 
+
   return <Layout home={false} nlAugmenter={false}>
     <MainVis evalConfig={props.evalConfig}
-             scores={props.scores} cm={cm}/>
+             cm={cm}/>
   </Layout>;
 
 }
