@@ -7,11 +7,11 @@ export default function Post({ workshopData }) {
   return (
     <Layout>
       <Head>
-        <title>GEM Workshop 2022</title>
+        <title>GEM Workshop 2021</title>
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          GEM Workshop at EMNLP 2022
+          GEM Workshop at ACL 2021
         </span>
         <span className={utilStyles.smallSpace}></span>
         <div dangerouslySetInnerHTML={{ __html: workshopData.contentHtml }} />
@@ -21,7 +21,7 @@ export default function Post({ workshopData }) {
 }
 
 export async function getStaticProps() {
-  const workshopData = await getData("2022/workshop.md");
+  const workshopData = await getData("2021/workshop.md");
   return {
     props: {
       workshopData,
