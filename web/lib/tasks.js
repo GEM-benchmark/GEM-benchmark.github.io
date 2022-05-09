@@ -7,19 +7,19 @@ import slug from "remark-slug";
 import toc from "remark-toc";
 import gfm from "remark-gfm";
 
-const tasksDirectory = path.join(process.cwd(), 'data', 'tasks')
+const tasksDirectory = path.join(process.cwd(), 'data', '2022', 'data_cards')
 
 export function getSortedTasksData() {
-  // Get file names under /posts
+  // Get file names in the folder
   const fileNames = fs.readdirSync(tasksDirectory)
   const allPostsData = fileNames.filter(
     function (fileName) {
-      return path.extname(fileName) == ".md";
+      return path.extname(fileName) == ".html";
     }
   ).map(fileName => {
-    // Remove ".md" from file name to get id.
-    const id = fileName.replace(/\.md$/, '')
-    // Read markdown file as string.
+    // Remove extension from file name to get id.
+    const id = fileName.replace(/\.html$/, '')
+    // Read file as string.
     const fullPath = path.join(tasksDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     // Use gray-matter to parse the post metadata section.
@@ -31,6 +31,7 @@ export function getSortedTasksData() {
 
     }
   })
+  console.log(allPostsData);
   // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
     if (a.type < b.type) {
@@ -62,37 +63,37 @@ export function getAllTaskIds() {
   // ]
   return fileNames.filter(
       function (fileName) {
-        return path.extname(fileName) == ".md";
+        return path.extname(fileName) == ".html";
       }
     ).map(fileName => {
       return {
         params: {
-          id: fileName.replace(/\.md$/, '')
+          id: fileName.replace(/\.html$/, '')
         }
       }
     })
 }
 
 export async function getTaskData(id) {
-  const fullPath = path.join(tasksDirectory, `${id}.md`)
+  const fullPath = path.join(tasksDirectory, `${id}.html`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents)
 
   // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(gfm)
-    .use(toc, { tight: true })
-    .use(slug)
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString()
+  // const processedContent = await remark()
+  //   .use(gfm)
+  //   .use(toc, { tight: true })
+  //   .use(slug)
+  //   .use(html)
+  //   .process(matterResult.content);
+  // const contentHtml = processedContent.toString()
 
   // Combine the data with the id and contentHtml
   return {
-    id,
-    contentHtml,
+    id: id,
+    contentHtml: matterResult.content,
     ...matterResult.data
   }
 

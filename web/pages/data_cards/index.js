@@ -36,7 +36,7 @@ export default function Home({ allTasksData }) {
               2
               </a>
           </Link>] for each of the datasets that are part of GEM tasks.
-          The template used to produce the statements
+          The template used to produce the initial statements
           and a guide on how to write them can be found here: [
             <Link href={`/statement_template.md`}>
             <a download target="_blank">
@@ -47,10 +47,15 @@ export default function Home({ allTasksData }) {
             <a>
               view guide
               </a>
-          </Link>].
+          </Link>]. We have released an extended version of this template and an&nbsp;
+          <Link href={"https://huggingface.co/spaces/GEM/DatasetCardForm"}>
+            <a target="_blank">
+             interactive collection tool
+            </a>
+          </Link>.
         </p>
         <ul className={utilStyles.list}>
-          {allTasksData.map(({ id, title, type, motivation }) => (
+          {allTasksData.map(({ id, title, type, languages, summary }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/data_cards/${id}`}>
                 <a className={styles.larger}>{title}</a>
@@ -60,7 +65,13 @@ export default function Home({ allTasksData }) {
                 {type}
               </small>
               <span className={utilStyles.smallSpace}></span>
-              <div className={styles.dataset}>{motivation}</div>
+              |
+              <span className={utilStyles.smallSpace}></span>
+              <small className={utilStyles.lightText}>
+                {languages}
+              </small>
+              <span className={utilStyles.smallSpace}></span>
+              <div className={styles.dataset}>{summary}</div>
             </li>
           ))}
         </ul>
