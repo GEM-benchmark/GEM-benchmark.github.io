@@ -1,11 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import remark from 'remark'
-import html from 'remark-html'
-import slug from "remark-slug";
-import toc from "remark-toc";
-import gfm from "remark-gfm";
 
 const tasksDirectory = path.join(process.cwd(), 'data', '2022', 'data_cards')
 

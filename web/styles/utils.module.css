@@ -94,3 +94,7 @@
   font-weight: lighter;
   color: #c10001;
 }
+
+.noBorder {
+  border: none;
+}

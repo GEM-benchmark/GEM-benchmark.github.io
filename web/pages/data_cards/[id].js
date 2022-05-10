@@ -2,6 +2,7 @@ import { getAllTaskIds, getTaskData } from '../../lib/tasks'
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import utilStyles from '../../styles/utils.module.css'
+import IframeResizer from 'iframe-resizer-react'
 
 export default function Post({ taskData }) {
   return (
@@ -16,11 +17,18 @@ export default function Post({ taskData }) {
           {taskData.type}
         </span>
 
-        <div dangerouslySetInnerHTML={{ __html: taskData.contentHtml }} />
+        <IframeResizer
+          heightCalculationMethod="lowestElement"
+          log
+          src="/cards/test.html"
+          style={{ width: '1px', minWidth: '100%'}}
+          frameBorder="0"
+        />
       </article>
     </Layout>
   )
 }
+
 
 export async function getStaticPaths() {
   const paths = getAllTaskIds()
