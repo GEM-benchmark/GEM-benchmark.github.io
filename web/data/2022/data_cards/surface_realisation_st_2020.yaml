@@ -1,0 +1,6 @@
+---
+title: surface_realisation_st_2020
+type: Data-to-Text
+languages: Arabic, Chinese, English, French, Hindi, Indonesian, Japanese, Korean, Portuguese, Russian, Spanish, Castilian
+summary: This dataset was used as part of the multilingual surface realization shared task in which a model gets full or partial universal dependency structures and has to reconstruct the natural language. This dataset support 11 languages.
+---

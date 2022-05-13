@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       SciDuet
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         This dataset supports the document-to-slide generation task where a model has to generate presentation slide content from the text of a document.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/SciDuet')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/SciDuet">
           here
          </a>
          .
@@ -184,8 +183,8 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
+          <a href="https://huggingface.co/datasets/GEM/SciDuet">
+           Huggingface
           </a>
          </p>
         </div>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/2021.naacl-main.111/">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Edward Sun, Yufang Hou, Dakuo Wang, Yunfeng Zhang, Nancy Wang
          </p>
         </div>
        </div>
@@ -215,19 +214,6 @@ data = datasets.load_dataset('GEM/ART')
        Quick-Use
       </h2>
       <div class="quick-row">
-       <div class="field">
-        <h4>
-         Contact Name
-         <div class="tooltip">
-          <div class="tooltip-text">
-           If known, provide the name of at least one person the reader can contact for questions about the dataset.
-          </div>
-         </div>
-        </h4>
-        <p>
-         Chandra Bhagavatulla
-        </p>
-       </div>
        <div class="field">
         <h4>
          Multilingual?
@@ -279,7 +265,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -292,7 +278,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         yes/very likely
         </p>
        </div>
       </div>
@@ -365,8 +351,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
+            <a href="https://huggingface.co/datasets/GEM/SciDuet">
+             Huggingface
             </a>
            </p>
           </div>
@@ -380,8 +366,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/IBM/document2slides/tree/main/SciDuet-ACL">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +381,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/2021.naacl-main.111/">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -415,32 +401,6 @@ data = datasets.load_dataset('GEM/ART')
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Contact Name
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If known, provide the name of at least one person the reader can contact for questions about the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            Chandra Bhagavatulla
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Contact Email
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If known, provide the email of at least one person the reader can contact for questions about the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            chandrab@allenai.org
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -452,13 +412,22 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{sun-etal-2021-d2s,
+    title = "{D}2{S}: Document-to-Slide Generation Via Query-Based Text Summarization",
+    author = "Sun, Edward  and
+      Hou, Yufang  and
+      Wang, Dakuo  and
+      Zhang, Yunfeng  and
+      Wang, Nancy X. R.",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.111",
+    doi = "10.18653/v1/2021.naacl-main.111",
+    pages = "1405--1418",
+    abstract = "Presentations are critical for communication in all areas of our lives, yet the creation of slide decks is often tedious and time-consuming. There has been limited research aiming to automate the document-to-slides generation process and all face a critical challenge: no publicly available dataset for training and benchmarking. In this work, we first contribute a new dataset, SciDuet, consisting of pairs of papers and their corresponding slides decks from recent years{'} NLP and ML conferences (e.g., ACL). Secondly, we present D2S, a novel system that tackles the document-to-slides task with a two-step approach: 1) Use slide titles to retrieve relevant and engaging text, figures, and tables; 2) Summarize the retrieved context into bullet points with long-form question answering. Our evaluation suggests that long-form QA outperforms state-of-the-art summarization baselines on both automated ROUGE metrics and qualitative human evaluation.",
 }
 </code></pre>
           </div>
@@ -520,24 +489,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Text-to-Slide
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Whose Language?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Whose language is in the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -550,7 +506,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            Promote research on the task of document-to-slides generation
            </p>
           </div>
          </div>
@@ -587,7 +543,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            IBM Research
            </p>
           </div>
          </div>
@@ -602,7 +558,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Edward Sun, Yufang Hou, Dakuo Wang, Yunfeng Zhang, Nancy Wang
            </p>
           </div>
           <div class="field">
@@ -615,7 +571,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            IBM Research
            </p>
           </div>
           <div class="field">
@@ -628,7 +584,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Yufang Hou (IBM Research), Dakuo Wang (IBM Research)
            </p>
           </div>
          </div>
@@ -638,55 +594,8 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
         </h3>
         <div class="row">
          <div class="scope">
-          <div class="field">
-           <h4>
-            Data Fields
-            <div class="tooltip">
-             <div class="tooltip-text">
-              List and describe the fields present in the dataset.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Example Instance
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Provide a JSON formatted example of a typical instance in the dataset.
-             </div>
-            </div>
-           </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
-</code></pre>
-          </div>
           <div class="field">
            <h4>
             Data Splits
@@ -696,26 +605,9 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            Training, validation and testing data contain 136, 55, and 81 papers from ACL Anthology and their corresponding slides, respectively.
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -729,7 +621,21 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            The original papers and slides (both are in PDF format) are carefully processed by a combination of PDF/Image processing tookits. The text contents from multiple slides that correspond to the same slide title are mreged.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset integrated into GEM is the ACL portion of the whole dataset described in "https://aclanthology.org/2021.naacl-main.111.pdf", It contains the full Dev and Test sets, and a portion of the Train dataset. 
+Note that although we cannot release the  whole training dataset due to copyright issues, researchers can still use our released data procurement code to generate the training dataset from the online ICML/NeurIPS anthologies.
            </p>
           </div>
          </div>
@@ -794,7 +700,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            content selection, long-form text undersanding and generation
            </p>
           </div>
          </div>
@@ -809,7 +715,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            SciDuet is the first publicaly available dataset for the challenging task of document2slides generation, which requires a model has a good ability to "understand" long-form text, choose appropriate content and generate key points.
            </p>
           </div>
          </div>
@@ -860,24 +766,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
-          </div>
          </div>
         </div>
        </div>
@@ -919,7 +807,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            content selection, long-form text undersanding and key points generation
            </p>
           </div>
           <div class="field">
@@ -932,7 +820,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -948,20 +836,56 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             BLEU
-            </code>
-            ,
-            <code>
-             BERT-Score
-            </code>
-            ,
-            <code>
              ROUGE
             </code>
            </p>
           </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            ROUGE + Human Evaluation
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Automatical Evaluation Metric: ROUGE
+Human Evaluation: (Readability, Informativeness, Consistency) 
+1) Readability:  The generated slide content is coherent, concise, and grammatically correct;
+2) Informativeness: The generated slide provides sufficient and necessary information that corresponds to the given slide title, regardless of its similarity to the original slide;
+3) Consistency: The generated slide content is similar to the original author’s reference slide.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Paper "D2S: Document-to-Slide Generation Via Query-Based
+Text Summarization" reports 20.47, 5.26 and 19.08 for ROUGE-1, ROUGE-2 and ROUGE-L (f-score).
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +934,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            Provide a benchmark dataset for the document-to-slides task.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1043,7 +980,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Other
             </code>
            </p>
           </div>
@@ -1057,7 +994,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            not validated
            </p>
           </div>
           <div class="field">
@@ -1075,47 +1012,21 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Topics Covered
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Does the language in the dataset focus on specific topics? How would you describe them?
-             </div>
-            </div>
-           </h4>
-           <p>
-            No
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Language Producers
+            Data Preprocessing
             <div class="tooltip">
              <div class="tooltip-text">
-              What further information do we have on the language producers?
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
              </div>
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            Text on papers was extracted through Grobid. Figures andcaptions were extracted through pdffigures. Text on slides was extracted through IBM Watson Discovery package and OCR by pytesseract. Figures and tables that appear on slides and papers were linked through multiscale template matching by OpenCV. Further dataset
+cleaning was performed with standard string-based
+heuristics on sentence building, equation and floating caption removal, and duplicate line deletion.
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1039,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            the slide context text shouldn't contain additional format information such as "*** University"
            </p>
           </div>
          </div>
@@ -1148,7 +1059,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1075,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1211,13 +1096,28 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The original dataset was open-sourced under Apache-2.0.
+            <br/>
+            Some of the original dataset creators are part of the GEM v2 dataset infrastructure team and take care of integrating this dataset into GEM.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1235,22 +1135,37 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            yes/very likely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Categories of PII
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              What categories of PII are present or suspected in the data?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            <code>
+             generic PII
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any PII Identification?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Did the curators use any automatic/manual method to identify PII in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no identification
            </p>
           </div>
          </div>
@@ -1374,7 +1289,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            unsure
            </p>
           </div>
          </div>
@@ -1422,19 +1337,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Potential PII Risk
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            None
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="licenses">
@@ -1455,7 +1357,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             non-commercial use only
             </code>
            </p>
           </div>
@@ -1470,7 +1372,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             research use only
             </code>
            </p>
           </div>

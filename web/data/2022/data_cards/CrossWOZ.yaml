@@ -1,0 +1,6 @@
+---
+title: CrossWOZ
+type: Dialog Response Generation
+languages: Chinese
+summary: CrossWOZ is a Chinese multi-domain task-oriented dialogue dataset . It contains 6K dialogue sessions and 102K utterances for 5 domains, including hotel, restaurant, attraction, metro, and taxi. About 60{\%} of the dialogues have cross-domain user goals that favor inter-domain dependency and encourage natural transition across domains in conversation.
+---

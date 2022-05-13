@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       RotoWire_English-German
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         This dataset is a data-to-text dataset in the basketball domain. The input are tables in a fixed format with statistics about a game (in English) and the target is a German translation of the originally English description. The translations were done by professional translators with basketball experience. The dataset can be used to evaluate the cross-lingual data-to-text capabilities of a model with complex inputs.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/RotoWire_English-German')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/RotoWire_English-German">
           here
          </a>
          .
@@ -184,7 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
+          <a href="https://sites.google.com/view/wngt19/dgt-task">
            Website
           </a>
          </p>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://www.aclweb.org/anthology/D19-5601/">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Graham Neubig (Carnegie Mellon University), Hiroaki Hayashi (Carnegie Mellon University)
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Hiroaki Hayashi
         </p>
        </div>
        <div class="field">
@@ -238,7 +237,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no
+         yes
         </p>
        </div>
        <div class="field">
@@ -254,6 +253,10 @@ data = datasets.load_dataset('GEM/ART')
          <code>
           English
          </code>
+         ,
+         <code>
+          German
+         </code>
         </p>
        </div>
        <div class="field">
@@ -266,7 +269,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-4.0: Creative Commons Attribution 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Describe a basketball game given its box score table (and possibly a summary in a foreign language).
         </p>
        </div>
        <div class="field">
@@ -292,7 +308,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         unlikely
         </p>
        </div>
       </div>
@@ -365,7 +381,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
+            <a href="https://sites.google.com/view/wngt19/dgt-task">
              Website
             </a>
            </p>
@@ -380,8 +396,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/neulab/dgt">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +411,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://www.aclweb.org/anthology/D19-5601/">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -425,7 +441,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Hiroaki Hayashi
            </p>
           </div>
           <div class="field">
@@ -438,7 +454,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            hiroakih@andrew.cmu.edu
            </p>
           </div>
          </div>
@@ -452,13 +468,25 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{hayashi-etal-2019-findings,
+    title = "Findings of the Third Workshop on Neural Generation and Translation",
+    author = "Hayashi, Hiroaki  and
+      Oda, Yusuke  and
+      Birch, Alexandra  and
+      Konstas, Ioannis  and
+      Finch, Andrew  and
+      Luong, Minh-Thang  and
+      Neubig, Graham  and
+      Sudoh, Katsuhito",
+    booktitle = "Proceedings of the 3rd Workshop on Neural Generation and Translation",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D19-5601",
+    doi = "10.18653/v1/D19-5601",
+    pages = "1--14",
+    abstract = "This document describes the findings of the Third Workshop on Neural Generation and Translation, held in concert with the annual conference of the Empirical Methods in Natural Language Processing (EMNLP 2019). First, we summarize the research trends of papers presented in the proceedings. Second, we describe the results of the two shared tasks 1) efficient neural machine translation (NMT) where participants were tasked with creating NMT systems that are both accurate and efficient, and 2) document generation and translation (DGT) where participants were tasked with developing systems that generate summaries from structured data, potentially with assistance from text in another language.",
 }
 </code></pre>
           </div>
@@ -479,7 +507,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -495,6 +523,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             <code>
              English
             </code>
+            ,
+            <code>
+             German
+            </code>
            </p>
           </div>
           <div class="field">
@@ -507,7 +539,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-4.0: Creative Commons Attribution 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,22 +552,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Data-to-Text
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Whose Language?
+            Communicative Goal
             <div class="tooltip">
              <div class="tooltip-text">
-              Whose language is in the dataset?
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
              </div>
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            Describe a basketball game given its box score table (and possibly a summary in a foreign language).
            </p>
           </div>
          </div>
@@ -550,7 +582,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            Foster the research on document-level generation technology and contrast the methods for different types of inputs.
            </p>
           </div>
          </div>
@@ -571,7 +603,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
             </code>
            </p>
           </div>
@@ -587,7 +619,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Carnegie Mellon University
            </p>
           </div>
          </div>
@@ -602,7 +634,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Graham Neubig (Carnegie Mellon University), Hiroaki Hayashi (Carnegie Mellon University)
            </p>
           </div>
           <div class="field">
@@ -615,7 +647,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Graham Neubig
            </p>
           </div>
           <div class="field">
@@ -628,7 +660,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Hiroaki Hayashi (Carnegie Mellon University)
            </p>
           </div>
          </div>
@@ -650,21 +682,196 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            <ul>
             <li>
              <code>
-              observation_1
+              id
              </code>
-             : A string describing an observation / event.
+             (
+             <code>
+              string
+             </code>
+             ): The identifier from the original dataset.
             </li>
             <li>
              <code>
-              observation_2
+              gem_id
              </code>
-             : A string describing an observation / event.
+             (
+             <code>
+              string
+             </code>
+             ): The identifier from GEMv2.
             </li>
             <li>
              <code>
-              label
+              day
              </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             (
+             <code>
+              string
+             </code>
+             ): Date of the game (Format:
+             <code>
+              MM_DD_YY
+             </code>
+             )
+            </li>
+            <li>
+             <code>
+              home_name
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Home team name.
+            </li>
+            <li>
+             <code>
+              home_city
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Home team city name.
+            </li>
+            <li>
+             <code>
+              vis_name
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Visiting (Away) team name.
+            </li>
+            <li>
+             <code>
+              vis_city
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Visiting team (Away) city name.
+            </li>
+            <li>
+             <code>
+              home_line
+             </code>
+             (
+             <code>
+              Dict[str, str]
+             </code>
+             ): Home team statistics (e.g., team free throw percentage).
+            </li>
+            <li>
+             <code>
+              vis_line
+             </code>
+             (
+             <code>
+              Dict[str, str]
+             </code>
+             ): Visiting team statistics (e.g., team free throw percentage).
+            </li>
+            <li>
+             <code>
+              box_score
+             </code>
+             (
+             <code>
+              Dict[str, Dict[str, str]]
+             </code>
+             ): Box score table. (Stat_name to [player ID to stat_value].)
+            </li>
+            <li>
+             <code>
+              summary_en
+             </code>
+             (
+             <code>
+              List[string]
+             </code>
+             ): Tokenized target summary in English.
+            </li>
+            <li>
+             <code>
+              sentence_end_index_en
+             </code>
+             (
+             <code>
+              List[int]
+             </code>
+             ): Sentence end indices for
+             <code>
+              summary_en
+             </code>
+             .
+            </li>
+            <li>
+             <code>
+              summary_de
+             </code>
+             (
+             <code>
+              List[string]
+             </code>
+             ): Tokenized target summary in German.
+            </li>
+            <li>
+             <code>
+              sentence_end_index_de
+             </code>
+             (
+             <code>
+              List[int]
+             </code>
+             ): ): Sentence end indices for
+             <code>
+              summary_de
+             </code>
+             .
+            </li>
+            <li>
+             (Unused)
+             <code>
+              detok_summary_org
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Original summary provided by RotoWire dataset.
+            </li>
+            <li>
+             (Unused)
+             <code>
+              summary
+             </code>
+             (
+             <code>
+              List[string]
+             </code>
+             ): Tokenized summary of
+             <code>
+              detok_summary_org
+             </code>
+             .
+            </li>
+            <li>
+             (Unused)
+             <code>
+              detok_summary
+             </code>
+             (
+             <code>
+              string
+             </code>
+             ): Detokenized (with organizer's detokenizer) summary of
+             <code>
+              summary
+             </code>
+             .
             </li>
            </ul>
           </div>
@@ -680,10 +887,30 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
+  'id': '11_02_16-Jazz-Mavericks-TheUtahJazzdefeatedthe',
+  'gem_id': 'GEM-RotoWire_English-German-train-0'
+  'day': '11_02_16',
+  'home_city': 'Utah',
+  'home_name': 'Jazz',
+  'vis_city': 'Dallas',
+  'vis_name': 'Mavericks',
+  'home_line': {
+    'TEAM-FT_PCT': '58', ...
+  },
+  'vis_line': {
+    'TEAM-FT_PCT': '80', ...
+  },
+  'box_score': {
+    'PLAYER_NAME': {
+      '0': 'Harrison Barnes', ...
+  }, ...
+  'summary_en': ['The', 'Utah', 'Jazz', 'defeated', 'the', 'Dallas', 'Mavericks', ...],
+  'sentence_end_index_en': [16, 52, 100, 137, 177, 215, 241, 256, 288],
+  'summary_de': ['Die', 'Utah', 'Jazz', 'besiegten', 'am', 'Mittwoch', 'in', 'der', ...],
+  'sentence_end_index_de': [19, 57, 107, 134, 170, 203, 229, 239, 266],
+  'detok_summary_org': "The Utah Jazz defeated the Dallas Mavericks 97 - 81 ...",
+  'detok_summary': "The Utah Jazz defeated the Dallas Mavericks 97-81 ...",
+  'summary': ['The', 'Utah', 'Jazz', 'defeated', 'the', 'Dallas', 'Mavericks', ...],
 }
 </code></pre>
           </div>
@@ -698,22 +925,13 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <ul>
             <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
+             Train
             </li>
             <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
+             Validation
             </li>
             <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
+             Test
             </li>
            </ul>
           </div>
@@ -721,16 +939,46 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
-            How were labels chosen?
+            Reason for Structure
             <div class="tooltip">
              <div class="tooltip-text">
-              How were the labels chosen?
+              How was the dataset structure determined?
              </div>
             </div>
            </h4>
-           <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
-           </p>
+           <ul>
+            <li>
+             Structured data are directly imported from the original RotoWire dataset.
+            </li>
+            <li>
+             Textual data (English, German) are associated to each sample.
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does an outlier of the dataset in terms of length/perplexity/embedding look like?
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             English summaries are provided sentence-by-sentence to professional German translators with basketball knowledge to obtain sentence-level German translations.
+            </li>
+            <li>
+             Split criteria follows the original RotoWire dataset.
+            </li>
+           </ul>
+           <h4>
+           </h4>
+           <ul>
+            <li>
+             The (English) summary length in the training set varies from 145 to 650 words, with an average of 323 words.
+            </li>
+           </ul>
           </div>
          </div>
         </div>
@@ -779,11 +1027,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -793,9 +1054,17 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <p>
-            Whether models can reason abductively about a given pair of observations.
-           </p>
+           <ul>
+            <li>
+             Translation
+            </li>
+            <li>
+             Data-to-text verbalization
+            </li>
+            <li>
+             Aggregation of the two above.
+            </li>
+           </ul>
           </div>
          </div>
          <div class="scope">
@@ -809,7 +1078,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            The use of two modalities (data, foreign text) to generate a document-level text summary.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The potential use of two modalities (data, foreign text) as input.
            </p>
           </div>
          </div>
@@ -829,7 +1111,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -847,8 +1129,41 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             Added GEM ID in each sample.
+            </li>
+            <li>
+             Normalize the number of players in each sample with "N/A" for consistent data loading.
+            </li>
+           </ul>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -871,10 +1186,34 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <ul>
             <li>
-             Paper: https://arxiv.org/abs/1908.05739
+             https://aclanthology.org/D17-1239
             </li>
             <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
+             https://ojs.aaai.org//index.php/AAAI/article/view/4668
+            </li>
+            <li>
+             https://aclanthology.org/D19-5601
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Technical Terms
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Technical terms used in this card and the dataset and their definitions
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             Data-to-text
+            </li>
+            <li>
+             Neural machine translation (NMT)
+            </li>
+            <li>
+             Document-level generation and translation (DGT)
             </li>
            </ul>
           </div>
@@ -918,9 +1257,14 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <p>
-            Whether models can reason abductively about a given pair of observations.
-           </p>
+           <ul>
+            <li>
+             Textual accuracy towards the gold-standard summary.
+            </li>
+            <li>
+             Content faithfulness to the input structured data.
+            </li>
+           </ul>
           </div>
           <div class="field">
            <h4>
@@ -932,7 +1276,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -952,16 +1296,71 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </code>
             ,
             <code>
-             BERT-Score
+             ROUGE
             </code>
             ,
             <code>
-             ROUGE
+             Other: Other Metrics
             </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <p>
+            Model-based measures proposed by (Wiseman et al., 2017):
+- Relation Generation
+- Content Selection
+- Content Ordering
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            N/A.
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            To evaluate the fidelity of the generated content to the input data.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            See Table 2 to 7 of (https://aclanthology.org/D19-5601) for previous results for this dataset.
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1409,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            A random subset of RotoWire dataset was chosen for German translation annotation.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1018,11 +1430,37 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Foster the research on document-level generation technology and contrast the methods for different types of inputs.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <p>
+            RotoWire
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1481,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Created for the dataset
             </code>
            </p>
           </div>
@@ -1057,7 +1495,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1070,26 +1508,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
           <div class="field">
            <h4>
             Topics Covered
@@ -1100,11 +1523,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            Basketball (NBA) game summaries.
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Creation Process
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If created for the dataset, describe the creation process.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Professional German language translators were hired to translate basketball summaries from a subset of RotoWire dataset.
+           </p>
+          </div>
           <div class="field">
            <h4>
             Language Producers
@@ -1115,20 +1551,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            Translators are familiar with basketball terminology.
            </p>
           </div>
           <div class="field">
            <h4>
-            Filter Criteria
+            Data Preprocessing
             <div class="tooltip">
              <div class="tooltip-text">
-              What were the selection criteria?
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
              </div>
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            Sentence-level translations were aligned back to the original English summary sentences.
            </p>
           </div>
          </div>
@@ -1174,7 +1610,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            none
+            validated through automated script
            </p>
           </div>
          </div>
@@ -1191,7 +1627,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            Sentence-end indices for the tokenized summaries. Sentence boundaries can help users accurately identify aligned sentences in both languages, as well as allowing an accurate evaluation that involves sentence boundaries (ROUGE-L).
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Token and number overlaps between pairs of aligned sentences are measured.
            </p>
           </div>
          </div>
@@ -1218,6 +1667,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for Using the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If not, what is the justification for reusing the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Reusing by citing the original papers:
+- Sam Wiseman, Stuart M. Shieber, Alexander M. Rush:
+Challenges in Data-to-Document Generation. EMNLP 2017.
+- Hiroaki Hayashi, Yusuke Oda, Alexandra Birch, Ioannis Konstas, Andrew Finch, Minh-Thang Luong, Graham Neubig, Katsuhito Sudoh. Findings of the Third Workshop on Neural Generation and Translation. WNGT 2019.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1235,22 +1700,37 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            unlikely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Categories of PII
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              What categories of PII are present or suspected in the data?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            <code>
+             generic PII
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any PII Identification?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Did the curators use any automatic/manual method to identify PII in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no identification
            </p>
           </div>
          </div>
@@ -1379,6 +1859,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             English text in this dataset is from Rotowire, originally written by writers at Rotowire.com that are likely US-based.
+            </li>
+            <li>
+             German text is produced by professional translators proficient in both English and German.
+            </li>
+           </ul>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1431,9 +1929,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <p>
-            None
-           </p>
+           <ul>
+            <li>
+             Structured data contain real National Basketball Association player and organization names.
+            </li>
+           </ul>
           </div>
          </div>
         </div>
@@ -1455,7 +1955,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1470,7 +1970,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1487,6 +1987,49 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Potential overlap of box score tables between splits. This was extensively studied and pointed out by [1].
+           </p>
+           <p>
+            [1]: Thomson, Craig, Ehud Reiter, and Somayajulu Sripada. "SportSett: Basketball-A robust and maintainable data-set for Natural Language Generation." Proceedings of the Workshop on Intelligent Information Processing and Natural Language Generation. 2020.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Users may interact with a trained model to learn about a NBA game in a textual manner. On generated texts, they may observe factual errors that contradicts the actual data that the model conditions on.
+Factual errors include wrong statistics of a player (e.g., 3PT), non-existent injury information.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Publishing the generated text as is. Even if the model achieves high scores on the evaluation metrics, there is a risk of factual errors mentioned above.
+           </p>
+          </div>
          </div>
         </div>
        </div>

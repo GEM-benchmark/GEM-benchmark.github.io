@@ -1,0 +1,6 @@
+---
+title: SciDuet
+type: Text-to-Slide
+languages: English
+summary: This dataset supports the document-to-slide generation task where a model has to generate presentation slide content from the text of a document.
+---

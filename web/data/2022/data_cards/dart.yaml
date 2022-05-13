@@ -1,0 +1,6 @@
+---
+title: dart
+type: Data-to-Text
+languages: English
+summary: DART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format. The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still retaining the full information.
+---

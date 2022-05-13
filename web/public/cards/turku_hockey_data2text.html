@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       turku_hockey_data2text
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         This is a Finnish data-to-text dataset in which the input is structured information about a hockey game and the output a description of the game.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/turku_hockey_data2text')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/turku_hockey_data2text">
           here
          </a>
          .
@@ -184,7 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
+          <a href="https://turkunlp.org/hockey_data2text.html">
            Website
           </a>
          </p>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/W19-6125/">
+           ACL anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Jenna Kanerva, Samuel Rönnqvist, Riina Kekki, Tapio Salakoski, Filip Ginter (TurkuNLP / University of Turku)
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Jenna Kanerva, Filip Ginter
         </p>
        </div>
        <div class="field">
@@ -252,7 +251,7 @@ data = datasets.load_dataset('GEM/ART')
         </h4>
         <p>
          <code>
-          English
+          Finnish
          </code>
         </p>
        </div>
@@ -266,7 +265,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-nc-sa-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Describe an event from an ice hockey game based on the given structural data.
         </p>
        </div>
        <div class="field">
@@ -279,7 +291,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         expert created
         </p>
        </div>
        <div class="field">
@@ -292,7 +304,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         yes/very likely
         </p>
        </div>
       </div>
@@ -365,7 +377,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
+            <a href="https://turkunlp.org/hockey_data2text.html">
              Website
             </a>
            </p>
@@ -380,8 +392,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/TurkuNLP/Turku-hockey-data2text">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +407,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/W19-6125/">
+             ACL anthology
             </a>
            </p>
           </div>
@@ -425,7 +437,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Jenna Kanerva, Filip Ginter
            </p>
           </div>
           <div class="field">
@@ -438,7 +450,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            jmnybl@utu.fi, figint@utu.fi
            </p>
           </div>
          </div>
@@ -452,14 +464,12 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
-}
+           <pre><code>@inproceedings{kanerva2019newsgen,
+  Title = {Template-free Data-to-Text Generation of Finnish Sports News},
+  Author = {Jenna Kanerva and Samuel R{\"o}nnqvist and Riina Kekki and Tapio Salakoski and Filip Ginter},
+  booktitle = {Proceedings of the 22nd Nordic Conference on Computational Linguistics (NoDaLiDa’19)},
+  year={2019}
+  }
 </code></pre>
           </div>
          </div>
@@ -493,7 +503,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             English
+             Finnish
             </code>
            </p>
           </div>
@@ -507,7 +517,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-nc-sa-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,11 +530,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Data-to-Text
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Covered Dialects
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What dialects are covered? Are there multiple dialects per language?
+             </div>
+            </div>
+           </h4>
+           <p>
+            written standard language
+           </p>
+          </div>
           <div class="field">
            <h4>
             Whose Language?
@@ -535,7 +558,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            The original news articles are written by professional journalists. The text passages extracted in the annotation may be slightly edited compared to the original language during the corpus annotation.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Describe an event from an ice hockey game based on the given structural data.
            </p>
           </div>
          </div>
@@ -550,7 +586,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            This dataset was developed as a benchmark for evaluating template-free, machine learning methods on Finnish news generation in the area of ice hockey reporting.
            </p>
           </div>
          </div>
@@ -571,7 +607,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
             </code>
            </p>
           </div>
@@ -587,7 +623,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            University of Turku
            </p>
           </div>
          </div>
@@ -602,7 +638,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Jenna Kanerva, Samuel Rönnqvist, Riina Kekki, Tapio Salakoski, Filip Ginter (TurkuNLP / University of Turku)
            </p>
           </div>
           <div class="field">
@@ -615,7 +651,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The project was supported by the Google Digital News Innovation Fund.
            </p>
           </div>
           <div class="field">
@@ -628,7 +664,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Jenna Kanerva, Filip Ginter (TurkuNLP / University of Turku)
            </p>
           </div>
          </div>
@@ -647,26 +683,286 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
+           <p>
+            The dataset is constructed of games, where each game is a list of events. If the event was annotated (corresponding sentence was found from the news article), it includes
+            <code>
+             text
+            </code>
+            field with value other than empty string ("").
+           </p>
+           <p>
+            For each game (dict), there are keys
+            <code>
+             gem_id
+            </code>
+            (string),
+            <code>
+             id
+            </code>
+            (string),
+            <code>
+             news_article
+            </code>
+            (string), and
+            <code>
+             events
+            </code>
+            (list).
+           </p>
+           <p>
+            For each event (dict), there are different, relevant keys available with non empty values depending on the event type (e.g. goal or penalty). The mandatory keys for each event are
+            <code>
+             event_id
+            </code>
+            (string),
+            <code>
+             event_type
+            </code>
+            (string),
+            <code>
+             text
+            </code>
+            (string, empty string if not annotated), and
+            <code>
+             multi_reference
+            </code>
+            (bool). The keys not relevant for the specific event type are left empty.
+           </p>
+           <p>
+            The relevant keys in the event dictionary are:
+           </p>
+           <p>
+            For each event type, the following keys are relevant:
+            <code>
+             event_id
+            </code>
+            : Identifier of the event, unique to the game but not globally, in chronological order (string)
+            <code>
+             event_type
+            </code>
+            : Type of the event, possible values are
+            <code>
+             game result
+            </code>
+            ,
+            <code>
+             goal
+            </code>
+            ,
+            <code>
+             penalty
+            </code>
+            , or
+            <code>
+             saves
+            </code>
+            (string)
+            <code>
+             text
+            </code>
+            : Natural language description of the event, or empty string if not available (string)
+            <code>
+             multi_reference
+            </code>
+            : Does this event refer to a text passage describing multiple events? (bool)
+           </p>
+           <p>
+            The rest of the fields are specific to the event type. The relevant fields for each event type are:
+           </p>
+           <p>
+            game result:
+            <code>
+             event_id
+            </code>
+            : Identifier of the event, unique to the game but not globally, in chronological order (string)
+            <code>
+             event_type
+            </code>
+            : Type of the event (string)
+            <code>
+             home_team
+            </code>
+            : Name of the home team (string)
+            <code>
+             guest_team
+            </code>
+            : Name of the guest team (string)
+            <code>
+             score
+            </code>
+            : Final score of the game, in the form of home–guest (string)
+            <code>
+             periods
+            </code>
+            : Scores for individual periods, each in the form of home–guest score in that period (list of strings)
+            <code>
+             features
+            </code>
+            : Additional features, such as overtime win or shoot out (list of strings)
+            <code>
+             text
+            </code>
+            : Natural language description of the event, or empty string if not available (string)
+            <code>
+             multi_reference
+            </code>
+            : Does this event refer to a text passage describing multiple events? (bool)
+           </p>
+           <p>
+            goal:
+            <code>
+             event_id
+            </code>
+            : Identifier of the event, unique to the game but not globally, in chronological order (string)
+            <code>
+             event_type
+            </code>
+            : Type of the event (string)
+            <code>
+             player
+            </code>
+            : Name of the player scoring (string)
+            <code>
+             assist
+            </code>
+            : Names of the players assisting, at most two players (list of strings)
+            <code>
+             team
+            </code>
+            : Team scoring with possible values of
+            <code>
+             home
+            </code>
+            or
+            <code>
+             guest
+            </code>
+            (string)
+            <code>
+             team_name
+            </code>
+            : Name of the team scoring (string)
+            <code>
+             score
+            </code>
+            : Score after the goal, in the form of home–guest (string)
+            <code>
+             time
+            </code>
+            : Time of the goal, minutes and seconds from the beginning (string)
+            <code>
+             features
+            </code>
+            : Additional features, such as power play or short-handed goal (list of strings)
+            <code>
+             text
+            </code>
+            : Natural language description of the event, or empty string if not available (string)
+            <code>
+             multi_reference
+            </code>
+            : Does this event refer to a text passage describing multiple events? (bool)
+           </p>
+           <p>
+            penalty:
+            <code>
+             event_id
+            </code>
+            : Identifier of the event, unique to the game but not globally, in chronological order (string)
+            <code>
+             event_type
+            </code>
+            : Type of the event (string)
+            <code>
+             player
+            </code>
+            : Name of the player getting the penalty (string)
+            <code>
+             team
+            </code>
+            : Team getting the penalty with possible values of
+            <code>
+             home
+            </code>
+            or
+            <code>
+             guest
+            </code>
+            (string)
+            <code>
+             team_name
+            </code>
+            : Name of the team getting the penalty (string)
+            <code>
+             penalty_minutes
+            </code>
+            : Penalty minutes (string)
+            <code>
+             time
+            </code>
+            : Time of the penalty, minutes and seconds from the beginning (string)
+            <code>
+             text
+            </code>
+            : Natural language description of the event, or empty string if not available (string)
+            <code>
+             multi_reference
+            </code>
+            : Does this event refer to a text passage describing multiple events? (bool)
+           </p>
+           <p>
+            saves:
+            <code>
+             event_id
+            </code>
+            : Identifier of the event, unique to the game but not globally, in chronological order (string)
+            <code>
+             event_type
+            </code>
+            : Type of the event (string)
+            <code>
+             player
+            </code>
+            : Name of the goalkeeper (string)
+            <code>
+             team
+            </code>
+            : Team of the goalkeeper with possible values of
+            <code>
+             home
+            </code>
+            or
+            <code>
+             guest
+            </code>
+            (string)
+            <code>
+             team_name
+            </code>
+            : Name of the team (string)
+            <code>
+             saves
+            </code>
+            : Number of saves in the game (string)
+            <code>
+             text
+            </code>
+            : Natural language description of the event, or empty string if not available (string)
+            <code>
+             multi_reference
+            </code>
+            : Does this event refer to a text passage describing multiple events? (bool)
+           </p>
+           <p>
+            Text passages describing multiple events (multi_reference):
+           </p>
+           <p>
+            Some text passages refer to multiple events in such way that separating them to individual statements is not adequate (e.g. "The home team received two penalties towards the end of the first period."). In these cases, multiple events are aligned to the same text passage so that the first event (in chronological order) include the annotated text passage, while the rest of the events referring to the same text passage include the identifier of the first event in the annotated text field (e.g.
+            <code>
+             text
+            </code>
+            : "E4").
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -680,10 +976,28 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
+  'gem_id': 'gem-turku_hockey_data2text-train-0',
+  'id': '20061031-TPS-HPK',
+  'news_article': 'HPK:n hyvä syysvire jatkuu jääkiekon SM-liigassa. Tiistaina HPK kukisti mainiolla liikkeellä ja tehokkaalla ylivoimapelillä TPS:n vieraissa 1–0 (1–0, 0–0, 0–0).\nHPK hyödynsi ylivoimaa mennen jo ensimmäisessä erässä Mikko Mäenpään maalilla 1–0 -johtoon.\nToisessa ja kolmannessa erässä HPK tarjosi edelleen TPS:lle runsaasti tilanteita, mutta maalia eivät turkulaiset millään ilveellä saaneet. Pahin este oli loistavan pelin Hämeenlinnan maalilla pelannut Mika Oksa.\nTPS:n maalissa Jani Hurme ei osumille mitään mahtanut. Joukkueen suuri yksinäinen kenttäpelaaja oli Kai Nurminen, mutta hänelläkään ei ollut onnea maalitilanteissa.',
+  'events':
+    {
+      'event_id': ['E1', 'E2', 'E3'],
+      'event_type': ['game result', 'penalty', 'goal'],
+      'text': ['HPK kukisti TPS:n vieraissa 1–0 (1–0, 0–0, 0–0).', '', 'HPK hyödynsi ylivoimaa mennen jo ensimmäisessä erässä Mikko Mäenpään maalilla 1–0 -johtoon.'],
+      'home_team': ['TPS', '', ''],
+      'guest_team': ['HPK', '', ''],
+      'score': ['0–1', '', '0–1'],
+      'periods': [['0–1', '0–0', '0–0'], [], []],
+      'features': [[], [], ['power play']],
+      'player': ['', 'Fredrik Svensson', 'Mikko Mäenpää'],
+      'assist': [[], [], ['Jani Keinänen', 'Toni Mäkiaho']],
+      'team': ['', 'guest', 'guest'],
+      'team_name': ['', 'HPK', 'HPK'],
+      'time': ['', '9.28', '14.57'],
+      'penalty_minutes': ['', '2', ''],
+      'saves': ['', '', ''],
+      'multi_reference': [false, false, false]
+    }
 }
 </code></pre>
           </div>
@@ -696,42 +1010,12 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            The corpus include 3 splits: train, validation, and test.
+           </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            How were labels chosen?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How were the labels chosen?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -779,11 +1063,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +1091,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            morphological inflection, language variation
            </p>
           </div>
          </div>
@@ -809,7 +1106,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            The dataset was created to develop machine learned text generation models for Finnish ice hockey news, where the generation would reflect the natural language variation found from the game reports written by professional journalists. While the original game reports often include additional information not derivable from the game statistics, the corpus was fully manually curated to remove all such  information from the natural language descriptions. The rationale of such curation was to prevent model 'hallucinating' additional facts.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            This is the only data2text corpus for Finnish in GEM.
            </p>
           </div>
          </div>
@@ -829,7 +1139,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -847,8 +1157,36 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             data points modified
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            Structural data was translated into English.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -860,24 +1198,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
-          </div>
          </div>
         </div>
        </div>
@@ -911,19 +1231,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
-            Measured Model Abilities
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Whether models can reason abductively about a given pair of observations.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Previous results available?
             <div class="tooltip">
              <div class="tooltip-text">
@@ -932,7 +1239,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -952,16 +1259,34 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </code>
             ,
             <code>
-             BERT-Score
+             METEOR
             </code>
             ,
             <code>
              ROUGE
             </code>
+            ,
+            <code>
+             WER
+            </code>
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Automatic evaluation: BLEU, NIST, METEOR, ROUGE-L, CIDEr
+Manual evaluation: factual mistakes, grammatical errors, minimum edit distance to an acceptable game report (using WER)
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1335,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is designed for text generation (data2text), where the original source of natural language descriptions is news articles written by journalists. While the link between structural data (ice hockey game statistics) and the news articles describing the game  was quite weak (news articles including a lot of information not derivable from the statistics, while leaving many events unmentioned), the corpus includes full manual annotation aligning the events extracted from game statistics and the corresponding natural language passages extracted from the news articles.
+           </p>
+           <p>
+            Each event is manually aligned into a sentence-like passage, and in case a suitable passage was not found, the annotation is left empty (with value
+            <code>
+             None
+            </code>
+            ). The extracted passages were manually modified not to include additional information not derivable from the game statistics, or not considered as world knowledge. The manual curation of passages is designed to prevent model hallucination, i.e. model learning to generate facts not derivable from the input data.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1023,6 +1368,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Describing the given events (structural data) in natural language, and therefore generating ice hockey game reports.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1401,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Other
             </code>
            </p>
           </div>
@@ -1057,7 +1415,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            not validated
            </p>
           </div>
           <div class="field">
@@ -1077,21 +1435,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Topics Covered
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1100,7 +1443,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            Ice hockey, news
            </p>
           </div>
          </div>
@@ -1115,7 +1458,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            The initial data, both game statistics and news articles, were obtained from the Finnish News Agency STT news archives released for academic use (http://urn.fi/urn:nbn:fi:lb-2019041501). The original news articles are written by professional journalists.
+           </p>
+           <p>
+            We (TurkuNLP) gratefully acknowledge the collaboration of Maija Paikkala, Salla Salmela and Pihla Lehmusjoki from the Finnish News Agency STT while creating the corpus.
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1474,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            Include only games, where both game statistics and a news article describing the game were available (based on timestamps and team names).
            </p>
           </div>
          </div>
@@ -1148,7 +1494,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            expert created
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
            </p>
           </div>
           <div class="field">
@@ -1174,11 +1533,50 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            none
+            validated by data curators
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Members of the TurkuNLP research group, native speakers of Finnish.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
+           </p>
+          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1191,7 +1589,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            Manual alignment of events and their natural language descriptions. Removing information not derivable from the input data or world knowledge in order to prevent the model 'hallucination'.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Manual inspection of examples during the initial annotation training phrase.
            </p>
           </div>
          </div>
@@ -1211,13 +1622,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The corpus license was agreed with the providers of the source material.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1235,22 +1659,37 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            yes/very likely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Categories of PII
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              What categories of PII are present or suspected in the data?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            <code>
+             generic PII
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any PII Identification?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Did the curators use any automatic/manual method to identify PII in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no identification
            </p>
           </div>
          </div>
@@ -1379,6 +1818,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset represents only written standard language.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1455,7 +1907,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             non-commercial use only
             </code>
            </p>
           </div>
@@ -1470,7 +1922,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             non-commercial use only
             </code>
            </p>
           </div>

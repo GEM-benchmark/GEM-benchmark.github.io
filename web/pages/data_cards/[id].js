@@ -5,6 +5,9 @@ import utilStyles from '../../styles/utils.module.css'
 import IframeResizer from 'iframe-resizer-react'
 
 export default function Post({ taskData }) {
+  console.log(taskData);
+
+  const card_path = "/cards/" + taskData.id + ".html"
   return (
     <Layout>
       <Head>
@@ -20,7 +23,7 @@ export default function Post({ taskData }) {
         <IframeResizer
           heightCalculationMethod="lowestElement"
           log
-          src="/cards/test.html"
+          src={card_path}
           style={{ width: '1px', minWidth: '100%'}}
           frameBorder="0"
         />

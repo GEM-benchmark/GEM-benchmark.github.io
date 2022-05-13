@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       opusparcus
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         Opusparcus is a paraphrase corpus for six European languages: German, English, Finnish, French, Russian, and Swedish. The paraphrases consist of subtitles from movies and TV shows.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/opusparcus')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/opusparcus">
           here
          </a>
          .
@@ -184,7 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
+          <a href="http://urn.fi/urn:nbn:fi:lb-2018021221">
            Website
           </a>
          </p>
@@ -194,17 +193,9 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="http://www.lrec-conf.org/proceedings/lrec2018/pdf/131.pdf">
+           LREC
           </a>
-         </p>
-        </div>
-        <div class="field">
-         <h4>
-          authors
-         </h4>
-         <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
          </p>
         </div>
        </div>
@@ -225,7 +216,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Mathias Creutz
         </p>
        </div>
        <div class="field">
@@ -238,7 +229,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no
+         yes
         </p>
        </div>
        <div class="field">
@@ -252,7 +243,27 @@ data = datasets.load_dataset('GEM/ART')
         </h4>
         <p>
          <code>
+          German
+         </code>
+         ,
+         <code>
           English
+         </code>
+         ,
+         <code>
+          Finnish
+         </code>
+         ,
+         <code>
+          French
+         </code>
+         ,
+         <code>
+          Russian
+         </code>
+         ,
+         <code>
+          Swedish
          </code>
         </p>
        </div>
@@ -266,7 +277,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-nc-4.0: Creative Commons Attribution Non Commercial 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Models can be trained, e.g., for paraphrase detection and generation, that is, determining whether two given sentences mean the same thing or generating new paraphrases for a given sentence.
         </p>
        </div>
        <div class="field">
@@ -279,7 +303,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         expert created
         </p>
        </div>
        <div class="field">
@@ -292,7 +316,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         yes/very likely
         </p>
        </div>
       </div>
@@ -365,7 +389,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
+            <a href="http://urn.fi/urn:nbn:fi:lb-2018021221">
              Website
             </a>
            </p>
@@ -380,8 +404,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="http://urn.fi/urn:nbn:fi:lb-2018021221">
+             Website
             </a>
            </p>
           </div>
@@ -395,8 +419,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="http://www.lrec-conf.org/proceedings/lrec2018/pdf/131.pdf">
+             LREC
             </a>
            </p>
           </div>
@@ -425,7 +449,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Mathias Creutz
            </p>
           </div>
           <div class="field">
@@ -438,7 +462,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            firstname dot lastname at helsinki dot fi
            </p>
           </div>
          </div>
@@ -452,14 +476,18 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
-}
+           <pre><code>@InProceedings{creutz:lrec2018,
+  title = {Open Subtitles Paraphrase Corpus for Six Languages},
+  author={Mathias Creutz},
+  booktitle={Proceedings of the 11th edition of the Language Resources and Evaluation Conference (LREC 2018)},
+  year={2018},
+  month = {May 7-12},
+  address = {Miyazaki, Japan},
+  editor = {Nicoletta Calzolari (Conference chair) and Khalid Choukri and Christopher Cieri and Thierry Declerck and Sara Goggi and Koiti Hasida and Hitoshi Isahara and Bente Maegaard and Joseph Mariani and Hélène Mazo and Asuncion Moreno and Jan Odijk and Stelios Piperidis and Takenobu Tokunaga},
+  publisher = {European Language Resources Association (ELRA)},
+  isbn = {979-10-95546-00-9},
+  language = {english},
+  url={http://www.lrec-conf.org/proceedings/lrec2018/pdf/131.pdf}
 </code></pre>
           </div>
          </div>
@@ -479,7 +507,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -493,7 +521,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
+             German
+            </code>
+            ,
+            <code>
              English
+            </code>
+            ,
+            <code>
+             Finnish
+            </code>
+            ,
+            <code>
+             French
+            </code>
+            ,
+            <code>
+             Russian
+            </code>
+            ,
+            <code>
+             Swedish
             </code>
            </p>
           </div>
@@ -507,7 +555,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-nc-4.0: Creative Commons Attribution Non Commercial 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,7 +568,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Paraphrasing
            </p>
           </div>
          </div>
@@ -535,7 +583,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            Opusparcus is a paraphrase corpus for six European languages: German, English, Finnish, French, Russian, and Swedish. The paraphrases consist of subtitles from movies and TV shows.
+           </p>
+           <p>
+            The data in Opusparcus has been extracted from
+            <a href="http://opus.nlpl.eu/OpenSubtitles2016.php">
+             OpenSubtitles2016
+            </a>
+            , which is in turn based on data from http://www.opensubtitles.org/.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Models can be trained, e.g., for paraphrase detection and generation, that is, determining whether two given sentences mean the same thing or generating new paraphrases for a given sentence.
            </p>
           </div>
          </div>
@@ -550,7 +618,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            Opusparcus is a sentential paraphrase corpus for multiple languages containing colloquial language.
            </p>
           </div>
          </div>
@@ -560,64 +628,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
         </h3>
         <div class="row">
          <div class="scope">
-          <div class="field">
-           <h4>
-            Curation Organization Type(s)
-            <div class="tooltip">
-             <div class="tooltip-text">
-              In what kind of organization did the dataset curation happen?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             industry
-            </code>
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Curation Organization(s)
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Name the organization(s).
-             </div>
-            </div>
-           </h4>
-           <p>
-            Allen Institute for AI
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Dataset Creators
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Who created the original dataset? List the people involved in collecting the dataset and their affiliation(s).
-             </div>
-            </div>
-           </h4>
-           <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Funding
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Who funded the data creation?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Allen Institute for AI
-           </p>
-          </div>
           <div class="field">
            <h4>
             Who added the Dataset to GEM?
@@ -628,7 +642,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Mathias Creutz (University of Helsinki)
            </p>
           </div>
          </div>
@@ -650,23 +664,54 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            <ul>
             <li>
              <code>
-              observation_1
+              sent1
              </code>
-             : A string describing an observation / event.
+             : a tokenized sentence
             </li>
             <li>
              <code>
-              observation_2
+              sent2
              </code>
-             : A string describing an observation / event.
+             : another tokenized sentence, which is potentially a paraphrase of
+             <code>
+              sent1
+             </code>
+             .
             </li>
             <li>
              <code>
-              label
+              annot_score
              </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             : a value between 1.0 and 4.0 indicating how good an example of paraphrases
+             <code>
+              sent1
+             </code>
+             and
+             <code>
+              sent2
+             </code>
+             are. (For the training sets, the value is 0.0, which indicates that no manual annotation has taken place.)
+            </li>
+            <li>
+             <code>
+              lang
+             </code>
+             : language of this dataset
+            </li>
+            <li>
+             <code>
+              gem_id
+             </code>
+             : unique identifier of this entry
             </li>
            </ul>
+           <p>
+            All fields are strings except
+            <code>
+             annot_score
+            </code>
+            , which is a float.
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -679,12 +724,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
+           <pre><code>{'annot_score': 4.0, 'gem_id': 'gem-opusparcus-test-1587', 'lang': 'en', 'sent1': "I haven 't been contacted by anybody .", 'sent2': "Nobody 's contacted me ."}
 </code></pre>
           </div>
           <div class="field">
@@ -696,29 +736,270 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            The data is split into training, validation and test sets. The validation and test sets come in two versions, the regular validation and test sets and the full sets, called validation.full and test.full. The full sets contain all sentence pairs successfully annotated by the annotators, including the sentence pairs that were rejected as paraphrases. The annotation scores of the full sets thus range between 1.0 and 4.0. The regular validation and test sets only contain sentence pairs that qualify as paraphrases, scored between 3.0 and 4.0 by the annotators.
+           </p>
+           <p>
+            The number of sentence pairs in the data splits are as follows for each of the languages. The range between the smallest (
+            <code>
+             quality=95
+            </code>
+            ) and largest (
+            <code>
+             quality=60
+            </code>
+            ) train configuration have been shown.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               train
+              </th>
+              <th>
+               valid
+              </th>
+              <th>
+               test
+              </th>
+              <th>
+               valid.full
+              </th>
+              <th>
+               test.full
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               de
+              </td>
+              <td>
+               0.59M .. 13M
+              </td>
+              <td>
+               1013
+              </td>
+              <td>
+               1047
+              </td>
+              <td>
+               1582
+              </td>
+              <td>
+               1586
+              </td>
+             </tr>
+             <tr>
+              <td>
+               en
+              </td>
+              <td>
+               1.0M .. 35M
+              </td>
+              <td>
+               1015
+              </td>
+              <td>
+               982
+              </td>
+              <td>
+               1455
+              </td>
+              <td>
+               1445
+              </td>
+             </tr>
+             <tr>
+              <td>
+               fi
+              </td>
+              <td>
+               0.48M .. 8.9M
+              </td>
+              <td>
+               963
+              </td>
+              <td>
+               958
+              </td>
+              <td>
+               1760
+              </td>
+              <td>
+               1749
+              </td>
+             </tr>
+             <tr>
+              <td>
+               fr
+              </td>
+              <td>
+               0.94M .. 22M
+              </td>
+              <td>
+               997
+              </td>
+              <td>
+               1007
+              </td>
+              <td>
+               1630
+              </td>
+              <td>
+               1674
+              </td>
+             </tr>
+             <tr>
+              <td>
+               ru
+              </td>
+              <td>
+               0.15M .. 15M
+              </td>
+              <td>
+               1020
+              </td>
+              <td>
+               1068
+              </td>
+              <td>
+               1854
+              </td>
+              <td>
+               1855
+              </td>
+             </tr>
+             <tr>
+              <td>
+               sv
+              </td>
+              <td>
+               0.24M .. 4.5M
+              </td>
+              <td>
+               984
+              </td>
+              <td>
+               947
+              </td>
+              <td>
+               1887
+              </td>
+              <td>
+               1901
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            As a concrete example, loading the English data requesting 95% quality of the train split produces the following:
+           </p>
+           <p>
+            ```
+           </p>
+           <blockquote>
+            <blockquote>
+             <blockquote>
+              <p>
+               data = load_dataset("GEM/opusparcus", lang="en", quality=95)
+              </p>
+              <p>
+               data
+DatasetDict({
+    test: Dataset({
+        features: ['lang', 'sent1', 'sent2', 'annot_score', 'gem_id'],
+        num_rows: 982
+    })
+    validation: Dataset({
+        features: ['lang', 'sent1', 'sent2', 'annot_score', 'gem_id'],
+        num_rows: 1015
+    })
+    test.full: Dataset({
+        features: ['lang', 'sent1', 'sent2', 'annot_score', 'gem_id'],
+        num_rows: 1445
+    })
+    validation.full: Dataset({
+        features: ['lang', 'sent1', 'sent2', 'annot_score', 'gem_id'],
+        num_rows: 1455
+    })
+    train: Dataset({
+        features: ['lang', 'sent1', 'sent2', 'annot_score', 'gem_id'],
+        num_rows: 1000000
+    })
+})
+              </p>
+              <p 4.0_="4.0," _annot_score_:="'annot_score':" _en_="'en'," _gem-opusparcus-test-1587_="'gem-opusparcus-test-1587'," _gem_id_:="'gem_id':" _i='"I' _lang_:="'lang':" _nobody='"Nobody' _s="'s" _sent1_:="'sent1':" _sent2_:="'sent2':" _t="'t" anybody="anybody" been="been" by="by" class='", "' contacted="contacted" haven="haven" me="me">
+               data["test"][0]
+              </p>
+              <p 3.0_="3.0," _="?'," _annot_score_:="'annot_score':" _en_="'en'," _gem-opusparcus-validation-1586_="'gem-opusparcus-validation-1586'," _gem_id_:="'gem_id':" _i='"I' _lang_:="'lang':" _m="'m" _no="'No" _sent1_:="'sent1':" _sent2_:="'sent2':" anything="anything" class='"' not="not" okay="okay" promises="promises" promising="promising">
+               data["validation"][2]
+              </p>
+              <p 0.0_="0.0," _="?'" _am="'Am" _annot_score_:="'annot_score':" _en_="'en'," _gem-opusparcus-train-12501001_="'gem-opusparcus-train-12501001'," _gem_id_:="'gem_id':" _lang_:="'lang':" _sent1_:="'sent1':" _sent2_:="'sent2':" beautiful="beautiful" i="I" pretty="pretty">
+               data["train"][1000]
+              </p>
+             </blockquote>
+            </blockquote>
+           </blockquote>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Reason for Structure
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the dataset structure determined?
+             </div>
+            </div>
+           </h4>
+           <p>
+            For each target language, the Opusparcus data have been partitioned into three types of data sets: training, validation and test sets. The training sets are large, consisting of millions of sentence pairs, and have been compiled automatically, with the help of probabilistic ranking functions. The development and test sets consist of sentence pairs that have been annotated manually; each set contains approximately 1000 sentence pairs that have been verified to be acceptable paraphrases by two independent annotators.
+           </p>
+           <p>
+            When you download Opusparcus, you must always indicate the language you want to retrieve, for instance:
+           </p>
+           <pre><code>data = load_dataset("GEM/opusparcus", lang="de")
+</code></pre>
+           <p>
+            The above command will download the validation and test sets for German. If additionally, you want to retrieve training data, you need to specify the level of quality you desire, such as "French, with 90% quality of the training data":
+           </p>
+           <pre><code>data = load_dataset("GEM/opusparcus", lang="fr", quality=90)
+</code></pre>
+           <p>
+            The entries in the training sets have been ranked automatically by how likely they are paraphrases, best first, worst last. The quality parameter indicates the estimated proportion (in percent) of true
+paraphrases in the training set. Allowed quality values range between 60 and 100, in increments of 5 (60, 65, 70, ..., 100). A value of 60 means that 60% of the sentence pairs in the training set are estimated to be true paraphrases (and the remaining 40% are not). A higher value produces a smaller but cleaner set. The smaller sets are subsets of the larger sets, such that the
+            <code>
+             quality=95
+            </code>
+            set is a subset of
+            <code>
+             quality=90
+            </code>
+            , which is a subset of
+            <code>
+             quality=85
+            </code>
+            , and so on.
+           </p>
+           <p>
+            The default
+            <code>
+             quality
+            </code>
+            value, if omitted, is 100. This matches no training data at all, which can be convenient, if you are only interested in the validation and test sets, which are considerably
+smaller, but manually annotated.
+           </p>
+           <p>
+            Note that an alternative to typing the parameter values explicitly, you can use configuration names instead. The following commands are equivalent to the ones above:
+           </p>
+           <pre><code>data = load_dataset("GEM/opusparcus", "de.100")
+data = load_dataset("GEM/opusparcus", "fr.90")
+</code></pre>
+          </div>
           <div class="field">
            <h4>
             How were labels chosen?
@@ -729,7 +1010,82 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            Annotators have used the following scores to label sentence pairs in the test and validation sets:
+           </p>
+           <p>
+            4: Good example of paraphrases (Dark green button in the annotation tool): The two sentences can be used in the same situation and essentially "mean the same thing".
+           </p>
+           <p>
+            3: Mostly good example of paraphrases (Light green button in the annotation tool): It is acceptable to think that the two sentences refer to the same thing, although one sentence might be more specific
+than the other one, or there are differences in style, such as polite form versus familiar form.
+           </p>
+           <p>
+            2: Mostly bad example of paraphrases (Yellow button in the annotation tool): There is some connection between the sentences that explains why they occur together, but one would not really consider them to mean the same thing.
+           </p>
+           <p>
+            1: Bad example of paraphrases (Red button in the annotation tool): There is no obvious connection. The sentences mean different things.
+           </p>
+           <p>
+            If the two annotators fully agreed on the category, the value in the
+            <code>
+             annot_score
+            </code>
+            field is 4.0, 3.0, 2.0 or 1.0.  If the two annotators chose adjacent categories, the value in this field will be 3.5, 2.5 or
+1.5.  For instance, a value of 2.5 means that one annotator gave a score of 3 ("mostly good"), indicating a possible paraphrase pair, whereas the other annotator scored this as a 2 ("mostly bad"), that is, unlikely to be a paraphrase pair.  If the annotators disagreed by more than one category, the sentence pair was discarded and won't show up in the datasets.
+           </p>
+           <p>
+            The training sets were not annotated manually. This is indicated by
+the value 0.0 in the
+            <code>
+             annot_score
+            </code>
+            field.
+           </p>
+           <p>
+            For an assessment of of inter-annotator agreement, see Aulamo et al. (2019).
+            <a href="http://ceur-ws.org/Vol-2364/3_paper.pdf">
+             Annotation of subtitle paraphrases using a new web tool.
+            </a>
+            In
+            <em>
+             Proceedings of the
+Digital Humanities in the Nordic Countries 4th Conference
+            </em>
+            , Copenhagen, Denmark.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The validation and test sets have been annotated manually, but the training sets have been produced using automatic scoring and come in different size configurations depending on the desired quality level. (See above descriptions and examples for more details.)
+           </p>
+           <p>
+            Please note that previous work suggests that a larger and noisier training set is better than a
+smaller and clean set. See Sjöblom et al. (2018).
+            <a href="http://noisy-text.github.io/2018/pdf/W-NUT20189.pdf">
+             Paraphrase Detection on Noisy Subtitles in Six
+Languages
+            </a>
+            . In
+            <em>
+             Proceedings of the 2018 EMNLP Workshop W-NUT: The 4th Workshop on Noisy User-generated Text
+            </em>
+            , and Vahtola et al. (2021).
+            <a href="https://aclanthology.org/2021.wnut-1.32/">
+             Coping with Noisy Training Data Labels in Paraphrase Detection
+            </a>
+            . In
+            <em>
+             Proceedings of the 7th Workshop on Noisy User-generated Text
+            </em>
+            .
            </p>
           </div>
          </div>
@@ -779,11 +1135,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +1163,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Sentence meaning
            </p>
           </div>
          </div>
@@ -809,7 +1178,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            Opusparcus provides examples of sentences that mean the same thing or have very similar meaning. Sentences are available in six languages and the style is colloquial language.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            There is another data set containing manually labeled Finnish paraphrases.
            </p>
           </div>
          </div>
@@ -829,7 +1211,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -842,13 +1224,70 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how the new splits were created
+             </div>
+            </div>
+           </h4>
+           <p>
+            There are two versions of the validations and test sets: the regular sets which only contain positive examples of paraphrases and the full sets containing all examples.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Motivation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspects of the model's generation capacities were the splits created to test?
+             </div>
+            </div>
+           </h4>
+           <p>
+            In the original release, only the full validation and test sets were supplied. The "regular sets" have been added in order to make it easier to test on true parapahrases only.
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            Training sets have been prepared for each the "quality levels" 60% – 95%.
+           </p>
+           <p>
+            In the original release, this task was left to the user of the data.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -869,14 +1308,41 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
+           <p>
+            Creutz (2018).
+            <a href="http://www.lrec-conf.org/proceedings/lrec2018/pdf/131.pdf">
+             Open Subtitles Paraphrase Corpus for Six Languages
+            </a>
+            , Proceedings of the 11th edition of the Language Resources and Evaluation Conference (LREC 2018).
+           </p>
+           <p>
+            Sjöblom et al. (2018).
+            <a href="http://noisy-text.github.io/2018/pdf/W-NUT20189.pdf">
+             Paraphrase Detection on Noisy Subtitles in Six Languages
+            </a>
+            . In Proceedings of the 2018 EMNLP Workshop W-NUT: The 4th Workshop on Noisy User-generated Text.
+           </p>
+           <p>
+            Aulamo et al. (2019).
+            <a href="http://ceur-ws.org/Vol-2364/3_paper.pdf">
+             Annotation of subtitle paraphrases using a new web tool.
+            </a>
+            In Proceedings of the Digital Humanities in the Nordic Countries 4th Conference.
+           </p>
+           <p>
+            Sjöblom et al. (2020).
+            <a href="https://aclanthology.org/2020.lrec-1.224/">
+             Paraphrase Generation and Evaluation on Colloquial-Style Sentences
+            </a>
+            , Proceedings of the 12th Language Resources and Evaluation Conference (LREC).
+           </p>
+           <p>
+            Vahtola et al. (2021).
+            <a href="https://aclanthology.org/2021.wnut-1.32/">
+             Coping with Noisy Training Data Labels in Paraphrase Detection
+            </a>
+            . In Proceedings of the 7th Workshop on Noisy User-generated Text.
+           </p>
           </div>
          </div>
         </div>
@@ -919,7 +1385,13 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Sentence meaning
+           </p>
+           <p>
+            In a scenario of paraphrase detection, the model determines whether two given sentences carry approximately the same meaning.
+           </p>
+           <p>
+            In a scenario of paraphrase generation, the model generates a potential paraphrase of a given sentence.
            </p>
           </div>
           <div class="field">
@@ -932,7 +1404,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -956,12 +1428,68 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </code>
             ,
             <code>
-             ROUGE
+             Other: Other Metrics
             </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <p>
+            PINC
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            See publications on using Opusparcus
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The metrics mentioned above can be used to assess how well a generated paraphrase corresponds to a given reference sentence. The PINC score additionally assesses how different the surface forms are.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Sjöblom et al. (2020).
+            <a href="https://aclanthology.org/2020.lrec-1.224/">
+             Paraphrase Generation and Evaluation on Colloquial-Style Sentences
+            </a>
+            , Proceedings of the 12th Language Resources and Evaluation Conference (LREC).
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1538,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            Opusparcus was created in order to produce a
+            <em>
+             sentential
+            </em>
+            paraphrase corpus for multiple languages containing
+            <em>
+             colloquial
+            </em>
+            language (as opposed to news or religious text, for instance).
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1023,6 +1572,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Opusparcus provides labeled examples of pairs of sentences that have similar (or dissimilar) meanings.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1057,7 +1619,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1086,7 +1648,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Amazon Mechanical Turk
+             Other crowdworker platform
             </code>
            </p>
           </div>
@@ -1100,7 +1662,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            The language is representative of movies and TV shows. Domains covered include comedy, drama, relationships, suspense, etc.
            </p>
           </div>
          </div>
@@ -1115,7 +1677,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            The data in Opusparcus has been extracted from
+            <a href="http://opus.nlpl.eu/OpenSubtitles2016.php">
+             OpenSubtitles2016
+            </a>
+            , which is in turn based on data from http://www.opensubtitles.org/.
+           </p>
+           <p>
+            The texts consists of subtitles that have been produced using crowdsourcing.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Preprocessing
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
+             </div>
+            </div>
+           </h4>
+           <p>
+            Sentence and word tokenization was performed.
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1710,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            The sentence pairs in the training sets were ordered automatically based on the estimated likelihood that the sentences were paraphrases, most likely paraphrases on the top, and least likely paraphrases on the bottom.
+           </p>
+           <p>
+            The validation and test sets were checked and annotated manually, but the sentence pairs selected for annotation had to be different enough in terms of minimum edit distance (Levenshtein distance). This ensured that annotators would not spend their time annotating pairs of more or less identical sentences.
            </p>
           </div>
          </div>
@@ -1148,7 +1733,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            expert created
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            11&lt;n&lt;50
            </p>
           </div>
           <div class="field">
@@ -1174,11 +1772,50 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            none
+            validated by another rater
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Students and staff at the University of Helsinki (native or very proficient speakers of the target languages)
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            0
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            2
+           </p>
+          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1191,7 +1828,34 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            The development and test sets consist of sentence pairs that have been annotated manually; each set contains approximately 1000 sentence pairs that have been verified to be acceptable paraphrases by two independent annotators.
+           </p>
+           <p>
+            The
+            <code>
+             annot_score
+            </code>
+            field reflects the judgments made by the annotators. If the annnotators fully agreed on the category (4.0: dark green, 3.0: light green, 2.0: yellow, 1.0: red), the value of
+            <code>
+             annot_score
+            </code>
+            is 4.0, 3.0, 2.0 or 1.0.  If the annotators chose adjacent categories, the value in this field will be 3.5, 2.5 or 1.5.  For instance, a value of 2.5 means that one annotator gave a score of 3 ("mostly good"), indicating a possible paraphrase pair, whereas the other annotator scored this as a 2 ("mostly bad"), that is, unlikely to be a paraphrase pair.  If the annotators disagreed by more than one category, the sentence pair was discarded and won't show up in the datasets.
+           </p>
+           <p>
+            Annotators could also reject a sentence pair as being corrupted data.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            If the annotators disagreed by more than one category, the sentence pair was discarded and is not part of the final dataset.
            </p>
           </div>
          </div>
@@ -1235,22 +1899,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            yes/very likely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Any PII Identification?
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              Did the curators use any automatic/manual method to identify PII in the dataset?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            no identification
            </p>
           </div>
          </div>
@@ -1379,6 +2043,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            What social bias there may be in the subtitles in this dataset has not been studied.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1432,7 +2109,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            None
+            The data only contains subtitles of publicly available movies and TV shows.
            </p>
           </div>
          </div>
@@ -1455,7 +2132,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             non-commercial use only
             </code>
            </p>
           </div>
@@ -1470,7 +2147,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             non-commercial use only
             </code>
            </p>
           </div>
@@ -1487,6 +2164,45 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Some subtitles contain typos that are caused by inaccurate OCR.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The models might memorize individual subtitles of existing movies and TV shows, but there is no context across sentence boundaries in the data.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            A general issue with paraphrasing is that very small modifications in the surface form might produce valid paraphrases, which are however rather uninteresting. It is more valuable to produce paraphrases with clearly different surface realizations (e.g., measured using minimum edit distance).
+           </p>
+          </div>
          </div>
         </div>
        </div>

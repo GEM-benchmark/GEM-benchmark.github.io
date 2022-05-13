@@ -1,0 +1,6 @@
+---
+title: cs_restaurants
+type: Dialog Response Generation
+languages: Czech
+summary: The Czech Restaurants dataset is a task oriented dialog dataset in which a model needs to verbalize a response that a service agent could provide which is specified through a series of dialog acts. The dataset originated as a translation of an English dataset to test the generation capabilities of an NLG system on a highly morphologically rich language like Czech.
+---

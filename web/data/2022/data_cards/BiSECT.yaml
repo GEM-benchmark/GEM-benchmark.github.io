@@ -1,0 +1,6 @@
+---
+title: BiSECT
+type: Simplification
+languages: English, German, French, Spanish, Castilian
+summary: This dataset is composed of 1 million complex sentences with the task to split and simplify them while retaining the full meaning. Compared to other simplification corpora, BiSECT requires more significant edits. BiSECT offers splits in English, German, French, and Spanish.
+---

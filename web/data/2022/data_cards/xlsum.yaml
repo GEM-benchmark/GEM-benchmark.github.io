@@ -1,0 +1,6 @@
+---
+title: xlsum
+type: Summarization
+languages: Amharic, Arabic, Azerbaijani, Bengali, Bangla, Burmese, Chinese (family), English, French, Gujarati, Hausa, Hindi, Igbo, Indonesian, Japanese, Rundi, Korean, Kirghiz, Kyrgyz, Marathi, Nepali (individual language), Oromo, Pushto, Pashto, Persian, Ghanaian Pidgin English, Portuguese, Panjabi, Punjabi, Russian, Scottish Gaelic, Gaelic, Serbian, Romano-Serbian, Sinhala, Sinhalese, Somali, Spanish, Castilian, Swahili (individual language), Kiswahili, Tamil, Telugu, Thai, Tigrinya, Turkish, Ukrainian, Urdu, Uzbek, Vietnamese, Welsh, Yoruba
+summary: XLSum is a highly multilingual summarization dataset supporting 44 language. The data stems from BBC news articles.
+---

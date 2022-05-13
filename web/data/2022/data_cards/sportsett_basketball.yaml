@@ -1,0 +1,6 @@
+---
+title: sportsett_basketball
+type: Data-to-Text
+languages: English
+summary: The sportsett dataset is an English data-to-text dataset in the basketball domain. The inputs are statistics summarizing an NBA game and the outputs are high-quality descriptions of the game in natural language.
+---

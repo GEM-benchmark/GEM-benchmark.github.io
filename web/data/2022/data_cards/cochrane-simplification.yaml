@@ -1,0 +1,6 @@
+---
+title: cochrane-simplification
+type: Simplification
+languages: English
+summary: Cochrane is an English dataset for paragraph-level simplification of medical texts. Cochrane is a database of systematic reviews of clinical questions, many of which have summaries in plain English targeting readers without a university education. The dataset comprises about 4,500 of such pairs.
+---

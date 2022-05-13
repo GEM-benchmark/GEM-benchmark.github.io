@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       common_gen
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         CommonGen is an English text generation task to explicitly test machines for the ability of generative commonsense reasoning. Given a set of common concepts, the task is to generate a coherent sentence describing an everyday scenario using these concepts. CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. The dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total. Note that the CommonGen test set is private and requires submission to the external leaderboard.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/common_gen')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/common_gen">
           here
          </a>
          .
@@ -184,8 +183,8 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
+          <a href="https://inklab.usc.edu/CommonGen/">
+           link
           </a>
          </p>
         </div>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/2020.findings-emnlp.165">
+           Link
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Bill Yuchen Lin (USC), Wangchunshu Zhou (USC), Ming Shen (USC), Pei Zhou (USC), Chandra Bhagavatula (AllenAI), Yejin Choi (AllenAI + UW), Xiang Ren (USC)
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Bill Yuchen Lin
         </p>
        </div>
        <div class="field">
@@ -266,7 +265,28 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         mit: MIT License
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The speaker is required to produce a
+         <em>
+          coherent
+         </em>
+         sentence which mentions all of the source concepts, and which describes a
+         <em>
+          likely
+         </em>
+         situation that could be captured in a picture or video.
         </p>
        </div>
        <div class="field">
@@ -279,7 +299,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -365,8 +385,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
+            <a href="https://inklab.usc.edu/CommonGen/">
+             link
             </a>
            </p>
           </div>
@@ -380,8 +400,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/INK-USC/CommonGen">
+             Link
             </a>
            </p>
           </div>
@@ -395,8 +415,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/2020.findings-emnlp.165">
+             Link
             </a>
            </p>
           </div>
@@ -410,7 +430,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -425,7 +445,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Bill Yuchen Lin
            </p>
           </div>
           <div class="field">
@@ -438,7 +458,22 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            yuchen.lin@usc.edu
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Link
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a link to the leaderboard.
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://inklab.usc.edu/CommonGen/leaderboard.html">
+             Link
+            </a>
            </p>
           </div>
          </div>
@@ -452,15 +487,37 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{lin-etal-2020-commongen,
+    title = "{C}ommon{G}en: A Constrained Text Generation Challenge for Generative Commonsense Reasoning",
+    author = "Lin, Bill Yuchen  and
+      Zhou, Wangchunshu  and
+      Shen, Ming  and
+      Zhou, Pei  and
+      Bhagavatula, Chandra  and
+      Choi, Yejin  and
+      Ren, Xiang",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.findings-emnlp.165",
+    pages = "1823--1840",
 }
 </code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Briefly describe how the leaderboard evaluates models.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The model outputs are evaluated against the crowdsourced references, and ranked by SPICE score. The leaderboard also reports BLEU-4 and CIDEr scores.
+           </p>
           </div>
          </div>
         </div>
@@ -507,7 +564,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            mit: MIT License
            </p>
           </div>
           <div class="field">
@@ -527,6 +584,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Covered Dialects
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What dialects are covered? Are there multiple dialects per language?
+             </div>
+            </div>
+           </h4>
+           <p>
+            No information is provided on regional restrictions and we thus assume that the covered dialects are those spoken by raters on Mechanical Turk.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Whose Language?
             <div class="tooltip">
              <div class="tooltip-text">
@@ -535,7 +605,28 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            The concepts were extracted from multiple English image captioning datasets and the data was collected via Amazon Mechanical Turk. No information on regional restrictions is provided.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The speaker is required to produce a
+            <em>
+             coherent
+            </em>
+            sentence which mentions all of the source concepts, and which describes a
+            <em>
+             likely
+            </em>
+            situation that could be captured in a picture or video.
            </p>
           </div>
          </div>
@@ -550,7 +641,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test machines for the ability of generative commonsense reasoning.
            </p>
           </div>
          </div>
@@ -571,7 +662,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
+            </code>
+            ,
+            <code>
+             independent
             </code>
            </p>
           </div>
@@ -587,7 +682,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The dataset was curated by a joint team of researchers from the University of Southern California and Allen Institute for Artificial Intelligence.
            </p>
           </div>
          </div>
@@ -602,7 +697,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Bill Yuchen Lin (USC), Wangchunshu Zhou (USC), Ming Shen (USC), Pei Zhou (USC), Chandra Bhagavatula (AllenAI), Yejin Choi (AllenAI + UW), Xiang Ren (USC)
            </p>
           </div>
           <div class="field">
@@ -615,7 +710,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The research is based upon work supported in part by the Office of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), the DARPA MCS program, and NSF SMA 18-29268.
            </p>
           </div>
           <div class="field">
@@ -628,7 +723,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Yacine Jernite created the initial data card. It was later extended by Simon Mille. Sebastian Gehrmann migrated it to the GEMv2 format.
            </p>
           </div>
          </div>
@@ -647,24 +742,45 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <p>
+            A data instance has the following fields:
+           </p>
            <ul>
             <li>
              <code>
-              observation_1
+              concepts
              </code>
-             : A string describing an observation / event.
+             : a
+             <code>
+              list
+             </code>
+             of
+             <code>
+              string
+             </code>
+             values denoting the concept the system should write about. Has 3 to 5 items, constitutes the
+             <code>
+              input
+             </code>
+             of the task.
             </li>
             <li>
              <code>
-              observation_2
+              target
              </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
+             : a sentence
              <code>
-              label
+              string
              </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             mentioning all of the above mentioned
+             <code>
+              concepts
+             </code>
+             . Constitutes the desired
+             <code>
+              output
+             </code>
+             of the task.
             </li>
            </ul>
           </div>
@@ -679,12 +795,16 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
+           <pre><code>[
+  {
+    "concepts": ['ski', 'mountain', 'skier'],
+    "target": 'Skier skis down the mountain',
+  },
+  {
+    "concepts": ['ski', 'mountain', 'skier'],
+    "target": 'Three skiers are skiing on a snowy mountain.',
+  },
+]
 </code></pre>
           </div>
           <div class="field">
@@ -696,40 +816,100 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            Each example in the dataset consists of a set of 3 to 5 concepts denoted by a single noun, verb, or adjective (the input), and a sentence using these concepts (the output). The dataset provides several such sentences for each such concept.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               Train
+              </th>
+              <th>
+               Dev
+              </th>
+              <th>
+               Test
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               <strong>
+                Total concept-sets
+               </strong>
+              </td>
+              <td>
+               32,651
+              </td>
+              <td>
+               993
+              </td>
+              <td>
+               1,497
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <strong>
+                Total sentences
+               </strong>
+              </td>
+              <td>
+               67,389
+              </td>
+              <td>
+               4,018
+              </td>
+              <td>
+               6,042
+              </td>
+             </tr>
+             <tr>
+              <td>
+               <strong>
+                Average sentence length
+               </strong>
+              </td>
+              <td>
+               10.54
+              </td>
+              <td>
+               11.55
+              </td>
+              <td>
+               13.34
+              </td>
+             </tr>
+            </tbody>
+           </table>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            How were labels chosen?
+            Splitting Criteria
             <div class="tooltip">
              <div class="tooltip-text">
-              How were the labels chosen?
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
              </div>
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            The dev and test set were created by sampling sets of concepts of size 4 or 5 (and as many of size 3 for the dev set) present in the source captioning datasets and having crowd-workers write reference sentences using these concepts.
+           </p>
+           <p>
+            Conversely, the training set has more concept sets of size 3 than of size 4 and 5, and uses the original captions from the source datasets as references.
+           </p>
+           <p>
+            The authors also ensured that the training, dev and test set have different combinations of unique concepts to ensure compositionality (details in
+            <a href="https://arxiv.org/pdf/1911.03705v3.pdf">
+             Table 1
+            </a>
+            ).
            </p>
           </div>
          </div>
@@ -794,7 +974,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Commonsense reasoning
            </p>
           </div>
          </div>
@@ -809,7 +989,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            CommonGen is a medium sized corpus with a unique reasoning challenge and interesting evaluation possibilities.
            </p>
           </div>
          </div>
@@ -829,7 +1009,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -842,13 +1022,118 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how the new splits were created
+             </div>
+            </div>
+           </h4>
+           <ol>
+            <li>
+             Data Shift
+            </li>
+           </ol>
+           <p>
+            We created subsets of the training and development sets of ~500 randomly selected inputs each.
+           </p>
+           <ol>
+            <li>
+             Transformations
+            </li>
+           </ol>
+           <p>
+            We applied input scrambling on a subset of 500 randomly selected test instances; the order of the concepts was randomly reassigned.
+           </p>
+           <ol>
+            <li>
+             Subpopulations
+            </li>
+           </ol>
+           <p>
+            We created a subpopulation based on input length, taking into account the number of concepts the input test structures. By comparing inputs of different lengths, we can see to what extent systems are able to handle different input sizes
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               Concept number
+              </th>
+              <th>
+               Frequency English
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               4
+              </td>
+              <td>
+               747
+              </td>
+             </tr>
+             <tr>
+              <td>
+               5
+              </td>
+              <td>
+               750
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="field">
+           <h4>
+            Split Motivation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspects of the model's generation capacities were the splits created to test?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Generalization and Robustness
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            4 challenge sets for CommenGen were added to the GEM evaluation suite.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -871,10 +1156,30 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <ul>
             <li>
-             Paper: https://arxiv.org/abs/1908.05739
+             Two variants of
+             <a href="https://arxiv.org/abs/1910.13461">
+              BART
+             </a>
+             ,
+             <a href="https://arxiv.org/abs/2009.12677">
+              Knowledge Graph augemnted-BART
+             </a>
+             and
+             <a href="https://arxiv.org/abs/2012.00366">
+              Enhanced Knowledge Injection Model for Commonsense Generation
+             </a>
+             , hold the top two spots on the leaderboard, followed by a fine-tuned
+             <a href="https://arxiv.org/abs/1910.10683">
+              T5 model
+             </a>
+             .
             </li>
             <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
+             The following script shows how to download and load the data, fine-tune, and evaluate a model using the ROUGE, BLEU, and METEOR metrics:
+             <a href="https://github.com/GEM-benchmark/GEM-baseline-models/blob/main/examples/GEM-common_gen.ipynb">
+              GEM sample script
+             </a>
+             .
             </li>
            </ul>
           </div>
@@ -919,7 +1224,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Commonsense Reasoning
            </p>
           </div>
           <div class="field">
@@ -932,7 +1237,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -948,20 +1253,81 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             BLEU
+             Other: Other Metrics
             </code>
             ,
             <code>
-             BERT-Score
+             BLEU
             </code>
             ,
             <code>
              ROUGE
             </code>
+            ,
+            <code>
+             METEOR
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             SPICE: An evaluation metric for image captioning that is defined over scene graphs
+            </li>
+            <li>
+             CIDEr: An n-gram overlap metric based on cosine similarity between the TF-IDF weighted ngram counts
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The currently best performing model KFCNet (https://aclanthology.org/2021.findings-emnlp.249/) uses the same automatic evaluation but does not conduct any human evaluation.
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The main metrics are captioning metrics since the original concept lists were extracted from captioning datasets. A human subject study with five graduate students was conducted and they were asked to rank the "commonsense plausibility" of two models at a time.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The most relevant results can be seen on the leaderboard at https://inklab.usc.edu/CommonGen/leaderboard.html
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1376,23 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset creators selected sets of concepts that appeared in image and video captions (as identified by a POS tagger) to ensure that a likely real-world scenario including the set could be imagined and constructed. Section 3.1 of the
+            <a href="https://arxiv.org/pdf/1911.03705v3.pdf">
+             paper
+            </a>
+            describes a sampling scheme which encourages diversity of sets while selecting common concepts.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1018,11 +1401,77 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The speaker is required to produce a
+            <em>
+             coherent
+            </em>
+            sentence which mentions all of the source concepts, and which describes a
+            <em>
+             likely
+            </em>
+            situation that could be captured in a picture or video.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             <a href="https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00166">
+              Flickr30k
+             </a>
+            </li>
+            <li>
+             <a href="https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48">
+              MSCOCO
+             </a>
+            </li>
+            <li>
+             <a href="https://www.aclweb.org/anthology/P18-1238/">
+              Conceptual Captions
+             </a>
+            </li>
+            <li>
+             Video captioning datasets:
+            </li>
+            <li>
+             <a href="https://link.springer.com/article/10.1007/s11263-016-0987-1">
+              LSMDC
+             </a>
+            </li>
+            <li>
+             <a href="https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html">
+              ActivityNet
+             </a>
+            </li>
+            <li>
+             <a href="https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html">
+              VaTeX
+             </a>
+            </li>
+           </ul>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1057,7 +1506,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1100,7 +1549,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            Information was not provided.
            </p>
           </div>
          </div>
@@ -1115,7 +1564,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            The training data consists of concept sets and captions for the source datasets. The concept sets are the sets of labels of the images or videos, selected with a heuristic to maximize diversity while ensuring that they represent likely scenarios.
+           </p>
+           <p>
+            The dev and test set sentences were created by Amazon Mechanical Turk crowd workers. The workers were shown an example generation and a set of 4 or 5 concept names along with their part-of-speech and asked to write:
+1. One sentence mentioning all of the concepts
+2. A rationale explaining how the sentence connects the concept
+           </p>
+           <p>
+            A screenshot of the interface is provided in Figure 7 of the
+            <a href="https://arxiv.org/pdf/1911.03705v3.pdf">
+             Appendix
+            </a>
+            .
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1589,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            During the data collection, workers who provided rationales that were too short, failed to have good coverage of the input in their sentences, or workers whose output had a high perplexity under a GPT-2 model were disqualified from the pool and replaced with newcomers.
            </p>
           </div>
          </div>
@@ -1148,7 +1609,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1625,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1218,6 +1653,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for Using the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If not, what is the justification for reusing the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The data was sourced from Mechanical Turk which means that raters were aware that their annotations may be publicly released for research purposes.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1250,7 +1698,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            The concepts are restricted to verbs, adjectives, and common nouns, and no personal information is given in the captions.
            </p>
           </div>
          </div>
@@ -1379,6 +1827,30 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is created using data from image captioning systems and might inherit some of the social biases represented therein (see e.g.
+            <a href="https://arxiv.org/abs/2006.08315">
+             Tang et al. 2020
+            </a>
+            ).
+           </p>
+           <p>
+            Another related concern is the exposure bias introduced by the initial selection of pictures and video, which are likely to over-represent situations that are common in the US at the expense of other parts of the world (Flickr, for example, is a US-based company founded in Canada). For more discussion of the potential impacts of exposure bias, see e.g.
+            <a href="https://www.aclweb.org/anthology/P16-2096.pdf">
+             The Social Impact of Natural Language Processing
+            </a>
+            .
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1432,7 +1904,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            None
+            The concepts are restricted to verbs, adjectives, and common nouns, and no personal information is given in the captions.
            </p>
           </div>
          </div>
@@ -1455,7 +1927,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1470,7 +1942,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1487,6 +1959,55 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is in English, a language with an abundance of existing resources.
+           </p>
+           <p>
+            The use of GPT-2 to validate development ant test sentences
+            <a href="https://www.aclweb.org/anthology/D19-1339.pdf">
+             might be cause for similar concern
+            </a>
+            , but we do note that the authors only use the model to discount very high perplexity sequences which is less likely to surface those biases.
+           </p>
+           <p>
+            The language in the development and test set is crowdsourced, which means that it was written by workers whose main goal was speed. This is likely to impact the quality and variety of the targets. The population of crowdsource workers is also not identically distributed as the the base population of the locations the workers come from, which may lead to different representation of situations or underlying expectations of what these situations are.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Due to the overrepresentation of US-situations, the system may not work for users across the world. Moreover, only limited information on the dataset quality are provided and the system may fail as a result of unknown issues.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Any system needs to be evaluated on a broader set of unseen concepts then provided in the dataset. Since the references for the test set are private, it is not known how well findings generalize beyond the collection methodology.
+           </p>
+          </div>
          </div>
         </div>
        </div>

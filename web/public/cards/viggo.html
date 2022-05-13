@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       viggo
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         ViGGO is an English data-to-text generation dataset in the video game domain, with target responses being more conversational than information-seeking, yet constrained to the information presented in a meaning representation. The dataset is relatively small with about 5,000 datasets but very clean, and can thus serve for evaluating transfer learning, low-resource, or few-shot capabilities of neural models.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/viggo')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/viggo">
           here
          </a>
          .
@@ -184,8 +183,8 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
+          <a href="https://nlds.soe.ucsc.edu/viggo">
+           Wesbite
           </a>
          </p>
         </div>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/W19-8623/">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Juraj Juraska, Kevin K. Bowden, Marilyn Walker
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Juraj Juraska
         </p>
        </div>
        <div class="field">
@@ -266,7 +265,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
         </p>
        </div>
        <div class="field">
@@ -279,7 +278,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -365,23 +364,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
-            </a>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Download
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What is the link to where the original dataset is hosted?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://nlds.soe.ucsc.edu/viggo">
+             Wesbite
             </a>
            </p>
           </div>
@@ -395,8 +379,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/W19-8623/">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -425,7 +409,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Juraj Juraska
            </p>
           </div>
           <div class="field">
@@ -438,7 +422,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            jjuraska@ucsc.edu
            </p>
           </div>
          </div>
@@ -452,13 +436,19 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{juraska-etal-2019-viggo,
+    title = "{V}i{GGO}: A Video Game Corpus for Data-To-Text Generation in Open-Domain Conversation",
+    author = "Juraska, Juraj  and
+      Bowden, Kevin  and
+      Walker, Marilyn",
+    booktitle = "Proceedings of the 12th International Conference on Natural Language Generation",
+    month = oct # "{--}" # nov,
+    year = "2019",
+    address = "Tokyo, Japan",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/W19-8623",
+    doi = "10.18653/v1/W19-8623",
+    pages = "164--172",
 }
 </code></pre>
           </div>
@@ -507,7 +497,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,24 +510,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Data-to-Text
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Whose Language?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Whose language is in the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -550,7 +527,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            ViGGO was designed for the task of data-to-text generation in chatbots (as opposed to task-oriented dialogue systems), with target responses being more conversational than information-seeking, yet constrained to the information presented in a meaning representation. The dataset, being relatively small and clean, can also serve for demonstrating transfer learning capabilities of neural models.
            </p>
           </div>
          </div>
@@ -571,7 +548,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
             </code>
            </p>
           </div>
@@ -587,7 +564,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            University of California, Santa Cruz
            </p>
           </div>
          </div>
@@ -602,20 +579,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Funding
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Who funded the data creation?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Allen Institute for AI
+            Juraj Juraska, Kevin K. Bowden, Marilyn Walker
            </p>
           </div>
           <div class="field">
@@ -628,7 +592,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Juraj Juraska
            </p>
           </div>
          </div>
@@ -647,26 +611,129 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <p>
+            Each example in the dataset has the following two fields:
+           </p>
            <ul>
             <li>
              <code>
-              observation_1
+              mr
              </code>
-             : A string describing an observation / event.
+             : A meaning representation (MR) that, in a structured format, provides the information to convey, as well as the desired dialogue act (DA) type.
             </li>
             <li>
              <code>
-              observation_2
+              ref
              </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             : A reference output, i.e., a corresponding utterance realizing all the information in the MR.
             </li>
            </ul>
+           <p>
+            Each MR is a flattened dictionary of attribute-and-value pairs, "wrapped" in the dialogue act type indication. This format was chosen primarily for its compactness, but also to allow for easy concatenation of multiple DAs (each with potentially different attributes) in a single MR.
+           </p>
+           <p>
+            Following is the list of all possible attributes (which are also refered to as "slots") in ViGGO along with their types/possible values:
+           </p>
+           <ul>
+            <li>
+             <code>
+              name
+             </code>
+             : The name of a video game (e.g., Rise of the Tomb Raider).
+            </li>
+            <li>
+             <code>
+              release_year
+             </code>
+             : The year a video game was released in (e.g., 2015).
+            </li>
+            <li>
+             <code>
+              exp_release_date
+             </code>
+             : For a not-yet-released game, the date when it is expected to be released (e.g., February 22, 2019).
+             <em>
+              Note: This slot cannot appear together with
+              <code>
+               release_year
+              </code>
+              in the same dialogue act.
+             </em>
+            </li>
+            <li>
+             <code>
+              developer
+             </code>
+             : The name of the studio/person that created the game (e.g., Crystal Dynamics).
+            </li>
+            <li>
+             <code>
+              genres
+             </code>
+             : A list of one or more genre labels from a set of possible values (e.g., action-adventure, shooter).
+            </li>
+            <li>
+             <code>
+              player_perspective
+             </code>
+             : A list of one or more perspectives from which the game is/can be played (possible values: first person, third person, side view, bird view).
+            </li>
+            <li>
+             <code>
+              platforms
+             </code>
+             : A list of one or more gaming platforms the game was officially released for (possible values: PC, PlayStation, Xbox, Nintendo, Nintendo Switch).
+            </li>
+            <li>
+             <code>
+              esrb
+             </code>
+             : A game's content rating as determined by the ESRB (possible values: E (for Everyone), E 10+ (for Everyone 10 and Older), T (for Teen), M (for Mature)).
+            </li>
+            <li>
+             <code>
+              rating
+             </code>
+             : Depending on the dialogue act this slot is used with, it is a categorical representation of either the game's average rating or the game's liking (possible values: excellent, good, average, poor).
+            </li>
+            <li>
+             <code>
+              has_multiplayer
+             </code>
+             : Indicates whether a game supports multiplayer or can only be played in single-player mode (possible values: yes, no).
+            </li>
+            <li>
+             <code>
+              available_on_steam
+             </code>
+             : Indicates whether a game can be purchased through the Steam digital distribution service (possible values: yes, no).
+            </li>
+            <li>
+             <code>
+              has_linux_release
+             </code>
+             : Indicates whether a game is supported on Linux operating systems (possible values: yes, no).
+            </li>
+            <li>
+             <code>
+              has_mac_release
+             </code>
+             : Indicates whether a game is supported on macOS (possible values: yes, no).
+            </li>
+            <li>
+             <code>
+              specifier
+             </code>
+             : A game specifier used by the
+             <code>
+              request
+             </code>
+             DA, typically an adjective (e.g., addictive, easiest, overrated, visually impressive).
+            </li>
+           </ul>
+           <p>
+            Each MR in the dataset has 3 distinct reference utterances, which are represented as 3 separate examples with the same MR.
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -680,10 +747,8 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
+    "mr": "give_opinion(name[SpellForce 3], rating[poor], genres[real-time strategy, role-playing], player_perspective[bird view])",
+    "ref": "I think that SpellForce 3 is one of the worst games I've ever played. Trying to combine the real-time strategy and role-playing genres just doesn't work, and the bird view perspective makes it near impossible to play."
 }
 </code></pre>
           </div>
@@ -696,41 +761,103 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <p>
+            ViGGO is split into 3 partitions, with no MRs in common between the training set and either of the validation and the test set (and that
+            <em>
+             after
+            </em>
+            delexicalizing the
+            <code>
+             name
+            </code>
+            and
+            <code>
+             developer
+            </code>
+            slots). The ratio of examples in the partitions is approximately 7.5 : 1 : 1.5, with their exact sizes listed below:
+           </p>
            <ul>
             <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
+             <strong>
+              Train:
+             </strong>
+             5,103 (1,675 unique MRs)
             </li>
             <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
+             <strong>
+              Validation:
+             </strong>
+             714 (238 unique MRs)
             </li>
             <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
+             <strong>
+              Test:
+             </strong>
+             1,083 (359 unique MRs)
+            </li>
+            <li>
+             <strong>
+              TOTAL:
+             </strong>
+             6,900 (2,253 unique MRs)
             </li>
            </ul>
+           <p>
+            <em>
+             Note: The reason why the number of unique MRs is not exactly one third of all examples is that for each
+             <code>
+              request_attribute
+             </code>
+             DA (which only has one slot, and that without a value) 12 reference utterances were collected instead of 3.
+            </em>
+           </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            How were labels chosen?
+            Reason for Structure
             <div class="tooltip">
              <div class="tooltip-text">
-              How were the labels chosen?
+              How was the dataset structure determined?
              </div>
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            The dataset structure mostly follows the format of the popular E2E dataset, however, with added dialogue act type indications, new list-type attributes introduced, and unified naming convention for multi-word attribute names.
            </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does an outlier of the dataset in terms of length/perplexity/embedding look like?
+             </div>
+            </div>
+           </h4>
+           <p>
+            A similar MR length and slot distribution was preserved across the partitions. The distribution of DA types, on the other hand, is skewed slightly toward fewer
+            <code>
+             inform
+            </code>
+            DA instances (the most prevalent DA type) and a higher proportion of the less prevalent DAs in the validation and the test set.
+           </p>
+           <h4>
+           </h4>
+           <pre><code>{
+    "mr": "request_attribute(player_perspective[])",
+    "ref": "Is there a certain player perspective that you prefer over others in games you play?"
+},
+{
+    "mr": "inform(name[FIFA 12], esrb[E (for Everyone)], genres[simulation, sport], player_perspective[bird view, side view], platforms[PlayStation, Xbox, Nintendo, PC], available_on_steam[no])",
+    "ref": "Fifa 12 is a decent sports simulator. It's pretty cool how the game swaps from the bird's eye perspective down to a side view while you're playing. You can get the game for PlayStation, Xbox, Nintendo consoles, and PC, but unfortunately it's not on Steam. Of course, as a sports game there's not much objectionable content so it's rated E."
+},
+{
+    "mr": "inform(name[Super Bomberman], release_year[1993], genres[action, strategy], has_multiplayer[no], platforms[Nintendo, PC], available_on_steam[no], has_linux_release[no], has_mac_release[no])",
+    "ref": "Super Bomberman is one of my favorite Nintendo games, also available on PC, though not through Steam. It came out all the way back in 1993, and you can't get it for any modern consoles, unfortunately, so no online multiplayer, or of course Linux or Mac releases either. That said, it's still one of the most addicting action-strategy games out there."
+}
+</code></pre>
           </div>
          </div>
         </div>
@@ -779,22 +906,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Ability that the Dataset measures
+            Unique Language Coverage
             <div class="tooltip">
              <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
+              Does this dataset cover other languages than other datasets for the same task?
              </div>
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            no
            </p>
           </div>
          </div>
@@ -809,7 +936,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            ViGGO is a fairly small dataset but includes a greater variety of utterance types than most other datasets for NLG from structured meaning representations. This makes it more interesting from the perspective of model evaluation, since models have to learn to differentiate between various dialogue act types that share the same slots.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            ViGGO's language is more casual and conversational -- as opposed to information-seeking -- which differentiates it from the majority of popular datasets for the same type of data-to-text task. Moreover, the video game domain is a rather uncommon one in the NLG community, despite being very well-suited for data-to-text generation, considering it offers entities with many attributes to talk about, which can be described in a structured format.
            </p>
           </div>
          </div>
@@ -871,10 +1011,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <ul>
             <li>
-             Paper: https://arxiv.org/abs/1908.05739
+             <a href="http://www.macs.hw.ac.uk/InteractionLab/E2E/">
+              E2E NLG Challenge
+             </a>
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Technical Terms
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Technical terms used in this card and the dataset and their definitions
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             MR = meaning representation
             </li>
             <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
+             DA = dialogue act
             </li>
            </ul>
           </div>
@@ -911,19 +1068,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
-            Measured Model Abilities
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Whether models can reason abductively about a given pair of observations.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Previous results available?
             <div class="tooltip">
              <div class="tooltip-text">
@@ -932,7 +1076,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -952,16 +1096,73 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </code>
             ,
             <code>
-             BERT-Score
+             METEOR
             </code>
             ,
             <code>
              ROUGE
             </code>
+            ,
+            <code>
+             BERT-Score
+            </code>
+            ,
+            <code>
+             BLEURT
+            </code>
+            ,
+            <code>
+             Other: Other Metrics
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <p>
+            SER (slot error rate): Indicates the proportion of missing/incorrect/duplicate/hallucinated slot mentions in the utterances across a test set. The closer to zero a model scores in this metric, the more semantically accurate its outputs are. This metric is typically calculated either manually on a small sample of generated outputs, or heuristically using domain-specific regex rules and gazetteers.
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             <a href="https://aclanthology.org/W19-8623/">
+              Juraska et al., 2019. ViGGO: A Video Game Corpus for Data-To-Text Generation in Open-Domain Conversation.
+             </a>
+            </li>
+            <li>
+             <a href="https://aclanthology.org/2020.coling-main.218/">
+              Harkous et al., 2020. Have Your Text and Use It Too! End-to-End Neural Data-to-Text Generation with Semantic Fidelity.
+             </a>
+            </li>
+            <li>
+             <a href="https://aclanthology.org/2020.emnlp-main.419/">
+              Kedzie and McKeown, 2020. Controllable Meaning Representation to Text Generation: Linearization and Data Augmentation Strategies.
+             </a>
+            </li>
+            <li>
+             <a href="https://aclanthology.org/2021.inlg-1.45/">
+              Juraska and Walker, 2021. Attention Is Indeed All You Need: Semantically Attention-Guided Decoding for Data-to-Text NLG.
+             </a>
+            </li>
+           </ul>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1211,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The primary motivation behind ViGGO was to create a data-to-text corpus in a new but conversational domain, and intended for use in open-domain chatbots rather than task-oriented dialogue systems. To this end, the dataset contains utterances of 9 generalizable and conversational dialogue act types, revolving around various aspects of video games. The idea is that similar, relatively small datasets could fairly easily be collected for other conversational domains -- especially other entertainment domains (such as music or books), but perhaps also topics like animals or food -- to support an open-domain conversational agent with controllable neural NLG.
+           </p>
+           <p>
+            Another desired quality of the ViGGO dataset was cleanliness (no typos and grammatical errors) and semantic accuracy, which has often not been the case with other crowdsourced data-to-text corpora. In general, for the data-to-text generation task, there is arguably no need to put the burden on the generation model to figure out the noise, since the noise would not be expected to be there in a real-world system whose dialogue manager that creates the input for the NLG module is usually configurable and tightly controlled.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1023,6 +1240,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Produce a response from a structured meaning representation in the context of a conversation about video games. It can be a brief opinion or a description of a game, as well as a request for attribute (e.g., genre, player perspective, or platform) preference/confirmation or an inquiry about liking a particular type of games.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1057,7 +1287,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1070,7 +1300,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            manually
            </p>
           </div>
          </div>
@@ -1100,7 +1330,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            The dataset focuses on video games and their various aspects, and hence the language of the utterances may contain video game-specific jargon.
            </p>
           </div>
          </div>
@@ -1115,7 +1345,30 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            The paid crowdworkers who produced the reference utterances were from English-speaking countries, and they had at least 1,000 HITs approved and a HIT approval rate of 98% or more. Furthermore, in the instructions, crowdworkers were discouraged from taking on the task unless they considered themselves a gamer.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Preprocessing
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
+             </div>
+            </div>
+           </h4>
+           <p>
+            First, regular expressions were used to enforce several standardization policies regarding special characters, punctuation, and the correction of undesired abbreviations/misspellings of standard domain-specific terms (e.g., terms like "Play station" or "PS4" would be changed to the uniform "PlayStation"). At the same time, hyphens were removed or enforced uniformly in certain terms, for example, "single-player". Although phrases such as "first person" should correctly have a hyphen when used as adjective, the crowdworkers used this rule very inconsistently. In order to avoid model outputs being penalized during the evaluation by the arbitrary choice of a hyphen presence or absence in the reference utterances, the hyphen was removed in all such phrases regardless of the noun vs. adjective use.
+           </p>
+           <p>
+            Second, an extensive set of heuristics was developed to identify slot-related errors. This process revealed the vast majority of missing or incorrect slot mentions, which were subsequently fixed according to the corresponding MRs. This eventually led to the development of a robust, cross-domain, heuristic slot aligner that can be used for automatic slot error rate evaluation. For details, see the appendix in
+            <a href="https://aclanthology.org/2021.inlg-1.45/">
+             Juraska and Walker, 2021
+            </a>
+            .
+           </p>
+           <p>
+            Crowdworkers would sometimes also inject a piece of information which was not present in the MR, some of which is not even represented by any of the slots, e.g., plot or main characters. This unsolicited information was removed from the utterances so as to avoid confusing the neural model. Finally, any remaining typos and grammatical errors were resolved.
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1381,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            Compliance with the indicated dialogue act type, semantic accuracy (i.e., all information in the corresponding MR mentioned and that correctly), and minimal extraneous information (e.g., personal experience/opinion). Whenever it was within a reasonable amount of effort, the utterances were manually fixed instead of being discarded/crowdsourced anew.
            </p>
           </div>
          </div>
@@ -1148,7 +1401,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1417,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1250,7 +1477,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            Crowdworkers were instructed to only express the information in the provided meaning representation, which never prompted them to mention anything about themselves. Occasionally, they would still include a bit of personal experience (e.g., "I used to like the game as a kid.") or opinion, but these would be too general to be considered PII.
            </p>
           </div>
          </div>
@@ -1422,19 +1649,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Potential PII Risk
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            None
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="licenses">
@@ -1444,36 +1658,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Copyright Restrictions on the Dataset
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Based on your answers in the Intended Use part of the Data Overview Section, which of the following best describe the copyright and licensing status of the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             public domain
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Copyright Restrictions on the Language Data
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Based on your answers in the Language part of the Data Curation Section, which of the following best describe the copyright and licensing status of the underlying language data?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             public domain
-            </code>
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
@@ -1487,6 +1671,23 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is limited to a single domain: video games. One caveat of using a language generator trained on this dataset in a dialogue system as-is is that multiple subsequent turns discussing the same video game would be repeating its full name. ViGGO was designed for generation without context, and therefore it is up to the dialogue manager to ensure that pronouns are substituted for the names whenever it would sound more natural in a dialogue. Alternately, the dataset can easily be augmented with automatically constructed samples which omit the
+            <code>
+             name
+            </code>
+            slot in the MR and replace the name with a pronoun in the reference utterance.
+           </p>
+          </div>
          </div>
         </div>
        </div>

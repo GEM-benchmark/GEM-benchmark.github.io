@@ -1,0 +1,6 @@
+---
+title: wiki_cat_sum
+type: Summarization
+languages: English
+summary: WikiCatSum is an English summarization dataset in three domains - animals, companies, and film. It provides multiple paragraphs of text paired with a summary of the paragraphs.
+---

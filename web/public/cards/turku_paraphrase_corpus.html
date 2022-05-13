@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       turku_paraphrase_corpus
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         This is a Finnish paraphrase corpus which consists of pairs of text passages, where a typical passage is about a sentence long. It can be used to either identify or generate paraphrases.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/turku_paraphrase_corpus')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/turku_paraphrase_corpus">
           here
          </a>
          .
@@ -184,7 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
+          <a href="https://turkunlp.org/paraphrase.html">
            Website
           </a>
          </p>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/2021.nodalida-main.29/">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Jenna Kanerva, Filip Ginter, Li-Hsin Chang, Iiro Rastas, Valtteri Skantsi, Jemina Kilpeläinen, Hanna-Mari Kupari, Aurora Piirto, Jenna Saarni, Maija Sevón, Otto Tarkka (TurkuNLP / University of Turku)
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Jenna Kanerva, Filip Ginter
         </p>
        </div>
        <div class="field">
@@ -252,7 +251,7 @@ data = datasets.load_dataset('GEM/ART')
         </h4>
         <p>
          <code>
-          English
+          Finnish
          </code>
         </p>
        </div>
@@ -266,7 +265,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The corpus provides naturally occurring Finnish paraphrases striving for low lexical overlap, thus supporting many different downstream applications requiring language understanding.
         </p>
        </div>
        <div class="field">
@@ -279,7 +291,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         expert created
         </p>
        </div>
        <div class="field">
@@ -292,7 +304,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         likely
         </p>
        </div>
       </div>
@@ -365,7 +377,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
+            <a href="https://turkunlp.org/paraphrase.html">
              Website
             </a>
            </p>
@@ -380,8 +392,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/TurkuNLP/Turku-paraphrase-corpus">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +407,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/2021.nodalida-main.29/">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -425,7 +437,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Jenna Kanerva, Filip Ginter
            </p>
           </div>
           <div class="field">
@@ -438,7 +450,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            jmnybl@utu.fi, figint@utu.fi
            </p>
           </div>
          </div>
@@ -452,13 +464,14 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{kanerva-etal-2021-finnish,
+    title = {Finnish Paraphrase Corpus},
+    author = {Kanerva, Jenna and Ginter, Filip and Chang, Li-Hsin and Rastas, Iiro and Skantsi, Valtteri and Kilpel{\"a}inen, Jemina and Kupari, Hanna-Mari and Saarni, Jenna and Sev{\'o}n, Maija and Tarkka, Otto},
+    booktitle = {Proceedings of the 23rd Nordic Conference on Computational Linguistics (NoDaLiDa'21)},
+    year = {2021},
+    publisher = {Link{\"o}ping University Electronic Press, Sweden},
+    url = {https://aclanthology.org/2021.nodalida-main.29},
+    pages = {288--298}
 }
 </code></pre>
           </div>
@@ -493,7 +506,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             English
+             Finnish
             </code>
            </p>
           </div>
@@ -507,7 +520,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,22 +533,35 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Paraphrasing
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Whose Language?
+            Covered Dialects
             <div class="tooltip">
              <div class="tooltip-text">
-              Whose language is in the dataset?
+              What dialects are covered? Are there multiple dialects per language?
              </div>
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            written standard language, spoken language
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The corpus provides naturally occurring Finnish paraphrases striving for low lexical overlap, thus supporting many different downstream applications requiring language understanding.
            </p>
           </div>
          </div>
@@ -550,7 +576,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            Paraphrase classification, paraphrase generation
            </p>
           </div>
          </div>
@@ -571,7 +597,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
             </code>
            </p>
           </div>
@@ -587,7 +613,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            University of Turku
            </p>
           </div>
          </div>
@@ -602,7 +628,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Jenna Kanerva, Filip Ginter, Li-Hsin Chang, Iiro Rastas, Valtteri Skantsi, Jemina Kilpeläinen, Hanna-Mari Kupari, Aurora Piirto, Jenna Saarni, Maija Sevón, Otto Tarkka (TurkuNLP / University of Turku)
            </p>
           </div>
           <div class="field">
@@ -615,7 +641,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The Turku paraphrase corpus project was funded by the Academy of Finland, as well as the European Language Grid project through its open call for pilot projects. The European Language Grid project has received funding from the European Union’s Horizon 2020 Research and Innovation programme under Grant Agreement no. 825627 (ELG).
            </p>
           </div>
           <div class="field">
@@ -628,7 +654,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Jenna Kanerva, Filip Ginter (TurkuNLP / University of Turku)
            </p>
           </div>
          </div>
@@ -647,26 +673,154 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
+           <p>
+            The dataset consist of pairs of text passages, where a typical passage is about a sentence long, however, a passage may also be longer or shorter than a sentence. Thus, each example include two text passages (string), a manually annotated label to indicate the paraphrase type (string), and additional metadata.
+           </p>
+           <p>
+            The dataset include three different
+            <code>
+             modes
+            </code>
+            , plain, classification, and generation. The
+            <code>
+             plain
+            </code>
+            mode loads the original data without any additional preprocessing or transformations, while the
+            <code>
+             classification
+            </code>
+            mode directly builds the data in a form suitable for training a paraphrase classifier, where each example is doubled in the data with different directions (text1, text2, label) --&gt; (text2, text1, label) taking care of the label flipping as well if needed (paraphrases with directionality flag &lt; or &gt;). In the
+            <code>
+             generation
+            </code>
+            mode, the examples are preprocessed to be directly suitable for paraphrase generation task. In here, paraphrases not suitable for generation are discarded (negative, and highly context-dependent paraphrases), and directional paraphrases are provided so that the generation goes from more detailed passage to the more general one in order to prevent model hallucination (i.e. model learning to introduce new information). The rest of the paraphrases are provided in both directions (text1, text2, label) --&gt; (text2, text1, label).
+           </p>
+           <p>
+            Each pair in
+            <code>
+             plain
+            </code>
+            and
+            <code>
+             classification
+            </code>
+            mode will include fields:
+           </p>
+           <p>
+            <code>
+             gem_id
+            </code>
+            : Identifier of the paraphrase pair (string)
+            <code>
+             goeswith
+            </code>
+            : Identifier of the document from which the paraphrase was extracted, can be
+            <code>
+             not available
+            </code>
+            in case the source of the paraphrase is not from document-structured data (string)
+            <code>
+             fold
+            </code>
+            : 0-99, data split into 100 parts respecting document boundaries, you can use this e.g. to implement crossvalidation safely as all paraphrases from one document are in one fold (int)
+            <code>
+             text1
+            </code>
+            : First paraphrase passage (string)
+            <code>
+             text2
+            </code>
+            : Second paraphrase passage (string)
+            <code>
+             label
+            </code>
+            : Manually annotated labels (string)
+            <code>
+             binary_label
+            </code>
+            : Label turned into binary with values
+            <code>
+             positive
+            </code>
+            (paraphrase) and
+            <code>
+             negative
+            </code>
+            (not-paraphrase) (string)
+            <code>
+             is_rewrite
+            </code>
+            : Indicator whether the example is human produced rewrite or naturally occurring paraphrase (bool)
+           </p>
+           <p>
+            Each pair in
+            <code>
+             generation
+            </code>
+            mode will include the same fields expect
+            <code>
+             text1
+            </code>
+            and
+            <code>
+             text2
+            </code>
+            are renamed to
+            <code>
+             input
+            </code>
+            and
+            <code>
+             output
+            </code>
+            in order to indicate the generation direction. Thus the fields are:
+           </p>
+           <p>
+            <code>
+             gem_id
+            </code>
+            : Identifier of the paraphrase pair (string)
+            <code>
+             goeswith
+            </code>
+            : Identifier of the document from which the paraphrase was extracted, can be
+            <code>
+             not available
+            </code>
+            in case the source of the paraphrase is not from document-structured data (string)
+            <code>
+             fold
+            </code>
+            : 0-99, data split into 100 parts respecting document boundaries, you can use this e.g. to implement crossvalidation safely as all paraphrases from one document are in one fold (int)
+            <code>
+             input
+            </code>
+            : The input paraphrase passage for generation (string)
+            <code>
+             output
+            </code>
+            : The output paraphrase passage for generation (string)
+            <code>
+             label
+            </code>
+            : Manually annotated labels (string)
+            <code>
+             binary_label
+            </code>
+            : Label turned into binary with values
+            <code>
+             positive
+            </code>
+            (paraphrase) and
+            <code>
+             negative
+            </code>
+            (not-paraphrase) (string)
+            <code>
+             is_rewrite
+            </code>
+            : Indicator whether the example is human produced rewrite or naturally occurring paraphrase (bool)
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -680,10 +834,14 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
+  'gem_id':  'gem-turku_paraphrase_corpus-train-15',
+  'goeswith': 'episode-02243',
+  'fold': 0,
+  'text1': 'Mitä merkitystä sillä on?',
+  'text2': 'Mitä väliä sillä edes on?',
+  'label': '4',
+  'binary_label': 'positive',
+  'is_rewrite': False
 }
 </code></pre>
           </div>
@@ -696,40 +854,23 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            The corpus include 3 splits: train, validation, and test.
+           </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            How were labels chosen?
+            Splitting Criteria
             <div class="tooltip">
              <div class="tooltip-text">
-              How were the labels chosen?
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
              </div>
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            The data is split randomly into the three section with a restriction of all paraphrases from the same document (movie, TV episode, news article, student translation, or exam question) being in the same section. All splits are manually annotated.
            </p>
           </div>
          </div>
@@ -779,11 +920,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +948,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            natural language understanding, language variation
            </p>
           </div>
          </div>
@@ -809,7 +963,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            This dataset provides a large amount of high quality (manually collected and verified) paraphrases for Finnish.
            </p>
           </div>
          </div>
@@ -829,7 +983,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -847,8 +1001,36 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             data points modified
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            Data structure is slightly simplified, and the release provides ready made transformations into two tasks (paraphrase classification and generation), where some data instances are doubled with different direction, and some are discarded as not being suitable for generation (e.g. negatives).
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -860,24 +1042,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
-          </div>
          </div>
         </div>
        </div>
@@ -919,7 +1083,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            natural language understanding, language variation
            </p>
           </div>
           <div class="field">
@@ -932,32 +1096,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Metrics
+            Other Evaluation Approaches
             <div class="tooltip">
              <div class="tooltip-text">
-              What metrics are typically used for this task?
+              What evaluation approaches have others used?
              </div>
             </div>
            </h4>
            <p>
-            <code>
-             BLEU
-            </code>
-            ,
-            <code>
-             BERT-Score
-            </code>
-            ,
-            <code>
-             ROUGE
-            </code>
+            F-score in paraphrase classification
            </p>
           </div>
          </div>
@@ -1010,6 +1164,40 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is fully manually annotated. The dataset strives for interesting paraphrases with low lexical overlap, thus the annotation is two fold. First the paraphrases are manually extracted from two related documents, where the annotators are instructed to extract only interesting paraphrases. In the second phrase, all extracted paraphrases are manually labeled given the annotation scheme.
+           </p>
+           <p>
+            The annotation scheme is:
+4 : paraphrase in all reasonably possible contexts
+3 : paraphrase in the given document contexts, but not in general
+2 : related but not paraphrase
+During annotation also labels 1 (unrelated) and x (skip, e.g. wrong language) were used, however, the insignificant amount of examples annotated with these labels were discarded from the released corpus.
+           </p>
+           <p>
+            The following flags are annotated to label 4 paraphrases:
+&lt; : txt1 is more general than txt2; txt2 is more specific than txt1 (directional paraphrase where txt2 can be replaced with txt1 in all contexts but not to the other direction)
+           </p>
+           <blockquote>
+            <p>
+             : txt2 is more general than txt1; txt1 is more specific than txt2 (directional paraphrase where txt1 can be replaced with txt2 in all contexts but not to the other direction)
+i : minor traceable difference (differing in terms of grammatical number or case, 'this' vs 'that', etc.)
+s : style or strength difference (e.g. equivalent meaning, but one of the statements substantially more colloquial than the other)
+            </p>
+           </blockquote>
+           <p>
+            For paraphrases where the annotated label was something else than label 4 without any flags, the annotators had an option to rewrite the text passages so that the rewritten paraphrase pair formed label 4 (universal) paraphrase. This was used for cases where simple edit would turn e.g. contextual or directional paraphrase into universal one. For the rewritten examples, both the original and the rewritten pairs are available with corresponding labels annotated.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1018,11 +1206,41 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Representing text passages with identical meaning but different surface realization.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <p>
+            movie and TV series subtitles (82%)
+news articles (9%)
+discussion forum messages (8%)
+university translation exercises  (1%)
+university course essays and exams (&lt;1%)
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1261,34 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Found
+            </code>
+            ,
+            <code>
+             Other
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Where was it found?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If found, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Multiple websites
+            </code>
+            ,
+            <code>
+             Offline media collection
+            </code>
+            ,
+            <code>
+             Other
             </code>
            </p>
           </div>
@@ -1057,7 +1302,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1070,39 +1315,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Topics Covered
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Does the language in the dataset focus on specific topics? How would you describe them?
-             </div>
-            </div>
-           </h4>
-           <p>
-            No
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1115,20 +1332,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Filter Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What were the selection criteria?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            The movie and TV series subtitles are extracted from OPUS OpenSubtitles2018 collection, which is based on data from http://www.opensubtitles.org/.
+The news articles are collected from two Finnish news sites, YLE and HS, during years 2017-2020.
+Discussion forum messages are obtained from the Finnish Suomi24 discussion forum released for academic use (http://urn.fi/urn:nbn:fi:lb-2020021801).
+University translation exercises, essays and exams are collected during the project.
            </p>
           </div>
          </div>
@@ -1148,7 +1355,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            expert created
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            2&lt;n&lt;10
            </p>
           </div>
           <div class="field">
@@ -1174,11 +1394,50 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            none
+            validated by another rater
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Members of the TurkuNLP research group, native speakers of Finnish, each annotator has a strong background in language studies by having an academic degree or ongoing studies in a field related to languages or linguistics.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
+           </p>
+          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1190,8 +1449,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <ol>
+            <li>
+             Manual extraction of interesting paraphrases from two related documents.
+            </li>
+            <li>
+             Manual labeling of each extracted paraphrase based on the given annotation scheme, e.g. distinguishing contextual and universal paraphrases, marking style or strength differences, etc.
+            </li>
+           </ol>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            Partial double annotation, double annotation batches are assigned regularly in order to monitor annotation consistency. In double annotation, one annotator first extracts the candidate paraphrases, and these candidates are assigned to two different annotators, who does the label annotation independently from each other. Afterwards, the label annotations are merged, and conflicting labels are resolved together with the whole annotation team.
            </p>
           </div>
          </div>
@@ -1211,13 +1488,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The corpus is mostly based on public/open data. For other data sources (student material), the licensing was agreed with the data providers during the collection.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1235,22 +1525,37 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            likely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Categories of PII
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              What categories of PII are present or suspected in the data?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            <code>
+             generic PII
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any PII Identification?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Did the curators use any automatic/manual method to identify PII in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no identification
            </p>
           </div>
          </div>
@@ -1455,7 +1760,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1470,7 +1775,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>

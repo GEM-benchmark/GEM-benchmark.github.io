@@ -1,0 +1,3299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8"/>
+  <title>
+   Data Cards Labs
+  </title>
+  <base target="_blank"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Rubik:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <style>
+   a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}*{-webkit-box-sizing:border-box;box-sizing:border-box}html{overflow:hidden}body{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:16px;line-height:24px;color:#3c4f50;background:#f1f7f7;overflow-x:hidden}a{color:#ff675c;text-decoration:none}a:focus,a:hover{background:#ffecea}b,strong{font-weight:600}em{font-style:italic}img{max-width:100%}h1{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:32px;line-height:48px;font-weight:400;margin-bottom:12px}h2{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;display:block;margin-right:20px}h3{font-family:Rubik, Helvetica, Arial, sans-serif;margin-top:20px;padding-top:10px;font-size:16px;line-height:24px;margin-bottom:5px;color:#ff675c;border-top:1px solid #cddcdc}dt,h4{color:#7c9192;font-weight:500;font-size:12px;line-height:20px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:10px}h5{margin-top:10px;font-size:12px;font-weight:500;font-style:italic;color:#7c9192}p{margin-bottom:20px}p:last-of-type{margin-bottom:0}ol,ul{margin-left:20px;margin-bottom:20px}.header-wrapper{position:fixed;display:flex;align-items:center;justify-content:start;padding:0 60px;box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2);width:100%;background:#fff;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;height:60px;z-index:3}.header-title{display:inline-block;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px}.main-wrapper{display:flex;justify-content:space-between}.panel-wrapper{min-width:60px;max-width:60px;min-height:100%;margin-top:60px;padding-top:20px;background:#fff;border-right:1px solid #cddcdc;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);z-index:2;display:flex;flex-direction:column;align-items:center}#datacard-outline-nav{position:fixed;left:-300px;min-width:300px;max-width:300px;height:100%;padding:120px 10px 20px 0;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);background:#f1f7f7;z-index:1;overflow-y:scroll;transition:all 0.5s ease-out}#datacard-outline-nav.active{transform:translateX(360px);transition:all 0.5s ease-out}#datacard-outline-nav ul{list-style-type:none;font-size:14px;line-height:22px;overflow-wrap:normal;margin-bottom:6px}#datacard-outline-nav li{margin-bottom:6px}#datacard-outline-nav li:focus,#datacard-outline-nav li:hover{cursor:pointer;color:#ff675c}#datacard-outline-nav li.active{color:#ff675c;list-style-type:disc}#datacard-outline-button{padding:10px;width:40px;height:40px;border-radius:20px;background:#f1f7f7;border:none;cursor:pointer}#datacard-outline-button svg{fill:#3c4f50}#datacard-outline-button.active,#datacard-outline-button:focus,#datacard-outline-button:hover{background:#cddcdc}.datacard-breadcrumbs{display:flex;align-items:center;height:40px;width:100%;position:fixed;padding-left:80px;top:60px;left:0;background:#fff;border-bottom:1px solid #cddcdc;font-size:14px;line-height:22px;z-index:1}.content-wrapper{width:100%;display:flex;justify-content:center;margin-top:60px;height:calc(100vh - 40px);overflow-x:hidden;overflow-y:scroll;scroll-behavior:smooth}.datacard-wrapper{max-width:1000px;width:100%;padding:20px}section{display:block;margin-bottom:40px}.quick-row,.section,.summary{background:#fff;display:block;width:100%;padding:20px;border:1px solid #cddcdc}.quick-row,.summary{border-radius:5px}.title-dataset-details,.title-quick-use{font-size:20px;line-height:28px;margin-top:10px;margin-bottom:0;padding-bottom:10px}.details-nav{display:flex;justify-content:space-between}.details-button{font-family:Inter, Helvetica, Arial, sans-serif;color:#152d2e;background:#fff;border:none;border-radius:5px;width:max-content;height:30px;font-size:12px;line-height:20px;padding:4px 8px;margin-left:10px;cursor:pointer;display:flex;justify-content:center;align-items:center}.details-button:focus,.details-button:hover{background:#cddcdc}.tags{display:none;margin-right:40px}.tag{font-family:Rubik, Helvetica, Arial, sans-serif;color:#3c4f50;background-color:#f1f7f7;font-size:14px;line-height:22px;padding:1px 5px;border-radius:5px;margin:2px 5px 2px 0;display:inline-block;cursor:pointer}.tag:focus,.tag:hover{background-color:#cddcdc}.tag:last-of-type{margin-right:0}@media screen and (min-width: 800px){.tags{max-width:500px;margin-left:20px}}@media screen and (min-width: 550px){.tags{display:inline-block}}.section{border-bottom:2px solid #cddcdc}.section:first-of-type,.section:nth-of-type(2){border-radius:5px 5px 0 0}.section:last-of-type{border-radius:0 0 5px 5px;border-bottom:1px solid #cddcdc}.section-preview{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:60px}.section-preview-content{display:flex;justify-content:center;align-items:center}.section-open-button{min-width:24px;min-height:24px;height:100%;background:none;border:none;cursor:pointer;z-index:0}.section-open-button svg{transition:all 0.5s ease-out}.section-open-button:focus svg,.section-open-button:hover svg{fill:#ff675c}.subsection-wrapper{max-height:0;overflow:hidden;transition:all 0.25s ease-out;-webkit-transition:none;-moz-transition:all 0.25s ease-out;-o-transition:all 0.25s ease-out;webkit-backface-visibility:none}.open .subsection-wrapper{max-height:max-content;transition:all 0.5s ease-in;-webkit-transition:none;-moz-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in}.open .section-open-button svg{transform:rotate(180deg);transition:all 0.5s ease-out;-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;webkit-backface-visibility:none}.summary-content{margin-bottom:20px}.summary-scopes{border-top:1px solid #f1f7f7;padding-top:20px}@media screen and (min-width: 550px){.summary-wrapper{display:grid;grid-template-columns:repeat(2, 1fr)}.summary-scopes{padding:0 20px;border:none}}@media screen and (min-width: 800px){.summary-scopes{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px}}.row{margin-top:10px;display:block;width:100%;gap:20px}@media screen and (min-width: 550px){.row{display:grid;grid-template-columns:repeat(3, 1fr)}}.quick-row{display:block;width:100%;column-gap:20px;grid-template-columns:repeat(2, 1fr)}@media screen and (min-width: 550px){.quick-row{display:grid}}@media screen and (min-width: 800px){.quick-row{grid-template-columns:repeat(5, 1fr)}}.field{margin-bottom:20px;overflow-x:hidden}.field:last-of-type{margin-bottom:0}@media screen and (min-width: 550px){.field{max-width:300px}}.scope{padding:10px 0}.scope:last-of-type{border-bottom:none}@media screen and (min-width: 550px){.scope{border-bottom:none}}pre{background:#f1f7f7;display:inline-block;overflow-x:hidden;overflow-y:scroll;width:100%;max-height:300px;white-space:pre-wrap}code{font-family:'Space Grotesk', sans-serif;background:#f1f7f7;font-size:14px;line-height:20px;border-radius:6px;padding:1px 5px}.code-block-wrapper,.table-wrapper{background:#fff;border:#cddcdc 1px solid;border-radius:6px;padding:10px;margin:10px 0}.expand .code-block-wrapper,.expand .table-wrapper{box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2)}.code-block-wrapper{background:#f1f7f7}.summary-row .code-block-wrapper,.summary-row .table-wrapper{max-width:max-content}table{display:inline-block;overflow-x:scroll;overflow-y:hidden;max-height:300px;font-size:14px;line-height:20px}tr{overflow-x:scroll}tfoot,thead,tr{padding:10px}th{text-align:left;font-weight:500;padding:10px}td,tfoot{text-align:left;padding:10px;border-top:#f1f7f7 1px solid}thead{font-weight:500}.expand{position:fixed;padding:20px;margin:0;border-radius:0;top:60px;left:0;width:100%;max-width:100%;height:100%;max-height:100%;background:rgba(0, 0, 0, .4);display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3}.expand pre,.expand table{height:max-content;max-height:calc(100vh - 100px)}.expand .interactions{margin-bottom:10px}.interactions{display:flex;justify-content:end;align-items:center}.tooltip{margin-left:2px;width:0;height:0;border:none;background:none;display:inline}.tooltip::before{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z'/></svg>")}.tooltip-text{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:12px;line-height:16px;padding:6px;text-transform:none;visibility:hidden;position:absolute;height:0;width:0;color:#fff;background:#3c4f50;border:none;border-radius:5px;box-shadow:1px 2px 2px 0 rgba(0,0,0,.2)}.tooltip:focus .tooltip-text,.tooltip:hover .tooltip-text{visibility:visible;height:auto;width:auto;max-width:240px;word-break:break-word}.expand-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.collapse-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M22,3.41l-5.29,5.29L20,12h-8V4l3.29,3.29L20.59,2L22,3.41z M3.41,22l5.29-5.29L12,20v-8H4l3.29,3.29L2,20.59L3.41,22z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.copy-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.link-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}
+  </style>
+ </head>
+ <body>
+  <header class="header-wrapper">
+   <div class="header-title">
+    Data Cards Labs
+   </div>
+  </header>
+  <main class="main-wrapper">
+   <aside class="panel-wrapper">
+    <button id="datacard-outline-button">
+     <svg fill="none" height="16" viewbox="0 0 18 18" width="16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11 14H4V12H11V14ZM14 10H4V8H14V10ZM14 6H4V4H14V6Z">
+      </path>
+     </svg>
+    </button>
+   </aside>
+   <nav id="datacard-outline-nav">
+    <ul>
+     <li>
+      Summary
+     </li>
+     <li>
+      Quick-Use
+     </li>
+     <li>
+      Dataset Details
+     </li>
+     <ul>
+      <li>
+       Dataset Overview
+      </li>
+      <ul>
+       <li>
+        Where to find the Data and its Documentation
+       </li>
+       <li>
+        Languages and Intended Use
+       </li>
+       <li>
+        Credit
+       </li>
+       <li>
+        Dataset Structure
+       </li>
+      </ul>
+      <li>
+       Dataset in GEM
+      </li>
+      <ul>
+       <li>
+        Rationale for Inclusion in GEM
+       </li>
+       <li>
+        GEM-Specific Curation
+       </li>
+       <li>
+        Getting Started with the Task
+       </li>
+      </ul>
+      <li>
+       Previous Results
+      </li>
+      <ul>
+       <li>
+        Previous Results
+       </li>
+      </ul>
+      <li>
+       Dataset Curation
+      </li>
+      <ul>
+       <li>
+        Original Curation
+       </li>
+       <li>
+        Language Data
+       </li>
+       <li>
+        Structured Annotations
+       </li>
+       <li>
+        Consent
+       </li>
+       <li>
+        Private Identifying Information (PII)
+       </li>
+       <li>
+        Maintenance
+       </li>
+      </ul>
+      <li>
+       Broader Social Context
+      </li>
+      <ul>
+       <li>
+        Previous Work on the Social Impact of the Dataset
+       </li>
+       <li>
+        Impact on Under-Served Communities
+       </li>
+       <li>
+        Discussion of Biases
+       </li>
+      </ul>
+      <li>
+       Considerations for Using the Data
+      </li>
+      <ul>
+       <li>
+        PII Risks and Liability
+       </li>
+       <li>
+        Licenses
+       </li>
+       <li>
+        Known Technical Limitations
+       </li>
+      </ul>
+     </ul>
+    </ul>
+   </nav>
+   <div class="content-wrapper">
+    <article class="datacard-wrapper">
+     <template id="table-template">
+      <div class="table-wrapper">
+       <div class="interactions">
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <template id="code-block-template">
+      <div class="code-block-wrapper">
+       <div class="interactions">
+        <div class="copy-icon" title="Click to copy code block">
+        </div>
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <section class="summary" id="summary">
+      <h1>
+       xlsum
+      </h1>
+      <div class="summary-wrapper">
+       <div class="summary-content">
+        <p>
+         XLSum is a highly multilingual summarization dataset supporting 44 language. The data stems from BBC news articles.
+        </p>
+        <p>
+         You can load the dataset via:
+        </p>
+        <pre><code>import datasets
+data = datasets.load_dataset('GEM/xlsum')
+</code></pre>
+        <p>
+         The data loader can be found
+         <a href="https://huggingface.co/datasets/GEM/xlsum">
+          here
+         </a>
+         .
+        </p>
+       </div>
+       <div class="summary-scopes">
+        <div class="field">
+         <h4>
+          website
+         </h4>
+         <p>
+          <a href="https://github.com/csebuetnlp/xl-sum">
+           Github
+          </a>
+         </p>
+        </div>
+        <div class="field">
+         <h4>
+          paper
+         </h4>
+         <p>
+          <a href="https://aclanthology.org/2021.findings-acl.413/">
+           ACL Anthology
+          </a>
+         </p>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section id="quick-use">
+      <h2 class="title-quick-use">
+       Quick-Use
+      </h2>
+      <div class="quick-row">
+       <div class="field">
+        <h4>
+         Contact Name
+         <div class="tooltip">
+          <div class="tooltip-text">
+           If known, provide the name of at least one person the reader can contact for questions about the dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Tahmid Hasan
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Multilingual?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Is the dataset multilingual?
+          </div>
+         </div>
+        </h4>
+        <p>
+         yes
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Covered Languages
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What languages/dialects are covered in the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         <code>
+          Amharic
+         </code>
+         ,
+         <code>
+          Arabic
+         </code>
+         ,
+         <code>
+          Azerbaijani
+         </code>
+         ,
+         <code>
+          Bengali, Bangla
+         </code>
+         ,
+         <code>
+          Burmese
+         </code>
+         ,
+         <code>
+          Chinese (family)
+         </code>
+         ,
+         <code>
+          English
+         </code>
+         ,
+         <code>
+          French
+         </code>
+         ,
+         <code>
+          Gujarati
+         </code>
+         ,
+         <code>
+          Hausa
+         </code>
+         ,
+         <code>
+          Hindi
+         </code>
+         ,
+         <code>
+          Igbo
+         </code>
+         ,
+         <code>
+          Indonesian
+         </code>
+         ,
+         <code>
+          Japanese
+         </code>
+         ,
+         <code>
+          Rundi
+         </code>
+         ,
+         <code>
+          Korean
+         </code>
+         ,
+         <code>
+          Kirghiz, Kyrgyz
+         </code>
+         ,
+         <code>
+          Marathi
+         </code>
+         ,
+         <code>
+          Nepali (individual language)
+         </code>
+         ,
+         <code>
+          Oromo
+         </code>
+         ,
+         <code>
+          Pushto, Pashto
+         </code>
+         ,
+         <code>
+          Persian
+         </code>
+         ,
+         <code>
+          Ghanaian Pidgin English
+         </code>
+         ,
+         <code>
+          Portuguese
+         </code>
+         ,
+         <code>
+          Panjabi, Punjabi
+         </code>
+         ,
+         <code>
+          Russian
+         </code>
+         ,
+         <code>
+          Scottish Gaelic, Gaelic
+         </code>
+         ,
+         <code>
+          Serbian
+         </code>
+         ,
+         <code>
+          Romano-Serbian
+         </code>
+         ,
+         <code>
+          Sinhala, Sinhalese
+         </code>
+         ,
+         <code>
+          Somali
+         </code>
+         ,
+         <code>
+          Spanish, Castilian
+         </code>
+         ,
+         <code>
+          Swahili (individual language), Kiswahili
+         </code>
+         ,
+         <code>
+          Tamil
+         </code>
+         ,
+         <code>
+          Telugu
+         </code>
+         ,
+         <code>
+          Thai
+         </code>
+         ,
+         <code>
+          Tigrinya
+         </code>
+         ,
+         <code>
+          Turkish
+         </code>
+         ,
+         <code>
+          Ukrainian
+         </code>
+         ,
+         <code>
+          Urdu
+         </code>
+         ,
+         <code>
+          Uzbek
+         </code>
+         ,
+         <code>
+          Vietnamese
+         </code>
+         ,
+         <code>
+          Welsh
+         </code>
+         ,
+         <code>
+          Yoruba
+         </code>
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         License
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What is the license of the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         cc-by-nc-sa-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Summarize news-like text in one of 45 languages.
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Additional Annotations?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the dataset have additional annotations for each instance?
+          </div>
+         </div>
+        </h4>
+        <p>
+         none
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Contains PII?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+          </div>
+         </div>
+        </h4>
+        <p>
+         likely
+        </p>
+       </div>
+      </div>
+     </section>
+     <section id="dataset-details">
+      <div class="details-nav">
+       <p class="title-dataset-details">
+        Dataset Details
+       </p>
+       <div class="interactions">
+        <button class="details-button" id="expand-all">
+         Expand All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.2 17.4 15 15.2 24 6.2 33 15.2 30.8 17.4 24 10.6ZM24 42 15 33 17.2 30.8 24 37.6 30.8 30.8 33 33Z">
+          </path>
+         </svg>
+        </button>
+        <button class="details-button" id="collapse-all">
+         Collapse All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 19.15 15 10.15 17.15 8 24 14.85 30.85 8 33 10.15ZM17.15 40 15 37.85 24 28.85 33 37.85 30.85 40 24 33.15Z">
+          </path>
+         </svg>
+        </button>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-overview">
+          Dataset Overview
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Where to find the Data and its Documentation
+          </div>
+          <div class="tag">
+           Languages and Intended Use
+          </div>
+          <div class="tag">
+           Credit
+          </div>
+          <div class="tag">
+           Dataset Structure
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="where-to-find-the-data-and-its-documentation">
+         Where to find the Data and its Documentation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Webpage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the webpage for the dataset (if it exists)?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://github.com/csebuetnlp/xl-sum">
+             Github
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Download
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to where the original dataset is hosted?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://huggingface.co/datasets/csebuetnlp/xlsum/tree/main/data">
+             Huggingface
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Paper
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to the paper describing the dataset (open access preferred)?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://aclanthology.org/2021.findings-acl.413/">
+             ACL Anthology
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Has a Leaderboard?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have an active leaderboard?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contact Name
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the name of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Tahmid Hasan
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Contact Email
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the email of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            tahmidhasan@cse.buet.ac.bd
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Link
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a link to the leaderboard.
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="http://explainaboard.nlpedia.ai/leaderboard/task_xlsum/">
+             Explainaboard
+            </a>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            BibTex
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide the BibTex-formatted reference for the dataset. Please use the correct published version (ACL anthology, etc.) instead of google scholar created Bibtex.
+             </div>
+            </div>
+           </h4>
+           <pre><code>@inproceedings{hasan-etal-2021-xl,
+    title = "{XL}-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages",
+    author = "Hasan, Tahmid  and
+      Bhattacharjee, Abhik  and
+      Islam, Md. Saiful  and
+      Mubasshir, Kazi  and
+      Li, Yuan-Fang  and
+      Kang, Yong-Bin  and
+      Rahman, M. Sohel  and
+      Shahriyar, Rifat",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.413",
+    pages = "4693--4703",
+}
+</code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Briefly describe how the leaderboard evaluates models.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The leaderboard ranks models based on ROUGE scores (R1/R2/RL) of the generated summaries.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="languages-and-intended-use">
+         Languages and Intended Use
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Multilingual?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset multilingual?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Covered Languages
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What languages/dialects are covered in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Amharic
+            </code>
+            ,
+            <code>
+             Arabic
+            </code>
+            ,
+            <code>
+             Azerbaijani
+            </code>
+            ,
+            <code>
+             Bengali, Bangla
+            </code>
+            ,
+            <code>
+             Burmese
+            </code>
+            ,
+            <code>
+             Chinese (family)
+            </code>
+            ,
+            <code>
+             English
+            </code>
+            ,
+            <code>
+             French
+            </code>
+            ,
+            <code>
+             Gujarati
+            </code>
+            ,
+            <code>
+             Hausa
+            </code>
+            ,
+            <code>
+             Hindi
+            </code>
+            ,
+            <code>
+             Igbo
+            </code>
+            ,
+            <code>
+             Indonesian
+            </code>
+            ,
+            <code>
+             Japanese
+            </code>
+            ,
+            <code>
+             Rundi
+            </code>
+            ,
+            <code>
+             Korean
+            </code>
+            ,
+            <code>
+             Kirghiz, Kyrgyz
+            </code>
+            ,
+            <code>
+             Marathi
+            </code>
+            ,
+            <code>
+             Nepali (individual language)
+            </code>
+            ,
+            <code>
+             Oromo
+            </code>
+            ,
+            <code>
+             Pushto, Pashto
+            </code>
+            ,
+            <code>
+             Persian
+            </code>
+            ,
+            <code>
+             Ghanaian Pidgin English
+            </code>
+            ,
+            <code>
+             Portuguese
+            </code>
+            ,
+            <code>
+             Panjabi, Punjabi
+            </code>
+            ,
+            <code>
+             Russian
+            </code>
+            ,
+            <code>
+             Scottish Gaelic, Gaelic
+            </code>
+            ,
+            <code>
+             Serbian
+            </code>
+            ,
+            <code>
+             Romano-Serbian
+            </code>
+            ,
+            <code>
+             Sinhala, Sinhalese
+            </code>
+            ,
+            <code>
+             Somali
+            </code>
+            ,
+            <code>
+             Spanish, Castilian
+            </code>
+            ,
+            <code>
+             Swahili (individual language), Kiswahili
+            </code>
+            ,
+            <code>
+             Tamil
+            </code>
+            ,
+            <code>
+             Telugu
+            </code>
+            ,
+            <code>
+             Thai
+            </code>
+            ,
+            <code>
+             Tigrinya
+            </code>
+            ,
+            <code>
+             Turkish
+            </code>
+            ,
+            <code>
+             Ukrainian
+            </code>
+            ,
+            <code>
+             Urdu
+            </code>
+            ,
+            <code>
+             Uzbek
+            </code>
+            ,
+            <code>
+             Vietnamese
+            </code>
+            ,
+            <code>
+             Welsh
+            </code>
+            ,
+            <code>
+             Yoruba
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            License
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the license of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            cc-by-nc-sa-4.0: Creative Commons Attribution Non Commercial Share Alike 4.0 International
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Primary Task
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What primary task does the dataset support?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Summarization
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Summarize news-like text in one of 45 languages.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Intended Use
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the intended use of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Abstractive summarization has centered around the English language, as most large abstractive summarization datasets are available in English only. Though there have been some recent efforts for curating multilingual abstractive summarization datasets, they are limited in terms of the number of languages covered, the number of training samples, or both. To this end,
+            <strong>
+             XL-Sum
+            </strong>
+            presents a large-scale abstractive summarization dataset of 1.35 million news articles from 45 languages crawled from the British Broadcasting Corporation website. It is intended to be used for both multilingual and per-language summarization tasks.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="credit">
+         Credit
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization Type(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              In what kind of organization did the dataset curation happen?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             academic
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Name the organization(s).
+             </div>
+            </div>
+           </h4>
+           <p>
+            Bangladesh University of Engineering and Technology
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Who added the Dataset to GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who contributed to the data card and adding the dataset to GEM? List the people+affiliations involved in creating this data card and who helped integrate this dataset into GEM.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Tahmid Hasan (Bangladesh University of Engineering and Technology), Abhik Bhattacharjee (Bangladesh University of Engineering and Technology)
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="dataset-structure">
+         Dataset Structure
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Data Fields
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the fields present in the dataset.
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             <code>
+              gem_id
+             </code>
+             : A string representing the article ID.
+            </li>
+            <li>
+             <code>
+              url
+             </code>
+             : A string representing the article URL.
+            </li>
+            <li>
+             <code>
+              title
+             </code>
+             : A string containing the article title.
+            </li>
+            <li>
+             <code>
+              summary
+             </code>
+             : A string containing the article summary.
+            </li>
+            <li>
+             <code>
+              text
+             </code>
+             : A string containing the article text.
+            </li>
+           </ul>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Example Instance
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a JSON formatted example of a typical instance in the dataset.
+             </div>
+            </div>
+           </h4>
+           <pre><code>{
+    "gem_id": "GEM-xlsum_english-train-1589",
+    "url": "https://www.bbc.com/news/technology-17657859",
+    "title": "Yahoo files e-book advert system patent applications",
+    "summary": "Yahoo has signalled it is investigating e-book adverts as a way to stimulate its earnings.",
+    "text": "Yahoo's patents suggest users could weigh the type of ads against the sizes of discount before purchase. It says in two US patent applications that ads for digital book readers have been \"less than optimal\" to date. The filings suggest that users could be offered titles at a variety of prices depending on the ads' prominence They add that the products shown could be determined by the type of book being read, or even the contents of a specific chapter, phrase or word. The paperwork was published by the US Patent and Trademark Office late last week and relates to work carried out at the firm's headquarters in Sunnyvale, California. \"Greater levels of advertising, which may be more valuable to an advertiser and potentially more distracting to an e-book reader, may warrant higher discounts,\" it states. Free books It suggests users could be offered ads as hyperlinks based within the book's text, in-laid text or even \"dynamic content\" such as video. Another idea suggests boxes at the bottom of a page could trail later chapters or quotes saying \"brought to you by Company A\". It adds that the more willing the customer is to see the ads, the greater the potential discount. \"Higher frequencies... may even be great enough to allow the e-book to be obtained for free,\" it states. The authors write that the type of ad could influence the value of the discount, with \"lower class advertising... such as teeth whitener advertisements\" offering a cheaper price than \"high\" or \"middle class\" adverts, for things like pizza. The inventors also suggest that ads could be linked to the mood or emotional state the reader is in as a they progress through a title. For example, they say if characters fall in love or show affection during a chapter, then ads for flowers or entertainment could be triggered. The patents also suggest this could applied to children's books - giving the Tom Hanks animated film Polar Express as an example. It says a scene showing a waiter giving the protagonists hot drinks \"may be an excellent opportunity to show an advertisement for hot cocoa, or a branded chocolate bar\". Another example states: \"If the setting includes young characters, a Coke advertisement could be provided, inviting the reader to enjoy a glass of Coke with his book, and providing a graphic of a cool glass.\" It adds that such targeting could be further enhanced by taking account of previous titles the owner has bought. 'Advertising-free zone' At present, several Amazon and Kobo e-book readers offer full-screen adverts when the device is switched off and show smaller ads on their menu screens, but the main text of the titles remains free of marketing. Yahoo does not currently provide ads to these devices, and a move into the area could boost its shrinking revenues. However, Philip Jones, deputy editor of the Bookseller magazine, said that the internet firm might struggle to get some of its ideas adopted. \"This has been mooted before and was fairly well decried,\" he said. \"Perhaps in a limited context it could work if the merchandise was strongly related to the title and was kept away from the text. \"But readers - particularly parents - like the fact that reading is an advertising-free zone. Authors would also want something to say about ads interrupting their narrative flow.\""
+}
+</code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Data Splits
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe and name the splits in the dataset if there are more than one.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The splits in the dataset are specified by the language names, which are as follows:
+-
+            <code>
+             amharic
+            </code>
+            -
+            <code>
+             arabic
+            </code>
+            -
+            <code>
+             azerbaijani
+            </code>
+            -
+            <code>
+             bengali
+            </code>
+            -
+            <code>
+             burmese
+            </code>
+            -
+            <code>
+             chinese_simplified
+            </code>
+            -
+            <code>
+             chinese_traditional
+            </code>
+            -
+            <code>
+             english
+            </code>
+            -
+            <code>
+             french
+            </code>
+            -
+            <code>
+             gujarati
+            </code>
+            -
+            <code>
+             hausa
+            </code>
+            -
+            <code>
+             hindi
+            </code>
+            -
+            <code>
+             igbo
+            </code>
+            -
+            <code>
+             indonesian
+            </code>
+            -
+            <code>
+             japanese
+            </code>
+            -
+            <code>
+             kirundi
+            </code>
+            -
+            <code>
+             korean
+            </code>
+            -
+            <code>
+             kyrgyz
+            </code>
+            -
+            <code>
+             marathi
+            </code>
+            -
+            <code>
+             nepali
+            </code>
+            -
+            <code>
+             oromo
+            </code>
+            -
+            <code>
+             pashto
+            </code>
+            -
+            <code>
+             persian
+            </code>
+            -
+            <code>
+             pidgin
+            </code>
+            -
+            <code>
+             portuguese
+            </code>
+            -
+            <code>
+             punjabi
+            </code>
+            -
+            <code>
+             russian
+            </code>
+            -
+            <code>
+             scottish_gaelic
+            </code>
+            -
+            <code>
+             serbian_cyrillic
+            </code>
+            -
+            <code>
+             serbian_latin
+            </code>
+            -
+            <code>
+             sinhala
+            </code>
+            -
+            <code>
+             somali
+            </code>
+            -
+            <code>
+             spanish
+            </code>
+            -
+            <code>
+             swahili
+            </code>
+            -
+            <code>
+             tamil
+            </code>
+            -
+            <code>
+             telugu
+            </code>
+            -
+            <code>
+             thai
+            </code>
+            -
+            <code>
+             tigrinya
+            </code>
+            -
+            <code>
+             turkish
+            </code>
+            -
+            <code>
+             ukrainian
+            </code>
+            -
+            <code>
+             urdu
+            </code>
+            -
+            <code>
+             uzbek
+            </code>
+            -
+            <code>
+             vietnamese
+            </code>
+            -
+            <code>
+             welsh
+            </code>
+            -
+            <code>
+             yoruba
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
+             </div>
+            </div>
+           </h4>
+           <p>
+            We used a 80%-10%-10% split for all languages with a few exceptions.
+            <code>
+             English
+            </code>
+            was split 93%-3.5%-3.5% for the evaluation set size to resemble that of
+            <code>
+             CNN/DM
+            </code>
+            and
+            <code>
+             XSum
+            </code>
+            ;
+            <code>
+             Scottish Gaelic
+            </code>
+            ,
+            <code>
+             Kyrgyz
+            </code>
+            and
+            <code>
+             Sinhala
+            </code>
+            had relatively fewer samples, their evaluation sets were increased to 500 samples for more reliable evaluation. Same articles were used for evaluation in the two variants of Chinese and Serbian to prevent data leakage in multilingual training. Individual dataset download links with train-dev-test example counts are given below:
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               Language
+              </th>
+              <th>
+               ISO 639-1 Code
+              </th>
+              <th>
+               BBC subdomain(s)
+              </th>
+              <th>
+               Train
+              </th>
+              <th>
+               Dev
+              </th>
+              <th>
+               Test
+              </th>
+              <th>
+               Total
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               Amharic
+              </td>
+              <td>
+               am
+              </td>
+              <td>
+               https://www.bbc.com/amharic
+              </td>
+              <td>
+               5761
+              </td>
+              <td>
+               719
+              </td>
+              <td>
+               719
+              </td>
+              <td>
+               7199
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Arabic
+              </td>
+              <td>
+               ar
+              </td>
+              <td>
+               https://www.bbc.com/arabic
+              </td>
+              <td>
+               37519
+              </td>
+              <td>
+               4689
+              </td>
+              <td>
+               4689
+              </td>
+              <td>
+               46897
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Azerbaijani
+              </td>
+              <td>
+               az
+              </td>
+              <td>
+               https://www.bbc.com/azeri
+              </td>
+              <td>
+               6478
+              </td>
+              <td>
+               809
+              </td>
+              <td>
+               809
+              </td>
+              <td>
+               8096
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Bengali
+              </td>
+              <td>
+               bn
+              </td>
+              <td>
+               https://www.bbc.com/bengali
+              </td>
+              <td>
+               8102
+              </td>
+              <td>
+               1012
+              </td>
+              <td>
+               1012
+              </td>
+              <td>
+               10126
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Burmese
+              </td>
+              <td>
+               my
+              </td>
+              <td>
+               https://www.bbc.com/burmese
+              </td>
+              <td>
+               4569
+              </td>
+              <td>
+               570
+              </td>
+              <td>
+               570
+              </td>
+              <td>
+               5709
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Chinese (Simplified)
+              </td>
+              <td>
+               zh-CN
+              </td>
+              <td>
+               https://www.bbc.com/ukchina/simp, https://www.bbc.com/zhongwen/simp
+              </td>
+              <td>
+               37362
+              </td>
+              <td>
+               4670
+              </td>
+              <td>
+               4670
+              </td>
+              <td>
+               46702
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Chinese (Traditional)
+              </td>
+              <td>
+               zh-TW
+              </td>
+              <td>
+               https://www.bbc.com/ukchina/trad, https://www.bbc.com/zhongwen/trad
+              </td>
+              <td>
+               37373
+              </td>
+              <td>
+               4670
+              </td>
+              <td>
+               4670
+              </td>
+              <td>
+               46713
+              </td>
+             </tr>
+             <tr>
+              <td>
+               English
+              </td>
+              <td>
+               en
+              </td>
+              <td>
+               https://www.bbc.com/english, https://www.bbc.com/sinhala
+               <code>
+                *
+               </code>
+              </td>
+              <td>
+               306522
+              </td>
+              <td>
+               11535
+              </td>
+              <td>
+               11535
+              </td>
+              <td>
+               329592
+              </td>
+             </tr>
+             <tr>
+              <td>
+               French
+              </td>
+              <td>
+               fr
+              </td>
+              <td>
+               https://www.bbc.com/afrique
+              </td>
+              <td>
+               8697
+              </td>
+              <td>
+               1086
+              </td>
+              <td>
+               1086
+              </td>
+              <td>
+               10869
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Gujarati
+              </td>
+              <td>
+               gu
+              </td>
+              <td>
+               https://www.bbc.com/gujarati
+              </td>
+              <td>
+               9119
+              </td>
+              <td>
+               1139
+              </td>
+              <td>
+               1139
+              </td>
+              <td>
+               11397
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Hausa
+              </td>
+              <td>
+               ha
+              </td>
+              <td>
+               https://www.bbc.com/hausa
+              </td>
+              <td>
+               6418
+              </td>
+              <td>
+               802
+              </td>
+              <td>
+               802
+              </td>
+              <td>
+               8022
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Hindi
+              </td>
+              <td>
+               hi
+              </td>
+              <td>
+               https://www.bbc.com/hindi
+              </td>
+              <td>
+               70778
+              </td>
+              <td>
+               8847
+              </td>
+              <td>
+               8847
+              </td>
+              <td>
+               88472
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Igbo
+              </td>
+              <td>
+               ig
+              </td>
+              <td>
+               https://www.bbc.com/igbo
+              </td>
+              <td>
+               4183
+              </td>
+              <td>
+               522
+              </td>
+              <td>
+               522
+              </td>
+              <td>
+               5227
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Indonesian
+              </td>
+              <td>
+               id
+              </td>
+              <td>
+               https://www.bbc.com/indonesia
+              </td>
+              <td>
+               38242
+              </td>
+              <td>
+               4780
+              </td>
+              <td>
+               4780
+              </td>
+              <td>
+               47802
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Japanese
+              </td>
+              <td>
+               ja
+              </td>
+              <td>
+               https://www.bbc.com/japanese
+              </td>
+              <td>
+               7113
+              </td>
+              <td>
+               889
+              </td>
+              <td>
+               889
+              </td>
+              <td>
+               8891
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Kirundi
+              </td>
+              <td>
+               rn
+              </td>
+              <td>
+               https://www.bbc.com/gahuza
+              </td>
+              <td>
+               5746
+              </td>
+              <td>
+               718
+              </td>
+              <td>
+               718
+              </td>
+              <td>
+               7182
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Korean
+              </td>
+              <td>
+               ko
+              </td>
+              <td>
+               https://www.bbc.com/korean
+              </td>
+              <td>
+               4407
+              </td>
+              <td>
+               550
+              </td>
+              <td>
+               550
+              </td>
+              <td>
+               5507
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Kyrgyz
+              </td>
+              <td>
+               ky
+              </td>
+              <td>
+               https://www.bbc.com/kyrgyz
+              </td>
+              <td>
+               2266
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               3266
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Marathi
+              </td>
+              <td>
+               mr
+              </td>
+              <td>
+               https://www.bbc.com/marathi
+              </td>
+              <td>
+               10903
+              </td>
+              <td>
+               1362
+              </td>
+              <td>
+               1362
+              </td>
+              <td>
+               13627
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Nepali
+              </td>
+              <td>
+               np
+              </td>
+              <td>
+               https://www.bbc.com/nepali
+              </td>
+              <td>
+               5808
+              </td>
+              <td>
+               725
+              </td>
+              <td>
+               725
+              </td>
+              <td>
+               7258
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Oromo
+              </td>
+              <td>
+               om
+              </td>
+              <td>
+               https://www.bbc.com/afaanoromoo
+              </td>
+              <td>
+               6063
+              </td>
+              <td>
+               757
+              </td>
+              <td>
+               757
+              </td>
+              <td>
+               7577
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Pashto
+              </td>
+              <td>
+               ps
+              </td>
+              <td>
+               https://www.bbc.com/pashto
+              </td>
+              <td>
+               14353
+              </td>
+              <td>
+               1794
+              </td>
+              <td>
+               1794
+              </td>
+              <td>
+               17941
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Persian
+              </td>
+              <td>
+               fa
+              </td>
+              <td>
+               https://www.bbc.com/persian
+              </td>
+              <td>
+               47251
+              </td>
+              <td>
+               5906
+              </td>
+              <td>
+               5906
+              </td>
+              <td>
+               59063
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Pidgin
+               <code>
+                **
+               </code>
+              </td>
+              <td>
+               pcm
+              </td>
+              <td>
+               https://www.bbc.com/pidgin
+              </td>
+              <td>
+               9208
+              </td>
+              <td>
+               1151
+              </td>
+              <td>
+               1151
+              </td>
+              <td>
+               11510
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Portuguese
+              </td>
+              <td>
+               pt
+              </td>
+              <td>
+               https://www.bbc.com/portuguese
+              </td>
+              <td>
+               57402
+              </td>
+              <td>
+               7175
+              </td>
+              <td>
+               7175
+              </td>
+              <td>
+               71752
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Punjabi
+              </td>
+              <td>
+               pa
+              </td>
+              <td>
+               https://www.bbc.com/punjabi
+              </td>
+              <td>
+               8215
+              </td>
+              <td>
+               1026
+              </td>
+              <td>
+               1026
+              </td>
+              <td>
+               10267
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Russian
+              </td>
+              <td>
+               ru
+              </td>
+              <td>
+               https://www.bbc.com/russian, https://www.bbc.com/ukrainian
+               <code>
+                *
+               </code>
+              </td>
+              <td>
+               62243
+              </td>
+              <td>
+               7780
+              </td>
+              <td>
+               7780
+              </td>
+              <td>
+               77803
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Scottish Gaelic
+              </td>
+              <td>
+               gd
+              </td>
+              <td>
+               https://www.bbc.com/naidheachdan
+              </td>
+              <td>
+               1313
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               2313
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Serbian (Cyrillic)
+              </td>
+              <td>
+               sr
+              </td>
+              <td>
+               https://www.bbc.com/serbian/cyr
+              </td>
+              <td>
+               7275
+              </td>
+              <td>
+               909
+              </td>
+              <td>
+               909
+              </td>
+              <td>
+               9093
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Serbian (Latin)
+              </td>
+              <td>
+               sr
+              </td>
+              <td>
+               https://www.bbc.com/serbian/lat
+              </td>
+              <td>
+               7276
+              </td>
+              <td>
+               909
+              </td>
+              <td>
+               909
+              </td>
+              <td>
+               9094
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Sinhala
+              </td>
+              <td>
+               si
+              </td>
+              <td>
+               https://www.bbc.com/sinhala
+              </td>
+              <td>
+               3249
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               500
+              </td>
+              <td>
+               4249
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Somali
+              </td>
+              <td>
+               so
+              </td>
+              <td>
+               https://www.bbc.com/somali
+              </td>
+              <td>
+               5962
+              </td>
+              <td>
+               745
+              </td>
+              <td>
+               745
+              </td>
+              <td>
+               7452
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Spanish
+              </td>
+              <td>
+               es
+              </td>
+              <td>
+               https://www.bbc.com/mundo
+              </td>
+              <td>
+               38110
+              </td>
+              <td>
+               4763
+              </td>
+              <td>
+               4763
+              </td>
+              <td>
+               47636
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Swahili
+              </td>
+              <td>
+               sw
+              </td>
+              <td>
+               https://www.bbc.com/swahili
+              </td>
+              <td>
+               7898
+              </td>
+              <td>
+               987
+              </td>
+              <td>
+               987
+              </td>
+              <td>
+               9872
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Tamil
+              </td>
+              <td>
+               ta
+              </td>
+              <td>
+               https://www.bbc.com/tamil
+              </td>
+              <td>
+               16222
+              </td>
+              <td>
+               2027
+              </td>
+              <td>
+               2027
+              </td>
+              <td>
+               20276
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Telugu
+              </td>
+              <td>
+               te
+              </td>
+              <td>
+               https://www.bbc.com/telugu
+              </td>
+              <td>
+               10421
+              </td>
+              <td>
+               1302
+              </td>
+              <td>
+               1302
+              </td>
+              <td>
+               13025
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Thai
+              </td>
+              <td>
+               th
+              </td>
+              <td>
+               https://www.bbc.com/thai
+              </td>
+              <td>
+               6616
+              </td>
+              <td>
+               826
+              </td>
+              <td>
+               826
+              </td>
+              <td>
+               8268
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Tigrinya
+              </td>
+              <td>
+               ti
+              </td>
+              <td>
+               https://www.bbc.com/tigrinya
+              </td>
+              <td>
+               5451
+              </td>
+              <td>
+               681
+              </td>
+              <td>
+               681
+              </td>
+              <td>
+               6813
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Turkish
+              </td>
+              <td>
+               tr
+              </td>
+              <td>
+               https://www.bbc.com/turkce
+              </td>
+              <td>
+               27176
+              </td>
+              <td>
+               3397
+              </td>
+              <td>
+               3397
+              </td>
+              <td>
+               33970
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Ukrainian
+              </td>
+              <td>
+               uk
+              </td>
+              <td>
+               https://www.bbc.com/ukrainian
+              </td>
+              <td>
+               43201
+              </td>
+              <td>
+               5399
+              </td>
+              <td>
+               5399
+              </td>
+              <td>
+               53999
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Urdu
+              </td>
+              <td>
+               ur
+              </td>
+              <td>
+               https://www.bbc.com/urdu
+              </td>
+              <td>
+               67665
+              </td>
+              <td>
+               8458
+              </td>
+              <td>
+               8458
+              </td>
+              <td>
+               84581
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Uzbek
+              </td>
+              <td>
+               uz
+              </td>
+              <td>
+               https://www.bbc.com/uzbek
+              </td>
+              <td>
+               4728
+              </td>
+              <td>
+               590
+              </td>
+              <td>
+               590
+              </td>
+              <td>
+               5908
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Vietnamese
+              </td>
+              <td>
+               vi
+              </td>
+              <td>
+               https://www.bbc.com/vietnamese
+              </td>
+              <td>
+               32111
+              </td>
+              <td>
+               4013
+              </td>
+              <td>
+               4013
+              </td>
+              <td>
+               40137
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Welsh
+              </td>
+              <td>
+               cy
+              </td>
+              <td>
+               https://www.bbc.com/cymrufyw
+              </td>
+              <td>
+               9732
+              </td>
+              <td>
+               1216
+              </td>
+              <td>
+               1216
+              </td>
+              <td>
+               12164
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Yoruba
+              </td>
+              <td>
+               yo
+              </td>
+              <td>
+               https://www.bbc.com/yoruba
+              </td>
+              <td>
+               6350
+              </td>
+              <td>
+               793
+              </td>
+              <td>
+               793
+              </td>
+              <td>
+               7936
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            <code>
+             *
+            </code>
+            A lot of articles in BBC Sinhala and BBC Ukrainian were written in English and Russian respectively. They were identified using
+            <a href="https://arxiv.org/abs/1607.01759">
+             Fasttext
+            </a>
+            and moved accordingly.
+            <code>
+             **
+            </code>
+            West African Pidgin English
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-in-gem">
+          Dataset in GEM
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Rationale for Inclusion in GEM
+          </div>
+          <div class="tag">
+           GEM-Specific Curation
+          </div>
+          <div class="tag">
+           Getting Started with the Task
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="rationale-for-inclusion-in-gem">
+         Rationale for Inclusion in GEM
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Similar Datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Do other datasets for the high level task exist?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Ability that the Dataset measures
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Conciseness, abstractiveness, and overall summarization capability.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Why is the Dataset in GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Traditional abstractive text summarization has been centered around English and other high-resource languages.
+            <strong>
+             XL-Sum
+            </strong>
+            provides a large collection of high-quality article-summary pairs for 45  languages where the languages range from high-resource to extremely low-resource. This enables the research community to explore the summarization capabilities of different models for multiple languages and languages in isolation. We believe the addition of
+            <strong>
+             XL-Sum
+            </strong>
+            to GEM makes the domain of abstractive text summarization more diversified and inclusive to the research community.  We hope our efforts in this work will encourage the community to push the boundaries of abstractive text summarization beyond the English language, especially for low and mid-resource languages, bringing technological advances to communities of these languages that have been traditionally under-served.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The summaries are highly concise and abstractive.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="gem-specific-curation">
+         GEM-Specific Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Modificatied for GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Has the GEM version of the dataset been modified in any way (data, processing, splits) from the original curated data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Additional Splits?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does GEM provide additional splits to the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="getting-started-with-the-task">
+         Getting Started with the Task
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="previous-results">
+          Previous Results
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Results
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-results">
+         Previous Results
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Measured Model Abilities
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Conciseness, abstractiveness, and overall summarization capability.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Previous results available?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are previous results available?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What metrics are typically used for this task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             ROUGE
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            ROUGE is the de facto evaluation metric used for text summarization. However, it was designed specifically for evaluating English texts. Due to the nature of the metric, scores are heavily dependent on text tokenization / stemming / unnecessary character removal, etc. Some modifications to the original ROUGE evaluation were done such as punctuation only removal, language specific tokenization/stemming to enable reliable comparison of source and target summaries across different scripts.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-curation">
+          Dataset Curation
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Original Curation
+          </div>
+          <div class="tag">
+           Language Data
+          </div>
+          <div class="tag">
+           Structured Annotations
+          </div>
+          <div class="tag">
+           Consent
+          </div>
+          <div class="tag">
+           Private Identifying Information (PII)
+          </div>
+          <div class="tag">
+           Maintenance
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="original-curation">
+         Original Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            State-of-the-art text summarization models are heavily data-driven, i.e., a large number of article-summary pairs are required to train them effectively. As a result, abstractive summarization has centered around the English language, as most large abstractive summarization datasets are available in English only. Though there have been some recent efforts for curating multilingual abstractive summarization datasets, they are limited in terms of the number of languages covered, the number of training samples, or both. To this end, we curate
+            <strong>
+             XL-Sum
+            </strong>
+            , a large-scale abstractive summarization dataset of 1.35 million news articles from 45 languages crawled from the British Broadcasting Corporation website.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Sourced from Different Sources
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset aggregated from different data sources?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Introduce new languages in the english-centric domain of abstractive text summarization and enable both multilingual and per-language summarization.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <p>
+            British Broadcasting Corporation (BBC) news websites.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="language-data">
+         Language Data
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            How was Language Data Obtained?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the language data obtained?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Found
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Where was it found?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If found, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Multiple websites
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Validation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was the text validated by a different worker or a data curator?
+             </div>
+            </div>
+           </h4>
+           <p>
+            not validated
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Was Data Filtered?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Were text instances selected or filtered?
+             </div>
+            </div>
+           </h4>
+           <p>
+            algorithmically
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Topics Covered
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the language in the dataset focus on specific topics? How would you describe them?
+             </div>
+            </div>
+           </h4>
+           <p>
+            News
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Language Producers
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What further information do we have on the language producers?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The language content was written by professional news editors hired by BBC.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Preprocessing
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
+             </div>
+            </div>
+           </h4>
+           <p>
+            We used 'NFKC' normalization on all text instances.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Filter Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What were the selection criteria?
+             </div>
+            </div>
+           </h4>
+           <p>
+            We designed a crawler to recursively crawl pages starting from the homepage by visiting different article links present in each page visited. We were able to take advantage of the fact that all BBC sites have somewhat similar structures, and were able to scrape articles from all sites. We discarded pages with no textual contents (mostly pages consisting of multimedia contents) before further processing. We designed a number of heuristics to make the extraction effective by carefully examining the HTML structures of the crawled pages:
+1. The desired summary must be present within the beginning two paragraphs of an article.
+2. The summary paragraph must have some portion of texts in bold format.
+3. The summary paragraph may contain some hyperlinks that may not be bold. The proportion of bold texts and hyperlinked texts to the total length of the paragraph in consideration must be at least 95\%.
+4. All texts except the summary and the headline must be included in the input text (including image captions).
+5. The input text must be at least twice as large as the summary.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="structured-annotations">
+         Structured Annotations
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Additional Annotations?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have additional annotations for each instance?
+             </div>
+            </div>
+           </h4>
+           <p>
+            none
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Annotation Service?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was an annotation service used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="consent">
+         Consent
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Consent Policy?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was there a consent policy involved when gathering the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            BBC's policy specifies that the text content within its websites can be used for non-commercial research only.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="private-identifying-information-(pii)">
+         Private Identifying Information (PII)
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contains PII?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+             </div>
+            </div>
+           </h4>
+           <p>
+            likely
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Categories of PII
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What categories of PII are present or suspected in the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             generic PII
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any PII Identification?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Did the curators use any automatic/manual method to identify PII in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no identification
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="maintenance">
+         Maintenance
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Maintenance Plan?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the original dataset have a maintenance plan?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="broader-social-context">
+          Broader Social Context
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Work on the Social Impact of the Dataset
+          </div>
+          <div class="tag">
+           Impact on Under-Served Communities
+          </div>
+          <div class="tag">
+           Discussion of Biases
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-work-on-the-social-impact-of-the-dataset">
+         Previous Work on the Social Impact of the Dataset
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Usage of Models based on the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are you aware of cases where models trained on the task featured in this dataset ore related tasks have been used in automated systems?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="impact-on-under-served-communities">
+         Impact on Under-Served Communities
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Addresses needs of underserved Communities?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset address the needs of communities that are traditionally underserved in language technology, and particularly language generation technology? Communities may be underserved for exemple because their language, language variety, or social or geographical context is underepresented in NLP and NLG resources (datasets and models).
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Details on how Dataset Addresses the Needs
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how this dataset addresses the needs of underserved communities.
+             </div>
+            </div>
+           </h4>
+           <p>
+            This dataset introduces  summarization corpus for many languages where there weren't any datasets like this curated before.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="discussion-of-biases">
+         Discussion of Biases
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Documented Social Biases?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are there documented social biases in the dataset? Biases in this context are variations in the ways members of different social categories are represented that can have harmful downstream consequences for members of the more disadvantaged group.
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="considerations-for-using-the-data">
+          Considerations for Using the Data
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           PII Risks and Liability
+          </div>
+          <div class="tag">
+           Licenses
+          </div>
+          <div class="tag">
+           Known Technical Limitations
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="pii-risks-and-liability">
+         PII Risks and Liability
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="licenses">
+         Licenses
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Dataset
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Intended Use part of the Data Overview Section, which of the following best describe the copyright and licensing status of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             research use only
+            </code>
+            ,
+            <code>
+             non-commercial use only
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Language Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Language part of the Data Curation Section, which of the following best describe the copyright and licensing status of the underlying language data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             research use only
+            </code>
+            ,
+            <code>
+             non-commercial use only
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="known-technical-limitations">
+         Known Technical Limitations
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Human evaluation showed most languages had a high percentage of good summaries in the upper nineties, almost none of the summaries contained any conflicting information, while about one-third on average had information that was not directly inferrable from the source article. Since generally multiple articles are written regarding an important event, there could be an overlap between the training and evaluation data in terms on content.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is limited to news domain only. Hence it wouldn't be advisable to use a model trained on this dataset for summarizing texts from a different domain i.e. literature, scientific text etc. Another pitfall could be hallucinations in the model generated summary.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            ROUGE evaluates the quality of the summary as a whole by considering up to 4-gram overlaps. Therefore, in an article about India if the word "India" in the generated summary gets replaced by "Pakistan" due to model hallucination, the overall score wouldn't be reduced significantly, but the entire meaning could get changed.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </main>
+ </body>
+ <script>
+  initializeSections();initializeTables();initializeCodeBlocks();initializeTags();initializeNav();initializeEscapes();function initializeSections(){const sections=document.getElementsByClassName('section');const sectionButtons=document.getElementsByClassName('section-open-button');sections[0].classList.add('open');for(let i=0;i<sections.length;i+=1){sectionButtons[i].addEventListener('click',(e)=>{if(sections[i].classList.contains('open')){closeSection(sections[i])}else{openSection(sections[i])}})}document.getElementById('expand-all').addEventListener('click',(e)=>{for(section of sections){openSection(section)}});document.getElementById('collapse-all').addEventListener('click',(e)=>{for(section of sections){closeSection(section)}})}function openSection(section){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.add('open');setTimeout(()=>{collapsible.removeAttribute('style')},500)}function closeSection(section){if(section.classList.contains('open')){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.remove('open');setTimeout(()=>{collapsible.removeAttribute('style')},200)}}function initializeTables(){const elements=document.getElementsByTagName('table');const wrapperTemplate=document.getElementById('table-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const table=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(table);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);table.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);table.appendChild(element)}}function initializeCodeBlocks(){const elements=document.getElementsByTagName('pre');const wrapperTemplate=document.getElementById('code-block-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const code=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(code);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);code.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);code.getElementsByClassName('copy-icon')[0].addEventListener('click',copy);code.appendChild(element)}}function initializeEscapes(){document.addEventListener('click',(e)=>{if(e.target.classList.contains('expand')){escapeModal(e.target)}});document.addEventListener('keyup',(e)=>{if(e.key==="Escape"){const expanded=document.getElementsByClassName('expand');if(expanded.length>0){escapeModal(expanded[0])}}})}function initializeTags(){for(tag of document.getElementsByClassName('tag')){const s=tag.parentElement.parentElement.parentElement.parentElement;tag.addEventListener('click',(e)=>jumpToHeading(titleToId(e.currentTarget.textContent)))}}function initializeNav(){document.getElementById('datacard-outline-button').addEventListener('click',toggleNav);for(heading of document.getElementById('datacard-outline-nav').getElementsByTagName('li')){heading.addEventListener('click',(e)=>{jumpToHeading(titleToId(e.currentTarget.textContent))})}}function toggleNav(){const button=document.getElementById('datacard-outline-button');const nav=document.getElementById('datacard-outline-nav');if(button.classList.contains('active')){button.classList.remove('active');nav.classList.remove('active')}else{button.classList.add('active');nav.classList.add('active')}}function jumpToHeading(id){const heading=document.getElementById(id);if(heading.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement)}else if(heading.parentElement.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement.parentElement)}const cardWindow=document.getElementsByClassName('content-wrapper')[0];setTimeout(()=>{cardWindow.scrollTop=heading.offsetTop-90},500)}function titleToId(title){return title.trim().toLowerCase().replaceAll(' ','-')}function toggleModal(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;if(icon.className==='expand-icon'){document.body.style.overflow='hidden';wrapper.classList.add('expand');icon.className='collapse-icon'}else{wrapper.classList.remove('expand');icon.className='expand-icon';document.body.style.overflow='scroll'}}function escapeModal(wrapper){wrapper.classList.remove('expand');for(icon of wrapper.getElementsByClassName('collapse-icon')){icon.className='expand-icon'}document.body.style.overflow='scroll'}function copy(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;const content=wrapper.getElementsByTagName('code')[0].textContent;navigator.clipboard.writeText(content);}
+ </script>
+ <script src="./resizer.js">
+ </script>
+</html>

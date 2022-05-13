@@ -1,0 +1,6 @@
+---
+title: totto
+type: Data-to-Text
+languages: English
+summary: ToTTo is a high-quality English table-to-text dataset with more than 100,000 examples in which a table from Wikipedia with highlighted cells is paired with a sentence that describes the highlighted cells. All examples in the dataset were post-edited in multiple steps to ensure that the targets are fully faithful to the input information.
+---

@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       Taskmaster
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         This is a large task-oriented dialog dataset in which a model has to produce the response. The input contains the context and a structured representation of what the model is supposed to generate. The input is already pre-formatted as string, turning this into a pure text-to-text problem.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/Taskmaster')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/Taskmaster">
           here
          </a>
          .
@@ -184,8 +183,8 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
+          <a href="https://github.com/google-research-datasets/Taskmaster/tree/master/TM-3-2020">
+           Github
           </a>
          </p>
         </div>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://arxiv.org/abs/2012.12458">
+           Arxiv
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Google researchers
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Karthik Krishnamoorthi
         </p>
        </div>
        <div class="field">
@@ -266,7 +265,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-4.0: Creative Commons Attribution 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         a movie ticketing dialog dataset with 23,789 annotated conversations.
         </p>
        </div>
        <div class="field">
@@ -279,7 +291,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -365,8 +377,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
+            <a href="https://github.com/google-research-datasets/Taskmaster/tree/master/TM-3-2020">
+             Github
             </a>
            </p>
           </div>
@@ -380,8 +392,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/google-research-datasets/Taskmaster/tree/master/TM-3-2020">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +407,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://arxiv.org/abs/2012.12458">
+             Arxiv
             </a>
            </p>
           </div>
@@ -425,7 +437,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Karthik Krishnamoorthi
            </p>
           </div>
           <div class="field">
@@ -438,7 +450,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            krishnamoorthi@google.com
            </p>
           </div>
          </div>
@@ -452,13 +464,11 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@article{byrne2020tickettalk,
+  title={TicketTalk: Toward human-level performance with end-to-end, transaction-based dialog systems},
+  author={Byrne, Bill and Krishnamoorthi, Karthik and Ganesh, Saravanan and Kale, Mihir Sanjay},
+  journal={arXiv preprint arXiv:2012.12458},
+  year={2020}
 }
 </code></pre>
           </div>
@@ -507,7 +517,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-4.0: Creative Commons Attribution 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,11 +530,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Dialog Response Generation
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Covered Dialects
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What dialects are covered? Are there multiple dialects per language?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
           <div class="field">
            <h4>
             Whose Language?
@@ -535,7 +558,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            NA
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            a movie ticketing dialog dataset with 23,789 annotated conversations.
            </p>
           </div>
          </div>
@@ -550,7 +586,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            Dialogues
            </p>
           </div>
          </div>
@@ -571,7 +607,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             other
             </code>
            </p>
           </div>
@@ -587,7 +623,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            NA
            </p>
           </div>
          </div>
@@ -602,7 +638,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Google researchers
            </p>
           </div>
           <div class="field">
@@ -615,7 +651,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Google
            </p>
           </div>
           <div class="field">
@@ -628,7 +664,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Tosin Adewumi (Luleå University of Technology)
            </p>
           </div>
          </div>
@@ -650,21 +686,31 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            <ul>
             <li>
              <code>
-              observation_1
+              gem_id
              </code>
-             : A string describing an observation / event.
+             : The unique example id
             </li>
             <li>
              <code>
-              observation_2
+              context
              </code>
-             : A string describing an observation / event.
+             : The context of the conversation
             </li>
             <li>
              <code>
-              label
+              target
              </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             : A string representing the target
+-
+             <code>
+              references
+             </code>
+             : A List representing the target(s)
+-
+             <code>
+              conversation_id
+             </code>
+             : A unique ID of the conversation
             </li>
            </ul>
           </div>
@@ -679,12 +725,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
+           <pre><code>{'context': "&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;rating.movie&lt;PRAV&gt;rated R&lt;C&gt;&lt;U&gt;I wanna see a movie&lt;A&gt;where are you?&lt;U&gt;spring hills kansas&lt;PN&gt;find_theaters&lt;PAN&gt;location&lt;PAV&gt;spring hills kansas&lt;PR&gt;find_theaters&lt;PRAN&gt;name.theater&lt;PRAV&gt;AMC Holiday Theater&lt;PRAV&gt;Cinemark Downtown&lt;A&gt;there are 2 theaters near you, the AMC Holiday Theater and Cinemark Downtown. Did you know which movie you'd like to see?&lt;U&gt;funny one please&lt;PN&gt;find_movies&lt;PAN&gt;location&lt;PAV&gt;spring hills kansas&lt;PR&gt;find_movies&lt;PRAN&gt;name.movie&lt;PRAV&gt;Not My Problem&lt;PRAV&gt;Family Jewels&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Not My Problem&lt;PAN&gt;attribute&lt;PAV&gt;name.genre&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.genre&lt;PRAV&gt;comedy&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Not My Problem&lt;PAN&gt;attribute&lt;PAV&gt;name.person&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.person&lt;PRAV&gt;Matt Damon&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Not My Problem&lt;PAN&gt;attribute&lt;PAV&gt;name.person&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.person&lt;PRAV&gt;Noah Schnapp&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Family Jewels&lt;PAN&gt;attribute&lt;PAV&gt;name.genre&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.genre&lt;PRAV&gt;romantic comedy&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Family Jewels&lt;PAN&gt;attribute&lt;PAV&gt;name.person&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.person&lt;PRAV&gt;Melissa McCarthy&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Family Jewels&lt;PAN&gt;attribute&lt;PAV&gt;name.person&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;name.person&lt;PRAV&gt;Ryan Reynolds&lt;A&gt;There's the comedy film called Not My Problem starring Matt Damon and Noah Schnapp. There's also a romantic comedy called Family Jewels starring Melissa McCarthy and Ryan Reynolds.&lt;U&gt;what ratings are there?&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Not My Problem&lt;PAN&gt;attribute&lt;PAV&gt;rating.movie&lt;PR&gt;get_movie_attribute&lt;PRAN&gt;rating.movie&lt;PRAV&gt;rated PG-13&lt;PN&gt;get_movie_attribute&lt;PAN&gt;name.movie&lt;PAV&gt;Family Jewels&lt;PAN&gt;attribute&lt;PAV&gt;rating.movie",
+ 'conversation_id': 'dlg-d1f52e7e-c34c-4e85-b406-85ed138b5068',
+ 'gem_id': 'Taskmaster-train-0',
+ 'references': ['Not My Problem is rated PG-13 and Family Jewels is rated R.'],
+ 'target': 'Not My Problem is rated PG-13 and Family Jewels is rated R.'}
 </code></pre>
           </div>
           <div class="field">
@@ -696,29 +741,39 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            -
+            <code>
+             train
+            </code>
+            : 187182 examples
+-
+            <code>
+             dev
+            </code>
+            : 23406 examples
+-
+            <code>
+             test
+            </code>
+            : 23316 examples
+           </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Reason for Structure
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the dataset structure determined?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
           <div class="field">
            <h4>
             How were labels chosen?
@@ -729,7 +784,25 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            NA
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does an outlier of the dataset in terms of length/perplexity/embedding look like?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+           <h4>
+           </h4>
+           <p>
+            NA
            </p>
           </div>
          </div>
@@ -779,11 +852,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +880,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            NA
            </p>
           </div>
          </div>
@@ -809,7 +895,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            Dialogue generation that makes sense
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
            </p>
           </div>
          </div>
@@ -829,7 +928,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -847,8 +946,36 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            gem_id field was added to the 3 data splits
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -869,14 +996,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
+           <p>
+            https://github.com/google-research-datasets/Taskmaster/tree/master/TM-3-2020
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Technical Terms
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Technical terms used in this card and the dataset and their definitions
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
           </div>
          </div>
         </div>
@@ -919,7 +1054,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            BLEU: 60
            </p>
           </div>
           <div class="field">
@@ -932,7 +1067,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -950,18 +1085,49 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             <code>
              BLEU
             </code>
-            ,
-            <code>
-             BERT-Score
-            </code>
-            ,
-            <code>
-             ROUGE
-            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            automatic evaluation
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1176,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1023,6 +1202,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            a movie ticketing dialog dataset with 23,789 annotated conversations.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1057,7 +1249,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            not validated
            </p>
           </div>
           <div class="field">
@@ -1070,7 +1262,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
@@ -1086,7 +1278,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Amazon Mechanical Turk
+             Participatory experiment
             </code>
            </p>
           </div>
@@ -1100,7 +1292,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            Ticketing
            </p>
           </div>
          </div>
@@ -1115,20 +1307,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Filter Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What were the selection criteria?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            NA
            </p>
           </div>
          </div>
@@ -1148,7 +1327,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1343,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1218,6 +1371,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for Using the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If not, what is the justification for reusing the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1250,7 +1416,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            It's based on ticketing without personal information
            </p>
           </div>
          </div>
@@ -1374,11 +1540,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            unsure
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1432,7 +1611,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            None
+            NA
            </p>
           </div>
          </div>
@@ -1455,7 +1634,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1487,6 +1666,45 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            NA
+           </p>
+          </div>
          </div>
         </div>
        </div>

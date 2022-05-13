@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       schema_guided_dialog
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         The GEM version of this dataset functions as a response generation dataset. The input specifies dialog acts that a model needs to verbalize. The Schema-Guided Dialog dataset is challenging since it comprises multiple domains from hotel and travel to restaurants, and a wide range of dialog acts. The context of each conversation is provided as well.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/schema_guided_dialog')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/schema_guided_dialog">
           here
          </a>
          .
@@ -184,9 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
-          </a>
+          n/a
          </p>
         </div>
         <div class="field">
@@ -194,8 +191,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://arxiv.org/abs/1909.05855">
+           Arxiv
           </a>
          </p>
         </div>
@@ -204,7 +201,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Abhinav Rastogi, Xiaoxue Zang, Srinivas Sunkara, Raghav Gupta, Pranav Khaitan, Amir Fayazi, Maria Wang, and Guan-Lin Chao
          </p>
         </div>
        </div>
@@ -225,7 +222,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Abhinav Rastogi
         </p>
        </div>
        <div class="field">
@@ -266,7 +263,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The goal of a speaker who generates the target utterance is to help users accomplish tasks including but not limited to finding flights, booking restaurants, searching for nearby events and movies.
         </p>
        </div>
        <div class="field">
@@ -279,7 +289,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         crowd-sourced
         </p>
        </div>
        <div class="field">
@@ -357,21 +367,6 @@ data = datasets.load_dataset('GEM/ART')
          <div class="scope">
           <div class="field">
            <h4>
-            Webpage
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What is the webpage for the dataset (if it exists)?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
-            </a>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Download
             <div class="tooltip">
              <div class="tooltip-text">
@@ -380,9 +375,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
-            </a>
+            [Github[(https://github.com/google-research-datasets/dstc8-schema-guided-dialogue)
            </p>
           </div>
           <div class="field">
@@ -395,8 +388,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://arxiv.org/abs/1909.05855">
+             Arxiv
             </a>
            </p>
           </div>
@@ -425,7 +418,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Abhinav Rastogi
            </p>
           </div>
           <div class="field">
@@ -438,7 +431,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            schema-guided-dst@google.com
            </p>
           </div>
          </div>
@@ -452,13 +445,15 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>{
+@inproceedings{rastogi2020towards,
+  title={Towards scalable multi-domain conversational agents: The schema-guided dialogue dataset},
+  author={Rastogi, Abhinav and Zang, Xiaoxue and Sunkara, Srinivas and Gupta, Raghav and Khaitan, Pranav},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={34},
+  number={05},
+  pages={8689--8696},
+  year={2020}
 }
 </code></pre>
           </div>
@@ -507,7 +502,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,7 +515,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Dialog Response Generation
            </p>
           </div>
          </div>
@@ -535,7 +530,21 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            The language structure is machine-generated, and the language realizations are produced by crowd workers.
+The dataset paper does not provide demographic information for the crowd workers.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The goal of a speaker who generates the target utterance is to help users accomplish tasks including but not limited to finding flights, booking restaurants, searching for nearby events and movies.
            </p>
           </div>
          </div>
@@ -550,7 +559,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            The Schema-Guided Dialogue (SGD) dataset contains 18K multi-domain task-oriented dialogues between a human and a virtual assistant, which covers 17 domains ranging from banks and events to media, calendar, travel, and weather.
+The language presents in the datset is only English.
+The SGD dataset provides a challenging testbed for a number of tasks in task-oriented dialogue, including language understanding, slot filling, dialogue state tracking and response generation.
+For the creation of the SGD dataset, they developed a multi-domain dialogue simulator that generates dialogue outlines over an arbitrary combination of APIs, dialogue states and system actions. Then, they used a crowd-sourcing procedure to paraphrase these outlines to natural language utterances.
+This novel crowd-sourcing procedure preserves all annotations obtained from the simulator and does not require any extra annotations after dialogue collection.
            </p>
           </div>
          </div>
@@ -587,7 +600,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Google
            </p>
           </div>
          </div>
@@ -602,7 +615,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Abhinav Rastogi, Xiaoxue Zang, Srinivas Sunkara, Raghav Gupta, Pranav Khaitan, Amir Fayazi, Maria Wang, and Guan-Lin Chao
            </p>
           </div>
           <div class="field">
@@ -615,7 +628,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Google
            </p>
           </div>
           <div class="field">
@@ -628,7 +641,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Wanyu Du wrote the initial data card and Yacine Jernite the data loader. Simon Mille updated the data card with the additional splits. Sebastian Gehrmann migrated the data card and loader to the v2 version and extended the missing information.
            </p>
           </div>
          </div>
@@ -647,24 +660,197 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <p>
+            Each dialog instance has the following fields:
+           </p>
            <ul>
             <li>
              <code>
-              observation_1
+              dialogue_id
              </code>
-             : A string describing an observation / event.
+             : A unique identifier for a dialogue.
             </li>
             <li>
              <code>
-              observation_2
+              services
              </code>
-             : A string describing an observation / event.
+             : A list of services present in the dialogue.
             </li>
             <li>
              <code>
-              label
+              turns
              </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
+             : A list of annotated system or user utterances. Each turn consists of the following fields:
+             <ul>
+              <li>
+               <code>
+                speaker
+               </code>
+               : The speaker for the turn, either
+               <code>
+                USER
+               </code>
+               or
+               <code>
+                SYSTEM
+               </code>
+               .
+              </li>
+              <li>
+               <code>
+                utterance
+               </code>
+               : A string containing the natural language utterance.
+              </li>
+              <li>
+               <code>
+                frames
+               </code>
+               : A list of frames, each frame containing annotations for a single service and consists of the following fields:
+               <ul>
+                <li>
+                 <code>
+                  service
+                 </code>
+                 : The name of the service corresponding to the frame. The slots and intents used in the following fields are taken from the schema of this service.
+                </li>
+                <li>
+                 <code>
+                  slots
+                 </code>
+                 : A list of slot spans in the utterance, only provided for non-categorical slots. Each slot span contains the following fields:
+                 <ul>
+                  <li>
+                   <code>
+                    slot
+                   </code>
+                   : The name of the slot.
+                  </li>
+                  <li>
+                   <code>
+                    start
+                   </code>
+                   : The index of the starting character in the utterance corresponding to the slot value.
+                  </li>
+                  <li>
+                   <code>
+                    exclusive_end
+                   </code>
+                   : The index of the character just after the last character corresponding to the slot value in the utterance.
+                  </li>
+                 </ul>
+                </li>
+                <li>
+                 <code>
+                  actions
+                 </code>
+                 : A list of actions corresponding to the system. Each action has the following fields:
+                 <ul>
+                  <li>
+                   <code>
+                    act
+                   </code>
+                   : The type of action.
+                  </li>
+                  <li>
+                   <code>
+                    slot
+                   </code>
+                   : (optional) A slot argument for some of the actions.
+                  </li>
+                  <li>
+                   <code>
+                    values
+                   </code>
+                   : (optional) A list of values assigned to the slot. If the values list is non-empty, then the slot must be present.
+                  </li>
+                  <li>
+                   <code>
+                    canonical_values
+                   </code>
+                   : (optional) The values in their canonicalized form as used by the service. It is a list of strings of the same length as values.
+                  </li>
+                 </ul>
+                </li>
+                <li>
+                 <code>
+                  service_call
+                 </code>
+                 : (system turns only, optional) The request sent to the service. It consists of the following fields:
+                 <ul>
+                  <li>
+                   <code>
+                    method
+                   </code>
+                   : The name of the intent or function of the service or API being executed.
+                  </li>
+                  <li>
+                   <code>
+                    parameters
+                   </code>
+                   : A pair of lists of the same lengths:
+                   <code>
+                    parameter_slot_name
+                   </code>
+                   contains slot names and
+                   <code>
+                    parameter_canonical_value
+                   </code>
+                   contains the corresponding values in their canonicalized form.
+                  </li>
+                 </ul>
+                </li>
+                <li>
+                 <code>
+                  service_results
+                 </code>
+                 : (system turns only, optional) A list of entities containing the results obtained from the service. It is only available for turns in which a service call is made. Each entity is represented as a pair of lists of the same length:
+                 <code>
+                  service_slot_name
+                 </code>
+                 contains slot names and
+                 <code>
+                  service_canonical_value
+                 </code>
+                 contains the corresponding canonical values.
+                </li>
+                <li>
+                 <code>
+                  state
+                 </code>
+                 : (user turns only) The dialogue state corresponding to the service. It consists of the following fields:
+                 <ul>
+                  <li>
+                   <code>
+                    active_intent
+                   </code>
+                   : The intent corresponding to the service of the frame which is currently being fulfilled by the system. It takes the value "NONE" if none of the intents are active.
+                  </li>
+                  <li>
+                   <code>
+                    requested_slots
+                   </code>
+                   : A list of slots requested by the user in the current turn.
+                  </li>
+                  <li>
+                   <code>
+                    slot_values
+                   </code>
+                   : A pair of lists of the same lengths:
+                   <code>
+                    slot_name
+                   </code>
+                   contains slot names and
+                   <code>
+                    slot_value_list
+                   </code>
+                   contains the corresponding lists of strings. For categorical slots, this list contains a single value assigned to the slot. For non-categorical slots, all the values in this list are spoken variations of each other and are equivalent (e.g, "6 pm", "six in the evening", "evening at 6" etc.).
+                  </li>
+                 </ul>
+                </li>
+               </ul>
+              </li>
+             </ul>
             </li>
            </ul>
           </div>
@@ -679,12 +865,64 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
+           <pre><code>{'dialogue_id': '1_00000',
+ 'services': ['Restaurants_1'],
+ 'turns':
+ {'frames':
+    [{'actions': [{'act': [6],
+      'canonical_values': [['FindRestaurants']],
+      'slot': ['intent'],
+      'values': [['FindRestaurants']]}],
+      'service': ['Restaurants_1'],
+      'service_call': [{'method': '',
+      'parameters': {'parameter_canonical_value': [],
+       'parameter_slot_name': []}}],
+      'service_results': [{'service_results_list': []}],
+      'slots': [{'exclusive_end': [], 'slot': [], 'start': []}],
+      'state': [{'active_intent': 'FindRestaurants',
+                 'requested_slots': [],
+                 'slot_values': {'slot_name': [], 'slot_value_list': []}}]},
+     {'actions': [{'act': [13],
+      'canonical_values': [[]],
+      'slot': ['city'],
+      'values': [[]]}],
+      'service': ['Restaurants_1'],
+      'service_call': [{'method': '',
+      'parameters': {'parameter_canonical_value': [],
+       'parameter_slot_name': []}}],
+      'service_results': [{'service_results_list': []}],
+      'slots': [{'exclusive_end': [], 'slot': [], 'start': []}],
+      'state': [{'active_intent': '',
+               'requested_slots': [],
+               'slot_values': {'slot_name': [], 'slot_value_list': []}}]},
+    ...,]}
+ 'speaker': [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+ 'utterance': [
+   'I am feeling hungry so I would like to find a place to eat.',
+   'Do you have a specific which you want the eating place to be located at?',
+   'I would like for it to be in San Jose.',
+   'Is there a specific cuisine type you enjoy, such as Mexican, Italian or something else?',
+   'I usually like eating the American type of food.',
+   'I see that at 71 Saint Peter there is a good restaurant which is in San Jose.',
+   'Can you give me the address of this restaurant.',
+   'If you want to go to this restaurant you can find it at 71 North San Pedro Street.',
+   'Can you give me the phone number that I can contact them with?',
+   'If you want to phone them you can at 408-971-8523.',
+   'Is there some other restaurant which you can suggest?',
+   'How would you like Bazille restaurant which is situated in San Jose.',
+   'Do you have another restaurant matching my needs? For example a restaurant which is economical and is located in Palo Alto.',
+   'I see that 7 restaurants suit to what you requested. Bird Dog seems as a good restaurant and is located in Palo Alto.',
+   'Alright, that seems good. I would like to make a booking at this restaurant.',
+   'For which time do you want the booking to be?',
+   'I will be eating there at 11:30 am so make it for then.',
+   'Can you please confirm that you want to book a table for 2 at 11:30 am at the Bird Dog restaurant in Palo Alto for today.',
+   'That suits me well. Can you tell me if they feature live music?',
+   'Your booking has been made without errors, but unfortunately they do not have live music.',
+   'Will I be able to find liquor there? Can you give me the address of their location?',
+   'The restaurant is located at 420 Ramona Street. Unfortunately they do not serve alcohol at the restaurant.',
+   'I appreciate it very much. That would be all.',
+   'Have a good time!'
+ ]}
 </code></pre>
           </div>
           <div class="field">
@@ -696,40 +934,70 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            The dataset is split into a train, validation, and test set with the following sizes:
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               Train
+              </th>
+              <th>
+               Validation
+              </th>
+              <th>
+               Test
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               # of dialogues
+              </td>
+              <td>
+               16142
+              </td>
+              <td>
+               2482
+              </td>
+              <td>
+               4201
+              </td>
+             </tr>
+             <tr>
+              <td>
+               # of turns
+              </td>
+              <td>
+               48426
+              </td>
+              <td>
+               7446
+              </td>
+              <td>
+               12603
+              </td>
+             </tr>
+            </tbody>
+           </table>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            How were labels chosen?
+            Splitting Criteria
             <div class="tooltip">
              <div class="tooltip-text">
-              How were the labels chosen?
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
              </div>
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            The data is generally split i.i.d, but some topics only appear in training and some only for testing. For example, the domains Messaging, Payment, and Train are test-only.
            </p>
           </div>
          </div>
@@ -779,11 +1047,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +1075,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            surface realization, compositionality.
            </p>
           </div>
          </div>
@@ -809,7 +1090,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            This dataset comprises a wide range of dialog capabilities and thus enables the evaluation of many more generation capabilities of comparable datasets. Its collection methodology ensures a high diversity but also high quality of the data.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The domains a lot more diverse than other datasets.
            </p>
           </div>
          </div>
@@ -829,7 +1123,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -842,13 +1136,249 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             data points modified
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how the new splits were created
+             </div>
+            </div>
+           </h4>
+           <p>
+            9 challenge sets for Schema-Guided Dialog were added to the GEM evaluation suite.
+           </p>
+           <ol>
+            <li>
+             We created subsets of the training and development sets of 500 randomly selected inputs each.
+            </li>
+            <li>
+             We applied 5 transformations to respectively 5 sets of 500 randomly selected inputs: (i) back-translation, (ii)-(iii) introduction of typographical errors, using Butterfingers with two thresholds (0.02 and 0.05), resulting in two sets with different amounts of typos introduced (there are more typos with the 0.05 threshold than with the 0.02 one), (iv) removal of final punctuations (when any), and (v) input scrambling, for which the order of the dialogue acts was randomly reassigned.
+            </li>
+            <li>
+             For the input size, we created subpopulations based on the number of dialogue acts in the input.
+            </li>
+           </ol>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               DA number
+              </th>
+              <th>
+               Frequency English
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               1
+              </td>
+              <td>
+               5049
+              </td>
+             </tr>
+             <tr>
+              <td>
+               2
+              </td>
+              <td>
+               2517
+              </td>
+             </tr>
+             <tr>
+              <td>
+               3
+              </td>
+              <td>
+               1328
+              </td>
+             </tr>
+             <tr>
+              <td>
+               4
+              </td>
+              <td>
+               469
+              </td>
+             </tr>
+             <tr>
+              <td>
+               5
+              </td>
+              <td>
+               335
+              </td>
+             </tr>
+             <tr>
+              <td>
+               6
+              </td>
+              <td>
+               256
+              </td>
+             </tr>
+             <tr>
+              <td>
+               7
+              </td>
+              <td>
+               46
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            We also split the test data according to the type of dialogue act, represented by cardinal numbers in the dataset.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               DA type
+              </th>
+              <th>
+               Frequency English
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               2
+              </td>
+              <td>
+               1397
+              </td>
+             </tr>
+             <tr>
+              <td>
+               3
+              </td>
+              <td>
+               983
+              </td>
+             </tr>
+             <tr>
+              <td>
+               4
+              </td>
+              <td>
+               1027
+              </td>
+             </tr>
+             <tr>
+              <td>
+               5
+              </td>
+              <td>
+               958
+              </td>
+             </tr>
+             <tr>
+              <td>
+               9
+              </td>
+              <td>
+               72
+              </td>
+             </tr>
+             <tr>
+              <td>
+               10
+              </td>
+              <td>
+               1024
+              </td>
+             </tr>
+             <tr>
+              <td>
+               11
+              </td>
+              <td>
+               1246
+              </td>
+             </tr>
+             <tr>
+              <td>
+               12
+              </td>
+              <td>
+               500
+              </td>
+             </tr>
+             <tr>
+              <td>
+               13
+              </td>
+              <td>
+               2078
+              </td>
+             </tr>
+             <tr>
+              <td>
+               15
+              </td>
+              <td>
+               715
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="field">
+           <h4>
+            Split Motivation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspects of the model's generation capacities were the splits created to test?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Generalization and Robustness.
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            We are focusing on the response-generation part of the dataset and thus reformatted the dataset to treat the service agent utterances as the targets to be generated and the previous customer utterance and the agent's dialog act as the input. We additionally reformat the dialog acts to directly conform to the format described in this
+            <a href="https://arxiv.org/abs/2004.15006">
+             paper
+            </a>
+            .
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -871,10 +1401,29 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <ul>
             <li>
-             Paper: https://arxiv.org/abs/1908.05739
+             <a href="https://arxiv.org/pdf/1909.05855.pdf">
+              Paper for dataset and DST baseline
+             </a>
             </li>
             <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
+             <a href="https://arxiv.org/pdf/2002.01359.pdf">
+              DSTC8 overview paper
+             </a>
+            </li>
+            <li>
+             <a href="https://github.com/google-research/google-research/tree/master/schema_guided_dst">
+              Code for DST baseline
+             </a>
+            </li>
+            <li>
+             <a href="https://arxiv.org/pdf/2004.15006.pdf">
+              Natural language generation baseline paper
+             </a>
+            </li>
+            <li>
+             <a href="https://ai.googleblog.com/2019/10/introducing-schema-guided-dialogue.html">
+              Blog post announcing the dataset
+             </a>
             </li>
            </ul>
           </div>
@@ -919,7 +1468,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Surface realization and compositionally.
            </p>
           </div>
           <div class="field">
@@ -948,11 +1497,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             BLEU
+             BLEURT
             </code>
             ,
             <code>
-             BERT-Score
+             BLEU
             </code>
             ,
             <code>
@@ -962,6 +1511,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The original paper focused on the task of dialog state prediction instead of response generation and thus did not suggest any set of metrics.
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1572,21 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            Previous multi-domain task-oriented dialogue datsets do not sufficiently capture the real-world challenges in virtual assistants, since they cover few domains and assume a single static ontology per domain.
+The SGD datset is created to cover 17 domains with over 16K dialogues, and contain multiple different APIs in most domains, many of which have overlapping functionalities but different interfaces, which reflects common real-world scenarios.
+The wide range of available annotations can be used for intent prediction, slot filling, dialogue state tracking, policy imitation learning, language generation, user simulation learning, among other tasks in large-scale virtual assistants.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1023,6 +1600,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The goal of a speaker who generates the target utterance is to help users accomplish tasks including but not limited to finding flights, booking restaurants, searching for nearby events and movies.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1633,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Machine-generated
             </code>
            </p>
           </div>
@@ -1057,7 +1647,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            not validated
            </p>
           </div>
           <div class="field">
@@ -1070,24 +1660,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Where was it crowdsourced?
+            Generation Method Link
             <div class="tooltip">
              <div class="tooltip-text">
-              If crowdsourced, where from?
+              If text was machine-generated for the dataset, provide a link to the generation method if available (N/A otherwise).
              </div>
             </div>
            </h4>
            <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
+            <a href="https://github.com/google-research-datasets/dstc8-schema-guided-dialogue">
+             Github
+            </a>
            </p>
           </div>
           <div class="field">
@@ -1100,7 +1690,8 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            The dataset covers the following domains: Alarm, Banks, Buses, Calendar, Events, Flights, Homes, Hotels, Media, Messaging, Movies, Music, Payment, RentalCars, Restaurants, RideSharing, Services, Train, Travel, and Weather. The domain ‘Service’ includes salons, dentists, doctors etc. The ‘Alarm’, ‘Messaging’, ‘Payment’ and ‘Train’ domains are only present in the dev or test sets.
+to test generalization to new domains.
            </p>
           </div>
          </div>
@@ -1115,20 +1706,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            The dialogue outlines are first generated by a simulator. The dialogue simulator interacts with the services to generate dialogue outlines. It consists of two agents playing the roles of the user and the system, interacting with each other using a finite set of actions specified through dialogue acts over a probabilistic automaton designed to capture varied dialogue trajectories. It is worth noting that the simulation automaton does not include any domain-specific constraints: all domain-specific constraints are encoded in the schema and scenario.
            </p>
-          </div>
-          <div class="field">
-           <h4>
-            Filter Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What were the selection criteria?
-             </div>
-            </div>
-           </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            The dialogue paraphrasing framework then converts the outlines generated by the simulator into a natural conversation. Users may refer to the slot values in the dialogue acts in various different ways during the conversation, e.g., “los angeles” may be referred to as “LA” or “LAX”. To introduce these natural variations in the slot values, different slot values are replaced with a randomly selected variation while being kept consistent across user turns in a dialogue. The actions are then converted to pseudo-natural language utterances using a set of manually defined action-to-text templates, and the resulting utterances for the different actions in a turn are concatenated together.
            </p>
           </div>
          </div>
@@ -1148,7 +1729,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            crowd-sourced
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            unknown
            </p>
           </div>
           <div class="field">
@@ -1161,7 +1755,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            unknown
            </p>
           </div>
           <div class="field">
@@ -1179,6 +1773,32 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            0
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            0
+           </p>
+          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1191,7 +1811,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            The dialogue transformed by these steps is sent to the crowd workers to be reformulated into more natural language. One crowd worker is tasked with paraphrasing all utterances of a dialogue to ensure naturalness and coherence. The crowd workers are asked to exactly repeat the slot values in their paraphrases so that the span indices for the slots can be recovered via string matching.
            </p>
           </div>
          </div>
@@ -1218,6 +1838,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for Using the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If not, what is the justification for reusing the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            While no policy is reported, we assume that one was in place for the collection.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1250,7 +1883,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            The SGD dataset does not use identity categories and does not contain sensitive data.
            </p>
           </div>
          </div>
@@ -1379,6 +2012,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Due to the combination of the automatic generation and crowd rater paraphasing, the language can be very formulaic. While this may be acceptable for the model part (i.e., we may actually desire an automated agent to form formulaic responses), the input utterances of the simulated customers likely do not cover the entire spectrum of the English language.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1422,19 +2068,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Potential PII Risk
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            None
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="licenses">
@@ -1455,7 +2088,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1470,7 +2103,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1487,6 +2120,33 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dialogues under each domain distributed unevenly, where the flights domain has 3644 dialogues while the payment domain only contains 222 dialogues.
+Besides, all dialogues are paraphrased by crowd-workers, and it is possible that crow-workers with different culture backgrounds will exhibit biased opinions.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Since the initial data was automatically generated, the coverage of entity names is necessarily biased. An agent thus needs to be evaluated in a more realistic environment.
+           </p>
+          </div>
          </div>
         </div>
        </div>

@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       squad_v2
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         SQuAD2.0 is a dataset that tests the ability of a system to not only answer reading comprehension questions, but also abstain when presented with a question that cannot be answered based on the provided paragraph.  F1 score is used to evaluate models on the leaderboard. In GEM, we are using this dataset for the question-generation task in which a model should generate squad-like questions from an input text.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/squad_v2')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/squad_v2">
           here
          </a>
          .
@@ -184,7 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
+          <a href="https://rajpurkar.github.io/SQuAD-explorer/">
            Website
           </a>
          </p>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://arxiv.org/abs/1806.03822v1">
+           Arxiv
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Pranav Rajpurkar,  Robin Jia and Percy Liang
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Robin Jia
         </p>
        </div>
        <div class="field">
@@ -266,7 +265,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Given an input passage and an answer span, the  goal is to generate a question that asks for the answer.
         </p>
        </div>
        <div class="field">
@@ -279,7 +291,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         crowd-sourced
         </p>
        </div>
        <div class="field">
@@ -292,7 +304,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         unlikely
         </p>
        </div>
       </div>
@@ -365,7 +377,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
+            <a href="https://rajpurkar.github.io/SQuAD-explorer/">
              Website
             </a>
            </p>
@@ -380,8 +392,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://rajpurkar.github.io/SQuAD-explorer/">
+             Website
             </a>
            </p>
           </div>
@@ -395,8 +407,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://arxiv.org/abs/1806.03822v1">
+             Arxiv
             </a>
            </p>
           </div>
@@ -410,7 +422,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -425,7 +437,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Robin Jia
            </p>
           </div>
           <div class="field">
@@ -438,7 +450,22 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            robinjia@stanford.edu
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Link
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a link to the leaderboard.
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://rajpurkar.github.io/SQuAD-explorer/">
+             Website
+            </a>
            </p>
           </div>
          </div>
@@ -452,15 +479,26 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{Rajpurkar2018KnowWY,
+  title={Know What You Don’t Know: Unanswerable Questions for SQuAD},
+  author={Pranav Rajpurkar and Robin Jia and Percy Liang},
+  booktitle={ACL},
+  year={2018}
 }
 </code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Briefly describe how the leaderboard evaluates models.
+             </div>
+            </div>
+           </h4>
+           <p>
+            SQuAD2.0 tests the ability of a system to not only answer reading comprehension questions, but also abstain when presented with a question that cannot be answered based on the provided paragraph.  F1 score is used to evaluate models on the leaderboard.
+           </p>
           </div>
          </div>
         </div>
@@ -507,7 +545,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -520,22 +558,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Question Generation
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Whose Language?
+            Communicative Goal
             <div class="tooltip">
              <div class="tooltip-text">
-              Whose language is in the dataset?
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
              </div>
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            Given an input passage and an answer span, the  goal is to generate a question that asks for the answer.
            </p>
           </div>
          </div>
@@ -550,7 +588,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            The idea behind SQuAD2.0 dataset is to make the models understand when a question cannot be answered given a context. This will help in building models such that they know what they don't know, and therefore make the models understand language at a deeper level. The tasks that can be supported by the dataset are machine reading comprehension, extractive QA, and question generation.
            </p>
           </div>
          </div>
@@ -571,7 +609,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             industry
+             academic
             </code>
            </p>
           </div>
@@ -587,7 +625,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Stanford University
            </p>
           </div>
          </div>
@@ -602,7 +640,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Pranav Rajpurkar,  Robin Jia and Percy Liang
            </p>
           </div>
           <div class="field">
@@ -615,7 +653,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Facebook and NSF Graduate Research Fellowship under Grant No. DGE-114747
            </p>
           </div>
           <div class="field">
@@ -628,7 +666,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            (Abinaya Mahendiran)[https://github.com/AbinayaM02], Manager Data Science, NEXT Labs,
            </p>
           </div>
          </div>
@@ -647,26 +685,9 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
+           <p>
+            The data fields are the same among all splits.
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -679,11 +700,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
+           <p>
+            Here is an example of a validation data point. This example was too long and was cropped:
+           </p>
            <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
+    "gem_id": "gem-squad_v2-validation-1",
+    "id": "56ddde6b9a695914005b9629",
+    "answers": {
+        "answer_start": [94, 87, 94, 94],
+        "text": ["10th and 11th centuries", "in the 10th and 11th centuries", "10th and 11th centuries", "10th and 11th centuries"]
+    },
+    "context": "\"The Normans (Norman: Nourmands; French: Normands; Latin: Normanni) were the people who in the 10th and 11th centuries gave thei...",
+    "question": "When were the Normans in Normandy?",
+    "title": "Normans"
 }
 </code></pre>
           </div>
@@ -696,42 +725,46 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            The original SQuAD2.0 dataset has only training and dev (validation) splits. The train split is further divided into test split and added as part of the GEM datasets.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               name
+              </th>
+              <th align="right">
+               train
+              </th>
+              <th align="right">
+               validation
+              </th>
+              <th align="right">
+               test
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               squad_v2
+              </td>
+              <td align="right">
+               90403
+              </td>
+              <td align="right">
+               11873
+              </td>
+              <td align="right">
+               39916
+              </td>
+             </tr>
+            </tbody>
+           </table>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            How were labels chosen?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How were the labels chosen?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -786,6 +819,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Ability that the Dataset measures
             <div class="tooltip">
              <div class="tooltip-text">
@@ -794,7 +840,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Reasoning capability
            </p>
           </div>
          </div>
@@ -809,7 +855,8 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            SQuAD2.0 will encourage the development of new reading comprehension models
+that know what they don’t know, and therefore understand language at a deeper level. It can also help in building better models for answer-aware question generation .
            </p>
           </div>
          </div>
@@ -829,7 +876,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -842,11 +889,42 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how the new splits were created
+             </div>
+            </div>
+           </h4>
+           <p>
+            The train(80%) and validation(10%) split of SQuAD2.0 are made available to public whereas the  test(10%) split is not available.
+           </p>
+           <p>
+            As part of GEM, the train split, 80% of the original data is split into two train split (90%) and test split (remaining 10%). The idea is to provide all three splits for the users to use.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -860,24 +938,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
-          </div>
          </div>
         </div>
        </div>
@@ -919,7 +979,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Extractive QA, Question Generation
            </p>
           </div>
           <div class="field">
@@ -932,7 +992,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -948,20 +1008,74 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             BLEU
+             Other: Other Metrics
             </code>
             ,
             <code>
-             BERT-Score
+             METEOR
             </code>
             ,
             <code>
              ROUGE
             </code>
+            ,
+            <code>
+             BLEU
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             Extractive QA  uses Exact Match and F1 Score
+            </li>
+            <li>
+             Question generation users METEOR, ROUGE-L, BLEU-4
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Question generation users METEOR, ROUGE-L, BLEU-4
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            @article{Dong2019UnifiedLM,
+  title={Unified Language Model Pre-training for Natural Language Understanding and Generation},
+  author={Li Dong and Nan Yang and Wenhui Wang and Furu Wei and Xiaodong Liu and Yu Wang and Jianfeng Gao and M. Zhou and Hsiao-Wuen Hon},
+  journal={ArXiv},
+  year={2019},
+  volume={abs/1905.03197}
+}
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1124,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset is curated in three stages: 
+- Curating passages, 
+- Crowdsourcing question-answers on those passages,
+- Obtaining additional answers
+As part of SQuAD1.1, 10000 high-quality articles from English Wikipedia is extracted using Project Nayuki’s Wikipedia’s internal PageRanks, from which 536 articles are sampled uniformly at random. From each of these articles, individual paragraphs are extracted, stripping away images, figures, tables, and discarding paragraphs shorter than 500 characters.
+           </p>
+           <p>
+            SQuAD2.0 combines the 100,000 questions in SQuAD1.1 with over 50,000 unanswerable questions written adversarially by crowdworkers to look similar to answerable ones.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1018,11 +1152,38 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            To build systems that not only answer questions when possible, but also determine when no
+answer is supported by the paragraph and abstain from answering.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <p>
+            Wikipedia
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1204,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Found
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Where was it found?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If found, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Single website
             </code>
            </p>
           </div>
@@ -1077,21 +1253,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Topics Covered
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1100,22 +1261,23 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            The dataset contains 536 articles covering a wide range of topics, from musical celebrities to abstract concepts.
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Language Producers
+            Data Preprocessing
             <div class="tooltip">
              <div class="tooltip-text">
-              What further information do we have on the language producers?
+              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
              </div>
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
+            From the sampled articles from Wikipedia, individual paragraphs are extracted, stripping
+away images, figures, tables, and discarding paragraphs shorter than 500 characters  and partitioned into training(80%),  development set(10%) and test set(10%).
            </p>
           </div>
           <div class="field">
@@ -1128,7 +1290,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            To retrieve high-quality articles, Project Nayuki’s Wikipedia’s internal PageRanks was used to obtain the top 10000 articles of English Wikipedia, from which 536 articles are sampled uniformly at random.
            </p>
           </div>
          </div>
@@ -1148,7 +1310,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            crowd-sourced
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            unknown
            </p>
           </div>
           <div class="field">
@@ -1161,7 +1336,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -1174,11 +1349,69 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            none
+            validated by another rater
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Crowdworkers from the United States or Canada with a 97% HIT acceptance rate, a minimum of 1000 HITs, were employed to create questions.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            0
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            0
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Which Annotation Service
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Which annotation services were used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+            ,
+            <code>
+             Amazon Mechanical Turk
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1191,7 +1424,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
+            For SQuAD 1.1 ,  crowdworkers were tasked with asking and answering up to 5 questions on the
+content of that paragraph. The questions had to be entered in a text field, and the answers had to be
+highlighted in the paragraph.
+           </p>
+           <p>
+            For SQuAD2.0, each task consisted of an entire article from SQuAD 1.1. For each paragraph in the article, workers were asked to pose up to five questions that were impossible to answer
+based on the paragraph alone, while referencing entities in the paragraph and ensuring that a plausible answer is present.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Questions from workers who wrote 25 or fewer questions on an article is removed; this filter
+helped remove noise from workers who had trouble understanding the task, and therefore quit before completing the whole article. This filter to both SQuAD2.0 and the existing answerable questions from SQuAD 1.1.
            </p>
           </div>
          </div>
@@ -1235,22 +1488,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            unlikely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Any PII Identification?
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              Did the curators use any automatic/manual method to identify PII in the dataset?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            no identification
            </p>
           </div>
          </div>
@@ -1374,7 +1627,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -1422,19 +1675,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Potential PII Risk
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            None
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="licenses">
@@ -1444,36 +1684,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Copyright Restrictions on the Dataset
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Based on your answers in the Intended Use part of the Data Overview Section, which of the following best describe the copyright and licensing status of the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             public domain
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Copyright Restrictions on the Language Data
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Based on your answers in the Language part of the Data Curation Section, which of the following best describe the copyright and licensing status of the underlying language data?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             public domain
-            </code>
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>

@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       indonlg
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         IndoNLG is a collection of various Indonesian, Javanese, and Sundanese NLG tasks including summarization, question answering, chit-chat, and three different pairs of machine translation (MT) tasks.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/indonlg')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/indonlg">
           here
          </a>
          .
@@ -184,8 +183,8 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
+          <a href="https://github.com/indobenchmark/indonlg">
+           Github
           </a>
          </p>
         </div>
@@ -194,8 +193,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/2021.emnlp-main.699">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +203,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Samuel Cahyawijaya, Genta Indra Winata, Bryan Wilie, Karissa Vincentio, Xiaohong Li, Adhiguna Kuncoro, Sebastian Ruder, Zhi Yuan Lim, Syafri Bahar, Masayu Leylia Khodra, Ayu Purwarianti, Pascale Fung
          </p>
         </div>
        </div>
@@ -225,7 +224,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Genta Indra Winata
         </p>
        </div>
        <div class="field">
@@ -238,7 +237,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no
+         yes
         </p>
        </div>
        <div class="field">
@@ -252,7 +251,15 @@ data = datasets.load_dataset('GEM/ART')
         </h4>
         <p>
          <code>
-          English
+          Indonesian
+         </code>
+         ,
+         <code>
+          Javanese
+         </code>
+         ,
+         <code>
+          Sundanese
          </code>
         </p>
        </div>
@@ -266,7 +273,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         mit: MIT License
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Generate a response according to the context and text.
         </p>
        </div>
        <div class="field">
@@ -279,7 +299,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -292,7 +312,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         no PII
+         unlikely
         </p>
        </div>
       </div>
@@ -365,8 +385,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
+            <a href="https://github.com/indobenchmark/indonlg">
+             Github
             </a>
            </p>
           </div>
@@ -380,8 +400,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/indobenchmark/indonlg">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +415,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/2021.emnlp-main.699">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -425,7 +445,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Genta Indra Winata
            </p>
           </div>
           <div class="field">
@@ -438,7 +458,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            gentaindrawinata@gmail.com
            </p>
           </div>
          </div>
@@ -452,14 +472,7 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
-}
+           <pre><code>@inproceedings{cahyawijaya-etal-2021-indonlg, title =  '{I}ndo{NLG}: Benchmark and Resources for Evaluating {I}ndonesian Natural Language Generation ', author =  'Cahyawijaya, Samuel and Winata, Genta Indra and Wilie, Bryan and Vincentio, Karissa and Li, Xiaohong and Kuncoro, Adhiguna and Ruder, Sebastian and Lim, Zhi Yuan and Bahar, Syafri and Khodra, Masayu and Purwarianti, Ayu and Fung, Pascale ', booktitle =  'Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing ', month = nov, year =  '2021 ', address =  'Online and Punta Cana, Dominican Republic ', publisher =  'Association for Computational Linguistics ', url =  'https://aclanthology.org/2021.emnlp-main.699 ', pages =  '8875--8898 ', abstract =  'Natural language generation (NLG) benchmarks provide an important avenue to measure progress and develop better NLG systems. Unfortunately, the lack of publicly available NLG benchmarks for low-resource languages poses a challenging barrier for building NLG systems that work well for languages with limited amounts of data. Here we introduce IndoNLG, the first benchmark to measure natural language generation (NLG) progress in three low-resource{---}yet widely spoken{---}languages of Indonesia: Indonesian, Javanese, and Sundanese. Altogether, these languages are spoken by more than 100 million native speakers, and hence constitute an important use case of NLG systems today. Concretely, IndoNLG covers six tasks: summarization, question answering, chit-chat, and three different pairs of machine translation (MT) tasks. We collate a clean pretraining corpus of Indonesian, Sundanese, and Javanese datasets, Indo4B-Plus, which is used to pretrain our models: IndoBART and IndoGPT. We show that IndoBART and IndoGPT achieve competitive performance on all tasks{---}despite using only one-fifth the parameters of a larger multilingual model, mBART-large (Liu et al., 2020). This finding emphasizes the importance of pretraining on closely related, localized languages to achieve more efficient learning and faster inference at very low-resource languages like Javanese and Sundanese. ',}
 </code></pre>
           </div>
          </div>
@@ -479,7 +492,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -493,7 +506,15 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             English
+             Indonesian
+            </code>
+            ,
+            <code>
+             Javanese
+            </code>
+            ,
+            <code>
+             Sundanese
             </code>
            </p>
           </div>
@@ -507,7 +528,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            mit: MIT License
            </p>
           </div>
           <div class="field">
@@ -520,22 +541,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Summarization
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Whose Language?
+            Communicative Goal
             <div class="tooltip">
              <div class="tooltip-text">
-              Whose language is in the dataset?
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
              </div>
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            Generate a response according to the context and text.
            </p>
           </div>
          </div>
@@ -550,7 +571,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            IndoNLG is a collection of Natural Language Generation (NLG) resources for Bahasa Indonesia with 10 downstream tasks.
            </p>
           </div>
          </div>
@@ -571,6 +592,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
+             academic
+            </code>
+            ,
+            <code>
              industry
             </code>
            </p>
@@ -587,7 +612,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The Hong Kong University of Science and Technology, Gojek, Institut Teknologi Bandung, Universitas Multimedia Nusantara, DeepMind, Prosa.ai
            </p>
           </div>
          </div>
@@ -602,7 +627,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+            Samuel Cahyawijaya, Genta Indra Winata, Bryan Wilie, Karissa Vincentio, Xiaohong Li, Adhiguna Kuncoro, Sebastian Ruder, Zhi Yuan Lim, Syafri Bahar, Masayu Leylia Khodra, Ayu Purwarianti, Pascale Fung
            </p>
           </div>
           <div class="field">
@@ -615,7 +640,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            The Hong Kong University of Science and Technology, Gojek, Institut Teknologi Bandung, Universitas Multimedia Nusantara, DeepMind, Prosa.ai
            </p>
           </div>
           <div class="field">
@@ -628,7 +653,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Genta Indra Winata (The Hong Kong University of Science and Technology)
            </p>
           </div>
          </div>
@@ -638,100 +663,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
         </h3>
         <div class="row">
          <div class="scope">
-          <div class="field">
-           <h4>
-            Data Fields
-            <div class="tooltip">
-             <div class="tooltip-text">
-              List and describe the fields present in the dataset.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Example Instance
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Provide a JSON formatted example of a typical instance in the dataset.
-             </div>
-            </div>
-           </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
-</code></pre>
-          </div>
-          <div class="field">
-           <h4>
-            Data Splits
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Describe and name the splits in the dataset if there are more than one.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            How were labels chosen?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How were the labels chosen?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -779,39 +714,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
             no
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Ability that the Dataset measures
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Whether models can reason abductively about a given pair of observations.
-           </p>
-          </div>
-         </div>
-         <div class="scope">
-          <div class="field">
-           <h4>
-            Why is the Dataset in GEM?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What does this dataset contribute toward better generation evaluation and why is it part of GEM?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="gem-specific-curation">
@@ -829,7 +751,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -847,6 +769,21 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -860,24 +797,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
-          </div>
          </div>
         </div>
        </div>
@@ -919,7 +838,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Dialog understanding, summarization, translation
            </p>
           </div>
           <div class="field">
@@ -932,7 +851,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -950,18 +869,36 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             <code>
              BLEU
             </code>
-            ,
-            <code>
-             BERT-Score
-            </code>
-            ,
-            <code>
-             ROUGE
-            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            BLEU
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            BLEU evaluates the generation quality.
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1057,7 +994,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            validated by crowdworker
+            validated by data curator
            </p>
           </div>
           <div class="field">
@@ -1070,7 +1007,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
@@ -1086,51 +1023,12 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Amazon Mechanical Turk
+             Participatory experiment
             </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Topics Covered
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Does the language in the dataset focus on specific topics? How would you describe them?
-             </div>
-            </div>
-           </h4>
-           <p>
-            No
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Language Producers
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What further information do we have on the language producers?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Filter Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What were the selection criteria?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="structured-annotations">
@@ -1148,7 +1046,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1062,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1211,13 +1083,39 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Annotators agree using the dataset for research purpose.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Consented Downstream Use
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What other downstream uses of the data did the original data creators and the data curators consent to?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Any
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1235,22 +1133,22 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no PII
+            unlikely
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for no PII
+            Categories of PII
             <div class="tooltip">
              <div class="tooltip-text">
-              Provide a justification for selecting `no PII` above.
+              What categories of PII are present or suspected in the data?
              </div>
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            ``
            </p>
           </div>
          </div>
@@ -1350,7 +1248,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -1432,7 +1330,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            None
+            No
            </p>
           </div>
          </div>
@@ -1455,7 +1353,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license
             </code>
            </p>
           </div>
@@ -1470,7 +1368,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license
             </code>
            </p>
           </div>

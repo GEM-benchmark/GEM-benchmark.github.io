@@ -1,0 +1,6 @@
+---
+title: e2e_nlg
+type: Data-to-Text
+languages: English
+summary: The E2E NLG dataset is an English benchmark dataset for data-to-text models that verbalize a set of 2-9 key-value attribute pairs in the restaurant domain. The version used for GEM is the cleaned E2E NLG dataset, which filters examples with hallucinations and outputs that don't fully cover all input attributes.
+---

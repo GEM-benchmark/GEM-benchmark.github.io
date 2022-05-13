@@ -1,0 +1,6 @@
+---
+title: indonlg
+type: Summarization
+languages: Indonesian, Javanese, Sundanese
+summary: IndoNLG is a collection of various Indonesian, Javanese, and Sundanese NLG tasks including summarization, question answering, chit-chat, and three different pairs of machine translation (MT) tasks.
+---

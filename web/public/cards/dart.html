@@ -156,23 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       ART
+       dart
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.
-This data loader focuses on abductive NLG: a conditional English generation task for explaining given observations in natural language.
+         DART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format. The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still retaining the full information.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/ART')
+data = datasets.load_dataset('GEM/dart')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/ART">
+         <a href="https://huggingface.co/datasets/GEM/dart">
           here
          </a>
          .
@@ -184,9 +183,7 @@ data = datasets.load_dataset('GEM/ART')
           website
          </h4>
          <p>
-          <a href="http://abductivecommonsense.xyz/">
-           Website
-          </a>
+          n/a
          </p>
         </div>
         <div class="field">
@@ -194,8 +191,8 @@ data = datasets.load_dataset('GEM/ART')
           paper
          </h4>
          <p>
-          <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-           OpenReview
+          <a href="https://aclanthology.org/2021.naacl-main.37/">
+           ACL Anthology
           </a>
          </p>
         </div>
@@ -204,7 +201,7 @@ data = datasets.load_dataset('GEM/ART')
           authors
          </h4>
          <p>
-          Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
+          Linyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang, Aadit Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad Zaidi, Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong, Richard Socher, Nazneen Fatema Rajani
          </p>
         </div>
        </div>
@@ -225,7 +222,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         Chandra Bhagavatulla
+         Dragomir Radev, Rui Zhang, Nazneen Rajani
         </p>
        </div>
        <div class="field">
@@ -266,7 +263,20 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         apache-2.0: Apache License 2.0
+         mit: MIT License
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The speaker is required to produce coherent sentences and construct a trees structured ontology of the column headers.
         </p>
        </div>
        <div class="field">
@@ -279,7 +289,7 @@ data = datasets.load_dataset('GEM/ART')
          </div>
         </h4>
         <p>
-         automatically created
+         none
         </p>
        </div>
        <div class="field">
@@ -357,21 +367,6 @@ data = datasets.load_dataset('GEM/ART')
          <div class="scope">
           <div class="field">
            <h4>
-            Webpage
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What is the webpage for the dataset (if it exists)?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <a href="http://abductivecommonsense.xyz/">
-             Website
-            </a>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Download
             <div class="tooltip">
              <div class="tooltip-text">
@@ -380,8 +375,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">
-             Google Storage
+            <a href="https://github.com/Yale-LILY/dart">
+             Github
             </a>
            </p>
           </div>
@@ -395,8 +390,8 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            <a href="https://openreview.net/pdf?id=Byg1v1HKDB">
-             OpenReview
+            <a href="https://aclanthology.org/2021.naacl-main.37/">
+             ACL Anthology
             </a>
            </p>
           </div>
@@ -410,7 +405,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -425,7 +420,7 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            Chandra Bhagavatulla
+            Dragomir Radev, Rui Zhang, Nazneen Rajani
            </p>
           </div>
           <div class="field">
@@ -438,7 +433,22 @@ data = datasets.load_dataset('GEM/ART')
             </div>
            </h4>
            <p>
-            chandrab@allenai.org
+            {dragomir.radev, r.zhang}@yale.edu, {nazneen.rajani}@salesforce.com
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Link
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a link to the leaderboard.
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://github.com/Yale-LILY/dart#leaderboard">
+             Leaderboard
+            </a>
            </p>
           </div>
          </div>
@@ -452,15 +462,69 @@ data = datasets.load_dataset('GEM/ART')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{
-Bhagavatula2020Abductive,
-title={Abductive Commonsense Reasoning},
-author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=Byg1v1HKDB}
+           <pre><code>@inproceedings{nan-etal-2021-dart,
+    title = "{DART}: Open-Domain Structured Data Record to Text Generation",
+    author = "Nan, Linyong  and
+      Radev, Dragomir  and
+      Zhang, Rui  and
+      Rau, Amrit  and
+      Sivaprasad, Abhinand  and
+      Hsieh, Chiachun  and
+      Tang, Xiangru  and
+      Vyas, Aadit  and
+      Verma, Neha  and
+      Krishna, Pranav  and
+      Liu, Yangxiaokang  and
+      Irwanto, Nadia  and
+      Pan, Jessica  and
+      Rahman, Faiaz  and
+      Zaidi, Ahmad  and
+      Mutuma, Mutethia  and
+      Tarabar, Yasin  and
+      Gupta, Ankit  and
+      Yu, Tao  and
+      Tan, Yi Chern  and
+      Lin, Xi Victoria  and
+      Xiong, Caiming  and
+      Socher, Richard  and
+      Rajani, Nazneen Fatema",
+    booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jun,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.naacl-main.37",
+    doi = "10.18653/v1/2021.naacl-main.37",
+    pages = "432--447",
+    abstract = "We present DART, an open domain structured DAta Record to Text generation dataset with over 82k instances (DARTs). Data-to-text annotations can be a costly process, especially when dealing with tables which are the major source of structured data and contain nontrivial structures. To this end, we propose a procedure of extracting semantic triples from tables that encodes their structures by exploiting the semantic dependencies among table headers and the table title. Our dataset construction framework effectively merged heterogeneous sources from open domain semantic parsing and spoken dialogue systems by utilizing techniques including tree ontology annotation, question-answer pair to declarative sentence conversion, and predicate unification, all with minimum post-editing. We present systematic evaluation on DART as well as new state-of-the-art results on WebNLG 2017 to show that DART (1) poses new challenges to existing data-to-text datasets and (2) facilitates out-of-domain generalization. Our data and code can be found at https://github.com/Yale-LILY/dart.",
 }
 </code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Leaderboard Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Briefly describe how the leaderboard evaluates models.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Several state-of-the-art table-to-text models were evaluated on DART, such as BART (
+            <a href="https://arxiv.org/pdf/1910.13461.pdf">
+             Lewis et al., 2020
+            </a>
+            ), Seq2Seq-Att (
+            <a href="https://webnlg-challenge.loria.fr/files/melbourne_report.pdf">
+             MELBOURNE
+            </a>
+            ) and End-to-End Transformer (
+            <a href="https://arxiv.org/pdf/1908.09022.pdf">
+             Castro Ferreira et al., 2019
+            </a>
+            ).
+The leaderboard reports BLEU, METEOR, TER, MoverScore, BERTScore and BLEURT scores.
+           </p>
           </div>
          </div>
         </div>
@@ -507,7 +571,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            apache-2.0: Apache License 2.0
+            mit: MIT License
            </p>
           </div>
           <div class="field">
@@ -520,11 +584,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Reasoning
+            Data-to-Text
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Covered Dialects
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What dialects are covered? Are there multiple dialects per language?
+             </div>
+            </div>
+           </h4>
+           <p>
+            It is an aggregated from multiple other datasets that use general US-American or British English without differentiation between dialects.
+           </p>
+          </div>
           <div class="field">
            <h4>
             Whose Language?
@@ -535,7 +612,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.
+            The dataset is aggregated from multiple others that were crowdsourced on different platforms.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The speaker is required to produce coherent sentences and construct a trees structured ontology of the column headers.
            </p>
           </div>
          </div>
@@ -550,7 +640,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            To study the viability of language-based abductive reasoning. Training and evaluating models to generate a plausible hypothesis to explain two given observations.
+            The dataset is aimed to further research in natural language generation from semantic data.
            </p>
           </div>
          </div>
@@ -571,6 +661,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
+             academic
+            </code>
+            ,
+            <code>
              industry
             </code>
            </p>
@@ -587,7 +681,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Allen Institute for AI
+            Yale University, Salesforce Research, Penn State University, The University of Hong Kong, MIT
            </p>
           </div>
          </div>
@@ -602,20 +696,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi  (AI2, UW)
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Funding
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Who funded the data creation?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Allen Institute for AI
+            Linyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang, Aadit Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad Zaidi, Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong, Richard Socher, Nazneen Fatema Rajani
            </p>
           </div>
           <div class="field">
@@ -628,7 +709,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            Miruna Clinciu contributed the original data card and Yacine Jernite wrote the initial data loader. Sebastian Gehrmann migrated the data card and the loader to the new format.
            </p>
           </div>
          </div>
@@ -647,26 +728,33 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              observation_1
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              observation_2
-             </code>
-             : A string describing an observation / event.
-            </li>
-            <li>
-             <code>
-              label
-             </code>
-             : A string that plausibly explains why observation_1 and observation_2 might have happened.
-            </li>
-           </ul>
+           <p>
+            -
+            <code>
+             tripleset
+            </code>
+            : a list of tuples, each tuple has 3 items
+-
+            <code>
+             subtree_was_extended
+            </code>
+            : a boolean variable (true or false)
+-
+            <code>
+             annotations
+            </code>
+            : a list of dict, each with source and text keys.
+-
+            <code>
+             source
+            </code>
+            : a string mentioning the name of the source table.
+-
+            <code>
+             text
+            </code>
+            : a sentence string.
+           </p>
           </div>
          </div>
          <div class="scope">
@@ -679,12 +767,27 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <pre><code>{
-'gem_id': 'GEM-ART-validation-0',
-'observation_1': 'Stephen was at a party.',
-'observation_2': 'He checked it but it was completely broken.',
-'label': 'Stephen knocked over a vase while drunk.'
-}
+           <pre><code> {
+    "tripleset": [
+      [
+        "Ben Mauk",
+        "High school",
+        "Kenton"
+      ],
+      [
+        "Ben Mauk",
+        "College",
+        "Wake Forest Cincinnati"
+      ]
+    ],
+    "subtree_was_extended": false,
+    "annotations": [
+      {
+        "source": "WikiTableQuestions_lily",
+        "text": "Ben Mauk, who attended Kenton High School, attended Wake Forest Cincinnati for college."
+      }
+    ]
+  }
 </code></pre>
           </div>
           <div class="field">
@@ -696,29 +799,40 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             <code>
-              train
-             </code>
-             : Consists of training instances.
-            </li>
-            <li>
-             <code>
-              dev
-             </code>
-             : Consists of dev instances.
-            </li>
-            <li>
-             <code>
-              test
-             </code>
-             : Consists of test instances.
-            </li>
-           </ul>
+           <p>
+            |Input Unit | Examples | Vocab Size | Words per SR | Sents per SR | Tables |
+| ------------- | ------------- || ------------- || ------------- || ------------- || ------------- |
+|Triple Set | 82,191 | 33.2K | 21.6 | 1.5 | 5,623 |
+           </p>
+           <p>
+            | Train | Dev | Test|
+| ------------- | ------------- || ------------- |
+| 62,659 | 6,980 | 12,552|
+           </p>
+           <p>
+            Statistics of DART decomposed by different collection methods. DART exhibits a great deal of topical variety in terms of the number of unique predicates, the number of unique triples, and the vocabulary size. These statistics are computed from DART v1.1.1; the number of unique predicates reported is post-unification (see Section 3.4). SR: Surface Realization.
+(
+            <a href="https://arxiv.org/pdf/2007.02871.pdf">
+             details in Table 1 and 2
+            </a>
+            ).
+           </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Reason for Structure
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the dataset structure determined?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The structure is supposed to be able more complex structures beyond "flat" attribute-value pairs, instead encoding hierarchical relationships.
+           </p>
+          </div>
           <div class="field">
            <h4>
             How were labels chosen?
@@ -729,7 +843,23 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template designed by the creators of the dataset.
+            They are a combination of those from existing datasets and new annotations that take advantage of the hierarchical structure
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
+             </div>
+            </div>
+           </h4>
+           <p>
+            For WebNLG 2017 and Cleaned E2E,  DART use the original data splits. For the new annotation on WikiTableQuestions and WikiSQL, random splitting will make train, dev, and test splits contain similar tables and similar
+            <triple-set, sentence="">
+             examples. They are thus split based on Jaccard similarity such that no training examples has a similarity with a test example of over 0.5
+            </triple-set,>
            </p>
           </div>
          </div>
@@ -779,11 +909,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
           <div class="field">
            <h4>
             Ability that the Dataset measures
@@ -794,7 +937,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Reasoning, surface realization
            </p>
           </div>
          </div>
@@ -809,7 +952,20 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study language-based abductive reasoning.
+            DART is a large and open-domain structured DAta Record to Text generation corpus with high-quality sentence annotations with each input being a set of entity-relation triples following a tree-structured ontology.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The tree structure is unique among GEM datasets
            </p>
           </div>
          </div>
@@ -869,14 +1025,13 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
              </div>
             </div>
            </h4>
-           <ul>
-            <li>
-             Paper: https://arxiv.org/abs/1908.05739
-            </li>
-            <li>
-             Code: https://github.com/allenai/abductive-commonsense-reasoning
-            </li>
-           </ul>
+           <p>
+            Experimental results on DART shows that BART model as the highest performance among three models with a BLEU score of 37.06. This is attributed to BART’s generalization ability due to pretraining (
+            <a href="https://arxiv.org/pdf/2007.02871.pdf">
+             Table 4
+            </a>
+            ).
+           </p>
           </div>
          </div>
         </div>
@@ -919,7 +1074,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Whether models can reason abductively about a given pair of observations.
+            Reasoning, surface realization
            </p>
           </div>
           <div class="field">
@@ -932,7 +1087,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -952,16 +1107,61 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </code>
             ,
             <code>
+             MoverScore
+            </code>
+            ,
+            <code>
              BERT-Score
             </code>
             ,
             <code>
-             ROUGE
+             BLEURT
             </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            n/a
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The leaderboard uses the combination of BLEU, METEOR, TER, MoverScore, BERTScore, PARENT and BLEURT to overcome the limitations of the n-gram overlap metrics.
+            <br/>
+            A small scale human annotation of 100 data points was conducted along the dimensions of  (1) fluency - a sentence is natural and grammatical, and (2) semantic faithfulness - a sentence is supported by the input triples.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            BART currently achieves the best performance according to the leaderboard.
+           </p>
+          </div>
          </div>
         </div>
        </div>
@@ -1010,6 +1210,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
           <div class="field">
            <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset creators encourage through DART further research in natural language generation from semantic data. DART provides high-quality sentence annotations with each input being a set of entity-relation triples in a tree structure.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1018,11 +1231,78 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The speaker is required to produce coherent sentences and construct a trees structured ontology of the column headers.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             human annotation on open-domain Wikipedia tables from WikiTableQuestions (
+             <a href="https://www.aclweb.org/anthology/P15-1142.pdf">
+              Pasupat and Liang,
+2015
+             </a>
+             ) and WikiSQL (
+             <a href="https://arxiv.org/pdf/1709.00103.pdf">
+              Zhong et al., 2017
+             </a>
+             )
+            </li>
+            <li>
+             automatic conversion of questions in WikiSQL to declarative sentences
+            </li>
+            <li>
+             incorporation of existing datasets including WebNLG 2017 (Gardent et al., 2017
+             <a href="https://www.aclweb.org/anthology/P17-1017.pdf">
+              a
+             </a>
+             ,
+             <a href="https://www.aclweb.org/anthology/W17-3518.pdf">
+              b
+             </a>
+             ;
+             <a href="https://www.aclweb.org/anthology/W18-6543.pdf">
+              Shimorina and Gardent, 2018
+             </a>
+             ) and Cleaned E2E (
+             <a href="https://arxiv.org/pdf/1706.09254.pdf">
+              Novikova et al., 2017b
+             </a>
+             ; Dušek et al.,
+             <a href="https://arxiv.org/pdf/1810.01170.pdf">
+              2018
+             </a>
+             ,
+             <a href="https://www.aclweb.org/anthology/W19-8652.pdf">
+              2019
+             </a>
+             )
+            </li>
+           </ul>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1043,7 +1323,26 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             Crowdsourced
+             Found
+            </code>
+            ,
+            <code>
+             Created for the dataset
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Where was it found?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If found, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Offline media collection
             </code>
            </p>
           </div>
@@ -1070,26 +1369,11 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            algorithmically
+            not filtered
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Where was it crowdsourced?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If crowdsourced, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Amazon Mechanical Turk
-            </code>
-           </p>
-          </div>
           <div class="field">
            <h4>
             Topics Covered
@@ -1100,11 +1384,24 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            No
+            The sub-datasets are from Wikipedia, DBPedia, and artificially created restaurant data.
            </p>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Creation Process
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If created for the dataset, describe the creation process.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Creators proposed a two-stage annotation process for constructing triple set sentence pairs based on a tree-structured ontology of each table. First, internal skilled annotators denote the parent column for each column header. Then, a larger number of annotators provide a sentential description of an automatically-chosen subset of table cells in a row. To form a triple set sentence pair, the highlighted cells can be converted to a connected triple set automatically according to the column ontology for the given table.
+           </p>
+          </div>
           <div class="field">
            <h4>
             Language Producers
@@ -1115,20 +1412,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            Language producers were English speakers in U.S., Canada, U.K and Australia.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Filter Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What were the selection criteria?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Adversarial filtering algorithm as described in the paper: https://arxiv.org/abs/1908.05739
+            No further information about the MTurk workers has been provided.
            </p>
           </div>
          </div>
@@ -1148,7 +1432,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            automatically created
+            none
            </p>
           </div>
           <div class="field">
@@ -1164,36 +1448,10 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Any Quality Control?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Quality control measures?
-             </div>
-            </div>
-           </h4>
-           <p>
-            none
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Annotation Values
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Purpose and values for each annotation
-             </div>
-            </div>
-           </h4>
-           <p>
-            Each observation is associated with a list of COMET (https://arxiv.org/abs/1906.05317) inferences.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1218,6 +1476,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for Using the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If not, what is the justification for reusing the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The new annotations are based on Wikipedia which is in the public domain and the other two datasets permit reuse (with attribution)
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1250,7 +1521,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
             </div>
            </h4>
            <p>
-            The dataset contains day-to-day events. It does not contain names, emails, addresses etc.
+            None of the datasets talk about individuals
            </p>
           </div>
          </div>
@@ -1379,6 +1650,19 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            No, the annotators are raters on crowdworking platforms and thus only represent their demographics.
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
@@ -1422,19 +1706,6 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Potential PII Risk
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
-             </div>
-            </div>
-           </h4>
-           <p>
-            None
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="licenses">
@@ -1455,7 +1726,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1470,7 +1741,7 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
            </h4>
            <p>
             <code>
-             public domain
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1487,6 +1758,48 @@ url={https://openreview.net/forum?id=Byg1v1HKDB}
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset may contain some social biases, as the input sentences are based on Wikipedia (WikiTableQuestions, WikiSQL, WebNLG). Studies have shown that the English Wikipedia contains gender biases(
+            <a href="https://www.aclweb.org/anthology/2020.emnlp-main.23.pdf">
+             Dinan et al., 2020
+            </a>
+            ), racial biases([Papakyriakopoulos et al., 2020 (https://dl.acm.org/doi/pdf/10.1145/3351095.3372843)) and geographical bias(
+            <a href="https://doi.org/10.5204/mcj.315">
+             Livingstone et al., 2010
+            </a>
+            ).
+            <a href="https://en.wikipedia.org/wiki/Racial_bias_on_Wikipedia#cite_note-23">
+             More info
+            </a>
+            .
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The end-to-end transformer has the lowest performance since the transformer model needs intermediate pipeline planning steps to have higher performance. Similar findings can be found in
+            <a href="https://arxiv.org/pdf/1908.09022.pdf">
+             Castro Ferreira et al., 2019
+            </a>
+            .
+           </p>
+          </div>
          </div>
         </div>
        </div>
