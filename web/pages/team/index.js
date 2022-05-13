@@ -13,6 +13,58 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 library.add(faUser);
 
+function Contact(props) {
+
+  // Optional Website links.
+
+  var website_tag = "";
+  if (props.website != '') {
+    website_tag = (
+      <a href={props.website} target="_blank"><FontAwesomeIcon className={utilStyles.icon} icon="user" /></a>
+    );
+  }
+
+  // Optional Twitter tag.
+  var twitter_tag = "";
+  if (props.twitter != '') {
+    var twitter_href = "https://twitter.com/" + props.twitter
+    twitter_tag = (
+      <a href={twitter_href} target="_blank"><FontAwesomeIcon className={utilStyles.icon} icon={faTwitter} /></a>
+    );
+  }
+
+  // Combine the socials through spacers.
+  var socials = "";
+  if (twitter_tag != "" || website_tag != "") {
+    socials = (
+      <div>
+        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
+      </div>
+    )
+  }
+
+  var tags_bar = "";
+  if (props.tags != '' && props.tags != undefined) {
+    tags_bar = (
+      <div className={styles.tags}>
+        {props.tags.map(function(d, idx){
+         return (<div key={idx}>{d}</div>)
+       })}
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.card}>
+      <h3 className={styles.name}>{props.name}</h3>
+      <p className={styles.title}>{props.organization}</p>
+      <div className={styles.note}>{props.note}</div>
+      {socials}
+      {tags_bar}
+    </div>
+  );
+}
+
 class ContactList extends React.Component {
   constructor(props) {
     super(props);
@@ -50,58 +102,6 @@ class ContactList extends React.Component {
 }
 
 
-function Contact(props) {
-
-  // Optional Website links.
-
-  var website_tag = "";
-  if (props.website != '') {
-    website_tag = (
-      <a href={props.website} target="_blank"><FontAwesomeIcon icon="user" /></a>
-    );
-  }
-
-  // Optional Twitter tag.
-  var twitter_tag = "";
-  if (props.twitter != '') {
-    var twitter_href = "https://twitter.com/" + props.twitter
-    twitter_tag = (
-      <a href={twitter_href} target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
-    );
-  }
-
-  // Combine the socials through spacers.
-  var socials = "";
-  if (twitter_tag != "" || website_tag != "") {
-    socials = (
-      <div>
-        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
-      </div>
-    )
-  }
-
-  var tags_bar = "";
-  if (props.tags != '' && props.tags != undefined) {
-    tags_bar = (
-      <div className={styles.tags}>
-        {props.tags.map(function(d, idx){
-         return (<div key={idx}>{d}</div>)
-       })}
-      </div>
-    );
-  }
-
-  return (
-    <div className={styles.card}>
-      <h3 className={styles.name}>{props.name}</h3>
-      <p className={styles.title}>{props.organization}</p>
-      <div className={styles.note}>{props.note}</div>
-      {socials}
-      {tags_bar}
-    </div>
-  );
-}
-
 export default function Home({ teamData }) {
   return (
     <Layout home>
@@ -112,7 +112,7 @@ export default function Home({ teamData }) {
         <div className={utilStyles.headingXl}>
           GEMv2 Team
         </div>
-        <p className={styles.description}>
+        <div className={styles.description}>
           GEM is a community-driven effort to improve evaluation of
           natural language generation. It would not be possible without
           a large group of collaborators to take on challenging tasks.
@@ -124,7 +124,7 @@ export default function Home({ teamData }) {
               <a>click here to fill out the sign-up form.</a></Link>
           </p>
 
-        </p>
+        </div>
         <div className={styles.centered}>
           <ContactList contacts={teamData.teamMembers} />
         </div>

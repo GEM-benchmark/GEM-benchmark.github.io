@@ -26,17 +26,16 @@ export function getSortedTasksData() {
 
     }
   })
-  console.log(allPostsData);
+
+  console.log(allPostsData)
+
+
   // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
-    if (a.type < b.type) {
-      return 1
-    } if (a.title < b.title) {
-      return 1
-    }
-    else {
-      return -1
-    }
+    if (a.type.toLowerCase() != b.type.toLowerCase()) {
+      return a.type.toLowerCase() < b.type.toLowerCase() ? -1 : 1;
+  }
+  return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
   })
 }
 

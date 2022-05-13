@@ -98,3 +98,13 @@
 .noBorder {
   border: none;
 }
+
+.icon {
+  max-width: 10%;
+  max-height: 1.5em;
+  margin-top: 1em;
+}
+
+.spacer {
+  margin-right: 10px;
+}
