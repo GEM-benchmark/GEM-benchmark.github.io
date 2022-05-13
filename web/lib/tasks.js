@@ -27,15 +27,12 @@ export function getSortedTasksData() {
     }
   })
 
-  console.log(allPostsData)
-
-
   // Sort datasets by type and title.
   return allPostsData.sort((a, b) => {
     if (a.type.toLowerCase() != b.type.toLowerCase()) {
       return a.type.toLowerCase() < b.type.toLowerCase() ? -1 : 1;
-  }
-  return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+    }
+    return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
   })
 }
 
@@ -56,16 +53,16 @@ export function getAllTaskIds() {
   //   }
   // ]
   return fileNames.filter(
-      function (fileName) {
-        return path.extname(fileName) == ".yaml";
+    function (fileName) {
+      return path.extname(fileName) == ".yaml";
+    }
+  ).map(fileName => {
+    return {
+      params: {
+        id: fileName.replace(/\.yaml$/, '')
       }
-    ).map(fileName => {
-      return {
-        params: {
-          id: fileName.replace(/\.yaml$/, '')
-        }
-      }
-    })
+    }
+  })
 }
 
 export async function getTaskData(id) {
