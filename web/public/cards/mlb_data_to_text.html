@@ -46,6 +46,9 @@
       </li>
       <ul>
        <li>
+        What is this dataset?
+       </li>
+       <li>
         Where to find the Data and its Documentation
        </li>
        <li>
@@ -161,7 +164,7 @@
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         Placeholder
+          The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
         </p>
         <p>
          You can load the dataset via:
@@ -214,6 +217,19 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
        Quick-Use
       </h2>
       <div class="quick-row">
+       <div class="field">
+        <h4>
+         Summary
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a summary of this dataset in 3-4 sentences.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
+        </p>
+       </div>
        <div class="field">
         <h4>
          Contact Name
@@ -339,6 +355,9 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </h2>
          <div class="tags">
           <div class="tag">
+           What is this dataset?
+          </div>
+          <div class="tag">
            Where to find the Data and its Documentation
           </div>
           <div class="tag">
@@ -362,6 +381,30 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
         </button>
        </div>
        <div class="subsection-wrapper">
+        <h3 id="what-is-this-dataset?">
+         What is this dataset?
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Summary
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a summary of this dataset in 3-4 sentences.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
         <h3 id="where-to-find-the-data-and-its-documentation">
          Where to find the Data and its Documentation
         </h3>
@@ -10084,8 +10127,12 @@ The attribute "summary_eval" contains the summary in the form of a string of tok
              NEWPARAGRAPH
             </em>
             " delimiters to separate the paragraphs. "summary_eval" field should be used to evaluate model outputs. "summary" field may be used during the training process.
-box_score contains the box score statistics of the players in the game. It is in the form of a list (of average size 90), with each element describing the statistics of a player. The box score statistics contain 53 attributes. 
-The description of the attributes is given below. The descriptions of most of the attributes is obtained from https://www.mlb.com/glossary/standard-stats.
+box_score contains the box score statistics of the players in the game. It is in the form of a list (of average size 90), with each element describing the statistics of a player. The box score statistics contain 53 attributes.
+The description of the attributes is given below. The descriptions of most of the attributes is obtained from
+            <a href="https://www.mlb.com/glossary/standard-stats">
+             mlb.com
+            </a>
+            .
            </p>
            <ul>
             <li>
@@ -10519,7 +10566,11 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The research paper is a good resource: https://aclanthology.org/P19-1195.pdf
+            The
+            <a href="https://aclanthology.org/P19-1195">
+             research paper
+            </a>
+            is a good resource
            </p>
           </div>
          </div>
@@ -10637,7 +10688,10 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The most relevant previous results for dataset are in the TACL 2021 paper on Data-to-text Generation with Macro Planning available at https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00381/101876/Data-to-text-Generation-with-Macro-Planning
+            The most relevant previous results for dataset are in the TACL 2021 paper on
+            <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00381/101876/Data-to-text-Generation-with-Macro-Planning">
+             Data-to-text Generation with Macro Planning
+            </a>
            </p>
           </div>
          </div>

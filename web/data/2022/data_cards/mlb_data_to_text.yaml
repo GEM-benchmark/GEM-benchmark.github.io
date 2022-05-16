@@ -2,5 +2,5 @@
 title: mlb_data_to_text
 type: Data-to-Text
 languages: English
-summary: Placeholder
+summary: The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
 ---
