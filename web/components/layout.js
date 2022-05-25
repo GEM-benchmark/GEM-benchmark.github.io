@@ -10,7 +10,7 @@ import Navbar from './navbar'
 const name = "GEM Benchmark";
 export const siteTitle = "GEM";
 
-export default function Layout({ children, home, nlAugmenter }) {
+export default function Layout({ children, home, nlAugmenter, wideContainer}) {
   return (
     <>
       <Head>
@@ -30,7 +30,7 @@ export default function Layout({ children, home, nlAugmenter }) {
           <header className={styles.header}>
             <Navbar></Navbar>
           </header>
-          <div className={styles.container}>
+          <div className={`${styles.container} ${wideContainer && styles.wideContainer}`}>
             <main>{children}</main>
             <div className={styles.push}></div>
           </div>

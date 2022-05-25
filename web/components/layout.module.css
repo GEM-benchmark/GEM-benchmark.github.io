@@ -6,6 +6,14 @@
   min-height: calc(100vh - 108px);
 }
 
+.wideContainer {
+  max-width: 100%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: -3rem;
+  min-height: calc(100vh - 108px);
+}
+
 .header {
   display: flex;
   flex-direction: column;

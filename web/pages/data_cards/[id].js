@@ -8,11 +8,10 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Post({ taskData }) {
-  console.log(taskData);
 
   const card_path = "/cards/" + taskData.id + ".html"
   return (
-    <Layout>
+    <Layout wideContainer>
       <Head>
         <title>GEM {taskData.title}</title>
       </Head>
