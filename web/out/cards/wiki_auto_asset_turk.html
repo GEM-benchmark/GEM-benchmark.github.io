@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8"/>
+  <title>
+   Data Cards Labs
+  </title>
+  <base target="_blank"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Rubik:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <style>
+   a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}*{-webkit-box-sizing:border-box;box-sizing:border-box}html{overflow:hidden}body{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:16px;line-height:24px;color:#3c4f50;background:#f1f7f7;overflow-x:hidden}a{color:#ff675c;text-decoration:none}a:focus,a:hover{background:#ffecea}b,strong{font-weight:600}em{font-style:italic}img{max-width:100%}h1{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:32px;line-height:48px;font-weight:400;margin-bottom:12px}h2{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;display:block;margin-right:20px}h3{font-family:Rubik, Helvetica, Arial, sans-serif;margin-top:20px;padding-top:10px;font-size:16px;line-height:24px;margin-bottom:5px;color:#ff675c;border-top:1px solid #cddcdc}dt,h4{color:#7c9192;font-weight:500;font-size:12px;line-height:20px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:10px}h5{margin-top:10px;font-size:12px;font-weight:500;font-style:italic;color:#7c9192}p{margin-bottom:20px}p:last-of-type{margin-bottom:0}ol,ul{margin-left:20px;margin-bottom:20px}.header-wrapper{position:fixed;display:flex;align-items:center;justify-content:start;padding:0 60px;box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2);width:100%;background:#fff;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;height:60px;z-index:3}.header-title{display:inline-block;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px}.main-wrapper{display:flex;justify-content:space-between}.panel-wrapper{min-width:60px;max-width:60px;min-height:100%;margin-top:60px;padding-top:20px;background:#fff;border-right:1px solid #cddcdc;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);z-index:2;display:flex;flex-direction:column;align-items:center}#datacard-outline-nav{position:fixed;left:-300px;min-width:300px;max-width:300px;height:100%;padding:120px 10px 20px 0;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);background:#f1f7f7;z-index:1;overflow-y:scroll;transition:all 0.5s ease-out}#datacard-outline-nav.active{transform:translateX(360px);transition:all 0.5s ease-out}#datacard-outline-nav ul{list-style-type:none;font-size:14px;line-height:22px;overflow-wrap:normal;margin-bottom:6px}#datacard-outline-nav li{margin-bottom:6px}#datacard-outline-nav li:focus,#datacard-outline-nav li:hover{cursor:pointer;color:#ff675c}#datacard-outline-nav li.active{color:#ff675c;list-style-type:disc}#datacard-outline-button{padding:10px;width:40px;height:40px;border-radius:20px;background:#f1f7f7;border:none;cursor:pointer}#datacard-outline-button svg{fill:#3c4f50}#datacard-outline-button.active,#datacard-outline-button:focus,#datacard-outline-button:hover{background:#cddcdc}.datacard-breadcrumbs{display:flex;align-items:center;height:40px;width:100%;position:fixed;padding-left:80px;top:60px;left:0;background:#fff;border-bottom:1px solid #cddcdc;font-size:14px;line-height:22px;z-index:1}.content-wrapper{width:100%;display:flex;justify-content:center;margin-top:60px;height:calc(100vh - 40px);overflow-x:hidden;overflow-y:scroll;scroll-behavior:smooth}.datacard-wrapper{max-width:1000px;width:100%;padding:20px}section{display:block;margin-bottom:40px}.quick-row,.section,.summary{background:#fff;display:block;width:100%;padding:20px;border:1px solid #cddcdc}.quick-row,.summary{border-radius:5px}.title-dataset-details,.title-quick-use{font-size:20px;line-height:28px;margin-top:10px;margin-bottom:0;padding-bottom:10px}.details-nav{display:flex;justify-content:space-between}.details-button{font-family:Inter, Helvetica, Arial, sans-serif;color:#152d2e;background:#fff;border:none;border-radius:5px;width:max-content;height:30px;font-size:12px;line-height:20px;padding:4px 8px;margin-left:10px;cursor:pointer;display:flex;justify-content:center;align-items:center}.details-button:focus,.details-button:hover{background:#cddcdc}.tags{display:none;margin-right:40px}.tag{font-family:Rubik, Helvetica, Arial, sans-serif;color:#3c4f50;background-color:#f1f7f7;font-size:14px;line-height:22px;padding:1px 5px;border-radius:5px;margin:2px 5px 2px 0;display:inline-block;cursor:pointer}.tag:focus,.tag:hover{background-color:#cddcdc}.tag:last-of-type{margin-right:0}@media screen and (min-width: 800px){.tags{max-width:500px;margin-left:20px}}@media screen and (min-width: 550px){.tags{display:inline-block}}.section{border-bottom:2px solid #cddcdc}.section:first-of-type,.section:nth-of-type(2){border-radius:5px 5px 0 0}.section:last-of-type{border-radius:0 0 5px 5px;border-bottom:1px solid #cddcdc}.section-preview{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:60px}.section-preview-content{display:flex;justify-content:center;align-items:center}.section-open-button{min-width:24px;min-height:24px;height:100%;background:none;border:none;cursor:pointer;z-index:0}.section-open-button svg{transition:all 0.5s ease-out}.section-open-button:focus svg,.section-open-button:hover svg{fill:#ff675c}.subsection-wrapper{max-height:0;overflow:hidden;transition:all 0.25s ease-out;-webkit-transition:none;-moz-transition:all 0.25s ease-out;-o-transition:all 0.25s ease-out;webkit-backface-visibility:none}.open .subsection-wrapper{max-height:max-content;transition:all 0.5s ease-in;-webkit-transition:none;-moz-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in}.open .section-open-button svg{transform:rotate(180deg);transition:all 0.5s ease-out;-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;webkit-backface-visibility:none}.summary-content{margin-bottom:20px}.summary-scopes{border-top:1px solid #f1f7f7;padding-top:20px}@media screen and (min-width: 550px){.summary-wrapper{display:grid;grid-template-columns:repeat(2, 1fr)}.summary-scopes{padding:0 20px;border:none}}@media screen and (min-width: 800px){.summary-scopes{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px}}.row{margin-top:10px;display:block;width:100%;gap:20px}@media screen and (min-width: 550px){.row{display:grid;grid-template-columns:repeat(3, 1fr)}}.quick-row{display:block;width:100%;column-gap:20px;grid-template-columns:repeat(2, 1fr)}@media screen and (min-width: 550px){.quick-row{display:grid}}@media screen and (min-width: 800px){.quick-row{grid-template-columns:repeat(5, 1fr)}}.field{margin-bottom:20px;overflow-x:hidden}.field:last-of-type{margin-bottom:0}@media screen and (min-width: 550px){.field{max-width:300px}}.scope{padding:10px 0}.scope:last-of-type{border-bottom:none}@media screen and (min-width: 550px){.scope{border-bottom:none}}pre{background:#f1f7f7;display:inline-block;overflow-x:hidden;overflow-y:scroll;width:100%;max-height:300px;white-space:pre-wrap}code{font-family:'Space Grotesk', sans-serif;background:#f1f7f7;font-size:14px;line-height:20px;border-radius:6px;padding:1px 5px}.code-block-wrapper,.table-wrapper{background:#fff;border:#cddcdc 1px solid;border-radius:6px;padding:10px;margin:10px 0}.expand .code-block-wrapper,.expand .table-wrapper{box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2)}.code-block-wrapper{background:#f1f7f7}.summary-row .code-block-wrapper,.summary-row .table-wrapper{max-width:max-content}table{display:inline-block;overflow-x:scroll;overflow-y:hidden;max-height:300px;font-size:14px;line-height:20px}tr{overflow-x:scroll}tfoot,thead,tr{padding:10px}th{text-align:left;font-weight:500;padding:10px}td,tfoot{text-align:left;padding:10px;border-top:#f1f7f7 1px solid}thead{font-weight:500}.expand{position:fixed;padding:20px;margin:0;border-radius:0;top:60px;left:0;width:100%;max-width:100%;height:100%;max-height:100%;background:rgba(0, 0, 0, .4);display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3}.expand pre,.expand table{height:max-content;max-height:calc(100vh - 100px)}.expand .interactions{margin-bottom:10px}.interactions{display:flex;justify-content:end;align-items:center}.tooltip{margin-left:2px;width:0;height:0;border:none;background:none;display:inline}.tooltip::before{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z'/></svg>")}.tooltip-text{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:12px;line-height:16px;padding:6px;text-transform:none;visibility:hidden;position:absolute;height:0;width:0;color:#fff;background:#3c4f50;border:none;border-radius:5px;box-shadow:1px 2px 2px 0 rgba(0,0,0,.2)}.tooltip:focus .tooltip-text,.tooltip:hover .tooltip-text{visibility:visible;height:auto;width:auto;max-width:240px;word-break:break-word}.expand-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.collapse-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M22,3.41l-5.29,5.29L20,12h-8V4l3.29,3.29L20.59,2L22,3.41z M3.41,22l5.29-5.29L12,20v-8H4l3.29,3.29L2,20.59L3.41,22z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.copy-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.link-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}
+  </style>
+ </head>
+ <body>
+  <header class="header-wrapper">
+   <div class="header-title">
+    Data Cards Labs
+   </div>
+  </header>
+  <main class="main-wrapper">
+   <aside class="panel-wrapper">
+    <button id="datacard-outline-button">
+     <svg fill="none" height="16" viewbox="0 0 18 18" width="16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11 14H4V12H11V14ZM14 10H4V8H14V10ZM14 6H4V4H14V6Z">
+      </path>
+     </svg>
+    </button>
+   </aside>
+   <nav id="datacard-outline-nav">
+    <ul>
+     <li>
+      Summary
+     </li>
+     <li>
+      Quick-Use
+     </li>
+     <li>
+      Dataset Details
+     </li>
+     <ul>
+      <li>
+       Dataset Overview
+      </li>
+      <ul>
+       <li>
+        Where to find the Data and its Documentation
+       </li>
+       <li>
+        Languages and Intended Use
+       </li>
+       <li>
+        Credit
+       </li>
+       <li>
+        Dataset Structure
+       </li>
+      </ul>
+      <li>
+       Dataset in GEM
+      </li>
+      <ul>
+       <li>
+        Rationale for Inclusion in GEM
+       </li>
+       <li>
+        GEM-Specific Curation
+       </li>
+       <li>
+        Getting Started with the Task
+       </li>
+      </ul>
+      <li>
+       Previous Results
+      </li>
+      <ul>
+       <li>
+        Previous Results
+       </li>
+      </ul>
+      <li>
+       Dataset Curation
+      </li>
+      <ul>
+       <li>
+        Original Curation
+       </li>
+       <li>
+        Language Data
+       </li>
+       <li>
+        Structured Annotations
+       </li>
+       <li>
+        Consent
+       </li>
+       <li>
+        Private Identifying Information (PII)
+       </li>
+       <li>
+        Maintenance
+       </li>
+      </ul>
+      <li>
+       Broader Social Context
+      </li>
+      <ul>
+       <li>
+        Previous Work on the Social Impact of the Dataset
+       </li>
+       <li>
+        Impact on Under-Served Communities
+       </li>
+       <li>
+        Discussion of Biases
+       </li>
+      </ul>
+      <li>
+       Considerations for Using the Data
+      </li>
+      <ul>
+       <li>
+        PII Risks and Liability
+       </li>
+       <li>
+        Licenses
+       </li>
+       <li>
+        Known Technical Limitations
+       </li>
+      </ul>
+     </ul>
+    </ul>
+   </nav>
+   <div class="content-wrapper">
+    <article class="datacard-wrapper">
+     <template id="table-template">
+      <div class="table-wrapper">
+       <div class="interactions">
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <template id="code-block-template">
+      <div class="code-block-wrapper">
+       <div class="interactions">
+        <div class="copy-icon" title="Click to copy code block">
+        </div>
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <section class="summary" id="summary">
+      <h1>
+       wiki_auto_asset_turk
+      </h1>
+      <div class="summary-wrapper">
+       <div class="summary-content">
+        <p>
+         WikiAuto is an English simplification dataset that we paired with ASSET and TURK, two very high-quality evaluation datasets, as test sets. The input is an English sentence taken from Wikipedia and the target a simplified sentence. ASSET and TURK contain the same test examples but have references that are simplified in different ways (splitting sentences vs. rewriting and splitting).
+        </p>
+        <p>
+         You can load the dataset via:
+        </p>
+        <pre><code>import datasets
+data = datasets.load_dataset('GEM/wiki_auto_asset_turk')
+</code></pre>
+        <p>
+         The data loader can be found
+         <a href="https://huggingface.co/datasets/GEM/wiki_auto_asset_turk">
+          here
+         </a>
+         .
+        </p>
+       </div>
+       <div class="summary-scopes">
+        <div class="field">
+         <h4>
+          website
+         </h4>
+         <p>
+          n/a
+         </p>
+        </div>
+        <div class="field">
+         <h4>
+          paper
+         </h4>
+         <p>
+          <a href="https://aclanthology.org/2020.acl-main.709/">
+           WikiAuto
+          </a>
+          ,
+          <a href="https://aclanthology.org/2020.acl-main.424/">
+           ASSET
+          </a>
+          ,
+          <a href="https://aclanthology.org/Q16-1029/">
+           TURK
+          </a>
+         </p>
+        </div>
+        <div class="field">
+         <h4>
+          authors
+         </h4>
+         <p>
+          WikiAuto: Chao Jiang, Mounica Maddela, Wuwei Lan, Yang Zhong, Wei Xu; ASSET: Fernando Alva-Manchego, Louis Martin, Antoine Bordes, Carolina Scarton, and Benoîıt Sagot, and Lucia Specia; TURK: Wei Xu, Courtney Napoles, Ellie Pavlick, Quanze Chen, and Chris Callison-Burch
+         </p>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section id="quick-use">
+      <h2 class="title-quick-use">
+       Quick-Use
+      </h2>
+      <div class="quick-row">
+       <div class="field">
+        <h4>
+         Contact Name
+         <div class="tooltip">
+          <div class="tooltip-text">
+           If known, provide the name of at least one person the reader can contact for questions about the dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         WikiAuto: Chao Jiang; ASSET: Fernando Alva-Manchego and Louis Martin; TURK: Wei Xu
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Multilingual?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Is the dataset multilingual?
+          </div>
+         </div>
+        </h4>
+        <p>
+         no
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Covered Languages
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What languages/dialects are covered in the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         <code>
+          English
+         </code>
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         License
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What is the license of the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         other: Other license
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         The goal is to communicate the main ideas of source sentence in a way that is easier to understand by non-native speakers of English.
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Additional Annotations?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the dataset have additional annotations for each instance?
+          </div>
+         </div>
+        </h4>
+        <p>
+         crowd-sourced
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Contains PII?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+          </div>
+         </div>
+        </h4>
+        <p>
+         no PII
+        </p>
+       </div>
+      </div>
+     </section>
+     <section id="dataset-details">
+      <div class="details-nav">
+       <p class="title-dataset-details">
+        Dataset Details
+       </p>
+       <div class="interactions">
+        <button class="details-button" id="expand-all">
+         Expand All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.2 17.4 15 15.2 24 6.2 33 15.2 30.8 17.4 24 10.6ZM24 42 15 33 17.2 30.8 24 37.6 30.8 30.8 33 33Z">
+          </path>
+         </svg>
+        </button>
+        <button class="details-button" id="collapse-all">
+         Collapse All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 19.15 15 10.15 17.15 8 24 14.85 30.85 8 33 10.15ZM17.15 40 15 37.85 24 28.85 33 37.85 30.85 40 24 33.15Z">
+          </path>
+         </svg>
+        </button>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-overview">
+          Dataset Overview
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Where to find the Data and its Documentation
+          </div>
+          <div class="tag">
+           Languages and Intended Use
+          </div>
+          <div class="tag">
+           Credit
+          </div>
+          <div class="tag">
+           Dataset Structure
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="where-to-find-the-data-and-its-documentation">
+         Where to find the Data and its Documentation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Download
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to where the original dataset is hosted?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://github.com/chaojiang06/wiki-auto">
+             Wiki-Auto repository
+            </a>
+            ,
+            <a href="https://github.com/facebookresearch/asset">
+             ASSET repository
+            </a>
+            ,
+            <a href="https://github.com/cocoxu/simplification">
+             TURKCorpus
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Paper
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to the paper describing the dataset (open access preferred)?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://aclanthology.org/2020.acl-main.709/">
+             WikiAuto
+            </a>
+            ,
+            <a href="https://aclanthology.org/2020.acl-main.424/">
+             ASSET
+            </a>
+            ,
+            <a href="https://aclanthology.org/Q16-1029/">
+             TURK
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Has a Leaderboard?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have an active leaderboard?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contact Name
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the name of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto: Chao Jiang; ASSET: Fernando Alva-Manchego and Louis Martin; TURK: Wei Xu
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Contact Email
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the email of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            jiang.1530@osu.edu, f.alva@sheffield.ac.uk, louismartincs@gmail.com, wei.xu@cc.gatech.edu
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            BibTex
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide the BibTex-formatted reference for the dataset. Please use the correct published version (ACL anthology, etc.) instead of google scholar created Bibtex.
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto:
+           </p>
+           <pre><code>@inproceedings{jiang-etal-2020-neural,
+    title = "Neural {CRF} Model for Sentence Alignment in Text Simplification",
+    author = "Jiang, Chao  and
+      Maddela, Mounica  and
+      Lan, Wuwei  and
+      Zhong, Yang  and
+      Xu, Wei",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.709",
+    doi = "10.18653/v1/2020.acl-main.709",
+    pages = "7943--7960",
+}
+</code></pre>
+           <p>
+            ASSET:
+           </p>
+           <pre><code>@inproceedings{alva-manchego-etal-2020-asset,
+    title = "{ASSET}: {A} Dataset for Tuning and Evaluation of Sentence Simplification Models with Multiple Rewriting Transformations",
+    author = "Alva-Manchego, Fernando  and
+      Martin, Louis  and
+      Bordes, Antoine  and
+      Scarton, Carolina  and
+      Sagot, Beno{\^\i}t  and
+      Specia, Lucia",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.424",
+    pages = "4668--4679",
+}
+</code></pre>
+           <p>
+            TURK:
+            <code>
+             @article{Xu-EtAl:2016:TACL,
+ author = {Wei Xu and Courtney Napoles and Ellie Pavlick and Quanze Chen and Chris Callison-Burch},
+ title = {Optimizing Statistical Machine Translation for Text Simplification},
+ journal = {Transactions of the Association for Computational Linguistics},
+ volume = {4},
+ year = {2016},
+ url = {https://cocoxu.github.io/publications/tacl2016-smt-simplification.pdf},
+ pages = {401--415}
+ }
+            </code>
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="languages-and-intended-use">
+         Languages and Intended Use
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Multilingual?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset multilingual?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Covered Languages
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What languages/dialects are covered in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             English
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            License
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the license of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            other: Other license
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Primary Task
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What primary task does the dataset support?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Simplification
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Whose Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Whose language is in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Wiki-Auto contains English text only (BCP-47:
+            <code>
+             en
+            </code>
+            ). It is presented as a translation task where Wikipedia Simple English is treated as its own idiom. For a statement of what is intended (but not always observed) to constitute Simple English on this platform, see
+            <a href="https://simple.wikipedia.org/wiki/Wikipedia:About#Simple_English">
+             Simple English in Wikipedia
+            </a>
+            .
+Both ASSET and TURK use crowdsourcing to change references, and their language is thus a combination of the WikiAuto data and the language of the demographic on mechanical Turk
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Add. License Info
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the 'other' license of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto:
+            <code>
+             CC BY-NC 3.0
+            </code>
+            , ASSET:
+            <code>
+             CC BY-NC 4.0
+            </code>
+            , TURK:
+            <code>
+             GNU General Public License v3.0
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The goal is to communicate the main ideas of source sentence in a way that is easier to understand by non-native speakers of English.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Intended Use
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the intended use of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto provides a set of aligned sentences from English Wikipedia and Simple English Wikipedia as a resource to train sentence simplification systems.
+           </p>
+           <p>
+            The authors first crowd-sourced a set of manual alignments between sentences in a subset of the Simple English Wikipedia and their corresponding versions in English Wikipedia (this corresponds to the
+            <code>
+             manual
+            </code>
+            config in this version of the dataset), then trained a neural CRF system to predict these alignments.
+           </p>
+           <p>
+            The trained alignment prediction model was then applied to the other articles in Simple English Wikipedia with an English counterpart to create a larger corpus of aligned sentences (corresponding to the
+            <code>
+             auto
+            </code>
+            and
+            <code>
+             auto_acl
+            </code>
+            configs here).
+           </p>
+           <p>
+            <a href="https://github.com/facebookresearch/asset">
+             ASSET
+            </a>
+            <a href="https://www.aclweb.org/anthology/2020.acl-main.424.pdf">
+             (Alva-Manchego et al., 2020)
+            </a>
+            is multi-reference dataset for the evaluation of sentence simplification in English. The dataset uses the same 2,359 sentences from
+            <a href="https://github.com/cocoxu/simplification/">
+             TurkCorpus
+            </a>
+            <a href="https://www.aclweb.org/anthology/Q16-1029.pdf">
+             (Xu et al., 2016)
+            </a>
+            and each sentence is associated with 10 crowdsourced simplifications. Unlike previous simplification datasets, which contain a single transformation (e.g., lexical paraphrasing in TurkCorpus or sentence
+splitting in
+            <a href="https://www.aclweb.org/anthology/D18-1081.pdf">
+             HSplit
+            </a>
+            ), the simplifications in ASSET encompass a variety of rewriting transformations.
+           </p>
+           <p>
+            TURKCorpus is a high quality simplification dataset where each source (not simple) sentence is associated with 8 human-written simplifications that focus on lexical paraphrasing. It is one of the two evaluation datasets for the text simplification task in GEM. It acts as the validation and test set for paraphrasing-based simplification that does not involve sentence splitting and deletion.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="credit">
+         Credit
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization Type(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              In what kind of organization did the dataset curation happen?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             academic
+            </code>
+            ,
+            <code>
+             industry
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Name the organization(s).
+             </div>
+            </div>
+           </h4>
+           <p>
+            Ohio State University, University of Sheffield, Inria, Facebook AI Research, Imperial College London, University of Pennsylvania, John Hopkins University
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Dataset Creators
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who created the original dataset? List the people involved in collecting the dataset and their affiliation(s).
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto: Chao Jiang, Mounica Maddela, Wuwei Lan, Yang Zhong, Wei Xu; ASSET: Fernando Alva-Manchego, Louis Martin, Antoine Bordes, Carolina Scarton, and Benoîıt Sagot, and Lucia Specia; TURK: Wei Xu, Courtney Napoles, Ellie Pavlick, Quanze Chen, and Chris Callison-Burch
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Funding
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who funded the data creation?
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto: NSF, ODNI, IARPA, Figure Eight AI, and Criteo. ASSET: PRAIRIE Institute, ANR. TURK: NSF
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Who added the Dataset to GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who contributed to the data card and adding the dataset to GEM? List the people+affiliations involved in creating this data card and who helped integrate this dataset into GEM.
+             </div>
+            </div>
+           </h4>
+           <p>
+            GEM v1 had separate data cards for WikiAuto, ASSET, and TURK. They were contributed by Dhruv Kumar and Mounica Maddela. The initial data loader was written by Yacine Jernite. Sebastian Gehrmann merged and extended the data cards and migrated the loader to the v2 infrastructure.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="dataset-structure">
+         Dataset Structure
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Data Fields
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the fields present in the dataset.
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             <code>
+              source
+             </code>
+             : A source sentence from one of the datasets
+            </li>
+            <li>
+             <code>
+              target
+             </code>
+             : A single simplified sentence corresponding to
+             <code>
+              source
+             </code>
+            </li>
+            <li>
+             <code>
+              references
+             </code>
+             : In the case of ASSET/TURK, references is a list of strings corresponding to the different references.
+            </li>
+           </ul>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Example Instance
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a JSON formatted example of a typical instance in the dataset.
+             </div>
+            </div>
+           </h4>
+           <pre><code>{
+  'source': 'In early work, Rutherford discovered the concept of radioactive half-life , the radioactive element radon, and differentiated and named alpha and beta radiation .',
+ 'target': 'Rutherford discovered the radioactive half-life, and the three parts of radiation which he named Alpha, Beta, and Gamma.'
+}
+</code></pre>
+          </div>
+          <div class="field">
+           <h4>
+            Data Splits
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe and name the splits in the dataset if there are more than one.
+             </div>
+            </div>
+           </h4>
+           <p>
+            In WikiAuto, which is used as training and validation set, the following splits are provided:
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               Tain
+              </th>
+              <th>
+               Dev
+              </th>
+              <th>
+               Test
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               Total sentence pairs
+              </td>
+              <td>
+               373801
+              </td>
+              <td>
+               73249
+              </td>
+              <td>
+               118074
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Aligned sentence pairs
+              </td>
+              <td>
+               1889
+              </td>
+              <td>
+               346
+              </td>
+              <td>
+               677
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            ASSET does not contain a training set; many models use
+            <a href="https://github.com/XingxingZhang/dress">
+             WikiLarge
+            </a>
+            (Zhang and Lapata, 2017) for training. For GEM,
+            <a href="https://github.com/chaojiang06/wiki-auto">
+             Wiki-Auto
+            </a>
+            will be used for training the model.
+           </p>
+           <p>
+            Each input sentence has 10 associated reference simplified sentences. The statistics of ASSET are given below.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               Dev
+              </th>
+              <th>
+               Test
+              </th>
+              <th>
+               Total
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               Input Sentences
+              </td>
+              <td>
+               2000
+              </td>
+              <td>
+               359
+              </td>
+              <td>
+               2359
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Reference Simplifications
+              </td>
+              <td>
+               20000
+              </td>
+              <td>
+               3590
+              </td>
+              <td>
+               23590
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            The test and validation sets are the same as those of
+            <a href="https://github.com/cocoxu/simplification/">
+             TurkCorpus
+            </a>
+            . The split was random.
+           </p>
+           <p>
+            There are 19.04 tokens per reference on average (lower than 21.29 and 25.49 for TurkCorpus and HSplit, respectively). Most (17,245) of the referece sentences do not involve sentence splitting.
+           </p>
+           <p>
+            TURKCorpus does not contain a training set; many models use
+            <a href="https://github.com/XingxingZhang/dress">
+             WikiLarge
+            </a>
+            (Zhang and Lapata, 2017) or
+            <a href="https://github.com/chaojiang06/wiki-auto">
+             Wiki-Auto
+            </a>
+            (Jiang et. al 2020) for training.
+           </p>
+           <p>
+            Each input sentence has 8 associated reference simplified sentences. 2,359 input sentences are randomly split into 2,000 validation and 359 test sentences.
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+              </th>
+              <th>
+               Dev
+              </th>
+              <th>
+               Test
+              </th>
+              <th>
+               Total
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               Input Sentences
+              </td>
+              <td>
+               2000
+              </td>
+              <td>
+               359
+              </td>
+              <td>
+               2359
+              </td>
+             </tr>
+             <tr>
+              <td>
+               Reference Simplifications
+              </td>
+              <td>
+               16000
+              </td>
+              <td>
+               2872
+              </td>
+              <td>
+               18872
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <p>
+            There are 21.29 tokens per reference on average.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Reason for Structure
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the dataset structure determined?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The underlying datasets have extensive secondary annotations that can be used in conjunction with the GEM version. We omit those annotations to simplify the format into one that can be used by seq2seq models.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Splitting Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
+             </div>
+            </div>
+           </h4>
+           <p>
+            In our setup, we use WikiAuto as training/validation corpus and ASSET and TURK as test corpora. ASSET and TURK have the same inputs but differ in their reference style. Researchers can thus conduct targeted evaluations based on the strategies that a model should learn.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-in-gem">
+          Dataset in GEM
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Rationale for Inclusion in GEM
+          </div>
+          <div class="tag">
+           GEM-Specific Curation
+          </div>
+          <div class="tag">
+           Getting Started with the Task
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="rationale-for-inclusion-in-gem">
+         Rationale for Inclusion in GEM
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Similar Datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Do other datasets for the high level task exist?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Ability that the Dataset measures
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            simplification
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Why is the Dataset in GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto is the largest open text simplification dataset currently available. ASSET and TURK are high quality test sets that are compatible with WikiAuto.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            It's unique setup with multiple test sets makes the task interesting since it allows for evaluation of multiple generations and systems that simplify in different ways.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="gem-specific-curation">
+         GEM-Specific Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Modificatied for GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Has the GEM version of the dataset been modified in any way (data, processing, splits) from the original curated data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Additional Splits?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does GEM provide additional splits to the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            GEM Modifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What changes have been made to he original dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             other
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Split Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how the new splits were created
+             </div>
+            </div>
+           </h4>
+           <p>
+            we split the original test set according to syntactic complexity of the source sentences. To characterize sentence syntactic complexity, we use the 8-level developmental level (d-level) scale proposed by
+            <a href="https://www.researchgate.net/publication/254033869_How_complex_is_that_sentence_A_proposed_revision_of_the_Rosenberg_and_Abbeduto_D-Level_Scale">
+             Covington et al. (2006)
+            </a>
+            and the implementation of
+            <a href="https://www.jbe-platform.com/content/journals/10.1075/ijcl.15.4.02lu">
+             Lu, Xiaofei (2010)
+            </a>
+            .
+We thus split the original test set into 8 subsets corresponding to the 8 d-levels assigned to source sentences. We obtain the following number of instances per level and average d-level of the dataset:
+           </p>
+           <table>
+            <thead>
+             <tr>
+              <th>
+               Total nb. sentences
+              </th>
+              <th>
+               L0
+              </th>
+              <th>
+               L1
+              </th>
+              <th>
+               L2
+              </th>
+              <th>
+               L3
+              </th>
+              <th>
+               L4
+              </th>
+              <th>
+               L5
+              </th>
+              <th>
+               L6
+              </th>
+              <th>
+               L7
+              </th>
+              <th>
+               Mean Level
+              </th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <td>
+               359
+              </td>
+              <td>
+               166
+              </td>
+              <td>
+               0
+              </td>
+              <td>
+               58
+              </td>
+              <td>
+               32
+              </td>
+              <td>
+               5
+              </td>
+              <td>
+               28
+              </td>
+              <td>
+               7
+              </td>
+              <td>
+               63
+              </td>
+              <td>
+               2.38
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="field">
+           <h4>
+            Split Motivation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspects of the model's generation capacities were the splits created to test?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The goal was to assess performance when simplifying source sentences with different syntactic structure and complexity.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Modification Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              For each of these changes, described them in more details and provided the intended purpose of the modification
+             </div>
+            </div>
+           </h4>
+           <p>
+            We removed secondary annotations and focus on the simple
+            <code>
+             input-&gt;output
+            </code>
+            format, but combine the different sub-datasets.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="getting-started-with-the-task">
+         Getting Started with the Task
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Pointers to Resources
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            There are recent supervised (
+            <a href="https://arxiv.org/abs/1910.02677">
+             Martin et al., 2019
+            </a>
+            ,
+            <a href="https://www.aclweb.org/anthology/N19-1317/">
+             Kriz et al., 2019
+            </a>
+            ,
+            <a href="https://www.aclweb.org/anthology/P19-1331/">
+             Dong et al., 2019
+            </a>
+            ,
+            <a href="https://www.aclweb.org/anthology/D17-1062/">
+             Zhang and Lapata, 2017
+            </a>
+            ) and unsupervised (
+            <a href="https://arxiv.org/abs/2005.00352v1">
+             Martin et al., 2020
+            </a>
+            ,
+            <a href="https://www.aclweb.org/anthology/2020.acl-main.707/">
+             Kumar et al., 2020
+            </a>
+            ,
+            <a href="https://www.aclweb.org/anthology/P19-1198/">
+             Surya et al., 2019
+            </a>
+            ) text simplification models that can be used as baselines.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Technical Terms
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Technical terms used in this card and the dataset and their definitions
+             </div>
+            </div>
+           </h4>
+           <p>
+            The common metric used for automatic evaluation is SARI
+            <a href="https://www.aclweb.org/anthology/Q16-1029/">
+             (Xu et al., 2016)
+            </a>
+            .
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="previous-results">
+          Previous Results
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Results
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-results">
+         Previous Results
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Measured Model Abilities
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Simplification
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Previous results available?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are previous results available?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What metrics are typically used for this task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Other: Other Metrics
+            </code>
+            ,
+            <code>
+             BLEU
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <p>
+            SARI: A simplification metric that considers both input and references to measure the "goodness" of words that are added, deleted, and kept.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The original authors of WikiAuto and ASSET used human evaluation to assess the fluency, adequacy, and simplicity (details provided in the paper). For TURK, the authors measured grammaticality, meaning-preservation, and simplicity gain (details in the paper).
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-curation">
+          Dataset Curation
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Original Curation
+          </div>
+          <div class="tag">
+           Language Data
+          </div>
+          <div class="tag">
+           Structured Annotations
+          </div>
+          <div class="tag">
+           Consent
+          </div>
+          <div class="tag">
+           Private Identifying Information (PII)
+          </div>
+          <div class="tag">
+           Maintenance
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="original-curation">
+         Original Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            Wiki-Auto provides a new version of the Wikipedia corpus that is larger, contains 75% less defective pairs and has more complex rewrites than the previous WIKILARGE dataset.
+           </p>
+           <p>
+            ASSET was created in order to improve the evaluation of sentence simplification. It uses the same input sentences as the
+            <a href="https://github.com/cocoxu/simplification/">
+             TurkCorpus
+            </a>
+            dataset from
+            <a href="https://www.aclweb.org/anthology/Q16-1029.pdf">
+             (Xu et al., 2016)
+            </a>
+            . The 2,359 input sentences of TurkCorpus are a sample of "standard" (not simple) sentences from the
+            <a href="https://www.informatik.tu-darmstadt.de/ukp/research_6/data/sentence_simplification/simple_complex_sentence_pairs/index.en.jsp">
+             Parallel Wikipedia Simplification (PWKP)
+            </a>
+            dataset
+            <a href="https://www.aclweb.org/anthology/C10-1152.pdf">
+             (Zhu et al., 2010)
+            </a>
+            , which come from the August 22, 2009 version of Wikipedia. The sentences of TurkCorpus were chosen to be of similar length
+            <a href="https://www.aclweb.org/anthology/Q16-1029.pdf">
+             (Xu et al., 2016)
+            </a>
+            . No further information is provided on the sampling strategy.
+           </p>
+           <p>
+            The TurkCorpus dataset was developed in order to overcome some of the problems with sentence pairs from Standard and Simple Wikipedia: a large fraction of sentences were misaligned, or not actually simpler
+            <a href="https://www.aclweb.org/anthology/Q16-1029.pdf">
+             (Xu et al., 2016)
+            </a>
+            . However, TurkCorpus mainly focused on
+            <em>
+             lexical paraphrasing
+            </em>
+            , and so cannot be used to evaluate simplifications involving
+            <em>
+             compression
+            </em>
+            (deletion) or
+            <em>
+             sentence splitting
+            </em>
+            . HSplit
+            <a href="https://www.aclweb.org/anthology/D18-1081.pdf">
+             (Sulem et al., 2018)
+            </a>
+            , on the other hand, can only be used to evaluate sentence splitting. The reference sentences in ASSET include a wider variety of sentence rewriting strategies, combining splitting, compression and paraphrasing. Annotators were given examples of each kind of transformation individually, as well as all three transformations used at once, but were allowed to decide which transformations to use for any given sentence.
+           </p>
+           <p>
+            An example illustrating the differences between TurkCorpus, HSplit and ASSET is given below:
+           </p>
+           <blockquote>
+            <p>
+             <strong>
+              Original:
+             </strong>
+             He settled in London, devoting himself chiefly to practical teaching.
+            </p>
+            <p>
+             <strong>
+              TurkCorpus:
+             </strong>
+             He rooted in London, devoting himself mainly to practical teaching.
+            </p>
+            <p>
+             <strong>
+              HSplit:
+             </strong>
+             He settled in London. He devoted himself chiefly to practical teaching.
+            </p>
+            <p>
+             <strong>
+              ASSET:
+             </strong>
+             He lived in London. He was a teacher.
+            </p>
+           </blockquote>
+          </div>
+          <div class="field">
+           <h4>
+            Sourced from Different Sources
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset aggregated from different data sources?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The goal is to communicate the same information as the source sentence using simpler words and grammar.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Source Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List the sources (one per line)
+             </div>
+            </div>
+           </h4>
+           <p>
+            Wikipedia
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="language-data">
+         Language Data
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            How was Language Data Obtained?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the language data obtained?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Found
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Where was it found?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If found, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Single website
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Validation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was the text validated by a different worker or a data curator?
+             </div>
+            </div>
+           </h4>
+           <p>
+            not validated
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Was Data Filtered?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Were text instances selected or filtered?
+             </div>
+            </div>
+           </h4>
+           <p>
+            algorithmically
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Language Producers
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What further information do we have on the language producers?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset uses language from Wikipedia: some demographic information is provided
+            <a href="https://en.wikipedia.org/wiki/Wikipedia:Who_writes_Wikipedia%3F">
+             here
+            </a>
+            .
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Filter Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What were the selection criteria?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The authors mention that they "extracted 138,095 article pairs from the 2019/09 Wikipedia dump using an improved version of the
+            <a href="https://github.com/attardi/wikiextractor">
+             WikiExtractor
+            </a>
+            library". The
+            <a href="https://spacy.io/">
+             SpaCy
+            </a>
+            library is used for sentence splitting.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="structured-annotations">
+         Structured Annotations
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Additional Annotations?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have additional annotations for each instance?
+             </div>
+            </div>
+           </h4>
+           <p>
+            crowd-sourced
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            11&lt;n&lt;50
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Annotation Service?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was an annotation service used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any Quality Control?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Quality control measures?
+             </div>
+            </div>
+           </h4>
+           <p>
+            none
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto (Figure Eight): No information provided.
+           </p>
+           <p>
+            ASSET (MTurk): 
+- Having a HIT approval rate over 95%, and over 1000 HITs approved. No other demographic or compensation information is provided.
+- Passing a Qualification Test (appropriately simplifying sentences). Out of 100 workers, 42 passed the test.
+- Being a resident of the United States, United Kingdom or Canada.
+           </p>
+           <p>
+            TURK (MTurk): 
+- Reference sentences were written by workers with HIT approval rate over 95%. No other demographic or compensation information is provided.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            1
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <blockquote>
+            <p>
+             5
+            </p>
+           </blockquote>
+          </div>
+          <div class="field">
+           <h4>
+            Which Annotation Service
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Which annotation services were used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Amazon Mechanical Turk
+            </code>
+            ,
+            <code>
+             Appen
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Annotation Values
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Purpose and values for each annotation
+             </div>
+            </div>
+           </h4>
+           <p>
+            WikiAuto: Sentence alignment labels were crowdsourced for 500 randomly sampled document pairs (10,123 sentence pairs total). The authors pre-selected several alignment candidates from English Wikipedia for each Simple Wikipedia sentence based on various similarity metrics, then asked the crowd-workers to annotate these pairs. Finally, they trained their alignment model on this manually annotated dataset to obtain automatically aligned sentences (138,095 document pairs, 488,332 sentence pairs).
+No demographic annotation is provided for the crowd workers. The
+            <a href="https://www.figure-eight.com/">
+             Figure Eight
+            </a>
+            platform now part of Appen) was used for the annotation process.
+           </p>
+           <p>
+            ASSET: The instructions given to the annotators are available
+            <a href="https://github.com/facebookresearch/asset/blob/master/crowdsourcing/AMT_AnnotationInstructions.pdf">
+             here
+            </a>
+            .
+           </p>
+           <p>
+            TURK: The references are crowdsourced from Amazon Mechanical Turk. The annotators were asked to provide simplifications without losing any information or splitting the input sentence. No other demographic or compensation information is provided in the TURKCorpus paper. The instructions given to the annotators are available in the paper.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="consent">
+         Consent
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Consent Policy?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was there a consent policy involved when gathering the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Both Figure Eight and Amazon Mechanical Turk raters forfeit the right to their data as part of their agreements.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="private-identifying-information-(pii)">
+         Private Identifying Information (PII)
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contains PII?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no PII
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for no PII
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a justification for selecting `no PII` above.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Since the dataset is created from Wikipedia/Simple Wikipedia, all the information contained in the dataset is already in the public domain.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="maintenance">
+         Maintenance
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Maintenance Plan?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the original dataset have a maintenance plan?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="broader-social-context">
+          Broader Social Context
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Work on the Social Impact of the Dataset
+          </div>
+          <div class="tag">
+           Impact on Under-Served Communities
+          </div>
+          <div class="tag">
+           Discussion of Biases
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-work-on-the-social-impact-of-the-dataset">
+         Previous Work on the Social Impact of the Dataset
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Usage of Models based on the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are you aware of cases where models trained on the task featured in this dataset ore related tasks have been used in automated systems?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="impact-on-under-served-communities">
+         Impact on Under-Served Communities
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Addresses needs of underserved Communities?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset address the needs of communities that are traditionally underserved in language technology, and particularly language generation technology? Communities may be underserved for exemple because their language, language variety, or social or geographical context is underepresented in NLP and NLG resources (datasets and models).
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="discussion-of-biases">
+         Discussion of Biases
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Documented Social Biases?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are there documented social biases in the dataset? Biases in this context are variations in the ways members of different social categories are represented that can have harmful downstream consequences for members of the more disadvantaged group.
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Links and Summaries of Analysis Work
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide links to and summaries of works analyzing these biases.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset may contain some social biases, as the input sentences are based on Wikipedia. Studies have shown that the English Wikipedia contains both gender biases
+            <a href="https://research.tudelft.nl/en/publications/is-wikipedia-succeeding-in-reducing-gender-bias-assessing-changes">
+             (Schmahl et al., 2020)
+            </a>
+            and racial biases
+            <a href="https://journals.sagepub.com/doi/pdf/10.1177/2378023118823946">
+             (Adams et al., 2019)
+            </a>
+            .
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="considerations-for-using-the-data">
+          Considerations for Using the Data
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           PII Risks and Liability
+          </div>
+          <div class="tag">
+           Licenses
+          </div>
+          <div class="tag">
+           Known Technical Limitations
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="pii-risks-and-liability">
+         PII Risks and Liability
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Potential PII Risk
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            All the data is in the public domain.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="licenses">
+         Licenses
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Dataset
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Intended Use part of the Data Overview Section, which of the following best describe the copyright and licensing status of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             open license - commercial use allowed
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Language Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Language part of the Data Curation Section, which of the following best describe the copyright and licensing status of the underlying language data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             open license - commercial use allowed
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="known-technical-limitations">
+         Known Technical Limitations
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The dataset may contain some social biases, as the input sentences are based on Wikipedia. Studies have shown that the English Wikipedia contains both gender biases
+            <a href="https://research.tudelft.nl/en/publications/is-wikipedia-succeeding-in-reducing-gender-bias-assessing-changes">
+             (Schmahl et al., 2020)
+            </a>
+            and racial biases
+            <a href="https://journals.sagepub.com/doi/pdf/10.1177/2378023118823946">
+             (Adams et al., 2019)
+            </a>
+            .
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Since the test datasets contains only 2,359 sentences that are derived from Wikipedia, they are limited to a small subset of topics present on Wikipedia.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </main>
+ </body>
+ <script>
+  initializeSections();initializeTables();initializeCodeBlocks();initializeTags();initializeNav();initializeEscapes();function initializeSections(){const sections=document.getElementsByClassName('section');const sectionButtons=document.getElementsByClassName('section-open-button');sections[0].classList.add('open');for(let i=0;i<sections.length;i+=1){sectionButtons[i].addEventListener('click',(e)=>{if(sections[i].classList.contains('open')){closeSection(sections[i])}else{openSection(sections[i])}})}document.getElementById('expand-all').addEventListener('click',(e)=>{for(section of sections){openSection(section)}});document.getElementById('collapse-all').addEventListener('click',(e)=>{for(section of sections){closeSection(section)}})}function openSection(section){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.add('open');setTimeout(()=>{collapsible.removeAttribute('style')},500)}function closeSection(section){if(section.classList.contains('open')){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.remove('open');setTimeout(()=>{collapsible.removeAttribute('style')},200)}}function initializeTables(){const elements=document.getElementsByTagName('table');const wrapperTemplate=document.getElementById('table-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const table=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(table);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);table.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);table.appendChild(element)}}function initializeCodeBlocks(){const elements=document.getElementsByTagName('pre');const wrapperTemplate=document.getElementById('code-block-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const code=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(code);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);code.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);code.getElementsByClassName('copy-icon')[0].addEventListener('click',copy);code.appendChild(element)}}function initializeEscapes(){document.addEventListener('click',(e)=>{if(e.target.classList.contains('expand')){escapeModal(e.target)}});document.addEventListener('keyup',(e)=>{if(e.key==="Escape"){const expanded=document.getElementsByClassName('expand');if(expanded.length>0){escapeModal(expanded[0])}}})}function initializeTags(){for(tag of document.getElementsByClassName('tag')){const s=tag.parentElement.parentElement.parentElement.parentElement;tag.addEventListener('click',(e)=>jumpToHeading(titleToId(e.currentTarget.textContent)))}}function initializeNav(){document.getElementById('datacard-outline-button').addEventListener('click',toggleNav);for(heading of document.getElementById('datacard-outline-nav').getElementsByTagName('li')){heading.addEventListener('click',(e)=>{jumpToHeading(titleToId(e.currentTarget.textContent))})}}function toggleNav(){const button=document.getElementById('datacard-outline-button');const nav=document.getElementById('datacard-outline-nav');if(button.classList.contains('active')){button.classList.remove('active');nav.classList.remove('active')}else{button.classList.add('active');nav.classList.add('active')}}function jumpToHeading(id){const heading=document.getElementById(id);if(heading.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement)}else if(heading.parentElement.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement.parentElement)}const cardWindow=document.getElementsByClassName('content-wrapper')[0];setTimeout(()=>{cardWindow.scrollTop=heading.offsetTop-90},500)}function titleToId(title){return title.trim().toLowerCase().replaceAll(' ','-')}function toggleModal(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;if(icon.className==='expand-icon'){document.body.style.overflow='hidden';wrapper.classList.add('expand');icon.className='collapse-icon'}else{wrapper.classList.remove('expand');icon.className='expand-icon';document.body.style.overflow='scroll'}}function escapeModal(wrapper){wrapper.classList.remove('expand');for(icon of wrapper.getElementsByClassName('collapse-icon')){icon.className='expand-icon'}document.body.style.overflow='scroll'}function copy(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;const content=wrapper.getElementsByTagName('code')[0].textContent;navigator.clipboard.writeText(content);}
+ </script>
+ <script src="./resizer.js">
+ </script>
+</html>

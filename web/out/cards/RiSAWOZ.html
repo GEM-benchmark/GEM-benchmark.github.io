@@ -1,0 +1,3090 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8"/>
+  <title>
+   Data Cards Labs
+  </title>
+  <base target="_blank"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Rubik:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <style>
+   a,abbr,acronym,address,applet,article,aside,audio,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}*{-webkit-box-sizing:border-box;box-sizing:border-box}html{overflow:hidden}body{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:16px;line-height:24px;color:#3c4f50;background:#f1f7f7;overflow-x:hidden}a{color:#ff675c;text-decoration:none}a:focus,a:hover{background:#ffecea}b,strong{font-weight:600}em{font-style:italic}img{max-width:100%}h1{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:32px;line-height:48px;font-weight:400;margin-bottom:12px}h2{font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;display:block;margin-right:20px}h3{font-family:Rubik, Helvetica, Arial, sans-serif;margin-top:20px;padding-top:10px;font-size:16px;line-height:24px;margin-bottom:5px;color:#ff675c;border-top:1px solid #cddcdc}dt,h4{color:#7c9192;font-weight:500;font-size:12px;line-height:20px;text-transform:uppercase;letter-spacing:0.8px;margin-bottom:10px}h5{margin-top:10px;font-size:12px;font-weight:500;font-style:italic;color:#7c9192}p{margin-bottom:20px}p:last-of-type{margin-bottom:0}ol,ul{margin-left:20px;margin-bottom:20px}.header-wrapper{position:fixed;display:flex;align-items:center;justify-content:start;padding:0 60px;box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2);width:100%;background:#fff;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px;height:60px;z-index:3}.header-title{display:inline-block;font-family:Rubik, Helvetica, Arial, sans-serif;font-size:18px;line-height:20px}.main-wrapper{display:flex;justify-content:space-between}.panel-wrapper{min-width:60px;max-width:60px;min-height:100%;margin-top:60px;padding-top:20px;background:#fff;border-right:1px solid #cddcdc;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);z-index:2;display:flex;flex-direction:column;align-items:center}#datacard-outline-nav{position:fixed;left:-300px;min-width:300px;max-width:300px;height:100%;padding:120px 10px 20px 0;box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.2);background:#f1f7f7;z-index:1;overflow-y:scroll;transition:all 0.5s ease-out}#datacard-outline-nav.active{transform:translateX(360px);transition:all 0.5s ease-out}#datacard-outline-nav ul{list-style-type:none;font-size:14px;line-height:22px;overflow-wrap:normal;margin-bottom:6px}#datacard-outline-nav li{margin-bottom:6px}#datacard-outline-nav li:focus,#datacard-outline-nav li:hover{cursor:pointer;color:#ff675c}#datacard-outline-nav li.active{color:#ff675c;list-style-type:disc}#datacard-outline-button{padding:10px;width:40px;height:40px;border-radius:20px;background:#f1f7f7;border:none;cursor:pointer}#datacard-outline-button svg{fill:#3c4f50}#datacard-outline-button.active,#datacard-outline-button:focus,#datacard-outline-button:hover{background:#cddcdc}.datacard-breadcrumbs{display:flex;align-items:center;height:40px;width:100%;position:fixed;padding-left:80px;top:60px;left:0;background:#fff;border-bottom:1px solid #cddcdc;font-size:14px;line-height:22px;z-index:1}.content-wrapper{width:100%;display:flex;justify-content:center;margin-top:60px;height:calc(100vh - 40px);overflow-x:hidden;overflow-y:scroll;scroll-behavior:smooth}.datacard-wrapper{max-width:1000px;width:100%;padding:20px}section{display:block;margin-bottom:40px}.quick-row,.section,.summary{background:#fff;display:block;width:100%;padding:20px;border:1px solid #cddcdc}.quick-row,.summary{border-radius:5px}.title-dataset-details,.title-quick-use{font-size:20px;line-height:28px;margin-top:10px;margin-bottom:0;padding-bottom:10px}.details-nav{display:flex;justify-content:space-between}.details-button{font-family:Inter, Helvetica, Arial, sans-serif;color:#152d2e;background:#fff;border:none;border-radius:5px;width:max-content;height:30px;font-size:12px;line-height:20px;padding:4px 8px;margin-left:10px;cursor:pointer;display:flex;justify-content:center;align-items:center}.details-button:focus,.details-button:hover{background:#cddcdc}.tags{display:none;margin-right:40px}.tag{font-family:Rubik, Helvetica, Arial, sans-serif;color:#3c4f50;background-color:#f1f7f7;font-size:14px;line-height:22px;padding:1px 5px;border-radius:5px;margin:2px 5px 2px 0;display:inline-block;cursor:pointer}.tag:focus,.tag:hover{background-color:#cddcdc}.tag:last-of-type{margin-right:0}@media screen and (min-width: 800px){.tags{max-width:500px;margin-left:20px}}@media screen and (min-width: 550px){.tags{display:inline-block}}.section{border-bottom:2px solid #cddcdc}.section:first-of-type,.section:nth-of-type(2){border-radius:5px 5px 0 0}.section:last-of-type{border-radius:0 0 5px 5px;border-bottom:1px solid #cddcdc}.section-preview{width:100%;display:flex;justify-content:space-between;align-items:center;min-height:60px}.section-preview-content{display:flex;justify-content:center;align-items:center}.section-open-button{min-width:24px;min-height:24px;height:100%;background:none;border:none;cursor:pointer;z-index:0}.section-open-button svg{transition:all 0.5s ease-out}.section-open-button:focus svg,.section-open-button:hover svg{fill:#ff675c}.subsection-wrapper{max-height:0;overflow:hidden;transition:all 0.25s ease-out;-webkit-transition:none;-moz-transition:all 0.25s ease-out;-o-transition:all 0.25s ease-out;webkit-backface-visibility:none}.open .subsection-wrapper{max-height:max-content;transition:all 0.5s ease-in;-webkit-transition:none;-moz-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in}.open .section-open-button svg{transform:rotate(180deg);transition:all 0.5s ease-out;-webkit-transition:all 0.5s ease-out;-moz-transition:all 0.5s ease-out;-o-transition:all 0.5s ease-out;webkit-backface-visibility:none}.summary-content{margin-bottom:20px}.summary-scopes{border-top:1px solid #f1f7f7;padding-top:20px}@media screen and (min-width: 550px){.summary-wrapper{display:grid;grid-template-columns:repeat(2, 1fr)}.summary-scopes{padding:0 20px;border:none}}@media screen and (min-width: 800px){.summary-scopes{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px}}.row{margin-top:10px;display:block;width:100%;gap:20px}@media screen and (min-width: 550px){.row{display:grid;grid-template-columns:repeat(3, 1fr)}}.quick-row{display:block;width:100%;column-gap:20px;grid-template-columns:repeat(2, 1fr)}@media screen and (min-width: 550px){.quick-row{display:grid}}@media screen and (min-width: 800px){.quick-row{grid-template-columns:repeat(5, 1fr)}}.field{margin-bottom:20px;overflow-x:hidden}.field:last-of-type{margin-bottom:0}@media screen and (min-width: 550px){.field{max-width:300px}}.scope{padding:10px 0}.scope:last-of-type{border-bottom:none}@media screen and (min-width: 550px){.scope{border-bottom:none}}pre{background:#f1f7f7;display:inline-block;overflow-x:hidden;overflow-y:scroll;width:100%;max-height:300px;white-space:pre-wrap}code{font-family:'Space Grotesk', sans-serif;background:#f1f7f7;font-size:14px;line-height:20px;border-radius:6px;padding:1px 5px}.code-block-wrapper,.table-wrapper{background:#fff;border:#cddcdc 1px solid;border-radius:6px;padding:10px;margin:10px 0}.expand .code-block-wrapper,.expand .table-wrapper{box-shadow:1px 2px 2px 0 rgba(0, 0, 0, 0.2)}.code-block-wrapper{background:#f1f7f7}.summary-row .code-block-wrapper,.summary-row .table-wrapper{max-width:max-content}table{display:inline-block;overflow-x:scroll;overflow-y:hidden;max-height:300px;font-size:14px;line-height:20px}tr{overflow-x:scroll}tfoot,thead,tr{padding:10px}th{text-align:left;font-weight:500;padding:10px}td,tfoot{text-align:left;padding:10px;border-top:#f1f7f7 1px solid}thead{font-weight:500}.expand{position:fixed;padding:20px;margin:0;border-radius:0;top:60px;left:0;width:100%;max-width:100%;height:100%;max-height:100%;background:rgba(0, 0, 0, .4);display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:3}.expand pre,.expand table{height:max-content;max-height:calc(100vh - 100px)}.expand .interactions{margin-bottom:10px}.interactions{display:flex;justify-content:end;align-items:center}.tooltip{margin-left:2px;width:0;height:0;border:none;background:none;display:inline}.tooltip::before{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z'/></svg>")}.tooltip-text{font-family:Inter, Helvetica, Arial, sans-serif;font-weight:400;font-size:12px;line-height:16px;padding:6px;text-transform:none;visibility:hidden;position:absolute;height:0;width:0;color:#fff;background:#3c4f50;border:none;border-radius:5px;box-shadow:1px 2px 2px 0 rgba(0,0,0,.2)}.tooltip:focus .tooltip-text,.tooltip:hover .tooltip-text{visibility:visible;height:auto;width:auto;max-width:240px;word-break:break-word}.expand-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.collapse-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M22,3.41l-5.29,5.29L20,12h-8V4l3.29,3.29L20.59,2L22,3.41z M3.41,22l5.29-5.29L12,20v-8H4l3.29,3.29L2,20.59L3.41,22z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.copy-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}.link-icon{content:url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' height='16px' width='16px' fill='rgb(124, 145, 146)' viewBox='0 0 24 24'><path d='M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z'/></svg>");border:none;background:none;cursor:pointer;margin:0;padding:2px}
+  </style>
+ </head>
+ <body>
+  <header class="header-wrapper">
+   <div class="header-title">
+    Data Cards Labs
+   </div>
+  </header>
+  <main class="main-wrapper">
+   <aside class="panel-wrapper">
+    <button id="datacard-outline-button">
+     <svg fill="none" height="16" viewbox="0 0 18 18" width="16" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 2V16H2V2H16ZM16 0H2C0.9 0 0 0.9 0 2V16C0 17.1 0.9 18 2 18H16C17.1 18 18 17.1 18 16V2C18 0.9 17.1 0 16 0ZM11 14H4V12H11V14ZM14 10H4V8H14V10ZM14 6H4V4H14V6Z">
+      </path>
+     </svg>
+    </button>
+   </aside>
+   <nav id="datacard-outline-nav">
+    <ul>
+     <li>
+      Summary
+     </li>
+     <li>
+      Quick-Use
+     </li>
+     <li>
+      Dataset Details
+     </li>
+     <ul>
+      <li>
+       Dataset Overview
+      </li>
+      <ul>
+       <li>
+        Where to find the Data and its Documentation
+       </li>
+       <li>
+        Languages and Intended Use
+       </li>
+       <li>
+        Credit
+       </li>
+       <li>
+        Dataset Structure
+       </li>
+      </ul>
+      <li>
+       Dataset in GEM
+      </li>
+      <ul>
+       <li>
+        Rationale for Inclusion in GEM
+       </li>
+       <li>
+        GEM-Specific Curation
+       </li>
+       <li>
+        Getting Started with the Task
+       </li>
+      </ul>
+      <li>
+       Previous Results
+      </li>
+      <ul>
+       <li>
+        Previous Results
+       </li>
+      </ul>
+      <li>
+       Dataset Curation
+      </li>
+      <ul>
+       <li>
+        Original Curation
+       </li>
+       <li>
+        Language Data
+       </li>
+       <li>
+        Structured Annotations
+       </li>
+       <li>
+        Consent
+       </li>
+       <li>
+        Private Identifying Information (PII)
+       </li>
+       <li>
+        Maintenance
+       </li>
+      </ul>
+      <li>
+       Broader Social Context
+      </li>
+      <ul>
+       <li>
+        Previous Work on the Social Impact of the Dataset
+       </li>
+       <li>
+        Impact on Under-Served Communities
+       </li>
+       <li>
+        Discussion of Biases
+       </li>
+      </ul>
+      <li>
+       Considerations for Using the Data
+      </li>
+      <ul>
+       <li>
+        PII Risks and Liability
+       </li>
+       <li>
+        Licenses
+       </li>
+       <li>
+        Known Technical Limitations
+       </li>
+      </ul>
+     </ul>
+    </ul>
+   </nav>
+   <div class="content-wrapper">
+    <article class="datacard-wrapper">
+     <template id="table-template">
+      <div class="table-wrapper">
+       <div class="interactions">
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <template id="code-block-template">
+      <div class="code-block-wrapper">
+       <div class="interactions">
+        <div class="copy-icon" title="Click to copy code block">
+        </div>
+        <div class="expand-icon" title="Click to expand table">
+        </div>
+       </div>
+      </div>
+     </template>
+     <section class="summary" id="summary">
+      <h1>
+       RiSAWOZ
+      </h1>
+      <div class="summary-wrapper">
+       <div class="summary-content">
+        <p>
+         RiSAWOZ is a Chinese dialog dataset. It can be used to study various dialogue tasks, such as Dialogue State Tracking, Dialogue Context-to-Text Generation, Coreference Resolution and Unified Generative Ellipsis and Coreference Resolution.
+        </p>
+        <p>
+         You can load the dataset via:
+        </p>
+        <pre><code>import datasets
+data = datasets.load_dataset('GEM/RiSAWOZ')
+</code></pre>
+        <p>
+         The data loader can be found
+         <a href="https://huggingface.co/datasets/GEM/RiSAWOZ">
+          here
+         </a>
+         .
+        </p>
+       </div>
+       <div class="summary-scopes">
+        <div class="field">
+         <h4>
+          website
+         </h4>
+         <p>
+          <a href="https://terryqj0107.github.io/RiSAWOZ_webpage">
+           Website
+          </a>
+         </p>
+        </div>
+        <div class="field">
+         <h4>
+          paper
+         </h4>
+         <p>
+          <a href="https://aclanthology.org/2020.emnlp-main.67">
+           ACL Anthology
+          </a>
+         </p>
+        </div>
+        <div class="field">
+         <h4>
+          authors
+         </h4>
+         <p>
+          Jun Quan (Soochow University, Suzhou, China), Shian Zhang (Soochow University, Suzhou, China), Qian Cao(Soochow University, Suzhou, China), Zizhong Li (Tianjin University, Tianjin, China), Deyi Xiong (Tianjin University, Tianjin, China)
+         </p>
+        </div>
+       </div>
+      </div>
+     </section>
+     <section id="quick-use">
+      <h2 class="title-quick-use">
+       Quick-Use
+      </h2>
+      <div class="quick-row">
+       <div class="field">
+        <h4>
+         Contact Name
+         <div class="tooltip">
+          <div class="tooltip-text">
+           If known, provide the name of at least one person the reader can contact for questions about the dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Deyi Xiong
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Multilingual?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Is the dataset multilingual?
+          </div>
+         </div>
+        </h4>
+        <p>
+         no
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Covered Languages
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What languages/dialects are covered in the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         <code>
+          Mandarin Chinese
+         </code>
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         License
+         <div class="tooltip">
+          <div class="tooltip-text">
+           What is the license of the dataset?
+          </div>
+         </div>
+        </h4>
+        <p>
+         cc-by-4.0: Creative Commons Attribution 4.0 International
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Communicative Goal
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Provide a short description of the communicative goal of a model trained for this task on this dataset.
+          </div>
+         </div>
+        </h4>
+        <p>
+         Generate system response given dialogue context across multiple domains.
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Additional Annotations?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the dataset have additional annotations for each instance?
+          </div>
+         </div>
+        </h4>
+        <p>
+         crowd-sourced
+        </p>
+       </div>
+       <div class="field">
+        <h4>
+         Contains PII?
+         <div class="tooltip">
+          <div class="tooltip-text">
+           Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+          </div>
+         </div>
+        </h4>
+        <p>
+         no PII
+        </p>
+       </div>
+      </div>
+     </section>
+     <section id="dataset-details">
+      <div class="details-nav">
+       <p class="title-dataset-details">
+        Dataset Details
+       </p>
+       <div class="interactions">
+        <button class="details-button" id="expand-all">
+         Expand All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.2 17.4 15 15.2 24 6.2 33 15.2 30.8 17.4 24 10.6ZM24 42 15 33 17.2 30.8 24 37.6 30.8 30.8 33 33Z">
+          </path>
+         </svg>
+        </button>
+        <button class="details-button" id="collapse-all">
+         Collapse All
+         <svg height="16" viewbox="0 0 48 48" width="16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 19.15 15 10.15 17.15 8 24 14.85 30.85 8 33 10.15ZM17.15 40 15 37.85 24 28.85 33 37.85 30.85 40 24 33.15Z">
+          </path>
+         </svg>
+        </button>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-overview">
+          Dataset Overview
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Where to find the Data and its Documentation
+          </div>
+          <div class="tag">
+           Languages and Intended Use
+          </div>
+          <div class="tag">
+           Credit
+          </div>
+          <div class="tag">
+           Dataset Structure
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="where-to-find-the-data-and-its-documentation">
+         Where to find the Data and its Documentation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Webpage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the webpage for the dataset (if it exists)?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://terryqj0107.github.io/RiSAWOZ_webpage">
+             Website
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Download
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to where the original dataset is hosted?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://github.com/terryqj0107/RiSAWOZ">
+             Github
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Paper
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the link to the paper describing the dataset (open access preferred)?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://aclanthology.org/2020.emnlp-main.67">
+             ACL Anthology
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Has a Leaderboard?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have an active leaderboard?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contact Name
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the name of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Deyi Xiong
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Contact Email
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If known, provide the email of at least one person the reader can contact for questions about the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            dyxiong@tju.edu.cn
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            BibTex
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide the BibTex-formatted reference for the dataset. Please use the correct published version (ACL anthology, etc.) instead of google scholar created Bibtex.
+             </div>
+            </div>
+           </h4>
+           <pre><code>@inproceedings{quan-etal-2020-risawoz,
+    title = "{R}i{SAWOZ}: A Large-Scale Multi-Domain {W}izard-of-{O}z Dataset with Rich Semantic Annotations for Task-Oriented Dialogue Modeling",
+    author = "Quan, Jun  and
+      Zhang, Shian  and
+      Cao, Qian  and
+      Li, Zizhong  and
+      Xiong, Deyi",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    month = nov,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-main.67",
+    pages = "930--940",
+}
+</code></pre>
+          </div>
+         </div>
+        </div>
+        <h3 id="languages-and-intended-use">
+         Languages and Intended Use
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Multilingual?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset multilingual?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Covered Languages
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What languages/dialects are covered in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Mandarin Chinese
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            License
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the license of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            cc-by-4.0: Creative Commons Attribution 4.0 International
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Primary Task
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What primary task does the dataset support?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Dialog Response Generation
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Covered Dialects
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What dialects are covered? Are there multiple dialects per language?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Only Mandarin Chinese is covered in this dataset.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a short description of the communicative goal of a model trained for this task on this dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Generate system response given dialogue context across multiple domains.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Intended Use
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the intended use of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            RiSAWOZ can be used to support the study under various dialogue tasks, such as Natural Language Understanding, Dialogue State Tracking, Dialogue Context-to-Text Generation, Coreference Resolution and Unified Generative Ellipsis and Coreference Resolution.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="credit">
+         Credit
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization Type(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              In what kind of organization did the dataset curation happen?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             academic
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Curation Organization(s)
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Name the organization(s).
+             </div>
+            </div>
+           </h4>
+           <p>
+            Soochow University and Tianjin University
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Dataset Creators
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who created the original dataset? List the people involved in collecting the dataset and their affiliation(s).
+             </div>
+            </div>
+           </h4>
+           <p>
+            Jun Quan (Soochow University, Suzhou, China), Shian Zhang (Soochow University, Suzhou, China), Qian Cao(Soochow University, Suzhou, China), Zizhong Li (Tianjin University, Tianjin, China), Deyi Xiong (Tianjin University, Tianjin, China)
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Funding
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who funded the data creation?
+             </div>
+            </div>
+           </h4>
+           <p>
+            the National Key Research and Development Project
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Who added the Dataset to GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who contributed to the data card and adding the dataset to GEM? List the people+affiliations involved in creating this data card and who helped integrate this dataset into GEM.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Tianhao Shen (Tianjin University, Tianjin, China), Chaobin You (Tianjin University, Tianjin, China), Deyi Xiong (Tianjin University, Tianjin, China)
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="dataset-structure">
+         Dataset Structure
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Data Fields
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the fields present in the dataset.
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             gem_id (string): GEM-RiSAWOZ-{split}-{id}
+            </li>
+            <li>
+             dialogue_id (string): dialogue ID
+            </li>
+            <li>
+             goal (string): natural language descriptions of the user goal
+            </li>
+            <li>
+             domains (list of strings): domains mentioned in current dialogue session
+            </li>
+            <li>
+             dialogue (list of dicts): dialog turns and corresponding annotations. Each turn includes:
+             <ul>
+              <li>
+               turn_id (int): turn ID
+              </li>
+              <li>
+               turn_domain (list of strings): domain mentioned in current turn
+              </li>
+              <li>
+               user_utterance (string): user utterance
+              </li>
+              <li>
+               system_utterance (string): system utterance
+              </li>
+              <li>
+               belief_state (dict): dialogue state, including:
+               <ul>
+                <li>
+                 inform slot-values (dict): the slots and corresponding values informed until current turn
+                </li>
+                <li>
+                 turn_inform (dict): the slots and corresponding values informed in current turn
+                </li>
+                <li>
+                 turn request (dict): the slots requested in current turn
+                </li>
+               </ul>
+              </li>
+              <li>
+               user_actions (list of lists): user dialogue acts in current turn
+              </li>
+              <li>
+               user_actions (list of lists): system dialogue acts in current turn
+              </li>
+              <li>
+               db_results (list of strings): database search results
+              </li>
+              <li>
+               segmented_user_utterance (string): word segmentation result of user utterance
+              </li>
+              <li>
+               segmented_system_utterance (string): word segmentation result of system utterance
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Example Instance
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a JSON formatted example of a typical instance in the dataset.
+             </div>
+            </div>
+           </h4>
+           <pre><code>[
+    {
+        "dialogue_id": "attraction_goal_4-63###6177",
+        "goal": "attraction_goal_4-63: 你是苏州人，但不怎么出去玩。你朋友来苏州找你，你准备带他逛逛“水乡古镇”，你希望客服给你推荐个消费水平“中等”的地方。然后你要问清楚这地方“是否地铁直达”、“特点”、“门票价格”这些信息。最后，你要感谢客服的帮助，然后说再见。",
+        "domains": [
+            "旅游景点"
+        ],
+        "dialogue": [
+            {
+                "turn_id": 0,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "你好，我是苏州人，但是不怎么出去玩，我朋友来苏州找我了，我准备带他逛逛水乡古镇，你能帮我推荐一下吗？",
+                "system_utterance": "推荐您去周庄古镇。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇"
+                    },
+                    "turn_inform": {
+                        "旅游景点-景点类型": "水乡 古镇"
+                    },
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "景点类型",
+                        "水乡 古镇"
+                    ],
+                    [
+                        "Greeting",
+                        "旅游景点",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Recommend",
+                        "旅游景点",
+                        "名称",
+                        "周庄 古镇"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为8",
+                    "{'名称': '周庄古镇', '区域': '昆山', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '100元', '电话号码': '400-8282900', '地址': '苏州市昆山市周庄镇全福路43号', '评分': 4.5, '开放时间': '07:30-18:50', '特点': '小桥流水与人家，双桥水巷摇橹船，还有沈万三的足迹待你寻访'}",
+                    "{'名称': '同里古镇', '区域': '吴江', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '100元', '电话号码': '0512-63325728', '地址': '苏州市吴江区同里古镇', '评分': 4.5, '开放时间': '07:30-17:30', '特点': '五湖环抱的江南水乡古镇，走三桥，参观小巧精致的园林退思园。'}",
+                    "{'名称': '山塘街', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-65314467', '地址': '苏州市姑苏区古城西北', '评分': 4.5, '开放时间': '08:30-21:00', '特点': '欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。'}",
+                    "{'名称': '平江路', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-69163907', '地址': '江苏省苏州市姑苏区白塔东路65号', '评分': 4.5, '开放时间': '全天', '特点': '漫步保存完整的古街区，看小桥流水古宅，逛文艺小店，吃美食。'}",
+                    "{'名称': '木渎古镇', '区域': '吴中区', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '便宜', '是否地铁直达': '否', '门票价格': '免费', '电话号码': '0512-66514042', '地址': '苏州市吴中区木渎镇山塘街188号', '评分': 4.4, '开放时间': '08:30-17:00', '特点': '以园林为特色的古镇，游严家花园等古典园林，坐船看小桥流水。'}",
+                    "{'名称': '甪直古镇', '区域': '吴中区', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '便宜', '是否地铁直达': '否', '门票价格': '免费', '电话号码': '0512-66191668', '地址': '苏州市吴中区甪直镇晓市路21号', '评分': 4.3, '开放时间': '07:30-17:30', '特点': '甪直古镇有2500多年历史，甪直境内水流纵横，桥梁密布，有五湖之厅、六泽之冲之称。'}",
+                    "{'名称': '千灯古镇', '区域': '昆山', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '便宜', '是否地铁直达': '否', '门票价格': '免费', '电话号码': '0512-57472155', '地址': '苏州市昆山市千灯古镇尚书路1号', '评分': 4.3, '开放时间': '08:00-17:00', '特点': '千灯古镇，距今已有2500多年的历史，古镇白墙黑瓦，昆韵盎然。'}",
+                    "{'名称': '锦溪古镇', '区域': '昆山', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '中等', '是否地铁直达': '否', '门票价格': '65元', '电话号码': '0512-57224669', '地址': '苏州市昆山市锦溪镇邵甸港路18号', '评分': 4.4, '开放时间': '08:00-17:00', '特点': '锦溪古镇位于昆山南郊的淀山湖畔，是一座有千年历史的江南水乡。'}"
+                ],
+                "segmented_user_utterance": "你好 ， 我 是 苏州人 ， 但是 不怎么 出去玩 ， 我 朋友 来 苏州 找 我 了 ， 我 准备 带 他 逛逛 水乡 古镇 ， 你 能 帮 我 推荐 一下 吗 ？",
+                "segmented_system_utterance": "推荐 您 去 周庄 古镇 。"
+            },
+            {
+                "turn_id": 1,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "我希望这个地方消费水平适中的，这个是中等的吗？",
+                "system_utterance": "这个不是，我又重新帮您找了一家山塘街。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇",
+                        "旅游景点-消费": "中等"
+                    },
+                    "turn_inform": {
+                        "旅游景点-消费": "中等"
+                    },
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "消费",
+                        "中等"
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Recommend",
+                        "旅游景点",
+                        "名称",
+                        "山塘 街"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为3",
+                    "{'名称': '山塘街', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-65314467', '地址': '苏州市姑苏区古城西北', '评分': 4.5, '开放时间': '08:30-21:00', '特点': '欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。'}",
+                    "{'名称': '平江路', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-69163907', '地址': '江苏省苏州市姑苏区白塔东路65号', '评分': 4.5, '开放时间': '全天', '特点': '漫步保存完整的古街区，看小桥流水古宅，逛文艺小店，吃美食。'}",
+                    "{'名称': '锦溪古镇', '区域': '昆山', '景点类型': '水乡古镇', '最适合人群': '朋友出游', '消费': '中等', '是否地铁直达': '否', '门票价格': '65元', '电话号码': '0512-57224669', '地址': '苏州市昆山市锦溪镇邵甸港路18号', '评分': 4.4, '开放时间': '08:00-17:00', '特点': '锦溪古镇位于昆山南郊的淀山湖畔，是一座有千年历史的江南水乡。'}"
+                ],
+                "segmented_user_utterance": "我 希望 这个 地方 消费水平 适中 的 ， 这个 是 中等 的 吗 ？",
+                "segmented_system_utterance": "这个 不是 ， 我 又 重新 帮 您 找 了 一家 山塘 街 。"
+            },
+            {
+                "turn_id": 2,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "听这地方应该挺好玩，他们家特点是什么？",
+                "system_utterance": "特点是欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇",
+                        "旅游景点-消费": "中等",
+                        "旅游景点-名称": "山塘 街"
+                    },
+                    "turn_inform": {
+                        "旅游景点-名称": "山塘 街"
+                    },
+                    "turn request": [
+                        "特点"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "名称",
+                        "山塘 街"
+                    ],
+                    [
+                        "Request",
+                        "旅游景点",
+                        "特点",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "特点",
+                        "欣赏 苏州 老城 风貌 ， 参观 会馆 等 古迹 ， 乘 游船 ， 拍摄 美丽 的 夜景"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '山塘街', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-65314467', '地址': '苏州市姑苏区古城西北', '评分': 4.5, '开放时间': '08:30-21:00', '特点': '欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。'}"
+                ],
+                "segmented_user_utterance": "听 这 地方 应该 挺好玩 ， 他们 家 特点 是 什么 ？",
+                "segmented_system_utterance": "特点 是 欣赏 苏州 老城 风貌 ， 参观 会馆 等 古迹 ， 乘 游船 ， 拍摄 美丽 的 夜景 。"
+            },
+            {
+                "turn_id": 3,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "听起来很不错，他们家门票是多少？",
+                "system_utterance": "门票免费。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇",
+                        "旅游景点-消费": "中等",
+                        "旅游景点-名称": "山塘 街"
+                    },
+                    "turn_inform": {},
+                    "turn request": [
+                        "门票价格"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Request",
+                        "旅游景点",
+                        "门票价格",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "门票价格",
+                        "免费"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '山塘街', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-65314467', '地址': '苏州市姑苏区古城西北', '评分': 4.5, '开放时间': '08:30-21:00', '特点': '欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。'}"
+                ],
+                "segmented_user_utterance": "听 起来 很 不错 ， 他们 家 门票 是 多少 ？",
+                "segmented_system_utterance": "门票 免费 。"
+            },
+            {
+                "turn_id": 4,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "还行，那他们家是否有地铁直达呢？",
+                "system_utterance": "嗯嗯，可以地铁直达。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇",
+                        "旅游景点-消费": "中等",
+                        "旅游景点-名称": "山塘 街"
+                    },
+                    "turn_inform": {},
+                    "turn request": [
+                        "是否地铁直达"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Request",
+                        "旅游景点",
+                        "是否地铁直达",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "是否地铁直达",
+                        "是"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '山塘街', '区域': '姑苏区', '景点类型': '水乡古镇', '最适合人群': '情侣约会', '消费': '中等', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '0512-65314467', '地址': '苏州市姑苏区古城西北', '评分': 4.5, '开放时间': '08:30-21:00', '特点': '欣赏苏州老城风貌，参观会馆等古迹，乘游船，拍摄美丽的夜景。'}"
+                ],
+                "segmented_user_utterance": "还 行 ， 那 他们 家 是否 有 地铁 直达 呢 ？",
+                "segmented_system_utterance": "嗯 嗯 ， 可以 地铁 直达 。"
+            },
+            {
+                "turn_id": 5,
+                "turn_domain": [
+                    "通用"
+                ],
+                "user_utterance": "谢谢你的帮助，再见！",
+                "system_utterance": "再见。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-景点类型": "水乡 古镇",
+                        "旅游景点-消费": "中等",
+                        "旅游景点-名称": "山塘 街"
+                    },
+                    "turn_inform": {},
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "Bye",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Bye",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "db_results": [],
+                "segmented_user_utterance": "谢谢 你 的 帮助 ， 再见 ！",
+                "segmented_system_utterance": "再见 。"
+            }
+        ]
+    },
+    {
+        "dialogue_id": "attraction_goal_3-33_v2###7307",
+        "goal": "attraction_goal_3-33: 你和朋友一起来苏州出差，顺便想去“苏州乐园森林水世界”逛一逛。因此，你要询问客服这个地方“是否地铁直达”、“评分”、“特点”这些信息。最后，你向客服表示感谢，结束对话。",
+        "domains": [
+            "旅游景点"
+        ],
+        "dialogue": [
+            {
+                "turn_id": 0,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "你好，我和朋友一起来苏州出差，顺便想去苏州乐园森林水世界玩玩，能否帮我看看这个地方是否有地铁直达呢？",
+                "system_utterance": "稍等，很抱歉，没有地铁能直接到这个景点呢。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn request": [
+                        "是否地铁直达"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "名称",
+                        "苏州 乐园 森林 水 世界"
+                    ],
+                    [
+                        "Request",
+                        "旅游景点",
+                        "是否地铁直达",
+                        ""
+                    ],
+                    [
+                        "Greeting",
+                        "旅游景点",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "是否地铁直达",
+                        "否"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '苏州乐园森林水世界', '区域': '高新区', '景点类型': '游乐场', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '198元', '电话号码': '0512-68717107', '地址': '苏州市高新区阳山东路以西，山神湾路以东', '评分': 4.4, '开放时间': '09:00-17:00', '特点': '各项水上娱乐项目皆具森林特色，被赋予森林主题，让人身处浩瀚森林又能享受到海洋般的舒爽水游乐。'}"
+                ],
+                "segmented_user_utterance": "你好 ， 我 和 朋友 一 起来 苏州 出差 ， 顺便 想 去 苏州 乐园 森林 水 世界 玩玩 ， 能否 帮 我 看看 这个 地方 是否 有 地铁 直达 呢 ？",
+                "segmented_system_utterance": "稍 等 ， 很 抱歉 ， 没有 地铁 能 直接 到 这个 景点 呢 。"
+            },
+            {
+                "turn_id": 1,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "你再帮我看看景点的评分好吗？",
+                "system_utterance": "这个景点的评分是4.4分。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {},
+                    "turn request": [
+                        "评分"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Request",
+                        "旅游景点",
+                        "评分",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "评分",
+                        "4.4"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '苏州乐园森林水世界', '区域': '高新区', '景点类型': '游乐场', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '198元', '电话号码': '0512-68717107', '地址': '苏州市高新区阳山东路以西，山神湾路以东', '评分': 4.4, '开放时间': '09:00-17:00', '特点': '各项水上娱乐项目皆具森林特色，被赋予森林主题，让人身处浩瀚森林又能享受到海洋般的舒爽水游乐。'}"
+                ],
+                "segmented_user_utterance": "你 再 帮 我 看看 景点 的 评分 好 吗 ？",
+                "segmented_system_utterance": "这个 景点 的 评分 是 4.4 分 。"
+            },
+            {
+                "turn_id": 2,
+                "turn_domain": [
+                    "旅游景点"
+                ],
+                "user_utterance": "这个景点有啥特点呢？",
+                "system_utterance": "这个景点的特点是各项水上娱乐项目皆具森林特色，被赋予森林主题，让人身处浩瀚森林又能享受到海洋般的舒爽水游乐。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {},
+                    "turn request": [
+                        "特点"
+                    ]
+                },
+                "user_actions": [
+                    [
+                        "Request",
+                        "旅游景点",
+                        "特点",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Inform",
+                        "旅游景点",
+                        "特点",
+                        "各项 水上 娱乐 项目 皆 具 森林 特色 ， 被 赋予 森林 主题 ， 让 人 身处 浩瀚 森林 又 能 享受 到 海洋 般的 舒爽 水 游乐 。"
+                    ]
+                ],
+                "db_results": [
+                    "数据库检索结果：成功匹配个数为1",
+                    "{'名称': '苏州乐园森林水世界', '区域': '高新区', '景点类型': '游乐场', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '198元', '电话号码': '0512-68717107', '地址': '苏州市高新区阳山东路以西，山神湾路以东', '评分': 4.4, '开放时间': '09:00-17:00', '特点': '各项水上娱乐项目皆具森林特色，被赋予森林主题，让人身处浩瀚森林又能享受到海洋般的舒爽水游乐。'}"
+                ],
+                "segmented_user_utterance": "这个 景点 有 啥 特点 呢 ？",
+                "segmented_system_utterance": "这个 景点 的 特点 是 各项 水上 娱乐 项目 皆 具 森林 特色 ， 被 赋予 森林 主题 ， 让 人 身处 浩瀚 森林 又 能 享受 到 海洋 般的 舒爽 水 游乐 。"
+            },
+            {
+                "turn_id": 3,
+                "turn_domain": [
+                    "通用"
+                ],
+                "user_utterance": "太好了，我觉得我会很喜欢这个地方，哈哈。",
+                "system_utterance": "这个景点挺不错的，就是没有地铁需要您乘坐其它交通工具了。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {},
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "General",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "General",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "db_results": [],
+                "segmented_user_utterance": "太好了 ， 我 觉得 我会 很 喜欢 这个 地方 ， 哈哈 。",
+                "segmented_system_utterance": "这个 景点 挺不错 的 ， 就是 没有 地铁 需要 您 乘坐 其它 交通工具 了 。"
+            },
+            {
+                "turn_id": 4,
+                "turn_domain": [
+                    "通用"
+                ],
+                "user_utterance": "我打出租车去吧，就是多花点车费，没事。",
+                "system_utterance": "请问您还有其他问题吗？",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {},
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "General",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "General",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "db_results": [],
+                "segmented_user_utterance": "我 打 出租车 去 吧 ， 就是 多花点 车费 ， 没事 。",
+                "segmented_system_utterance": "请问 您 还有 其他 问题 吗 ？"
+            },
+            {
+                "turn_id": 5,
+                "turn_domain": [
+                    "通用"
+                ],
+                "user_utterance": "没有了。谢谢你，再见。",
+                "system_utterance": "再见。",
+                "belief_state": {
+                    "inform slot-values": {
+                        "旅游景点-名称": "苏州 乐园 森林 水 世界"
+                    },
+                    "turn_inform": {},
+                    "turn request": []
+                },
+                "user_actions": [
+                    [
+                        "Bye",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "system_actions": [
+                    [
+                        "Bye",
+                        "通用",
+                        "",
+                        ""
+                    ]
+                ],
+                "db_results": [],
+                "segmented_user_utterance": "没有 了 。 谢谢 你 ， 再见 。",
+                "segmented_system_utterance": "再见 。"
+            }
+        ]
+    }
+]
+</code></pre>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Data Splits
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does an outlier of the dataset in terms of length/perplexity/embedding look like?
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             Train:
+             <ul>
+              <li>
+               dialogues: 10000
+              </li>
+              <li>
+               turns: 134580
+              </li>
+              <li>
+               Avg. turns: 13.5
+              </li>
+             </ul>
+            </li>
+            <li>
+             Valid:
+             <ul>
+              <li>
+               dialogues: 600
+              </li>
+              <li>
+               turns: 8116
+              </li>
+              <li>
+               Avg. turns: 13.5
+              </li>
+             </ul>
+            </li>
+            <li>
+             Test:
+             <ul>
+              <li>
+               dialogues: 600
+              </li>
+              <li>
+               turn: 9286
+              </li>
+              <li>
+               Avg. turns: 15.5
+              </li>
+             </ul>
+            </li>
+           </ul>
+           <h4>
+           </h4>
+           <p>
+            the most complex example (i.e. with the most domains):
+           </p>
+           <pre><code>{
+    "dialogue_id": "attraction_restaurant_hotel_goal_2-69_v2###8355",
+    "goal": "attraction_restaurant_hotel_goal_2-69: 公司派你去苏州出差，你准备抽空旅游一下。第一，你想去一个“山水景区”，消费水平最好是“偏贵”的，你需要问清楚这地方“开放时间”、“门票价格”这些信息。第二，你要找个地方住，让客服给你推荐一家价位“中等”的“商务出行”酒店，并且询问这家酒店的“停车场”、“电话号码”这些信息。第三，你还想拔草美食，问客服有没有价位“中等”的“江浙菜”餐厅推荐，然后了解这家餐厅的“是否地铁直达”、“人均消费”这些信息。最后你要感谢客服的帮助，并说再见。",
+    "domains": [
+        "旅游景点",
+        "餐厅",
+        "酒店"
+    ],
+    "dialogue": [
+        {
+            "turn_id": 0,
+            "turn_domain": [
+                "旅游景点"
+            ],
+            "user_utterance": "你好，来苏州出差，准备抽空旅游一下。我想去山水景区，消费水平偏贵点，帮忙推荐一个。",
+            "system_utterance": "你好，向您推荐金鸡湖景区，感受一下苏州现代化的一面。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵"
+                },
+                "turn_inform": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵"
+                },
+                "turn request": []
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "旅游景点",
+                    "景点类型",
+                    "山水 景区"
+                ],
+                [
+                    "Inform",
+                    "旅游景点",
+                    "消费",
+                    "偏贵"
+                ],
+                [
+                    "Greeting",
+                    "旅游景点",
+                    "",
+                    ""
+                ],
+                [
+                    "General",
+                    "旅游景点",
+                    "",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Greeting",
+                    "通用",
+                    "",
+                    ""
+                ],
+                [
+                    "General",
+                    "通用",
+                    "",
+                    ""
+                ],
+                [
+                    "Recommend",
+                    "旅游景点",
+                    "名称",
+                    "金鸡湖 景区"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为2",
+                "{'名称': '金鸡湖景区', '区域': '工业园区', '景点类型': '山水景区', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '400-7558558', '地址': '苏州市工业园区星港街158号', '评分': 4.5, '开放时间': '全天', '特点': '看东方之门等高楼，坐摩天轮，乘船夜游，感受苏州现代化的一面。'}",
+                "{'名称': '沙家浜风景区', '区域': '常熟', '景点类型': '山水景区', '最适合人群': '家庭亲子', '消费': '偏贵', '是否地铁直达': '否', '门票价格': '110元', '电话号码': '0512-52500000', '地址': '苏州市常熟市沙家浜镇', '评分': 4.5, '开放时间': '08:00-16:30', '特点': '京剧样板戏《沙家浜》的发源地，访剧中场景，坐船深入芦苇荡。'}"
+            ],
+            "segmented_user_utterance": "你好 ， 来 苏州 出差 ， 准备 抽空 旅游 一下 。 我 想 去 山水 景区 ， 消费水平 偏 贵点 ， 帮忙 推荐 一个 。",
+            "segmented_system_utterance": "你好 ， 向 您 推荐 金鸡湖 景区 ， 感受一下 苏州 现代化 的 一面 。"
+        },
+        {
+            "turn_id": 1,
+            "turn_domain": [
+                "旅游景点"
+            ],
+            "user_utterance": "这里开放时间？需要安排一下。",
+            "system_utterance": "景区是全天开放的，可以尽情游览！",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区"
+                },
+                "turn_inform": {
+                    "旅游景点-名称": "金鸡湖 景区"
+                },
+                "turn request": [
+                    "开放时间"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "旅游景点",
+                    "名称",
+                    "金鸡湖 景区"
+                ],
+                [
+                    "Request",
+                    "旅游景点",
+                    "开放时间",
+                    ""
+                ],
+                [
+                    "General",
+                    "旅游景点",
+                    "",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "旅游景点",
+                    "开放时间",
+                    "全天"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为1",
+                "{'名称': '金鸡湖景区', '区域': '工业园区', '景点类型': '山水景区', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '400-7558558', '地址': '苏州市工业园区星港街158号', '评分': 4.5, '开放时间': '全天', '特点': '看东方之门等高楼，坐摩天轮，乘船夜游，感受苏州现代化的一面。'}"
+            ],
+            "segmented_user_utterance": "这里 开放 时间 ？ 需要 安排 一下 。",
+            "segmented_system_utterance": "景区 是 全天 开放 的 ， 可以 尽情 游览 ！"
+        },
+        {
+            "turn_id": 2,
+            "turn_domain": [
+                "旅游景点"
+            ],
+            "user_utterance": "门票多少钱？",
+            "system_utterance": "这里是免费景区。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区"
+                },
+                "turn_inform": {},
+                "turn request": [
+                    "门票价格"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Request",
+                    "旅游景点",
+                    "门票价格",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "旅游景点",
+                    "门票价格",
+                    "免费"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为1",
+                "{'名称': '金鸡湖景区', '区域': '工业园区', '景点类型': '山水景区', '最适合人群': '情侣约会', '消费': '偏贵', '是否地铁直达': '是', '门票价格': '免费', '电话号码': '400-7558558', '地址': '苏州市工业园区星港街158号', '评分': 4.5, '开放时间': '全天', '特点': '看东方之门等高楼，坐摩天轮，乘船夜游，感受苏州现代化的一面。'}"
+            ],
+            "segmented_user_utterance": "门票 多少 钱 ？",
+            "segmented_system_utterance": "这里 是 免费 景区 。"
+        },
+        {
+            "turn_id": 3,
+            "turn_domain": [
+                "酒店"
+            ],
+            "user_utterance": "哦，好的。还有酒店，帮我推荐个价位中等的商务酒店！",
+            "system_utterance": "推荐苏州金鸡湖李公堤瑞贝庭公寓酒店，在金鸡湖景区附近。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行"
+                },
+                "turn_inform": {
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行"
+                },
+                "turn request": []
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "酒店",
+                    "价位",
+                    "中等"
+                ],
+                [
+                    "Inform",
+                    "酒店",
+                    "酒店类型",
+                    "商务 出行"
+                ],
+                [
+                    "General",
+                    "酒店",
+                    "",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Recommend",
+                    "酒店",
+                    "名称",
+                    "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                ],
+                [
+                    "General",
+                    "通用",
+                    "",
+                    ""
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为16",
+                "{'名称': '苏州慢享主题酒店', '区域': '姑苏区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '收费', '房费': '266元', '地址': '苏州姑苏区景德路26-64号', '电话号码': '0512-67570999', '评分': 4.7}",
+                "{'名称': '苏州慢享主题酒店', '区域': '姑苏区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '收费', '房费': '278元', '地址': '苏州姑苏区景德路26-64号', '电话号码': '0512-67570999', '评分': 4.7}",
+                "{'名称': '美锦酒店', '区域': '高新区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '308元', '地址': '苏州高新区滨河路999号花样年喜年生活广场5栋1层', '电话号码': '0512-66053331', '评分': 4.8}",
+                "{'名称': '美锦酒店', '区域': '高新区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '349元', '地址': '苏州高新区滨河路999号花样年喜年生活广场5栋1层', '电话号码': '0512-66053331', '评分': 4.8}",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}",
+                "{'名称': '苏州途乐酒店公寓', '区域': '工业园区', '星级': '2', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '收费', '房费': '486元', '地址': '苏州工业园区苏州丰隆城市中心T1楼', '电话号码': '151-5149-7911', '评分': 4.6}",
+                "{'名称': '苏州途乐酒店公寓', '区域': '工业园区', '星级': '2', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '收费', '房费': '486元', '地址': '苏州工业园区苏州丰隆城市中心T1楼', '电话号码': '151-5149-7911', '评分': 4.6}",
+                "{'名称': '万悦酒店', '区域': '吴中区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '346元', '地址': '苏州吴中区金山路47-2号', '电话号码': '0512-83808380', '评分': 4.5}",
+                "{'名称': '万悦酒店', '区域': '吴中区', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '338元', '地址': '苏州吴中区金山路47-2号', '电话号码': '0512-83808380', '评分': 4.5}",
+                "{'名称': '周庄多瓦台临河客栈', '区域': '昆山', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '收费', '房费': '279元', '地址': '昆山周庄镇东浜村75号', '电话号码': '181-3619-1632', '评分': 4.8}",
+                "{'名称': '周庄多瓦台临河客栈', '区域': '昆山', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '收费', '房费': '279元', '地址': '昆山周庄镇东浜村75号', '电话号码': '181-3619-1632', '评分': 4.8}",
+                "{'名称': '常熟长江路亚朵酒店', '区域': '常熟', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '312元', '地址': '常熟长江路268号', '电话号码': '0512-51661666', '评分': 4.8}",
+                "{'名称': '常熟长江路亚朵酒店', '区域': '常熟', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '312元', '地址': '常熟长江路268号', '电话号码': '0512-51661666', '评分': 4.8}",
+                "{'名称': '维也纳酒店', '区域': '常熟', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '322元', '地址': '常熟碧溪镇金港路8号', '电话号码': '0512-52018188', '评分': 4.8}",
+                "{'名称': '维也纳酒店', '区域': '常熟', '星级': '3', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '340元', '地址': '常熟碧溪镇金港路8号', '电话号码': '0512-52018188', '评分': 4.8}"
+            ],
+            "segmented_user_utterance": "哦 ， 好 的 。 还有 酒店 ， 帮 我 推荐 个 价位 中等 的 商务酒店 ！",
+            "segmented_system_utterance": "推荐 苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店 ， 在 金鸡湖 景区 附近 。"
+        },
+        {
+            "turn_id": 4,
+            "turn_domain": [
+                "酒店"
+            ],
+            "user_utterance": "你想得真周到!这家酒店有停车场吗？",
+            "system_utterance": "酒店配备有一个免费的停车场。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn request": [
+                    "停车场"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "酒店",
+                    "名称",
+                    "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                ],
+                [
+                    "Request",
+                    "酒店",
+                    "停车场",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "酒店",
+                    "停车场",
+                    "免费"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为2",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}"
+            ],
+            "segmented_user_utterance": "你 想 得 真 周到 ! 这家 酒店 有 停车场 吗 ？",
+            "segmented_system_utterance": "酒店 配备 有 一个 免费 的 停车场 。"
+        },
+        {
+            "turn_id": 5,
+            "turn_domain": [
+                "酒店"
+            ],
+            "user_utterance": "酒店的电话告诉我一下。",
+            "system_utterance": "电话号码：0512-69995666。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {},
+                "turn request": [
+                    "电话号码"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Request",
+                    "酒店",
+                    "电话号码",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "酒店",
+                    "电话号码",
+                    "0512 - 69995666"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为2",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '大床房', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}",
+                "{'名称': '苏州金鸡湖李公堤瑞贝庭公寓酒店', '区域': '工业园区', '星级': '4', '价位': '中等', '酒店类型': '商务出行', '房型': '标准间', '停车场': '免费', '房费': '438元', '地址': '苏州工业园区李公堤三期E区商业街9幢', '电话号码': '0512-69995666', '评分': 4.6}"
+            ],
+            "segmented_user_utterance": "酒店 的 电话 告诉 我 一下 。",
+            "segmented_system_utterance": "电话号码 ： 0512 - 69995666 。"
+        },
+        {
+            "turn_id": 6,
+            "turn_domain": [
+                "餐厅"
+            ],
+            "user_utterance": "嗯，我还想拔草美食。有没有价位中等的江浙菜餐厅推荐一个。",
+            "system_utterance": "推荐老枫庭。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "餐厅-菜系": "江浙 菜",
+                    "餐厅-价位": "中等",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {
+                    "餐厅-菜系": "江浙 菜",
+                    "餐厅-价位": "中等"
+                },
+                "turn request": []
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "餐厅",
+                    "菜系",
+                    "江浙 菜"
+                ],
+                [
+                    "Inform",
+                    "餐厅",
+                    "价位",
+                    "中等"
+                ],
+                [
+                    "General",
+                    "餐厅",
+                    "",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Recommend",
+                    "餐厅",
+                    "名称",
+                    "老枫庭"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为3",
+                "{'名称': '老枫庭', '区域': '吴中区', '菜系': '江浙菜', '价位': '中等', '是否地铁直达': '否', '人均消费': '94元', '地址': '木渎灵天路55号芭提雅休闲娱乐广场5号楼', '电话号码': '0512-66277557', '评分': 4.6, '营业时间': '周一至周日 11:00-13:30 17:00-20:30', '推荐菜': '松鼠桂鱼'}",
+                "{'名称': '同里老家', '区域': '吴江', '菜系': '江浙菜', '价位': '中等', '是否地铁直达': '否', '人均消费': '87元', '地址': '同里镇环湖西路318号', '电话号码': '0512-63339777', '评分': 4.5, '营业时间': '周一至周日 10:00-22:00', '推荐菜': '太湖三白'}",
+                "{'名称': '周庄花间堂桔梗餐厅', '区域': '昆山', '菜系': '江浙菜', '价位': '中等', '是否地铁直达': '否', '人均消费': '98元', '地址': '周庄镇中市街110号景点迷楼北10米', '电话号码': '138-1289-9961', '评分': 4.5, '营业时间': '周一至周日 07:00-20:30', '推荐菜': '银鱼炒蛋'}"
+            ],
+            "segmented_user_utterance": "嗯 ， 我 还 想 拔草 美食 。 有没有 价位 中等 的 江浙 菜 餐厅 推荐 一个 。",
+            "segmented_system_utterance": "推荐 老枫庭 。"
+        },
+        {
+            "turn_id": 7,
+            "turn_domain": [
+                "餐厅"
+            ],
+            "user_utterance": "这家餐厅地铁直达吗？",
+            "system_utterance": "抱歉，餐厅没有地铁直达!",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "餐厅-菜系": "江浙 菜",
+                    "餐厅-价位": "中等",
+                    "餐厅-名称": "老枫庭",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {
+                    "餐厅-名称": "老枫庭"
+                },
+                "turn request": [
+                    "是否地铁直达"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Inform",
+                    "餐厅",
+                    "名称",
+                    "老枫庭"
+                ],
+                [
+                    "Request",
+                    "餐厅",
+                    "是否地铁直达",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "餐厅",
+                    "是否地铁直达",
+                    "否"
+                ],
+                [
+                    "General",
+                    "通用",
+                    "",
+                    ""
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为1",
+                "{'名称': '老枫庭', '区域': '吴中区', '菜系': '江浙菜', '价位': '中等', '是否地铁直达': '否', '人均消费': '94元', '地址': '木渎灵天路55号芭提雅休闲娱乐广场5号楼', '电话号码': '0512-66277557', '评分': 4.6, '营业时间': '周一至周日 11:00-13:30 17:00-20:30', '推荐菜': '松鼠桂鱼'}"
+            ],
+            "segmented_user_utterance": "这家 餐厅 地铁 直达 吗 ？",
+            "segmented_system_utterance": "抱歉 ， 餐厅 没有 地铁 直达 !"
+        },
+        {
+            "turn_id": 8,
+            "turn_domain": [
+                "餐厅"
+            ],
+            "user_utterance": "人均消费呢？",
+            "system_utterance": "老枫庭人均消费在94元左右。",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "餐厅-菜系": "江浙 菜",
+                    "餐厅-价位": "中等",
+                    "餐厅-名称": "老枫庭",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {},
+                "turn request": [
+                    "人均消费"
+                ]
+            },
+            "user_actions": [
+                [
+                    "Request",
+                    "餐厅",
+                    "人均消费",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Inform",
+                    "餐厅",
+                    "人均消费",
+                    "老枫庭"
+                ]
+            ],
+            "db_results": [
+                "数据库检索结果：成功匹配个数为1",
+                "{'名称': '老枫庭', '区域': '吴中区', '菜系': '江浙菜', '价位': '中等', '是否地铁直达': '否', '人均消费': '94元', '地址': '木渎灵天路55号芭提雅休闲娱乐广场5号楼', '电话号码': '0512-66277557', '评分': 4.6, '营业时间': '周一至周日 11:00-13:30 17:00-20:30', '推荐菜': '松鼠桂鱼'}"
+            ],
+            "segmented_user_utterance": "人均 消费 呢 ？",
+            "segmented_system_utterance": "老枫庭 人均 消费 在 94 元 左右 。"
+        },
+        {
+            "turn_id": 9,
+            "turn_domain": [
+                "通用"
+            ],
+            "user_utterance": "好，所有问题都解决了，谢谢你的帮助！再见！",
+            "system_utterance": "不客气！这是我应该做的！再见！",
+            "belief_state": {
+                "inform slot-values": {
+                    "旅游景点-景点类型": "山水 景区",
+                    "旅游景点-消费": "偏贵",
+                    "旅游景点-名称": "金鸡湖 景区",
+                    "餐厅-菜系": "江浙 菜",
+                    "餐厅-价位": "中等",
+                    "餐厅-名称": "老枫庭",
+                    "酒店-价位": "中等",
+                    "酒店-酒店类型": "商务 出行",
+                    "酒店-名称": "苏州 金鸡湖 李公堤 瑞贝庭 公寓 酒店"
+                },
+                "turn_inform": {},
+                "turn request": []
+            },
+            "user_actions": [
+                [
+                    "Bye",
+                    "通用",
+                    "",
+                    ""
+                ],
+                [
+                    "General",
+                    "通用",
+                    "",
+                    ""
+                ]
+            ],
+            "system_actions": [
+                [
+                    "Bye",
+                    "通用",
+                    "",
+                    ""
+                ],
+                [
+                    "General",
+                    "通用",
+                    "",
+                    ""
+                ]
+            ],
+            "db_results": [],
+            "segmented_user_utterance": "好 ， 所有 问题 都 解决 了 ， 谢谢 你 的 帮助 ！ 再见 ！",
+            "segmented_system_utterance": "不 客气 ！ 这 是 我 应该 做 的 ！ 再见 ！"
+        }
+    ]
+}
+</code></pre>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-in-gem">
+          Dataset in GEM
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Rationale for Inclusion in GEM
+          </div>
+          <div class="tag">
+           GEM-Specific Curation
+          </div>
+          <div class="tag">
+           Getting Started with the Task
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="rationale-for-inclusion-in-gem">
+         Rationale for Inclusion in GEM
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Similar Datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Do other datasets for the high level task exist?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Unique Language Coverage
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset cover other languages than other datasets for the same task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Ability that the Dataset measures
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Natural Language Understanding, Dialogue State Tracking, Dialogue Context-to-Text Generation, Coreference Resolution, Unified Generative Ellipsis and Coreference Resolution
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Why is the Dataset in GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            RiSAWOZ is the first large-scale multi-domain Chinese Wizard-of-Oz dataset with rich semantic annotations.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Difference from other GEM datasets
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What else sets this dataset apart from other similar datasets in GEM?
+             </div>
+            </div>
+           </h4>
+           <p>
+            The corpus contains rich semantic annotations, such as ellipsis and coreference, in addition to  traditional dialogue annotations (dialogue states, dialogue acts, etc.), which can be used in various tasks in dialogue system.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="gem-specific-curation">
+         GEM-Specific Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Modificatied for GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Has the GEM version of the dataset been modified in any way (data, processing, splits) from the original curated data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Additional Splits?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does GEM provide additional splits to the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="getting-started-with-the-task">
+         Getting Started with the Task
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Pointers to Resources
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            <a href="https://terryqj0107.github.io/RiSAWOZ_webpage">
+             Website
+            </a>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Technical Terms
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Technical terms used in this card and the dataset and their definitions
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             In task-oriented dialogue system, the Natural Language Understanding (NLU) module aims to convert the user utterance into the representation that computer can understand, which includes intent and dialogue act (slot &amp; value) detection.
+            </li>
+            <li>
+             Dialogue State Tracking (DST) is a core component in task-oriented dialogue systems, which extracts dialogue states (user goals) embedded in dialogue context. It has progressed toward open-vocabulary or generation-based DST where state-of-the-art models can generate dialogue states from dialogue context directly.
+            </li>
+            <li>
+             Context-to-Text Generation: encoding dialogue context to decode system response.
+            </li>
+            <li>
+             Coreference Resolution: predict coreference clusters where all mentions are referring to the same entity for each dialogue.
+            </li>
+            <li>
+             Unified Generative Ellipsis and Coreference Resolution: generating omitted or referred expressions from the dialogue context.
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="previous-results">
+          Previous Results
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Results
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-results">
+         Previous Results
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Measured Model Abilities
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What aspect of model ability can be measured with this dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Natural Language Understanding, Dialogue State Tracking, Dialogue Context-to-Text Generation, Coreference Resolution, Unified Generative Ellipsis and Coreference Resolution
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Previous results available?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are previous results available?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What metrics are typically used for this task?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Other: Other Metrics
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Metrics
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Definitions of other metrics
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             Natural Language Understanding:
+             <ul>
+              <li>
+               F1 score: F1 score of user intent.
+              </li>
+             </ul>
+            </li>
+            <li>
+             Dialogue State Tracking:
+             <ul>
+              <li>
+               Joint Accuracy: accuracy of turn-level dialogue states.
+              </li>
+             </ul>
+            </li>
+            <li>
+             Dialogue Context-to-Text Generation:
+             <ul>
+              <li>
+               inform rate: measures the percentage that the output contains the appropriate entity the user asks for.
+              </li>
+              <li>
+               success rate: estimates the proportion that all the requested attributes have been answered.
+              </li>
+              <li>
+               BLEU: the BLEU score of generated system response.
+              </li>
+              <li>
+               Combined Score: (inform + success) ∗ 0.5 + BLEU as an overall
+quality.
+              </li>
+             </ul>
+            </li>
+            <li>
+             Coreference Resolution:
+             <ul>
+              <li>
+               MUC F1 Score: a link-based metric. Mentions in the same entity/cluster are considered “linked”. MUC penalizes the missing links and incorrect links, each with the same weight.
+              </li>
+              <li>
+               B3 F1 Score: a mention-based metric.The evaluation score depends on the fraction of the correct mentions included in the response entities (i.e. entities created by the system).
+              </li>
+              <li>
+               CEAFφ4 F1 Score: a metric which assumes each key entity should only be mapped to one response entity, and vice versa. It aligns the key entities (clusters) with the response entities in the best way, and compute scores from that alignment.
+              </li>
+              <li>
+               Average F1 Score: an average F1 score of the above three metrics.
+              </li>
+             </ul>
+            </li>
+            <li>
+             Unified Generative Ellipsis and Coreference Resolution:
+             <ul>
+              <li>
+               Exact Match Rate: measures whether the generated utterances exactly match the ground-truth utterances.
+              </li>
+              <li>
+               BLEU: the BLEU score of generated utterances
+              </li>
+              <li>
+               Resolution F1: comparing machine-generated words with ground-truth words only from the ellipsis/coreference part of user utterances.
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </div>
+          <div class="field">
+           <h4>
+            Other Evaluation Approaches
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What evaluation approaches have others used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            same as our dataset
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Proposed Evaluation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
+             </div>
+            </div>
+           </h4>
+           <p>
+            see "Definitions of other metrics"
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Relevant Previous Results
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are the most relevant previous results for this task/dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Joint Accuracy, Inform Rate, Success Rate, BLEU Score and Combined Score on MultiWOZ and CrossWOZ dataset.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="dataset-curation">
+          Dataset Curation
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Original Curation
+          </div>
+          <div class="tag">
+           Language Data
+          </div>
+          <div class="tag">
+           Structured Annotations
+          </div>
+          <div class="tag">
+           Consent
+          </div>
+          <div class="tag">
+           Private Identifying Information (PII)
+          </div>
+          <div class="tag">
+           Maintenance
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="original-curation">
+         Original Curation
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Original Curation Rationale
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Original curation rationale
+             </div>
+            </div>
+           </h4>
+           <p>
+            Gather human-to-human dialog in Chinese.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Sourced from Different Sources
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Is the dataset aggregated from different data sources?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Communicative Goal
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the communicative goal?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Generate system response given dialogue context across multiple domains.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="language-data">
+         Language Data
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            How was Language Data Obtained?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How was the language data obtained?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Crowdsourced
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Data Validation
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was the text validated by a different worker or a data curator?
+             </div>
+            </div>
+           </h4>
+           <p>
+            validated by data curator
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Was Data Filtered?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Were text instances selected or filtered?
+             </div>
+            </div>
+           </h4>
+           <p>
+            hybrid
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Where was it crowdsourced?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If crowdsourced, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Other crowdworker platform
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Topics Covered
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the language in the dataset focus on specific topics? How would you describe them?
+             </div>
+            </div>
+           </h4>
+           <p>
+            domains: Attraction, Restaurant, Hotel, Flight, Train, Weather, Movie, TV, Computer, Car, Hospital, Courses
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Filter Criteria
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What were the selection criteria?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Rule-based and manual selection criteria
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="structured-annotations">
+         Structured Annotations
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Additional Annotations?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the dataset have additional annotations for each instance?
+             </div>
+            </div>
+           </h4>
+           <p>
+            crowd-sourced
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            51&lt;n&lt;100
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Annotation Service?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was an annotation service used?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any Quality Control?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Quality control measures?
+             </div>
+            </div>
+           </h4>
+           <p>
+            unknown
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Chinese native speaker
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            3
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            3
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Annotation Values
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Purpose and values for each annotation
+             </div>
+            </div>
+           </h4>
+           <ul>
+            <li>
+             dialogue_id (string): dialogue ID
+            </li>
+            <li>
+             goal (string): natural language descriptions of the user goal
+            </li>
+            <li>
+             domains (list of strings): domains mentioned in current dialogue session
+            </li>
+            <li>
+             turn_id (int): turn ID
+            </li>
+            <li>
+             turn_domain (list of strings): domain mentioned in current turn
+            </li>
+            <li>
+             belief_state (dict): dialogue state, including:
+             <ul>
+              <li>
+               inform slot-values (dict): the slots and corresponding values informed until current turn
+              </li>
+              <li>
+               turn_inform (dict): the slots and corresponding values informed in current turn
+              </li>
+              <li>
+               turn request (dict): the slots requested in current turn
+              </li>
+             </ul>
+            </li>
+            <li>
+             user_actions (list of lists): user dialogue acts in current turn
+            </li>
+            <li>
+             user_actions (list of lists): system dialogue acts in current turn
+            </li>
+            <li>
+             db_results (list of strings): database search results
+            </li>
+            <li>
+             segmented_user_utterance (string): word segmentation result of user utterance
+            </li>
+            <li>
+             segmented_system_utterance (string): word segmentation result of system utterance
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <h3 id="consent">
+         Consent
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Consent Policy?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Was there a consent policy involved when gathering the data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Consent Policy Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What was the consent policy?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Annotators agree using the dataset for research purpose.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Other Consented Downstream Use
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What other downstream uses of the data did the original data creators and the data curators consent to?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Any
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="private-identifying-information-(pii)">
+         Private Identifying Information (PII)
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Contains PII?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the source language data likely contain Personal Identifying Information about the data creators or subjects?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no PII
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Justification for no PII
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a justification for selecting `no PII` above.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The slots and values as well as utterances do not contain any personal information.
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="maintenance">
+         Maintenance
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Maintenance Plan?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the original dataset have a maintenance plan?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Maintainer Contact Information
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide contact information of a person responsible for the dataset maintenance
+             </div>
+            </div>
+           </h4>
+           <p>
+            Deyi Xiong (dyxiong@tju.edu.cn)
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Any Contestation Mechanism?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the maintenance plan include a contestation mechanism allowing individuals to request removal fo content?
+             </div>
+            </div>
+           </h4>
+           <p>
+            contact maintainer
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Contestation Form Link
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide the form link or contact information
+             </div>
+            </div>
+           </h4>
+           <p>
+            Deyi Xiong (dyxiong@tju.edu.cn)
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Maintenance Plan Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the original dataset's maintenance plan.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Building a leaderboard webpage to trace and display the latest results on the
+            <a href="https://terryqj0107.github.io/RiSAWOZ_webpage/">
+             dataset
+            </a>
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="broader-social-context">
+          Broader Social Context
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           Previous Work on the Social Impact of the Dataset
+          </div>
+          <div class="tag">
+           Impact on Under-Served Communities
+          </div>
+          <div class="tag">
+           Discussion of Biases
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="previous-work-on-the-social-impact-of-the-dataset">
+         Previous Work on the Social Impact of the Dataset
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Usage of Models based on the Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are you aware of cases where models trained on the task featured in this dataset ore related tasks have been used in automated systems?
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="impact-on-under-served-communities">
+         Impact on Under-Served Communities
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Addresses needs of underserved Communities?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does this dataset address the needs of communities that are traditionally underserved in language technology, and particularly language generation technology? Communities may be underserved for exemple because their language, language variety, or social or geographical context is underepresented in NLP and NLG resources (datasets and models).
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Details on how Dataset Addresses the Needs
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe how this dataset addresses the needs of underserved communities.
+             </div>
+            </div>
+           </h4>
+           <p>
+            RiSAWOZ is the first large-scale multi-domain Chinese Wizard-of-Oz dataset with rich semantic annotations.
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="discussion-of-biases">
+         Discussion of Biases
+        </h3>
+        <div class="row">
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Any Documented Social Biases?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Are there documented social biases in the dataset? Biases in this context are variations in the ways members of different social categories are represented that can have harmful downstream consequences for members of the more disadvantaged group.
+             </div>
+            </div>
+           </h4>
+           <p>
+            no
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Are the Language Producers Representative of the Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Does the distribution of language producers in the dataset accurately represent the full distribution of speakers of the language world-wide? If not, how does it differ?
+             </div>
+            </div>
+           </h4>
+           <p>
+            yes
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="section">
+       <div class="section-preview">
+        <div class="section-preview-content">
+         <h2 id="considerations-for-using-the-data">
+          Considerations for Using the Data
+         </h2>
+         <div class="tags">
+          <div class="tag">
+           PII Risks and Liability
+          </div>
+          <div class="tag">
+           Licenses
+          </div>
+          <div class="tag">
+           Known Technical Limitations
+          </div>
+         </div>
+        </div>
+        <button class="section-open-button">
+         <svg fill="#3c4f50" height="24px" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none">
+          </path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+         </svg>
+        </button>
+       </div>
+       <div class="subsection-wrapper">
+        <h3 id="pii-risks-and-liability">
+         PII Risks and Liability
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Potential PII Risk
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Considering your answers to the PII part of the Data Curation Section, describe any potential privacy to the data subjects and creators risks when using the dataset.
+             </div>
+            </div>
+           </h4>
+           <p>
+            None
+           </p>
+          </div>
+         </div>
+        </div>
+        <h3 id="licenses">
+         Licenses
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Dataset
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Intended Use part of the Data Overview Section, which of the following best describe the copyright and licensing status of the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             open license - commercial use allowed
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Copyright Restrictions on the Language Data
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Based on your answers in the Language part of the Data Curation Section, which of the following best describe the copyright and licensing status of the underlying language data?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             open license - commercial use allowed
+            </code>
+           </p>
+          </div>
+         </div>
+         <div class="scope">
+         </div>
+        </div>
+        <h3 id="known-technical-limitations">
+         Known Technical Limitations
+        </h3>
+        <div class="row">
+         <div class="scope">
+         </div>
+         <div class="scope">
+         </div>
+         <div class="scope">
+          <div class="field">
+           <h4>
+            Technical Limitations
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe any known technical limitations, such as spurrious correlations, train/test overlap, annotation biases, or mis-annotations, and cite the works that first identified these limitations when possible.
+             </div>
+            </div>
+           </h4>
+           <p>
+            None
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Using the trained model on domains that are not included in the 12 domains selected for this dataset.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Designing models that leverage unknown bias in the dataset to optimize specific metrics.
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </section>
+    </article>
+   </div>
+  </main>
+ </body>
+ <script>
+  initializeSections();initializeTables();initializeCodeBlocks();initializeTags();initializeNav();initializeEscapes();function initializeSections(){const sections=document.getElementsByClassName('section');const sectionButtons=document.getElementsByClassName('section-open-button');sections[0].classList.add('open');for(let i=0;i<sections.length;i+=1){sectionButtons[i].addEventListener('click',(e)=>{if(sections[i].classList.contains('open')){closeSection(sections[i])}else{openSection(sections[i])}})}document.getElementById('expand-all').addEventListener('click',(e)=>{for(section of sections){openSection(section)}});document.getElementById('collapse-all').addEventListener('click',(e)=>{for(section of sections){closeSection(section)}})}function openSection(section){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.add('open');setTimeout(()=>{collapsible.removeAttribute('style')},500)}function closeSection(section){if(section.classList.contains('open')){const collapsible=section.children[1];collapsible.style.maxHeight=collapsible.scrollHeight+"px";section.classList.remove('open');setTimeout(()=>{collapsible.removeAttribute('style')},200)}}function initializeTables(){const elements=document.getElementsByTagName('table');const wrapperTemplate=document.getElementById('table-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const table=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(table);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);table.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);table.appendChild(element)}}function initializeCodeBlocks(){const elements=document.getElementsByTagName('pre');const wrapperTemplate=document.getElementById('code-block-template');for(let i=0;i<elements.length;i+=1){const element=elements[i];const code=wrapperTemplate.content.cloneNode(true).children[0];const wrapper=document.createElement('div');wrapper.appendChild(code);wrapper.addEventListener('click',(e)=>escapeModal);element.parentElement.replaceChild(wrapper,element);code.getElementsByClassName('expand-icon')[0].addEventListener('click',toggleModal);code.getElementsByClassName('copy-icon')[0].addEventListener('click',copy);code.appendChild(element)}}function initializeEscapes(){document.addEventListener('click',(e)=>{if(e.target.classList.contains('expand')){escapeModal(e.target)}});document.addEventListener('keyup',(e)=>{if(e.key==="Escape"){const expanded=document.getElementsByClassName('expand');if(expanded.length>0){escapeModal(expanded[0])}}})}function initializeTags(){for(tag of document.getElementsByClassName('tag')){const s=tag.parentElement.parentElement.parentElement.parentElement;tag.addEventListener('click',(e)=>jumpToHeading(titleToId(e.currentTarget.textContent)))}}function initializeNav(){document.getElementById('datacard-outline-button').addEventListener('click',toggleNav);for(heading of document.getElementById('datacard-outline-nav').getElementsByTagName('li')){heading.addEventListener('click',(e)=>{jumpToHeading(titleToId(e.currentTarget.textContent))})}}function toggleNav(){const button=document.getElementById('datacard-outline-button');const nav=document.getElementById('datacard-outline-nav');if(button.classList.contains('active')){button.classList.remove('active');nav.classList.remove('active')}else{button.classList.add('active');nav.classList.add('active')}}function jumpToHeading(id){const heading=document.getElementById(id);if(heading.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement)}else if(heading.parentElement.parentElement.parentElement.classList.contains('section')){openSection(heading.parentElement.parentElement.parentElement)}const cardWindow=document.getElementsByClassName('content-wrapper')[0];setTimeout(()=>{cardWindow.scrollTop=heading.offsetTop-90},500)}function titleToId(title){return title.trim().toLowerCase().replaceAll(' ','-')}function toggleModal(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;if(icon.className==='expand-icon'){document.body.style.overflow='hidden';wrapper.classList.add('expand');icon.className='collapse-icon'}else{wrapper.classList.remove('expand');icon.className='expand-icon';document.body.style.overflow='scroll'}}function escapeModal(wrapper){wrapper.classList.remove('expand');for(icon of wrapper.getElementsByClassName('collapse-icon')){icon.className='expand-icon'}document.body.style.overflow='scroll'}function copy(e){const icon=e.currentTarget;const wrapper=icon.parentElement.parentElement.parentElement;const content=wrapper.getElementsByTagName('code')[0].textContent;navigator.clipboard.writeText(content);}
+ </script>
+ <script src="./resizer.js">
+ </script>
+</html>
