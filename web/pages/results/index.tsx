@@ -152,7 +152,7 @@ export default function index(props) {
     .generateForEvalConfig(props.evalConfig);
 
 
-  return <Layout home={false} nlAugmenter={false}>
+  return <Layout home={false} nlAugmenter={false} wideContainer={true}>
     <MainVis evalConfig={props.evalConfig}
              cm={cm}/>
   </Layout>;
