@@ -24,15 +24,34 @@ export default function Post({ }) {
         </div>
         <hr></hr>
         <div className={styles.resources}>
-          <div>
+        <div>
             <Link href="https://aclanthology.org/2021.gem-1.10/"><a className={styles.resourceName}>GEMv1 Overview</a></Link>
             <span className={utilStyles.smallSpace}></span>
             <small className={utilStyles.lightText}>GEM Workshop 2021</small>
           </div>
           <div className={styles.resourceDetail}>
-            This is our first overview paper, introducing GEM and the initial set of tasks and baselines.
+            This is our first overview paper, introducing GEM and the initial set of 13 tasks and associated baselines.
           </div>
           <div className={styles.authors}> Authors: All GEMv1 participants (see <Link href="team/2021">team list</Link>)</div>
+          <div>
+            <Link href="https://arxiv.org/abs/2206.11249"><a className={styles.resourceName}>GEMv2 Overview</a></Link>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>ArXiv</small>
+          </div>
+          <div className={styles.resourceDetail}>
+            This is our second overview paper, expanding GEM to 40 tasks and 51 languages, introducing the automatic evaluation on the HuggingFace Hub.
+          </div>
+          <div className={styles.authors}> Authors: All GEMv2 participants (see <Link href="team">team list</Link>)</div>
+          <div>
+            <Link href="https://arxiv.org/abs/2202.06935"><a className={styles.resourceNameSmaller}>Repairing the Cracked Foundation: A Survey of Obstacles in Evaluation Practices for Generated Text
+</a></Link>
+            <span className={utilStyles.smallSpace}></span>
+            <small className={utilStyles.lightText}>ArXiv</small>
+          </div>
+          <div className={styles.resourceDetail}>
+            In this survey paper, we discuss many of the principles underlying GEM and propose a set of best practices to follow for model evaluation. See also the <Link href="https://ml-eval.github.io/assets/pdf/better_eval_in_NLG.pdf">shortened version</Link> presented at the MLEval workshop at ICLR 2022.
+          </div>
+          <div className={styles.authors}> Authors: Sebastian Gehrmann, Elizabeth Clark, Thibault Sellam</div>
 
           <div>
             <a href="https://aclanthology.org/2021.gem-1.11/" target="_blank" className={styles.resourceName}>Data Cards</a>
@@ -60,7 +79,7 @@ export default function Post({ }) {
             <small className={utilStyles.lightText}>GEM Workshop 2021</small>
           </div>
           <div className={styles.resourceDetail}>
-            This was a collaborative & participatory workshop collecting >117 different ways to transform text and >23 ways to filter out subpopulations of datasets. 
+            This was a collaborative &amp; participatory workshop collecting &gt;117 different ways to transform text and &gt;23 ways to filter out subpopulations of datasets.
           </div>
           <div className={styles.authors}> Participants and Authors: Listed in paper (see <Link href="https://arxiv.org/abs/2112.02721">team list</Link>)</div>
           <div className={styles.authors}> Steering Commitee: Kaustubh Dhole, Varun Gangal, Sebastian Gehrmann, Aadesh Gupta, Zhenhao Li, Saad Mahmood, Simon Mille, Jascha SohlDickstein, Ashish Srivastava, Samson Tan, Tongshuang Wu and Abinaya Mahendiran </div>

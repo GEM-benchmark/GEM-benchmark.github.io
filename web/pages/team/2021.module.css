@@ -1,10 +1,12 @@
 .description {
-  line-height: 1.1;
-  font-size: 1rem;
+  line-height: 1.0;
+  font-size: 0.9rem;
   font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .name {
+  font-size: 1.rem;
   display: block;
   color: #2a555e;
 }
@@ -34,14 +36,34 @@
 }
 
 .card {
+  font-size: 0.8rem;
   flex: 1 0 500px;
   box-sizing: border-box;
-  margin: 0.5rem .25em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  margin: 0.2rem .1em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  padding-bottom: 10px;
   margin-bottom: 20px;
   background-color: white;
-  text-align: center;
+  position: relative;
+}
+
+
+.tags {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  height: 25px;
+  overflow: hidden;
+}
+.tags div {
+    background-color: #c10001;
+    border-radius: 25px;
+    color: white;
+    display: inline-block;
+    padding: 3px;
+    margin: 2px 2px;
+    font-size: 0.6rem;
 }
 
 .card h3 {
@@ -67,12 +89,12 @@
 
 @media screen and (min-width: 40em) {
   .card {
-     max-width: calc(50% -  1em);
+     max-width: calc(33% -  1em);
   }
 }
 
 @media screen and (min-width: 60em) {
   .card {
-      max-width: calc(33% - 1em);
+      max-width: calc(25% - 1em);
   }
 }

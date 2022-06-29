@@ -106,7 +106,7 @@ export default function Home({ teamData }) {
   return (
     <Layout home>
       <Head>
-        <title>GEMv2 Team</title>
+        <title>GEMv2 Team 2022</title>
       </Head>
       <article>
         <div className={utilStyles.headingXl}>

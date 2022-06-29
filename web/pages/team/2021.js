@@ -6,8 +6,64 @@ import React from "react";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "./2021.module.css";
 import { getTeamData } from "../../lib/team";
-import { faDribbble, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+library.add(faUser);
+
+function Contact(props) {
+
+  // Optional Website links.
+
+  var website_tag = "";
+  if (props.website != '') {
+    website_tag = (
+      <a href={props.website} target="_blank"><FontAwesomeIcon className={utilStyles.icon} icon="user" /></a>
+    );
+  }
+
+  // Optional Twitter tag.
+  var twitter_tag = "";
+  if (props.twitter != '') {
+    var twitter_href = "https://twitter.com/" + props.twitter
+    twitter_tag = (
+      <a href={twitter_href} target="_blank"><FontAwesomeIcon className={utilStyles.icon} icon={faTwitter} /></a>
+    );
+  }
+
+  // Combine the socials through spacers.
+  var socials = "";
+  if (twitter_tag != "" || website_tag != "") {
+    socials = (
+      <div>
+        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
+      </div>
+    )
+  }
+
+  var tags_bar = "";
+  if (props.tags != '' && props.tags != undefined) {
+    tags_bar = (
+      <div className={styles.tags}>
+        {props.tags.map(function(d, idx){
+         return (<div key={idx}>{d}</div>)
+       })}
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.card}>
+      <h3 className={styles.name}>{props.name}</h3>
+      <p className={styles.title}>{props.organization}</p>
+      <div className={styles.note}>{props.note}</div>
+      {socials}
+      {tags_bar}
+    </div>
+  );
+}
 
 class ContactList extends React.Component {
   constructor(props) {
@@ -18,7 +74,8 @@ class ContactList extends React.Component {
         name={c.name} position={c.position}
         organization={c.organization} website={c.website}
         twitter={c.twitter}
-        note={c.note} />
+        note={c.note}
+        tags={c.tags} />
     );
 
     this.state = {
@@ -44,50 +101,17 @@ class ContactList extends React.Component {
   }
 }
 
-
-function Contact(props) {
-
-  // Optional Website link.
-  var website_tag = "";
-  if (props.website != '') {
-    website_tag = (
-      <a href={props.website} target="_blank"><FontAwesomeIcon icon={faDribbble} /> Web</a>
-    );
-  }
-
-  // Optional Twitter tag.
-  var twitter_tag = "";
-  if (props.twitter != '') {
-    var twitter_href = "https://twitter.com/" + props.twitter
-    twitter_tag = (
-      <a href={twitter_href} target="_blank"><FontAwesomeIcon icon={faTwitter} /> Twitter</a>
-    );
-  }
-
-  return (
-    <article className={styles.card}>
-      <h3 className={styles.name}>{props.name}</h3>
-      <p className={styles.title}>{props.position}</p>
-      <p className={styles.title}>{props.organization}</p>
-      <p>
-        {website_tag} <span className={styles.spacer}></span> {twitter_tag}
-      </p>
-      <p className={styles.note}>{props.note}</p>
-    </article>
-  );
-}
-
 export default function Home({ teamData }) {
   return (
     <Layout home>
       <Head>
-        <title>GEM Team</title>
+        <title>GEM Team 2021</title>
       </Head>
       <article>
         <div className={utilStyles.headingXl}>
-          Team
+          GEMv1 Team
         </div>
-        <p className={styles.description}>
+        <div className={styles.description}>
           GEM is a community-driven effort with the goal to improve how progress in
           natural language generation is measured. It would not be possible without
           a large group of collaborators to take on challenging tasks.
@@ -98,7 +122,7 @@ export default function Home({ teamData }) {
               <a>click here to fill out the sign-up form.</a></Link>
           </p>
 
-        </p>
+        </div>
         <div className={styles.centered}>
           <ContactList contacts={teamData.teamMembers} />
         </div>

@@ -2,9 +2,15 @@
 }
 
 .resourceName {
-    font-size: 1.3rem;
-    min-width: 200px;
-    font-weight: 750;
+  font-size: 1.3rem;
+  min-width: 200px;
+  font-weight: 750;
+}
+
+.resourceNameSmaller {
+  font-size: 1.1rem;
+  min-width: 200px;
+  font-weight: 750;
 }
 
 
