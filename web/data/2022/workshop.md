@@ -1,10 +1,10 @@
----
-The GEM 💎 Workshop at EMNLP 2022
----
+
+# The GEM 💎 Workshop at EMNLP 2022
+
 
 The Second Version of [Generation, Evaluation & Metrics (GEM) Workshop 2022](https://gem-benchmark.com/) workshop will be held as part of [EMNLP](https://2022.emnlp.org/), December 7-11, 2022. It is endorsed by the ACL Special Interest Group on Natural Language Generation ([SIGGEN](https://aclweb.org/aclwiki/SIGGEN)).
 
-###Overview
+### Overview
 Natural language generation (NLG) is one of the most active research fields in NLP. Yet, much of the work is focused on English, and too little attention is given to evaluation processes. As many of the recent developments in few-shot and in-context learning have led to the treatment of many tasks as text generation problems, the need for better NLG evaluation processes is becoming more urgent. To that end, the GEM workshop aims to encourage the development of (semi-) automatic model audits and improved human evaluation strategies, and to popularize model evaluations in languages beyond English. 
 
 We welcome submissions related, but not limited to, the following topics:
@@ -19,7 +19,7 @@ We additionally invite submissions that conduct in-depth analyses of outputs of 
 
 If you are interested in seeing last year's workshop website from ACL 2021, please check [here](/workshop/2021).
 
-###How to submit?
+### How to submit?
 Submissions can take either of the following forms:
 - 💎 Archival Papers Papers describing original and unpublished work can be submitted in a between 4 and 8 page format. 
 - 💎 Non-Archival Abstracts To discuss work already presented or under review at a peer-reviewed venue, we allow the submission of 2-page abstracts.
@@ -30,12 +30,12 @@ You can either commit a paper reviewed through ARR at [here](https://openreview.
 
 We additionally invite presentations by authors of papers in the Findings of the EMNLP (details to be announced at a later date).
 
-###Shared Task
+### Shared Task
 We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. Participants of the shared task are invited to submit a system description of 4-8 pages.
 
 More information to come soon!
 
-###Important Dates
+### Important Dates
 
 Paper Submission Dates
 - 📅 7 September 2022: Workshop paper submission deadline if using Softconf 
@@ -46,7 +46,7 @@ Paper Submission Dates
 Workshop Dates
 - 📅 7-8 December 2022: Workshops
 
-###Organization
+### Organization
 
 - Antoine Bosselut (EPFL)
 - Khyathi Chandu (Carnegie Mellon University) 
