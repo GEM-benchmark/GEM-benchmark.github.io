@@ -30,9 +30,9 @@ export default function Post({ }) {
           </div>
           <div className={styles.resourceDetail}>
             Our growing collection of millions of outputs and automatic scores
-            for 20+ models across all GEM tasks. This resource be used to work on
-            model evaluation, to characterize model shortcomings, and as
-            baseline outputs you can compare models to.
+            for 20+ models across all GEM tasks. This resource is to be used
+            for work on model evaluation, to characterize model 
+            shortcomings, and to provide baseline outputs for model comparison.
           </div>
           <div className={styles.resourceName}>
             <a href="https://huggingface.co/datasets/gem" target="_blank">HuggingFace Loader</a>
