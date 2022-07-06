@@ -2,5 +2,5 @@
 title: OrangeSum
 type: Summarization
 languages: French
-summary: OrangeSum is a French summarization dataset inspired by XSum. It features two subtasks - abstract generation and title generation. The data was sourced from "Orange Actu" articles between 2011 and 2020.
+summary: OrangeSum is a French summarization dataset inspired by XSum. It features two subtasks: abstract generation and title generation. The data was sourced from "Orange Actu" articles between 2011 and 2020.
 ---

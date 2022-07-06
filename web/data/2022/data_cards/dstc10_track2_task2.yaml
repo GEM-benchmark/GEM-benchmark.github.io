@@ -1,0 +1,8 @@
+---
+title: dstc10_track2_task2
+type: Dialog Response Generation
+languages: En
+summary: The DSTC10 Track2 Task 2 follows the DSTC9 Track1 task, where participants have to implement knowledge-grounded dialog systems.
+The training dataset is inherited from the DSTC9 challenge and is in the written domain, while the test set is newly collected and consists of noisy ASR transcripts.
+Hence, the dataset facilitates building models for grounded dialog response generation.
+---
