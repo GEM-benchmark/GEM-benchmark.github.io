@@ -2,10 +2,5 @@
 title: squality
 type: Summarization
 languages: English
-summary: SQuALITY (Summarization-format QUestion Answering with Long Input Texts, Yes!) is a summarization dataset that is:
-* Abstractive
-* Long-input: The input document are short stories between 3000--6000 words.
-* Question-focused: Each story is associated with multiple question-summary pairs.
-* Multi-reference: Each question is paired with 4 summaries.
-* High-quality: The summaries are crowdsourced from skilled and trained writers.
+summary: SQuALITY (Summarization-format QUestion Answering with Long Input Texts, Yes!) is a summarization dataset that is (1) Abstractive, (2) Long-input - The input document are short stories between 3000--6000 words. (3) Question-focused - Each story is associated with multiple question-summary pairs. (4) Multi-reference - Each question is paired with 4 summaries. (5) High-quality - The summaries are crowdsourced from skilled and trained writers.
 ---
