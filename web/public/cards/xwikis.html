@@ -156,22 +156,22 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       mlb_data_to_text
+       xwikis
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
+         The XWikis Corpus provides datasets with different language pairs and directions for cross-lingual and multi-lingual abstractive document summarisation.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/mlb_data_to_text')
+data = datasets.load_dataset('GEM/xwikis')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/mlb_data_to_text">
+         <a href="https://huggingface.co/datasets/GEM/xwikis">
           here
          </a>
          .
@@ -183,7 +183,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           website
          </h4>
          <p>
-          <a href="https://github.com/ratishsp/mlb-data-scripts">
+          <a href="https://github.com/lauhaide/clads">
            Github
           </a>
          </p>
@@ -193,9 +193,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           paper
          </h4>
          <p>
-          <a href="https://aclanthology.org/P19-1195">
-           ACL Anthology
-          </a>
+          https://arxiv.org/abs/2202.09583
          </p>
         </div>
         <div class="field">
@@ -203,7 +201,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           authors
          </h4>
          <p>
-          Ratish Puduppully, Li Dong, Mirella Lapata
+          Laura Perez-Beltrachini (University of Edinburgh)
          </p>
         </div>
        </div>
@@ -224,7 +222,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         Ratish Puduppully
+         Laura Perez-Beltrachini
         </p>
        </div>
        <div class="field">
@@ -237,7 +235,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         no
+         yes
         </p>
        </div>
        <div class="field">
@@ -251,7 +249,19 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
         </h4>
         <p>
          <code>
+          German
+         </code>
+         ,
+         <code>
           English
+         </code>
+         ,
+         <code>
+          French
+         </code>
+         ,
+         <code>
+          Czech
          </code>
         </p>
        </div>
@@ -265,7 +275,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         other: Other license
+         cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
         </p>
        </div>
        <div class="field">
@@ -278,7 +288,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         Produce a summary of MLB game from its statistics.
+         Entity descriptive summarisation, that is, generate a summary that conveys the most salient facts of a document related to a given entity.
         </p>
        </div>
        <div class="field">
@@ -291,7 +301,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         none
+         found
         </p>
        </div>
        <div class="field">
@@ -304,7 +314,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         yes/very likely
+         no PII
         </p>
        </div>
       </div>
@@ -377,22 +387,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            <a href="https://github.com/ratishsp/mlb-data-scripts">
-             Github
-            </a>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Download
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What is the link to where the original dataset is hosted?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <a href="https://github.com/ratishsp/mlb-data-scripts">
+            <a href="https://github.com/lauhaide/clads">
              Github
             </a>
            </p>
@@ -407,9 +402,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            <a href="https://aclanthology.org/P19-1195">
-             ACL Anthology
-            </a>
+            https://arxiv.org/abs/2202.09583
            </p>
           </div>
           <div class="field">
@@ -437,7 +430,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Ratish Puduppully
+            Laura Perez-Beltrachini
            </p>
           </div>
           <div class="field">
@@ -450,7 +443,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            ratishpuduppully@gmail.com
+            lperez@ed.ac.uk
            </p>
           </div>
          </div>
@@ -464,19 +457,12 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{puduppully-etal-2019-data,
-    title = "Data-to-text Generation with Entity Modeling",
-    author = "Puduppully, Ratish  and
-      Dong, Li  and
-      Lapata, Mirella",
-    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
-    month = jul,
-    year = "2019",
-    address = "Florence, Italy",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/P19-1195",
-    doi = "10.18653/v1/P19-1195",
-    pages = "2023--2035",
+           <pre><code>@InProceedings{clads-emnlp,
+  author =      "Laura Perez-Beltrachini and Mirella Lapata",
+  title =       "Models and Datasets for Cross-Lingual Summarisation",
+  booktitle =   "Proceedings of The 2021 Conference on Empirical Methods in Natural Language Processing ",
+  year =        "2021",
+  address =     "Punta Cana, Dominican Republic",
 }
 </code></pre>
           </div>
@@ -497,7 +483,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
           <div class="field">
@@ -511,7 +497,19 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
            </h4>
            <p>
             <code>
+             German
+            </code>
+            ,
+            <code>
              English
+            </code>
+            ,
+            <code>
+             French
+            </code>
+            ,
+            <code>
+             Czech
             </code>
            </p>
           </div>
@@ -525,7 +523,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            other: Other license
+            cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International
            </p>
           </div>
           <div class="field">
@@ -538,24 +536,11 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Data-to-Text
+            Summarization
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Add. License Info
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What is the 'other' license of the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Restricted to non-commercial research purposes.
-           </p>
-          </div>
           <div class="field">
            <h4>
             Communicative Goal
@@ -566,7 +551,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Produce a summary of MLB game from its statistics.
+            Entity descriptive summarisation, that is, generate a summary that conveys the most salient facts of a document related to a given entity.
            </p>
           </div>
          </div>
@@ -581,7 +566,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            The dataset can be used to study data-to-text generation. The dataset is in sports domain. It pairs statistics of Major League Baseball (MLB) game with its summary. The summary is in the form of a document containing an average of 540 tokens. Thus it is useful to study long document generation.
+            Cross-lingual and Multi-lingual single long input document abstractive summarisation.
            </p>
           </div>
          </div>
@@ -608,19 +593,6 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Curation Organization(s)
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Name the organization(s).
-             </div>
-            </div>
-           </h4>
-           <p>
-            University of Edinburgh
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -633,7 +605,20 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Ratish Puduppully, Li Dong, Mirella Lapata
+            Laura Perez-Beltrachini (University of Edinburgh)
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Who added the Dataset to GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who contributed to the data card and adding the dataset to GEM? List the people+affiliations involved in creating this data card and who helped integrate this dataset into GEM.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Laura Perez-Beltrachini (University of Edinburgh) and Ronald Cardenas (University of Edinburgh)
            </p>
           </div>
          </div>
@@ -643,172 +628,6 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
         </h3>
         <div class="row">
          <div class="scope">
-          <div class="field">
-           <h4>
-            Data Fields
-            <div class="tooltip">
-             <div class="tooltip-text">
-              List and describe the fields present in the dataset.
-             </div>
-            </div>
-           </h4>
-           <pre><code>        features = datasets.Features(
-            {
-                "home_name": datasets.Value("string"),
-                "box_score": [
-                    {
-                        "p_l": datasets.Value("string"),
-                        "last_name": datasets.Value("string"),
-                        "p_h": datasets.Value("string"),
-                        "sac": datasets.Value("string"),
-                        "p_bb": datasets.Value("string"),
-                        "pos": datasets.Value("string"),
-                        "ao": datasets.Value("string"),
-                        "p_bf": datasets.Value("string"),
-                        "cs": datasets.Value("string"),
-                        "hbp": datasets.Value("string"),
-                        "ab": datasets.Value("string"),
-                        "full_name": datasets.Value("string"),
-                        "p_w": datasets.Value("string"),
-                        "go": datasets.Value("string"),
-                        "fldg": datasets.Value("string"),
-                        "p_bs": datasets.Value("string"),
-                        "avg": datasets.Value("string"),
-                        "p_r": datasets.Value("string"),
-                        "p_s": datasets.Value("string"),
-                        "lob": datasets.Value("string"),
-                        "first_name": datasets.Value("string"),
-                        "p_sv": datasets.Value("string"),
-                        "p_so": datasets.Value("string"),
-                        "p_save": datasets.Value("string"),
-                        "p_hr": datasets.Value("string"),
-                        "po": datasets.Value("string"),
-                        "p_ip1": datasets.Value("string"),
-                        "p_ip2": datasets.Value("string"),
-                        "bb": datasets.Value("string"),
-                        "ops": datasets.Value("string"),
-                        "p_hld": datasets.Value("string"),
-                        "bo": datasets.Value("string"),
-                        "p_loss": datasets.Value("string"),
-                        "e": datasets.Value("string"),
-                        "p_game_score": datasets.Value("string"),
-                        "p_win": datasets.Value("string"),
-                        "a": datasets.Value("string"),
-                        "p_era": datasets.Value("string"),
-                        "d": datasets.Value("string"),
-                        "p_out": datasets.Value("string"),
-                        "h": datasets.Value("string"),
-                        "p_er": datasets.Value("string"),
-                        "p_np": datasets.Value("string"),
-                        "hr": datasets.Value("string"),
-                        "r": datasets.Value("string"),
-                        "so": datasets.Value("string"),
-                        "t": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "team": datasets.Value("string"),
-                        "sb": datasets.Value("string"),
-                        "slg": datasets.Value("string"),
-                        "sf": datasets.Value("string"),
-                        "obp": datasets.Value("string"),
-                    }
-                ],
-                "home_city": datasets.Value("string"),
-                "vis_name": datasets.Value("string"),
-                "play_by_play": [{
-                    "top": [{
-                        "runs": datasets.Value("string"),
-                        "scorers": [
-                            datasets.Value("string")
-                        ],
-                        "pitcher": datasets.Value("string"),
-                        "o": datasets.Value("string"),
-                        "b": datasets.Value("string"),
-                        "s": datasets.Value("string"),
-                        "batter": datasets.Value("string"),
-                        "b1": [
-                            datasets.Value("string")
-                        ],
-                        "b2": [
-                            datasets.Value("string")
-                        ],
-                        "b3": [
-                            datasets.Value("string")
-                        ],
-                        "event": datasets.Value("string"),
-                        "event2": datasets.Value("string"),
-                        "home_team_runs": datasets.Value("string"),
-                        "away_team_runs": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "error_runs": datasets.Value("string"),
-                        "fielder_error": datasets.Value("string")
-                    }
-                    ],
-                    "bottom": [{
-                        "runs": datasets.Value("string"),
-                        "scorers": [
-                            datasets.Value("string")
-                        ],
-                        "pitcher": datasets.Value("string"),
-                        "o": datasets.Value("string"),
-                        "b": datasets.Value("string"),
-                        "s": datasets.Value("string"),
-                        "batter": datasets.Value("string"),
-                        "b1": [
-                            datasets.Value("string")
-                        ],
-                        "b2": [
-                            datasets.Value("string")
-                        ],
-                        "b3": [
-                            datasets.Value("string")
-                        ],
-                        "event": datasets.Value("string"),
-                        "event2": datasets.Value("string"),
-                        "home_team_runs": datasets.Value("string"),
-                        "away_team_runs": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "error_runs": datasets.Value("string"),
-                        "fielder_error": datasets.Value("string")
-                    }
-                    ],
-                    "inning": datasets.Value("string")
-                }
-                ],
-                "vis_line": {
-                    "innings": [{
-                     "inn": datasets.Value("string"),
-                     "runs": datasets.Value("string")
-                    }
-                    ],
-                    "result": datasets.Value("string"),
-                    "team_runs": datasets.Value("string"),
-                    "team_hits": datasets.Value("string"),
-                    "team_errors": datasets.Value("string"),
-                    "team_name": datasets.Value("string"),
-                    "team_city": datasets.Value("string")
-                },
-                "home_line": {
-                    "innings": [{
-                        "inn": datasets.Value("string"),
-                        "runs": datasets.Value("string")
-                    }
-                    ],
-                    "result": datasets.Value("string"),
-                    "team_runs": datasets.Value("string"),
-                    "team_hits": datasets.Value("string"),
-                    "team_errors": datasets.Value("string"),
-                    "team_name": datasets.Value("string"),
-                    "team_city": datasets.Value("string")
-                },
-                "vis_city": datasets.Value("string"),
-                "day": datasets.Value("string"),
-                "summary": [
-                    datasets.Value("string"),
-                ],
-                "gem_id": datasets.Value("string")
-            }
-</code></pre>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -821,274 +640,13 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            There are three splits in the dataset: train, validation and test
+            For each language pair and direction there exists a train/valid/test split. 
+The test split is a sample of size 7k from the intersection of titles existing in the four languages (cs,fr,en,de).
+Train/valid are randomly split.
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Reason for Structure
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How was the dataset structure determined?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The high level structure contains the following attributes: home_name, vis_name, home_city, vis_city, summary, summary_eval, day, gem_id, box_score, play_by_play, home_line, vis_line.
-The attributes home_name, vis_name, home_city, vis_city and day are string values.
-The attribute "summary" contains the summary in the form of a list of tokens.
-The attribute "summary_eval" contains the summary in the form of a string of tokens. The difference from "summary" field is that "summary_eval" doesn't contain "
-            <em>
-             NEWPARAGRAPH
-            </em>
-            " delimiters to separate the paragraphs. "summary_eval" field should be used to evaluate model outputs. "summary" field may be used during the training process.
-box_score contains the box score statistics of the players in the game. It is in the form of a list (of average size 90), with each element describing the statistics of a player. The box score statistics contain 53 attributes. 
-The description of the attributes is given below. The descriptions of most of the attributes is obtained from
-            <a href="https://www.mlb.com/glossary/standard-stats">
-             mlb.com
-            </a>
-            .
-           </p>
-           <ul>
-            <li>
-             r :       Runs scored by a player in the game.
-            </li>
-            <li>
-             rbi           Runs Batted In (RBI): action of a batter results in a run scored by other players in the team.
-            </li>
-            <li>
-             pos           Position of the player.
-            </li>
-            <li>
-             avg           Batting Average. It is an indicator of the hits in the players' career.
-            </li>
-            <li>
-             bb            A walk occurs when a pitcher throws four pitches out of the strike zone, none of which are swung at by the hitter.
-            </li>
-            <li>
-             hr            Batter hits the ball in the air over the outfield fence.
-            </li>
-            <li>
-             p_r           Runs given by a pitcher in the game.
-            </li>
-            <li>
-             p_bb          Walks allowed by pitcher in a game.
-            </li>
-            <li>
-             p_h           Hits allowed by pitcher in a game.
-            </li>
-            <li>
-             p_hr          Home runs allowed by pitcher in a game.
-            </li>
-            <li>
-             p_er          Earned Run (ER): An earned run is any run that scores against a pitcher.
-            </li>
-            <li>
-             p_era         Earned Run Average (ERA): Earned run average represents the number of earned runs a pitcher allows per nine innings.
-            </li>
-            <li>
-             p_np          Number of Pitches: A pitcher's total number of pitches is determined by all the pitches he throws in game.
-            </li>
-            <li>
-             p_ip1         Innings Pitched (IP1): Innings pitched measures the number of innings a pitcher remains in a game. Because there are three outs in an inning, each out recorded represents one-third of an inning pitched.
-            </li>
-            <li>
-             p_ip2         Innings Pitched (IP2): Innings pitched measures the number of innings a pitcher remains in a game. Because there are three outs in an inning, each out recorded represents one-third of an inning pitched.
-            </li>
-            <li>
-             p_w           A pitcher receives a win when he is the pitcher of record when his team takes the lead for good.
-            </li>
-            <li>
-             p_l           A pitcher receives a loss when a run that is charged to him proves to be the go-ahead run in the game, giving the opposing team a lead it never gives up.
-            </li>
-            <li>
-             p_so          A strikeout occurs when a pitcher throws any combination of three swinging or looking strikes to a hitter.
-            </li>
-            <li>
-             p_save        Save: A save is awarded to the relief pitcher who finishes a game for the winning team. A pitcher cannot receive a save and a win in the same game.
-            </li>
-            <li>
-             p_sv          Saves: The count of saves recorded by a pitcher in his career.
-            </li>
-            <li>
-             sac           A sacrifice fly occurs when a batter hits a fly-ball out to the outfield or foul territory that allows a runner to score.
-            </li>
-            <li>
-             p_bf          Batters faced is simply a count of the number of total plate appearances against a certain pitcher or team. In a perfect game -- with 27 outs -- a pitcher will record 27 batters faced.
-            </li>
-            <li>
-             cs            A caught stealing occurs when a runner attempts to steal but is tagged out before reaching second base, third base or home plate.
-            </li>
-            <li>
-             hbp           A hit-by-pitch occurs when a batter is struck by a pitched ball without swinging at it. He is awarded first base as a result.
-            </li>
-            <li>
-             ab            An official at-bat comes when a batter reaches base via a fielder's choice, hit or an error (not including catcher's interference) or when a batter is put out on a non-sacrifice.
-            </li>
-            <li>
-             p_bs          A blown save occurs when a relief pitcher enters a game in a save situation, but allows the tying run to score.
-            </li>
-            <li>
-             p_s           The count of strikes thrown by a pitcher
-            </li>
-            <li>
-             lob           Left on base can be viewed as both an individual statistic or as a team statistic. In an individual batter's case, it refers to how many men remain on base after that batter makes an out at the plate, as the batter has failed to do his job to score those runners -- or at least put himself in a position to score. In a team's case or in an individual pitcher's case, it refers to the number of men who remain on base at the end of an inning.
-            </li>
-            <li>
-             po            A fielder is credited with a putout when he is the fielder who physically records the act of completing an out -- whether it be by stepping on the base for a forceout, tagging a runner, catching a batted ball, or catching a third strike
-            </li>
-            <li>
-             ops           OPS adds on-base percentage and slugging percentage to get one number that unites the two. It's meant to combine how well a hitter can reach base, with how well he can hit for average and for power.
-            </li>
-            <li>
-             p_hld         A hold occurs when a relief pitcher enters the game in a save situation and maintains his team's lead for the next relief pitcher, while recording at least one out.
-            </li>
-            <li>
-             p_loss        True/False- Indicates losing pitcher
-            </li>
-            <li>
-             e             A fielder is given an error if, in the judgment of the official scorer, he fails to convert an out on a play that an average fielder should have made.
-            </li>
-            <li>
-             p_win         True/False- Indicates winning pitcher
-            </li>
-            <li>
-             a             An assist is awarded to a fielder who touches the ball before a putout is recorded by another fielder.
-            </li>
-            <li>
-             h             A hit occurs when a batter strikes the baseball into fair territory and reaches base without doing so via an error or a fielder's choice.
-            </li>
-            <li>
-             so            A strikeout of a batter
-            </li>
-            <li>
-             team          Team of the player
-            </li>
-            <li>
-             sb            A stolen base occurs when a baserunner advances by taking a base to which he isn't entitled.
-            </li>
-            <li>
-             slg           Slugging percentage represents the total number of bases a player records per at-bat. Unlike on-base percentage, slugging percentage deals only with hits and does not include walks and hit-by-pitches in its equation.
-            </li>
-            <li>
-             sf            A sacrifice fly occurs when a batter hits a fly-ball out to the outfield or foul territory that allows a runner to score.
-            </li>
-            <li>
-             obp           OBP refers to how frequently a batter reaches base per plate appearance. Times on base include hits, walks and hit-by-pitches, but do not include errors, times reached on a fielder's choice or a dropped third strike.
-            </li>
-           </ul>
-           <p>
-            The description of attributes in play-by-play is below:
-           </p>
-           <ul>
-            <li>
-             batter             Batter in the play.
-            </li>
-            <li>
-             pitcher            Pitcher in play.
-            </li>
-            <li>
-             b1                 Player/s at first base position.
-            </li>
-            <li>
-             b2                 Player/s at second base position.
-            </li>
-            <li>
-             b3                 Player/s at third base position.
-            </li>
-            <li>
-             scorers            Player/s scored in the play.
-            </li>
-            <li>
-             fielder_error      Player committed field error.
-            </li>
-            <li>
-             event              Event of the play such as single, double, home run etc.
-            </li>
-            <li>
-             event2             Second event of the play such as wild pitch, error etc.
-            </li>
-            <li>
-             inning             Inning of the play.
-            </li>
-            <li>
-             top/ bottom        If home team is batting it is bottom and if away team is batting it is top.
-            </li>
-            <li>
-             o                  Count of outs
-            </li>
-            <li>
-             b                  Count of balls
-            </li>
-            <li>
-             s                  Count of strikes
-            </li>
-            <li>
-             r                  Count of runs
-            </li>
-            <li>
-             rbi                Count of runs batted in (rbi)
-            </li>
-            <li>
-             error_runs         Runs due to error
-            </li>
-            <li>
-             home_team_runs     Score of home team
-            </li>
-            <li>
-             vis_team_runs      Score of visiting team
-            </li>
-           </ul>
-           <p>
-            <code>
-             home_line
-            </code>
-            and
-            <code>
-             vis_line
-            </code>
-            contain string value pairs for
-            <code>
-             team_name
-            </code>
-            ,
-            <code>
-             team_city
-            </code>
-            ,
-            <code>
-             team_runs
-            </code>
-            ,
-            <code>
-             team_hits
-            </code>
-            ,
-            <code>
-             team_error
-            </code>
-            ,
-            <code>
-             result
-            </code>
-            , and a list of runs scored in each inning.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Splitting Criteria
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Describe any criteria for splitting the data, if used. If there are differences between the splits (e.g., if the training annotations are machine-generated and the dev and test ones are created by humans, or if different numbers of annotators contributed to each example), describe them here.
-             </div>
-            </div>
-           </h4>
-           <p>
-            The splits are random.
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -1136,65 +694,13 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            yes
-           </p>
-          </div>
-         </div>
-         <div class="scope">
-          <div class="field">
-           <h4>
-            Unique Language Coverage
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Does this dataset cover other languages than other datasets for the same task?
-             </div>
-            </div>
-           </h4>
-           <p>
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Ability that the Dataset measures
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Long document generation, coherent ordering of information, faithfulness to the input statistics, fluency in generation and avoiding repetition of text.
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Why is the Dataset in GEM?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What does this dataset contribute toward better generation evaluation and why is it part of GEM?
-             </div>
-            </div>
-           </h4>
-           <p>
-            This dataset can verify if models are capable of long document generation. The challenges in long document generation conditioned on input tables include ensuring coherent output, staying faithful to the input, ensuring fluent output and avoiding repetition of text. Such aspects can be verified on models trained on this dataset
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Difference from other GEM datasets
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What else sets this dataset apart from other similar datasets in GEM?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Compared to the existing RotoWire (Wiseman et al. 2017) dataset, MLB summaries are longer (approximately by 50%) and the input records are richer and more structured (with the addition of play-by-play). Moreover, the MLB dataset is five times larger in terms of data size (i.e., pairs of tables and game summaries).
-           </p>
-          </div>
+         </div>
+         <div class="scope">
          </div>
         </div>
         <h3 id="gem-specific-curation">
@@ -1212,7 +718,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            yes
+            no
            </p>
           </div>
           <div class="field">
@@ -1230,38 +736,8 @@ The description of the attributes is given below. The descriptions of most of th
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            GEM Modifications
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What changes have been made to he original dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             data points removed
-            </code>
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Modification Details
-            <div class="tooltip">
-             <div class="tooltip-text">
-              For each of these changes, described them in more details and provided the intended purpose of the modification
-             </div>
-            </div>
-           </h4>
-           <p>
-            Some examples have been removed from training dataset which satisfied the below criteria:
-1. The examples in training dataset which overlapped with validation/test.
-2. Some examples which described washed out games.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -1273,23 +749,6 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Pointers to Resources
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Getting started with in-depth research on the task. Add relevant pointers to resources that researchers can consult when they want to get started digging deeper into the task.
-             </div>
-            </div>
-           </h4>
-           <p>
-            The
-            <a href="https://aclanthology.org/P19-1195">
-             research paper
-            </a>
-            is a good resource
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -1330,9 +789,20 @@ The description of the attributes is given below. The descriptions of most of th
              </div>
             </div>
            </h4>
-           <p>
-            Automatic evaluation measure can evaluate the factuality, content selection, content ordering and the fluency of the model output. The factuality, content selection and content ordering  is measured using an Information Extraction based evaluation approach introduced by Wiseman et al (2017). The fluency is measured using BLEU.
-           </p>
+           <ul>
+            <li>
+             identification of entity salient information
+            </li>
+            <li>
+             translation
+            </li>
+            <li>
+             multi-linguality
+            </li>
+            <li>
+             cross-lingual transfer, zero-shot, few-shot
+            </li>
+           </ul>
           </div>
           <div class="field">
            <h4>
@@ -1360,57 +830,25 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             Other: Other Metrics
+             ROUGE
             </code>
            </p>
           </div>
           <div class="field">
            <h4>
-            Other Metrics
+            Other Evaluation Approaches
             <div class="tooltip">
              <div class="tooltip-text">
-              Definitions of other metrics
+              What evaluation approaches have others used?
              </div>
             </div>
            </h4>
            <p>
-            Wiseman et al. (2017) define three metrics induced from the outputs of an Information Extraction model which is run on the model/human-written game summaries . Let ŷ be the gold summary and y the model output.
-• Relation Generation (RG) measures the precision and count of relations extracted from y that also appear in records r.
-• Content Selection (CS) measures the precision and recall of relations extracted from y that are also extracted from ŷ.
-• Content Ordering (CO) measures the complement of the normalized Damerau-Levenshtein distance (Brill and Moore, 2000) between the sequences of relations extracted from y and ŷ
+            ROUGE-1/2/L
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Proposed Evaluation
-            <div class="tooltip">
-             <div class="tooltip-text">
-              List and describe the purpose of the metrics and evaluation methodology (including human evaluation) that the dataset creators used when introducing this task.
-             </div>
-            </div>
-           </h4>
-           <p>
-            We have reused the automatic metrics based on Information Extraction evaluation introduced by Wiseman et al (2017). For human evaluation, we conducted studies to evaluate the factuality, coherence, grammaticality and conciseness.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Relevant Previous Results
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What are the most relevant previous results for this task/dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The most relevant previous results for dataset are in the TACL 2021 paper on
-            <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00381/101876/Data-to-text-Generation-with-Macro-Planning">
-             Data-to-text Generation with Macro Planning
-            </a>
-           </p>
-          </div>
          </div>
         </div>
        </div>
@@ -1459,19 +897,6 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
           <div class="field">
            <h4>
-            Original Curation Rationale
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Original curation rationale
-             </div>
-            </div>
-           </h4>
-           <p>
-            This dataset was curated to complement an existing data-to-text generation dataset (RotoWire by Wiseman et al. 2017) which focuses on long document generation. Compared to RotoWire , MLB summaries are longer (approximately by 50%) and the input records are richer and more structured (with the addition of play-by-play). Moreover, the MLB dataset is five times larger in terms of data size (i.e., pairs of tables and game summaries)
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1485,19 +910,6 @@ The description of the attributes is given below. The descriptions of most of th
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Communicative Goal
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What was the communicative goal?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The goal is to study automatic generation of long documents in a data-to-text setting. The generated summaries should exhibit coherent ordering of content, be faithful to the input statistics, be fluent and avoid repetition of text.
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
@@ -1547,7 +959,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            not validated
+            other
            </p>
           </div>
           <div class="field">
@@ -1565,47 +977,8 @@ The description of the attributes is given below. The descriptions of most of th
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Topics Covered
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Does the language in the dataset focus on specific topics? How would you describe them?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The language focuses on the sports domain.
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Language Producers
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What further information do we have on the language producers?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The game summaries are produced by professional writers.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Data Preprocessing
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
-             </div>
-            </div>
-           </h4>
-           <p>
-            Game summaries were tokenized using NLTK (Bird et al., 2009) and hyphenated words were separated. Sentences containing quotes were removed as they included opinions and non-factual statements unrelated to the input tables. Sometimes MLB summaries contain a "Game notes" section with incidental information which was also removed.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="structured-annotations">
@@ -1623,7 +996,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            none
+            found
            </p>
           </div>
           <div class="field">
@@ -1639,10 +1012,49 @@ The description of the attributes is given below. The descriptions of most of th
             no
            </p>
           </div>
+          <div class="field">
+           <h4>
+            Any Quality Control?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Quality control measures?
+             </div>
+            </div>
+           </h4>
+           <p>
+            validated by another rater
+           </p>
+          </div>
          </div>
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Annotation Values
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Purpose and values for each annotation
+             </div>
+            </div>
+           </h4>
+           <p>
+            The input documents have section structure information.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Bilingual annotators assessed the content overlap of source document and target summaries.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1667,19 +1079,6 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Justification for Using the Data
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If not, what is the justification for reusing the data?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The copyright remains with the original data creators and the usage permission is restricted to non-commercial uses.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="private-identifying-information-(pii)">
@@ -1697,43 +1096,11 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            yes/very likely
+            no PII
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Categories of PII
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What categories of PII are present or suspected in the data?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             sensitive information
-            </code>
-            ,
-            <code>
-             generic PII
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Any PII Identification?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Did the curators use any automatic/manual method to identify PII in the dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            no identification
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
@@ -1855,7 +1222,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            unsure
+            no
            </p>
           </div>
          </div>
@@ -1923,7 +1290,7 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             research use only
+             public domain
             </code>
            </p>
           </div>
@@ -1938,7 +1305,7 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             research use only
+             public domain
             </code>
            </p>
           </div>
