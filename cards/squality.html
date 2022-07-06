@@ -156,22 +156,27 @@
      </template>
      <section class="summary" id="summary">
       <h1>
-       mlb_data_to_text
+       squality
       </h1>
       <div class="summary-wrapper">
        <div class="summary-content">
         <p>
-         The MLB dataset is an English sport-related data-to-text dataset in the baseball domain. The input is a large table with results of a game and the output is a description of the game.
+         SQuALITY (Summarization-format QUestion Answering with Long Input Texts, Yes!) is a summarization dataset that is:
+* Abstractive
+* Long-input: The input document are short stories between 3000--6000 words.
+* Question-focused: Each story is associated with multiple question-summary pairs.
+* Multi-reference: Each question is paired with 4 summaries.
+* High-quality: The summaries are crowdsourced from skilled and trained writers.
         </p>
         <p>
          You can load the dataset via:
         </p>
         <pre><code>import datasets
-data = datasets.load_dataset('GEM/mlb_data_to_text')
+data = datasets.load_dataset('GEM/squality')
 </code></pre>
         <p>
          The data loader can be found
-         <a href="https://huggingface.co/datasets/GEM/mlb_data_to_text">
+         <a href="https://huggingface.co/datasets/GEM/squality">
           here
          </a>
          .
@@ -183,7 +188,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           website
          </h4>
          <p>
-          <a href="https://github.com/ratishsp/mlb-data-scripts">
+          <a href="https://github.com/nyu-mll/SQuALITY">
            Github
           </a>
          </p>
@@ -193,8 +198,8 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           paper
          </h4>
          <p>
-          <a href="https://aclanthology.org/P19-1195">
-           ACL Anthology
+          <a href="https://arxiv.org/abs/2205.11465">
+           ArXiv
           </a>
          </p>
         </div>
@@ -203,7 +208,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
           authors
          </h4>
          <p>
-          Ratish Puduppully, Li Dong, Mirella Lapata
+          Alex Wang (NYU); Angelica Chen (NYU); Richard Yuanzhe Pang (NYU); Nitish Joshi (NYU); Samuel R. Bowman (NYU)
          </p>
         </div>
        </div>
@@ -224,7 +229,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         Ratish Puduppully
+         Alex Wang
         </p>
        </div>
        <div class="field">
@@ -265,7 +270,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         other: Other license
+         cc-by-4.0: Creative Commons Attribution 4.0 International
         </p>
        </div>
        <div class="field">
@@ -278,7 +283,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         Produce a summary of MLB game from its statistics.
+         Given a question about a particular high-level aspect of a short story, provide a summary about that aspect in the story (e.g., plot, character relationships, setting, theme, etc.).
         </p>
        </div>
        <div class="field">
@@ -291,7 +296,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         none
+         crowd-sourced
         </p>
        </div>
        <div class="field">
@@ -304,7 +309,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
          </div>
         </h4>
         <p>
-         yes/very likely
+         unlikely
         </p>
        </div>
       </div>
@@ -377,7 +382,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            <a href="https://github.com/ratishsp/mlb-data-scripts">
+            <a href="https://github.com/nyu-mll/SQuALITY">
              Github
             </a>
            </p>
@@ -392,7 +397,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            <a href="https://github.com/ratishsp/mlb-data-scripts">
+            <a href="https://github.com/nyu-mll/SQuALITY/data">
              Github
             </a>
            </p>
@@ -407,8 +412,8 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            <a href="https://aclanthology.org/P19-1195">
-             ACL Anthology
+            <a href="https://arxiv.org/abs/2205.11465">
+             ArXiv
             </a>
            </p>
           </div>
@@ -437,7 +442,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Ratish Puduppully
+            Alex Wang
            </p>
           </div>
           <div class="field">
@@ -450,7 +455,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            ratishpuduppully@gmail.com
+            wangalexc@gmail.com
            </p>
           </div>
          </div>
@@ -464,19 +469,11 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
              </div>
             </div>
            </h4>
-           <pre><code>@inproceedings{puduppully-etal-2019-data,
-    title = "Data-to-text Generation with Entity Modeling",
-    author = "Puduppully, Ratish  and
-      Dong, Li  and
-      Lapata, Mirella",
-    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
-    month = jul,
-    year = "2019",
-    address = "Florence, Italy",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/P19-1195",
-    doi = "10.18653/v1/P19-1195",
-    pages = "2023--2035",
+           <pre><code>@article{wang2022squality,
+  title={S{Q}u{ALITY}: Building a Long-Document Summarization Dataset the Hard Way},
+  author={Wang, Alex and Pang, Richard Yuanzhe and Chen, Angelica and Phang, Jason and Bowman, Samuel R.},
+  journal={arXiv preprint 2205.11465},
+  year={2022}
 }
 </code></pre>
           </div>
@@ -525,7 +522,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            other: Other license
+            cc-by-4.0: Creative Commons Attribution 4.0 International
            </p>
           </div>
           <div class="field">
@@ -538,22 +535,37 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Data-to-Text
+            Summarization
            </p>
           </div>
          </div>
          <div class="scope">
           <div class="field">
            <h4>
-            Add. License Info
+            Covered Dialects
             <div class="tooltip">
              <div class="tooltip-text">
-              What is the 'other' license of the dataset?
+              What dialects are covered? Are there multiple dialects per language?
              </div>
             </div>
            </h4>
            <p>
-            Restricted to non-commercial research purposes.
+            stories: 1930--1970 American English
+summaries: modern American English
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Whose Language?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Whose language is in the dataset?
+             </div>
+            </div>
+           </h4>
+           <p>
+            stories: 1930--1970 American science fiction writers (predominantly American men)
+summaries: Upwork writers (college-educated, native-English) and NYU undergraduates (English-fluent college students)
            </p>
           </div>
           <div class="field">
@@ -566,7 +578,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Produce a summary of MLB game from its statistics.
+            Given a question about a particular high-level aspect of a short story, provide a summary about that aspect in the story (e.g., plot, character relationships, setting, theme, etc.).
            </p>
           </div>
          </div>
@@ -581,7 +593,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            The dataset can be used to study data-to-text generation. The dataset is in sports domain. It pairs statistics of Major League Baseball (MLB) game with its summary. The summary is in the form of a document containing an average of 540 tokens. Thus it is useful to study long document generation.
+            summarization research
            </p>
           </div>
          </div>
@@ -618,7 +630,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            University of Edinburgh
+            New York University
            </p>
           </div>
          </div>
@@ -633,7 +645,33 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            Ratish Puduppully, Li Dong, Mirella Lapata
+            Alex Wang (NYU); Angelica Chen (NYU); Richard Yuanzhe Pang (NYU); Nitish Joshi (NYU); Samuel R. Bowman (NYU)
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Funding
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who funded the data creation?
+             </div>
+            </div>
+           </h4>
+           <p>
+            Eric and Wendy Schmidt; Apple; NSF
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Who added the Dataset to GEM?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Who contributed to the data card and adding the dataset to GEM? List the people+affiliations involved in creating this data card and who helped integrate this dataset into GEM.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Alex Wang (NYU)
            </p>
           </div>
          </div>
@@ -652,165 +690,54 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
              </div>
             </div>
            </h4>
-           <pre><code>        features = datasets.Features(
-            {
-                "home_name": datasets.Value("string"),
-                "box_score": [
-                    {
-                        "p_l": datasets.Value("string"),
-                        "last_name": datasets.Value("string"),
-                        "p_h": datasets.Value("string"),
-                        "sac": datasets.Value("string"),
-                        "p_bb": datasets.Value("string"),
-                        "pos": datasets.Value("string"),
-                        "ao": datasets.Value("string"),
-                        "p_bf": datasets.Value("string"),
-                        "cs": datasets.Value("string"),
-                        "hbp": datasets.Value("string"),
-                        "ab": datasets.Value("string"),
-                        "full_name": datasets.Value("string"),
-                        "p_w": datasets.Value("string"),
-                        "go": datasets.Value("string"),
-                        "fldg": datasets.Value("string"),
-                        "p_bs": datasets.Value("string"),
-                        "avg": datasets.Value("string"),
-                        "p_r": datasets.Value("string"),
-                        "p_s": datasets.Value("string"),
-                        "lob": datasets.Value("string"),
-                        "first_name": datasets.Value("string"),
-                        "p_sv": datasets.Value("string"),
-                        "p_so": datasets.Value("string"),
-                        "p_save": datasets.Value("string"),
-                        "p_hr": datasets.Value("string"),
-                        "po": datasets.Value("string"),
-                        "p_ip1": datasets.Value("string"),
-                        "p_ip2": datasets.Value("string"),
-                        "bb": datasets.Value("string"),
-                        "ops": datasets.Value("string"),
-                        "p_hld": datasets.Value("string"),
-                        "bo": datasets.Value("string"),
-                        "p_loss": datasets.Value("string"),
-                        "e": datasets.Value("string"),
-                        "p_game_score": datasets.Value("string"),
-                        "p_win": datasets.Value("string"),
-                        "a": datasets.Value("string"),
-                        "p_era": datasets.Value("string"),
-                        "d": datasets.Value("string"),
-                        "p_out": datasets.Value("string"),
-                        "h": datasets.Value("string"),
-                        "p_er": datasets.Value("string"),
-                        "p_np": datasets.Value("string"),
-                        "hr": datasets.Value("string"),
-                        "r": datasets.Value("string"),
-                        "so": datasets.Value("string"),
-                        "t": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "team": datasets.Value("string"),
-                        "sb": datasets.Value("string"),
-                        "slg": datasets.Value("string"),
-                        "sf": datasets.Value("string"),
-                        "obp": datasets.Value("string"),
-                    }
-                ],
-                "home_city": datasets.Value("string"),
-                "vis_name": datasets.Value("string"),
-                "play_by_play": [{
-                    "top": [{
-                        "runs": datasets.Value("string"),
-                        "scorers": [
-                            datasets.Value("string")
-                        ],
-                        "pitcher": datasets.Value("string"),
-                        "o": datasets.Value("string"),
-                        "b": datasets.Value("string"),
-                        "s": datasets.Value("string"),
-                        "batter": datasets.Value("string"),
-                        "b1": [
-                            datasets.Value("string")
-                        ],
-                        "b2": [
-                            datasets.Value("string")
-                        ],
-                        "b3": [
-                            datasets.Value("string")
-                        ],
-                        "event": datasets.Value("string"),
-                        "event2": datasets.Value("string"),
-                        "home_team_runs": datasets.Value("string"),
-                        "away_team_runs": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "error_runs": datasets.Value("string"),
-                        "fielder_error": datasets.Value("string")
-                    }
-                    ],
-                    "bottom": [{
-                        "runs": datasets.Value("string"),
-                        "scorers": [
-                            datasets.Value("string")
-                        ],
-                        "pitcher": datasets.Value("string"),
-                        "o": datasets.Value("string"),
-                        "b": datasets.Value("string"),
-                        "s": datasets.Value("string"),
-                        "batter": datasets.Value("string"),
-                        "b1": [
-                            datasets.Value("string")
-                        ],
-                        "b2": [
-                            datasets.Value("string")
-                        ],
-                        "b3": [
-                            datasets.Value("string")
-                        ],
-                        "event": datasets.Value("string"),
-                        "event2": datasets.Value("string"),
-                        "home_team_runs": datasets.Value("string"),
-                        "away_team_runs": datasets.Value("string"),
-                        "rbi": datasets.Value("string"),
-                        "error_runs": datasets.Value("string"),
-                        "fielder_error": datasets.Value("string")
-                    }
-                    ],
-                    "inning": datasets.Value("string")
-                }
-                ],
-                "vis_line": {
-                    "innings": [{
-                     "inn": datasets.Value("string"),
-                     "runs": datasets.Value("string")
-                    }
-                    ],
-                    "result": datasets.Value("string"),
-                    "team_runs": datasets.Value("string"),
-                    "team_hits": datasets.Value("string"),
-                    "team_errors": datasets.Value("string"),
-                    "team_name": datasets.Value("string"),
-                    "team_city": datasets.Value("string")
-                },
-                "home_line": {
-                    "innings": [{
-                        "inn": datasets.Value("string"),
-                        "runs": datasets.Value("string")
-                    }
-                    ],
-                    "result": datasets.Value("string"),
-                    "team_runs": datasets.Value("string"),
-                    "team_hits": datasets.Value("string"),
-                    "team_errors": datasets.Value("string"),
-                    "team_name": datasets.Value("string"),
-                    "team_city": datasets.Value("string")
-                },
-                "vis_city": datasets.Value("string"),
-                "day": datasets.Value("string"),
-                "summary": [
-                    datasets.Value("string"),
-                ],
-                "gem_id": datasets.Value("string")
-            }
-</code></pre>
+           <ul>
+            <li>
+             metadata: Project Gutenberg ID, internal UID, Project Gutenberg license
+            </li>
+            <li>
+             document: the story
+            </li>
+            <li>
+             questions: a list where each element contains
+             <ul>
+              <li>
+               question text: the question
+              </li>
+              <li>
+               question number: the order in which workers answered the question
+              </li>
+              <li>
+               responses: a list where each element contains
+               <ul>
+                <li>
+                 worker ID: anonymous
+                </li>
+                <li>
+                 internal UID
+                </li>
+                <li>
+                 response text: the response
+                </li>
+               </ul>
+              </li>
+             </ul>
+            </li>
+           </ul>
           </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Example Instance
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Provide a JSON formatted example of a typical instance in the dataset.
+             </div>
+            </div>
+           </h4>
+           <pre><code>{"metadata": {"passage_id": "63833", "uid": "ea0017c487a245668698cf527019b2b6", "license": ""}, "document": "Story omitted for readability", "questions": [{"question_text": "What is the plot of the story?", "question_number": 1, "responses": [{"worker_id": "6", "uid": "0c27bef1b7b644ffba735fdb005f9529", "response_text": "Brevet Lieutenant Commander David Farragut Stryakalski III, AKA Strike, is charged with commanding a run-down and faulty vessel, the Aphrodite. Aphrodite was the brain-child of Harlan Hendricks, an engineer who ushered in new technology ten years back. All three of his creations failed spectacularly, resulting in death and a failed career. The Aphrodite was the only ship to survive, and she is now used for hauling mail back and forth between Venus and Mars.\nStrike and Cob, the Aphrodite\u2019s only executive to last more than six months, recount Strike\u2019s great failures and how he ended up here. He used to fly the Ganymede, but was removed after he left his position to rescue colonists who didn\u2019t need rescuing. Strike was no longer trustworthy in Admiral Gorman\u2019s eyes, so he banished him to the Aphrodite. \nThe circuit that caused the initial demise of Aphrodite was sealed off. After meeting some members of his crew, Strike orders a conference for all personnel and calls in an Engineering Officer, one I.V. Hendricks. \nAfter Lieutenant Ivy Hendricks arrives--not I.V.--Strike immediately insults her by degrading the ship\u2019s designer, Harlan Hendricks. As it turns out, Hendricks is his daughter, and she vows to prove him wrong and all those who doubted her father. \nDespite their initial conflict, Strike and Hendricks\u2019 relationship soon evolves from resentment to respect. During this time, Strike\u2019s confidence in the Aphrodite plummets as she suffers from mechanical issues. \nThe Aphrodite starts to heat up as they get closer to the sun. The refrigeration units could not handle the heat, causing discomfort among the crew. As they get closer, a radar contact reveals that two dreadnaughts, the Lachesis and the Atropos, are doing routine patrolling. Nothing to worry about, except the Atropos had Admiral Gorman on board, hated by Strike and Hendricks.\nStrike and Hendricks make a joke about Gorman falling into the sun. As the temperature steadily climbs, the crew members overheat and begin fighting, resulting in a black eye. A distress signal came through from the Lachesis: the Atropos, with Gorman on board, was tumbling into the sun. The Lachesis was attempting to rescue them with an unbreakable cord, but they too were being pulled in. \nHendricks had fixed the surge-circuit rheostat, the one her father designed, and claimed it could help them rescue the ships. After some tension, Strike agrees and they race down to the sun to pick up the drifting dreadnaughts. \nStrike puts Hendricks in charge, but soon the heat overtakes her, and she is unable to continue. Strike takes over, attaches the Aphrodite to the Lachesis with a cord, and turns on the surge-circuit. They blast themselves out of there, rescuing the two ships and Admiral Gorman at the same time. \nCob and Strike are awarded Spatial Cross awards, while Hendricks is promoted to an engineering position at the Bureau of Ships. The story ends with Cob and Strike flipping through the pages of an address book until they land on Canalopolis, Mars. \n"}, {"worker_id": "1", "uid": "04e79312dede4a0da5993101e55a796a", "response_text": "Strike joins the crew of the Aphrodite after he has made several poor decisions while he was the captain of another spaceship. He is essentially being punished by his boss, Gorman, and put somewhere where he can do little harm. His job is to deliver the mail from Venus to Mars, so it\u2019s pretty straightforward. \n\nWhen he meets the Officer of the Deck, Celia Graham, he immediately becomes uncomfortable. He does not like to work with women in space, although it\u2019s a pretty common occurrence. He holds a captain\u2019s meeting the first day on the job, and he waits to meet his Engineering Officer, I.V. Hendricks. He makes a rude comment about how the man is late for his first meeting, but actually, the female Ivy has already shown up. \n\nAfter meeting Ivy formally, he makes a comment about how the ship Aphrodite was built by an imbecile. Ivy immediately tells him that he\u2019s wrong, and she knows this because the designer of the ship was none other than her own father. \n\nHis first week as captain on the new ship goes very poorly. Several repairs need to be done to Aphrodite, they run  behind schedule, and the new crew members have a tough time getting a handle on Aphrodite\u2019s intricacies. \n\nThe heat index in the ship begins to rise, and the crew members can no longer wear their uniforms without fainting. Suddenly a distress call comes in, and it\u2019s coming from the Atropos, a ship Captained by Gorman, and the Lachesis. The crew members hesitate to take the oldest and most outdated machinery on a rescue trip. Strike has been in trouble for refusing to follow commands before, and he knows it\u2019s a risky move. However, Ivy insists that she knows how to pilot the Aphrodite, and she can save the crew members on the Atropos and the Lachesis from death. They are quickly tumbling towards the sun, and they will perish if someone doesn\u2019t do something quickly. \n\nIvy takes control of the ship, and the heat on the Aphrodite continues to rise steadily. Eventually, she faints from pure heat exhaustion, and she tells Strike that he must take over. He does, and he manages to essentially lasso the other two ships, and with just the right amount of power, he pulls them back into orbit. \n\nAt a bar, after the whole ordeal, Cob pokes fun at Strike for staying on the Aphrodite. He then admits that he actually respects Strike\u2019s loyalty to the ship that saved his reputation. Cob asks about Strike\u2019s relationship with Ivy, but Strike tells him that she has taken her dad\u2019s former job, so she no longer works with him. Strike takes the moment to look up her info, presumably to restart the relationship. \n"}, {"worker_id": "5", "uid": "71efb8636b504f42a6989bb90e360186", "response_text": "The narrative follows commander Strike as he begins his command of the spaceship Aphrodite. Strike comes from a long line of military greats but himself is prone to poor professional decision making.\n\nAs he takes command, the mission is a simple mail run. However, in the course of their journey, they receive word of two ships in dire need of rescue. Strike and his engineering officer, Ivy Hendricks, decide to use the ships extremely risky surge-circuit to aid the ships.\n\nThe rescue is a success and the crew is hailed for its bravery in saving the doomed vessels. "}, {"worker_id": "3", "uid": "8aa46ba8bd2945c98babd7dd2d9ecc38", "response_text": "The story starts in a muddy swamp on Venus, where Strike, a Brevet Lieutenant Commander, is encountering his new ship, the Aphrodite, for the first time. Here on Venusport Base, he is introduced to the executive officer of the ship, a man who goes by Cob. Strike comes from a line of servicemen who were all well respected, but he himself has more of a reputation for causing trouble by saying the wrong things or deviating from mission plans. His reputation preceded him, as Cob had specific questions about some of these events. The Aphrodite was incredibly impressive when it was designed, but did not live up to its expectations. It had been refitted, and the new mission that Strike was to lead was a mail run between Venus and Mars. As he entered the ship, Strike began to meet his new crew, including Celia Graham, his Radar Officer. Strike is not used to women being on ships and is decidedly uncomfortable with the idea. As he is briefing the officers who were already present, Strike is surprised when he meets his new engineering officer, Ivy Hendricks. Ivy is the daughter of the man who designed the ship, and she is cold to Strike at first, as he is to her. However, her expertise in engineering generally, the ship specifically, and other skills as well as piloting, meant that Strike warmed up to her as their mission went on. As the ship was flying towards Mars on their route, the crew picked up a distress signal from the Lachesis, which was trying to pull the Atropos away from the gravitational pull of the sun after it was damaged in an equipment malfunction. The Admiral who had put Strike in charge of the Aphrodite was on the Atropos, and Ivy dislikes him even more than Strike does, but they know they have to try to save the crews. Strike is hesitant, but Ivy has a plan and insists that they try. She has spent all of her free time tinkering with the circuits, and takes charge. She turned the Aphrodite towards the ships in danger, and sends out a cable to connect the Aphrodite to those ships. After they are all connected, the ships continue to spin towards the sun, which causes Ivy to pass out, leaving Strike in charge. He manages to pull the ships into line and send the Aphrodite in the right direction before passing out himself. The Aphrodite has the power to pull everyone away from the Sun\u2019s gravity, but the acceleration knocks everyone out on all three ships. In the end, it was a successful rescue mission of multiple crews. Strike and Cob find themselves in an officer\u2019s club at the end of the story, discussing Ivy\u2019s new job, and Strike acknowledges that Cob is right about the Aphrodite having grown on him, and plans to stay its captain."}]}, {"question_text": "Who is Ivy Hendricks and what happens to her throughout the story?", "question_number": 2, "responses": [{"worker_id": "6", "uid": "0c27bef1b7b644ffba735fdb005f9529", "response_text": "Lieutenant Ivy Hendricks is the daughter of Harlan Hendricks, a formerly respected engineer. He created the surge-circuit, an innovation in interstellar astrogation, and he was awarded a Legion of Merit. He designed three famous ships: the Artemis, the Andromeda, and the Aphrodite, the prototype. Despite being hailed as the latest and greatest in technology, all three ships either exploded or failed. \nAccording to Lieutenant Ivy Hendricks, their failures were due to the lack of education on board. She claimed that her father asked for the crew members to be trained in surge-circuit technology, so they could use it properly and correctly. That wish was not granted and after all three ships failed, his reputation and career were doomed. Admiral Gorman pulled the plug on his career and therefore became the target of all Lieutenant Hendricks\u2019 hate. \nWith a bone to pick, Lieutenant Hendricks, a knowledgeable engineer herself, comes aboard the Aphrodite to serve as her engineer and occasional pilot. She wants to prove to the world that her father\u2019s creation was genius and deserving of praise. \nAlthough they started off on the wrong foot, Lieutenant Hendricks and Strike, her commander, develop a friendship and appreciation for each other. They bond over their deep hatred of Admiral Gorman and the joy of piloting a ship. She soon proves herself to Strike, and he begins to trust her. Their relationship walks the fine line between friendship and romance. \nAs the Aphrodite is attempting to rescue the fallen dreadnaughts, Lieutenant Hendricks comes up with the solution. Due to her constant tinkering on the ship, she had fixed the surge-circuit rheostat and made it ready to use. Initially, no one trusts her, seeing as the last time it was used people died. But Strike\u2019s trust in her is strong and true, so he approves the use of the surge-circuit. Hendricks pilots the ship, but soon becomes too overheated and comes close to fainting. Strike takes over piloting and eventually activates the surge-circuit. It works and they are able to rescue the two ships, one of which had Admiral Gorman, her sworn enemy, onboard. \nLieutenant Hendricks receives a major promotion; she is now an engineer at the Bureau of Ships. She proved them wrong, and restored her father\u2019s legacy and good name. The story ends with their romance left in the air, but Hendricks has much to be proud of. \n"}, {"worker_id": "1", "uid": "04e79312dede4a0da5993101e55a796a", "response_text": "\nLieutenant Ivy Hendricks is the new Engineering Officer on Aphrodite. Strike and Cob assume that Ivy is a man before she arrives because they are sexist and because her name is listed as I.V. in the orders. Ivy is actually the daughter of the man who designed the award-winning craft.\n\nShe is cold and unfriendly towards Strike after she meets him, and that\u2019s probably because he makes a rude comment about the ship which her father created. After a couple weeks of working together, the two begin to get along very well. Strike admires Ivy\u2019s piloting skills and her depth of knowledge about the Aphrodite. \n\nThe two also bond over their shared hatred of Strike\u2019s former boss, Gorman. Strike feels as though he has ruined his career, and Ivy thinks that Gorman torpedoed her father\u2019s career. Ivy wants nothing more than to prove that Gorman is an idiot. \n\nHowever, when Gorman\u2019s ship is hurtling towards the sun and he and his crew members are about to die, Ivy sees that it\u2019s the perfect opportunity to show Gorman just how wrong he was about the ship her father designed. It\u2019s a very dangerous mission, but Ivy is steadfast in her decision and she\u2019s deeply courageous. She pilots the ship for most of the rescue mission, but eventually faints from the extreme heat. She tells Strike that he needs to take over, and he does a great job. \n\nIvy is then promoted, and she moves to Canalopolis, Mars. She now outranks her former Captain, Strike. \n"}, {"worker_id": "5", "uid": "71efb8636b504f42a6989bb90e360186", "response_text": "Ivy Hendricks is the engineering officer assigned to the Aphrodite. She is the daughter of Harlan Hendricks, the ship's original designer. She is fiercely protective of her father's legacy and resents Admiral Gorman for the way he treated him.\n\nHendricks and Strike, form an alliance of sorts after his initial surprise of seeing a woman assigned to this officer's role. When news arrives that two ships are in danger of falling into the sun, Ivy lobbies to use her father's technology to save the ship. Strike agrees to her plan although the risks are high. The Aphrodite eventually saves the ships although Ivy faints in the process from the heat and command has to be taken over by Strike.\n\nThe successful mission results in a promotion for Ivy as she works as a designer in the Bureau of Ships like her father."}, {"worker_id": "3", "uid": "8aa46ba8bd2945c98babd7dd2d9ecc38", "response_text": "Ivy Hendricks is the new engineering officer on the Aphrodite, having been transferred from the Antigone. She is a tall woman with dark hair and contrasting pale blue eyes, who has a very wide range of experience in ship operations and engineering. Her father, Harlan Hendricks, was the man who designed the Aphrodite, so she knows the ship needs a lot of specific training. At first, the captain did not expect her to be a woman, and managed to imply that many people found her father incompetent. Although she seemed cold at first, as she reacted to the situation, she and the captain eventually got along fairly well, as he learned to appreciate her wide skill set that ranged from engineering to piloting. Ivy and Strike also had a common enemy in the higher ranks: Space Admiral Gorman. Once Spike trusted her he appreciated that Ivy spent a lot of spare time working on the old circuits, so she knew the ship like the back of her hand. When the Aphrodite found the Lachesis and the Atropos when following up on a distress signal, Ivy new the ship well enough to be able to formulate a plan to save everyone. She piloted the Aphrodite carefully, using cables shot with a rocket to connect the three ships together, but the spinning of the ships in the heat inside meant that she passed out and had to leave Strike to take over for her. Her plan was successful; she was promoted, and instead of returning to the Aphrodite she started a design job with the Bureau of Ships."}]}, {"question_text": "What is the relationship between Strike and Aphrodite?", "question_number": 3, "responses": [{"worker_id": "6", "uid": "0c27bef1b7b644ffba735fdb005f9529", "response_text": "Strike is a member of a famous, well-behaved, and well-trained service family. His father and grandfather served in World War II and the Atomic War, respectively. Both earned medals for their heroic service. Strike, however, did not follow in his family\u2019s footsteps. \n\tWith a tendency to say the wrong thing at the wrong time, Strike often offended those around him and garnered a negative reputation. After being put in charge of the Ganymede, he soon lost his position after abandoning his station to rescue colonists who were not in danger. As well, he accused a Martian Ambassador of being a spy at a respectable ball. Admiral Gorman soon demoted him, and he became the commander of the Aphrodite. \n\tAt first, Strike was not a fan. He sees her as ugly, fat, and cantankerous. He misses the Ganymede, a shiny and new rocketship, and views the Aphrodite as less-than. \n\tWithin the first week of flying her, the Aphrodite had a burned steering tube, which made it necessary to go into free-fall as the damage control party made repairs. Strike\u2019s faith in Lover-Girl continued to plummet. \n\tHowever, after Lieutenant Hendricks, the resident engineer, got her hands on the Aphrodite, Strike\u2019s opinion started to change. Her knowledge of the ship, engineering, and piloting helped him gain confidence in both her abilities and those of Aphrodite.\nNear the end of the story, the Aphrodite is tasked with rescuing two ships that are falling into the sun. Previously Lieutenant Hendricks had fixed up the surge-circuit rheostat, and so she offered it up as the only solution. Strike agrees to try it, which shows his faith and trust in the Aphrodite. Luckily, all things go to plan, and the Aphrodite, with Strike piloting, is able to save the two ships and Admiral Gorman. \nAfter Strike won a medal himself, finally following in the family footsteps, he is offered his old position back on the Ganymede. He refuses, and instead returns to old Lover-Girl. He has grown fond of her over the course of their adventure, and they develop a partnership. "}, {"worker_id": "1", "uid": "04e79312dede4a0da5993101e55a796a", "response_text": "Strike is completely unimpressed by the rocket ship Aphrodite. He comments that she looks like a pregnant carp, and he knows that he\u2019s been assigned captain of the ship because he messed up terribly on his other missions. \n\nAphrodite was built 10 years ago, and now she is completely outdated and a laughing stock compared to the other spaceships in the fleet.  She was designed by Harlan Hendricks, and the engineer received a Legion of Merit award for her design. \n\nStrike\u2019s mission is to fly Aphrodite to take the mail from Venusport to Canalopolis, Mars. It\u2019s boring and straightforward.\n\nWhen a disaster occurs and two other ships, the Atropos and the Lachesis, are in serious danger of getting too close to the sun, Strike agrees to take the old girl on a rescue mission. He is convinced by Ivy, since she knows the ship better than anyone else and she believes in her. \n\nAlthough Ivy takes Aphrodite most of the way there, its Strike who finishes the mission and saves his former boss, Gorman, and many other people from certain death. Aphrodite is the entire reason that Strike is able to mend his terrible reputation and he wins back respect from Gorman. Although they got off to a rocky start, Strike finds it impossible to leave his best girl, even when he is offered a job on another ship. He is loyal to the ship that made him a hero. \n"}, {"worker_id": "5", "uid": "71efb8636b504f42a6989bb90e360186", "response_text": "Strike is assigned to be commander of the spaceship Aphrodite. The ship is assigned as a mail carrier for the inner part of the solar system. The Aphrodite is a dilapidated design with an awful reputation. Strike ended up with the Aphrodite as a result of a series of poor professional decisions that resulted in him getting command of the more prestigious ship Ganymede taken away from him.\n\nHis initial impression of the Aphrodite softens to a grudging respect after the successful mission to save the Atropos and Lachesis. Although he presumably is in line to command the Ganymede again, another faux pas resulting in Strike continuing to command the Aphrodite.   "}, {"worker_id": "3", "uid": "8aa46ba8bd2945c98babd7dd2d9ecc38", "response_text": "At the beginning of the story, Strike is very reluctant to accept Aphrodite, because being in charge of the ship means a demotion for him. His perception of the ship at the beginning of the story is colored by this history, and his first impression of the ship is not a positive one, even from the outside. Besides the actual construction of the ship, the technology that ran it was not something he showed much faith in. The first week that he was in charge after leaving Venus, it seemed things were going drastically wrong. When one important piece of equipment burnt out, the ship went into freefall, requiring a lot of repair work from the engineers, and anyone in charge of navigation was handed more work because of this as well. The ship was really put to the test when the Aphrodite responded to the distress call from the Lachesis, whose crew was trying to keep the Atropos from falling into the sun. Because Ivy knew the Aphrodite so well, and had been working on the circuits, it turned out the Aphrodite was the perfect ship to save the day. She could not see the rescue all the way through to the end, because she passed out early, but Strike was conscious a little bit longer and took over until he also passed out. After this unexpected rescue mission, Cob, the Executive Officer, noted that Strike has a newfound appreciation for the ship, and has no intention of leaving. Strike is dedicated to his new mission, even though at the beginning of the story he wanted nothing more than to pilot something the same rank as his old ship."}]}, {"question_text": "Describe the setting of the story.", "question_number": 4, "responses": [{"worker_id": "6", "uid": "0c27bef1b7b644ffba735fdb005f9529", "response_text": "Jinx Ship to the Rescue by Alfred Coppel, Jr. takes place in space, but more specifically in the Aphrodite. \n\tIt starts in the muddy Venusport Base on Venus. Venusport is famous for its warm, slimy, and green rain that falls for 480 hours of every day. A fog rolls in and degrades visibility. \n\tDespite starting on Venusport Base, the characters actually spend most of their time onboard the Aphrodite, a Tellurian Rocket Ship. The Aphrodite had a surge-circuit monitor of twenty guns built into her frame. She was bulky, fat, and ugly, and occasionally had some technical and mechanical struggles as well. \n\tAlthough her frame may not be appealing, she soon becomes victorious as she gains the trust of Strike and other members of his crew and saves two fallen dreadnaughts. With her surge-circuit rheostat rebuilt, the Aphrodite is finally able to accomplish what she was always meant to. "}, {"worker_id": "1", "uid": "04e79312dede4a0da5993101e55a796a", "response_text": "The story starts on the planet of Venus. Venus has days that are 720 hours long, and rain is common. The rain is hot, slimy, and green, and it makes the already wet swamplands even more mushy. Fog is common on Venus.\n\nThe middle of the story takes place on the old and outdated ship, Aphrodite. She gives the crew members a lot of trouble on their first mission. She is in dire need of repairs, she\u2019s slow, and it\u2019s impossible to control her temperature. The crew members are unable to wear their uniforms because the temperature is over 100 degrees. \n\nAphrodite\u2019s mission is simple. She needs to take the mail from Venus to Mars, and it\u2019s the only thing she can be trusted to do successfully. So it\u2019s very impressive when she ends up being the hero of the day and manages to rescue two other ships that are headed towards the sun. \n"}, {"worker_id": "5", "uid": "71efb8636b504f42a6989bb90e360186", "response_text": "The narrative is set in the early 21st century primarily aboard the spaceship Aphrodite. The ship's mission is to deliver mail in the inner part of the solar system.\n\nThe ships route takes them around the sun and as a result the ambient temperature inside the ship begins to rise to intolerable levels due to proximity to the sun. Because of the heat, the coed crew is allowed to operate with very little clothing. Aphrodite is a ship of an outdated design that gives it a lack of comfort and subjects it to numerous small problems that make its operation frustrating."}, {"worker_id": "3", "uid": "8aa46ba8bd2945c98babd7dd2d9ecc38", "response_text": "The story starts at a spaceport on Venus, where it has been raining for hundreds of hours straight. The rain has stopped by the time the story starts, but it is left a lot of mud in the swampy marshes. It was nearing the end of the day, and the fog was enveloping the surroundings as it grew darker outside. It was hot and sticky at Venusport Base, but after Strike left the service on his mission in the Aphrodite, it would only grow hotter on board. The ship itself, where most of the story takes place, is an older, refitted, bulky type of ship. There were only two others like it, and their designer had been awarded a Legion of Merit for the three. However, this is the only one still in use, as the others were destroyed in a much earlier mission. Strike\u2019s disappointment in the ship seems to mirror the sentiment. Inside the ship, there are many systems of pipes connected the control panels, and the captain had to navigate carefully so that he didn\u2019t hit his head on the bulkhead. While in space, as the ship flew closer and closer to the sun, the interior of the ship grew hotter and hotter. The crew opted to wear as little clothing as possible in an attempt to handle the heat. When the Aphrodite received the distress call from the Lachesis, the ships were close enough to the sun to be affected by its gravitational pull. After the close call near the sun, once everyone regained consciousness, the story ends at an officer\u2019s club on Mars. It was a formal environment, and the Aphrodite\u2019s captain and executive officer planned the rest of their route from there."}]}, {"question_text": "Who is Strike and what happens to him throughout the story?", "question_number": 5, "responses": [{"worker_id": "6", "uid": "0c27bef1b7b644ffba735fdb005f9529", "response_text": "Strike is a member of an esteemed service family on Venus; seven generations of well-behaved and well-trained operators. Unfortunately, Strike struggles to carry on the family tradition, and is known for misspeaking and offending those around him. By trusting his gut, he wound up failing his higher-ups and crew several times. All this culminated in an eventual mistrust of Strike, which led to him being charged with the Aphrodite. \n\tHis deep hatred of Space Admiral Gordon is passionate, but not without reason. Gordon is the one who demoted him to the Aphrodite. At the start, Strike is checking out his new vessel and notes how ugly the ship is. After examining the ship and it\u2019s crew, it is revealed that Strike is uncomfortable around women and believes they don\u2019t belong on a spaceship. \n\tIn order to start flying, he calls in an expert engineer to come aboard and travel with them. Thinking I.V. Hendricks is a man, he is excited to have them onboard. But when Ivy Hendricks shows up, a female engineer and the daughter of the Aphrodite\u2019s creator, his world is soon turned upside down. \n\tHis initial negative reaction to her is soon displaced by begrudging appreciation and eventually trust and friendship. Hendricks proves his previous theories about women wrong, and Strike is forced to accept that perhaps women do belong on a spaceship. She especially impresses him with her total knowledge of spaceship engineering and the Aphrodite in general. And it helped that she hated Admiral Gorman just as much as Strike, if not more. \n\tWhile flying by the sun to deliver mail, the Aphrodite receives a distress call from two ships: the Lachesis and the Atropos, the latter of which carried Admiral Gorman onboard. After the Aphrodite reached orbit, the Lachesis reached out and reported the Atropos was falling into the sun, due to a burst chamber. They couldn\u2019t move those onboard over thanks to all the radiation, so the Lachesis was attempting to pull the Atropos back using an unbreakable cord. But it wasn\u2019t enough. \n\tSince Ivy Hendricks had fixed the surge-circuit rheostat--the feature that crashed the original Aphrodite--, they were able to save the Lachesis and the Atropos and regain some of their dignity and former glory. \n\tStrike is awarded the Spatial Cross, as well as Cob, his friend and longtime executive of the Aphrodite. Strike was asked to return to the Ganymede, a beautiful sleek ship, but allegedly said the wrong thing to Gorman, and was instead sent back to the Aphrodite. Cob believes he did it on purpose, as Strike had grown quite fond of Lover-Girl. \n\tIvy has gone to the Bureau of Ships to engineer vessels, a great upgrade from her previous job. Cob pressures Strike to reach out to her, but he refuses. However, it ends on a hopeful note, with the potential for romance between Strike and Hendricks, and even more adventures on the clunky Aphrodite. "}, {"worker_id": "1", "uid": "04e79312dede4a0da5993101e55a796a", "response_text": "Strike\u2019s real name is Brevet Lieutenant Commander David Farragut Strykalski III. After serving on the Ganymede, he is put in charge of the Aphrodite. He comes from many generations of officers. However, he doesn\u2019t feel like he fits the mold of his grandfather and great-grandfather and so on. His boss, Gorman, disagreed with several decisions he made in the past and sent him to work on the Aphrodite, the unimpressive spaceship.\n\nStrike does not like working with women in space, so he is disappointed when two of his crew members are powerful and successful females. He learns his lesson after working with Ivy Hendricks for a few weeks. She impresses him with her piloting skills and her knowledge of the ship that her father designed. \n\nStrike is skeptical at first when Ivy wants to take Aphrodite to rescue two ships whose crew members are in grave danger. He knows that the mistakes he made before got him on the Aphrodite, and there\u2019s a big chance that he\u2019ll be fired for trying to save the day, or worse, the mission could end in death for him and all of his crew members. He has feelings for Ivy, and her intense passion convinces him that she\u2019s right, Aphrodite can handle the mission and they can save those peoples\u2019 lives.\n\nIvy pilots the ship almost the entire route, but she is unable to finish the job when she passes out from the intense heat. Captain Strike takes over and saves the crews on the Atropos and the Lachesis. He is hailed as a hero, and he repairs his terrible reputation with the selfless act. He decides not to leave the Aphrodite. He wants to be loyal to the ship that worked so hard for him. He does decide to give Ivy a call. Even though she outranks him, he has to admit that he has a crush on her. "}, {"worker_id": "5", "uid": "71efb8636b504f42a6989bb90e360186", "response_text": "Strike is the commander of the Aphrodite. He was originally the commander of the prestigious Ganymede. However a number of decisions made out of bravado as well as some unprofessional comments lost him that command.\n\nNow in command of a dilapidated ship, Strike comes to terms with his job. He commands a crew including a large number of women which makes him somewhat uncomfortable. His engineering officer Ivy Hendricks in particular seems to be of romantic interest to Strike.\n\nStrike ends up teaming with Ivy to save two ships from falling into the sun earning him a small promotion but an ill-advised comment prevents him from leaving the Aphrodite, perhaps to the satisfaction of Strike himself."}, {"worker_id": "3", "uid": "8aa46ba8bd2945c98babd7dd2d9ecc38", "response_text": "Strike is a highly decorated lieutenant commander in the Navy, who comes from a long line of ship operators. Although he has run many successful missions, he has a reputation of causing trouble\u2014his new Executive Officer, Cob, has heard a number of stories that he asks Strike for details about. Strike has lost command of the ship that he had been captaining, and is sent by Admiral Gorman to captain a mail route on the Aphrodite. He is extremely hesitant to have any positive feelings about the experience, from the ship itself, to the inclusion of women on its crew. Not only is this not the type of ship he is used to, he is never served with women on board. He has to navigate adapting to the new situation while adapting to the new job. Through the first week of his assignment, the ship and its crew grow on him. He comes to trust Ivy Hendricks, the Engineering Officer, and he lets her take charge to try to save the other ships when they respond to a distress call. Eventually, she passes out, and has to leave Strike in charge of getting the ships to safety. Eventually,  Strike passes out just like everyone else, from the ship\u2019s acceleration to break the sun\u2019s gravity. At the end of the story, it is clear that his increased appreciation for the ship means he plans on staying, to the delight of his Executive Officer. Cob alludes to Strike having feelings for Ivy, but he says that although she is nice, he has no interest in being with a woman with a higher ranked title than he has. "}]}]}
+</code></pre>
+          </div>
           <div class="field">
            <h4>
             Data Splits
@@ -821,7 +748,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            There are three splits in the dataset: train, validation and test
+            train, dev, test
            </p>
           </div>
          </div>
@@ -836,244 +763,7 @@ data = datasets.load_dataset('GEM/mlb_data_to_text')
             </div>
            </h4>
            <p>
-            The high level structure contains the following attributes: home_name, vis_name, home_city, vis_city, summary, summary_eval, day, gem_id, box_score, play_by_play, home_line, vis_line.
-The attributes home_name, vis_name, home_city, vis_city and day are string values.
-The attribute "summary" contains the summary in the form of a list of tokens.
-The attribute "summary_eval" contains the summary in the form of a string of tokens. The difference from "summary" field is that "summary_eval" doesn't contain "
-            <em>
-             NEWPARAGRAPH
-            </em>
-            " delimiters to separate the paragraphs. "summary_eval" field should be used to evaluate model outputs. "summary" field may be used during the training process.
-box_score contains the box score statistics of the players in the game. It is in the form of a list (of average size 90), with each element describing the statistics of a player. The box score statistics contain 53 attributes. 
-The description of the attributes is given below. The descriptions of most of the attributes is obtained from
-            <a href="https://www.mlb.com/glossary/standard-stats">
-             mlb.com
-            </a>
-            .
-           </p>
-           <ul>
-            <li>
-             r :       Runs scored by a player in the game.
-            </li>
-            <li>
-             rbi           Runs Batted In (RBI): action of a batter results in a run scored by other players in the team.
-            </li>
-            <li>
-             pos           Position of the player.
-            </li>
-            <li>
-             avg           Batting Average. It is an indicator of the hits in the players' career.
-            </li>
-            <li>
-             bb            A walk occurs when a pitcher throws four pitches out of the strike zone, none of which are swung at by the hitter.
-            </li>
-            <li>
-             hr            Batter hits the ball in the air over the outfield fence.
-            </li>
-            <li>
-             p_r           Runs given by a pitcher in the game.
-            </li>
-            <li>
-             p_bb          Walks allowed by pitcher in a game.
-            </li>
-            <li>
-             p_h           Hits allowed by pitcher in a game.
-            </li>
-            <li>
-             p_hr          Home runs allowed by pitcher in a game.
-            </li>
-            <li>
-             p_er          Earned Run (ER): An earned run is any run that scores against a pitcher.
-            </li>
-            <li>
-             p_era         Earned Run Average (ERA): Earned run average represents the number of earned runs a pitcher allows per nine innings.
-            </li>
-            <li>
-             p_np          Number of Pitches: A pitcher's total number of pitches is determined by all the pitches he throws in game.
-            </li>
-            <li>
-             p_ip1         Innings Pitched (IP1): Innings pitched measures the number of innings a pitcher remains in a game. Because there are three outs in an inning, each out recorded represents one-third of an inning pitched.
-            </li>
-            <li>
-             p_ip2         Innings Pitched (IP2): Innings pitched measures the number of innings a pitcher remains in a game. Because there are three outs in an inning, each out recorded represents one-third of an inning pitched.
-            </li>
-            <li>
-             p_w           A pitcher receives a win when he is the pitcher of record when his team takes the lead for good.
-            </li>
-            <li>
-             p_l           A pitcher receives a loss when a run that is charged to him proves to be the go-ahead run in the game, giving the opposing team a lead it never gives up.
-            </li>
-            <li>
-             p_so          A strikeout occurs when a pitcher throws any combination of three swinging or looking strikes to a hitter.
-            </li>
-            <li>
-             p_save        Save: A save is awarded to the relief pitcher who finishes a game for the winning team. A pitcher cannot receive a save and a win in the same game.
-            </li>
-            <li>
-             p_sv          Saves: The count of saves recorded by a pitcher in his career.
-            </li>
-            <li>
-             sac           A sacrifice fly occurs when a batter hits a fly-ball out to the outfield or foul territory that allows a runner to score.
-            </li>
-            <li>
-             p_bf          Batters faced is simply a count of the number of total plate appearances against a certain pitcher or team. In a perfect game -- with 27 outs -- a pitcher will record 27 batters faced.
-            </li>
-            <li>
-             cs            A caught stealing occurs when a runner attempts to steal but is tagged out before reaching second base, third base or home plate.
-            </li>
-            <li>
-             hbp           A hit-by-pitch occurs when a batter is struck by a pitched ball without swinging at it. He is awarded first base as a result.
-            </li>
-            <li>
-             ab            An official at-bat comes when a batter reaches base via a fielder's choice, hit or an error (not including catcher's interference) or when a batter is put out on a non-sacrifice.
-            </li>
-            <li>
-             p_bs          A blown save occurs when a relief pitcher enters a game in a save situation, but allows the tying run to score.
-            </li>
-            <li>
-             p_s           The count of strikes thrown by a pitcher
-            </li>
-            <li>
-             lob           Left on base can be viewed as both an individual statistic or as a team statistic. In an individual batter's case, it refers to how many men remain on base after that batter makes an out at the plate, as the batter has failed to do his job to score those runners -- or at least put himself in a position to score. In a team's case or in an individual pitcher's case, it refers to the number of men who remain on base at the end of an inning.
-            </li>
-            <li>
-             po            A fielder is credited with a putout when he is the fielder who physically records the act of completing an out -- whether it be by stepping on the base for a forceout, tagging a runner, catching a batted ball, or catching a third strike
-            </li>
-            <li>
-             ops           OPS adds on-base percentage and slugging percentage to get one number that unites the two. It's meant to combine how well a hitter can reach base, with how well he can hit for average and for power.
-            </li>
-            <li>
-             p_hld         A hold occurs when a relief pitcher enters the game in a save situation and maintains his team's lead for the next relief pitcher, while recording at least one out.
-            </li>
-            <li>
-             p_loss        True/False- Indicates losing pitcher
-            </li>
-            <li>
-             e             A fielder is given an error if, in the judgment of the official scorer, he fails to convert an out on a play that an average fielder should have made.
-            </li>
-            <li>
-             p_win         True/False- Indicates winning pitcher
-            </li>
-            <li>
-             a             An assist is awarded to a fielder who touches the ball before a putout is recorded by another fielder.
-            </li>
-            <li>
-             h             A hit occurs when a batter strikes the baseball into fair territory and reaches base without doing so via an error or a fielder's choice.
-            </li>
-            <li>
-             so            A strikeout of a batter
-            </li>
-            <li>
-             team          Team of the player
-            </li>
-            <li>
-             sb            A stolen base occurs when a baserunner advances by taking a base to which he isn't entitled.
-            </li>
-            <li>
-             slg           Slugging percentage represents the total number of bases a player records per at-bat. Unlike on-base percentage, slugging percentage deals only with hits and does not include walks and hit-by-pitches in its equation.
-            </li>
-            <li>
-             sf            A sacrifice fly occurs when a batter hits a fly-ball out to the outfield or foul territory that allows a runner to score.
-            </li>
-            <li>
-             obp           OBP refers to how frequently a batter reaches base per plate appearance. Times on base include hits, walks and hit-by-pitches, but do not include errors, times reached on a fielder's choice or a dropped third strike.
-            </li>
-           </ul>
-           <p>
-            The description of attributes in play-by-play is below:
-           </p>
-           <ul>
-            <li>
-             batter             Batter in the play.
-            </li>
-            <li>
-             pitcher            Pitcher in play.
-            </li>
-            <li>
-             b1                 Player/s at first base position.
-            </li>
-            <li>
-             b2                 Player/s at second base position.
-            </li>
-            <li>
-             b3                 Player/s at third base position.
-            </li>
-            <li>
-             scorers            Player/s scored in the play.
-            </li>
-            <li>
-             fielder_error      Player committed field error.
-            </li>
-            <li>
-             event              Event of the play such as single, double, home run etc.
-            </li>
-            <li>
-             event2             Second event of the play such as wild pitch, error etc.
-            </li>
-            <li>
-             inning             Inning of the play.
-            </li>
-            <li>
-             top/ bottom        If home team is batting it is bottom and if away team is batting it is top.
-            </li>
-            <li>
-             o                  Count of outs
-            </li>
-            <li>
-             b                  Count of balls
-            </li>
-            <li>
-             s                  Count of strikes
-            </li>
-            <li>
-             r                  Count of runs
-            </li>
-            <li>
-             rbi                Count of runs batted in (rbi)
-            </li>
-            <li>
-             error_runs         Runs due to error
-            </li>
-            <li>
-             home_team_runs     Score of home team
-            </li>
-            <li>
-             vis_team_runs      Score of visiting team
-            </li>
-           </ul>
-           <p>
-            <code>
-             home_line
-            </code>
-            and
-            <code>
-             vis_line
-            </code>
-            contain string value pairs for
-            <code>
-             team_name
-            </code>
-            ,
-            <code>
-             team_city
-            </code>
-            ,
-            <code>
-             team_runs
-            </code>
-            ,
-            <code>
-             team_hits
-            </code>
-            ,
-            <code>
-             team_error
-            </code>
-            ,
-            <code>
-             result
-            </code>
-            , and a list of runs scored in each inning.
+            The dataset is arranged with responses grouped by question (for ease of multi-reference training and evaluation) and questions grouped by story (to avoid duplicating the story in the dataset)
            </p>
           </div>
           <div class="field">
@@ -1086,7 +776,11 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The splits are random.
+            Stories that appear in both SQuALITY and
+            <a href="https://github.com/nyu-mll/quality">
+             QuALITY
+            </a>
+            are assigned to the same split in both datasets.
            </p>
           </div>
          </div>
@@ -1154,19 +848,6 @@ The description of the attributes is given below. The descriptions of most of th
             no
            </p>
           </div>
-          <div class="field">
-           <h4>
-            Ability that the Dataset measures
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Long document generation, coherent ordering of information, faithfulness to the input statistics, fluency in generation and avoiding repetition of text.
-           </p>
-          </div>
          </div>
          <div class="scope">
           <div class="field">
@@ -1179,7 +860,10 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            This dataset can verify if models are capable of long document generation. The challenges in long document generation conditioned on input tables include ensuring coherent output, staying faithful to the input, ensuring fluent output and avoiding repetition of text. Such aspects can be verified on models trained on this dataset
+            The summaries in the dataset were crowdsourced, allowing us to use input documents that are easily understood by crowdworkers (as opposed to technical domains, such as scientific papers). Additionally, there is no lede bias in stories, as is typically in news articles used in benchmark summarization datasets like CNN/DM and XSum.
+           </p>
+           <p>
+            Additionally, the dataset is multi-reference and the references for each task are highly diverse. Having a diverse set of references better represents the set of acceptable summaries for an input, and opens the door for creative evaluation methodologies using these multiple references.
            </p>
           </div>
           <div class="field">
@@ -1192,7 +876,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            Compared to the existing RotoWire (Wiseman et al. 2017) dataset, MLB summaries are longer (approximately by 50%) and the input records are richer and more structured (with the addition of play-by-play). Moreover, the MLB dataset is five times larger in terms of data size (i.e., pairs of tables and game summaries).
+            The inputs (story-question pairs) are multi-reference. The questions are high-level and are written to draw from multiple parts of the story, instead of a single section of the story.
            </p>
           </div>
          </div>
@@ -1212,7 +896,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            yes
+            no
            </p>
           </div>
           <div class="field">
@@ -1230,38 +914,8 @@ The description of the attributes is given below. The descriptions of most of th
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            GEM Modifications
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What changes have been made to he original dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             data points removed
-            </code>
-           </p>
-          </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Modification Details
-            <div class="tooltip">
-             <div class="tooltip-text">
-              For each of these changes, described them in more details and provided the intended purpose of the modification
-             </div>
-            </div>
-           </h4>
-           <p>
-            Some examples have been removed from training dataset which satisfied the below criteria:
-1. The examples in training dataset which overlapped with validation/test.
-2. Some examples which described washed out games.
-           </p>
-          </div>
          </div>
         </div>
         <h3 id="getting-started-with-the-task">
@@ -1282,13 +936,23 @@ The description of the attributes is given below. The descriptions of most of th
              </div>
             </div>
            </h4>
-           <p>
-            The
-            <a href="https://aclanthology.org/P19-1195">
-             research paper
-            </a>
-            is a good resource
-           </p>
+           <ul>
+            <li>
+             <a href="https://arxiv.org/abs/2205.11465">
+              original paper
+             </a>
+            </li>
+            <li>
+             <a href="https://arxiv.org/abs/2112.07637">
+              modeling question-focused summarization
+             </a>
+            </li>
+            <li>
+             <a href="https://arxiv.org/abs/2104.05938">
+              similar task format but different domain
+             </a>
+            </li>
+           </ul>
           </div>
          </div>
         </div>
@@ -1323,19 +987,6 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
           <div class="field">
            <h4>
-            Measured Model Abilities
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What aspect of model ability can be measured with this dataset?
-             </div>
-            </div>
-           </h4>
-           <p>
-            Automatic evaluation measure can evaluate the factuality, content selection, content ordering and the fluency of the model output. The factuality, content selection and content ordering  is measured using an Information Extraction based evaluation approach introduced by Wiseman et al (2017). The fluency is measured using BLEU.
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Previous results available?
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1360,24 +1011,25 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             Other: Other Metrics
+             ROUGE
+            </code>
+            ,
+            <code>
+             BERT-Score
             </code>
            </p>
           </div>
           <div class="field">
            <h4>
-            Other Metrics
+            Other Evaluation Approaches
             <div class="tooltip">
              <div class="tooltip-text">
-              Definitions of other metrics
+              What evaluation approaches have others used?
              </div>
             </div>
            </h4>
            <p>
-            Wiseman et al. (2017) define three metrics induced from the outputs of an Information Extraction model which is run on the model/human-written game summaries . Let ŷ be the gold summary and y the model output.
-• Relation Generation (RG) measures the precision and count of relations extracted from y that also appear in records r.
-• Content Selection (CS) measures the precision and recall of relations extracted from y that are also extracted from ŷ.
-• Content Ordering (CO) measures the complement of the normalized Damerau-Levenshtein distance (Brill and Moore, 2000) between the sequences of relations extracted from y and ŷ
+            Human evaluation
            </p>
           </div>
          </div>
@@ -1392,7 +1044,10 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            We have reused the automatic metrics based on Information Extraction evaluation introduced by Wiseman et al (2017). For human evaluation, we conducted studies to evaluate the factuality, coherence, grammaticality and conciseness.
+            Following norms in summarization, we have evaluated with automatic evaluation metrics like ROUGE and BERTScore, but these metrics do not correlate with human judgments of summary quality when comparing model summaries (see paper for details).
+           </p>
+           <p>
+            We highly recommend users of the benchmark use human evaluation as the primary method for evaluating systems. We present one example of such in the paper in which we ask Upwork workers to read the short story and then rate sets of three responses to each question. While this is close to the gold standard in how we would want to evaluate systems on this task, we recognize that finding workers who will read the whole story (~30m) is difficult and expensive, and doing efficient human evaluation for long document tasks is an open problem.
            </p>
           </div>
           <div class="field">
@@ -1405,10 +1060,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The most relevant previous results for dataset are in the TACL 2021 paper on
-            <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00381/101876/Data-to-text-Generation-with-Macro-Planning">
-             Data-to-text Generation with Macro Planning
-            </a>
+            See paper (https://arxiv.org/abs/2205.11465)
            </p>
           </div>
          </div>
@@ -1459,19 +1111,6 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
           <div class="field">
            <h4>
-            Original Curation Rationale
-            <div class="tooltip">
-             <div class="tooltip-text">
-              Original curation rationale
-             </div>
-            </div>
-           </h4>
-           <p>
-            This dataset was curated to complement an existing data-to-text generation dataset (RotoWire by Wiseman et al. 2017) which focuses on long document generation. Compared to RotoWire , MLB summaries are longer (approximately by 50%) and the input records are richer and more structured (with the addition of play-by-play). Moreover, the MLB dataset is five times larger in terms of data size (i.e., pairs of tables and game summaries)
-           </p>
-          </div>
-          <div class="field">
-           <h4>
             Sourced from Different Sources
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1485,19 +1124,6 @@ The description of the attributes is given below. The descriptions of most of th
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Communicative Goal
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What was the communicative goal?
-             </div>
-            </div>
-           </h4>
-           <p>
-            The goal is to study automatic generation of long documents in a data-to-text setting. The generated summaries should exhibit coherent ordering of content, be faithful to the input statistics, be fluent and avoid repetition of text.
-           </p>
-          </div>
          </div>
          <div class="scope">
          </div>
@@ -1518,22 +1144,7 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             Found
-            </code>
-           </p>
-          </div>
-          <div class="field">
-           <h4>
-            Where was it found?
-            <div class="tooltip">
-             <div class="tooltip-text">
-              If found, where from?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             Single website
+             Crowdsourced
             </code>
            </p>
           </div>
@@ -1547,7 +1158,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            not validated
+            validated by crowdworker
            </p>
           </div>
           <div class="field">
@@ -1567,6 +1178,21 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
           <div class="field">
            <h4>
+            Where was it crowdsourced?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              If crowdsourced, where from?
+             </div>
+            </div>
+           </h4>
+           <p>
+            <code>
+             Other crowdworker platform
+            </code>
+           </p>
+          </div>
+          <div class="field">
+           <h4>
             Topics Covered
             <div class="tooltip">
              <div class="tooltip-text">
@@ -1575,7 +1201,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The language focuses on the sports domain.
+            The short stories are primarily science fiction and from the 1930s -- 1970s.
            </p>
           </div>
          </div>
@@ -1590,20 +1216,10 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            The game summaries are produced by professional writers.
+            Upwork: US-born, native English speakers with backgrounds in the humanities and copywriting
            </p>
-          </div>
-          <div class="field">
-           <h4>
-            Data Preprocessing
-            <div class="tooltip">
-             <div class="tooltip-text">
-              How was the text data pre-processed? (Enter N/A if the text was not pre-processed)
-             </div>
-            </div>
-           </h4>
            <p>
-            Game summaries were tokenized using NLTK (Bird et al., 2009) and hyphenated words were separated. Sentences containing quotes were removed as they included opinions and non-factual statements unrelated to the input tables. Sometimes MLB summaries contain a "Game notes" section with incidental information which was also removed.
+            NYU undergraduates: English-fluent undergraduates from a diverse set of nationalities and majors
            </p>
           </div>
          </div>
@@ -1623,7 +1239,20 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            none
+            crowd-sourced
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Number of Raters
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What is the number of raters
+             </div>
+            </div>
+           </h4>
+           <p>
+            11&lt;n&lt;50
            </p>
           </div>
           <div class="field">
@@ -1639,10 +1268,75 @@ The description of the attributes is given below. The descriptions of most of th
             no
            </p>
           </div>
+          <div class="field">
+           <h4>
+            Any Quality Control?
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Quality control measures?
+             </div>
+            </div>
+           </h4>
+           <p>
+            validated by another rater
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Rater Qualifications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the qualifications required of an annotator.
+             </div>
+            </div>
+           </h4>
+           <p>
+            English-fluent, with experience reading and writing about literature
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Training Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each training example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            4
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Raters per Test Example
+            <div class="tooltip">
+             <div class="tooltip-text">
+              How many annotators saw each test example?
+             </div>
+            </div>
+           </h4>
+           <p>
+            4
+           </p>
+          </div>
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Quality Control Details
+            <div class="tooltip">
+             <div class="tooltip-text">
+              Describe the quality control measures that were taken.
+             </div>
+            </div>
+           </h4>
+           <p>
+            Each response was reviewed by three reviewers, who ranked the response (against two other responses), highlighted errors in the response, and provided feedback to the original response writer.
+           </p>
+          </div>
          </div>
         </div>
         <h3 id="consent">
@@ -1660,7 +1354,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            no
+            yes
            </p>
           </div>
          </div>
@@ -1669,15 +1363,15 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
           <div class="field">
            <h4>
-            Justification for Using the Data
+            Consent Policy Details
             <div class="tooltip">
              <div class="tooltip-text">
-              If not, what is the justification for reusing the data?
+              What was the consent policy?
              </div>
             </div>
            </h4>
            <p>
-            The copyright remains with the original data creators and the usage permission is restricted to non-commercial uses.
+            Writers were informed that their writing and reviewing would be used in the development of AI.
            </p>
           </div>
          </div>
@@ -1697,30 +1391,11 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            yes/very likely
+            unlikely
            </p>
           </div>
          </div>
          <div class="scope">
-          <div class="field">
-           <h4>
-            Categories of PII
-            <div class="tooltip">
-             <div class="tooltip-text">
-              What categories of PII are present or suspected in the data?
-             </div>
-            </div>
-           </h4>
-           <p>
-            <code>
-             sensitive information
-            </code>
-            ,
-            <code>
-             generic PII
-            </code>
-           </p>
-          </div>
           <div class="field">
            <h4>
             Any PII Identification?
@@ -1855,7 +1530,7 @@ The description of the attributes is given below. The descriptions of most of th
             </div>
            </h4>
            <p>
-            unsure
+            yes
            </p>
           </div>
          </div>
@@ -1923,7 +1598,7 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             research use only
+             open license - commercial use allowed
             </code>
            </p>
           </div>
@@ -1938,7 +1613,7 @@ The description of the attributes is given below. The descriptions of most of th
            </h4>
            <p>
             <code>
-             research use only
+             public domain
             </code>
            </p>
           </div>
@@ -1955,6 +1630,32 @@ The description of the attributes is given below. The descriptions of most of th
          <div class="scope">
          </div>
          <div class="scope">
+          <div class="field">
+           <h4>
+            Unsuited Applications
+            <div class="tooltip">
+             <div class="tooltip-text">
+              When using a model trained on this dataset in a setting where users or the public may interact with its predictions, what are some pitfalls to look out for? In particular, describe some applications of the general task featured in this dataset that its curation or properties make it less suitable for.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The stories in the dataset are from the 1930--1970s and may contain harmful stances on topics like race and gender. Models trained on the stories may reproduce these stances in their outputs.
+           </p>
+          </div>
+          <div class="field">
+           <h4>
+            Discouraged Use Cases
+            <div class="tooltip">
+             <div class="tooltip-text">
+              What are some discouraged use cases of a model trained to maximize the proposed metrics on this dataset? In particular, think about settings where decisions made by a model that performs reasonably well on the metric my still have strong negative consequences for user or members of the public.
+             </div>
+            </div>
+           </h4>
+           <p>
+            The proposed automatic metrics for this dataset (ROUGE, BERTScore) are not sensitive to factual errors in summaries, and have been shown to not correlate well with human judgments of summary quality along a number of axes.
+           </p>
+          </div>
          </div>
         </div>
        </div>
