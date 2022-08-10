@@ -1,15 +1,13 @@
 import { getAllTaskIds, getTaskData } from '../../lib/tasks'
 import Layout from '../../components/layout'
 import Head from 'next/head'
-import Link from "next/link";
+import Link from 'next/link'
+import Script from 'next/script'
 import utilStyles from '../../styles/utils.module.css'
-import IframeResizer from 'iframe-resizer-react'
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Post({ taskData }) {
-
-  const card_path = "/cards/" + taskData.id + ".html"
   return (
     <Layout wideContainer>
       <Head>
@@ -26,15 +24,11 @@ export default function Post({ taskData }) {
           {taskData.type}
         </span>
 
-        <IframeResizer
-          heightCalculationMethod="lowestElement"
-          log
-          src={card_path}
-          style={{ width: '1px', minWidth: '100%'}}
-          frameBorder="0"
-        />
+        <div className="datacard-wrapper"
+          dangerouslySetInnerHTML={{ __html: taskData.contentHtml }} />
+        <Script src='/datacard.js' strategy='lazyOnload'></Script>
       </article>
-    </Layout>
+    </Layout >
   )
 }
 

@@ -4,3 +4,1991 @@ type: Reasoning
 languages: English
 summary: CommonGen is an English text generation task to explicitly test machines for the ability of generative commonsense reasoning. Given a set of common concepts, the task is to generate a coherent sentence describing an everyday scenario using these concepts. CommonGen is challenging because it inherently requires 1) relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to work on unseen concept combinations. The dataset, constructed through a combination of crowd-sourcing from AMT and existing caption corpora, consists of 30k concept-sets and 50k sentences in total. Note that the CommonGen test set is private and requires submission to the external leaderboard.
 ---
+<div class="datacard">
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>common_gen</h2>
+      <div class="summary-content">
+        <p>CommonGen is an English text generation task to explicitly test machines for the ability of generative
+          commonsense reasoning. Given a set of common concepts, the task is to generate a coherent sentence describing
+          an everyday scenario using these concepts. CommonGen is challenging because it inherently requires 1)
+          relational reasoning using background commonsense knowledge, and 2) compositional generalization ability to
+          work on unseen concept combinations. The dataset, constructed through a combination of crowd-sourcing from AMT
+          and existing caption corpora, consists of 30k concept-sets and 50k sentences in total. Note that the CommonGen
+          test set is private and requires submission to the external leaderboard.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/common_gen')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/common_gen">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>website
+
+        </h5>
+
+        <p><a href="https://inklab.usc.edu/CommonGen/">link</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="https://aclanthology.org/2020.findings-emnlp.165">Link</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>authors
+
+        </h5>
+
+        <p>Bill Yuchen Lin (USC), Wangchunshu Zhou (USC), Ming Shen (USC), Pei Zhou (USC), Chandra Bhagavatula
+          (AllenAI), Yejin Choi (AllenAI + UW), Xiang Ren (USC)</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field periscope">
+
+        <h5>Contact Name
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>If known, provide the name of at least one person the reader can contact for questions about the
+                dataset.</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>Bill Yuchen Lin</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>English</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>mit: MIT License</p>
+      </div>
+
+      <div class="datacard-field periscope">
+
+        <h5>Communicative Goal
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Provide a short description of the communicative goal of a model trained for this task on this dataset.
+              </p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>The speaker is required to produce a <em>coherent</em> sentence which mentions all of the source concepts,
+          and which describes a <em>likely</em> situation that could be captured in a picture or video.</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Additional Annotations?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the dataset have additional annotations for each instance?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>none</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Contains PII?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the source language data likely contain Personal Identifying Information about the data creators
+                or subjects?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no PII</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Webpage
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the webpage for the dataset (if it exists)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://inklab.usc.edu/CommonGen/">link</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://github.com/INK-USC/CommonGen">Link</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://aclanthology.org/2020.findings-emnlp.165">Link</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{lin-etal-2020-commongen,
+title = "{C}ommon{G}en: A Constrained Text Generation Challenge for Generative Commonsense Reasoning",
+author = "Lin, Bill Yuchen  and
+Zhou, Wangchunshu  and
+Shen, Ming  and
+Zhou, Pei  and
+Bhagavatula, Chandra  and
+Choi, Yejin  and
+Ren, Xiang",
+booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2020",
+month = nov,
+year = "2020",
+address = "Online",
+publisher = "Association for Computational Linguistics",
+url = "https://www.aclweb.org/anthology/2020.findings-emnlp.165",
+pages = "1823--1840",
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Name
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the name of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Bill Yuchen Lin</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Email
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the email of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="mailto:yuchen.lin@usc.edu">yuchen.lin@usc.edu</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Leaderboard Link
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a link to the leaderboard.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://inklab.usc.edu/CommonGen/leaderboard.html">Link</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Leaderboard Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Briefly describe how the leaderboard evaluates models.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The model outputs are evaluated against the crowdsourced references, and ranked by SPICE score. The
+              leaderboard also reports BLEU-4 and CIDEr scores.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Covered Dialects
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What dialects are covered? Are there multiple dialects per language?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No information is provided on regional restrictions and we thus assume that the covered dialects are
+              those spoken by raters on Mechanical Turk.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>English</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Whose Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Whose language is in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The concepts were extracted from multiple English image captioning datasets and the data was collected
+              via Amazon Mechanical Turk. No information on regional restrictions is provided.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>mit: MIT License</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Intended Use
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the intended use of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>CommonGen is a constrained text generation task, associated with a benchmark dataset, to explicitly test
+              machines for the ability of generative commonsense reasoning.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Reasoning</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a short description of the communicative goal of a model trained for this task on this
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The speaker is required to produce a <em>coherent</em> sentence which mentions all of the source
+              concepts, and which describes a <em>likely</em> situation that could be captured in a picture or video.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Curation Organization Type(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>In what kind of organization did the dataset curation happen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>academic</code>, <code>independent</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Curation Organization(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Name the organization(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset was curated by a joint team of researchers from the University of Southern California and
+              Allen Institute for Artificial Intelligence.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Dataset Creators
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who created the original dataset? List the people involved in collecting the dataset and their
+                    affiliation(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Bill Yuchen Lin (USC), Wangchunshu Zhou (USC), Ming Shen (USC), Pei Zhou (USC), Chandra Bhagavatula
+              (AllenAI), Yejin Choi (AllenAI + UW), Xiang Ren (USC)</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Funding
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who funded the data creation?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The research is based upon work supported in part by the Office of the Director of National Intelligence
+              (ODNI), Intelligence Advanced Research Projects Activity (IARPA), the DARPA MCS program, and NSF SMA
+              18-29268.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Who added the Dataset to GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who contributed to the data card and adding the dataset to GEM? List the people+affiliations
+                    involved in creating this data card and who helped integrate this dataset into GEM.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Yacine Jernite created the initial data card. It was later extended by Simon Mille. Sebastian Gehrmann
+              migrated it to the GEMv2 format.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Fields
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the fields present in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>A data instance has the following fields:</p>
+            <ul>
+              <li><code>concepts</code>: a <code>list</code> of <code>string</code> values denoting the concept the
+                system should write about. Has 3 to 5 items, constitutes the <code>input</code> of the task.</li>
+              <li><code>target</code>: a sentence <code>string</code> mentioning all of the above mentioned
+                <code>concepts</code>. Constitutes the desired <code>output</code> of the task.</li>
+            </ul>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Example Instance
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a JSON formatted example of a typical instance in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>[
+{
+"concepts": ['ski', 'mountain', 'skier'],
+"target": 'Skier skis down the mountain',
+},
+{
+"concepts": ['ski', 'mountain', 'skier'],
+"target": 'Three skiers are skiing on a snowy mountain.',
+},
+]
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Data Splits
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe and name the splits in the dataset if there are more than one.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Each example in the dataset consists of a set of 3 to 5 concepts denoted by a single noun, verb, or
+              adjective (the input), and a sentence using these concepts (the output). The dataset provides several such
+              sentences for each such concept.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Train</th>
+                    <th>Dev</th>
+                    <th>Test</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Total concept-sets</strong></td>
+                    <td>32,651</td>
+                    <td>993</td>
+                    <td>1,497</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Total sentences</strong></td>
+                    <td>67,389</td>
+                    <td>4,018</td>
+                    <td>6,042</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Average sentence length</strong></td>
+                    <td>10.54</td>
+                    <td>11.55</td>
+                    <td>13.34</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Splitting Criteria
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any criteria for splitting the data, if used. If there are differences between the splits
+                    (e.g., if the training annotations are machine-generated and the dev and test ones are created by
+                    humans, or if different numbers of annotators contributed to each example), describe them here.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dev and test set were created by sampling sets of concepts of size 4 or 5 (and as many of size 3 for
+              the dev set) present in the source captioning datasets and having crowd-workers write reference sentences
+              using these concepts.</p>
+            <p>Conversely, the training set has more concept sets of size 3 than of size 4 and 5, and uses the original
+              captions from the source datasets as references.</p>
+            <p>The authors also ensured that the training, dev and test set have different combinations of unique
+              concepts to ensure compositionality (details in <a href="https://arxiv.org/pdf/1911.03705v3.pdf">Table
+                1</a>).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset in GEM
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Rationale for Inclusion in GEM</h4>
+              </li>
+              <li>
+                <h4>GEM-Specific Curation</h4>
+              </li>
+              <li>
+                <h4>Getting Started with the Task</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Rationale for Inclusion in GEM</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Why is the Dataset in GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+                  </p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>CommonGen is a medium sized corpus with a unique reasoning challenge and interesting evaluation
+              possibilities.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Similar Datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Do other datasets for the high level task exist?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Ability that the Dataset measures
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Commonsense reasoning</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>GEM-Specific Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Modificatied for GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Has the GEM version of the dataset been modified in any way (data, processing, splits) from the
+                    original curated data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>GEM Modifications
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What changes have been made to he original dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>other</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Modification Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>For each of these changes, described them in more details and provided the intended purpose of the
+                    modification</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>4 challenge sets for CommenGen were added to the GEM evaluation suite.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Splits?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does GEM provide additional splits to the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Split Information
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe how the new splits were created</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ol>
+              <li>Data Shift</li>
+            </ol>
+            <p>We created subsets of the training and development sets of ~500 randomly selected inputs each.</p>
+            <ol start="2">
+              <li>Transformations</li>
+            </ol>
+            <p>We applied input scrambling on a subset of 500 randomly selected test instances; the order of the
+              concepts was randomly reassigned.</p>
+            <ol start="3">
+              <li>Subpopulations</li>
+            </ol>
+            <p>We created a subpopulation based on input length, taking into account the number of concepts the input
+              test structures. By comparing inputs of different lengths, we can see to what extent systems are able to
+              handle different input sizes</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Concept number</th>
+                    <th>Frequency English</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>747</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>750</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Split Motivation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspects of the model's generation capacities were the splits created to test?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Generalization and Robustness</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Getting Started with the Task</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Pointers to Resources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Getting started with in-depth research on the task. Add relevant pointers to resources that
+                    researchers can consult when they want to get started digging deeper into the task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li>Two variants of <a href="https://arxiv.org/abs/1910.13461">BART</a>, <a
+                  href="https://arxiv.org/abs/2009.12677">Knowledge Graph augemnted-BART</a> and <a
+                  href="https://arxiv.org/abs/2012.00366">Enhanced Knowledge Injection Model for Commonsense
+                  Generation</a>, hold the top two spots on the leaderboard, followed by a fine-tuned <a
+                  href="https://arxiv.org/abs/1910.10683">T5 model</a>.</li>
+              <li>The following script shows how to download and load the data, fine-tune, and evaluate a model using
+                the ROUGE, BLEU, and METEOR metrics: <a
+                  href="https://github.com/GEM-benchmark/GEM-baseline-models/blob/main/examples/GEM-common_gen.ipynb">GEM
+                  sample script</a>.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Previous Results
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Results</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Results</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Measured Model Abilities
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Commonsense Reasoning</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Metrics
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What metrics are typically used for this task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Other: Other Metrics</code>, <code>BLEU</code>, <code>ROUGE</code>, <code>METEOR</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Other Metrics
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Definitions of other metrics</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li>SPICE: An evaluation metric for image captioning that is defined over scene graphs</li>
+              <li>CIDEr: An n-gram overlap metric based on cosine similarity between the TF-IDF weighted ngram counts
+              </li>
+            </ul>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Proposed Evaluation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the purpose of the metrics and evaluation methodology (including human
+                    evaluation) that the dataset creators used when introducing this task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The main metrics are captioning metrics since the original concept lists were extracted from captioning
+              datasets. A human subject study with five graduate students was conducted and they were asked to rank the
+              "commonsense plausibility" of two models at a time.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Previous results available?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are previous results available?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Other Evaluation Approaches
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What evaluation approaches have others used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The currently best performing model KFCNet (<a
+                href="https://aclanthology.org/2021.findings-emnlp.249/">https://aclanthology.org/2021.findings-emnlp.249/</a>)
+              uses the same automatic evaluation but does not conduct any human evaluation.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Relevant Previous Results
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What are the most relevant previous results for this task/dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The most relevant results can be seen on the <a
+                href="https://inklab.usc.edu/CommonGen/leaderboard.html">leaderboard</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Curation
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Original Curation</h4>
+              </li>
+              <li>
+                <h4>Language Data</h4>
+              </li>
+              <li>
+                <h4>Structured Annotations</h4>
+              </li>
+              <li>
+                <h4>Consent</h4>
+              </li>
+              <li>
+                <h4>Private Identifying Information (PII)</h4>
+              </li>
+              <li>
+                <h4>Maintenance</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Original Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Original Curation Rationale
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Original curation rationale</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset creators selected sets of concepts that appeared in image and video captions (as identified
+              by a POS tagger) to ensure that a likely real-world scenario including the set could be imagined and
+              constructed. Section 3.1 of the <a href="https://arxiv.org/pdf/1911.03705v3.pdf">paper</a> describes a
+              sampling scheme which encourages diversity of sets while selecting common concepts.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What was the communicative goal?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The speaker is required to produce a <em>coherent</em> sentence which mentions all of the source
+              concepts, and which describes a <em>likely</em> situation that could be captured in a picture or video.
+            </p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Sourced from Different Sources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset aggregated from different data sources?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Source Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List the sources (one per line)</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li><a href="https://www.mitpressjournals.org/doi/abs/10.1162/tacl_a_00166">Flickr30k</a></li>
+              <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48">MSCOCO</a></li>
+              <li><a href="https://www.aclweb.org/anthology/P18-1238/">Conceptual Captions</a></li>
+              <li>Video captioning datasets:
+                <ul>
+                  <li><a href="https://link.springer.com/article/10.1007/s11263-016-0987-1">LSMDC</a></li>
+                  <li><a
+                      href="https://openaccess.thecvf.com/content_iccv_2017/html/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.html">ActivityNet</a>
+                  </li>
+                  <li><a
+                      href="https://openaccess.thecvf.com/content_ICCV_2019/html/Wang_VaTeX_A_Large-Scale_High-Quality_Multilingual_Dataset_for_Video-and-Language_Research_ICCV_2019_paper.html">VaTeX</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Language Data</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>How was Language Data Obtained?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the language data obtained?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Crowdsourced</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Where was it crowdsourced?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If crowdsourced, where from?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Amazon Mechanical Turk</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Language Producers
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What further information do we have on the language producers?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The training data consists of concept sets and captions for the source datasets. The concept sets are the
+              sets of labels of the images or videos, selected with a heuristic to maximize diversity while ensuring
+              that they represent likely scenarios.</p>
+            <p>The dev and test set sentences were created by Amazon Mechanical Turk crowd workers. The workers were
+              shown an example generation and a set of 4 or 5 concept names along with their part-of-speech and asked to
+              write:</p>
+            <ol>
+              <li>One sentence mentioning all of the concepts</li>
+              <li>A rationale explaining how the sentence connects the concept</li>
+            </ol>
+            <p>A screenshot of the interface is provided in Figure 7 of the <a
+                href="https://arxiv.org/pdf/1911.03705v3.pdf">Appendix</a>.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Topics Covered
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the language in the dataset focus on specific topics? How would you describe them?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Information was not provided.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Validation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was the text validated by a different worker or a data curator?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>validated by data curator</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Was Data Filtered?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Were text instances selected or filtered?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>algorithmically</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Filter Criteria
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What were the selection criteria?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>During the data collection, workers who provided rationales that were too short, failed to have good
+              coverage of the input in their sentences, or workers whose output had a high perplexity under a GPT-2
+              model were disqualified from the pool and replaced with newcomers.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Structured Annotations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Annotations?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have additional annotations for each instance?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>none</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Annotation Service?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was an annotation service used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Consent</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Consent Policy?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was there a consent policy involved when gathering the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Justification for Using the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If not, what is the justification for reusing the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The data was sourced from Mechanical Turk which means that raters were aware that their annotations may
+              be publicly released for research purposes.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Private Identifying Information (PII)</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Contains PII?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the source language data likely contain Personal Identifying Information about the data
+                    creators or subjects?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no PII</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Justification for no PII
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a justification for selecting <code>no PII</code> above.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The concepts are restricted to verbs, adjectives, and common nouns, and no personal information is given
+              in the captions.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Maintenance</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Maintenance Plan?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the original dataset have a maintenance plan?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways members of different social categories are represented that can have harmful downstream
+                    consequences for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Are the Language Producers Representative of the Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the distribution of language producers in the dataset accurately represent the full
+                    distribution of speakers of the language world-wide? If not, how does it differ?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset is created using data from image captioning systems and might inherit some of the social
+              biases represented therein (see e.g. <a href="https://arxiv.org/abs/2006.08315">Tang et al. 2020</a>).</p>
+            <p>Another related concern is the exposure bias introduced by the initial selection of pictures and video,
+              which are likely to over-represent situations that are common in the US at the expense of other parts of
+              the world (Flickr, for example, is a US-based company founded in Canada). For more discussion of the
+              potential impacts of exposure bias, see e.g. <a href="https://www.aclweb.org/anthology/P16-2096.pdf">The
+                Social Impact of Natural Language Processing</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Considerations for Using the Data
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>PII Risks and Liability</h4>
+              </li>
+              <li>
+                <h4>Licenses</h4>
+              </li>
+              <li>
+                <h4>Known Technical Limitations</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>PII Risks and Liability</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Potential PII Risk
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Considering your answers to the PII part of the Data Curation Section, describe any potential
+                    privacy to the data subjects and creators risks when using the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The concepts are restricted to verbs, adjectives, and common nouns, and no personal information is given
+              in the captions.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Licenses</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Dataset
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Intended Use part of the Data Overview Section, which of the following
+                    best describe the copyright and licensing status of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Language Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Language part of the Data Curation Section, which of the following
+                    best describe the copyright and licensing status of the underlying language data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Known Technical Limitations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Technical Limitations
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any known technical limitations, such as spurrious correlations, train/test overlap,
+                    annotation biases, or mis-annotations, and cite the works that first identified these limitations
+                    when possible.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset is in English, a language with an abundance of existing resources.</p>
+            <p>The use of GPT-2 to validate development ant test sentences <a
+                href="https://www.aclweb.org/anthology/D19-1339.pdf">might be cause for similar concern</a>, but we do
+              note that the authors only use the model to discount very high perplexity sequences which is less likely
+              to surface those biases.</p>
+            <p>The language in the development and test set is crowdsourced, which means that it was written by workers
+              whose main goal was speed. This is likely to impact the quality and variety of the targets. The population
+              of crowdsource workers is also not identically distributed as the the base population of the locations the
+              workers come from, which may lead to different representation of situations or underlying expectations of
+              what these situations are.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Unsuited Applications
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>When using a model trained on this dataset in a setting where users or the public may interact with
+                    its predictions, what are some pitfalls to look out for? In particular, describe some applications
+                    of the general task featured in this dataset that its curation or properties make it less suitable
+                    for.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Due to the overrepresentation of US-situations, the system may not work for users across the world.
+              Moreover, only limited information on the dataset quality are provided and the system may fail as a result
+              of unknown issues.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Discouraged Use Cases
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What are some discouraged use cases of a model trained to maximize the proposed metrics on this
+                    dataset? In particular, think about settings where decisions made by a model that performs
+                    reasonably well on the metric my still have strong negative consequences for user or members of the
+                    public.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Any system needs to be evaluated on a broader set of unseen concepts then provided in the dataset. Since
+              the references for the test set are private, it is not known how well findings generalize beyond the
+              collection methodology.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

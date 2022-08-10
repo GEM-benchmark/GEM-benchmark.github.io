@@ -4,3 +4,1314 @@ type: Summarization
 languages: English
 summary: XSum is an English news summarization dataset where the task is to predict the first sentence of an article from the rest of it.
 ---
+<div class="datacard">
+
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>xsum</h2>
+      <div class="summary-content">
+        <p>XSum is an English news summarization dataset where the task is to predict the first sentence of an article
+          from the rest of it.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/xsum')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/xsum">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>website
+
+        </h5>
+
+        <p>n/a</p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="https://www.aclweb.org/anthology/D18-1206">ACL Anthology</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>authors
+
+        </h5>
+
+        <p>Shashi Narayan, Shay B. Cohen, Mirella Lapata (all affiliated with University of Edinburgh at the time of
+          dataset creation)</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field periscope">
+
+        <h5>Contact Name
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>If known, provide the name of at least one person the reader can contact for questions about the
+                dataset.</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>Shashi Narayan</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>English</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International</p>
+      </div>
+
+      <div class="datacard-field periscope">
+
+        <h5>Communicative Goal
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Provide a short description of the communicative goal of a model trained for this task on this dataset.
+              </p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>Given a news article, produce a single sentence summary of the content of the article.</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Additional Annotations?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the dataset have additional annotations for each instance?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>none</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Contains PII?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the source language data likely contain Personal Identifying Information about the data creators
+                or subjects?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>yes/very likely</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://github.com/EdinburghNLP/XSum">Github</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://www.aclweb.org/anthology/D18-1206">ACL Anthology</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@InProceedings{xsum-emnlp,
+author =      "Shashi Narayan and Shay B. Cohen and Mirella Lapata",
+title =       "Don't Give Me the Details, Just the Summary! {T}opic-Aware Convolutional Neural Networks for Extreme Summarization",
+booktitle =   "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing ",
+year =        "2018",
+address =     "Brussels, Belgium",
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Name
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the name of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Shashi Narayan</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Email
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the email of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="mailto:shashinarayan@google.com">shashinarayan@google.com</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Covered Dialects
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What dialects are covered? Are there multiple dialects per language?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Since the source of the dataset are BBC articles, the language is in British English of the variation
+              written by journalists.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>English</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Whose Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Whose language is in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Professional journalists</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>cc-by-sa-4.0: Creative Commons Attribution Share Alike 4.0 International</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Intended Use
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the intended use of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset is for the task of abstractive summarization in its extreme form, its about summarizing a
+              document in a single sentence. The idea is to create a short, one-sentence news summary answering the
+              question "What is the article about?".</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Summarization</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a short description of the communicative goal of a model trained for this task on this
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Given a news article, produce a single sentence summary of the content of the article.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Curation Organization Type(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>In what kind of organization did the dataset curation happen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>academic</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Curation Organization(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Name the organization(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>University of Edinburgh</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Dataset Creators
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who created the original dataset? List the people involved in collecting the dataset and their
+                    affiliation(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Shashi Narayan, Shay B. Cohen, Mirella Lapata (all affiliated with University of Edinburgh at the time of
+              dataset creation)</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Funding
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who funded the data creation?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>European Research Council (Lapata; award number 681760), the European Union under the Horizon 2020 SUMMA
+              project (Narayan, Cohen; grant agreement 688139), and Huawei Technologies (Cohen).</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Who added the Dataset to GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who contributed to the data card and adding the dataset to GEM? List the people+affiliations
+                    involved in creating this data card and who helped integrate this dataset into GEM.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The original data card was written by Laura Perez-Beltrachini and the data loader by Yacine Jernite.
+              Sebastian Gehrmann migrated the data card to the new format and extended it. The v2 data loader was
+              migrated by Abinaya Mahendiran</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Fields
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the fields present in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li><code>Document</code>: Input news article.</li>
+              <li><code>Summary</code>: One sentence summary of the article.</li>
+              <li><code>Id</code>: BBC ID of the article.</li>
+            </ul>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Reason for Structure
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the dataset structure determined?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The Document/Summary format is standard for summarization datasets.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>How were labels chosen?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How were the labels chosen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The labels are the first sentence of the source article.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Example Instance
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a JSON formatted example of a typical instance in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>{
+'document': 'The researchers have sequenced the genome of a strain of bacterium that causes the virulent infection.\nA survey in 2007 showed that bleeding canker had spread rapidly, with almost half of the two million horse chestnuts displaying symptoms of the disease.\nThe findings have been published in the journal PLoS One.\nA visible symptom of the disease is a lesion on the bark, which oozes a resin on to the trunk or sometimes the branches.\nThe bark underneath the canker is killed, and if cankers manage to go all the way around the trunk then the horse chestnut (Aesculus hippocastanum) will die because it cuts off the food supply. [...]',
+'target': "A team of UK scientists hopes to shed light on the mysteries of bleeding canker, a disease that is threatening the nation's horse chestnut trees.",
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Data Splits
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe and name the splits in the dataset if there are more than one.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Section</th>
+                    <th align="center">Number of Documents</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Training</td>
+                    <td align="center">204,045</td>
+                  </tr>
+                  <tr>
+                    <td>Validation</td>
+                    <td align="center">11,332</td>
+                  </tr>
+                  <tr>
+                    <td>Testing</td>
+                    <td align="center">11,334</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td align="center">226k</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Section</th>
+                    <th align="center">number of words</th>
+                    <th align="center">number of sentences</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Documents</td>
+                    <td align="center">431.07</td>
+                    <td align="center">19.77</td>
+                  </tr>
+                  <tr>
+                    <td>Summary</td>
+                    <td align="center">23.26</td>
+                    <td align="center">1.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Splitting Criteria
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any criteria for splitting the data, if used. If there are differences between the splits
+                    (e.g., if the training annotations are machine-generated and the dev and test ones are created by
+                    humans, or if different numbers of annotators contributed to each example), describe them here.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The identifiers in the URLs were used to randomly split the dataset into training (90%, 204,045),
+              validation (5%, 11,332), and test (5%, 11,334) sets.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Curation
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Original Curation</h4>
+              </li>
+              <li>
+                <h4>Language Data</h4>
+              </li>
+              <li>
+                <h4>Structured Annotations</h4>
+              </li>
+              <li>
+                <h4>Consent</h4>
+              </li>
+              <li>
+                <h4>Private Identifying Information (PII)</h4>
+              </li>
+              <li>
+                <h4>Maintenance</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Original Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Original Curation Rationale
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Original curation rationale</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Comparable datasets are often very extractive which is not a strategy that works for one-sentence
+              summaries. The dataset curators thus created this dataset as a way to evaluate truly abstractive models
+            </p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What was the communicative goal?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Same as the communicative goal in GEM: A model should summarize a news article in a single sentence</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Sourced from Different Sources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset aggregated from different data sources?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Language Data</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>How was Language Data Obtained?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the language data obtained?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Found</code></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Where was it found?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If found, where from?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Single website</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Language Producers
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What further information do we have on the language producers?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The data was collected from articles between 2010 and 2017. No other information</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Topics Covered
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the language in the dataset focus on specific topics? How would you describe them?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The collected articles included the following topics: News, Politics, Sports, Weather, Business,
+              Technology, Science, Health, Family, Education, Entertainment and Arts</p>
+            <p>The dataset curators also used LDA to gain insight into this question and found that the following were
+              the top keywords associated with each topic:</p>
+            <ul>
+              <li><strong>T1</strong>: charge, court, murder, police, arrest, guilty, sentence, boy, bail, space, crown,
+                trial</li>
+              <li><strong>T2</strong>: church, abuse, bishop, child, catholic, gay, pope, school, christian, priest,
+                cardinal</li>
+              <li><strong>T3</strong>: council, people, government, local, housing, home, house, property, city, plan,
+                authority</li>
+              <li><strong>T4</strong>: clinton, party, trump, climate, poll, vote, plaid, election, debate, change,
+                candidate, campaign</li>
+              <li><strong>T5</strong>: country, growth, report, business, export, fall, bank, security, economy, rise,
+                global, inflation</li>
+              <li><strong>T6</strong>: hospital, patient, trust, nhs, people, care, health, service, staff, report,
+                review, system, child</li>
+            </ul>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Validation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was the text validated by a different worker or a data curator?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>not validated</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Data Preprocessing
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the text data pre-processed? (Enter N/A if the text was not pre-processed)</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The text was extracted from the HTML of the webpage. No further processing was done.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Was Data Filtered?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Were text instances selected or filtered?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>not filtered</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Structured Annotations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Annotations?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have additional annotations for each instance?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>none</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Annotation Service?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was an annotation service used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Consent</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Consent Policy?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was there a consent policy involved when gathering the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Justification for Using the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If not, what is the justification for reusing the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The copyright license of the data allows reusing it for this purpose.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Private Identifying Information (PII)</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Contains PII?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the source language data likely contain Personal Identifying Information about the data
+                    creators or subjects?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes/very likely</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Categories of PII
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What categories of PII are present or suspected in the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>generic PII</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Any PII Identification?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Did the curators use any automatic/manual method to identify PII in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no identification</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Maintenance</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Maintenance Plan?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the original dataset have a maintenance plan?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways members of different social categories are represented that can have harmful downstream
+                    consequences for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>unsure</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Are the Language Producers Representative of the Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the distribution of language producers in the dataset accurately represent the full
+                    distribution of speakers of the language world-wide? If not, how does it differ?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The language and content of the data is focused on news and language in the UK and as such not
+              representative of the speakers world-wide. Existing selection biases of the BBC exist in this dataset.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
