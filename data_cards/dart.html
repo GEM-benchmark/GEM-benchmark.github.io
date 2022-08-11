@@ -1,1 +1,1864 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM dart</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/a3e0e142709ba87c.css" as="style"/><link rel="stylesheet" href="/_next/static/css/a3e0e142709ba87c.css" data-n-g=""/><link rel="preload" href="/_next/static/css/9c6cbdf6de0d7f7f.css" as="style"/><link rel="stylesheet" href="/_next/static/css/9c6cbdf6de0d7f7f.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-802c8e53e523ea8b.js" defer=""></script><script src="/_next/static/chunks/framework-a87821de553db91d.js" defer=""></script><script src="/_next/static/chunks/main-6dfdacc79861396c.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f4e7aa7b46503ccf.js" defer=""></script><script src="/_next/static/chunks/cb1608f2-4ba41bd4c311e4ed.js" defer=""></script><script src="/_next/static/chunks/50-1fbacdd54a295188.js" defer=""></script><script src="/_next/static/chunks/pages/data_cards/%5Bid%5D-738908caad532360.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_buildManifest.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_ssgManifest.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__qqb_S undefined"><header class="layout_header__kY0Lt"><div class="navbar_navwrapper__PQ35R"><div class="navbar_gradbar__2_FPI"></div><nav class="navbar_navbar__9q1fQ"><span class="utils_headingLg__5535D navbar_navbarlogo__R_s98"><a href="/">GEM BENCHMARK</a></span><div class="navbar_menutoggle__XS8Qx" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 navbar_bar___PSVO" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><ul><li class="navbar_navitem__wFPZL navbar_pushright__cG1uq"><a href="/resources">Resources</a></li><li class="navbar_navitem__wFPZL"><a href="/data_cards">Data Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/model_cards">Model Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/tutorials">tutorials</a></li><li class="navbar_navitem__wFPZL"><a href="/results">Results</a></li><li class="navbar_navitem__wFPZL"><a href="/papers">Papers</a></li><li class="navbar_navitem__wFPZL"><a href="/team">Team</a></li><li class="navbar_navitem__wFPZL"><a href="/workshop">Workshop</a></li></ul></nav></div></header><div class="layout_container__fbLkO layout_wideContainer__TSLbJ"><main><article><a href="/data_cards"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 utils_icon__9sxFf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a><span class="utils_spacer__AJA7_"></span><span class="utils_headingXl__u25Y2">dart</span><span class="utils_smallSpace__n1Oyc"></span><span class="utils_lightText__eUzGY">Data-to-Text</span><iframe title="iframe" src="/cards/dart.html" style="width:1px;min-width:100%" frameBorder="0"></iframe></article></main><div class="layout_push__2FFZa"></div></div><footer class="layout_footer__dka_2 utils_eggshell__LF2UE"><span class="layout_backToHome__9sjx_"><a href="/">← Home</a></span><span>If you have any questions, please join our <!-- --><a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__FmNQy">google group</a> for support.<!-- --></span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"taskData":{"id":"dart","contentHtml":"","title":"dart","type":"Data-to-Text","languages":"English","summary":"DART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format. The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still retaining the full information."}},"__N_SSG":true},"page":"/data_cards/[id]","query":{"id":"dart"},"buildId":"83b5H4Uaw7WttxxI8tnGY","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM dart</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/8f219039bec51df6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8f219039bec51df6.css" data-n-g=""/><link rel="preload" href="/_next/static/css/9c6cbdf6de0d7f7f.css" as="style"/><link rel="stylesheet" href="/_next/static/css/9c6cbdf6de0d7f7f.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-8a2bbac2bbd375c6.js" defer=""></script><script src="/_next/static/chunks/framework-a87821de553db91d.js" defer=""></script><script src="/_next/static/chunks/main-6dfdacc79861396c.js" defer=""></script><script src="/_next/static/chunks/pages/_app-cde1c1d18a7915f1.js" defer=""></script><script src="/_next/static/chunks/cb1608f2-4ba41bd4c311e4ed.js" defer=""></script><script src="/_next/static/chunks/50-1fbacdd54a295188.js" defer=""></script><script src="/_next/static/chunks/pages/data_cards/%5Bid%5D-a5ea6b44c21be4c4.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_buildManifest.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_ssgManifest.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__qqb_S undefined"><header class="layout_header__kY0Lt"><div class="navbar_navwrapper__PQ35R"><div class="navbar_gradbar__2_FPI"></div><nav class="navbar_navbar__9q1fQ"><span class="utils_headingLg__5535D navbar_navbarlogo__R_s98"><a href="/">GEM BENCHMARK</a></span><div class="navbar_menutoggle__XS8Qx" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 navbar_bar___PSVO" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><ul><li class="navbar_navitem__wFPZL navbar_pushright__cG1uq"><a href="/resources">Resources</a></li><li class="navbar_navitem__wFPZL"><a href="/data_cards">Data Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/model_cards">Model Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/tutorials">tutorials</a></li><li class="navbar_navitem__wFPZL"><a href="/results">Results</a></li><li class="navbar_navitem__wFPZL"><a href="/papers">Papers</a></li><li class="navbar_navitem__wFPZL"><a href="/team">Team</a></li><li class="navbar_navitem__wFPZL"><a href="/workshop">Workshop</a></li></ul></nav></div></header><div class="layout_container__fbLkO layout_wideContainer__TSLbJ"><main><article><a href="/data_cards"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 utils_icon__9sxFf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a><span class="utils_spacer__AJA7_"></span><span class="utils_headingXl__u25Y2">dart</span><span class="utils_smallSpace__n1Oyc"></span><span class="utils_lightText__eUzGY">Data-to-Text</span><div class="datacard-wrapper"><div class="datacard">
+
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>dart</h2>
+      <div class="summary-content">
+        <p>DART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format.
+          The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still
+          retaining the full information.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/dart')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/dart">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>website
+
+        </h5>
+
+        <p>n/a</p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="https://aclanthology.org/2021.naacl-main.37/">ACL Anthology</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>authors
+
+        </h5>
+
+        <p>Linyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang, Aadit
+          Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad Zaidi,
+          Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong, Richard
+          Socher, Nazneen Fatema Rajani</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field periscope">
+
+        <h5>Contact Name
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>If known, provide the name of at least one person the reader can contact for questions about the
+                dataset.</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>Dragomir Radev, Rui Zhang, Nazneen Rajani</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>English</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>mit: MIT License</p>
+      </div>
+
+      <div class="datacard-field periscope">
+
+        <h5>Communicative Goal
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Provide a short description of the communicative goal of a model trained for this task on this dataset.
+              </p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>The speaker is required to produce coherent sentences and construct a trees structured ontology of the column
+          headers.</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Additional Annotations?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the dataset have additional annotations for each instance?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>none</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Contains PII?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the source language data likely contain Personal Identifying Information about the data creators
+                or subjects?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no PII</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://github.com/Yale-LILY/dart">Github</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://aclanthology.org/2021.naacl-main.37/">ACL Anthology</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{nan-etal-2021-dart,
+title = "{DART}: Open-Domain Structured Data Record to Text Generation",
+author = "Nan, Linyong  and
+Radev, Dragomir  and
+Zhang, Rui  and
+Rau, Amrit  and
+Sivaprasad, Abhinand  and
+Hsieh, Chiachun  and
+Tang, Xiangru  and
+Vyas, Aadit  and
+Verma, Neha  and
+Krishna, Pranav  and
+Liu, Yangxiaokang  and
+Irwanto, Nadia  and
+Pan, Jessica  and
+Rahman, Faiaz  and
+Zaidi, Ahmad  and
+Mutuma, Mutethia  and
+Tarabar, Yasin  and
+Gupta, Ankit  and
+Yu, Tao  and
+Tan, Yi Chern  and
+Lin, Xi Victoria  and
+Xiong, Caiming  and
+Socher, Richard  and
+Rajani, Nazneen Fatema",
+booktitle = "Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+month = jun,
+year = "2021",
+address = "Online",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2021.naacl-main.37",
+doi = "10.18653/v1/2021.naacl-main.37",
+pages = "432--447",
+abstract = "We present DART, an open domain structured DAta Record to Text generation dataset with over 82k instances (DARTs). Data-to-text annotations can be a costly process, especially when dealing with tables which are the major source of structured data and contain nontrivial structures. To this end, we propose a procedure of extracting semantic triples from tables that encodes their structures by exploiting the semantic dependencies among table headers and the table title. Our dataset construction framework effectively merged heterogeneous sources from open domain semantic parsing and spoken dialogue systems by utilizing techniques including tree ontology annotation, question-answer pair to declarative sentence conversion, and predicate unification, all with minimum post-editing. We present systematic evaluation on DART as well as new state-of-the-art results on WebNLG 2017 to show that DART (1) poses new challenges to existing data-to-text datasets and (2) facilitates out-of-domain generalization. Our data and code can be found at https://github.com/Yale-LILY/dart.",
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Name
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the name of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Dragomir Radev, Rui Zhang, Nazneen Rajani</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Email
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the email of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>{dragomir.radev, r.zhang}@yale.edu, {nazneen.rajani}@salesforce.com</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Leaderboard Link
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a link to the leaderboard.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://github.com/Yale-LILY/dart#leaderboard">Leaderboard</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Leaderboard Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Briefly describe how the leaderboard evaluates models.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Several state-of-the-art table-to-text models were evaluated on DART, such as BART (<a
+                href="https://arxiv.org/pdf/1910.13461.pdf">Lewis et al., 2020</a>), Seq2Seq-Att (<a
+                href="https://webnlg-challenge.loria.fr/files/melbourne_report.pdf">MELBOURNE</a>) and End-to-End
+              Transformer (<a href="https://arxiv.org/pdf/1908.09022.pdf">Castro Ferreira et al., 2019</a>).
+              The leaderboard reports BLEU, METEOR, TER, MoverScore, BERTScore and BLEURT scores.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Covered Dialects
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What dialects are covered? Are there multiple dialects per language?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>It is an aggregated from multiple other datasets that use general US-American or British English without
+              differentiation between dialects.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>English</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Whose Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Whose language is in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset is aggregated from multiple others that were crowdsourced on different platforms.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>mit: MIT License</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Intended Use
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the intended use of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset is aimed to further research in natural language generation from semantic data.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Data-to-Text</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a short description of the communicative goal of a model trained for this task on this
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The speaker is required to produce coherent sentences and construct a trees structured ontology of the
+              column headers.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Curation Organization Type(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>In what kind of organization did the dataset curation happen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>academic</code>, <code>industry</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Curation Organization(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Name the organization(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Yale University, Salesforce Research, Penn State University, The University of Hong Kong, MIT</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Dataset Creators
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who created the original dataset? List the people involved in collecting the dataset and their
+                    affiliation(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Linyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang,
+              Aadit Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad
+              Zaidi, Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong,
+              Richard Socher, Nazneen Fatema Rajani</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Who added the Dataset to GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who contributed to the data card and adding the dataset to GEM? List the people+affiliations
+                    involved in creating this data card and who helped integrate this dataset into GEM.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Miruna Clinciu contributed the original data card and Yacine Jernite wrote the initial data loader.
+              Sebastian Gehrmann migrated the data card and the loader to the new format.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Fields
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the fields present in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>-<code>tripleset</code>: a list of tuples, each tuple has 3 items
+              -<code>subtree_was_extended</code>: a boolean variable (true or false)
+              -<code>annotations</code>: a list of dict, each with source and text keys.
+              -<code>source</code>: a string mentioning the name of the source table.
+              -<code>text</code>: a sentence string.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Reason for Structure
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the dataset structure determined?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The structure is supposed to be able more complex structures beyond "flat" attribute-value pairs, instead
+              encoding hierarchical relationships.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>How were labels chosen?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How were the labels chosen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>They are a combination of those from existing datasets and new annotations that take advantage of the
+              hierarchical structure</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Example Instance
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a JSON formatted example of a typical instance in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code> {
+"tripleset": [
+[
+  "Ben Mauk",
+  "High school",
+  "Kenton"
+],
+[
+  "Ben Mauk",
+  "College",
+  "Wake Forest Cincinnati"
+]
+],
+"subtree_was_extended": false,
+"annotations": [
+{
+  "source": "WikiTableQuestions_lily",
+  "text": "Ben Mauk, who attended Kenton High School, attended Wake Forest Cincinnati for college."
+}
+]
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Data Splits
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe and name the splits in the dataset if there are more than one.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input Unit</th>
+                    <th>Examples</th>
+                    <th>Vocab Size</th>
+                    <th>Words per SR</th>
+                    <th>Sents per SR</th>
+                    <th>Tables</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Triple Set</td>
+                    <td>82,191</td>
+                    <td>33.2K</td>
+                    <td>21.6</td>
+                    <td>1.5</td>
+                    <td>5,623</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Train</th>
+                    <th>Dev</th>
+                    <th>Test</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>62,659</td>
+                    <td>6,980</td>
+                    <td>12,552</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Statistics of DART decomposed by different collection methods. DART exhibits a great deal of topical
+              variety in terms of the number of unique predicates, the number of unique triples, and the vocabulary
+              size. These statistics are computed from DART v1.1.1; the number of unique predicates reported is
+              post-unification (see Section 3.4). SR: Surface Realization.
+              (<a href="https://arxiv.org/pdf/2007.02871.pdf">details in Table 1 and 2</a>).</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Splitting Criteria
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any criteria for splitting the data, if used. If there are differences between the splits
+                    (e.g., if the training annotations are machine-generated and the dev and test ones are created by
+                    humans, or if different numbers of annotators contributed to each example), describe them here.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>For WebNLG 2017 and Cleaned E2E, DART use the original data splits. For the new annotation on
+              WikiTableQuestions and WikiSQL, random splitting will make train, dev, and test splits contain similar
+              tables and similar &#x3C;triple-set, sentence> examples. They are thus split based on Jaccard similarity
+              such that no training examples has a similarity with a test example of over 0.5</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset in GEM
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Rationale for Inclusion in GEM</h4>
+              </li>
+              <li>
+                <h4>GEM-Specific Curation</h4>
+              </li>
+              <li>
+                <h4>Getting Started with the Task</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Rationale for Inclusion in GEM</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Why is the Dataset in GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+                  </p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>DART is a large and open-domain structured DAta Record to Text generation corpus with high-quality
+              sentence annotations with each input being a set of entity-relation triples following a tree-structured
+              ontology.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Similar Datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Do other datasets for the high level task exist?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Unique Language Coverage
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset cover other languages than other datasets for the same task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Difference from other GEM datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What else sets this dataset apart from other similar datasets in GEM?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The tree structure is unique among GEM datasets</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Ability that the Dataset measures
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Reasoning, surface realization</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>GEM-Specific Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Modificatied for GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Has the GEM version of the dataset been modified in any way (data, processing, splits) from the
+                    original curated data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Splits?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does GEM provide additional splits to the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Getting Started with the Task</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Pointers to Resources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Getting started with in-depth research on the task. Add relevant pointers to resources that
+                    researchers can consult when they want to get started digging deeper into the task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Experimental results on DART shows that BART model as the highest performance among three models with a
+              BLEU score of 37.06. This is attributed to BART’s generalization ability due to pretraining (<a
+                href="https://arxiv.org/pdf/2007.02871.pdf">Table 4</a>).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Previous Results
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Results</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Results</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Measured Model Abilities
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Reasoning, surface realization</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Metrics
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What metrics are typically used for this task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>BLEU</code>, <code>MoverScore</code>, <code>BERT-Score</code>, <code>BLEURT</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Proposed Evaluation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the purpose of the metrics and evaluation methodology (including human
+                    evaluation) that the dataset creators used when introducing this task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The leaderboard uses the combination of BLEU, METEOR, TER, MoverScore, BERTScore, PARENT and BLEURT to
+              overcome the limitations of the n-gram overlap metrics.<br>
+              A small scale human annotation of 100 data points was conducted along the dimensions of (1) fluency - a
+              sentence is natural and grammatical, and (2) semantic faithfulness - a sentence is supported by the input
+              triples.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Previous results available?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are previous results available?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Other Evaluation Approaches
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What evaluation approaches have others used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>n/a</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Relevant Previous Results
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What are the most relevant previous results for this task/dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>BART currently achieves the best performance according to the leaderboard.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Curation
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Original Curation</h4>
+              </li>
+              <li>
+                <h4>Language Data</h4>
+              </li>
+              <li>
+                <h4>Structured Annotations</h4>
+              </li>
+              <li>
+                <h4>Consent</h4>
+              </li>
+              <li>
+                <h4>Private Identifying Information (PII)</h4>
+              </li>
+              <li>
+                <h4>Maintenance</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Original Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Original Curation Rationale
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Original curation rationale</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset creators encourage through DART further research in natural language generation from semantic
+              data. DART provides high-quality sentence annotations with each input being a set of entity-relation
+              triples in a tree structure.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What was the communicative goal?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The speaker is required to produce coherent sentences and construct a trees structured ontology of the
+              column headers.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Sourced from Different Sources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset aggregated from different data sources?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Source Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List the sources (one per line)</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li>human annotation on open-domain Wikipedia tables from WikiTableQuestions (<a
+                  href="https://www.aclweb.org/anthology/P15-1142.pdf">Pasupat and Liang,
+                  2015</a>) and WikiSQL (<a href="https://arxiv.org/pdf/1709.00103.pdf">Zhong et al., 2017</a>)</li>
+              <li>automatic conversion of questions in WikiSQL to declarative sentences</li>
+              <li>incorporation of existing datasets including WebNLG 2017 (Gardent et al., 2017<a
+                  href="https://www.aclweb.org/anthology/P17-1017.pdf">a</a>,<a
+                  href="https://www.aclweb.org/anthology/W17-3518.pdf">b</a>; <a
+                  href="https://www.aclweb.org/anthology/W18-6543.pdf">Shimorina and Gardent, 2018</a>) and Cleaned E2E
+                (<a href="https://arxiv.org/pdf/1706.09254.pdf">Novikova et al., 2017b</a>; Dušek et al., <a
+                  href="https://arxiv.org/pdf/1810.01170.pdf">2018</a>, <a
+                  href="https://www.aclweb.org/anthology/W19-8652.pdf">2019</a>)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Language Data</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>How was Language Data Obtained?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the language data obtained?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Found</code>, <code>Created for the dataset</code></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Where was it found?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If found, where from?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Offline media collection</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Creation Process
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If created for the dataset, describe the creation process.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Creators proposed a two-stage annotation process for constructing triple set sentence pairs based on a
+              tree-structured ontology of each table. First, internal skilled annotators denote the parent column for
+              each column header. Then, a larger number of annotators provide a sentential description of an
+              automatically-chosen subset of table cells in a row. To form a triple set sentence pair, the highlighted
+              cells can be converted to a connected triple set automatically according to the column ontology for the
+              given table.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Language Producers
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What further information do we have on the language producers?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No further information about the MTurk workers has been provided.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Topics Covered
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the language in the dataset focus on specific topics? How would you describe them?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The sub-datasets are from Wikipedia, DBPedia, and artificially created restaurant data.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Validation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was the text validated by a different worker or a data curator?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>validated by crowdworker</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Was Data Filtered?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Were text instances selected or filtered?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>not filtered</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Structured Annotations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Annotations?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have additional annotations for each instance?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>none</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Annotation Service?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was an annotation service used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Consent</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Consent Policy?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was there a consent policy involved when gathering the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Justification for Using the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If not, what is the justification for reusing the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The new annotations are based on Wikipedia which is in the public domain and the other two datasets
+              permit reuse (with attribution)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Private Identifying Information (PII)</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Contains PII?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the source language data likely contain Personal Identifying Information about the data
+                    creators or subjects?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no PII</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Justification for no PII
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a justification for selecting <code>no PII</code> above.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>None of the datasets talk about individuals</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Maintenance</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Maintenance Plan?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the original dataset have a maintenance plan?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways members of different social categories are represented that can have harmful downstream
+                    consequences for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Are the Language Producers Representative of the Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the distribution of language producers in the dataset accurately represent the full
+                    distribution of speakers of the language world-wide? If not, how does it differ?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No, the annotators are raters on crowdworking platforms and thus only represent their demographics.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Considerations for Using the Data
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>PII Risks and Liability</h4>
+              </li>
+              <li>
+                <h4>Licenses</h4>
+              </li>
+              <li>
+                <h4>Known Technical Limitations</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>PII Risks and Liability</h4>
+
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Licenses</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Dataset
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Intended Use part of the Data Overview Section, which of the following
+                    best describe the copyright and licensing status of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Language Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Language part of the Data Curation Section, which of the following
+                    best describe the copyright and licensing status of the underlying language data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Known Technical Limitations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Technical Limitations
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any known technical limitations, such as spurrious correlations, train/test overlap,
+                    annotation biases, or mis-annotations, and cite the works that first identified these limitations
+                    when possible.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset may contain some social biases, as the input sentences are based on Wikipedia
+              (WikiTableQuestions, WikiSQL, WebNLG). Studies have shown that the English Wikipedia contains gender
+              biases(<a href="https://www.aclweb.org/anthology/2020.emnlp-main.23.pdf">Dinan et al., 2020</a>), racial
+              biases([Papakyriakopoulos et al., 2020 (<a
+                href="https://dl.acm.org/doi/pdf/10.1145/3351095.3372843">https://dl.acm.org/doi/pdf/10.1145/3351095.3372843</a>))
+              and geographical bias(<a href="https://doi.org/10.5204/mcj.315">Livingstone et al., 2010</a>). <a
+                href="https://en.wikipedia.org/wiki/Racial_bias_on_Wikipedia#cite_note-23">More info</a>.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Unsuited Applications
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>When using a model trained on this dataset in a setting where users or the public may interact with
+                    its predictions, what are some pitfalls to look out for? In particular, describe some applications
+                    of the general task featured in this dataset that its curation or properties make it less suitable
+                    for.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The end-to-end transformer has the lowest performance since the transformer model needs intermediate
+              pipeline planning steps to have higher performance. Similar findings can be found in <a
+                href="https://arxiv.org/pdf/1908.09022.pdf">Castro Ferreira et al., 2019</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div></div></article></main><div class="layout_push__2FFZa"></div></div><footer class="layout_footer__dka_2 utils_eggshell__LF2UE"><span class="layout_backToHome__9sjx_"><a href="/">← Home</a></span><span>If you have any questions, please join our <!-- --><a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__FmNQy">google group</a> for support.<!-- --></span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"taskData":{"id":"dart","contentHtml":"\u003cdiv class=\"datacard\"\u003e\n\n  \u003csection class=\"datacard-section\"\u003e\n    \u003cdiv class=\"datacard-summary\"\u003e\n      \u003ch2\u003edart\u003c/h2\u003e\n      \u003cdiv class=\"summary-content\"\u003e\n        \u003cp\u003eDART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format.\n          The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still\n          retaining the full information.\u003c/p\u003e\n        \u003cp\u003eYou can load the dataset via:\u003c/p\u003e\n\n        \u003cdiv class=\"code-wrapper\"\u003e\n          \u003cdiv class=\"toolbar\"\u003e\n            \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n          \u003c/div\u003e\n          \u003cpre\u003e\u003ccode\u003eimport datasets\ndata = datasets.load_dataset('GEM/dart')\n\u003c/code\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n\n        \u003cp\u003eThe data loader can be found \u003ca href=\"https://huggingface.co/datasets/GEM/dart\"\u003ehere\u003c/a\u003e.\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003ewebsite\n\n        \u003c/h5\u003e\n\n        \u003cp\u003en/a\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003epaper\n\n        \u003c/h5\u003e\n\n        \u003cp\u003e\u003ca href=\"https://aclanthology.org/2021.naacl-main.37/\"\u003eACL Anthology\u003c/a\u003e\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003eauthors\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eLinyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang, Aadit\n          Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad Zaidi,\n          Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong, Richard\n          Socher, Nazneen Fatema Rajani\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section quick\"\u003e\n    \u003ch3 class=\"section-title\"\u003eQuick-Use\u003c/h3\u003e\n\n    \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n      \u003cdiv class=\"datacard-field periscope\"\u003e\n\n        \u003ch5\u003eContact Name\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eIf known, provide the name of at least one person the reader can contact for questions about the\n                dataset.\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eDragomir Radev, Rui Zhang, Nazneen Rajani\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eMultilingual?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eIs the dataset multilingual?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eno\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eCovered Languages\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eWhat languages/dialects are covered in the dataset?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003e\u003ccode\u003eEnglish\u003c/code\u003e\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eLicense\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eWhat is the license of the dataset?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003emit: MIT License\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field periscope\"\u003e\n\n        \u003ch5\u003eCommunicative Goal\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eProvide a short description of the communicative goal of a model trained for this task on this dataset.\n              \u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eThe speaker is required to produce coherent sentences and construct a trees structured ontology of the column\n          headers.\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eAdditional Annotations?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eDoes the dataset have additional annotations for each instance?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003enone\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eContains PII?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eDoes the source language data likely contain Personal Identifying Information about the data creators\n                or subjects?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eno PII\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n  \u003c/section\u003e\n\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset Overview\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eWhere to find the Data and its Documentation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLanguages and Intended Use\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eCredit\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eDataset Structure\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eWhere to find the Data and its Documentation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eDownload\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the link to where the original dataset is hosted?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"https://github.com/Yale-LILY/dart\"\u003eGithub\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePaper\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the link to the paper describing the dataset (open access preferred)?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"https://aclanthology.org/2021.naacl-main.37/\"\u003eACL Anthology\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eBibTex\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide the BibTex-formatted reference for the dataset. Please use the correct published version\n                    (ACL anthology, etc.) instead of google scholar created Bibtex.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n\n            \u003cdiv class=\"code-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cpre\u003e\u003ccode\u003e@inproceedings{nan-etal-2021-dart,\ntitle = \"{DART}: Open-Domain Structured Data Record to Text Generation\",\nauthor = \"Nan, Linyong  and\nRadev, Dragomir  and\nZhang, Rui  and\nRau, Amrit  and\nSivaprasad, Abhinand  and\nHsieh, Chiachun  and\nTang, Xiangru  and\nVyas, Aadit  and\nVerma, Neha  and\nKrishna, Pranav  and\nLiu, Yangxiaokang  and\nIrwanto, Nadia  and\nPan, Jessica  and\nRahman, Faiaz  and\nZaidi, Ahmad  and\nMutuma, Mutethia  and\nTarabar, Yasin  and\nGupta, Ankit  and\nYu, Tao  and\nTan, Yi Chern  and\nLin, Xi Victoria  and\nXiong, Caiming  and\nSocher, Richard  and\nRajani, Nazneen Fatema\",\nbooktitle = \"Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies\",\nmonth = jun,\nyear = \"2021\",\naddress = \"Online\",\npublisher = \"Association for Computational Linguistics\",\nurl = \"https://aclanthology.org/2021.naacl-main.37\",\ndoi = \"10.18653/v1/2021.naacl-main.37\",\npages = \"432--447\",\nabstract = \"We present DART, an open domain structured DAta Record to Text generation dataset with over 82k instances (DARTs). Data-to-text annotations can be a costly process, especially when dealing with tables which are the major source of structured data and contain nontrivial structures. To this end, we propose a procedure of extracting semantic triples from tables that encodes their structures by exploiting the semantic dependencies among table headers and the table title. Our dataset construction framework effectively merged heterogeneous sources from open domain semantic parsing and spoken dialogue systems by utilizing techniques including tree ontology annotation, question-answer pair to declarative sentence conversion, and predicate unification, all with minimum post-editing. We present systematic evaluation on DART as well as new state-of-the-art results on WebNLG 2017 to show that DART (1) poses new challenges to existing data-to-text datasets and (2) facilitates out-of-domain generalization. Our data and code can be found at https://github.com/Yale-LILY/dart.\",\n}\n\u003c/code\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eContact Name\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf known, provide the name of at least one person the reader can contact for questions about the\n                    dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eDragomir Radev, Rui Zhang, Nazneen Rajani\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eContact Email\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf known, provide the email of at least one person the reader can contact for questions about the\n                    dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e{dragomir.radev, r.zhang}@yale.edu, {nazneen.rajani}@salesforce.com\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eHas a Leaderboard?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the dataset have an active leaderboard?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eyes\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eLeaderboard Link\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a link to the leaderboard.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"https://github.com/Yale-LILY/dart#leaderboard\"\u003eLeaderboard\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eLeaderboard Details\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eBriefly describe how the leaderboard evaluates models.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eSeveral state-of-the-art table-to-text models were evaluated on DART, such as BART (\u003ca\n                href=\"https://arxiv.org/pdf/1910.13461.pdf\"\u003eLewis et al., 2020\u003c/a\u003e), Seq2Seq-Att (\u003ca\n                href=\"https://webnlg-challenge.loria.fr/files/melbourne_report.pdf\"\u003eMELBOURNE\u003c/a\u003e) and End-to-End\n              Transformer (\u003ca href=\"https://arxiv.org/pdf/1908.09022.pdf\"\u003eCastro Ferreira et al., 2019\u003c/a\u003e).\n              The leaderboard reports BLEU, METEOR, TER, MoverScore, BERTScore and BLEURT scores.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLanguages and Intended Use\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eMultilingual?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIs the dataset multilingual?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCovered Dialects\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat dialects are covered? Are there multiple dialects per language?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eIt is an aggregated from multiple other datasets that use general US-American or British English without\n              differentiation between dialects.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eCovered Languages\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat languages/dialects are covered in the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eEnglish\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eWhose Language?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhose language is in the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe dataset is aggregated from multiple others that were crowdsourced on different platforms.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eLicense\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the license of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003emit: MIT License\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eIntended Use\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the intended use of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe dataset is aimed to further research in natural language generation from semantic data.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePrimary Task\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat primary task does the dataset support?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eData-to-Text\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCommunicative Goal\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a short description of the communicative goal of a model trained for this task on this\n                    dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe speaker is required to produce coherent sentences and construct a trees structured ontology of the\n              column headers.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eCredit\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eCuration Organization Type(s)\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIn what kind of organization did the dataset curation happen?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eacademic\u003c/code\u003e, \u003ccode\u003eindustry\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCuration Organization(s)\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eName the organization(s).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eYale University, Salesforce Research, Penn State University, The University of Hong Kong, MIT\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eDataset Creators\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWho created the original dataset? List the people involved in collecting the dataset and their\n                    affiliation(s).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eLinyong Nan, Dragomir Radev, Rui Zhang, Amrit Rau, Abhinand Sivaprasad, Chiachun Hsieh, Xiangru Tang,\n              Aadit Vyas, Neha Verma, Pranav Krishna, Yangxiaokang Liu, Nadia Irwanto, Jessica Pan, Faiaz Rahman, Ahmad\n              Zaidi, Mutethia Mutuma, Yasin Tarabar, Ankit Gupta, Tao Yu, Yi Chern Tan, Xi Victoria Lin, Caiming Xiong,\n              Richard Socher, Nazneen Fatema Rajani\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eWho added the Dataset to GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWho contributed to the data card and adding the dataset to GEM? List the people+affiliations\n                    involved in creating this data card and who helped integrate this dataset into GEM.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eMiruna Clinciu contributed the original data card and Yacine Jernite wrote the initial data loader.\n              Sebastian Gehrmann migrated the data card and the loader to the new format.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eDataset Structure\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eData Fields\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eList and describe the fields present in the dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e-\u003ccode\u003etripleset\u003c/code\u003e: a list of tuples, each tuple has 3 items\n              -\u003ccode\u003esubtree_was_extended\u003c/code\u003e: a boolean variable (true or false)\n              -\u003ccode\u003eannotations\u003c/code\u003e: a list of dict, each with source and text keys.\n              -\u003ccode\u003esource\u003c/code\u003e: a string mentioning the name of the source table.\n              -\u003ccode\u003etext\u003c/code\u003e: a sentence string.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eReason for Structure\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHow was the dataset structure determined?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe structure is supposed to be able more complex structures beyond \"flat\" attribute-value pairs, instead\n              encoding hierarchical relationships.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eHow were labels chosen?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHow were the labels chosen?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThey are a combination of those from existing datasets and new annotations that take advantage of the\n              hierarchical structure\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eExample Instance\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a JSON formatted example of a typical instance in the dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n\n            \u003cdiv class=\"code-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cpre\u003e\u003ccode\u003e {\n\"tripleset\": [\n[\n  \"Ben Mauk\",\n  \"High school\",\n  \"Kenton\"\n],\n[\n  \"Ben Mauk\",\n  \"College\",\n  \"Wake Forest Cincinnati\"\n]\n],\n\"subtree_was_extended\": false,\n\"annotations\": [\n{\n  \"source\": \"WikiTableQuestions_lily\",\n  \"text\": \"Ben Mauk, who attended Kenton High School, attended Wake Forest Cincinnati for college.\"\n}\n]\n}\n\u003c/code\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eData Splits\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDescribe and name the splits in the dataset if there are more than one.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n\n            \u003cdiv class=\"table-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand table\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003ctable\u003e\n                \u003cthead\u003e\n                  \u003ctr\u003e\n                    \u003cth\u003eInput Unit\u003c/th\u003e\n                    \u003cth\u003eExamples\u003c/th\u003e\n                    \u003cth\u003eVocab Size\u003c/th\u003e\n                    \u003cth\u003eWords per SR\u003c/th\u003e\n                    \u003cth\u003eSents per SR\u003c/th\u003e\n                    \u003cth\u003eTables\u003c/th\u003e\n                  \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                  \u003ctr\u003e\n                    \u003ctd\u003eTriple Set\u003c/td\u003e\n                    \u003ctd\u003e82,191\u003c/td\u003e\n                    \u003ctd\u003e33.2K\u003c/td\u003e\n                    \u003ctd\u003e21.6\u003c/td\u003e\n                    \u003ctd\u003e1.5\u003c/td\u003e\n                    \u003ctd\u003e5,623\u003c/td\u003e\n                  \u003c/tr\u003e\n                \u003c/tbody\u003e\n              \u003c/table\u003e\n            \u003c/div\u003e\n\n\n            \u003cdiv class=\"table-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand table\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003ctable\u003e\n                \u003cthead\u003e\n                  \u003ctr\u003e\n                    \u003cth\u003eTrain\u003c/th\u003e\n                    \u003cth\u003eDev\u003c/th\u003e\n                    \u003cth\u003eTest\u003c/th\u003e\n                  \u003c/tr\u003e\n                \u003c/thead\u003e\n                \u003ctbody\u003e\n                  \u003ctr\u003e\n                    \u003ctd\u003e62,659\u003c/td\u003e\n                    \u003ctd\u003e6,980\u003c/td\u003e\n                    \u003ctd\u003e12,552\u003c/td\u003e\n                  \u003c/tr\u003e\n                \u003c/tbody\u003e\n              \u003c/table\u003e\n            \u003c/div\u003e\n\n            \u003cp\u003eStatistics of DART decomposed by different collection methods. DART exhibits a great deal of topical\n              variety in terms of the number of unique predicates, the number of unique triples, and the vocabulary\n              size. These statistics are computed from DART v1.1.1; the number of unique predicates reported is\n              post-unification (see Section 3.4). SR: Surface Realization.\n              (\u003ca href=\"https://arxiv.org/pdf/2007.02871.pdf\"\u003edetails in Table 1 and 2\u003c/a\u003e).\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eSplitting Criteria\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDescribe any criteria for splitting the data, if used. If there are differences between the splits\n                    (e.g., if the training annotations are machine-generated and the dev and test ones are created by\n                    humans, or if different numbers of annotators contributed to each example), describe them here.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eFor WebNLG 2017 and Cleaned E2E, DART use the original data splits. For the new annotation on\n              WikiTableQuestions and WikiSQL, random splitting will make train, dev, and test splits contain similar\n              tables and similar \u0026#x3C;triple-set, sentence\u003e examples. They are thus split based on Jaccard similarity\n              such that no training examples has a similarity with a test example of over 0.5\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset in GEM\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eRationale for Inclusion in GEM\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eGEM-Specific Curation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eGetting Started with the Task\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eRationale for Inclusion in GEM\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eWhy is the Dataset in GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat does this dataset contribute toward better generation evaluation and why is it part of GEM?\n                  \u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eDART is a large and open-domain structured DAta Record to Text generation corpus with high-quality\n              sentence annotations with each input being a set of entity-relation triples following a tree-structured\n              ontology.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eSimilar Datasets\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDo other datasets for the high level task exist?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eyes\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eUnique Language Coverage\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes this dataset cover other languages than other datasets for the same task?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eDifference from other GEM datasets\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat else sets this dataset apart from other similar datasets in GEM?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe tree structure is unique among GEM datasets\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eAbility that the Dataset measures\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat aspect of model ability can be measured with this dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eReasoning, surface realization\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eGEM-Specific Curation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eModificatied for GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHas the GEM version of the dataset been modified in any way (data, processing, splits) from the\n                    original curated data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAdditional Splits?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes GEM provide additional splits to the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eGetting Started with the Task\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003ePointers to Resources\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eGetting started with in-depth research on the task. Add relevant pointers to resources that\n                    researchers can consult when they want to get started digging deeper into the task.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eExperimental results on DART shows that BART model as the highest performance among three models with a\n              BLEU score of 37.06. This is attributed to BART’s generalization ability due to pretraining (\u003ca\n                href=\"https://arxiv.org/pdf/2007.02871.pdf\"\u003eTable 4\u003c/a\u003e).\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003ePrevious Results\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrevious Results\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrevious Results\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eMeasured Model Abilities\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat aspect of model ability can be measured with this dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eReasoning, surface realization\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eMetrics\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat metrics are typically used for this task?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eBLEU\u003c/code\u003e, \u003ccode\u003eMoverScore\u003c/code\u003e, \u003ccode\u003eBERT-Score\u003c/code\u003e, \u003ccode\u003eBLEURT\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eProposed Evaluation\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eList and describe the purpose of the metrics and evaluation methodology (including human\n                    evaluation) that the dataset creators used when introducing this task.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe leaderboard uses the combination of BLEU, METEOR, TER, MoverScore, BERTScore, PARENT and BLEURT to\n              overcome the limitations of the n-gram overlap metrics.\u003cbr\u003e\n              A small scale human annotation of 100 data points was conducted along the dimensions of (1) fluency - a\n              sentence is natural and grammatical, and (2) semantic faithfulness - a sentence is supported by the input\n              triples.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePrevious results available?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre previous results available?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eyes\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eOther Evaluation Approaches\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat evaluation approaches have others used?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003en/a\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eRelevant Previous Results\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat are the most relevant previous results for this task/dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eBART currently achieves the best performance according to the leaderboard.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset Curation\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eOriginal Curation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLanguage Data\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eStructured Annotations\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eConsent\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrivate Identifying Information (PII)\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eMaintenance\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eOriginal Curation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eOriginal Curation Rationale\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eOriginal curation rationale\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe dataset creators encourage through DART further research in natural language generation from semantic\n              data. DART provides high-quality sentence annotations with each input being a set of entity-relation\n              triples in a tree structure.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCommunicative Goal\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat was the communicative goal?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe speaker is required to produce coherent sentences and construct a trees structured ontology of the\n              column headers.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eSourced from Different Sources\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIs the dataset aggregated from different data sources?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eyes\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eSource Details\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eList the sources (one per line)\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cul\u003e\n              \u003cli\u003ehuman annotation on open-domain Wikipedia tables from WikiTableQuestions (\u003ca\n                  href=\"https://www.aclweb.org/anthology/P15-1142.pdf\"\u003ePasupat and Liang,\n                  2015\u003c/a\u003e) and WikiSQL (\u003ca href=\"https://arxiv.org/pdf/1709.00103.pdf\"\u003eZhong et al., 2017\u003c/a\u003e)\u003c/li\u003e\n              \u003cli\u003eautomatic conversion of questions in WikiSQL to declarative sentences\u003c/li\u003e\n              \u003cli\u003eincorporation of existing datasets including WebNLG 2017 (Gardent et al., 2017\u003ca\n                  href=\"https://www.aclweb.org/anthology/P17-1017.pdf\"\u003ea\u003c/a\u003e,\u003ca\n                  href=\"https://www.aclweb.org/anthology/W17-3518.pdf\"\u003eb\u003c/a\u003e; \u003ca\n                  href=\"https://www.aclweb.org/anthology/W18-6543.pdf\"\u003eShimorina and Gardent, 2018\u003c/a\u003e) and Cleaned E2E\n                (\u003ca href=\"https://arxiv.org/pdf/1706.09254.pdf\"\u003eNovikova et al., 2017b\u003c/a\u003e; Dušek et al., \u003ca\n                  href=\"https://arxiv.org/pdf/1810.01170.pdf\"\u003e2018\u003c/a\u003e, \u003ca\n                  href=\"https://www.aclweb.org/anthology/W19-8652.pdf\"\u003e2019\u003c/a\u003e)\u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLanguage Data\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eHow was Language Data Obtained?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHow was the language data obtained?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eFound\u003c/code\u003e, \u003ccode\u003eCreated for the dataset\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eWhere was it found?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf found, where from?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eOffline media collection\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eCreation Process\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf created for the dataset, describe the creation process.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eCreators proposed a two-stage annotation process for constructing triple set sentence pairs based on a\n              tree-structured ontology of each table. First, internal skilled annotators denote the parent column for\n              each column header. Then, a larger number of annotators provide a sentential description of an\n              automatically-chosen subset of table cells in a row. To form a triple set sentence pair, the highlighted\n              cells can be converted to a connected triple set automatically according to the column ontology for the\n              given table.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eLanguage Producers\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat further information do we have on the language producers?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eNo further information about the MTurk workers has been provided.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eTopics Covered\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the language in the dataset focus on specific topics? How would you describe them?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe sub-datasets are from Wikipedia, DBPedia, and artificially created restaurant data.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eData Validation\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas the text validated by a different worker or a data curator?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003evalidated by crowdworker\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eWas Data Filtered?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWere text instances selected or filtered?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003enot filtered\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eStructured Annotations\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAdditional Annotations?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the dataset have additional annotations for each instance?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003enone\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAnnotation Service?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas an annotation service used?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eConsent\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Consent Policy?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas there a consent policy involved when gathering the data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eJustification for Using the Data\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf not, what is the justification for reusing the data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe new annotations are based on Wikipedia which is in the public domain and the other two datasets\n              permit reuse (with attribution)\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrivate Identifying Information (PII)\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eContains PII?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the source language data likely contain Personal Identifying Information about the data\n                    creators or subjects?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno PII\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eJustification for no PII\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a justification for selecting \u003ccode\u003eno PII\u003c/code\u003e above.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eNone of the datasets talk about individuals\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eMaintenance\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Maintenance Plan?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the original dataset have a maintenance plan?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eBroader Social Context\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrevious Work on the Social Impact of the Dataset\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eImpact on Under-Served Communities\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eDiscussion of Biases\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrevious Work on the Social Impact of the Dataset\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eUsage of Models based on the Data\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre you aware of cases where models trained on the task featured in this dataset ore related tasks\n                    have been used in automated systems?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eImpact on Under-Served Communities\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAddresses needs of underserved Communities?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes this dataset address the needs of communities that are traditionally underserved in language\n                    technology, and particularly language generation technology? Communities may be underserved for\n                    exemple because their language, language variety, or social or geographical context is\n                    underepresented in NLP and NLG resources (datasets and models).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eDiscussion of Biases\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Documented Social Biases?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre there documented social biases in the dataset? Biases in this context are variations in the\n                    ways members of different social categories are represented that can have harmful downstream\n                    consequences for members of the more disadvantaged group.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eAre the Language Producers Representative of the Language?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the distribution of language producers in the dataset accurately represent the full\n                    distribution of speakers of the language world-wide? If not, how does it differ?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eNo, the annotators are raters on crowdworking platforms and thus only represent their demographics.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eConsiderations for Using the Data\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePII Risks and Liability\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLicenses\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eKnown Technical Limitations\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePII Risks and Liability\u003c/h4\u003e\n\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLicenses\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCopyright Restrictions on the Dataset\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eBased on your answers in the Intended Use part of the Data Overview Section, which of the following\n                    best describe the copyright and licensing status of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eopen license - commercial use allowed\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCopyright Restrictions on the Language Data\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eBased on your answers in the Language part of the Data Curation Section, which of the following\n                    best describe the copyright and licensing status of the underlying language data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eopen license - commercial use allowed\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eKnown Technical Limitations\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eTechnical Limitations\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDescribe any known technical limitations, such as spurrious correlations, train/test overlap,\n                    annotation biases, or mis-annotations, and cite the works that first identified these limitations\n                    when possible.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe dataset may contain some social biases, as the input sentences are based on Wikipedia\n              (WikiTableQuestions, WikiSQL, WebNLG). Studies have shown that the English Wikipedia contains gender\n              biases(\u003ca href=\"https://www.aclweb.org/anthology/2020.emnlp-main.23.pdf\"\u003eDinan et al., 2020\u003c/a\u003e), racial\n              biases([Papakyriakopoulos et al., 2020 (\u003ca\n                href=\"https://dl.acm.org/doi/pdf/10.1145/3351095.3372843\"\u003ehttps://dl.acm.org/doi/pdf/10.1145/3351095.3372843\u003c/a\u003e))\n              and geographical bias(\u003ca href=\"https://doi.org/10.5204/mcj.315\"\u003eLivingstone et al., 2010\u003c/a\u003e). \u003ca\n                href=\"https://en.wikipedia.org/wiki/Racial_bias_on_Wikipedia#cite_note-23\"\u003eMore info\u003c/a\u003e.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eUnsuited Applications\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhen using a model trained on this dataset in a setting where users or the public may interact with\n                    its predictions, what are some pitfalls to look out for? In particular, describe some applications\n                    of the general task featured in this dataset that its curation or properties make it less suitable\n                    for.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe end-to-end transformer has the lowest performance since the transformer model needs intermediate\n              pipeline planning steps to have higher performance. Similar findings can be found in \u003ca\n                href=\"https://arxiv.org/pdf/1908.09022.pdf\"\u003eCastro Ferreira et al., 2019\u003c/a\u003e.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\u003c/div\u003e","title":"dart","type":"Data-to-Text","languages":"English","summary":"DART is an English dataset aggregating multiple other data-to-text dataset in a common triple-based format. The new format is completely flat, thus not requiring a model to learn hierarchical structures, while still retaining the full information."}},"__N_SSG":true},"page":"/data_cards/[id]","query":{"id":"dart"},"buildId":"yxHKZ8AjNlaFByMXSfhF5","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
