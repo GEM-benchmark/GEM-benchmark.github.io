@@ -4,3 +4,1907 @@ type: Data-to-Text
 languages: Russian, English
 summary: WebNLG is a bi-lingual dataset (English, Russian) of parallel DBpedia triple sets and short texts that cover about 450 different DBpedia properties. The WebNLG data was originally created to promote the development of RDF verbalisers able to generate short text and to handle micro-planning (i.e., sentence segmentation and ordering, referring expression generation, aggregation); the goal of the task is to generate texts starting from 1 to 7 input triples which have entities in common (so the input is actually a connected Knowledge Graph). The dataset contains about 17,000 triple sets and 45,000 crowdsourced texts in English, and 7,000 triples sets and 19,000 crowdsourced texts in Russian. A challenging test set section with entities and/or properties that have not been seen at training time is available.
 ---
+<div class="datacard">
+
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>web_nlg</h2>
+      <div class="summary-content">
+        <p>WebNLG is a bi-lingual dataset (English, Russian) of parallel DBpedia triple sets and short texts that cover
+          about 450 different DBpedia properties. The WebNLG data was originally created to promote the development of
+          RDF verbalisers able to generate short text and to handle micro-planning (i.e., sentence segmentation and
+          ordering, referring expression generation, aggregation); the goal of the task is to generate texts starting
+          from 1 to 7 input triples which have entities in common (so the input is actually a connected Knowledge
+          Graph). The dataset contains about 17,000 triple sets and 45,000 crowdsourced texts in English, and 7,000
+          triples sets and 19,000 crowdsourced texts in Russian. A challenging test set section with entities and/or
+          properties that have not been seen at training time is available.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/web_nlg')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/web_nlg">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>website
+
+        </h5>
+
+        <p><a href="https://webnlg-challenge.loria.fr/">Website</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="http://www.aclweb.org/anthology/P17-1017">First Dataset Release</a>, <a
+            href="https://www.aclweb.org/anthology/W17-3518/">WebNLG Challenge 2017 Report</a>, <a
+            href="https://webnlg-challenge.loria.fr/files/2020.webnlg-papers.7.pdf">WebNLG Challenge 2020 Report</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>authors
+
+        </h5>
+
+        <p>The principle curator of the dataset is Anastasia Shimorina (Université de Lorraine / LORIA, France).
+          Throughout the WebNLG releases, several people contributed to their construction: Claire Gardent (CNRS /
+          LORIA, France), Shashi Narayan (Google, UK), Laura Perez-Beltrachini (University of Edinburgh, UK), Elena
+          Khasanova, and Thiago Castro Ferreira (Federal University of Minas Gerais, Brazil).</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>yes</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>Russian</code>, <code>English</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>cc-by-nc-4.0: Creative Commons Attribution Non Commercial 4.0 International</p>
+      </div>
+
+      <div class="datacard-field periscope">
+
+        <h5>Communicative Goal
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Provide a short description of the communicative goal of a model trained for this task on this dataset.
+              </p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>A model should verbalize all and only the provided input triples in natural language.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Webpage
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the webpage for the dataset (if it exists)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://webnlg-challenge.loria.fr/">Website</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://gitlab.com/shimorina/webnlg-dataset">Gitlab</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="http://www.aclweb.org/anthology/P17-1017">First Dataset Release</a>, <a
+                href="https://www.aclweb.org/anthology/W17-3518/">WebNLG Challenge 2017 Report</a>, <a
+                href="https://webnlg-challenge.loria.fr/files/2020.webnlg-papers.7.pdf">WebNLG Challenge 2020 Report</a>
+            </p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Initial release of the dataset:</p>
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{gardent2017creating,
+author = 	"Gardent, Claire
+and Shimorina, Anastasia
+and Narayan, Shashi
+and Perez-Beltrachini, Laura",
+title = 	"Creating Training Corpora for NLG Micro-Planners",
+booktitle = 	"Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+year = 	"2017",
+publisher = 	"Association for Computational Linguistics",
+pages = 	"179--188",
+location = 	"Vancouver, Canada",
+doi = 	"10.18653/v1/P17-1017",
+url = 	"http://www.aclweb.org/anthology/P17-1017"
+}
+</code></pre>
+            </div>
+
+            <p>The latest version 3.0:</p>
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{castro-ferreira20:bilin-bi-direc-webnl-shared,
+title={The 2020 Bilingual, Bi-Directional WebNLG+ Shared Task Overview and Evaluation Results (WebNLG+ 2020)},
+author={Castro Ferreira, Thiago and
+            Gardent, Claire and
+Ilinykh, Nikolai and
+van der Lee, Chris and
+Mille, Simon and
+Moussallem, Diego and
+Shimorina, Anastasia},
+booktitle = {Proceedings of the 3rd WebNLG Workshop on Natural Language Generation from the Semantic Web (WebNLG+ 2020)},
+pages = "55--76",
+year = 	 2020,
+address = 	 {Dublin, Ireland (Virtual)},
+publisher = {Association for Computational Linguistics}}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Email
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the email of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="mailto:webnlg-challenge@inria.fr">webnlg-challenge@inria.fr</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Leaderboard Link
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a link to the leaderboard.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://beng.dice-research.org/gerbil/">Website</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Leaderboard Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Briefly describe how the leaderboard evaluates models.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The model outputs are evaluated against the crowdsourced references; the leaderboard reports BLEU-4,
+              METEOR, chrF++, TER, BERTScore and BLEURT scores.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Russian</code>, <code>English</code></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>cc-by-nc-4.0: Creative Commons Attribution Non Commercial 4.0 International</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Intended Use
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the intended use of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The WebNLG dataset was created to promote the development (<em>i</em>) of RDF verbalisers and
+              (<em>ii</em>) of microplanners able to handle a wide range of linguistic constructions. The dataset aims
+              at covering knowledge in different domains ("categories"). The same properties and entities can appear in
+              several categories.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Data-to-Text</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Communicative Goal
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a short description of the communicative goal of a model trained for this task on this
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>A model should verbalize all and only the provided input triples in natural language.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Curation Organization Type(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>In what kind of organization did the dataset curation happen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>academic</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Curation Organization(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Name the organization(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Université de Lorraine / LORIA, France, CNRS / LORIA, France, University of Edinburgh, UK, Federal
+              University of Minas Gerais, Brazil</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Dataset Creators
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who created the original dataset? List the people involved in collecting the dataset and their
+                    affiliation(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The principle curator of the dataset is Anastasia Shimorina (Université de Lorraine / LORIA, France).
+              Throughout the WebNLG releases, several people contributed to their construction: Claire Gardent (CNRS /
+              LORIA, France), Shashi Narayan (Google, UK), Laura Perez-Beltrachini (University of Edinburgh, UK), Elena
+              Khasanova, and Thiago Castro Ferreira (Federal University of Minas Gerais, Brazil).</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Funding
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who funded the data creation?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset construction was funded by the French National Research Agency (ANR).</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Who added the Dataset to GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who contributed to the data card and adding the dataset to GEM? List the people+affiliations
+                    involved in creating this data card and who helped integrate this dataset into GEM.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Simon Mille and Sebastian Gehrmann added the dataset and wrote the data card.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Fields
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the fields present in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>See <a href="https://webnlg-challenge.loria.fr/docs/">official documentation</a>.</p>
+            <p><code>entry</code>: a data instance of the benchmark. Each entry has five attributes: a DBpedia category
+              (<code>category</code>), entry ID (<code>eid</code>), shape, shape type, and triple set size
+              (<code>size</code>).</p>
+            <ul>
+              <li>
+                <p><code>shape</code>: a string representation of the RDF tree with nested parentheses where
+                  <code>X</code> is a node (see <a href="https://en.wikipedia.org/wiki/Newick_format">Newick tree
+                    format</a>).</p>
+              </li>
+              <li>
+                <p><code>shape_type</code>: a type of the tree shape. We <a
+                    href="https://www.aclweb.org/anthology/C16-1141.pdf">identify</a> three types of tree shapes:</p>
+                <ul>
+                  <li><code>chain</code> (the object of one triple is the subject of the other);</li>
+                  <li><code>sibling</code> (triples with a shared subject);</li>
+                  <li><code>mixed</code> (both <code>chain</code> and <code>sibling</code> types present).</li>
+                </ul>
+              </li>
+              <li>
+                <p><code>eid</code>: an entry ID. It is unique only within a category and a size.</p>
+              </li>
+              <li>
+                <p><code>category</code>: a DBpedia category (Astronaut, City, MusicalWork, Politician, etc.).</p>
+              </li>
+              <li>
+                <p><code>size</code>: the number of RDF triples in a set. Ranges from 1 to 7.</p>
+              </li>
+            </ul>
+            <p>Each <code>entry</code> has three fields: <code>originaltripleset</code>, <code>modifiedtripleset</code>,
+              and <code>lexs</code>.</p>
+            <p><code>originaltripleset</code>: a set of RDF triples as extracted from <a
+                href="https://wiki.dbpedia.org/">DBpedia</a>. Each set of RDF triples is a tree. Triples have the
+              subject-predicate-object structure.</p>
+            <p><code>modifiedtripleset</code>: a set of RDF triples as presented to crowdworkers (for more details on
+              modifications, see below).</p>
+            <p>Original and modified triples serve different purposes: the original triples — to link data to a
+              knowledge base (DBpedia), whereas the modified triples — to ensure consistency and homogeneity throughout
+              the data. To train models, the modified triples should be used.</p>
+            <p><code>lexs</code> (shortened for lexicalisations): a natural language text verbalising the triples. Each
+              lexicalisation has two attributes: a comment (<code>comment</code>), and a lexicalisation ID
+              (<code>lid</code>). By default, comments have the value <code>good</code>, except rare cases when they
+              were manually marked as <code>toFix</code>. That was done during the corpus creation, when it was seen
+              that a lexicalisation did not exactly match a triple set.</p>
+            <p>Russian data has additional optional fields comparing to English:</p>
+            <p><code>&#x3C;dbpedialinks></code>: RDF triples extracted from DBpedia between English and Russian entities
+              by means of the property <code>sameAs</code>.</p>
+            <p><code>&#x3C;links></code>: RDF triples created manually for some entities to serve as pointers to
+              translators. There are two types of them:</p>
+            <ul>
+              <li>
+                <p>with <code>sameAs</code> (<code>Spaniards | sameAs | испанцы</code>)</p>
+              </li>
+              <li>
+                <p>with <code>includes</code>
+                  (<code>Tomatoes, guanciale, cheese, olive oil | includes | гуанчиале</code>). Those were mostly
+                  created for string literals to translate some parts of them.</p>
+              </li>
+            </ul>
+            <p>Lexicalisations in the Russian WebNLG have a new parameter <code>lang</code> (values: <code>en</code>,
+              <code>ru</code>) because original English texts were kept in the Russian version (see the example above).
+            </p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Example Instance
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a JSON formatted example of a typical instance in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>{
+"entry": {
+"category": "Company",
+"size": "4",
+"shape": "(X (X) (X) (X) (X))",
+"shape_type": "sibling",
+"eid": "Id21",
+"lexs": [
+{
+"comment": "good",
+"lex": "Trane, which was founded on January 1st 1913 in La Crosse, Wisconsin, is based in Ireland. It has 29,000 employees.",
+"lid": "Id1"
+}
+],
+"modifiedtripleset": [
+{
+"subject": "Trane",
+"property": "foundingDate",
+"object": "1913-01-01"
+},
+{
+"subject": "Trane",
+"property": "location",
+"object": "Ireland"
+},
+{
+"subject": "Trane",
+"property": "foundationPlace",
+"object": "La_Crosse,_Wisconsin"
+},
+{
+"subject": "Trane",
+"property": "numberOfEmployees",
+"object": "29000"
+}
+
+],
+"originaltriplesets": {
+"originaltripleset": [
+  {
+"subject": "Trane",
+"property": "foundingDate",
+"object": "1913-01-01"
+  },
+  {
+"subject": "Trane",
+"property": "location",
+"object": "Ireland"
+  },
+  {
+"subject": "Trane",
+"property": "foundationPlace",
+"object": "La_Crosse,_Wisconsin"
+  },
+  {
+"subject": "Trane",
+"property": "numberOfEmployees",
+"object": "29000"
+  }
+]
+}
+
+}
+}
+</code></pre>
+            </div>
+
+            <p>The XML-formatted example is <a href="https://webnlg-challenge.loria.fr/docs/#example">here</a>.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Data Splits
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe and name the splits in the dataset if there are more than one.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>English (v3.0)</th>
+                    <th>Train</th>
+                    <th>Dev</th>
+                    <th>Test</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>triple sets</strong></td>
+                    <td>13,211</td>
+                    <td>1,667</td>
+                    <td>1,779</td>
+                  </tr>
+                  <tr>
+                    <td><strong>texts</strong></td>
+                    <td>35,426</td>
+                    <td>4,464</td>
+                    <td>5,150</td>
+                  </tr>
+                  <tr>
+                    <td><strong>properties</strong></td>
+                    <td>372</td>
+                    <td>290</td>
+                    <td>220</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Russian (v3.0)</th>
+                    <th>Train</th>
+                    <th>Dev</th>
+                    <th>Test</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>triple sets</strong></td>
+                    <td>5,573</td>
+                    <td>790</td>
+                    <td>1,102</td>
+                  </tr>
+                  <tr>
+                    <td><strong>texts</strong></td>
+                    <td>14,239</td>
+                    <td>2,026</td>
+                    <td>2,780</td>
+                  </tr>
+                  <tr>
+                    <td><strong>properties</strong></td>
+                    <td>226</td>
+                    <td>115</td>
+                    <td>192</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset in GEM
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Rationale for Inclusion in GEM</h4>
+              </li>
+              <li>
+                <h4>GEM-Specific Curation</h4>
+              </li>
+              <li>
+                <h4>Getting Started with the Task</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Rationale for Inclusion in GEM</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Why is the Dataset in GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+                  </p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Due to the constrained generation task, this dataset can be used to evaluate very specific and narrow
+              generation capabilities.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Similar Datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Do other datasets for the high level task exist?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Unique Language Coverage
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset cover other languages than other datasets for the same task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Difference from other GEM datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What else sets this dataset apart from other similar datasets in GEM?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The RDF-triple format is unique to WebNLG.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Ability that the Dataset measures
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>surface realization</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>GEM-Specific Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Modificatied for GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Has the GEM version of the dataset been modified in any way (data, processing, splits) from the
+                    original curated data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>GEM Modifications
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What changes have been made to he original dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>other</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Modification Details
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>For each of these changes, described them in more details and provided the intended purpose of the
+                    modification</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No changes to the main content of the dataset. The <a
+                href="https://gitlab.com/shimorina/webnlg-dataset/-/tree/master/release_v3.0">version 3.0</a> of the
+              dataset is used.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Splits?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does GEM provide additional splits to the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Split Information
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe how the new splits were created</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>23 special test sets for WebNLG were added to the GEM evaluation suite, 12 for English and 11 for
+              Russian.
+              For both languages, we created subsets of the training and development sets of ~500 randomly selected
+              inputs each. The inputs were sampled proportionally from each category.</p>
+            <p>Two types of transformations have been applied to WebNLG: (i) input scrambling (English and Russian) and
+              (ii) numerical value replacements (English); in both cases, a subset of about 500 inputs was randomly
+              selected. For (i), the order of the triples was randomly reassigned (each triple kept the same
+              Subject-Property-Object internal order). For (ii), the change was performed respecting the format of the
+              current cardinal value (e.g., alpha, integer, or floating-point) and replacing it with a new random value.
+              The new number is lower-bounded between zero and upper bounded to be within to the highest power of 10
+              unit for the given value (e.g., replacing 54 would result in a random value between 0-100). Floating
+              values maintain the degree of precision.</p>
+            <p>For both languages, we did identify different subsets of the test set that we could compare to each other
+              so that we would have a better understanding of the results. There are currently 8 selections that we have
+              made:</p>
+            <p>Selection 1 (size): input length. This selection corresponds to the number of predicates in the input. By
+              comparing inputs of different lengths, we can see to what extent NLG systems are able to handle different
+              input sizes. The table below provides the relevant frequencies. Please be aware that comparing selections
+              with fewer than 100 items may result in unreliable comparisons.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Input length</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>369</td>
+                    <td>254</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>349</td>
+                    <td>200</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>350</td>
+                    <td>214</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>305</td>
+                    <td>214</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>213</td>
+                    <td>159</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>114</td>
+                    <td>32</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>79</td>
+                    <td>29</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 2 (frequency): seen/unseen single predicates. This selection corresponds to the inputs with
+              only one predicate. We compare which predicates are seen/unseen in the training data. The table below
+              provides the relevant frequencies. Note that the comparison is only valid for English. Not for Russian,
+              since there is only one example of unseen single predicates.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>_ in training</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Seen</td>
+                    <td>297</td>
+                    <td>253</td>
+                  </tr>
+                  <tr>
+                    <td>Unseen</td>
+                    <td>72</td>
+                    <td>1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 3 (frequency): seen/unseen combinations of predicates. This selection checks for all
+              combinations of predicates whether that combination has been seen in the training data. For example: if
+              the combination of predicates A and B is seen, that means that there is an input in the training data
+              consisting of two triples, where one triple uses predicate A and the other uses predicate B. If the
+              combination is unseen, then the converse is true. The table below provides the relevant frequencies.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>_ in training</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>unseen</td>
+                    <td>1295</td>
+                    <td>354</td>
+                  </tr>
+                  <tr>
+                    <td>seen</td>
+                    <td>115</td>
+                    <td>494</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 4 (frequency): seen/unseen arguments. This selection checks for all input whether or not all
+              arg1s and arg2s in the input have been seen during the training phase. For this selection, <em>Seen</em>
+              is the default. Only if all arg1 instances for a particular input are unseen, do we count the arg1s of the
+              input as unseen. The same holds for arg2. So "seen" here really means that at least some of the arg1s or
+              arg2s are seen in the input. The table below provides the relevant frequencies. Note that the comparison
+              is only valid for English. Not for Russian, since there are very few examples of unseen combinations of
+              predicates.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Arguments seen in training?</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>both_seen</td>
+                    <td>518</td>
+                    <td>1075</td>
+                  </tr>
+                  <tr>
+                    <td>both_unseen</td>
+                    <td>1177</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>arg1_unseen</td>
+                    <td>56</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>arg2_unseen</td>
+                    <td>28</td>
+                    <td>4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 5 (shape): repeated subjects. For this selection, the subsets are based on the times a subject
+              is repeated in the input; it only takes into account the maximum number of times a subject is repeated,
+              that is, if in one input a subject appears 3 times and a different subject 2 times, this input will be in
+              the "3_subjects_same' split. Unique_subjects means all subjects are different.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Max num. of repeated subjects</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>unique_subjects</td>
+                    <td>453</td>
+                    <td>339</td>
+                  </tr>
+                  <tr>
+                    <td>2_subjects_same</td>
+                    <td>414</td>
+                    <td>316</td>
+                  </tr>
+                  <tr>
+                    <td>3_subjects_same</td>
+                    <td>382</td>
+                    <td>217</td>
+                  </tr>
+                  <tr>
+                    <td>4_subjects_same</td>
+                    <td>251</td>
+                    <td>143</td>
+                  </tr>
+                  <tr>
+                    <td>5_subjects_same</td>
+                    <td>158</td>
+                    <td>56</td>
+                  </tr>
+                  <tr>
+                    <td>6_subjects_same</td>
+                    <td>80</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>7_subjects_same</td>
+                    <td>41</td>
+                    <td>12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 6 (shape): repeated objects. Same as for subjects above, but for objects. There are much less
+              cases of repeated objects, so there are only two categories for this selection, unique_objects and
+              some_objects_repeated; for the latter, we have up to 3 coreferring objects in English, and XXX in Russian.
+            </p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Max num. of repeated objects</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>unique_objects</td>
+                    <td>1654</td>
+                    <td>1099</td>
+                  </tr>
+                  <tr>
+                    <td>some_objects_same</td>
+                    <td>125</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 7 (shape): repeated properties. Same as for objects above, but for properties; up to two
+              properties can be the same in English, up to XXX in Russian.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Max num. of repeated properties</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>unique_properties</td>
+                    <td>1510</td>
+                    <td>986</td>
+                  </tr>
+                  <tr>
+                    <td>some_properties_same</td>
+                    <td>269</td>
+                    <td>116</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Selection 8 (shape): entities that appear both as subject and object. For this selection, we grouped
+              together the inputs in which no entity is found as both subject and object, and on the other side inputs
+              in which one or more entity/ies appear both as subject and as object. We found up to two such entities per
+              input in English, and up to XXX in Russian.</p>
+
+            <div class="table-wrapper">
+              <div class="toolbar">
+                <div class="expand-modal-icon" title="Click to expand table"></div>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Max num. of objects and subjects in common</th>
+                    <th>Frequency English</th>
+                    <th>Frequency Russian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>unique_properties</td>
+                    <td>1322</td>
+                    <td>642</td>
+                  </tr>
+                  <tr>
+                    <td>some_properties_same</td>
+                    <td>457</td>
+                    <td>460</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Split Motivation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspects of the model's generation capacities were the splits created to test?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Robustness</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Getting Started with the Task</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Pointers to Resources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Getting started with in-depth research on the task. Add relevant pointers to resources that
+                    researchers can consult when they want to get started digging deeper into the task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Dataset construction: <a href="https://www.aclweb.org/anthology/P17-1017/">main dataset paper</a>, <a
+                href="https://www.aclweb.org/anthology/C16-1141/">RDF triple extraction</a>, <a
+                href="https://www.aclweb.org/anthology/W19-3706/">Russian translation</a></p>
+            <p>WebNLG Challenge 2017: <a href="https://webnlg-challenge.loria.fr/challenge_2017/">webpage</a>, <a
+                href="https://www.aclweb.org/anthology/W17-3518/">paper</a></p>
+            <p>WebNLG Challenge 2020: <a href="https://webnlg-challenge.loria.fr/challenge_2020/">webpage</a>, <a
+                href="https://webnlg-challenge.loria.fr/files/2020.webnlg-papers.7.pdf">paper</a></p>
+            <p>Enriched version of WebNLG: <a href="https://github.com/ThiagoCF05/webnlg">repository</a>, <a
+                href="https://www.aclweb.org/anthology/W18-6521/">paper</a></p>
+            <p>Related research papers: <a href="https://webnlg-challenge.loria.fr/research/">webpage</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Previous Results
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Results</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Results</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Proposed Evaluation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the purpose of the metrics and evaluation methodology (including human
+                    evaluation) that the dataset creators used when introducing this task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>For both languages, the participating systems are automatically evaluated in a multi-reference scenario.
+              Each English hypothesis is compared to a maximum of 5 references, and each Russian one to a maximum of 7
+              references. On average, English data has 2.89 references per test instance, and Russian data has 2.52
+              references per instance.</p>
+            <p>In a human evaluation, example are uniformly sampled across size of triple sets and the following
+              dimensions are assessed (on MTurk and Yandex.Toloka):</p>
+            <ol>
+              <li>Data Coverage: Does the text include descriptions of all predicates presented in the data?</li>
+              <li>Relevance: Does the text describe only such predicates (with related subjects and objects), which are
+                found in the data?</li>
+              <li>Correctness: When describing predicates which are found in the data, does the text mention correct the
+                objects and adequately introduces the subject for this specific predicate?</li>
+              <li>Text Structure: Is the text grammatical, well-structured, written in acceptable English language?</li>
+              <li>Fluency: Is it possible to say that the text progresses naturally, forms a coherent whole and it is
+                easy to understand the text?</li>
+            </ol>
+            <p>For additional information like the instructions, we refer to the original paper.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Previous results available?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are previous results available?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Other Evaluation Approaches
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What evaluation approaches have others used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>We evaluated a wide range of models as part of the GEM benchmark.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Relevant Previous Results
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What are the most relevant previous results for this task/dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Results can be found on the <a href="https://gem-benchmark.com/results">GEM website</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes - related tasks</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Social Impact Observations
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Did any of these previous uses result in observations about the social impact of the systems? In
+                    particular, has there been work outlining the risks and limitations of the system? Provide links and
+                    descriptions here.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>We do not foresee any negative social impact in particular from this dataset or task.</p>
+            <p>Positive outlooks: Being able to generate good quality text from RDF data would permit, e.g., making this
+              data more accessible to lay users, enriching existing text with information drawn from knowledge bases
+              such as DBpedia or describing, comparing and relating entities present in these knowledge bases.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways members of different social categories are represented that can have harmful downstream
+                    consequences for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>yes</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Links and Summaries of Analysis Work
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide links to and summaries of works analyzing these biases.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>This dataset is created using DBpedia RDF triples which naturally exhibit biases that have been found to
+              exist in Wikipedia such as some forms of, e.g., gender bias.</p>
+            <p>The choice of <a
+                href="https://gitlab.com/shimorina/webnlg-dataset/-/blob/master/supplementary/entities_dict.json">entities</a>,
+              described by RDF trees, was not controlled. As such, they may contain gender biases; for instance, all the
+              astronauts described by RDF triples are male. Hence, in texts, pronouns <em>he/him/his</em> occur more
+              often. Similarly, entities can be related to the Western culture more often than to other cultures.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Are the Language Producers Representative of the Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the distribution of language producers in the dataset accurately represent the full
+                    distribution of speakers of the language world-wide? If not, how does it differ?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>In English, the dataset is limited to the language that crowdraters speak. In Russian, the language is
+              heavily biased by the translationese of the translation system that is post-edited.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Considerations for Using the Data
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>PII Risks and Liability</h4>
+              </li>
+              <li>
+                <h4>Licenses</h4>
+              </li>
+              <li>
+                <h4>Known Technical Limitations</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>PII Risks and Liability</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Potential PII Risk
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Considering your answers to the PII part of the Data Curation Section, describe any potential
+                    privacy to the data subjects and creators risks when using the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>There is no PII in this dataset.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Licenses</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Dataset
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Intended Use part of the Data Overview Section, which of the following
+                    best describe the copyright and licensing status of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>non-commercial use only</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Language Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Language part of the Data Curation Section, which of the following
+                    best describe the copyright and licensing status of the underlying language data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>public domain</code></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Known Technical Limitations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Technical Limitations
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe any known technical limitations, such as spurrious correlations, train/test overlap,
+                    annotation biases, or mis-annotations, and cite the works that first identified these limitations
+                    when possible.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The quality of the crowdsourced references is limited, in particular in terms of fluency/naturalness of
+              the collected texts.</p>
+            <p>Russian data was machine-translated and then post-edited by crowdworkers, so some examples may still
+              exhibit issues related to bad translations.</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Unsuited Applications
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>When using a model trained on this dataset in a setting where users or the public may interact with
+                    its predictions, what are some pitfalls to look out for? In particular, describe some applications
+                    of the general task featured in this dataset that its curation or properties make it less suitable
+                    for.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Only a limited number of domains are covered in this dataset. As a result, it cannot be used as a
+              general-purpose realizer.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

@@ -4,3 +4,828 @@ type: Summarization
 languages: French
 summary: OrangeSum is a French summarization dataset inspired by XSum. It features two subtasks - abstract generation and title generation. The data was sourced from "Orange Actu" articles between 2011 and 2020.
 ---
+<div class="datacard">
+
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>OrangeSum</h2>
+      <div class="summary-content">
+        <p>OrangeSum is a French summarization dataset inspired by XSum. It features two subtasks: abstract generation
+          and title generation. The data was sourced from "Orange Actu" articles between 2011 and 2020.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/OrangeSum')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/OrangeSum">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="https://aclanthology.org/2021.emnlp-main.740">ACL Anthology</a></p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>French</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>other: Other license</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://github.com/Tixierae/OrangeSum">Github</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://aclanthology.org/2021.emnlp-main.740">ACL Anthology</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{kamal-eddine-etal-2021-barthez,
+title = "{BART}hez: a Skilled Pretrained {F}rench Sequence-to-Sequence Model",
+author = "Kamal Eddine, Moussa  and
+Tixier, Antoine  and
+Vazirgiannis, Michalis",
+booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+month = nov,
+year = "2021",
+address = "Online and Punta Cana, Dominican Republic",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2021.emnlp-main.740",
+doi = "10.18653/v1/2021.emnlp-main.740",
+pages = "9369--9390",
+abstract = "Inductive transfer learning has taken the entire NLP field by storm, with models such as BERT and BART setting new state of the art on countless NLU tasks. However, most of the available models and research have been conducted for English. In this work, we introduce BARThez, the first large-scale pretrained seq2seq model for French. Being based on BART, BARThez is particularly well-suited for generative tasks. We evaluate BARThez on five discriminative tasks from the FLUE benchmark and two generative tasks from a novel summarization dataset, OrangeSum, that we created for this research. We show BARThez to be very competitive with state-of-the-art BERT-based French language models such as CamemBERT and FlauBERT. We also continue the pretraining of a multilingual BART on BARThez{'} corpus, and show our resulting model, mBARThez, to significantly boost BARThez{'} generative performance.",
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>French</code></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>other: Other license</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Summarization</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset in GEM
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Rationale for Inclusion in GEM</h4>
+              </li>
+              <li>
+                <h4>GEM-Specific Curation</h4>
+              </li>
+              <li>
+                <h4>Getting Started with the Task</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Rationale for Inclusion in GEM</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Similar Datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Do other datasets for the high level task exist?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>GEM-Specific Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Modificatied for GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Has the GEM version of the dataset been modified in any way (data, processing, splits) from the
+                    original curated data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Splits?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does GEM provide additional splits to the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Getting Started with the Task</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Pointers to Resources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Getting started with in-depth research on the task. Add relevant pointers to resources that
+                    researchers can consult when they want to get started digging deeper into the task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Papers about abstractive summarization using seq2seq models:</p>
+            <ul>
+              <li><a href="https://aclanthology.org/K16-1028/">Abstractive Text Summarization using Sequence-to-sequence
+                  RNNs and Beyond</a></li>
+              <li><a href="https://aclanthology.org/P17-1099/">Get To The Point: Summarization with Pointer-Generator
+                  Networks</a></li>
+              <li><a href="https://aclanthology.org/2020.acl-main.703">BART: Denoising Sequence-to-Sequence Pre-training
+                  for Natural Language Generation, Translation, and Comprehension</a></li>
+              <li><a href="https://aclanthology.org/2021.emnlp-main.740/">BARThez: a Skilled Pretrained French
+                  Sequence-to-Sequence Model</a></li>
+            </ul>
+            <p>Papers about (pretrained) Transformers:</p>
+            <ul>
+              <li><a
+                  href="https://papers.nips.cc/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html">Attention
+                  is All you Need</a></li>
+              <li><a href="https://aclanthology.org/N19-1423/">BERT: Pre-training of Deep Bidirectional Transformers for
+                  Language Understanding</a></li>
+            </ul>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Technical Terms
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Technical terms used in this card and the dataset and their definitions</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No unique technical words in this data card.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Previous Results
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Results</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Results</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Measured Model Abilities
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The ability of the model to generate human like titles and abstracts for given news articles.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Metrics
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What metrics are typically used for this task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>ROUGE</code>, <code>BERT-Score</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Proposed Evaluation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the purpose of the metrics and evaluation methodology (including human
+                    evaluation) that the dataset creators used when introducing this task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Automatic Evaluation: Rouge-1, Rouge-2, RougeL and BERTScore were used.</p>
+            <p>Human evalutaion: a human evaluation study was conducted with 11 French native speakers. The evaluators
+              were PhD students from the computer science department of the university of the authors, working in NLP
+              and other fields of AI. They volunteered after receiving an email announcement. the best-Worst Scaling
+              (Louviere et al.,2015) was used. Two summaries from two different systems, along with their input
+              document, were presented to a human annotator who had to decide which one was better. The evaluators were
+              asked to base their judgments on accuracy (does the summary contain accurate facts?), informativeness (is
+              important in-formation captured?) and fluency (is the summary written in well-formed French?).</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Previous results available?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are previous results available?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways members of different social categories are represented that can have harmful downstream
+                    consequences for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Are the Language Producers Representative of the Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the distribution of language producers in the dataset accurately represent the full
+                    distribution of speakers of the language world-wide? If not, how does it differ?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset contains news articles written by professional authors.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Considerations for Using the Data
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>PII Risks and Liability</h4>
+              </li>
+              <li>
+                <h4>Licenses</h4>
+              </li>
+              <li>
+                <h4>Known Technical Limitations</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>PII Risks and Liability</h4>
+
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Licenses</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Dataset
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Intended Use part of the Data Overview Section, which of the following
+                    best describe the copyright and licensing status of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Language Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Language part of the Data Curation Section, which of the following
+                    best describe the copyright and licensing status of the underlying language data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>open license - commercial use allowed</code></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Known Technical Limitations</h4>
+
+
+      </div>
+    </div>
+  </section>
+</div>
