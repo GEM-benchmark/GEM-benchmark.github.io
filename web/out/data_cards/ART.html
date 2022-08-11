@@ -1,1 +1,1507 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM ART</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/a3e0e142709ba87c.css" as="style"/><link rel="stylesheet" href="/_next/static/css/a3e0e142709ba87c.css" data-n-g=""/><link rel="preload" href="/_next/static/css/9c6cbdf6de0d7f7f.css" as="style"/><link rel="stylesheet" href="/_next/static/css/9c6cbdf6de0d7f7f.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-802c8e53e523ea8b.js" defer=""></script><script src="/_next/static/chunks/framework-a87821de553db91d.js" defer=""></script><script src="/_next/static/chunks/main-6dfdacc79861396c.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f4e7aa7b46503ccf.js" defer=""></script><script src="/_next/static/chunks/cb1608f2-4ba41bd4c311e4ed.js" defer=""></script><script src="/_next/static/chunks/50-1fbacdd54a295188.js" defer=""></script><script src="/_next/static/chunks/pages/data_cards/%5Bid%5D-738908caad532360.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_buildManifest.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_ssgManifest.js" defer=""></script><script src="/_next/static/83b5H4Uaw7WttxxI8tnGY/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__qqb_S undefined"><header class="layout_header__kY0Lt"><div class="navbar_navwrapper__PQ35R"><div class="navbar_gradbar__2_FPI"></div><nav class="navbar_navbar__9q1fQ"><span class="utils_headingLg__5535D navbar_navbarlogo__R_s98"><a href="/">GEM BENCHMARK</a></span><div class="navbar_menutoggle__XS8Qx" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 navbar_bar___PSVO" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><ul><li class="navbar_navitem__wFPZL navbar_pushright__cG1uq"><a href="/resources">Resources</a></li><li class="navbar_navitem__wFPZL"><a href="/data_cards">Data Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/model_cards">Model Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/tutorials">tutorials</a></li><li class="navbar_navitem__wFPZL"><a href="/results">Results</a></li><li class="navbar_navitem__wFPZL"><a href="/papers">Papers</a></li><li class="navbar_navitem__wFPZL"><a href="/team">Team</a></li><li class="navbar_navitem__wFPZL"><a href="/workshop">Workshop</a></li></ul></nav></div></header><div class="layout_container__fbLkO layout_wideContainer__TSLbJ"><main><article><a href="/data_cards"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 utils_icon__9sxFf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a><span class="utils_spacer__AJA7_"></span><span class="utils_headingXl__u25Y2">ART</span><span class="utils_smallSpace__n1Oyc"></span><span class="utils_lightText__eUzGY">Reasoning</span><iframe title="iframe" src="/cards/ART.html" style="width:1px;min-width:100%" frameBorder="0"></iframe></article></main><div class="layout_push__2FFZa"></div></div><footer class="layout_footer__dka_2 utils_eggshell__LF2UE"><span class="layout_backToHome__9sjx_"><a href="/">← Home</a></span><span>If you have any questions, please join our <!-- --><a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__FmNQy">google group</a> for support.<!-- --></span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"taskData":{"id":"ART","contentHtml":"","title":"ART","type":"Reasoning","languages":"English","summary":"Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.","This data loader focuses on abductive NLG":"a conditional English generation task for explaining given observations in natural language."}},"__N_SSG":true},"page":"/data_cards/[id]","query":{"id":"ART"},"buildId":"83b5H4Uaw7WttxxI8tnGY","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM ART</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/8f219039bec51df6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8f219039bec51df6.css" data-n-g=""/><link rel="preload" href="/_next/static/css/9c6cbdf6de0d7f7f.css" as="style"/><link rel="stylesheet" href="/_next/static/css/9c6cbdf6de0d7f7f.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-8a2bbac2bbd375c6.js" defer=""></script><script src="/_next/static/chunks/framework-a87821de553db91d.js" defer=""></script><script src="/_next/static/chunks/main-6dfdacc79861396c.js" defer=""></script><script src="/_next/static/chunks/pages/_app-cde1c1d18a7915f1.js" defer=""></script><script src="/_next/static/chunks/cb1608f2-4ba41bd4c311e4ed.js" defer=""></script><script src="/_next/static/chunks/50-1fbacdd54a295188.js" defer=""></script><script src="/_next/static/chunks/pages/data_cards/%5Bid%5D-a5ea6b44c21be4c4.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_buildManifest.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_ssgManifest.js" defer=""></script><script src="/_next/static/yxHKZ8AjNlaFByMXSfhF5/_middlewareManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__qqb_S undefined"><header class="layout_header__kY0Lt"><div class="navbar_navwrapper__PQ35R"><div class="navbar_gradbar__2_FPI"></div><nav class="navbar_navbar__9q1fQ"><span class="utils_headingLg__5535D navbar_navbarlogo__R_s98"><a href="/">GEM BENCHMARK</a></span><div class="navbar_menutoggle__XS8Qx" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 navbar_bar___PSVO" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></div><ul><li class="navbar_navitem__wFPZL navbar_pushright__cG1uq"><a href="/resources">Resources</a></li><li class="navbar_navitem__wFPZL"><a href="/data_cards">Data Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/model_cards">Model Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/tutorials">tutorials</a></li><li class="navbar_navitem__wFPZL"><a href="/results">Results</a></li><li class="navbar_navitem__wFPZL"><a href="/papers">Papers</a></li><li class="navbar_navitem__wFPZL"><a href="/team">Team</a></li><li class="navbar_navitem__wFPZL"><a href="/workshop">Workshop</a></li></ul></nav></div></header><div class="layout_container__fbLkO layout_wideContainer__TSLbJ"><main><article><a href="/data_cards"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left fa-w-14 utils_icon__9sxFf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path></svg></a><span class="utils_spacer__AJA7_"></span><span class="utils_headingXl__u25Y2">ART</span><span class="utils_smallSpace__n1Oyc"></span><span class="utils_lightText__eUzGY">Reasoning</span><div class="datacard-wrapper"><div class="datacard">
+  <section class="datacard-section">
+    <div class="datacard-summary">
+      <h2>ART</h2>
+      <div class="summary-content">
+        <p>Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in
+          a
+          mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief
+          broke into her house and caused the mess, as the most plausible explanation.
+          This data loader focuses on abductive NLG: a conditional English generation task for explaining given
+          observations in natural language.</p>
+        <p>You can load the dataset via:</p>
+
+        <div class="code-wrapper">
+          <div class="toolbar">
+            <div class="copy-icon" title="Click to copy code block"></div>
+            <div class="expand-modal-icon" title="Click to expand code block"></div>
+          </div>
+          <pre><code>import datasets
+data = datasets.load_dataset('GEM/ART')
+</code></pre>
+        </div>
+
+        <p>The data loader can be found <a href="https://huggingface.co/datasets/GEM/ART">here</a>.</p>
+      </div>
+    </div>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field">
+
+        <h5>website
+
+        </h5>
+
+        <p><a href="http://abductivecommonsense.xyz/">Website</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>paper
+
+        </h5>
+
+        <p><a href="https://openreview.net/pdf?id=Byg1v1HKDB">OpenReview</a></p>
+      </div>
+
+      <div class="datacard-field">
+
+        <h5>authors
+
+        </h5>
+
+        <p>Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari
+          Holtzman
+          (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi (AI2, UW)</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="datacard-section quick">
+    <h3 class="section-title">Quick-Use</h3>
+
+    <div class="datacard-field-wrapper">
+
+      <div class="datacard-field periscope">
+
+        <h5>Contact Name
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>If known, provide the name of at least one person the reader can contact for questions about the
+                dataset.
+              </p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>Chandra Bhagavatulla</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Multilingual?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Is the dataset multilingual?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Covered Languages
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What languages/dialects are covered in the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p><code>English</code></p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>License
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>What is the license of the dataset?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>apache-2.0: Apache License 2.0</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Additional Annotations?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the dataset have additional annotations for each instance?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>automatically created</p>
+      </div>
+
+      <div class="datacard-field telescope">
+
+        <h5>Contains PII?
+
+          <div class="tooltip">
+            <div class="tooltip-icon"></div>
+            <div class="tooltip-text">
+              <p>Does the source language data likely contain Personal Identifying Information about the data creators
+                or
+                subjects?</p>
+            </div>
+          </div>
+
+        </h5>
+
+        <p>no PII</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Overview
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Where to find the Data and its Documentation</h4>
+              </li>
+              <li>
+                <h4>Languages and Intended Use</h4>
+              </li>
+              <li>
+                <h4>Credit</h4>
+              </li>
+              <li>
+                <h4>Dataset Structure</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Where to find the Data and its Documentation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Webpage
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the webpage for the dataset (if it exists)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="http://abductivecommonsense.xyz/">Website</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Download
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to where the original dataset is hosted?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a
+                href="https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip">Google
+                Storage</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Paper
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the link to the paper describing the dataset (open access preferred)?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="https://openreview.net/pdf?id=Byg1v1HKDB">OpenReview</a></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>BibTex
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide the BibTex-formatted reference for the dataset. Please use the correct published version
+                    (ACL
+                    anthology, etc.) instead of google scholar created Bibtex.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>@inproceedings{
+Bhagavatula2020Abductive,
+title={Abductive Commonsense Reasoning},
+author={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},
+booktitle={International Conference on Learning Representations},
+year={2020},
+url={https://openreview.net/forum?id=Byg1v1HKDB}
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Name
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the name of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Chandra Bhagavatulla</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Contact Email
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If known, provide the email of at least one person the reader can contact for questions about the
+                    dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><a href="mailto:chandrab@allenai.org">chandrab@allenai.org</a></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Has a Leaderboard?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have an active leaderboard?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Languages and Intended Use</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Multilingual?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset multilingual?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Covered Languages
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What languages/dialects are covered in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>English</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Whose Language?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Whose language is in the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Crowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>License
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the license of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>apache-2.0: Apache License 2.0</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Intended Use
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What is the intended use of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>To study the viability of language-based abductive reasoning. Training and evaluating models to generate
+              a
+              plausible hypothesis to explain two given observations.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Primary Task
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What primary task does the dataset support?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Reasoning</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Credit</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Curation Organization Type(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>In what kind of organization did the dataset curation happen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>industry</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Curation Organization(s)
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Name the organization(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Allen Institute for AI</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Dataset Creators
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who created the original dataset? List the people involved in collecting the dataset and their
+                    affiliation(s).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Chandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari
+              Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi (AI2, UW)
+            </p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Funding
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who funded the data creation?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Allen Institute for AI</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Who added the Dataset to GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Who contributed to the data card and adding the dataset to GEM? List the people+affiliations
+                    involved
+                    in creating this data card and who helped integrate this dataset into GEM.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Chandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Dataset Structure</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Fields
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>List and describe the fields present in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li><code>observation_1</code>: A string describing an observation / event.</li>
+              <li><code>observation_2</code>: A string describing an observation / event.</li>
+              <li><code>label</code>: A string that plausibly explains why observation_1 and observation_2 might have
+                happened.</li>
+            </ul>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>How were labels chosen?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How were the labels chosen?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Explanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template
+              designed by the creators of the dataset.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Example Instance
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a JSON formatted example of a typical instance in the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+
+            <div class="code-wrapper">
+              <div class="toolbar">
+                <div class="copy-icon" title="Click to copy code block"></div>
+                <div class="expand-modal-icon" title="Click to expand code block"></div>
+              </div>
+              <pre><code>{
+'gem_id': 'GEM-ART-validation-0',
+'observation_1': 'Stephen was at a party.',
+'observation_2': 'He checked it but it was completely broken.',
+'label': 'Stephen knocked over a vase while drunk.'
+}
+</code></pre>
+            </div>
+
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Data Splits
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Describe and name the splits in the dataset if there are more than one.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li><code>train</code>: Consists of training instances.</li>
+              <li><code>dev</code>: Consists of dev instances.</li>
+              <li><code>test</code>: Consists of test instances.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset in GEM
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Rationale for Inclusion in GEM</h4>
+              </li>
+              <li>
+                <h4>GEM-Specific Curation</h4>
+              </li>
+              <li>
+                <h4>Getting Started with the Task</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Rationale for Inclusion in GEM</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Why is the Dataset in GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What does this dataset contribute toward better generation evaluation and why is it part of GEM?
+                  </p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Abductive reasoning is a crucial capability of humans and ART is the first dataset curated to study
+              language-based abductive reasoning.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Similar Datasets
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Do other datasets for the high level task exist?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Ability that the Dataset measures
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Whether models can reason abductively about a given pair of observations.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>GEM-Specific Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Modificatied for GEM?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Has the GEM version of the dataset been modified in any way (data, processing, splits) from the
+                    original curated data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Splits?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does GEM provide additional splits to the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Getting Started with the Task</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Pointers to Resources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Getting started with in-depth research on the task. Add relevant pointers to resources that
+                    researchers can consult when they want to get started digging deeper into the task.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <ul>
+              <li><a href="https://arxiv.org/abs/1908.05739">Paper</a></li>
+              <li><a href="https://github.com/allenai/abductive-commonsense-reasoning">Code</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Previous Results
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Results</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Results</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Measured Model Abilities
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What aspect of model ability can be measured with this dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Whether models can reason abductively about a given pair of observations.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Metrics
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What metrics are typically used for this task?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>BLEU</code>, <code>BERT-Score</code>, <code>ROUGE</code></p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Previous results available?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are previous results available?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Dataset Curation
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Original Curation</h4>
+              </li>
+              <li>
+                <h4>Language Data</h4>
+              </li>
+              <li>
+                <h4>Structured Annotations</h4>
+              </li>
+              <li>
+                <h4>Consent</h4>
+              </li>
+              <li>
+                <h4>Private Identifying Information (PII)</h4>
+              </li>
+              <li>
+                <h4>Maintenance</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Original Curation</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Sourced from Different Sources
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Is the dataset aggregated from different data sources?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Language Data</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>How was Language Data Obtained?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>How was the language data obtained?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Crowdsourced</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Where was it crowdsourced?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>If crowdsourced, where from?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>Amazon Mechanical Turk</code></p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Language Producers
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What further information do we have on the language producers?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Language producers were English speakers in U.S., Canada, U.K and Australia.</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Topics Covered
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the language in the dataset focus on specific topics? How would you describe them?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>No</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Data Validation
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was the text validated by a different worker or a data curator?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>validated by crowdworker</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Was Data Filtered?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Were text instances selected or filtered?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>algorithmically</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Filter Criteria
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>What were the selection criteria?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Adversarial filtering algorithm as described in the <a href="https://arxiv.org/abs/1908.05739">paper</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Structured Annotations</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Additional Annotations?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the dataset have additional annotations for each instance?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>automatically created</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Annotation Service?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was an annotation service used?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+
+          <div class="datacard-field microscope">
+
+            <h5>Annotation Values
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Purpose and values for each annotation</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>Each observation is associated with a list of COMET (<a
+                href="https://arxiv.org/abs/1906.05317">https://arxiv.org/abs/1906.05317</a>) inferences.</p>
+          </div>
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Quality Control?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Quality control measures?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>none</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Consent</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Consent Policy?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Was there a consent policy involved when gathering the data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Private Identifying Information (PII)</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Contains PII?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the source language data likely contain Personal Identifying Information about the data
+                    creators
+                    or subjects?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no PII</p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Justification for no PII
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Provide a justification for selecting <code>no PII</code> above.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>The dataset contains day-to-day events. It does not contain names, emails, addresses etc.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Maintenance</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Maintenance Plan?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does the original dataset have a maintenance plan?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Broader Social Context
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>Previous Work on the Social Impact of the Dataset</h4>
+              </li>
+              <li>
+                <h4>Impact on Under-Served Communities</h4>
+              </li>
+              <li>
+                <h4>Discussion of Biases</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>Previous Work on the Social Impact of the Dataset</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Usage of Models based on the Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are you aware of cases where models trained on the task featured in this dataset ore related tasks
+                    have been used in automated systems?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Impact on Under-Served Communities</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Addresses needs of underserved Communities?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Does this dataset address the needs of communities that are traditionally underserved in language
+                    technology, and particularly language generation technology? Communities may be underserved for
+                    exemple because their language, language variety, or social or geographical context is
+                    underepresented
+                    in NLP and NLG resources (datasets and models).</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Discussion of Biases</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field telescope">
+
+            <h5>Any Documented Social Biases?
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Are there documented social biases in the dataset? Biases in this context are variations in the
+                    ways
+                    members of different social categories are represented that can have harmful downstream consequences
+                    for members of the more disadvantaged group.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>no</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="datacard-section open">
+
+    <div class="datacard-section-preview">
+      <h3>Considerations for Using the Data
+
+        <div class="tooltip">
+          <div class="tooltip-icon"></div>
+          <div class="tooltip-text">
+            <ul>
+              <li>
+                <h4>PII Risks and Liability</h4>
+              </li>
+              <li>
+                <h4>Licenses</h4>
+              </li>
+              <li>
+                <h4>Known Technical Limitations</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </h3>
+      <button class="expand-button">
+        <svg fill="#3c4f50" height="24px" viewBox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="datacard-collapsible">
+
+
+
+      <div class="datacard-subsection">
+        <h4>PII Risks and Liability</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field microscope">
+
+            <h5>Potential PII Risk
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Considering your answers to the PII part of the Data Curation Section, describe any potential
+                    privacy
+                    to the data subjects and creators risks when using the dataset.</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p>None</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Licenses</h4>
+
+
+        <div class="datacard-field-wrapper">
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Dataset
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Intended Use part of the Data Overview Section, which of the following
+                    best describe the copyright and licensing status of the dataset?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>public domain</code></p>
+          </div>
+
+          <div class="datacard-field periscope">
+
+            <h5>Copyright Restrictions on the Language Data
+
+              <div class="tooltip">
+                <div class="tooltip-icon"></div>
+                <div class="tooltip-text">
+                  <p>Based on your answers in the Language part of the Data Curation Section, which of the following
+                    best
+                    describe the copyright and licensing status of the underlying language data?</p>
+                </div>
+              </div>
+
+            </h5>
+
+            <p><code>public domain</code></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="datacard-subsection">
+        <h4>Known Technical Limitations</h4>
+
+
+      </div>
+    </div>
+  </section>
+</div></div></article></main><div class="layout_push__2FFZa"></div></div><footer class="layout_footer__dka_2 utils_eggshell__LF2UE"><span class="layout_backToHome__9sjx_"><a href="/">← Home</a></span><span>If you have any questions, please join our <!-- --><a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__FmNQy">google group</a> for support.<!-- --></span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"taskData":{"id":"ART","contentHtml":"\u003cdiv class=\"datacard\"\u003e\n  \u003csection class=\"datacard-section\"\u003e\n    \u003cdiv class=\"datacard-summary\"\u003e\n      \u003ch2\u003eART\u003c/h2\u003e\n      \u003cdiv class=\"summary-content\"\u003e\n        \u003cp\u003eAbductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in\n          a\n          mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief\n          broke into her house and caused the mess, as the most plausible explanation.\n          This data loader focuses on abductive NLG: a conditional English generation task for explaining given\n          observations in natural language.\u003c/p\u003e\n        \u003cp\u003eYou can load the dataset via:\u003c/p\u003e\n\n        \u003cdiv class=\"code-wrapper\"\u003e\n          \u003cdiv class=\"toolbar\"\u003e\n            \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n          \u003c/div\u003e\n          \u003cpre\u003e\u003ccode\u003eimport datasets\ndata = datasets.load_dataset('GEM/ART')\n\u003c/code\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n\n        \u003cp\u003eThe data loader can be found \u003ca href=\"https://huggingface.co/datasets/GEM/ART\"\u003ehere\u003c/a\u003e.\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003ewebsite\n\n        \u003c/h5\u003e\n\n        \u003cp\u003e\u003ca href=\"http://abductivecommonsense.xyz/\"\u003eWebsite\u003c/a\u003e\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003epaper\n\n        \u003c/h5\u003e\n\n        \u003cp\u003e\u003ca href=\"https://openreview.net/pdf?id=Byg1v1HKDB\"\u003eOpenReview\u003c/a\u003e\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field\"\u003e\n\n        \u003ch5\u003eauthors\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eChandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari\n          Holtzman\n          (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi (AI2, UW)\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section quick\"\u003e\n    \u003ch3 class=\"section-title\"\u003eQuick-Use\u003c/h3\u003e\n\n    \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n      \u003cdiv class=\"datacard-field periscope\"\u003e\n\n        \u003ch5\u003eContact Name\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eIf known, provide the name of at least one person the reader can contact for questions about the\n                dataset.\n              \u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eChandra Bhagavatulla\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eMultilingual?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eIs the dataset multilingual?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eno\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eCovered Languages\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eWhat languages/dialects are covered in the dataset?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003e\u003ccode\u003eEnglish\u003c/code\u003e\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eLicense\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eWhat is the license of the dataset?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eapache-2.0: Apache License 2.0\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eAdditional Annotations?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eDoes the dataset have additional annotations for each instance?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eautomatically created\u003c/p\u003e\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-field telescope\"\u003e\n\n        \u003ch5\u003eContains PII?\n\n          \u003cdiv class=\"tooltip\"\u003e\n            \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n            \u003cdiv class=\"tooltip-text\"\u003e\n              \u003cp\u003eDoes the source language data likely contain Personal Identifying Information about the data creators\n                or\n                subjects?\u003c/p\u003e\n            \u003c/div\u003e\n          \u003c/div\u003e\n\n        \u003c/h5\u003e\n\n        \u003cp\u003eno PII\u003c/p\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n\n  \u003c/section\u003e\n\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset Overview\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eWhere to find the Data and its Documentation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLanguages and Intended Use\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eCredit\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eDataset Structure\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eWhere to find the Data and its Documentation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eWebpage\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the webpage for the dataset (if it exists)?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"http://abductivecommonsense.xyz/\"\u003eWebsite\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eDownload\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the link to where the original dataset is hosted?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca\n                href=\"https://storage.googleapis.com/ai2-mosaic/public/abductive-commonsense-reasoning-iclr2020/anlg.zip\"\u003eGoogle\n                Storage\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePaper\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the link to the paper describing the dataset (open access preferred)?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"https://openreview.net/pdf?id=Byg1v1HKDB\"\u003eOpenReview\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eBibTex\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide the BibTex-formatted reference for the dataset. Please use the correct published version\n                    (ACL\n                    anthology, etc.) instead of google scholar created Bibtex.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n\n            \u003cdiv class=\"code-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cpre\u003e\u003ccode\u003e@inproceedings{\nBhagavatula2020Abductive,\ntitle={Abductive Commonsense Reasoning},\nauthor={Chandra Bhagavatula and Ronan Le Bras and Chaitanya Malaviya and Keisuke Sakaguchi and Ari Holtzman and Hannah Rashkin and Doug Downey and Wen-tau Yih and Yejin Choi},\nbooktitle={International Conference on Learning Representations},\nyear={2020},\nurl={https://openreview.net/forum?id=Byg1v1HKDB}\n}\n\u003c/code\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eContact Name\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf known, provide the name of at least one person the reader can contact for questions about the\n                    dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eChandra Bhagavatulla\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eContact Email\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf known, provide the email of at least one person the reader can contact for questions about the\n                    dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ca href=\"mailto:chandrab@allenai.org\"\u003echandrab@allenai.org\u003c/a\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eHas a Leaderboard?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the dataset have an active leaderboard?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLanguages and Intended Use\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eMultilingual?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIs the dataset multilingual?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eCovered Languages\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat languages/dialects are covered in the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eEnglish\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eWhose Language?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhose language is in the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eCrowdworkers on the Amazon Mechanical Turk platform based in the U.S, Canada, U.K and Australia.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eLicense\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the license of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eapache-2.0: Apache License 2.0\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eIntended Use\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat is the intended use of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eTo study the viability of language-based abductive reasoning. Training and evaluating models to generate\n              a\n              plausible hypothesis to explain two given observations.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePrimary Task\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat primary task does the dataset support?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eReasoning\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eCredit\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eCuration Organization Type(s)\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIn what kind of organization did the dataset curation happen?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eindustry\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCuration Organization(s)\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eName the organization(s).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eAllen Institute for AI\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eDataset Creators\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWho created the original dataset? List the people involved in collecting the dataset and their\n                    affiliation(s).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eChandra Bhagavatula (AI2), Ronan Le Bras (AI2), Chaitanya Malaviya (AI2), Keisuke Sakaguchi (AI2), Ari\n              Holtzman (AI2, UW), Hannah Rashkin (AI2, UW), Doug Downey (AI2), Wen-tau Yih (AI2), Yejin Choi (AI2, UW)\n            \u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eFunding\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWho funded the data creation?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eAllen Institute for AI\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eWho added the Dataset to GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWho contributed to the data card and adding the dataset to GEM? List the people+affiliations\n                    involved\n                    in creating this data card and who helped integrate this dataset into GEM.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eChandra Bhagavatula (AI2), Ronan LeBras (AI2), Aman Madaan (CMU), Nico Daheim (RWTH Aachen University)\n            \u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eDataset Structure\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eData Fields\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eList and describe the fields present in the dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cul\u003e\n              \u003cli\u003e\u003ccode\u003eobservation_1\u003c/code\u003e: A string describing an observation / event.\u003c/li\u003e\n              \u003cli\u003e\u003ccode\u003eobservation_2\u003c/code\u003e: A string describing an observation / event.\u003c/li\u003e\n              \u003cli\u003e\u003ccode\u003elabel\u003c/code\u003e: A string that plausibly explains why observation_1 and observation_2 might have\n                happened.\u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eHow were labels chosen?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHow were the labels chosen?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eExplanations were authored by crowdworkers on the Amazon Mechanical Turk platform using a custom template\n              designed by the creators of the dataset.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eExample Instance\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a JSON formatted example of a typical instance in the dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n\n            \u003cdiv class=\"code-wrapper\"\u003e\n              \u003cdiv class=\"toolbar\"\u003e\n                \u003cdiv class=\"copy-icon\" title=\"Click to copy code block\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"expand-modal-icon\" title=\"Click to expand code block\"\u003e\u003c/div\u003e\n              \u003c/div\u003e\n              \u003cpre\u003e\u003ccode\u003e{\n'gem_id': 'GEM-ART-validation-0',\n'observation_1': 'Stephen was at a party.',\n'observation_2': 'He checked it but it was completely broken.',\n'label': 'Stephen knocked over a vase while drunk.'\n}\n\u003c/code\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eData Splits\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDescribe and name the splits in the dataset if there are more than one.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cul\u003e\n              \u003cli\u003e\u003ccode\u003etrain\u003c/code\u003e: Consists of training instances.\u003c/li\u003e\n              \u003cli\u003e\u003ccode\u003edev\u003c/code\u003e: Consists of dev instances.\u003c/li\u003e\n              \u003cli\u003e\u003ccode\u003etest\u003c/code\u003e: Consists of test instances.\u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset in GEM\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eRationale for Inclusion in GEM\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eGEM-Specific Curation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eGetting Started with the Task\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eRationale for Inclusion in GEM\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eWhy is the Dataset in GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat does this dataset contribute toward better generation evaluation and why is it part of GEM?\n                  \u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eAbductive reasoning is a crucial capability of humans and ART is the first dataset curated to study\n              language-based abductive reasoning.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eSimilar Datasets\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDo other datasets for the high level task exist?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eAbility that the Dataset measures\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat aspect of model ability can be measured with this dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eWhether models can reason abductively about a given pair of observations.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eGEM-Specific Curation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eModificatied for GEM?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHas the GEM version of the dataset been modified in any way (data, processing, splits) from the\n                    original curated data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAdditional Splits?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes GEM provide additional splits to the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eGetting Started with the Task\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003ePointers to Resources\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eGetting started with in-depth research on the task. Add relevant pointers to resources that\n                    researchers can consult when they want to get started digging deeper into the task.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cul\u003e\n              \u003cli\u003e\u003ca href=\"https://arxiv.org/abs/1908.05739\"\u003ePaper\u003c/a\u003e\u003c/li\u003e\n              \u003cli\u003e\u003ca href=\"https://github.com/allenai/abductive-commonsense-reasoning\"\u003eCode\u003c/a\u003e\u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003ePrevious Results\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrevious Results\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrevious Results\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eMeasured Model Abilities\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat aspect of model ability can be measured with this dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eWhether models can reason abductively about a given pair of observations.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eMetrics\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat metrics are typically used for this task?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eBLEU\u003c/code\u003e, \u003ccode\u003eBERT-Score\u003c/code\u003e, \u003ccode\u003eROUGE\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003ePrevious results available?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre previous results available?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eDataset Curation\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003eOriginal Curation\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLanguage Data\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eStructured Annotations\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eConsent\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrivate Identifying Information (PII)\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eMaintenance\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eOriginal Curation\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eSourced from Different Sources\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIs the dataset aggregated from different data sources?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLanguage Data\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eHow was Language Data Obtained?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eHow was the language data obtained?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eCrowdsourced\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eWhere was it crowdsourced?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eIf crowdsourced, where from?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003eAmazon Mechanical Turk\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eLanguage Producers\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat further information do we have on the language producers?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eLanguage producers were English speakers in U.S., Canada, U.K and Australia.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eTopics Covered\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the language in the dataset focus on specific topics? How would you describe them?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eNo\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eData Validation\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas the text validated by a different worker or a data curator?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003evalidated by crowdworker\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eWas Data Filtered?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWere text instances selected or filtered?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003ealgorithmically\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eFilter Criteria\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWhat were the selection criteria?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eAdversarial filtering algorithm as described in the \u003ca href=\"https://arxiv.org/abs/1908.05739\"\u003epaper\u003c/a\u003e\n            \u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eStructured Annotations\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAdditional Annotations?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the dataset have additional annotations for each instance?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eautomatically created\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAnnotation Service?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas an annotation service used?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003eAnnotation Values\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003ePurpose and values for each annotation\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eEach observation is associated with a list of COMET (\u003ca\n                href=\"https://arxiv.org/abs/1906.05317\"\u003ehttps://arxiv.org/abs/1906.05317\u003c/a\u003e) inferences.\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Quality Control?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eQuality control measures?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003enone\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eConsent\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Consent Policy?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eWas there a consent policy involved when gathering the data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrivate Identifying Information (PII)\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eContains PII?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the source language data likely contain Personal Identifying Information about the data\n                    creators\n                    or subjects?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno PII\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eJustification for no PII\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eProvide a justification for selecting \u003ccode\u003eno PII\u003c/code\u003e above.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eThe dataset contains day-to-day events. It does not contain names, emails, addresses etc.\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eMaintenance\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Maintenance Plan?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes the original dataset have a maintenance plan?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eBroader Social Context\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePrevious Work on the Social Impact of the Dataset\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eImpact on Under-Served Communities\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eDiscussion of Biases\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePrevious Work on the Social Impact of the Dataset\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eUsage of Models based on the Data\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre you aware of cases where models trained on the task featured in this dataset ore related tasks\n                    have been used in automated systems?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eImpact on Under-Served Communities\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAddresses needs of underserved Communities?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eDoes this dataset address the needs of communities that are traditionally underserved in language\n                    technology, and particularly language generation technology? Communities may be underserved for\n                    exemple because their language, language variety, or social or geographical context is\n                    underepresented\n                    in NLP and NLG resources (datasets and models).\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eDiscussion of Biases\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field telescope\"\u003e\n\n            \u003ch5\u003eAny Documented Social Biases?\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eAre there documented social biases in the dataset? Biases in this context are variations in the\n                    ways\n                    members of different social categories are represented that can have harmful downstream consequences\n                    for members of the more disadvantaged group.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eno\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\n  \u003csection class=\"datacard-section open\"\u003e\n\n    \u003cdiv class=\"datacard-section-preview\"\u003e\n      \u003ch3\u003eConsiderations for Using the Data\n\n        \u003cdiv class=\"tooltip\"\u003e\n          \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n          \u003cdiv class=\"tooltip-text\"\u003e\n            \u003cul\u003e\n              \u003cli\u003e\n                \u003ch4\u003ePII Risks and Liability\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eLicenses\u003c/h4\u003e\n              \u003c/li\u003e\n              \u003cli\u003e\n                \u003ch4\u003eKnown Technical Limitations\u003c/h4\u003e\n              \u003c/li\u003e\n            \u003c/ul\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/h3\u003e\n      \u003cbutton class=\"expand-button\"\u003e\n        \u003csvg fill=\"#3c4f50\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\u003e\n          \u003cpath d=\"M0 0h24v24H0z\" fill=\"none\"\u003e\u003c/path\u003e\n          \u003cpath d=\"M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z\"\u003e\n          \u003c/path\u003e\n        \u003c/svg\u003e\n      \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\"datacard-collapsible\"\u003e\n\n\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003ePII Risks and Liability\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field microscope\"\u003e\n\n            \u003ch5\u003ePotential PII Risk\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eConsidering your answers to the PII part of the Data Curation Section, describe any potential\n                    privacy\n                    to the data subjects and creators risks when using the dataset.\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003eNone\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eLicenses\u003c/h4\u003e\n\n\n        \u003cdiv class=\"datacard-field-wrapper\"\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCopyright Restrictions on the Dataset\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eBased on your answers in the Intended Use part of the Data Overview Section, which of the following\n                    best describe the copyright and licensing status of the dataset?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003epublic domain\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n\n          \u003cdiv class=\"datacard-field periscope\"\u003e\n\n            \u003ch5\u003eCopyright Restrictions on the Language Data\n\n              \u003cdiv class=\"tooltip\"\u003e\n                \u003cdiv class=\"tooltip-icon\"\u003e\u003c/div\u003e\n                \u003cdiv class=\"tooltip-text\"\u003e\n                  \u003cp\u003eBased on your answers in the Language part of the Data Curation Section, which of the following\n                    best\n                    describe the copyright and licensing status of the underlying language data?\u003c/p\u003e\n                \u003c/div\u003e\n              \u003c/div\u003e\n\n            \u003c/h5\u003e\n\n            \u003cp\u003e\u003ccode\u003epublic domain\u003c/code\u003e\u003c/p\u003e\n          \u003c/div\u003e\n        \u003c/div\u003e\n\n      \u003c/div\u003e\n\n      \u003cdiv class=\"datacard-subsection\"\u003e\n        \u003ch4\u003eKnown Technical Limitations\u003c/h4\u003e\n\n\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/section\u003e\n\u003c/div\u003e","title":"ART","type":"Reasoning","languages":"English","summary":"Abductive reasoning is inference to the most plausible explanation. For example, if Jenny finds her house in a mess when she returns from work, and remembers that she left a window open, she can hypothesize that a thief broke into her house and caused the mess, as the most plausible explanation.","This data loader focuses on abductive NLG":"a conditional English generation task for explaining given observations in natural language."}},"__N_SSG":true},"page":"/data_cards/[id]","query":{"id":"ART"},"buildId":"yxHKZ8AjNlaFByMXSfhF5","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
