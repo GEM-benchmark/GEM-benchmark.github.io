@@ -33,15 +33,14 @@ We additionally invite presentations by authors of papers in the Findings of the
 ### Shared Task
 We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. Participants of the shared task are invited to submit a system description of 4-8 pages.
 
-More information to come soon!
 
 ### Important Dates
 
 Paper Submission Dates
-- 📅 7 September 2022: Workshop paper submission deadline if using Softconf 
+- 📅 <s>7</s> 21 September 2022: Workshop paper submission deadline if using Softconf 
 - 📅 2 October 2022:   Latest ARR commitment deadline 
-- 📅 9 October 2022:   Workshop paper notification deadline
-- 📅 16 October 2022:  Workshop paper camera ready deadline
+- 📅 <s>9</s> 16 October 2022:   Workshop paper notification deadline
+- 📅 <s>16</s> 23 October 2022:  Workshop paper camera ready deadline
 
 Workshop Dates
 - 📅 7-8 December 2022: Workshops
