@@ -31,16 +31,18 @@ You can either commit a paper reviewed through ARR at [here](https://openreview.
 We additionally invite presentations by authors of papers in the Findings of the EMNLP (details to be announced at a later date).
 
 ### Shared Task
-We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. Participants of the shared task are invited to submit a system description of 4-8 pages.
+We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. The Shared Task will be run "Backwards": the workshop will serve as a platform to pre-register your hypotheses. More info on how to participate to come!
 
 
 ### Important Dates
 
+Note: If you need any accomodations for the deadlines, please email gem-benchmark-chairs@googlegroups.com to reach us.
+
 Paper Submission Dates
 - 📅 ~~7~~ 21 September 2022: Workshop paper submission deadline if using Softconf
-- 📅 2 October 2022:   Latest ARR commitment deadline
-- 📅 ~~9~~ 16 October 2022:   Workshop paper notification deadline
-- 📅 ~~16~~ 23 October 2022:  Workshop paper camera ready deadline
+- 📅 ~~2~~ 17 October 2022:   Latest ARR commitment deadline
+- 📅 ~~9~~ 24 October 2022:   Workshop paper notification deadline
+- 📅 ~~16~~ 31 October 2022:  Workshop paper camera ready deadline
 
 Workshop Dates
 - 📅 7-8 December 2022: Workshops
