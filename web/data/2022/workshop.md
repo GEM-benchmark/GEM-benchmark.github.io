@@ -49,6 +49,16 @@ Timo Schick is a research scientist at FAIR working on few-shot learning in NLP.
 
 ### Keynote 3 - Emily Dinan
 
+#### Challenges in evaluating safety for LLMs
+
+**ABSTRACT**
+
+While research on large language models (LLMs) continues to accelerate, much recent work has called attention to anticipated risks and harms from their use in society. We will discuss challenges in evaluating the relative safety of these models as well as current approaches for doing so. Finally, we will highlight avenues for future research into evaluating and mitigating these harms.
+
+**BIO**
+
+Emily Dinan is a Research Engineer at FAIR (Meta AI) in New York. Her research interests include conversational AI, natural language processing, and safety and responsibility in these fields. Recently she has focused on methods for preventing conversational agents from reproducing biased, toxic, or otherwise harmful language. Prior to joining FAIR, she received her master's degree in Mathematics from the University of Washington.
+
 ## Sessions and Papers
 
 ### Talk Session 1
