@@ -1,521 +1,59 @@
-<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM Workshop 2022</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/c9a8729256cbce5b.css" as="style"/><link rel="stylesheet" href="/_next/static/css/c9a8729256cbce5b.css" data-n-g=""/><link rel="preload" href="/_next/static/css/3afc569b4d59368f.css" as="style"/><link rel="stylesheet" href="/_next/static/css/3afc569b4d59368f.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-fbb9b05bcd88a664.js" defer=""></script><script src="/_next/static/chunks/framework-4556c45dd113b893.js" defer=""></script><script src="/_next/static/chunks/main-76a6fa1fe29988c1.js" defer=""></script><script src="/_next/static/chunks/pages/_app-dcd786a11fa40981.js" defer=""></script><script src="/_next/static/chunks/c16184b3-ddb1b99b5e568a2a.js" defer=""></script><script src="/_next/static/chunks/50-3f350a3b04cd922b.js" defer=""></script><script src="/_next/static/chunks/pages/workshop-6ef2484334862788.js" defer=""></script><script src="/_next/static/ues4F3N4-riqsMorKt6hN/_buildManifest.js" defer=""></script><script src="/_next/static/ues4F3N4-riqsMorKt6hN/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__qqb_S undefined"><header class="layout_header__kY0Lt"><div class="navbar_navwrapper__PQ35R"><div class="navbar_gradbar__2_FPI"></div><nav class="navbar_navbar__9q1fQ"><span class="utils_headingLg__5535D navbar_navbarlogo__R_s98"><a href="/">GEM BENCHMARK</a></span><div class="navbar_menutoggle__XS8Qx" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars navbar_bar___PSVO" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg></div><ul><li class="navbar_navitem__wFPZL navbar_pushright__cG1uq"><a href="/resources">Resources</a></li><li class="navbar_navitem__wFPZL"><a href="/data_cards">Data Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/model_cards">Model Cards</a></li><li class="navbar_navitem__wFPZL"><a href="/tutorials">tutorials</a></li><li class="navbar_navitem__wFPZL"><a href="/results">Results</a></li><li class="navbar_navitem__wFPZL"><a href="/papers">Papers</a></li><li class="navbar_navitem__wFPZL"><a href="/team">Team</a></li><li class="navbar_navitem__wFPZL"><a href="/workshop">Workshop</a></li></ul></nav></div></header><div class="layout_container__fbLkO undefined"><main><article><span class="utils_headingXl__u25Y2">GEM 💎 Workshop at EMNLP 2022</span><span class="utils_smallSpace__n1Oyc"></span><div><p>The Second Version of <a href="https://gem-benchmark.com/">Generation, Evaluation &#x26; Metrics (GEM) Workshop 2022</a> workshop will be held as part of <a href="https://2022.emnlp.org/">EMNLP</a>, December 7, 2022. It is endorsed by the ACL Special Interest Group on Natural Language Generation (<a href="https://aclweb.org/aclwiki/SIGGEN">SIGGEN</a>).</p>
-<p>The workshop will be held in hybrid mode with sessions in-person and via the conference portal.</p>
-<h2 id="user-content-schedule">Schedule</h2>
-<p>All times in Gulf Standard Time, please use a converter like <a href="https://www.timeanddate.com/worldclock/converter.html?iso=20210713T040000&#x26;p1=1440&#x26;p2=2&#x26;p3=179&#x26;p4=136&#x26;p5=224&#x26;p6=33&#x26;p7=248">this one</a> to convert to your local time.
-To accomodate attendees from as many time zones as possible, we will have a virtual-only part in the evening.</p>
-<table>
-<thead>
-<tr>
-<th>In-Person and Virtual</th>
-<th>Start</th>
-<th>End</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>9:00</td>
-<td>10:30</td>
-<td>Opening Remarks and Keynote 1 (Sean Welleck)</td>
-</tr>
-<tr>
-<td></td>
-<td>10:30</td>
-<td>11:00</td>
-<td>Coffee Break</td>
-</tr>
-<tr>
-<td></td>
-<td>11:00</td>
-<td>12:30</td>
-<td>Talk Session 1</td>
-</tr>
-<tr>
-<td></td>
-<td>12:30</td>
-<td>14:00</td>
-<td>Lunch</td>
-</tr>
-<tr>
-<td></td>
-<td>14:00</td>
-<td>15:30</td>
-<td>Poster Session</td>
-</tr>
-<tr>
-<td></td>
-<td>15:30</td>
-<td>16:00</td>
-<td>Coffee Break</td>
-</tr>
-<tr>
-<td></td>
-<td>16:00</td>
-<td>17:00</td>
-<td>Keynote 2 (Timo Schick)</td>
-</tr>
-<tr>
-<td></td>
-<td>17:00</td>
-<td>18:30</td>
-<td>Talk Session 2</td>
-</tr>
-<tr>
-<td><strong>Virtual-Only Part</strong></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>20:00</td>
-<td>21:00</td>
-<td>Keynote 3 (Emily Dinan)</td>
-</tr>
-<tr>
-<td></td>
-<td>21:00</td>
-<td>22:30</td>
-<td>Poster Session</td>
-</tr>
-</tbody>
-</table>
-<h2 id="user-content-keynotes">Keynotes</h2>
-<h3 id="user-content-keynote-1---sean-welleck">Keynote 1 - Sean Welleck</h3>
-<h4 id="user-content-reflections-on-trusting-untrustworthy-language-generators">Reflections on Trusting Untrustworthy Language Generators</h4>
-<p><strong>ABSTRACT</strong></p>
-<p>In his 1984 Turing Award Lecture “Reflections on Trusting Trust”, Ken Thompson famously said “You can’t trust code that you did not totally create yourself”. These words are especially relevant today, as powerful and flexible language models generate natural language and code that is increasingly human-like. However, these same systems challenge our trust, exhibiting odd degeneracies, amplifying biases, and producing flawed reasoning. In this talk, I will introduce two directions for harnessing the potential of these language models while mitigating the risks. First, I will discuss unlearning: removing undesirable behaviors by integrating feedback and learning. Second, I will discuss how integrating language models with trustworthy symbolic systems can open the door to tackling challenging mathematical reasoning tasks. Join me as we explore the path towards trusting untrustworthy language generators.</p>
-<p><strong>BIO</strong></p>
-<p>Sean Welleck is a Postdoctoral Scholar at the University of Washington and the Allen Institute for Artificial Intelligence, working with Yejin Choi. His research focuses on algorithms for natural language generation and machine reasoning, with the aim of minimizing the effort needed to trust the output of AI systems. He has developed unlearning, decoding, and evaluation algorithms for controllable neural language generation, and methods for integrating language models with symbolic systems, with a particular focus on mathematical reasoning. He received his Ph.D. from New York University, where he was advised by Kyunghyun Cho. Outside of his research activities, he hosts the Thesis Review Podcast and enjoys running long distances.</p>
-<h3 id="user-content-keynote-2---timo-schick">Keynote 2 - Timo Schick</h3>
-<h4 id="user-content-instructable-and-collaborative-language-models">Instructable and Collaborative Language Models</h4>
-<p><strong>ABSTRACT</strong></p>
-<p>Textual content is often the output of a collaborative writing process — which includes writing text, making comments and changes, finding references, and asking others for help —, but today’s NLP models are only trained to generate the final output of this process. In this talk, we will discuss an alternative approach where models are trained to imitate the entire writing process. We will look at examples of how this enables models to plan and explain their actions, to correct their own mistakes, and to better collaborate with humans. We will also discuss how to make such models better at following human-written instructions.</p>
-<p><strong>BIO</strong></p>
-<p>Timo Schick is a research scientist at FAIR working on few-shot learning in NLP. Previously, he did his PhD at the Center for Information and Language Processing (CIS) in Munich and worked in industry as a data scientist for several years. Timo's current research focuses on instruction-based learning and teaching language models to collaborate with other entities.</p>
-<h3 id="user-content-keynote-3---emily-dinan">Keynote 3 - Emily Dinan</h3>
-<h2 id="user-content-sessions-and-papers">Sessions and Papers</h2>
-<h3 id="user-content-talk-session-1">Talk Session 1</h3>
-<table>
-<thead>
-<tr>
-<th>Title</th>
-<th>Authors</th>
-<th>Mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DEMETR: Diagnosing Evaluation Metrics for Translation</td>
-<td>Marzena Karpinska, Nishant Raj, Katherine Thai, Yixiao Song, Ankita Gupta and Mohit Iyyer</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>BOOKSUM: A Collection of Datasets for Long-form Narrative Summarization</td>
-<td>Wojciech Kryscinski, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong and Dragomir Radev</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>A Survey of Recent Error Annotation Schemes for Automatically Generated Text</td>
-<td>Rudali Huidrom and Anya Belz</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>Truncation Sampling as Language Model Desmoothing</td>
-<td>John Hewitt, Christopher Manning and Percy Liang</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>Error Analysis of ToTTo Table-to-Text Neural NLG Models</td>
-<td>Barkavi Sundararajan, Somayajulu Sripada and Ehud Reiter</td>
-<td>Virtual</td>
-</tr>
-<tr>
-<td>Towards Credible Human Evaluation of Open-Domain Dialog Systems Using Interactive Setup</td>
-<td>Sijia Liu, Patrick Lange, Behnam Hedayatnia, Alexandros Papangelis, Di Jin, Andrew Wirth, Yang Liu and Dilek Hakkani-Tur</td>
-<td>Virtual</td>
-</tr>
-</tbody>
-</table>
-<h3 id="user-content-talk-session-2">Talk Session 2</h3>
-<table>
-<thead>
-<tr>
-<th>Title</th>
-<th>Authors</th>
-<th>Mode</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Improving abstractive summarization with energy-based re-ranking</td>
-<td>Diogo Pernes, Afonso Mendes and André F. T. Martins</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>Revisiting text decomposition methods for NLI-based factuality scoring of summaries</td>
-<td>John Glover, Federico Fancellu, Vasudevan Jagannathan, Matthew R. Gormley and Thomas Schaaf</td>
-<td>Virtual</td>
-</tr>
-<tr>
-<td>A Corpus and Evaluation for Predicting Semi-Structured Human Annotations</td>
-<td>Andreas Marfurt, Ashley Thornton, David Sylvan, Lonneke van der Plas and James Henderson</td>
-<td>In Person</td>
-</tr>
-<tr>
-<td>Answerability: A custom metric for evaluating chatbot performance</td>
-<td>Pranav Gupta, Anand A. Rajasekar, Amisha Patel, Mandar Kulkarni, Alexander Sunell, Kyung Kim and Anusua Trivedi</td>
-<td>Virtual</td>
-</tr>
-<tr>
-<td>Control Prefixes for Parameter-Efficient Text Generation</td>
-<td>Jordan Clive, Kris Cao and Marek Rei</td>
-<td>Virtual</td>
-</tr>
-<tr>
-<td>Assessing Inter-metric Correlation for Multi-document Summarization Evaluation</td>
-<td>Michael Ridenour, Ameeta Agrawal and Olubusayo Olabisi</td>
-<td>Virtual</td>
-</tr>
-</tbody>
-</table>
-<h3 id="user-content-poster-session---in-person">Poster Session - In-Person</h3>
-<table>
-<thead>
-<tr>
-<th>Title</th>
-<th>Authors</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Task-driven augmented data evaluation</td>
-<td>Olga Golovneva, Pan Wei, Khadige Abboud, Charith Peris, Lizhen Tan and Haiyang Yu</td>
-</tr>
-<tr>
-<td>Weakly Supervised Context-based Interview Question Generation</td>
-<td>Samiran Pal, Kaamraan Khan, Avinash Kumar Singh, Subhasish Ghosh, Tapas Nayak, Girish Palshikar and Indrajit Bhattacharya</td>
-</tr>
-<tr>
-<td>Analyzing Multi-Task Learning for Abstractive Text Summarization</td>
-<td>Frederic Thomas Kirstein, Jan Philip Wahle, Terry Ruas and Bela Gipp</td>
-</tr>
-<tr>
-<td>CLSE: Corpus of Linguistically Significant Entities</td>
-<td>Aleksandr Chuklin, Justin Zhao and Mihir Kale</td>
-</tr>
-<tr>
-<td>Towards In-Context Non-Expert Evaluation of Reflection Generation for Counselling Conversations</td>
-<td>Zixiu Wu, Simone Balloccu, Rim Helaoui, Diego Reforgiato Recupero and Daniele Riboni</td>
-</tr>
-<tr>
-<td>Evaluation of Response Generation Models: Shouldn't It Be Shareable and Replicable?</td>
-<td>Seyed Mahed Mousavi, Gabriel Roccabruna, Michela Lorandi, Simone Caldarella and Giuseppe Riccardi</td>
-</tr>
-<tr>
-<td>Enhancing and Evaluating the Grammatical Framework Approach to Logic-to-Text Generation</td>
-<td>Eduardo Calò, Elze van der Werf, Albert Gatt and Kees van Deemter</td>
-</tr>
-<tr>
-<td>Transfer learning for multilingual vacancy text generation</td>
-<td>Anna Lorincz, David Graus, Dor Lavi and Joao Lebre Magalhaes Pereira</td>
-</tr>
-<tr>
-<td>EdiT5: Semi-Autoregressive Text Editing with T5 Warm-Start</td>
-<td>Jonathan Mallinson, Jakub Adamek, Eric Malmi and Aliaksei Severyn</td>
-</tr>
-<tr>
-<td>Unsupervised Token-level Hallucination Detection from Summary Generation By-products</td>
-<td>Andreas Marfurt and James Henderson</td>
-</tr>
-<tr>
-<td>T5QL: Taming language models for SQL generation</td>
-<td>Samuel David Arcadinho, David Aparicio, Hugo Veiga and Antonio Alegria</td>
-</tr>
-<tr>
-<td>Human perceiving behavior modeling in evaluation of code generation models</td>
-<td>Sergey V. Kovalchuk, Vadim Lomshakov and Artem Aliev</td>
-</tr>
-<tr>
-<td>GiCCS: A German in-Context Conversational Similarity Benchmark</td>
-<td>Shima Asaadi, Zahra Kolagar, Alina Liebel and Alessandra Zarcone</td>
-</tr>
-<tr>
-<td>Measuring the Measuring Tools: An Automatic Evaluation of Semantic Metrics for Text Corpora</td>
-<td>George Kour, Samuel Ackerman, Eitan Daniel Farchi, Orna Raz, Boaz Carmeli and Ateret Anaby Tavor</td>
-</tr>
-<tr>
-<td>LongEval: Guidelines for Human Evaluation of Faithfulness in Long-form Summarization</td>
-<td>Kalpesh Krishna, Erin Bransom, Bailey Kuehl, Mohit Iyyer, Arman Cohan, Pradeep Dasigi and Kyle Lo</td>
-</tr>
-<tr>
-<td>Exploring Document-Level Literary Machine Translation with Parallel Paragraphs from World Literature</td>
-<td>Katherine Thai, Marzena Karpinska, Kalpesh Krishna, Moira Inghilleri, John Wieting and Mohit Iyyer</td>
-</tr>
-<tr>
-<td>Do Decoding Algorithms Capture Discourse Structure in Multi-Modal Tasks? A Case Study of Image Paragraph Generation</td>
-<td>Nikolai Ilinykh and Simon Dobnik</td>
-</tr>
-<tr>
-<td>20Q: Overlap-Free World Knowledge Benchmark for Language Models</td>
-<td>Maxime De Bruyn, Ehsan Lotfi, Jeska Buhmann and Walter Daelemans</td>
-</tr>
-<tr>
-<td>Controllable Factuality in Document-Grounded Dialog Systems Using a Noisy Channel Model</td>
-<td>Nico Daheim, David Thulke, Christian Dugast and Hermann Ney</td>
-</tr>
-<tr>
-<td>Learning to Model Editing Processes</td>
-<td>Machel Reid and Graham Neubig</td>
-</tr>
-<tr>
-<td>On the Effectiveness of Automated Metrics for Text Generation Systems</td>
-<td>Pius von Däniken, Jan Deriu, Don Tuggener and Mark Cieliebak</td>
-</tr>
-<tr>
-<td>Residual Learning of Neural Text Generation with n-gram Language Model</td>
-<td>Huayang Li, Deng Cai, Jin Xu and Taro Watanabe</td>
-</tr>
-<tr>
-<td>He Said, She Said: Style Transfer for Shifting the Perspective of Dialogues</td>
-<td>Amanda Bertsch, Graham Neubig and Matthew R. Gormley</td>
-</tr>
-<tr>
-<td>EtriCA: Event-Triggered Context-Aware Story Generation Augmented by Cross Attention</td>
-<td>Chen Tang, Chenghua Lin, Henglin Huang, Frank Guerin and Zhihao Zhang</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Knowledge Graph Generation From Text</td>
-<td>Igor Melnyk, Pierre Dognin and Payel Das</td>
-</tr>
-<tr>
-<td>Learning When and What to Quote: A Quotation Recommender System with Mutual Promotion of Recommendation and Generation</td>
-<td>Lingzhi Wang, Xingshan Zeng and Kam-Fai Wong</td>
-</tr>
-<tr>
-<td>Discord Questions: A Computational Approach To Diversity Analysis in News Coverage</td>
-<td>Philippe Laban, Chien-Sheng Wu, Lidiya Murakhovs'ka, Xiang Chen and Caiming Xiong</td>
-</tr>
-<tr>
-<td>CONSISTENT: Open-Ended Question Generation From News Articles</td>
-<td>Tuhin Chakrabarty, Justin Lewis and Smaranda Muresan</td>
-</tr>
-<tr>
-<td>Table-To-Text generation and pre-training with TabT5</td>
-<td>Ewa Andrejczuk, Julian Martin Eisenschlos, Francesco Piccinno, Syrine Krichene and Yasemin Altun</td>
-</tr>
-</tbody>
-</table>
-<h3 id="user-content-poster-session---virtual">Poster Session - Virtual</h3>
-<p>Presenters can choose which of the sessions they want to attend for their posters.</p>
-<table>
-<thead>
-<tr>
-<th>Title</th>
-<th>Authors</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Generating Coherent Narratives with Subtopic Planning to Answer How-to Questions</td>
-<td>Pengshan Cai, Mo Yu, Fei Liu and hong yu</td>
-</tr>
-<tr>
-<td>Semantic Similarity as a Window into Vector- and Graph-Based Metrics</td>
-<td>Wai Ching Leung, Shira Wein and Nathan Schneider</td>
-</tr>
-<tr>
-<td>WikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia</td>
-<td>Dina Pisarevskaya and Tatiana Shavrina</td>
-</tr>
-<tr>
-<td>Model Criticism for Long-Form Text Generation (Non-Archival)</td>
-<td>Yuntian Deng, Volodymyr Kuleshov and Alexander Rush</td>
-</tr>
-<tr>
-<td>Controllable Text Generation for All Ages: Evaluating a Plug-and-Play Approach to Age-Adapted Dialogue</td>
-<td>Lennert Jansen, Štěpán Lars Laichter, Arabella Sinclair, Margot van der Goot, Raquel Fernandez and Sandro Pezzelle</td>
-</tr>
-<tr>
-<td>Template-based Contact Email Generation for Job Recommendation</td>
-<td>Qiuchi Li and Christina Lioma</td>
-</tr>
-<tr>
-<td>Compression, Transduction, and Creation: A Unified Framework for Evaluating Natural Language Generation</td>
-<td>Mingkai Deng, Bowen Tan, Zhengzhong Liu, Eric Xing and Zhiting Hu</td>
-</tr>
-<tr>
-<td>Are Abstractive Summarization Models truly `Abstractive'? An Empirical Study to Compare the two Forms of Summarization</td>
-<td>Vinayshekhar Bannihatti Kumar and Rashmi Gangadharaiah</td>
-</tr>
-<tr>
-<td>Towards Attribute-Entangled Controllable Text Generation: A Pilot Study of Blessing Generation</td>
-<td>Shulin Huang, Shirong Ma, Yinghui Li, Li Yangning, Shiyang Lin, Haitao Zheng and Ying Shen</td>
-</tr>
-<tr>
-<td>Nearest Neighbor Language Models for Stylistic Controllable Generation</td>
-<td>Severino Trotta, Lucie Flek and Charles Welch</td>
-</tr>
-<tr>
-<td>On reporting scores and agreement for error annotation tasks</td>
-<td>Maja Popović and Anya Belz</td>
-</tr>
-<tr>
-<td>Improved Evaluation of Automatic Source Code Summarisation</td>
-<td>Jesse Phillips, David Bowes, Mahmoud El-Haj and Tracy Hall</td>
-</tr>
-<tr>
-<td>Most NLG is Low-Resource: here's what we can do about it</td>
-<td>David M. Howcroft and Dimitra Gkatzia</td>
-</tr>
-<tr>
-<td>What's in a (dataset's) name? The case of BigPatent</td>
-<td>Silvia Casola, Alberto Lavelli and Horacio Saggion</td>
-</tr>
-<tr>
-<td>Multilingual Social Media Text Generation and Evaluation with Few-Shot Prompting</td>
-<td>Mack Blackburn</td>
-</tr>
-<tr>
-<td>Factual Error Correction for Abstractive Summaries Using Entity Retrieval</td>
-<td>Hwanhee Lee, Cheoneum Park, Seunghyun Yoon, Trung Bui, Franck Dernoncourt, Juae Kim and Kyomin Jung</td>
-</tr>
-<tr>
-<td>Coherent Long Text Generation by Contrastive Soft Prompt</td>
-<td>Guandan Chen, Jiashu Pu, Yadong Xi and Rongsheng Zhang</td>
-</tr>
-<tr>
-<td>Improving Dialogue Act Recognition with Augmented Data</td>
-<td>Khyati Mahajan, Soham Parikh, Quaizar Vohra, Mitul Tiwari and Samira Shaikh</td>
-</tr>
-<tr>
-<td>What Was Your Name Again? Interrogating Generative Conversational Models For Factual Consistency Evaluation</td>
-<td>Ehsan Lotfi, Maxime De Bruyn, Jeska Buhmann and Walter Daelemans</td>
-</tr>
-<tr>
-<td>Narrative Why-Question Answering: A Review of Challenges and Datasets</td>
-<td>Emil Kalbaliyev and Kairit Sirts</td>
-</tr>
-<tr>
-<td>Exploring a POS-based Two-stage Approach for Improving Low-Resource AMR-to-Text Generation</td>
-<td>Marco Antonio Sobrevilla Cabezudo and Thiago Pardo</td>
-</tr>
-<tr>
-<td>What Makes Data-to-Text Generation Hard for Pretrained Language Models?</td>
-<td>Moniba Keymanesh, Adrian Benton, Mark Dredze</td>
-</tr>
-<tr>
-<td>Don't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search</td>
-<td>Daniel King, Zejiang Shen, Nishant Subramani, Daniel S Weld, Iz Beltagy, Doug Downey</td>
-</tr>
-<tr>
-<td>Representation Learning for Resource-Constrained Keyphrase Generation</td>
-<td>Di Wu, Wasi U. Ahmad, Sunipa Dev and Kai-Wei Chang</td>
-</tr>
-<tr>
-<td>Efficient (Soft) Q-Learning for Text Generation with Limited Good Data</td>
-<td>Han Guo, Bowen Tan, Zhengzhong Liu, Eric Xing and Zhiting Hu</td>
-</tr>
-<tr>
-<td>Wish I Can Feel What You Feel: A Neural Approach for Empathetic Response Generation</td>
-<td>Yangbin Chen and Chunfeng Liang</td>
-</tr>
-<tr>
-<td>Text Editing as Imitation Game</td>
-<td>Ning Shi, Bin Tang, Bo Yuan, Longtao Huang, Yewen Pu, Jie Fu and Zhouhan Lin</td>
-</tr>
-<tr>
-<td>Audience-Centric Natural Language Generation via Style Infusion</td>
-<td>Samraj Moorjani, Adit Krishnan, Hari Sundaram, Ewa Maslowska and Aravind Sankar</td>
-</tr>
-<tr>
-<td>Grounded Keys-to-Text Generation: Towards Factual Open-Ended Generation</td>
-<td>Faeze Brahman, Baolin Peng, Michel Galley, Sudha Rao, Bill Dolan, Snigdha Chaturvedi and Jianfeng Gao</td>
-</tr>
-<tr>
-<td>Empathetic Dialogue Generation via Sensitive Emotion Recognition and Sensible Knowledge Selection</td>
-<td>Lanrui Wang, Jiangnan Li, Zheng Lin, Fandong Meng, Chenxu Yang, Weiping Wang and Jie Zhou</td>
-</tr>
-<tr>
-<td>HeLo: Learning-Free Lookahead Decoding for Conversation Infilling</td>
-<td>Ivan Lee and Taylor Berg-Kirkpatrick</td>
-</tr>
-<tr>
-<td>Data-Efficient Concept Extraction from Pre-trained Language Models for Commonsense Explanation Generation</td>
-<td>Yanbo Fang and Yongfeng Zhang</td>
-</tr>
-<tr>
-<td>MCPG: A Flexible Multi-Level Controllable Framework for Unsupervised Paraphrase Generation</td>
-<td>Yi Chen, Haiyun Jiang, Lemao Liu, Rui Wang, Shuming Shi and Ruifeng Xu</td>
-</tr>
-<tr>
-<td>ParaMac: A General Unsupervised Paraphrase Generation Framework Leveraging Semantic Constraints and Diversifying Mechanisms</td>
-<td>Jinxin Liu, Jiaxin Shi, Ji Qi, Lei Hou, Juanzi Li and Qi Tian</td>
-</tr>
-<tr>
-<td>Recurrence Boosts Diversity! Revisiting Recurrent Latent Variable in Transformer-Based Variational AutoEncoder for Diverse Text Generation</td>
-<td>Jinyi Hu, Xiaoyuan Yi, Wenhao Li, Maosong Sun and Xing Xie</td>
-</tr>
-<tr>
-<td>Consecutive Question Generation via Dynamic Multitask Learning</td>
-<td>Yunji Li, Sujian Li and Xing Shi</td>
-</tr>
-<tr>
-<td>Sequentially Controlled Text Generation</td>
-<td>Alexander Spangher, Yao Ming, Xinyu Hua and Nanyun Peng</td>
-</tr>
-<tr>
-<td>Inferring the Reader: Guiding Automated Story Generation with Commonsense Reasoning</td>
-<td>Xiangyu Peng, Siyan Li, Sarah Wiegreffe and Mark Riedl</td>
-</tr>
-<tr>
-<td>Guiding Neural Story Generation with Reader Models</td>
-<td>Xiangyu Peng, Kaige Xie, Amal Alabdulkarim, Harshith Kayam, Samihan Dani and Mark Riedl</td>
-</tr>
-<tr>
-<td>Temporal Prompts for Conditional Text Generation</td>
-<td>Shuyang Cao and Lu Wang</td>
-</tr>
-<tr>
-<td>A Framework for Automatic Generation of Spoken Question-Answering Data</td>
-<td>Merve Ünlü Menevşe, Yusufcan Manav, Ebru Arisoy and Arzucan Özgür</td>
-</tr>
-<tr>
-<td>Not All Errors are Equal: Learning Text Generation Metrics using Stratified Error Synthesis</td>
-<td>Wenda Xu, Yi-Lin Tuan, Yujie Lu, Michael S. Saxon, Lei Li and William Yang Wang</td>
-</tr>
-<tr>
-<td>WANLI: Worker and AI Collaboration for Natural Language Inference Dataset Creation</td>
-<td>Alisa Liu, Swabha Swayamdipta, Noah A. Smith and Yejin Choi</td>
-</tr>
-<tr>
-<td>Plug-and-Play Recipe Generation with Content Planning</td>
-<td>Yinhong Liu, Yixuan n/a Su, Ehsan Shareghi and Nigel Collier</td>
-</tr>
-</tbody>
-</table>
-<h2 id="user-content-important-dates">Important Dates</h2>
-<p><code>December 7</code> Workshop Date</p>
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Benchmark natural language generation systems with GEM."/><meta property="og:image" content="https://og-image.now.sh/**GEM**%20Benchmark.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg"/><meta name="og:title" content="GEM"/><meta name="twitter:card" content="summary_large_image"/><title>GEM Workshop 2023</title><meta name="next-head-count" content="8"/><link rel="preload" href="/_next/static/css/86a77084a15a5546.css" as="style"/><link rel="stylesheet" href="/_next/static/css/86a77084a15a5546.css" data-n-g=""/><link rel="preload" href="/_next/static/css/50ad98e60bd49ad7.css" as="style"/><link rel="stylesheet" href="/_next/static/css/50ad98e60bd49ad7.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js"></script><script src="/_next/static/chunks/webpack-b48e3bfe07390621.js" defer=""></script><script src="/_next/static/chunks/framework-7a7e500878b44665.js" defer=""></script><script src="/_next/static/chunks/main-a56c17dda72126ba.js" defer=""></script><script src="/_next/static/chunks/pages/_app-da8862f0ec3a97c1.js" defer=""></script><script src="/_next/static/chunks/c16184b3-ddb1b99b5e568a2a.js" defer=""></script><script src="/_next/static/chunks/50-3dccc3616b494db8.js" defer=""></script><script src="/_next/static/chunks/pages/workshop-b31f31ce3cd1987f.js" defer=""></script><script src="/_next/static/sXTMfjGfZQfLPMmgf0Vlf/_buildManifest.js" defer=""></script><script src="/_next/static/sXTMfjGfZQfLPMmgf0Vlf/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="layout_background__oCFQX undefined"><header class="layout_header__SFlEE"><div class="navbar_navwrapper__RkXSe"><div class="navbar_gradbar__Vli6s"></div><nav class="navbar_navbar__vdWdK"><span class="utils_headingLg__RYtYb navbar_navbarlogo__u28NK"><a href="/"><a>GEM BENCHMARK</a></a></span><div class="navbar_menutoggle__4Urrc" id="mobile-menu"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars navbar_bar__f8cyd" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path></svg></div><ul><li class="navbar_navitem__15TsF navbar_pushright___9_8s"><a href="/resources"><a>Resources</a></a></li><li class="navbar_navitem__15TsF"><a href="/data_cards"><a>Data Cards</a></a></li><li class="navbar_navitem__15TsF"><a href="/model_cards"><a>Model Cards</a></a></li><li class="navbar_navitem__15TsF"><a href="/tutorials"><a>tutorials</a></a></li><li class="navbar_navitem__15TsF"><a href="/results"><a>Results</a></a></li><li class="navbar_navitem__15TsF"><a href="/papers"><a>Papers</a></a></li><li class="navbar_navitem__15TsF"><a href="/workshop"><a>Workshop</a></a></li></ul></nav></div></header><div class="layout_container__FUycR undefined"><main><article><span class="utils_headingXl__zlq1q">GEM 💎 Workshop at EMNLP 2023</span><span class="utils_smallSpace__dcJPu"></span><div><p>The Third Version of the <a href="https://gem-benchmark.com/">Generation, Evaluation &#x26; Metrics (GEM) Workshop</a> will be held as part of <a href="https://2023.emnlp.org/">EMNLP</a>, December 6-10, 2023.</p>
+<h3 id="user-content-overview">Overview</h3>
+<p>Many new NLP applications are cast through the lens of natural language generation. With the advent of these new approaches, many opportunities arise: generation in previously less studied languages, new evaluation paradigms, methods for corpus creation, more efficient architectures, strategies for safe deployments, among many others. At the same time, we can learn from the rich history of NLG research to further improve generation methods.
+These developments require robust and sound NLG evaluation processes. To that end, the GEM workshop aims to encourage the development of model auditing and human evaluation strategies, and to popularize model evaluations in languages beyond English.</p>
+<p>We welcome submissions related, but not limited to, the following topics:</p>
+<ul>
+<li>💎 Automatic evaluation of generation systems (<a href="https://aclanthology.org/2021.gem-1.8/">example</a>, <a href="https://aclanthology.org/2021.gem-1.1/">example</a>, <a href="https://aclanthology.org/2022.gem-1.26/">example</a>)</li>
+<li>💎 Creating NLG corpora and challenge sets (<a href="https://aclanthology.org/2022.tacl-1.4/">example</a>, <a href="https://openreview.net/forum?id=CSi1eu_2q96">example</a>, [example])<a href="https://aclanthology.org/2022.gem-1.6/">https://aclanthology.org/2022.gem-1.6/</a>))</li>
+<li>💎 Critiques of benchmarking efforts and responsibly measuring progress in NLG (<a href="https://aclanthology.org/2020.emnlp-main.393/">example</a>, <a href="https://openreview.net/forum?id=j6NxpQbREA1">example</a>)</li>
+<li>💎 Effective and/or efficient NLG methods that can be applied to a wide range of languages and/or scenarios (<a href="https://aclanthology.org/2020.tacl-1.47/">example</a>, <a href="https://aclanthology.org/2021.gem-1.16/">example</a>, <a href="https://aclanthology.org/2022.gem-1.1/">example</a>)</li>
+<li>💎 Application and evaluation of generation models interacting with external data and tools (<a href="https://arxiv.org/abs/2302.04761">example</a>, <a href="https://arxiv.org/abs/2304.09842">example</a>, <a href="https://arxiv.org/abs/2302.07842">example</a>)</li>
+<li>💎 Sociotechnical perspectives of employing large language models (<a href="https://dl.acm.org/doi/abs/10.1145/3531146.3533088">example</a>)</li>
+<li>💎 Standardizing human evaluation and making it more robust (<a href="https://aclanthology.org/2021.tacl-1.87/">example</a>, <a href="https://aclanthology.org/2022.humeval-1.7/">example</a>, <a href="https://aclanthology.org/2022.gem-1.12/">example</a>)</li>
+</ul>
+<p>We further invite submissions that conduct in-depth analyses of outputs of existing systems, for example through error analyses, by applying new metrics, or by testing the system on new test sets. While we encourage the use of the infrastructure the organizing team has developed as part of the <a href="https://arxiv.org/abs/2206.11249">GEM benchmark</a>, its use is not required.</p>
+<p>If you are interested, you can check out last year's workshop websites from <a href="/workshop/2021">ACL 2021</a> and <a href="/workshop/2022">EMNLP 2022</a>.</p>
+<h3 id="user-content-industrial-track---unleashing-the-power-of-nlp-bridging-the-gap-between-academia-and-industry">Industrial Track - Unleashing the Power of NLP: Bridging the Gap between Academia and Industry</h3>
+<p>GEM 2023 is proud to announce the launch of its Industrial Track, which aims to provide actionable insights to industry professionals and to foster collaborations between academia and industry. This track will address the unique challenges faced by non-academic colleagues, highlighting the differences in evaluation practices between academic and industrial research, and explore the challenges in evaluating generative models with real-world data.
+The Industrial Track invites submissions covering the following topics, including (but not limited to):
+💎 Breaking Barriers: Bridging the Gap between Academic and Industrial Research (<a href="https://aclanthology.org/P17-2015">example</a>)
+💎 From Data Diversity to Model Robustness: Challenges in Evaluating Generative Models with Real-World Data (<a href="https://aclanthology.org/2021.sigdial-1.8/">example</a>)
+💎 Beyond Metrics: Evaluating Generative Models for Real-World Business Impact (<a href="https://arxiv.org/abs/1906.02243">example</a>, <a href="https://aclanthology.org/P16-2096">example</a>, <a href="https://arxiv.org/abs/2306.07402">example</a>)</p>
+<h3 id="user-content-how-to-submit">How to submit?</h3>
+<p>Submissions can take either of the following forms:</p>
+<ul>
+<li>💎 Archival Papers Papers describing original and unpublished work can be submitted in a between 4 and 8 page format.</li>
+<li>💎 Non-Archival Abstracts To discuss work already presented or under review at a peer-reviewed venue, we allow the submission of 2-page abstracts.</li>
+</ul>
+<p>All submissions are allowed unlimited space for references and appendices and should conform to EMNLP 2023 style guidelines. Archival paper submissions must be anonymized while abstract submissions may include author information.</p>
+<p>You can submit directly through <a href="https://softconf.com/emnlp2023/GEM2023">SoftConf</a>. Please select the track you are submitting to during the submission.</p>
+<p>We additionally welcome presentations by authors of papers in the Findings of the EMNLP (details to be announced at a later date).</p>
+<h3 id="user-content-shared-task">Shared Task</h3>
+<p>We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. The Shared Task will be run "Backwards": the workshop will serve as a platform to pre-register your hypotheses. More info on how to participate to come!</p>
+<h3 id="user-content-important-dates">Important Dates</h3>
+<p>Note: For any questions, please email <a href="mailto:gem-benchmark-chairs@googlegroups.com">gem-benchmark-chairs@googlegroups.com</a>.</p>
+<p>Paper Submission Dates</p>
+<ul>
+<li>📅 1 September 2023: Workshop paper submission deadline</li>
+<li>📅 6 October 2023:   Workshop paper notification deadline</li>
+<li>📅 18 October 2023:  Workshop paper camera ready deadline</li>
+</ul>
+<p>Workshop Dates</p>
+<ul>
+<li>📅 6 December 2022: Workshop</li>
+</ul>
 <h3 id="user-content-organization">Organization</h3>
-<ul>
-<li>Antoine Bosselut (EPFL)</li>
-<li>Khyathi Chandu (Carnegie Mellon University)</li>
-<li>Kaustubh Dhole (Emory University)</li>
-<li>Varun Gangal (Carnegie Mellon University)</li>
-<li>Sebastian Gehrmann (Google Research)</li>
-<li>Yacine Jernite (Hugging Face)</li>
-<li>Jekaterina Novikova (NoOverfitting Lab)</li>
-<li>Laura Perez-Beltrachini (University of Edinburgh)</li>
-</ul>
-<p>Steering Committee</p>
-<ul>
-<li>Wei Xu (Georgia Tech)</li>
-<li>Esin Durmus (Stanford University)</li>
-<li>Samira Shaikh (UNC Charlotte)</li>
-</ul>
-</div></article></main><div class="layout_push__2FFZa"></div></div><footer class="layout_footer__dka_2 utils_eggshell__LF2UE"><span class="layout_backToHome__9sjx_"><a href="/">← Home</a></span><span>If you have any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__FmNQy">google group</a> for support.</span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"workshopData":{"contentHtml":"\u003cp\u003eThe Second Version of \u003ca href=\"https://gem-benchmark.com/\"\u003eGeneration, Evaluation \u0026#x26; Metrics (GEM) Workshop 2022\u003c/a\u003e workshop will be held as part of \u003ca href=\"https://2022.emnlp.org/\"\u003eEMNLP\u003c/a\u003e, December 7, 2022. It is endorsed by the ACL Special Interest Group on Natural Language Generation (\u003ca href=\"https://aclweb.org/aclwiki/SIGGEN\"\u003eSIGGEN\u003c/a\u003e).\u003c/p\u003e\n\u003cp\u003eThe workshop will be held in hybrid mode with sessions in-person and via the conference portal.\u003c/p\u003e\n\u003ch2 id=\"user-content-schedule\"\u003eSchedule\u003c/h2\u003e\n\u003cp\u003eAll times in Gulf Standard Time, please use a converter like \u003ca href=\"https://www.timeanddate.com/worldclock/converter.html?iso=20210713T040000\u0026#x26;p1=1440\u0026#x26;p2=2\u0026#x26;p3=179\u0026#x26;p4=136\u0026#x26;p5=224\u0026#x26;p6=33\u0026#x26;p7=248\"\u003ethis one\u003c/a\u003e to convert to your local time.\nTo accomodate attendees from as many time zones as possible, we will have a virtual-only part in the evening.\u003c/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eIn-Person and Virtual\u003c/th\u003e\n\u003cth\u003eStart\u003c/th\u003e\n\u003cth\u003eEnd\u003c/th\u003e\n\u003cth\u003e\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e9:00\u003c/td\u003e\n\u003ctd\u003e10:30\u003c/td\u003e\n\u003ctd\u003eOpening Remarks and Keynote 1 (Sean Welleck)\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e10:30\u003c/td\u003e\n\u003ctd\u003e11:00\u003c/td\u003e\n\u003ctd\u003eCoffee Break\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e11:00\u003c/td\u003e\n\u003ctd\u003e12:30\u003c/td\u003e\n\u003ctd\u003eTalk Session 1\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e12:30\u003c/td\u003e\n\u003ctd\u003e14:00\u003c/td\u003e\n\u003ctd\u003eLunch\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e14:00\u003c/td\u003e\n\u003ctd\u003e15:30\u003c/td\u003e\n\u003ctd\u003ePoster Session\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e15:30\u003c/td\u003e\n\u003ctd\u003e16:00\u003c/td\u003e\n\u003ctd\u003eCoffee Break\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e16:00\u003c/td\u003e\n\u003ctd\u003e17:00\u003c/td\u003e\n\u003ctd\u003eKeynote 2 (Timo Schick)\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e17:00\u003c/td\u003e\n\u003ctd\u003e18:30\u003c/td\u003e\n\u003ctd\u003eTalk Session 2\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003cstrong\u003eVirtual-Only Part\u003c/strong\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e20:00\u003c/td\u003e\n\u003ctd\u003e21:00\u003c/td\u003e\n\u003ctd\u003eKeynote 3 (Emily Dinan)\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e21:00\u003c/td\u003e\n\u003ctd\u003e22:30\u003c/td\u003e\n\u003ctd\u003ePoster Session\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch2 id=\"user-content-keynotes\"\u003eKeynotes\u003c/h2\u003e\n\u003ch3 id=\"user-content-keynote-1---sean-welleck\"\u003eKeynote 1 - Sean Welleck\u003c/h3\u003e\n\u003ch4 id=\"user-content-reflections-on-trusting-untrustworthy-language-generators\"\u003eReflections on Trusting Untrustworthy Language Generators\u003c/h4\u003e\n\u003cp\u003e\u003cstrong\u003eABSTRACT\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eIn his 1984 Turing Award Lecture “Reflections on Trusting Trust”, Ken Thompson famously said “You can’t trust code that you did not totally create yourself”. These words are especially relevant today, as powerful and flexible language models generate natural language and code that is increasingly human-like. However, these same systems challenge our trust, exhibiting odd degeneracies, amplifying biases, and producing flawed reasoning. In this talk, I will introduce two directions for harnessing the potential of these language models while mitigating the risks. First, I will discuss unlearning: removing undesirable behaviors by integrating feedback and learning. Second, I will discuss how integrating language models with trustworthy symbolic systems can open the door to tackling challenging mathematical reasoning tasks. Join me as we explore the path towards trusting untrustworthy language generators.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eBIO\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eSean Welleck is a Postdoctoral Scholar at the University of Washington and the Allen Institute for Artificial Intelligence, working with Yejin Choi. His research focuses on algorithms for natural language generation and machine reasoning, with the aim of minimizing the effort needed to trust the output of AI systems. He has developed unlearning, decoding, and evaluation algorithms for controllable neural language generation, and methods for integrating language models with symbolic systems, with a particular focus on mathematical reasoning. He received his Ph.D. from New York University, where he was advised by Kyunghyun Cho. Outside of his research activities, he hosts the Thesis Review Podcast and enjoys running long distances.\u003c/p\u003e\n\u003ch3 id=\"user-content-keynote-2---timo-schick\"\u003eKeynote 2 - Timo Schick\u003c/h3\u003e\n\u003ch4 id=\"user-content-instructable-and-collaborative-language-models\"\u003eInstructable and Collaborative Language Models\u003c/h4\u003e\n\u003cp\u003e\u003cstrong\u003eABSTRACT\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eTextual content is often the output of a collaborative writing process — which includes writing text, making comments and changes, finding references, and asking others for help —, but today’s NLP models are only trained to generate the final output of this process. In this talk, we will discuss an alternative approach where models are trained to imitate the entire writing process. We will look at examples of how this enables models to plan and explain their actions, to correct their own mistakes, and to better collaborate with humans. We will also discuss how to make such models better at following human-written instructions.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eBIO\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eTimo Schick is a research scientist at FAIR working on few-shot learning in NLP. Previously, he did his PhD at the Center for Information and Language Processing (CIS) in Munich and worked in industry as a data scientist for several years. Timo's current research focuses on instruction-based learning and teaching language models to collaborate with other entities.\u003c/p\u003e\n\u003ch3 id=\"user-content-keynote-3---emily-dinan\"\u003eKeynote 3 - Emily Dinan\u003c/h3\u003e\n\u003ch2 id=\"user-content-sessions-and-papers\"\u003eSessions and Papers\u003c/h2\u003e\n\u003ch3 id=\"user-content-talk-session-1\"\u003eTalk Session 1\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eTitle\u003c/th\u003e\n\u003cth\u003eAuthors\u003c/th\u003e\n\u003cth\u003eMode\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003eDEMETR: Diagnosing Evaluation Metrics for Translation\u003c/td\u003e\n\u003ctd\u003eMarzena Karpinska, Nishant Raj, Katherine Thai, Yixiao Song, Ankita Gupta and Mohit Iyyer\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eBOOKSUM: A Collection of Datasets for Long-form Narrative Summarization\u003c/td\u003e\n\u003ctd\u003eWojciech Kryscinski, Nazneen Rajani, Divyansh Agarwal, Caiming Xiong and Dragomir Radev\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eA Survey of Recent Error Annotation Schemes for Automatically Generated Text\u003c/td\u003e\n\u003ctd\u003eRudali Huidrom and Anya Belz\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTruncation Sampling as Language Model Desmoothing\u003c/td\u003e\n\u003ctd\u003eJohn Hewitt, Christopher Manning and Percy Liang\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eError Analysis of ToTTo Table-to-Text Neural NLG Models\u003c/td\u003e\n\u003ctd\u003eBarkavi Sundararajan, Somayajulu Sripada and Ehud Reiter\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTowards Credible Human Evaluation of Open-Domain Dialog Systems Using Interactive Setup\u003c/td\u003e\n\u003ctd\u003eSijia Liu, Patrick Lange, Behnam Hedayatnia, Alexandros Papangelis, Di Jin, Andrew Wirth, Yang Liu and Dilek Hakkani-Tur\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"user-content-talk-session-2\"\u003eTalk Session 2\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eTitle\u003c/th\u003e\n\u003cth\u003eAuthors\u003c/th\u003e\n\u003cth\u003eMode\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003eImproving abstractive summarization with energy-based re-ranking\u003c/td\u003e\n\u003ctd\u003eDiogo Pernes, Afonso Mendes and André F. T. Martins\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eRevisiting text decomposition methods for NLI-based factuality scoring of summaries\u003c/td\u003e\n\u003ctd\u003eJohn Glover, Federico Fancellu, Vasudevan Jagannathan, Matthew R. Gormley and Thomas Schaaf\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eA Corpus and Evaluation for Predicting Semi-Structured Human Annotations\u003c/td\u003e\n\u003ctd\u003eAndreas Marfurt, Ashley Thornton, David Sylvan, Lonneke van der Plas and James Henderson\u003c/td\u003e\n\u003ctd\u003eIn Person\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eAnswerability: A custom metric for evaluating chatbot performance\u003c/td\u003e\n\u003ctd\u003ePranav Gupta, Anand A. Rajasekar, Amisha Patel, Mandar Kulkarni, Alexander Sunell, Kyung Kim and Anusua Trivedi\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eControl Prefixes for Parameter-Efficient Text Generation\u003c/td\u003e\n\u003ctd\u003eJordan Clive, Kris Cao and Marek Rei\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eAssessing Inter-metric Correlation for Multi-document Summarization Evaluation\u003c/td\u003e\n\u003ctd\u003eMichael Ridenour, Ameeta Agrawal and Olubusayo Olabisi\u003c/td\u003e\n\u003ctd\u003eVirtual\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"user-content-poster-session---in-person\"\u003ePoster Session - In-Person\u003c/h3\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eTitle\u003c/th\u003e\n\u003cth\u003eAuthors\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003eTask-driven augmented data evaluation\u003c/td\u003e\n\u003ctd\u003eOlga Golovneva, Pan Wei, Khadige Abboud, Charith Peris, Lizhen Tan and Haiyang Yu\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWeakly Supervised Context-based Interview Question Generation\u003c/td\u003e\n\u003ctd\u003eSamiran Pal, Kaamraan Khan, Avinash Kumar Singh, Subhasish Ghosh, Tapas Nayak, Girish Palshikar and Indrajit Bhattacharya\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eAnalyzing Multi-Task Learning for Abstractive Text Summarization\u003c/td\u003e\n\u003ctd\u003eFrederic Thomas Kirstein, Jan Philip Wahle, Terry Ruas and Bela Gipp\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eCLSE: Corpus of Linguistically Significant Entities\u003c/td\u003e\n\u003ctd\u003eAleksandr Chuklin, Justin Zhao and Mihir Kale\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTowards In-Context Non-Expert Evaluation of Reflection Generation for Counselling Conversations\u003c/td\u003e\n\u003ctd\u003eZixiu Wu, Simone Balloccu, Rim Helaoui, Diego Reforgiato Recupero and Daniele Riboni\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEvaluation of Response Generation Models: Shouldn't It Be Shareable and Replicable?\u003c/td\u003e\n\u003ctd\u003eSeyed Mahed Mousavi, Gabriel Roccabruna, Michela Lorandi, Simone Caldarella and Giuseppe Riccardi\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEnhancing and Evaluating the Grammatical Framework Approach to Logic-to-Text Generation\u003c/td\u003e\n\u003ctd\u003eEduardo Calò, Elze van der Werf, Albert Gatt and Kees van Deemter\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTransfer learning for multilingual vacancy text generation\u003c/td\u003e\n\u003ctd\u003eAnna Lorincz, David Graus, Dor Lavi and Joao Lebre Magalhaes Pereira\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEdiT5: Semi-Autoregressive Text Editing with T5 Warm-Start\u003c/td\u003e\n\u003ctd\u003eJonathan Mallinson, Jakub Adamek, Eric Malmi and Aliaksei Severyn\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eUnsupervised Token-level Hallucination Detection from Summary Generation By-products\u003c/td\u003e\n\u003ctd\u003eAndreas Marfurt and James Henderson\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eT5QL: Taming language models for SQL generation\u003c/td\u003e\n\u003ctd\u003eSamuel David Arcadinho, David Aparicio, Hugo Veiga and Antonio Alegria\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eHuman perceiving behavior modeling in evaluation of code generation models\u003c/td\u003e\n\u003ctd\u003eSergey V. Kovalchuk, Vadim Lomshakov and Artem Aliev\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eGiCCS: A German in-Context Conversational Similarity Benchmark\u003c/td\u003e\n\u003ctd\u003eShima Asaadi, Zahra Kolagar, Alina Liebel and Alessandra Zarcone\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eMeasuring the Measuring Tools: An Automatic Evaluation of Semantic Metrics for Text Corpora\u003c/td\u003e\n\u003ctd\u003eGeorge Kour, Samuel Ackerman, Eitan Daniel Farchi, Orna Raz, Boaz Carmeli and Ateret Anaby Tavor\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eLongEval: Guidelines for Human Evaluation of Faithfulness in Long-form Summarization\u003c/td\u003e\n\u003ctd\u003eKalpesh Krishna, Erin Bransom, Bailey Kuehl, Mohit Iyyer, Arman Cohan, Pradeep Dasigi and Kyle Lo\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eExploring Document-Level Literary Machine Translation with Parallel Paragraphs from World Literature\u003c/td\u003e\n\u003ctd\u003eKatherine Thai, Marzena Karpinska, Kalpesh Krishna, Moira Inghilleri, John Wieting and Mohit Iyyer\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eDo Decoding Algorithms Capture Discourse Structure in Multi-Modal Tasks? A Case Study of Image Paragraph Generation\u003c/td\u003e\n\u003ctd\u003eNikolai Ilinykh and Simon Dobnik\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e20Q: Overlap-Free World Knowledge Benchmark for Language Models\u003c/td\u003e\n\u003ctd\u003eMaxime De Bruyn, Ehsan Lotfi, Jeska Buhmann and Walter Daelemans\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eControllable Factuality in Document-Grounded Dialog Systems Using a Noisy Channel Model\u003c/td\u003e\n\u003ctd\u003eNico Daheim, David Thulke, Christian Dugast and Hermann Ney\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eLearning to Model Editing Processes\u003c/td\u003e\n\u003ctd\u003eMachel Reid and Graham Neubig\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eOn the Effectiveness of Automated Metrics for Text Generation Systems\u003c/td\u003e\n\u003ctd\u003ePius von Däniken, Jan Deriu, Don Tuggener and Mark Cieliebak\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eResidual Learning of Neural Text Generation with n-gram Language Model\u003c/td\u003e\n\u003ctd\u003eHuayang Li, Deng Cai, Jin Xu and Taro Watanabe\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eHe Said, She Said: Style Transfer for Shifting the Perspective of Dialogues\u003c/td\u003e\n\u003ctd\u003eAmanda Bertsch, Graham Neubig and Matthew R. Gormley\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEtriCA: Event-Triggered Context-Aware Story Generation Augmented by Cross Attention\u003c/td\u003e\n\u003ctd\u003eChen Tang, Chenghua Lin, Henglin Huang, Frank Guerin and Zhihao Zhang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003ctd\u003e\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eKnowledge Graph Generation From Text\u003c/td\u003e\n\u003ctd\u003eIgor Melnyk, Pierre Dognin and Payel Das\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eLearning When and What to Quote: A Quotation Recommender System with Mutual Promotion of Recommendation and Generation\u003c/td\u003e\n\u003ctd\u003eLingzhi Wang, Xingshan Zeng and Kam-Fai Wong\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eDiscord Questions: A Computational Approach To Diversity Analysis in News Coverage\u003c/td\u003e\n\u003ctd\u003ePhilippe Laban, Chien-Sheng Wu, Lidiya Murakhovs'ka, Xiang Chen and Caiming Xiong\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eCONSISTENT: Open-Ended Question Generation From News Articles\u003c/td\u003e\n\u003ctd\u003eTuhin Chakrabarty, Justin Lewis and Smaranda Muresan\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTable-To-Text generation and pre-training with TabT5\u003c/td\u003e\n\u003ctd\u003eEwa Andrejczuk, Julian Martin Eisenschlos, Francesco Piccinno, Syrine Krichene and Yasemin Altun\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch3 id=\"user-content-poster-session---virtual\"\u003ePoster Session - Virtual\u003c/h3\u003e\n\u003cp\u003ePresenters can choose which of the sessions they want to attend for their posters.\u003c/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003eTitle\u003c/th\u003e\n\u003cth\u003eAuthors\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003eGenerating Coherent Narratives with Subtopic Planning to Answer How-to Questions\u003c/td\u003e\n\u003ctd\u003ePengshan Cai, Mo Yu, Fei Liu and hong yu\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eSemantic Similarity as a Window into Vector- and Graph-Based Metrics\u003c/td\u003e\n\u003ctd\u003eWai Ching Leung, Shira Wein and Nathan Schneider\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWikiOmnia: filtration and evaluation of the generated QA corpus on the whole Russian Wikipedia\u003c/td\u003e\n\u003ctd\u003eDina Pisarevskaya and Tatiana Shavrina\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eModel Criticism for Long-Form Text Generation (Non-Archival)\u003c/td\u003e\n\u003ctd\u003eYuntian Deng, Volodymyr Kuleshov and Alexander Rush\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eControllable Text Generation for All Ages: Evaluating a Plug-and-Play Approach to Age-Adapted Dialogue\u003c/td\u003e\n\u003ctd\u003eLennert Jansen, Štěpán Lars Laichter, Arabella Sinclair, Margot van der Goot, Raquel Fernandez and Sandro Pezzelle\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTemplate-based Contact Email Generation for Job Recommendation\u003c/td\u003e\n\u003ctd\u003eQiuchi Li and Christina Lioma\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eCompression, Transduction, and Creation: A Unified Framework for Evaluating Natural Language Generation\u003c/td\u003e\n\u003ctd\u003eMingkai Deng, Bowen Tan, Zhengzhong Liu, Eric Xing and Zhiting Hu\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eAre Abstractive Summarization Models truly `Abstractive'? An Empirical Study to Compare the two Forms of Summarization\u003c/td\u003e\n\u003ctd\u003eVinayshekhar Bannihatti Kumar and Rashmi Gangadharaiah\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTowards Attribute-Entangled Controllable Text Generation: A Pilot Study of Blessing Generation\u003c/td\u003e\n\u003ctd\u003eShulin Huang, Shirong Ma, Yinghui Li, Li Yangning, Shiyang Lin, Haitao Zheng and Ying Shen\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eNearest Neighbor Language Models for Stylistic Controllable Generation\u003c/td\u003e\n\u003ctd\u003eSeverino Trotta, Lucie Flek and Charles Welch\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eOn reporting scores and agreement for error annotation tasks\u003c/td\u003e\n\u003ctd\u003eMaja Popović and Anya Belz\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eImproved Evaluation of Automatic Source Code Summarisation\u003c/td\u003e\n\u003ctd\u003eJesse Phillips, David Bowes, Mahmoud El-Haj and Tracy Hall\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eMost NLG is Low-Resource: here's what we can do about it\u003c/td\u003e\n\u003ctd\u003eDavid M. Howcroft and Dimitra Gkatzia\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWhat's in a (dataset's) name? The case of BigPatent\u003c/td\u003e\n\u003ctd\u003eSilvia Casola, Alberto Lavelli and Horacio Saggion\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eMultilingual Social Media Text Generation and Evaluation with Few-Shot Prompting\u003c/td\u003e\n\u003ctd\u003eMack Blackburn\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eFactual Error Correction for Abstractive Summaries Using Entity Retrieval\u003c/td\u003e\n\u003ctd\u003eHwanhee Lee, Cheoneum Park, Seunghyun Yoon, Trung Bui, Franck Dernoncourt, Juae Kim and Kyomin Jung\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eCoherent Long Text Generation by Contrastive Soft Prompt\u003c/td\u003e\n\u003ctd\u003eGuandan Chen, Jiashu Pu, Yadong Xi and Rongsheng Zhang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eImproving Dialogue Act Recognition with Augmented Data\u003c/td\u003e\n\u003ctd\u003eKhyati Mahajan, Soham Parikh, Quaizar Vohra, Mitul Tiwari and Samira Shaikh\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWhat Was Your Name Again? Interrogating Generative Conversational Models For Factual Consistency Evaluation\u003c/td\u003e\n\u003ctd\u003eEhsan Lotfi, Maxime De Bruyn, Jeska Buhmann and Walter Daelemans\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eNarrative Why-Question Answering: A Review of Challenges and Datasets\u003c/td\u003e\n\u003ctd\u003eEmil Kalbaliyev and Kairit Sirts\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eExploring a POS-based Two-stage Approach for Improving Low-Resource AMR-to-Text Generation\u003c/td\u003e\n\u003ctd\u003eMarco Antonio Sobrevilla Cabezudo and Thiago Pardo\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWhat Makes Data-to-Text Generation Hard for Pretrained Language Models?\u003c/td\u003e\n\u003ctd\u003eMoniba Keymanesh, Adrian Benton, Mark Dredze\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eDon't Say What You Don't Know: Improving the Consistency of Abstractive Summarization by Constraining Beam Search\u003c/td\u003e\n\u003ctd\u003eDaniel King, Zejiang Shen, Nishant Subramani, Daniel S Weld, Iz Beltagy, Doug Downey\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eRepresentation Learning for Resource-Constrained Keyphrase Generation\u003c/td\u003e\n\u003ctd\u003eDi Wu, Wasi U. Ahmad, Sunipa Dev and Kai-Wei Chang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEfficient (Soft) Q-Learning for Text Generation with Limited Good Data\u003c/td\u003e\n\u003ctd\u003eHan Guo, Bowen Tan, Zhengzhong Liu, Eric Xing and Zhiting Hu\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWish I Can Feel What You Feel: A Neural Approach for Empathetic Response Generation\u003c/td\u003e\n\u003ctd\u003eYangbin Chen and Chunfeng Liang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eText Editing as Imitation Game\u003c/td\u003e\n\u003ctd\u003eNing Shi, Bin Tang, Bo Yuan, Longtao Huang, Yewen Pu, Jie Fu and Zhouhan Lin\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eAudience-Centric Natural Language Generation via Style Infusion\u003c/td\u003e\n\u003ctd\u003eSamraj Moorjani, Adit Krishnan, Hari Sundaram, Ewa Maslowska and Aravind Sankar\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eGrounded Keys-to-Text Generation: Towards Factual Open-Ended Generation\u003c/td\u003e\n\u003ctd\u003eFaeze Brahman, Baolin Peng, Michel Galley, Sudha Rao, Bill Dolan, Snigdha Chaturvedi and Jianfeng Gao\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eEmpathetic Dialogue Generation via Sensitive Emotion Recognition and Sensible Knowledge Selection\u003c/td\u003e\n\u003ctd\u003eLanrui Wang, Jiangnan Li, Zheng Lin, Fandong Meng, Chenxu Yang, Weiping Wang and Jie Zhou\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eHeLo: Learning-Free Lookahead Decoding for Conversation Infilling\u003c/td\u003e\n\u003ctd\u003eIvan Lee and Taylor Berg-Kirkpatrick\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eData-Efficient Concept Extraction from Pre-trained Language Models for Commonsense Explanation Generation\u003c/td\u003e\n\u003ctd\u003eYanbo Fang and Yongfeng Zhang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eMCPG: A Flexible Multi-Level Controllable Framework for Unsupervised Paraphrase Generation\u003c/td\u003e\n\u003ctd\u003eYi Chen, Haiyun Jiang, Lemao Liu, Rui Wang, Shuming Shi and Ruifeng Xu\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eParaMac: A General Unsupervised Paraphrase Generation Framework Leveraging Semantic Constraints and Diversifying Mechanisms\u003c/td\u003e\n\u003ctd\u003eJinxin Liu, Jiaxin Shi, Ji Qi, Lei Hou, Juanzi Li and Qi Tian\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eRecurrence Boosts Diversity! Revisiting Recurrent Latent Variable in Transformer-Based Variational AutoEncoder for Diverse Text Generation\u003c/td\u003e\n\u003ctd\u003eJinyi Hu, Xiaoyuan Yi, Wenhao Li, Maosong Sun and Xing Xie\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eConsecutive Question Generation via Dynamic Multitask Learning\u003c/td\u003e\n\u003ctd\u003eYunji Li, Sujian Li and Xing Shi\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eSequentially Controlled Text Generation\u003c/td\u003e\n\u003ctd\u003eAlexander Spangher, Yao Ming, Xinyu Hua and Nanyun Peng\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eInferring the Reader: Guiding Automated Story Generation with Commonsense Reasoning\u003c/td\u003e\n\u003ctd\u003eXiangyu Peng, Siyan Li, Sarah Wiegreffe and Mark Riedl\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eGuiding Neural Story Generation with Reader Models\u003c/td\u003e\n\u003ctd\u003eXiangyu Peng, Kaige Xie, Amal Alabdulkarim, Harshith Kayam, Samihan Dani and Mark Riedl\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eTemporal Prompts for Conditional Text Generation\u003c/td\u003e\n\u003ctd\u003eShuyang Cao and Lu Wang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eA Framework for Automatic Generation of Spoken Question-Answering Data\u003c/td\u003e\n\u003ctd\u003eMerve Ünlü Menevşe, Yusufcan Manav, Ebru Arisoy and Arzucan Özgür\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eNot All Errors are Equal: Learning Text Generation Metrics using Stratified Error Synthesis\u003c/td\u003e\n\u003ctd\u003eWenda Xu, Yi-Lin Tuan, Yujie Lu, Michael S. Saxon, Lei Li and William Yang Wang\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003eWANLI: Worker and AI Collaboration for Natural Language Inference Dataset Creation\u003c/td\u003e\n\u003ctd\u003eAlisa Liu, Swabha Swayamdipta, Noah A. Smith and Yejin Choi\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003ePlug-and-Play Recipe Generation with Content Planning\u003c/td\u003e\n\u003ctd\u003eYinhong Liu, Yixuan n/a Su, Ehsan Shareghi and Nigel Collier\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003ch2 id=\"user-content-important-dates\"\u003eImportant Dates\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003eDecember 7\u003c/code\u003e Workshop Date\u003c/p\u003e\n\u003ch3 id=\"user-content-organization\"\u003eOrganization\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eAntoine Bosselut (EPFL)\u003c/li\u003e\n\u003cli\u003eKhyathi Chandu (Carnegie Mellon University)\u003c/li\u003e\n\u003cli\u003eKaustubh Dhole (Emory University)\u003c/li\u003e\n\u003cli\u003eVarun Gangal (Carnegie Mellon University)\u003c/li\u003e\n\u003cli\u003eSebastian Gehrmann (Google Research)\u003c/li\u003e\n\u003cli\u003eYacine Jernite (Hugging Face)\u003c/li\u003e\n\u003cli\u003eJekaterina Novikova (NoOverfitting Lab)\u003c/li\u003e\n\u003cli\u003eLaura Perez-Beltrachini (University of Edinburgh)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eSteering Committee\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eWei Xu (Georgia Tech)\u003c/li\u003e\n\u003cli\u003eEsin Durmus (Stanford University)\u003c/li\u003e\n\u003cli\u003eSamira Shaikh (UNC Charlotte)\u003c/li\u003e\n\u003c/ul\u003e\n"}},"__N_SSG":true},"page":"/workshop","query":{},"buildId":"ues4F3N4-riqsMorKt6hN","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+<p><em>Contact</em>:
+<a href="mailto:gem-benchmark-chairs@googlegroups.com">gem-benchmark-chairs@googlegroups.com</a></p>
+<p><em>General Chairs</em></p>
+<p>Khyathi Raghavi Chandu (AI2)</p>
+<p>Elizabeth Clark (Google Deepmind)</p>
+<p>Kaustubh Dhole (Emory University)</p>
+<p>Sebastian Gehrmann (Bloomberg)</p>
+<p>João Sedoc (NYU)</p>
+<p>Alex Wang (Cohere)</p>
+<p><em>Industry Track Chairs</em></p>
+<p>Enrico Santus (Bloomberg)</p>
+<p>Hooman Sedghamiz (Bayer)</p>
+</div></article></main><div class="layout_push__lpoMK"></div></div><footer class="layout_footer__WlhMu utils_eggshell__3hbbY"><span class="layout_backToHome__D9QFr"><a href="/"><a>← Home</a></a></span><span>If you have any questions, please join our <a href="https://groups.google.com/g/gem-benchmark" target="_blank" class="utils_accentUnderline__VG89l">google group</a> for support.</span></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"workshopData":{"contentHtml":"\u003cp\u003eThe Third Version of the \u003ca href=\"https://gem-benchmark.com/\"\u003eGeneration, Evaluation \u0026#x26; Metrics (GEM) Workshop\u003c/a\u003e will be held as part of \u003ca href=\"https://2023.emnlp.org/\"\u003eEMNLP\u003c/a\u003e, December 6-10, 2023.\u003c/p\u003e\n\u003ch3 id=\"user-content-overview\"\u003eOverview\u003c/h3\u003e\n\u003cp\u003eMany new NLP applications are cast through the lens of natural language generation. With the advent of these new approaches, many opportunities arise: generation in previously less studied languages, new evaluation paradigms, methods for corpus creation, more efficient architectures, strategies for safe deployments, among many others. At the same time, we can learn from the rich history of NLG research to further improve generation methods.\nThese developments require robust and sound NLG evaluation processes. To that end, the GEM workshop aims to encourage the development of model auditing and human evaluation strategies, and to popularize model evaluations in languages beyond English.\u003c/p\u003e\n\u003cp\u003eWe welcome submissions related, but not limited to, the following topics:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e💎 Automatic evaluation of generation systems (\u003ca href=\"https://aclanthology.org/2021.gem-1.8/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2021.gem-1.1/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2022.gem-1.26/\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e💎 Creating NLG corpora and challenge sets (\u003ca href=\"https://aclanthology.org/2022.tacl-1.4/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://openreview.net/forum?id=CSi1eu_2q96\"\u003eexample\u003c/a\u003e, [example])\u003ca href=\"https://aclanthology.org/2022.gem-1.6/\"\u003ehttps://aclanthology.org/2022.gem-1.6/\u003c/a\u003e))\u003c/li\u003e\n\u003cli\u003e💎 Critiques of benchmarking efforts and responsibly measuring progress in NLG (\u003ca href=\"https://aclanthology.org/2020.emnlp-main.393/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://openreview.net/forum?id=j6NxpQbREA1\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e💎 Effective and/or efficient NLG methods that can be applied to a wide range of languages and/or scenarios (\u003ca href=\"https://aclanthology.org/2020.tacl-1.47/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2021.gem-1.16/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2022.gem-1.1/\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e💎 Application and evaluation of generation models interacting with external data and tools (\u003ca href=\"https://arxiv.org/abs/2302.04761\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://arxiv.org/abs/2304.09842\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://arxiv.org/abs/2302.07842\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e💎 Sociotechnical perspectives of employing large language models (\u003ca href=\"https://dl.acm.org/doi/abs/10.1145/3531146.3533088\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003cli\u003e💎 Standardizing human evaluation and making it more robust (\u003ca href=\"https://aclanthology.org/2021.tacl-1.87/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2022.humeval-1.7/\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/2022.gem-1.12/\"\u003eexample\u003c/a\u003e)\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eWe further invite submissions that conduct in-depth analyses of outputs of existing systems, for example through error analyses, by applying new metrics, or by testing the system on new test sets. While we encourage the use of the infrastructure the organizing team has developed as part of the \u003ca href=\"https://arxiv.org/abs/2206.11249\"\u003eGEM benchmark\u003c/a\u003e, its use is not required.\u003c/p\u003e\n\u003cp\u003eIf you are interested, you can check out last year's workshop websites from \u003ca href=\"/workshop/2021\"\u003eACL 2021\u003c/a\u003e and \u003ca href=\"/workshop/2022\"\u003eEMNLP 2022\u003c/a\u003e.\u003c/p\u003e\n\u003ch3 id=\"user-content-industrial-track---unleashing-the-power-of-nlp-bridging-the-gap-between-academia-and-industry\"\u003eIndustrial Track - Unleashing the Power of NLP: Bridging the Gap between Academia and Industry\u003c/h3\u003e\n\u003cp\u003eGEM 2023 is proud to announce the launch of its Industrial Track, which aims to provide actionable insights to industry professionals and to foster collaborations between academia and industry. This track will address the unique challenges faced by non-academic colleagues, highlighting the differences in evaluation practices between academic and industrial research, and explore the challenges in evaluating generative models with real-world data.\nThe Industrial Track invites submissions covering the following topics, including (but not limited to):\n💎 Breaking Barriers: Bridging the Gap between Academic and Industrial Research (\u003ca href=\"https://aclanthology.org/P17-2015\"\u003eexample\u003c/a\u003e)\n💎 From Data Diversity to Model Robustness: Challenges in Evaluating Generative Models with Real-World Data (\u003ca href=\"https://aclanthology.org/2021.sigdial-1.8/\"\u003eexample\u003c/a\u003e)\n💎 Beyond Metrics: Evaluating Generative Models for Real-World Business Impact (\u003ca href=\"https://arxiv.org/abs/1906.02243\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://aclanthology.org/P16-2096\"\u003eexample\u003c/a\u003e, \u003ca href=\"https://arxiv.org/abs/2306.07402\"\u003eexample\u003c/a\u003e)\u003c/p\u003e\n\u003ch3 id=\"user-content-how-to-submit\"\u003eHow to submit?\u003c/h3\u003e\n\u003cp\u003eSubmissions can take either of the following forms:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e💎 Archival Papers Papers describing original and unpublished work can be submitted in a between 4 and 8 page format.\u003c/li\u003e\n\u003cli\u003e💎 Non-Archival Abstracts To discuss work already presented or under review at a peer-reviewed venue, we allow the submission of 2-page abstracts.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eAll submissions are allowed unlimited space for references and appendices and should conform to EMNLP 2023 style guidelines. Archival paper submissions must be anonymized while abstract submissions may include author information.\u003c/p\u003e\n\u003cp\u003eYou can submit directly through \u003ca href=\"https://softconf.com/emnlp2023/GEM2023\"\u003eSoftConf\u003c/a\u003e. Please select the track you are submitting to during the submission.\u003c/p\u003e\n\u003cp\u003eWe additionally welcome presentations by authors of papers in the Findings of the EMNLP (details to be announced at a later date).\u003c/p\u003e\n\u003ch3 id=\"user-content-shared-task\"\u003eShared Task\u003c/h3\u003e\n\u003cp\u003eWe are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. The Shared Task will be run \"Backwards\": the workshop will serve as a platform to pre-register your hypotheses. More info on how to participate to come!\u003c/p\u003e\n\u003ch3 id=\"user-content-important-dates\"\u003eImportant Dates\u003c/h3\u003e\n\u003cp\u003eNote: For any questions, please email \u003ca href=\"mailto:gem-benchmark-chairs@googlegroups.com\"\u003egem-benchmark-chairs@googlegroups.com\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003ePaper Submission Dates\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e📅 1 September 2023: Workshop paper submission deadline\u003c/li\u003e\n\u003cli\u003e📅 6 October 2023:   Workshop paper notification deadline\u003c/li\u003e\n\u003cli\u003e📅 18 October 2023:  Workshop paper camera ready deadline\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eWorkshop Dates\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e📅 6 December 2022: Workshop\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"user-content-organization\"\u003eOrganization\u003c/h3\u003e\n\u003cp\u003e\u003cem\u003eContact\u003c/em\u003e:\n\u003ca href=\"mailto:gem-benchmark-chairs@googlegroups.com\"\u003egem-benchmark-chairs@googlegroups.com\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eGeneral Chairs\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003eKhyathi Raghavi Chandu (AI2)\u003c/p\u003e\n\u003cp\u003eElizabeth Clark (Google Deepmind)\u003c/p\u003e\n\u003cp\u003eKaustubh Dhole (Emory University)\u003c/p\u003e\n\u003cp\u003eSebastian Gehrmann (Bloomberg)\u003c/p\u003e\n\u003cp\u003eJoão Sedoc (NYU)\u003c/p\u003e\n\u003cp\u003eAlex Wang (Cohere)\u003c/p\u003e\n\u003cp\u003e\u003cem\u003eIndustry Track Chairs\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003eEnrico Santus (Bloomberg)\u003c/p\u003e\n\u003cp\u003eHooman Sedghamiz (Bayer)\u003c/p\u003e\n"}},"__N_SSG":true},"page":"/workshop","query":{},"buildId":"sXTMfjGfZQfLPMmgf0Vlf","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
