@@ -59,11 +59,11 @@ export default function Home() {
             </a>
           </Link>
 
-          <Link href="/team">
+          {/* <Link href="/team">
             <a className={styles.card}>
               <h3>Team</h3>
             </a>
-          </Link>
+          </Link> */}
 
           {/* <Link href="/shared_task">
             <a className={styles.card}>

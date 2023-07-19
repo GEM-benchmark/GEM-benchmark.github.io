@@ -85,11 +85,11 @@ class Navbar extends React.Component {
                 <a>Papers</a>
               </Link>
             </li>
-            <li className={styles.navitem}>
+            {/* <li className={styles.navitem}>
               <Link href="/team">
                 <a>Team</a>
               </Link>
-            </li>
+            </li> */}
             <li className={styles.navitem}>
               <Link href="/workshop">
                 <a>Workshop</a>
