@@ -7,7 +7,7 @@ These developments require robust and sound NLG evaluation processes. To that en
 We welcome submissions related, but not limited to, the following topics:
 
 - 💎 Automatic evaluation of generation systems ([example](https://aclanthology.org/2021.gem-1.8/), [example](https://aclanthology.org/2021.gem-1.1/), [example](https://aclanthology.org/2022.gem-1.26/))
-- 💎 Creating NLG corpora and challenge sets ([example](https://aclanthology.org/2022.tacl-1.4/), [example](https://openreview.net/forum?id=CSi1eu_2q96), [example])https://aclanthology.org/2022.gem-1.6/))
+- 💎 Creating NLG corpora and challenge sets ([example](https://aclanthology.org/2022.tacl-1.4/), [example](https://openreview.net/forum?id=CSi1eu_2q96), [example](https://aclanthology.org/2022.gem-1.6/))
 - 💎 Critiques of benchmarking efforts and responsibly measuring progress in NLG ([example](https://aclanthology.org/2020.emnlp-main.393/), [example](https://openreview.net/forum?id=j6NxpQbREA1))
 - 💎 Effective and/or efficient NLG methods that can be applied to a wide range of languages and/or scenarios ([example](https://aclanthology.org/2020.tacl-1.47/), [example](https://aclanthology.org/2021.gem-1.16/), [example](https://aclanthology.org/2022.gem-1.1/))
 - 💎 Application and evaluation of generation models interacting with external data and tools ([example](https://arxiv.org/abs/2302.04761), [example](https://arxiv.org/abs/2304.09842), [example](https://arxiv.org/abs/2302.07842))
@@ -21,10 +21,12 @@ If you are interested, you can check out last year's workshop websites from [ACL
 
 ### Industrial Track - Unleashing the Power of NLP: Bridging the Gap between Academia and Industry
 GEM 2023 is proud to announce the launch of its Industrial Track, which aims to provide actionable insights to industry professionals and to foster collaborations between academia and industry. This track will address the unique challenges faced by non-academic colleagues, highlighting the differences in evaluation practices between academic and industrial research, and explore the challenges in evaluating generative models with real-world data.
+
 The Industrial Track invites submissions covering the following topics, including (but not limited to):
-💎 Breaking Barriers: Bridging the Gap between Academic and Industrial Research ([example](https://aclanthology.org/P17-2015))
-💎 From Data Diversity to Model Robustness: Challenges in Evaluating Generative Models with Real-World Data ([example](https://aclanthology.org/2021.sigdial-1.8/))
-💎 Beyond Metrics: Evaluating Generative Models for Real-World Business Impact ([example](https://arxiv.org/abs/1906.02243), [example](https://aclanthology.org/P16-2096), [example](https://arxiv.org/abs/2306.07402))
+
+- 💎 Breaking Barriers: Bridging the Gap between Academic and Industrial Research ([example](https://aclanthology.org/P17-2015))
+- 💎 From Data Diversity to Model Robustness: Challenges in Evaluating Generative Models with Real-World Data ([example](https://aclanthology.org/2021.sigdial-1.8/))
+- 💎 Beyond Metrics: Evaluating Generative Models for Real-World Business Impact ([example](https://arxiv.org/abs/1906.02243), [example](https://aclanthology.org/P16-2096), [example](https://arxiv.org/abs/2306.07402))
 
 
 ### How to submit?
@@ -47,9 +49,11 @@ We are organizing a shared task focused on multilingual summarization, including
 Note: For any questions, please email gem-benchmark-chairs@googlegroups.com.
 
 Paper Submission Dates
-- 📅 1 September 2023: Workshop paper submission deadline 
-- 📅 6 October 2023:   Workshop paper notification deadline
-- 📅 18 October 2023:  Workshop paper camera ready deadline
+- 📅 8 September 2023: Workshop paper submission deadline 
+- 📅 20 October 2023:   Workshop paper notification deadline
+- 📅 3 November 2023:  Workshop paper camera ready deadline
+
+**Note** The website showed wrong dates for notication and CR deadlines. Apologies for any inconvenience. 
 
 Workshop Dates
 - 📅 6 December 2022: Workshop
