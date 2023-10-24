@@ -38,7 +38,7 @@ All submissions are allowed unlimited space for references and appendices and sh
 
 You can submit directly through [SoftConf](https://softconf.com/emnlp2023/GEM2023). Please select the track you are submitting to during the submission. 
 
-We additionally welcome presentations by authors of papers in the Findings of the EMNLP (details to be announced at a later date).
+We additionally welcome presentations by authors of papers in the Findings of the EMNLP. The selection process is managed centrally by the workshop chairs for the conference and we thus cannot respond to all individual inquiries. However, we will try our best to accomodate your requests. 
 
 ### Shared Task
 We are organizing a shared task focused on multilingual summarization, including human and automatic evaluation. The Shared Task will be run "Backwards": the workshop will serve as a platform to pre-register your hypotheses. More info on how to participate to come!
