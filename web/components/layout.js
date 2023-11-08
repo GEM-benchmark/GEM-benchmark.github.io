@@ -37,7 +37,7 @@ export default function Layout({ children, home, nlAugmenter, wideContainer}) {
           <footer className={styles.footer + " " + utilStyles.eggshell}>
             {!home && (
               <span className={styles.backToHome}>
-                <Link href="/">
+                <Link legacyBehavior href="/">
                   <a>← Home</a>
                 </Link>
               </span>

@@ -19,7 +19,7 @@ export default function Post({ allData }) {
           The list below links to the work-in-progress data cards for models submitted to GEM. As part of our submission process, we ask participants a series of questions about their models. The current version of our model cards lists the provided answers verbatim.
           The submission form can be found <a href="https://forms.gle/pds6cbBf2Gf2VGMv7" target="_blank">here</a>. The template used to produce the statements
           and can be found here: [
-            <Link href={`/model_card_template.md`}>
+            <Link legacyBehavior href={`/model_card_template.md`}>
             <a download target="_blank">
               download template
               </a>
@@ -29,7 +29,7 @@ export default function Post({ allData }) {
         <ul className={utilStyles.list}>
           {allData.map(({ id, title, type, background }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/model_cards/${id}`}>
+              <Link legacyBehavior href={`/model_cards/${id}`}>
               <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>

@@ -30,7 +30,7 @@ class Navbar extends React.Component {
         <div className={styles.gradbar}></div>
         <nav className={styles.navbar}>
           <span className={utilStyles.headingLg + " " + styles.navbarlogo}>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>GEM BENCHMARK</a>
             </Link>
           </span>
@@ -56,57 +56,57 @@ class Navbar extends React.Component {
                   : styles.navitem + " " + styles.pushright
               }
             >
-              <Link href="/resources/">
+              <Link legacyBehavior href="/resources/">
                 <a>Resources</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/data_cards/">
+              <Link legacyBehavior href="/data_cards/">
                 <a>Data Cards</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/model_cards">
+              <Link legacyBehavior href="/model_cards">
                 <a>Model Cards</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/tutorials">
+              <Link legacyBehavior href="/tutorials">
                 <a>tutorials</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/results/">
+              <Link legacyBehavior href="/results/">
                 <a>Results</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/papers/">
+              <Link legacyBehavior href="/papers/">
                 <a>Papers</a>
               </Link>
             </li>
             {/* <li className={styles.navitem}>
-              <Link href="/team">
+              <Link legacyBehavior href="/team">
                 <a>Team</a>
               </Link>
             </li> */}
             <li className={styles.navitem}>
-              <Link href="/workshop">
+              <Link legacyBehavior href="/workshop">
                 <a>Workshop</a>
               </Link>
             </li>
             {/* <li className={styles.navitem}>
-              <Link href="/shared_task">
+              <Link legacyBehavior href="/shared_task">
                 <a>Shared Task</a>
               </Link>
             </li> */}
             {/* <li className={styles.navitem}>
-              <Link href="/nl_augmenter">
+              <Link legacyBehavior href="/nl_augmenter">
                 <a>NL-Augmenter</a>
               </Link>
             </li>
             <li className={styles.navitem}>
-              <Link href="/hackathon">
+              <Link legacyBehavior href="/hackathon">
                 <a>Hackathon</a>
               </Link>
             </li> */}

@@ -24,7 +24,7 @@ export default function Post({ allData }) {
         <ul className={utilStyles.list}>
           {allData.map(({ id, title, type, background }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/tutorials/${id}`}>
+              <Link legacyBehavior href={`/tutorials/${id}`}>
                 <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>

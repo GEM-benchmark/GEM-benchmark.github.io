@@ -35,25 +35,25 @@ export default function Home() {
           existing data or developing datasets for additional languages.
       </p>
         <div className={styles.grid}>
-          <Link href="/data_cards/">
+          <Link legacyBehavior href="/data_cards/">
             <a className={styles.card}>
               <h3>Data Cards</h3>
             </a>
           </Link>
 
-          <Link href="/tutorials">
+          <Link legacyBehavior href="/tutorials">
             <a className={styles.card}>
               <h3>Tutorials</h3>
             </a>
           </Link>
 
-          <Link href="/results/">
+          <Link legacyBehavior href="/results/">
             <a className={styles.card}>
               <h3>Results</h3>
             </a>
           </Link>
 
-          <Link href="/papers">
+          <Link legacyBehavior href="/papers">
             <a className={styles.card}>
               <h3>Papers</h3>
             </a>
@@ -71,13 +71,13 @@ export default function Home() {
             </a>
           </Link> */}
 
-          <Link href="/nl_augmenter">
+          <Link legacyBehavior href="/nl_augmenter">
             <a className={styles.card}>
               <h3>NL-Augmenter</h3>
             </a>
           </Link>
 
-          <Link href="/workshop">
+          <Link legacyBehavior href="/workshop">
             <a className={styles.card}>
               <h3>Workshop</h3>
             </a>

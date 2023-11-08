@@ -118,7 +118,7 @@ export default function Home({ teamData }) {
 
           <p>
             This page acts as a directory of our amazing contributors. If you want to
-            join the organization,  <Link href="/team/join">
+            join the organization,  <Link legacyBehavior href="/team/join">
               <a>click here to fill out the sign-up form.</a></Link>
           </p>
 

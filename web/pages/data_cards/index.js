@@ -27,28 +27,28 @@ export default function Home({ allTasksData }) {
         </h2>
         <p className={styles.description}>
           The list below links to data statements [
-            <Link href="https://www.aclweb.org/anthology/Q18-1041/" >
+            <Link legacyBehavior href="https://www.aclweb.org/anthology/Q18-1041/" >
             <a target="_blank">
               1
               </a>
-          </Link>, <Link href="https://arxiv.org/abs/1803.09010" >
+          </Link>, <Link legacyBehavior href="https://arxiv.org/abs/1803.09010" >
             <a target="_blank">
               2
               </a>
           </Link>] for each of the datasets that are part of GEM tasks.
           The template used to produce the initial statements
           and a guide on how to write them can be found here: [
-            <Link href={`/statement_template.md`}>
+            <Link legacyBehavior href={`/statement_template.md`}>
             <a download target="_blank">
               download template
               </a>
           </Link>] [
-            <Link href={`/tutorials/writing_a_data_card`}>
+            <Link legacyBehavior href={`/tutorials/writing_a_data_card`}>
             <a>
               view guide
               </a>
           </Link>]. We have released an extended version of this template and an&nbsp;
-          <Link href={"https://huggingface.co/spaces/GEM/DatasetCardForm"}>
+          <Link legacyBehavior href={"https://huggingface.co/spaces/GEM/DatasetCardForm"}>
             <a target="_blank">
              interactive collection tool
             </a>
@@ -57,7 +57,7 @@ export default function Home({ allTasksData }) {
         <ul className={utilStyles.list}>
           {allTasksData.map(({ id, title, type, languages, summary }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/data_cards/${id}`}>
+              <Link legacyBehavior href={`/data_cards/${id}`}>
                 <a className={styles.larger}>{title}</a>
               </Link>
               <span className={utilStyles.smallSpace}></span>

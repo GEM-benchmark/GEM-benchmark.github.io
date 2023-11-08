@@ -116,11 +116,11 @@ export default function Home({ teamData }) {
           GEM is a community-driven effort to improve evaluation of
           natural language generation. It would not be possible without
           a large group of collaborators to take on challenging tasks.
-          You can see the contributor list to GEMv1 <Link href="/team/2021"><a>here</a></Link>.
+          You can see the contributor list to GEMv1 <Link legacyBehavior href="/team/2021"><a>here</a></Link>.
 
           <p>
             This page acts as a directory of our amazing contributors. If you want to
-            join the organization,  <Link href="/team/join">
+            join the organization,  <Link legacyBehavior href="/team/join">
               <a>click here to fill out the sign-up form.</a></Link>
           </p>
 
