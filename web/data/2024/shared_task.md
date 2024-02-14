@@ -56,7 +56,7 @@ Each submission file must be a jsonl file (UTF-8 encoding) where each text is tr
 Important Dates
 ---------------
 
-`February 13` GEM shared task launched, pre-regitration open.
+`February 14` GEM shared task launched, pre-regitration open.
 
 `March 1` Deadline for pre-registering systems.
 
