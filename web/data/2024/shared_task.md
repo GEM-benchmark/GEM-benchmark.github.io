@@ -6,7 +6,7 @@ General information
 
 Our [pre-registration form](https://forms.gle/vbTZDMCuqzok8tTA9) is now available. Although this step is needed in order to receive the test data, submission will NOT be mandatory, so don't hesitate to fill in the form and play with the data! And if you do, please make sure you record the details of your experiments since you will be asked to write one model card per submission.
 
-This year, the GEM shared task features two subtasks: **Data-to-text generation** and **Summarization**, with a special emphasis on multilinguality; furthermore, no training data is provided, and the test data includes previously unpublished test sets; sample data is provided in [this online document](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing).
+This year, the GEM shared task features two subtasks: **Data-to-text generation** and **Summarization**, with a special emphasis on multilinguality; furthermore, no training data is provided, and the test data includes previously unpublished test sets; data illustrations are provided in [this online document](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing).
 
 Data-to-text Shared Task
 ------------------------
