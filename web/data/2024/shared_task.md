@@ -6,9 +6,9 @@ General information
 
 Our [pre-registration form](https://forms.gle/vbTZDMCuqzok8tTA9) is now available. Although this step is needed in order to receive the test data, submission will NOT be mandatory, so don't hesitate to fill in the form and play with the data! And if you do, please make sure you record the details of your experiments since you will be asked to write one model card per submission.
 
-This year, the GEM shared task features two subtasks: **Data-to-text generation** and **Summarization**, with a special emphasis on multilinguality; furthermore, no training data is provided, and the test data includes previously unpublished test sets; data illustrations are provided in [this online document](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing).
+This year, the GEM shared task features two main tasks: **Data-to-text generation** and **Summarization**, with a special emphasis on multilinguality; furthermore, no training data is provided, and the test data includes previously unpublished test sets; data illustrations are provided in [this online document](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing).
 
-Data-to-text Shared Task
+Data-to-text Task
 ------------------------
 
 The data-to-text task consists in generating texts from input triple sets in the WebNLG fashion, where each triple is made of Subject | Property | Object. There are two subtasks:
@@ -30,7 +30,7 @@ For each subtask, there are 3 parallel datasets (see examples [here](https://doc
 
 **Evaluation:** Only human evaluation will be carried out, via 4 quality criteria: Grammaticality, Fluency, No-omissions, No-Additions; see definitions [here.](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing)
 
-Summarization Shared Task
+Summarization Task
 -------------------------
 
 The summarization task generates a concise summary based on the input text document. To make this task challenging, we focus on several different aspects of the task: underrepresented language (Swahili), cross-lingual, and long-context input.
