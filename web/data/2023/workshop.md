@@ -8,10 +8,7 @@ If you are interested, you can check out last year's workshop websites from [ACL
 
 ## Schedule
 
-** This will be filled in a few days** 
-
 All times in local Singapore Time, please use a converter like [this one](https://www.timeanddate.com/worldclock/converter.html?iso=20231108T180000&p1=236) to if you are in a different time zone.
-To accomodate attendees from as many time zones as possible, we will have a virtual-only part in the evening.
 
 |  Start | End   |                                              |
 |  ----- | ----- | -------------------------------------------- |
