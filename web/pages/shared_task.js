@@ -7,11 +7,11 @@ export default function Post({ sharedTaskData }) {
   return (
     <Layout>
       <Head>
-        <title>GEM Workshop 2021</title>
+        <title>GEM Workshop 2023</title>
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          Shared Task at the GEM Workshop at ACL 2021
+          Shared Task at the GEM Workshop at EMNLP 2023
         </span>
         <span className={utilStyles.smallSpace}></span>
         <div dangerouslySetInnerHTML={{ __html: sharedTaskData.contentHtml }} />
@@ -21,7 +21,7 @@ export default function Post({ sharedTaskData }) {
 }
 
 export async function getStaticProps() {
-  const sharedTaskData = await getData("2021/shared_task.md");
+  const sharedTaskData = await getData("2024/shared_task.md");
   return {
     props: {
       sharedTaskData,
