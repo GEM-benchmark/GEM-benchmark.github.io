@@ -11,7 +11,7 @@ export default function Post({ sharedTaskData }) {
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          Shared Task at the GEM Workshop at EMNLP 2023
+          Shared Task at the GEM Workshop
         </span>
         <span className={utilStyles.smallSpace}></span>
         <div dangerouslySetInnerHTML={{ __html: sharedTaskData.contentHtml }} />
