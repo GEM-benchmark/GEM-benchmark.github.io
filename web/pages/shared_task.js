@@ -7,7 +7,7 @@ export default function Post({ sharedTaskData }) {
   return (
     <Layout>
       <Head>
-        <title>GEM Workshop 2024</title>
+        <title>GEM 2024</title>
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
