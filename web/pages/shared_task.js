@@ -7,11 +7,11 @@ export default function Post({ sharedTaskData }) {
   return (
     <Layout>
       <Head>
-        <title>GEM Workshop 2023</title>
+        <title>GEM 2024</title>
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          Shared Task at the GEM Workshop
+          GEM Shared Task at the Generation Challenges (INLG'24)
         </span>
         <span className={utilStyles.smallSpace}></span>
         <div dangerouslySetInnerHTML={{ __html: sharedTaskData.contentHtml }} />

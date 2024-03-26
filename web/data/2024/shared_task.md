@@ -1,10 +1,15 @@
 Shared Task - GEM 2024
 ======================
 
+Event
+-------------------
+
+The GEM shared task is endorsed by [SIGGEN](https://aclweb.org/aclwiki/SIGGEN), and will be part of the Generation Challenges at INLG in Tokyo late September 2024. Participants will have the possibility to (i) publish a system description in the GenChal proceedings (available on the ACL anthology, see [GenChal’23 Proceedings](https://aclanthology.org/volumes/2023.inlg-genchal/)), and (ii) present their results during the GenChal session at the INLG conference in Tokyo in September 2024, along with the shared task overview by the organizers.
+
 General information
 -------------------
 
-Our **[pre-registration form](https://nyustern.az1.qualtrics.com/jfe/form/SV_8qRqfdN3qBy3Bqe)** is now available. Although this step is needed in order to receive the test data, submission will NOT be mandatory, so don't hesitate to fill in the form and play with the data! And if you do, please make sure you record the details of your experiments since you will be asked to write one model card per submission.
+Our **[pre-registration form](https://nyustern.az1.qualtrics.com/jfe/form/SV_8qRqfdN3qBy3Bqe)** is now available. Although this step is needed in order to receive the test data, submission will NOT be mandatory, so don't hesitate to fill in the form and play with the data! And if you do, please make sure you record the details of your experiments since you will be asked to write one model card per submission. The form will remain open until the submission deadline, but in case of high number of participants, priority for the human evaluation will be established  according to the pre-registration date (earlier pre-registrations will be considered first). 
 
 This year, the GEM shared task features two main tasks: **Data-to-text generation** and **Summarization**, with a special emphasis on multilinguality; furthermore, no training data is provided, and the test data includes previously unpublished test sets; data illustrations are provided in [this online document](https://docs.google.com/document/d/1xaGRNl-f6aOH7GWZCOwb745rGvBu-Mz7FtTyvOSmqBM/edit?usp=sharing).
 
@@ -58,7 +63,7 @@ Important Dates
 
 `February 20` GEM shared task launched, pre-registration open.
 
-`March 8` Deadline for pre-registering systems.
+`March 8` Deadline for pre-registering systems (pre-registration will remain open until the submission date; late pre-registrations do not guarantee participation to the human evluation).
 
 `April 5` Deadline for output submission (all tasks).
 
@@ -73,6 +78,8 @@ Important Dates
 `TBD` Notification of Acceptance
 
 `TBD` Camera-ready due
+
+`Late September` GEM at the Generation Challenges session of INLG'24 in Tokyo. 
 
 To stay up-to-date on announcements, please join our [Google Group](https://groups.google.com/g/gem-benchmark). The same group may be used for questions and discussions.
 
