@@ -65,9 +65,9 @@ Important Dates
 
 `March 8` Deadline for pre-registering systems (pre-registration will remain open until the submission date; late pre-registrations do not guarantee participation to the human evaluation).
 
-`April 5` Deadline for output submission (all tasks).
+~~April 5~~ `April 11` Deadline for output submission (all tasks).
 
-`April 6` Human evaluation starts.
+~~April6~~ `April 12` Human evaluation starts.
 
 `Before summer` Human evaluation results.
 
