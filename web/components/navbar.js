@@ -80,11 +80,11 @@ class Navbar extends React.Component {
                 <a>Results</a>
               </Link>
             </li>
-            <li className={styles.navitem}>
+            {/* <li className={styles.navitem}>
               <Link legacyBehavior href="/papers/">
                 <a>Papers</a>
               </Link>
-            </li>
+            </li> */}
             {/* <li className={styles.navitem}>
               <Link legacyBehavior href="/team">
                 <a>Team</a>
@@ -95,11 +95,11 @@ class Navbar extends React.Component {
                 <a>Workshop</a>
               </Link>
             </li>
-            {<li className={styles.navitem}>
+            {/* {<li className={styles.navitem}>
               <Link legacyBehavior href="/shared_task">
                 <a>Shared Task</a>
               </Link>
-            </li>}
+            </li>} */}
             {/* <li className={styles.navitem}>
               <Link legacyBehavior href="/nl_augmenter">
                 <a>NL-Augmenter</a>
