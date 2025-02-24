@@ -73,6 +73,6 @@ Note: For any questions, please email gem-benchmark-chairs@googlegroups.com.
 * Simon Mille, Dublin City University
 * Enrico Santus, Bloomberg
 * Michal Shmueli Scheuer, IBM Research
-* João Sedoc, New-York University
+* João Sedoc, New York University
 * Gabriel Stanovsky, Hebrew University of Jerusalem
 * Oyvind Tafjord, Allen Institute for Artificial Intelligence
