@@ -61,3 +61,18 @@ Note: For any questions, please email gem-benchmark-chairs@googlegroups.com.
 *   📅 **June 6:** Camera-ready paper deadline.
 *   📅 **July 7:** Pre-recorded videos due.
 *   📅 **July 31 - August 1:** Workshop at ACL in Vienna.
+
+## Organizers
+* Ofir Arviv, IBM Research
+* Miruna Clinciu, Heriot Watt University
+* Kaustubh Dhole, Emory University
+* Rotem Dror, University of Haifa
+* Sebastian Gehrmann, Bloomberg
+* Itay Itzhak, Hebrew University of Jerusalem
+* Yotam Perlitz, IBM Research
+* Simon Mille, Dublin City University
+* Enrico Santus, Bloomberg
+* Michal Shmueli Scheuer, IBM Research
+* João Sedoc, New-York University
+* Gabriel Stanovsky, Hebrew University of Jerusalem
+* Oyvind Tafjord, Allen Institute for Artificial Intelligence
