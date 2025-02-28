@@ -11,7 +11,7 @@ export default function Post({ workshopData }) {
       </Head>
       <article>
         <span className={utilStyles.headingXl}>
-          GEM 💎 Workshop at EMNLP 2025
+          GEM 💎 Workshop at ACL 2025
         </span>
         <span className={utilStyles.smallSpace}></span>
         <div dangerouslySetInnerHTML={{ __html: workshopData.contentHtml }} />
