@@ -68,6 +68,7 @@ Note: For any questions, please email gem-benchmark-chairs@googlegroups.com.
 * Kaustubh Dhole, Emory University
 * Rotem Dror, University of Haifa
 * Sebastian Gehrmann, Bloomberg
+* Eliya Habba, Hebrew University of Jerusalem
 * Itay Itzhak, Hebrew University of Jerusalem
 * Yotam Perlitz, IBM Research
 * Simon Mille, Dublin City University
