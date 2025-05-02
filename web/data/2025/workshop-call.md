@@ -47,7 +47,7 @@ Submissions can take either of the following forms:
 
 All submissions are allowed unlimited space for references and appendices and should conform to [ACL 2025 style guidelines](https://2025.aclweb.org/calls/main_conference_papers/#paper-submission-details). Archival paper submissions must be anonymized while abstract submissions may include author information. Final versions of accepted papers will be allowed 1 additional page of content so that reviewer comments can be taken into account.
 
-Papers should be submitted directly through [OpenReview](https://openreview.net/group?id=aclweb.org/ACL/2025/Workshop/GEM), selecting the appropriate track. **We additionally welcome presentations by authors of papers in the Findings of the ACL**. The selection process is managed centrally by the workshop chairs for the conference and we thus cannot respond to individual inquiries about Findings papers. However, we will try our best to accommodate authors’ requests.
+Pre-reviewed ARR papers should be submitted by filling <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDUoxvdwKgwv6mOsxL7aFJ3InkyHxkPugicbnj1wbm9lSngg/viewform?usp=dialog" > this short form </a>. Papers to be reviewed should be submitted directly through [OpenReview](https://openreview.net/group?id=aclweb.org/ACL/2025/Workshop/GEM), selecting the appropriate track. **We additionally welcome presentations by authors of papers in the Findings of the ACL**. The selection process is managed centrally by the workshop chairs for the conference and we thus cannot respond to individual inquiries about Findings papers. However, we will try our best to accommodate authors’ requests.
 
 ## Important Dates
 
@@ -56,9 +56,9 @@ Note: For any questions, please email gem-benchmark-chairs@googlegroups.com.
 **Paper Submission Dates**
 
 *   📅 **April 11:** Direct paper submission deadline (ARR).
-*   📅 **May 5:** Pre-reviewed (ARR) commitment deadline.
-*   📅 **May 19:** Notification of acceptance.
-*   📅 **June 6:** Camera-ready paper deadline.
+*   📅 ~~May 5~~ **May 17:** Pre-reviewed (ARR) commitment deadline.
+*   📅 ~~May 19~~ **May 25:** Notification of acceptance.
+*   📅 ~~June 6~~ **June 12:** Camera-ready paper deadline.
 *   📅 **July 7:** Pre-recorded videos due.
 *   📅 **July 31 - August 1:** Workshop at ACL in Vienna.
 
